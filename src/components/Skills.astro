@@ -1,0 +1,65 @@
+---
+import Icon from './Icon.astro';
+---
+
+<section class="box skills">
+	<div class="stack gap-2 lg:gap-4">
+		<Icon icon="strategy" color="var(--accent-regular)" size="2.5rem" gradient />
+		<h2>Excellence Opérationnelle</h2>
+		<p>Expert en gestion opérationnelle, je transforme la complexité en performance mesurable. Ma maîtrise des indicateurs clés et des outils de pilotage permet d'optimiser les processus tout en maximisant les résultats. Je m'appuie sur une approche méthodique et data-driven pour identifier les leviers de croissance, accompagner le changement et garantir l'atteinte des objectifs stratégiques, tout en maintenant une vision claire des enjeux business.</p>
+	</div>
+	<div class="stack gap-2 lg:gap-4">
+		<Icon icon="trophy" color="var(--accent-regular)" size="2.5rem" gradient />
+		<h2>Solutions Numériques</h2>
+		<p>Architecte du numérique passionné, je conçois et développe des solutions web innovantes qui allient performance technique et expérience utilisateur optimale. Ma maîtrise approfondie des technologies modernes et des frameworks actuels me permet de créer des applications robustes et évolutives. Je m'engage à livrer des solutions sur mesure qui répondent aux exigences les plus pointues tout en anticipant les besoins futurs.</p>
+	</div>
+	<div class="stack gap-2 lg:gap-4">
+		<Icon icon="terminal-window" color="var(--accent-regular)" size="2.5rem" gradient />
+		<h2>Accélérateur de Talents</h2>
+		<p>Catalyseur de talents et expert en développement commercial, j'excelle dans la transmission des compétences et l'optimisation des performances. Mon approche pédagogique personnalisée, combinée à une solide expérience terrain, permet de former des équipes hautement qualifiées et performantes. Je m'investis dans la création de programmes de formation sur mesure qui stimulent la montée en compétences et génèrent des résultats commerciaux tangibles.</p>
+	</div>
+</section>
+
+<style>
+	.box {
+		border: 1px solid var(--gray-800);S
+		border-radius: 0.75rem;
+		padding: 1.5rem;
+		background-color: var(--gray-999_40);
+		box-shadow: var(--shadow-sm);
+	}
+
+	.skills {
+		display: flex;
+		flex-direction: column;
+		gap: 3rem;
+	}
+
+	.skills h2 {
+		font-size: var(--text-lg);
+		/*text-align:center;*/
+	}
+
+	.skills p {
+		color: var(--gray-400);
+		text-align: justify;
+
+	}
+
+	@media (min-width: 50em) {
+		.box {
+			border-radius: 1.5rem;
+			padding: 2.5rem;
+		}
+
+		.skills {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			gap: 5rem;
+		}
+
+		.skills h2 {
+			font-size: var(--text-2xl);
+		}
+	}
+</style>

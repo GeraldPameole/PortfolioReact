@@ -1,0 +1,132 @@
+---
+import CallToAction from './CallToAction.astro';
+import Icon from './Icon.astro';
+---
+
+<aside>
+	<h3>Prêt à donner vie à vos projets ?</h3>
+	
+	<form class="contact-form">
+		<div class="form-group">
+			<input type="text" name="nom" placeholder="Votre nom" required>
+			<input type="text" name="prenom" placeholder="Votre prénom" required>
+		</div>
+		<div class="form-group">
+			<input type="email" name="email" placeholder="Votre email" required>
+			<input type="tel" name="telephone" placeholder="Votre numéro de téléphone" required>
+		</div>
+		<button type="submit" class="submit-btn">
+			Envoyer
+			<Icon icon="paper-plane-tilt" size="1.2em" />
+		</button>
+	</form>
+
+	<div class="map-container">
+		<iframe 
+			src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d39823.76658888398!2d-0.6099106709750302!3d44.84524640835395!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd5527e8f751ca81%3A0x796386037b397a89!2sBordeaux!5e0!3m2!1sfr!2sfr!4v1736803881261!5m2!1sfr!2sfr" 
+			width="600" 
+			height="450" 
+			style="border:0;" 
+			allowfullscreen="" 
+			loading="lazy" 
+			referrerpolicy="no-referrer-when-downgrade">
+		</iframe>
+	</div>
+</aside>
+
+<style>
+	aside {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		gap: 3rem;
+		border-top: 1px solid var(--gray-800);
+		border-bottom: 1px solid var(--gray-800);
+		padding: 5rem 1.5rem;
+		background-color: var(--gray-999_40);
+		box-shadow: var(--shadow-sm);
+	}
+
+	h2 {
+		font-size: var(--text-xl);
+		text-align: center;
+		max-width: 15rem;
+	}
+
+	@media (min-width: 50em) {
+		aside {
+			padding: 7.5rem;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: space-between;
+		}
+
+		h2 {
+			font-size: var(--text-3xl);
+			text-align: center;
+		}
+	}
+
+	.map-container {
+		width: 100%;
+		max-width: 600px;
+		margin: 2rem auto;
+	}
+
+	.map-container iframe {
+		width: 100%;
+		height: 450px;
+		border-radius: 8px;
+		box-shadow: var(--shadow-sm);
+	}
+
+	@media (max-width: 50em) {
+		.map-container iframe {
+			height: 300px;
+		}
+	}
+
+	.contact-form {
+		width: 100%;
+		max-width: 600px;
+		margin: 2rem auto;
+	}
+
+	.form-group {
+		display: flex;
+		gap: 1rem;
+		margin-bottom: 1rem;
+	}
+
+	.contact-form input {
+		width: 100%;
+		padding: 0.8rem;
+		border: 1px solid var(--gray-800);
+		border-radius: 4px;
+		background: var(--gray-999);
+		color: var(--gray-200);
+	}
+
+	.contact-form input::placeholder {
+		color: var(--gray-400);
+	}
+
+	.submit-btn {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 0.5rem;
+		padding: 0.8rem 1.5rem;
+		border: 1px solid var(--accent-regular);
+		border-radius: 4px;
+		background: var(--accent-regular);
+		color: var(--accent-text-over);
+		cursor: pointer;
+	}
+
+	@media (max-width: 50em) {
+		.form-group {
+			flex-direction: column;
+		}
+	}
+</style>

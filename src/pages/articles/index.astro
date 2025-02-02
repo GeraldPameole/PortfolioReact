@@ -1,0 +1,62 @@
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getAllArticles } from '../../lib/articles';
+
+const articles = await getAllArticles();
+
+<BaseLayout title="Articles" description="Liste des articles">
+  <div class="articles-container">
+    {articles.map(article => (
+      <article class="article-card">
+        <h2>{article.title}</h2>
+        <p class="meta">
+          Par {article.author} le {new Date(article.publishDate).toLocaleDateString('fr-FR')}
+        </p>
+        <p class="description">{article.description}</p>
+        <a href={`/articles/${article.id}`}>Lire la suite</a>
+      </article>
+    ))}
+  </div>
+</BaseLayout>
+
+<style>
+  .articles-container {
+    display: grid;
+    gap: 2rem;
+    padding: 2rem;
+  }
+
+  .article-card {
+    border: 1px solid var(--gray-800);
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .article-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .meta {
+    color: var(--gray-300);
+    font-size: 0.9rem;
+  }
+
+  .description {
+    margin: 1rem 0;
+  }
+
+  a {
+    color: var(--accent-regular);
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  @media (min-width: 50em) {
+    .articles-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+</style> 

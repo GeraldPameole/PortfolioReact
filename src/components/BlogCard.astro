@@ -1,0 +1,40 @@
+---
+interface Props {
+    title: string;
+    description: string;
+    icon: string;
+}
+
+const { title, description, icon } = Astro.props;
+---
+
+<div class="blog-card">
+    <div class="icon">
+        <i class={`icon-${icon}`}></i>
+    </div>
+    <h2>{title}</h2>
+    <p>{description}</p>
+</div>
+
+<style>
+    .blog-card {
+        padding: 2rem;
+        border-radius: 8px;
+        background: var(--gray-999);
+        box-shadow: var(--shadow-sm);
+        transition: box-shadow 0.2s ease-in-out;
+    }
+
+    .blog-card:hover {
+        box-shadow: var(--shadow-md);
+    }
+
+    h2 {
+        font-size: 1.5rem;
+        margin: 1rem 0;
+    }
+
+    p {
+        color: var(--gray-300);
+    }
+</style> 

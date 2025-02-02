@@ -1,0 +1,138 @@
+<section class="section with-background with-cta">
+	<header class="section-header stack gap-2 lg:gap-4">
+		<h3>Ouvrages & Références</h3>
+		<p>Une sélection d'ouvrages qui ont façonné ma vision et enrichi mes compétences</p>
+	</header>
+
+	<div class="reference-categories">
+		<div class="category">
+			<h4>Entreprise & Management</h4>
+			<ul class="reference-list">
+				<li>
+					<strong>Good to Great</strong> - Jim Collins
+					<p class="book-description">Les principes fondamentaux qui distinguent les entreprises d'exception</p>
+				</li>
+				<li>
+					<strong>Zero to One</strong> - Peter Thiel
+					<p class="book-description">Notes sur les startups et comment construire le futur</p>
+				</li>
+				<li>
+					<strong>L'Art de la Guerre</strong> - Sun Tzu
+					<p class="book-description">Stratégies intemporelles applicables au monde des affaires</p>
+				</li>
+			</ul>
+		</div>
+
+		<div class="category">
+			<h4>Business & Stratégie</h4>
+			<ul class="reference-list">
+				<li>
+					<strong>Blue Ocean Strategy</strong> - W. Chan Kim
+					<p class="book-description">Comment créer de nouveaux espaces stratégiques</p>
+				</li>
+				<li>
+					<strong>The Lean Startup</strong> - Eric Ries
+					<p class="book-description">L'approche agile pour créer une entreprise innovante</p>
+				</li>
+				<li>
+					<strong>Hooked</strong> - Nir Eyal
+					<p class="book-description">Comment créer des produits qui créent des habitudes</p>
+				</li>
+			</ul>
+		</div>
+
+		<div class="category">
+			<h4>Développement Web</h4>
+			<ul class="reference-list">
+				<li>
+					<strong>Clean Code</strong> - Robert C. Martin
+					<p class="book-description">Principes pour un code maintenable et efficace</p>
+				</li>
+				<li>
+					<strong>You Don't Know JS</strong> - Kyle Simpson
+					<p class="book-description">Série approfondie sur JavaScript</p>
+				</li>
+				<li>
+					<strong>Design Patterns</strong> - Gang of Four
+					<p class="book-description">Solutions éprouvées aux problèmes récurrents</p>
+				</li>
+			</ul>
+		</div>
+
+		<div class="category">
+			<h4>Développement Pro & Personnel</h4>
+			<ul class="reference-list">
+				<li>
+					<strong>Les 7 habitudes</strong> - Stephen Covey
+					<p class="book-description">Principes d'efficacité personnelle et professionnelle</p>
+				</li>
+				<li>
+					<strong>Deep Work</strong> - Cal Newport
+					<p class="book-description">Règles pour la concentration dans un monde dispersé</p>
+				</li>
+				<li>
+					<strong>Atomic Habits</strong> - James Clear
+					<p class="book-description">Petits changements, résultats remarquables</p>
+				</li>
+			</ul>
+		</div>
+	</div>
+</section>
+
+<style>
+	.reference-categories {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		gap: 2rem;
+		padding: 2rem 0;
+	}
+
+	.category {
+		background: var(--gray-999_40);
+		border-radius: 0.75rem;
+		padding: 1.5rem;
+		box-shadow: var(--shadow-sm);
+	}
+
+	.category h4 {
+		color: var(--accent-regular);
+		font-size: var(--text-lg);
+		margin-bottom: 1rem;
+	}
+
+	.reference-list {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+
+	.reference-list li {
+		margin-bottom: 1.5rem;
+	}
+
+	.reference-list li:last-child {
+		margin-bottom: 0;
+	}
+
+	.book-description {
+		font-size: var(--text-sm);
+		color: var(--gray-300);
+		margin-top: 0.25rem;
+	}
+
+	.reference-list strong {
+		color: var(--gray-0);
+	}
+
+	@media (min-width: 50em) {
+		.reference-categories {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+
+	@media (min-width: 80em) {
+		.reference-categories {
+			grid-template-columns: repeat(4, 1fr);
+		}
+	}
+</style> 

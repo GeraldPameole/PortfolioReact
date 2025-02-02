@@ -1,0 +1,453 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Hero from '../../components/Hero.astro';
+import ContactCTA from '../../components/ContactCTA.astro';
+import Grid from '../../components/Grid.astro';
+import GeneratedBookCover from '../../components/GeneratedBookCover.astro';
+
+const articles = [
+    {
+        slug: "importance-leadership",
+        title: "L'importance du Leadership dans les Équipes",
+        description: "Cet article explore comment un bon leadership peut transformer une équipe et améliorer la performance globale.",
+        skills: [
+            "Leadership",
+            "Communication",
+            "Gestion de conflits",
+            "Transmission"
+        ]
+    },
+    {
+        slug: "nouvelles-tendances-developpement-web",
+        title: "Les Nouvelles Tendances en Développement Web",
+        description: "Découvrez les dernières technologies et méthodologies qui façonnent le développement web moderne.",
+        skills: [
+            "HTML/CSS",
+            "JavaScript",
+            "Frameworks modernes (React, Vue.js)",
+            "IA"
+        ]
+    },
+    {
+        slug: "strategies-marketing-digital-2025",
+        title: "Stratégies de Marketing Digital pour 2025",
+        description: "Un aperçu des stratégies de marketing digital qui peuvent aider les entreprises à se démarquer.",
+        skills: [
+            "SEO",
+            "Publicité en ligne",
+            "Analyse de données",
+            "Social Media"
+        ]
+    },
+    {
+        slug: "gestion-projet-agile-meilleures-pratiques",
+        title: "La Gestion de Projet Agile : Meilleures Pratiques",
+        description: "Cet article discute des meilleures pratiques pour gérer des projets en utilisant des méthodologies agiles.",
+        skills: [
+            "Méthodologies Agiles",
+            "Planification",
+            "Gestion des risques",
+            "Communication"
+        ]
+    },
+    {
+        slug: "impact-formation-continue-carriere",
+        title: "L'Impact de la Formation Continue sur les Carrières",
+        description: "Explorez comment la formation continue peut influencer positivement le développement de carrière des professionnels.",
+        skills: [
+            "Formation",
+            "Coaching",
+            "Développement pro-perso",
+            "Apprentissage"
+        ]
+    }
+];
+
+const booksByProfession = [
+    {
+        profession: "Chef de Projet",
+        books: [
+            {
+                title: "Scrum: The Art of Doing Twice the Work in Half the Time",
+                cover: "/assets/books/scrum.jpg",
+                summary: "Jeff Sutherland explique comment la méthodologie Scrum peut révolutionner la gestion de projet."
+            },
+            {
+                title: "Project Management Body of Knowledge (PMBOK)",
+                cover: "/assets/books/pmbok.jpg",
+                summary: "Le guide essentiel du PMI pour la gestion de projet professionnelle."
+            },
+            {
+                title: "Lean Thinking",
+                cover: "/assets/books/lean-thinking.jpg",
+                summary: "James P. Womack présente les principes du Lean management pour optimiser les processus."
+            },
+            {
+                title: "The Phoenix Project",
+                cover: "/assets/books/phoenix-project.jpg",
+                summary: "Gene Kim illustre les principes DevOps à travers une histoire captivante de transformation d'entreprise."
+            }
+        ]
+    },
+    {
+        profession: "Formateur",
+        books: [
+            {
+                title: "Make It Stick",
+                cover: "/assets/books/make-it-stick.jpg",
+                summary: "La science de l'apprentissage réussi expliquée par Peter C. Brown."
+            },
+            {
+                title: "Teaching What You Don't Know",
+                cover: "/assets/books/teaching-what-you-dont-know.jpg",
+                summary: "Therese Huston guide les formateurs dans des situations d'enseignement complexes."
+            },
+            {
+                title: "Design for How People Learn",
+                cover: "/assets/books/design-for-learning.jpg",
+                summary: "Julie Dirksen explore la psychologie de l'apprentissage pour créer des formations efficaces."
+            },
+            {
+                title: "Training From the Back of the Room",
+                cover: "/assets/books/training-back-room.jpg",
+                summary: "Sharon Bowman présente 65 techniques pour une formation plus engageante."
+            }
+        ]
+    },
+    {
+        profession: "Sales Team Manager",
+        books: [
+            {
+                title: "The Challenger Sale",
+                cover: "/assets/books/challenger-sale.jpg",
+                summary: "Matthew Dixon révolutionne l'approche traditionnelle de la vente B2B."
+            },
+            {
+                title: "Sales Management. Simplified",
+                cover: "/assets/books/sales-management.jpg",
+                summary: "Mike Weinberg simplifie la gestion d'équipe commerciale."
+            },
+            {
+                title: "Cracking the Sales Management Code",
+                cover: "/assets/books/sales-code.jpg",
+                summary: "Jason Jordan dévoile la science derrière la gestion des ventes."
+            },
+            {
+                title: "Coaching Salespeople into Sales Champions",
+                cover: "/assets/books/sales-champions.jpg",
+                summary: "Keith Rosen explique comment transformer des vendeurs en champions."
+            }
+        ]
+    },
+    {
+        profession: "Développeur React JS",
+        books: [
+            {
+                title: "Road to React",
+                cover: "/assets/books/road-to-react.jpg",
+                summary: "Robin Wieruch guide les développeurs à travers React moderne."
+            },
+            {
+                title: "React Design Patterns",
+                cover: "/assets/books/react-patterns.jpg",
+                summary: "Carlos Santana présente les patterns de conception essentiels pour React."
+            },
+            {
+                title: "Testing React Applications",
+                cover: "/assets/books/testing-react.jpg",
+                summary: "Jeff Palmer explore les stratégies de test pour applications React."
+            },
+            {
+                title: "React Performance",
+                cover: "/assets/books/react-performance.jpg",
+                summary: "Robin Wieruch détaille l'optimisation des applications React."
+            }
+        ]
+    }
+];
+---
+
+<BaseLayout title="Articles et Ressources" description="Découvrez des articles et des livres recommandés par profession">
+    <div class="stack gap-20">
+        <main class="wrapper stack gap-8">
+            <Hero
+                title="Articles et Ressources"
+                tagline="Explorez des articles et des livres recommandés pour chaque profession"
+                align="start"
+            />
+            
+            <section class="articles-section">
+                <h2>Quelques articles tirés de mes expériences</h2>
+                <div class="articles-grid">
+                    {articles.map((article, index) => (
+                        <a href={`/articles/${article.slug}`} class="article-link">
+                            <div class="article-card" data-index={index}>
+                                <h3>{article.title}</h3>
+                                <p>{article.description}</p>
+                                <h4>Compétences Associées :</h4>
+                                <ul>
+                                    {article.skills.map(skill => (
+                                        <li>{skill}</li>
+                                    ))}
+                                </ul>
+                            </div>
+                        </a>
+                    ))}
+                </div>
+            </section>
+
+            <section class="books-section">
+                <h2>Quelques livres recommandés par profession</h2>
+                {booksByProfession.map((profession) => (
+                    <div class="profession-books">
+                        <h3>{profession.profession}</h3>
+                        <Grid variant="offset">
+                            {profession.books.map((book) => (
+                                <div class="book-card">
+                                    <div class="book-cover-container">
+                                        {book.cover ? (
+                                            <img 
+                                                src={book.cover} 
+                                                alt={`Couverture de ${book.title}`} 
+                                                class="book-cover"
+                                                onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');"
+                                            />
+                                            <div class="generated-cover-fallback hidden">
+                                                <GeneratedBookCover
+                                                    title={book.title}
+                                                    profession={profession.profession}
+                                                />
+                                            </div>
+                                        ) : (
+                                            <GeneratedBookCover
+                                                title={book.title}
+                                                profession={profession.profession}
+                                            />
+                                        )}
+                                    </div>
+                                    <div class="book-info">
+                                        <h4>{book.title}</h4>
+                                        <p>{book.summary}</p>
+                                    </div>
+                                </div>
+                            ))}
+                        </Grid>
+                    </div>
+                ))}
+            </section>
+        </main>
+        <ContactCTA />
+    </div>
+</BaseLayout>
+
+<style>
+    .articles-section, .books-section {
+        margin-bottom: 4rem;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .articles-section h2, .books-section h2 {
+        font-size: var(--text-2xl);
+        color: var(--gray-0);
+        margin-bottom: 2rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 2px solid var(--accent-regular);
+    }
+
+    .articles-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    .article-link {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    .article-card {
+        border: 1px solid var(--gray-800);
+        border-radius: 1rem;
+        padding: 2rem;
+        background-color: var(--gray-999);
+        transition: all 0.3s ease;
+        height: 100%;
+    }
+
+    .article-card:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--shadow-md);
+        border-color: var(--accent-regular);
+    }
+
+    .article-card h3 {
+        font-size: var(--text-xl);
+        color: var(--gray-0);
+        margin-bottom: 1rem;
+        line-height: 1.3;
+    }
+
+    .article-card p {
+        color: var(--gray-300);
+        margin-bottom: 1.5rem;
+        font-size: var(--text-md);
+        line-height: 1.6;
+    }
+
+    .article-card h4 {
+        font-size: var(--text-md);
+        color: var(--gray-0);
+        margin-bottom: 0.75rem;
+    }
+
+    .article-card ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .article-card li {
+        color: var(--gray-300);
+        padding: 0.5rem 0;
+        font-size: var(--text-md);
+        transition: color 0.2s ease;
+    }
+
+    .article-card:hover li {
+        color: var(--gray-100);
+    }
+
+    .profession-books {
+        margin-bottom: 4rem;
+        padding: 2rem;
+        border-radius: 1rem;
+        background: var(--gray-999);
+        border: 1px solid var(--gray-800);
+        transition: all 0.3s ease-in-out;
+    }
+
+    .profession-books:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--shadow-md);
+        border-color: var(--accent-regular);
+    }
+
+    .profession-books h3 {
+        font-size: var(--text-xl);
+        color: var(--gray-0);
+        margin-bottom: 2rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 2px solid var(--accent-regular);
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .book-card {
+        display: flex;
+        flex-direction: column;
+        border-radius: 0.75rem;
+        padding: 1.25rem;
+        background-color: var(--gray-950);
+        box-shadow: var(--shadow-sm);
+        transition: all 0.3s ease-in-out;
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+        border: 1px solid var(--gray-800);
+    }
+
+    .book-card:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--shadow-md);
+        border-color: var(--accent-regular);
+    }
+
+    .book-cover-container {
+        position: relative;
+        width: 180px;
+        height: 270px;
+        margin: 0 auto 1.25rem;
+    }
+
+    .generated-cover-fallback {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .generated-cover-fallback.hidden {
+        display: none;
+    }
+
+    .book-cover {
+        width: 180px;
+        height: 270px;
+        object-fit: cover;
+        border-radius: 0.5rem;
+        margin: 0 auto 1.25rem;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease;
+    }
+
+    .book-card:hover .book-cover {
+        transform: scale(1.05);
+    }
+
+    .book-info {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .book-info h4 {
+        font-size: var(--text-md);
+        color: var(--gray-0);
+        margin-bottom: 0.75rem;
+        line-height: 1.4;
+        font-weight: 600;
+    }
+
+    .book-info p {
+        color: var(--gray-300);
+        font-size: var(--text-sm);
+        line-height: 1.6;
+        margin-bottom: 1rem;
+    }
+
+    @media (max-width: 768px) {
+        .articles-section, .books-section {
+            width: 95%;
+        }
+
+        .articles-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .article-card h3 {
+            font-size: var(--text-lg);
+        }
+
+        .article-card p, .article-card li {
+            font-size: var(--text-sm);
+        }
+
+        .profession-books {
+            padding: 1.5rem;
+        }
+    }
+
+    @media (min-width: 768px) and (max-width: 1024px) {
+        .articles-section, .books-section {
+            width: 90%;
+        }
+        
+        .articles-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+</style>
