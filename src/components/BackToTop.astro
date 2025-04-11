@@ -1,0 +1,43 @@
+---
+// Composant pour revenir en haut de la page
+---
+
+<button
+  id="backToTop"
+  class="fixed bottom-5 right-5 bg-primary text-white p-3 rounded-full shadow-lg z-50 opacity-0 transition-opacity duration-300 hover:bg-accent focus:outline-none focus:ring-2 focus:ring-primary"
+  aria-label="Retour en haut de page"
+>
+  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
+  </svg>
+</button>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const backToTopButton = document.getElementById('backToTop');
+    
+    if (!backToTopButton) return;
+
+    // Afficher le bouton lorsque l'utilisateur défile à plus de 300px
+    const toggleBackToTopButton = () => {
+      if (window.scrollY > 300) {
+        backToTopButton.classList.add('opacity-100');
+        backToTopButton.classList.remove('opacity-0');
+      } else {
+        backToTopButton.classList.add('opacity-0');
+        backToTopButton.classList.remove('opacity-100');
+      }
+    };
+
+    // Événement de défilement pour afficher/masquer le bouton
+    window.addEventListener('scroll', toggleBackToTopButton);
+
+    // Action au clic sur le bouton
+    backToTopButton.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  });
+</script> 

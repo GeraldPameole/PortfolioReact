@@ -1,8 +1,9 @@
 ---
-title: "L'importance du Leadership dans les Équipes"
-publishDate: 2024-03-15
+title: "L'Importance du Leadership dans la Transformation des Organisations"
+publishDate: "2024-03-27"
 author: Gérald Paméole
-description: "Découvrez comment un leadership efficace transforme les équipes et améliore la performance collective."
+description: "Explorez les qualités essentielles d'un leader efficace dans l'environnement professionnel actuel."
+theme: "management"
 ---
 
 <style>

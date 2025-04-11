@@ -1,55 +1,49 @@
-import { useForm } from "react-hook-form";
+import { Icon } from "@iconify/react";
+import "../styles/footer.css";
 
-const Footer = () => {
-  const { register, handleSubmit, formState: { errors } } = useForm();
-
-  const onSubmit = (data) => {
-    console.log(data);
-  };
+const Footer = ({ data }) => {
+  // Constantes pour les liens et informations de contact
+  const socialLinks = data?.socialLinks || [];
+  const contactEmail = data?.email || "contact@example.com";
+  const copyright =
+    data?.copyright || `© ${new Date().getFullYear()} Portfolio`;
 
   return (
-    <footer className="bg-neutral py-8">
-      <div className="container mx-auto px-4">
-        <form
-          onSubmit={handleSubmit(onSubmit)}
-          className="max-w-md mx-auto space-y-4"
-        >
-          <div>
-            <input
-              className="w-full p-2 border rounded"
-              {...register("name", { required: "Nom requis" })}
-              placeholder="Votre nom"
-            />
-            {errors.name && <p className="text-red-500">{errors.name.message}</p>}
-          </div>
-          <div>
-            <input
-              className="w-full p-2 border rounded"
-              {...register("email", { required: "Email requis" })}
-              placeholder="Votre email"
-              type="email"
-            />
-            {errors.email && <p className="text-red-500">{errors.email.message}</p>}
-          </div>
-          <div>
-            <textarea
-              className="w-full p-2 border rounded"
-              {...register("message", { required: "Message requis" })}
-              placeholder="Votre message"
-              rows="4"
-            />
-            {errors.message && <p className="text-red-500">{errors.message.message}</p>}
-          </div>
-          <button
-            type="submit"
-            className="w-full bg-primary text-white py-2 px-4 rounded hover:bg-opacity-90 transition-all"
-          >
-            Envoyer
-          </button>
-        </form>
+    <footer className="site-footer">
+      <div className="footer-content">
+        <div className="footer-section">
+          <h3>Contact</h3>
+          <p>
+            <a href={`mailto:${contactEmail}`} className="footer-email">
+              {contactEmail}
+            </a>
+          </p>
+        </div>
+
+        <div className="footer-section">
+          <h3>Suivez-moi</h3>
+          <ul className="social-links">
+            {socialLinks.map((link, index) => (
+              <li key={index}>
+                <a
+                  href={link.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={link.name}
+                >
+                  <Icon icon={link.icon} />
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div className="footer-section">
+          <p className="copyright">{copyright}</p>
+        </div>
       </div>
     </footer>
   );
 };
 
-export default Footer; 
+export default Footer;

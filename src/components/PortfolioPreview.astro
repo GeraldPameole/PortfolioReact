@@ -1,8 +1,15 @@
 ---
-import type { CollectionEntry } from 'astro:content';
 
 interface Props {
-	project: CollectionEntry<'work'>;
+	project: {
+		data: {
+			title: string;
+			description: string;
+			img: string;
+			img_alt?: string;
+		};
+		slug: string;
+	};
 }
 
 const { data, slug } = Astro.props.project;

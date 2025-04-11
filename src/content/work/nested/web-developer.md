@@ -1,15 +1,15 @@
 ---
-title: Développeur React JS
-publishDate: 2024-10-10
-description: Expert en développement front-end React JS, je crée des applications web modernes, performantes et évolutives.
+title: Développeur Web Full Stack
+publishDate: "2024-01-03"
+description: Conception et développement d'applications web modernes et performantes.
 author: Gérald Paméole
-img: /assets/projectmanagerback.jpg
-img_alt: Interface de développement React avec du code sur un écran
+img: /assets/web-developer.jpg
+img_alt: Développeur web en action
 tags:
-  - React JS
+  - Développement Web
   - JavaScript
-  - Front-end
-  - UI/UX
+  - React
+  - Node.js
 ---
 
 <style>

@@ -1,0 +1,297 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/BaseLayout.astro';
+
+export async function getStaticPaths() {
+	const books = await getCollection('books');
+	return books.map((book) => ({
+		params: { slug: book.slug },
+		props: { book },
+	}));
+}
+
+interface Props {
+	book: CollectionEntry<'books'>;
+}
+
+const { book } = Astro.props;
+const { Content } = await book.render();
+
+// Mapping des professions pour l'affichage
+const professionLabels: Record<string, string> = {
+	"entreprise-management": "Entreprise & Management",
+	"business-strategie": "Business & Stratégie",
+	"developpement-web": "Développement Web", 
+	"developpement-personnel": "Développement Pro & Personnel"
+};
+---
+
+<Layout 
+	title={book.data.title}
+	description={book.data.description}
+>
+	<div class="book-container">
+		<div class="book-meta-top">
+			<a href="/blog" class="back-link">&larr; Retour aux livres</a>
+			<span class="book-profession">{professionLabels[book.data.profession as string] || book.data.profession}</span>
+		</div>
+		
+		<div class="book-content-wrapper">
+			<aside class="book-sidebar">
+				{book.data.coverImage ? (
+					<img src={book.data.coverImage} alt={`Couverture du livre ${book.data.title}`} class="book-cover" />
+				) : (
+					<div class="book-cover-placeholder">
+						<div class="book-title-placeholder">{book.data.title}</div>
+						<div class="book-author-placeholder">{book.data.author}</div>
+					</div>
+				)}
+				
+				<div class="book-details">
+					{book.data.publishYear && (
+						<div class="book-detail">
+							<span class="detail-label">Année de publication</span>
+							<span class="detail-value">{book.data.publishYear}</span>
+						</div>
+					)}
+					
+					{book.data.amazonLink && (
+						<a href={book.data.amazonLink} target="_blank" rel="noopener noreferrer" class="amazon-link">
+							Voir sur Amazon
+						</a>
+					)}
+				</div>
+			</aside>
+			
+			<div class="book-main-content">
+				<header class="book-header">
+					<h1>{book.data.title}</h1>
+					<p class="book-author">Par {book.data.author}</p>
+					<p class="book-description">{book.data.description}</p>
+				</header>
+
+				<div class="book-full-content">
+					<Content />
+				</div>
+			</div>
+		</div>
+	</div>
+</Layout>
+
+<style>
+	.book-container {
+		max-width: 1100px;
+		margin: 3rem auto;
+		padding: 0 1.5rem;
+	}
+
+	.book-meta-top {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 2rem;
+	}
+
+	.back-link {
+		display: inline-flex;
+		align-items: center;
+		color: var(--accent-regular);
+		text-decoration: none;
+		font-weight: 500;
+		transition: color 0.2s ease;
+	}
+
+	.back-link:hover {
+		color: var(--accent-dark);
+	}
+
+	.book-profession {
+		display: inline-block;
+		background-color: var(--accent-regular);
+		color: white;
+		font-size: var(--text-xs);
+		font-weight: 600;
+		padding: 0.4rem 0.8rem;
+		border-radius: 2rem;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+	}
+
+	.book-content-wrapper {
+		display: grid;
+		grid-template-columns: minmax(200px, 1fr) 3fr;
+		gap: 3rem;
+	}
+
+	.book-sidebar {
+		display: flex;
+		flex-direction: column;
+		gap: 1.5rem;
+	}
+
+	.book-cover {
+		width: 100%;
+		border-radius: 0.5rem;
+		box-shadow: var(--shadow-md);
+	}
+
+	.book-cover-placeholder {
+		aspect-ratio: 2/3;
+		background: linear-gradient(135deg, var(--gray-800) 0%, var(--gray-600) 100%);
+		border-radius: 0.5rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		padding: 1.5rem;
+		text-align: center;
+		box-shadow: var(--shadow-md);
+	}
+
+	.book-title-placeholder {
+		font-weight: bold;
+		color: var(--gray-0);
+		font-size: var(--text-lg);
+		margin-bottom: 1rem;
+	}
+
+	.book-author-placeholder {
+		color: var(--gray-300);
+		font-size: var(--text-sm);
+	}
+
+	.book-details {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+		margin-top: 1rem;
+	}
+
+	.book-detail {
+		display: flex;
+		flex-direction: column;
+		gap: 0.25rem;
+	}
+
+	.detail-label {
+		font-size: var(--text-xs);
+		color: var(--gray-400);
+	}
+
+	.detail-value {
+		font-size: var(--text-sm);
+		color: var(--gray-0);
+	}
+
+	.amazon-link {
+		display: inline-block;
+		background-color: #FF9900;
+		color: black;
+		padding: 0.5rem 1rem;
+		border-radius: 0.25rem;
+		text-align: center;
+		text-decoration: none;
+		font-weight: 600;
+		font-size: var(--text-sm);
+		transition: background-color 0.2s ease;
+		margin-top: 0.5rem;
+	}
+
+	.amazon-link:hover {
+		background-color: #E88A00;
+	}
+
+	.book-main-content {
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+	}
+
+	.book-header {
+		border-bottom: 1px solid var(--gray-800);
+		padding-bottom: 1.5rem;
+	}
+
+	h1 {
+		font-size: var(--text-3xl);
+		color: var(--gray-0);
+		margin-bottom: 0.5rem;
+		line-height: 1.2;
+	}
+
+	.book-author {
+		font-size: var(--text-lg);
+		color: var(--accent-regular);
+		margin-bottom: 1rem;
+	}
+
+	.book-description {
+		font-size: var(--text-md);
+		color: var(--gray-300);
+		line-height: 1.6;
+	}
+
+	.book-full-content {
+		font-size: var(--text-md);
+		line-height: 1.7;
+		color: var(--gray-200);
+	}
+
+	.book-full-content :global(h2) {
+		font-size: var(--text-xl);
+		color: var(--accent-regular);
+		margin: 2rem 0 1rem 0;
+	}
+
+	.book-full-content :global(h3) {
+		font-size: var(--text-lg);
+		color: var(--accent-dark);
+		margin: 1.5rem 0 0.8rem 0;
+	}
+
+	.book-full-content :global(p) {
+		margin-bottom: 1.25rem;
+	}
+
+	.book-full-content :global(ul), .book-full-content :global(ol) {
+		padding-left: 1.75rem;
+		margin-bottom: 1.25rem;
+	}
+
+	.book-full-content :global(li) {
+		margin-bottom: 0.75rem;
+	}
+
+	.book-full-content :global(blockquote) {
+		border-left: 4px solid var(--accent-regular);
+		padding: 0.75rem 1.5rem;
+		font-style: italic;
+		margin: 1.5rem 0;
+		color: var(--gray-300);
+		background-color: var(--gray-999_40);
+		border-radius: 0 0.5rem 0.5rem 0;
+	}
+
+	@media (max-width: 768px) {
+		.book-content-wrapper {
+			grid-template-columns: 1fr;
+		}
+
+		.book-sidebar {
+			order: 2;
+		}
+
+		.book-main-content {
+			order: 1;
+		}
+
+		h1 {
+			font-size: var(--text-2xl);
+		}
+
+		.book-profession {
+			font-size: 0.65rem;
+		}
+	}
+</style> 

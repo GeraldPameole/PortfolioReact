@@ -1,0 +1,33 @@
+---
+// Composant pour revenir à la page précédente
+---
+
+<button
+  id="backButton"
+  class="fixed top-20 left-5 bg-primary text-white p-2 rounded-full shadow-lg z-50 hover:bg-accent focus:outline-none focus:ring-2 focus:ring-primary"
+  aria-label="Retour à la page précédente"
+>
+  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+  </svg>
+</button>
+
+<script>
+  // Script pour gérer le bouton retour
+  document.addEventListener('DOMContentLoaded', () => {
+    const backButton = document.getElementById('backButton');
+    
+    if (!backButton) return;
+
+    // Masquer le bouton sur la page d'accueil
+    if (window.location.pathname === '/' || window.location.pathname === '/index.html') {
+      backButton.style.display = 'none';
+      return;
+    }
+
+    // Action au clic sur le bouton
+    backButton.addEventListener('click', () => {
+      window.history.back();
+    });
+  });
+</script> 

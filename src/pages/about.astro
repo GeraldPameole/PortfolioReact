@@ -1,229 +1,128 @@
 ---
+import { getCollection } from 'astro:content';
+import { ViewTransitions } from 'astro:transitions';
 import BaseLayout from '../layouts/BaseLayout.astro';
 
-import ContactCTA from '../components/ContactCTA.astro';
-import Hero from '../components/Hero.astro';
+// Récupérer les articles et les livres
+const articles = await getCollection('articles');
+const books = await getCollection('books');
 
+// Trier les articles par date de publication
+const sortedArticles = articles.sort((a, b) => 
+	new Date(b.data.publishDate).getTime() - new Date(a.data.publishDate).getTime()
+);
+
+// Trier les livres par date de publication
+const sortedBooks = books.sort((a, b) => 
+	new Date(b.data.publishDate).getTime() - new Date(a.data.publishDate).getTime()
+);
+
+// Compter le nombre total d'articles et de livres
+const totalArticles = articles.length;
+const totalBooks = books.length;
 ---
 
-<BaseLayout title="A propos | Gérald Paméole" description="A propos de Gérald Paméole">
-	<div class="stack gap-20">
-		<main class="wrapper about">
-			<Hero
-				title="Me découvrir"
-				tagline="Découvrez mon parcours et mes compétences."
+<BaseLayout 
+	title="À propos" 
+	description="Découvrez mon parcours professionnel, mes compétences et ma passion pour le développement web et l'intelligence artificielle."
+	customClass="bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-gray-800"
+>
+	<ViewTransitions />
+
+	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+		<div class="text-center mb-16">
+			<h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">
+				À propos de moi
+			</h1>
+			<p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+				Développeur Full Stack passionné par l'innovation technologique et l'intelligence artificielle
+			</p>
+		</div>
+
+		<div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
+			<div class="space-y-8">
+				<div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8">
+					<h2 class="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
+						Mon parcours
+					</h2>
+					<p class="text-gray-600 dark:text-gray-300 mb-4">
+						Avec plus de 10 ans d'expérience dans le développement web, j'ai eu l'opportunité de travailler sur des projets variés, allant des applications web aux solutions d'intelligence artificielle.
+					</p>
+					<p class="text-gray-600 dark:text-gray-300">
+						Mon expertise couvre l'ensemble du cycle de développement, de la conception à la mise en production, en passant par l'optimisation des performances et la sécurité.
+					</p>
+				</div>
+
+				<div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8">
+					<h2 class="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
+						Mes valeurs
+					</h2>
+					<ul class="space-y-4">
+						<li class="flex items-start">
+							<svg class="h-6 w-6 text-indigo-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+							</svg>
+							<span class="text-gray-600 dark:text-gray-300">Qualité et excellence dans le code</span>
+						</li>
+						<li class="flex items-start">
+							<svg class="h-6 w-6 text-indigo-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+							</svg>
+							<span class="text-gray-600 dark:text-gray-300">Innovation et veille technologique</span>
+						</li>
+						<li class="flex items-start">
+							<svg class="h-6 w-6 text-indigo-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+							</svg>
+							<span class="text-gray-600 dark:text-gray-300">Partage des connaissances</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="space-y-8">
+				<div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8">
+					<h2 class="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
+						Mes contributions
+					</h2>
+					<div class="grid grid-cols-2 gap-4">
+						<div class="text-center p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
+							<div class="text-3xl font-bold text-indigo-600 dark:text-indigo-400">{totalArticles}</div>
+							<div class="text-gray-600 dark:text-gray-300">Articles publiés</div>
+						</div>
+						<div class="text-center p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
+							<div class="text-3xl font-bold text-indigo-600 dark:text-indigo-400">{totalBooks}</div>
+							<div class="text-gray-600 dark:text-gray-300">Livres recommandés</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8">
+					<h2 class="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
+						Mes compétences
+					</h2>
+					<div class="flex flex-wrap gap-2">
+						<span class="px-3 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-800 dark:text-indigo-200 rounded-full text-sm">React</span>
+						<span class="px-3 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-800 dark:text-indigo-200 rounded-full text-sm">Node.js</span>
+						<span class="px-3 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-800 dark:text-indigo-200 rounded-full text-sm">TypeScript</span>
+						<span class="px-3 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-800 dark:text-indigo-200 rounded-full text-sm">Python</span>
+						<span class="px-3 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-800 dark:text-indigo-200 rounded-full text-sm">Machine Learning</span>
+						<span class="px-3 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-800 dark:text-indigo-200 rounded-full text-sm">AWS</span>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="text-center">
+			<a 
+				href="/contact" 
+				class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
 			>
-				<img
-					width="1553"
-					height="873"
-					src="/assets/projectmanagersuitorangeface.jpg"
-					alt=""
-				/>
-			</Hero>
-
-			<section>
-				<h2 class="section-title">Background</h2>
-
-				<div class="content">
-					<p>
-						<strong>2005 - Les fondations commerciales</strong><br>
-						Début de mon aventure professionnelle chez SFR en tant que Chargé de Développement Commercial. Cette expérience de quatre années m'a permis de développer une expertise solide en :
-						<ul class="experience-list">
-							<li>Développement commercial stratégique</li>
-							<li>Analyse et optimisation des performances</li>
-							<li>Gestion de la relation client premium</li>
-						</ul>
-					</p>
-
-					<p>
-						<strong>2009 - L'émergence du formateur</strong><br>
-						Évolution vers le poste de Chargé de Formation, marquant le début de ma passion pour la transmission du savoir. Cette période a été décisive dans le développement de mes compétences en :
-						<ul class="experience-list">
-							<li>Conception de programmes de formation innovants</li>
-							<li>Animation de sessions dynamiques</li>
-							<li>Accompagnement personnalisé des équipes</li>
-						</ul>
-					</p>
-
-					<p>
-						<strong>2012 - L'expertise digitale</strong><br>
-						En tant que Chargé de Qualité, j'ai piloté le développement de solutions CRM innovantes. Cette expérience a renforcé mes compétences en :
-						<ul class="experience-list">
-							<li>Gestion de projets digitaux</li>
-							<li>Optimisation des processus métier</li>
-							<li>Interface entre technique et business</li>
-						</ul>
-					</p>
-
-					<p>
-						<strong>2015 - Leadership & Vision</strong><br>
-						Promotion comme Superviseur du Développement Commercial, où j'ai pu déployer mes compétences en :
-						<ul class="experience-list">
-							<li>Management d'équipes performantes</li>
-							<li>Développement stratégique</li>
-							<li>Pilotage d'activités complexes</li>
-						</ul>
-					</p>
-
-					<p>
-						<strong>2018-2019 - La transformation digitale</strong><br>
-						Virage stratégique vers le développement web, motivé par ma vision de l'avenir digital. Focus sur :
-						<ul class="experience-list">
-							<li>Technologies web modernes</li>
-							<li>Solutions e-commerce</li>
-							<li>Transformation digitale des entreprises</li>
-						</ul>
-					</p>
-
-					<p>
-						<strong>2020-2021 - L'expertise technique</strong><br>
-						Lead Développeur Web Front-End, conjuguant :
-						<ul class="experience-list">
-							<li>Développement React/JavaScript</li>
-							<li>Architecture de solutions web</li>
-							<li>Management de projets agiles</li>
-						</ul>
-					</p>
-
-					<p>
-						<strong>Aujourd'hui - Vision 360°</strong><br>
-						Mon parcours unique combine trois piliers essentiels :
-						<ul class="experience-list highlight">
-							<li>🎯 Chef de Projet Pilotage d'Activité</li>
-							<li>💻 Développeur Front-End</li>
-							<li>🎓 Formateur</li>
-						</ul>
-						Cette synergie me permet d'apporter une vision globale et innovante aux projets digitaux d'aujourd'hui et de demain.
-					</p>
-				</div>
-			</section>
-			<section>
-				<h2 class="section-title">Diplômes et certifications</h2>
-				<div class="content">
-					<p>Diplôme Universitaire Technologique de Techniques de Commercialisation - 2001</p>
-					<p>Certification Professionnelle Chef de Projet Niveau 6 - 2020</p>
-					<p>Certification Professionnelle Développeur Intégrateur Web Niveau 6 - 2021</p>
-					
-				</div>
-			</section>
-			<section>
-				<h2 class="section-title">Skills</h2>
-				<div class="content">
-					<p> Communication, Analyse, gestion du temps, organisation, éthique de travail </p>
-				</div>
-			</section>
-		</main>
-
-		<ContactCTA />
+				Me contacter
+				<svg class="ml-2 -mr-1 h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+				</svg>
+			</a>
+		</div>
 	</div>
 </BaseLayout>
-
-<style>
-	.about {
-		display: flex;
-		flex-direction: column;
-		gap: 3.5rem;
-	}
-	
-
-	img {
-		margin-top: 1.5rem;
-		border-radius: 1.5rem;
-		box-shadow: var(--shadow-md);
-	}
-
-	section {
-		display: flex;
-		flex-direction: column;
-		gap: 0.5rem;
-		color: var(--gray-200);
-	}
-
-	.section-title {
-		grid-column-start: 1;
-		font-size: var(--text-xl);
-		color: var(--gray-0);
-		text-align: center;
-	}
-
-	.content {
-		grid-column: 2 / 3;
-	
-		text-align: justify;
-	}
-
-	.content :global(a) {
-		text-decoration: 1px solid underline transparent;
-		text-underline-offset: 0.25em;
-		transition: text-decoration-color var(--theme-transition);
-	}
-
-	.content :global(a:hover),
-	.content :global(a:focus) {
-		text-decoration-color: currentColor;
-	}
-
-	@media (min-width: 50em) {
-		.about {
-			display: grid;
-			grid-template-columns: 1fr 60% 1fr;
-		}
-
-		.about > :global(:first-child) {
-			grid-column-start: 2;
-		}
-
-		section {
-			display: contents;
-			font-size: var(--text-lg);
-		}
-	}
-
-	.experience-list {
-		list-style: none;
-		padding-left: 1.5rem;
-		margin: 1rem 0;
-	}
-
-	.experience-list li {
-		position: relative;
-		padding: 0.5rem 0;
-		color: var(--gray-300);
-	}
-
-	.experience-list li::before {
-		content: "▹";
-		position: absolute;
-		left: -1.5rem;
-		color: var(--accent-regular);
-	}
-
-	.experience-list.highlight li {
-		color: var(--gray-0);
-		font-weight: 500;
-		border-left: 2px solid var(--accent-regular);
-		padding-left: 1rem;
-		margin: 0.5rem 0;
-	}
-
-	.experience-list.highlight li::before {
-		content: none;
-	}
-
-	strong {
-		color: var(--accent-regular);
-		font-size: var(--text-lg);
-		display: inline-block;
-		margin-bottom: 0.5rem;
-	}
-
-	p {
-		margin-bottom: 2rem;
-	}
-
-	@media (min-width: 50em) {
-		.experience-list li {
-			font-size: var(--text-md);
-		}
-	}
-</style>

@@ -1,5 +1,15 @@
 declare module 'astro:content' {
 	interface Render {
+		'.mdx': Promise<{
+			Content: import('astro').MarkdownInstance<{}>['Content'];
+			headings: import('astro').MarkdownHeading[];
+			remarkPluginFrontmatter: Record<string, any>;
+		}>;
+	}
+}
+
+declare module 'astro:content' {
+	interface Render {
 		'.md': Promise<{
 			Content: import('astro').MarkdownInstance<{}>['Content'];
 			headings: import('astro').MarkdownHeading[];
@@ -175,40 +185,63 @@ declare module 'astro:content' {
 
 	type ContentEntryMap = {
 		"articles": {
-"gestion-projet-agile-meilleures-pratiques.md": {
-	id: "gestion-projet-agile-meilleures-pratiques.md";
-  slug: "gestion-projet-agile-meilleures-pratiques";
+};
+"books": {
+"atomic-habits.md": {
+	id: "atomic-habits.md";
+  slug: "atomic-habits";
   body: string;
-  collection: "articles";
-  data: InferEntrySchema<"articles">
+  collection: "books";
+  data: InferEntrySchema<"books">
 } & { render(): Render[".md"] };
-"impact-formation-continue-carriere.md": {
-	id: "impact-formation-continue-carriere.md";
-  slug: "impact-formation-continue-carriere";
+"clean-code.md": {
+	id: "clean-code.md";
+  slug: "clean-code";
   body: string;
-  collection: "articles";
-  data: InferEntrySchema<"articles">
+  collection: "books";
+  data: InferEntrySchema<"books">
 } & { render(): Render[".md"] };
-"importance-leadership.md": {
-	id: "importance-leadership.md";
-  slug: "importance-leadership";
+"deep-work.md": {
+	id: "deep-work.md";
+  slug: "deep-work";
   body: string;
-  collection: "articles";
-  data: InferEntrySchema<"articles">
+  collection: "books";
+  data: InferEntrySchema<"books">
 } & { render(): Render[".md"] };
-"nouvelles-tendances-developpement-web.md": {
-	id: "nouvelles-tendances-developpement-web.md";
-  slug: "nouvelles-tendances-developpement-web";
+"eloquent-javascript.md": {
+	id: "eloquent-javascript.md";
+  slug: "eloquent-javascript";
   body: string;
-  collection: "articles";
-  data: InferEntrySchema<"articles">
+  collection: "books";
+  data: InferEntrySchema<"books">
 } & { render(): Render[".md"] };
-"strategies-marketing-digital-2025.md": {
-	id: "strategies-marketing-digital-2025.md";
-  slug: "strategies-marketing-digital-2025";
+"good-to-great.md": {
+	id: "good-to-great.md";
+  slug: "good-to-great";
   body: string;
-  collection: "articles";
-  data: InferEntrySchema<"articles">
+  collection: "books";
+  data: InferEntrySchema<"books">
+} & { render(): Render[".md"] };
+"influence.md": {
+	id: "influence.md";
+  slug: "influence";
+  body: string;
+  collection: "books";
+  data: InferEntrySchema<"books">
+} & { render(): Render[".md"] };
+"lean-startup.md": {
+	id: "lean-startup.md";
+  slug: "lean-startup";
+  body: string;
+  collection: "books";
+  data: InferEntrySchema<"books">
+} & { render(): Render[".md"] };
+"zero-to-one.md": {
+	id: "zero-to-one.md";
+  slug: "zero-to-one";
+  body: string;
+  collection: "books";
+  data: InferEntrySchema<"books">
 } & { render(): Render[".md"] };
 };
 "work": {

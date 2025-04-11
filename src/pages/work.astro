@@ -1,39 +1,141 @@
 ---
 import { getCollection } from 'astro:content';
-
 import BaseLayout from '../layouts/BaseLayout.astro';
 
-import ContactCTA from '../components/ContactCTA.astro';
-import PortfolioPreview from '../components/PortfolioPreview.astro';
-import Hero from '../components/Hero.astro';
-import Grid from '../components/Grid.astro';
-
-const projects = (await getCollection('work')).sort(
-	(a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf()
+// Récupération et tri des projets par date
+const projects = await getCollection('work');
+const sortedProjects = projects.sort((a, b) => 
+	new Date(b.data.publishDate).getTime() - new Date(a.data.publishDate).getTime()
 );
+
+// Métadonnées SEO optimisées
+const pageTitle = "Portfolio de Projets | Gérald Paméole - Développeur Web Full Stack";
+const pageDescription = "Découvrez mes projets de développement web et applications: sites vitrines, e-commerce, applications métier et projets open source.";
 ---
 
-<BaseLayout
-	title="Mes Missions et projets | Gérald PAMEOLE "
-	description="Découvrez mes projets les plus récents ci-dessous afin d'avoir une idée de mes expériences."
->
-	<div class="stack gap-20">
-		<main class="wrapper stack gap-8">
-			<Hero
-				title="Mes Missions et projets"
-				tagline="Découvrez mes projets les plus récents ci-dessous afin d'avoir une idée de mes expériences."
-				align="center"
-			/>
-			<Grid variant="offset">
-				{
-					projects.map((project) => (
-						<li>
-							<PortfolioPreview project={project} />
-						</li>
-					))
-				}
-			</Grid>
-		</main>
-		<ContactCTA />
+<BaseLayout title={pageTitle} description={pageDescription}>
+	<div class="bg-white dark:bg-gray-900 py-16 sm:py-24">
+		<div class="container mx-auto px-4 max-w-7xl">
+			<!-- En-tête de section avec microdonées SEO -->
+			<div class="mx-auto max-w-2xl text-center mb-16">
+				<h1 class="text-4xl font-bold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-blue-500 sm:text-5xl mb-6">
+					Mes Réalisations
+				</h1>
+				<p class="text-lg leading-8 text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+					Une sélection de mes projets de développement web et applications. Chaque projet représente un défi unique
+					résolu avec les technologies adaptées.
+				</p>
+			</div>
+
+			<!-- Galerie de projets -->
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" itemscope itemtype="https://schema.org/Collection">
+				{sortedProjects.map((project) => (
+					<article 
+						class="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden flex flex-col h-full transition-all duration-300 hover:shadow-xl hover:translate-y-[-5px]"
+						itemscope 
+						itemtype="https://schema.org/CreativeWork"
+					>
+						<a href={`/work/${project.slug}`} class="block relative overflow-hidden aspect-video">
+							{project.data.image ? (
+								<img
+									src={project.data.image}
+									alt={`Aperçu du projet ${project.data.title}`}
+									class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+									itemprop="image"
+									loading="lazy"
+								/>
+							) : (
+								<div class="w-full h-full bg-gradient-to-br from-indigo-500 to-blue-600 flex items-center justify-center">
+									<span class="text-white text-3xl font-bold">{project.data.title.charAt(0)}</span>
+								</div>
+							)}
+							
+							<!-- Badge de type de projet -->
+							{project.data.projectType && (
+								<span class="absolute top-3 right-3 px-3 py-1 bg-indigo-600 text-white text-xs font-medium rounded-full shadow-md">
+									{project.data.projectType}
+								</span>
+							)}
+						</a>
+						
+						<div class="p-6 flex-grow flex flex-col justify-between">
+							<div>
+								<h2 class="text-xl font-bold mb-3 text-gray-900 dark:text-white" itemprop="name">
+									<a href={`/work/${project.slug}`} class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">
+										{project.data.title}
+									</a>
+								</h2>
+								<p class="text-gray-600 dark:text-gray-300 mb-4" itemprop="description">
+									{project.data.description}
+								</p>
+							</div>
+							
+							<!-- Technologies et compétences -->
+							{project.data.technologies && (
+								<div class="mt-4">
+									<div class="flex flex-wrap gap-2">
+										{project.data.technologies.map((tech) => (
+											<span class="px-2 py-1 text-xs bg-indigo-100 dark:bg-indigo-900/50 text-indigo-800 dark:text-indigo-200 rounded-full">
+												{tech}
+											</span>
+										))}
+									</div>
+								</div>
+							)}
+							
+							<!-- Date et liens -->
+							<div class="mt-6 pt-4 border-t border-gray-200 dark:border-gray-700 flex justify-between items-center">
+								<time datetime={project.data.publishDate} class="text-sm text-gray-500 dark:text-gray-400" itemprop="datePublished">
+									{new Date(project.data.publishDate).toLocaleDateString('fr-FR', {
+										year: 'numeric',
+										month: 'long'
+									})}
+								</time>
+								
+								<a 
+									href={`/work/${project.slug}`} 
+									class="inline-flex items-center text-sm font-medium text-indigo-600 dark:text-indigo-400 hover:text-indigo-800 dark:hover:text-indigo-300"
+								>
+									Voir le projet
+									<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+									</svg>
+								</a>
+							</div>
+						</div>
+					</article>
+				))}
+			</div>
+			
+			<!-- CTA Section -->
+			<div class="mt-20 text-center">
+				<div class="inline-block p-8 bg-gradient-to-r from-indigo-100 to-blue-100 dark:from-indigo-900/30 dark:to-blue-900/30 rounded-2xl">
+					<h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Vous avez un projet en tête ?</h2>
+					<p class="text-gray-600 dark:text-gray-300 mb-6 max-w-2xl mx-auto">
+						Je suis disponible pour vous accompagner dans la conception et le développement 
+						de votre prochain projet web ou application.
+					</p>
+					<a 
+						href="/contact" 
+						class="inline-flex items-center px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-medium rounded-lg transition-colors"
+					>
+						Discutons de votre projet
+						<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+						</svg>
+					</a>
+				</div>
+			</div>
+		</div>
 	</div>
 </BaseLayout>
+
+<style>
+	h1 {
+		background-image: linear-gradient(to right, #4f46e5, #3b82f6);
+		-webkit-background-clip: text;
+		background-clip: text;
+		color: transparent;
+		text-shadow: 0 2px 4px rgba(0,0,0,0.05);
+	}
+</style>

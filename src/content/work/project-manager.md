@@ -1,12 +1,12 @@
 ---
-title: Chef de Projet
-publishDate: 2024-08-12
-description: Pilotage de projets de transformation numérique et coordination d'équipes pluridisciplinaires.
+title: Chef de Projet Digital
+publishDate: "2024-01-02"
+description: Gestion et coordination de projets digitaux innovants.
 author: Gérald Paméole
-img: /assets/projectmanager2.jpg
-img_alt: Chef de projet digital en action
+img: /assets/project-manager.jpg
+img_alt: Chef de projet en action
 tags:
-  - Gestion de Projet
+  - Gestion de projet
   - Agilité
   - Leadership
   - Innovation

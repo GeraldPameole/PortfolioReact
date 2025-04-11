@@ -1,8 +1,9 @@
 ---
-title: "Stratégies de Marketing Digital pour 2025"
-publishDate: 2025-01-26
+title: "Stratégies de Marketing Digital 2025 : Tendances et Innovations"
+publishDate: "2024-04-09"
 author: Gérald Paméole
-description: "Maîtrisez les stratégies marketing innovantes et créez votre océan bleu digital."
+description: "Anticipez les évolutions du marketing digital et préparez votre stratégie pour les années à venir."
+theme: "marketing"
 ---
 
 # Innovez en Marketing Digital : Guide Pratique

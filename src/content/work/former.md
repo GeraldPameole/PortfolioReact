@@ -1,6 +1,6 @@
 ---
 title: Formateur Outils et Méthodes
-publishDate: 2024-01-01
+publishDate: "2024-01-01"
 description: Formation et accompagnement des professionnels dans leur transformation digitale.
 author: Gérald Paméole
 img: /assets/formator.jpg

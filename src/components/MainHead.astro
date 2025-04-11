@@ -4,27 +4,63 @@ import '../styles/global.css';
 interface Props {
 	title?: string | undefined;
 	description?: string | undefined;
+	image?: string | undefined;
+	keywords?: string | undefined;
+	type?: 'website' | 'article' | undefined;
 }
 
 const {
-	title = 'Gerald Pameole: Portfolio',
-	description = 'Portfolio React Astro V2',
+	title = 'Gérald Paméole: Portfolio Développeur & Formateur',
+	description = 'Portfolio professionnel de Gérald Paméole - Expertise en développement web, formation et management digital',
+	image = '/assets/social-image.jpg',
+	keywords = 'portfolio développeur, formation web, développement web, management digital, JavaScript, React, Astro',
+	type = 'website',
 } = Astro.props;
+
+// Récupérer l'URL canonique
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
 
 <meta charset="UTF-8" />
-<meta name="description" property="og:description" content={description} />
+<meta name="description" content={description} />
 <meta name="viewport" content="width=device-width" />
 <meta name="generator" content={Astro.generator} />
+<meta name="keywords" content={keywords} />
+<meta name="author" content="Gérald Paméole" />
+<meta name="robots" content="index, follow" />
 <title>{title}</title>
 
+<!-- Canonical URL -->
+<link rel="canonical" href={canonicalURL} />
+
+<!-- OpenGraph / Facebook -->
+<meta property="og:type" content={type} />
+<meta property="og:url" content={Astro.url} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content={new URL(image, Astro.url)} />
+<meta property="og:locale" content="fr_FR" />
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:url" content={Astro.url} />
+<meta property="twitter:title" content={title} />
+<meta property="twitter:description" content={description} />
+<meta property="twitter:image" content={new URL(image, Astro.url)} />
+
+<!-- Favicon -->
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+<!-- Preload Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link
 	href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400;0,700;1,400&family=Rubik:wght@500;600&display=swap"
 	rel="stylesheet"
 />
+
+<!-- Theme switching script -->
 <script is:inline>
 	// This code is inlined in the head to make dark mode instant & blocking.
 	const getThemePreference = () => {

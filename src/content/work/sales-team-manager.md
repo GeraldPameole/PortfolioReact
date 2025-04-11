@@ -1,14 +1,14 @@
 ---
-title: Manager Commercial
-publishDate: 2024-12-01
-description: Direction d'équipes commerciales et développement stratégique du business.
+title: Manager d'Équipe Commerciale
+publishDate: "2024-01-04"
+description: Management et développement d'une équipe commerciale performante.
 author: Gérald Paméole
-img: /assets/sales-team-manager.jpg
-img_alt: Manager commercial en réunion d'équipe
+img: /assets/sales-manager.jpg
+img_alt: Manager commercial en action
 tags:
   - Management
   - Vente
-  - Stratégie
+  - Leadership
   - Performance
 ---
 

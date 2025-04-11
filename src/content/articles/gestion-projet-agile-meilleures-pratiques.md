@@ -1,8 +1,9 @@
 ---
-title: "La Gestion de Projet Agile : Meilleures Pratiques"
-publishDate: 2024-03-15
+title: "Gestion de Projet Agile : Meilleures Pratiques et Pièges à Éviter"
+description: "Au-delà des certifications : un guide pragmatique des pratiques agiles qui fonctionnent réellement, basé sur des retours d'expérience de projets de diverses envergures."
+publishDate: "2024-04-02"
 author: Gérald Paméole
-description: "Découvrez comment implémenter efficacement les méthodologies agiles dans vos projets."
+theme: "productivite"
 ---
 
 # Maîtrisez l'Agilité : Guide Pratique

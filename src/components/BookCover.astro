@@ -1,0 +1,48 @@
+---
+import GeneratedBookCover from './GeneratedBookCover.astro';
+
+interface Props {
+    cover?: string;
+    title: string;
+    profession: string;
+}
+
+const { cover, title, profession } = Astro.props;
+---
+
+<div class="book-cover-container aspect-[2/3] relative">
+    {cover ? (
+        <>
+            <img 
+                src={cover} 
+                alt={`Couverture de ${title}`} 
+                class="w-full h-full object-cover"
+                onError={(e) => {
+                    const img = e.target as HTMLImageElement;
+                    img.style.display = 'none';
+                    const fallback = img.nextElementSibling as HTMLElement;
+                    if (fallback) fallback.classList.remove('hidden');
+                }}
+            />
+            <div class="generated-cover-fallback hidden absolute inset-0">
+                <GeneratedBookCover
+                    title={title}
+                    profession={profession}
+                />
+            </div>
+        </>
+    ) : (
+        <GeneratedBookCover
+            title={title}
+            profession={profession}
+        />
+    )}
+</div>
+
+<style>
+@layer components {
+  .cover-image {
+    @apply overflow-hidden rounded-t-lg;
+  }
+}
+</style> 

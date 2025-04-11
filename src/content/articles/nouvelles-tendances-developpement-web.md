@@ -1,8 +1,9 @@
 ---
-title: "Les Nouvelles Tendances en Développement Web"
-publishDate: 2024-03-15
+title: "Nouvelles Tendances du Développement Web en 2024"
+publishDate: "2024-04-01"
 author: Gérald Paméole
-description: "Maîtrisez les technologies web modernes et découvrez comment les implémenter efficacement dans vos projets."
+description: "Exploration des technologies émergentes et des méthodologies qui façonneront l'avenir du développement web dans les prochaines années."
+theme: "developpement-web"
 ---
 
 # Maîtrisez les Technologies Web de Demain

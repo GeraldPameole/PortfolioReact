@@ -1,118 +1,169 @@
 ---
-// Learn about using Astro layouts:
-// https://docs.astro.build/en/core-concepts/layouts/
+/* Documentation: https://docs.astro.build/en/core-concepts/layouts/ */
 
 // Component Imports
-import MainHead from '../components/MainHead.astro';
-import Nav from '../components/Nav.astro';
+import { ViewTransitions } from 'astro:transitions';
+import BackButton from '../components/BackButton.astro';
+import BackToTop from '../components/BackToTop.astro';
 import Footer from '../components/Footer.astro';
+import Navbar from '../components/Navbar';
+import '../styles/global.css';
 
 interface Props {
-	title?: string | undefined;
-	description?: string | undefined;
+	title: string;
+	description?: string;
+	image?: string;
+	customClass?: string;
 }
 
-const { title, description } = Astro.props;
+const { title, description = "Développeur Full Stack et Expert en IA", image = "/images/profile.jpg", customClass = "" } = Astro.props;
 ---
 
-<html lang="fr">
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
 	<head>
-		<MainHead title={title} description={description} />
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>{title} | Gérald Paméole</title>
+		<meta name="description" content={description} />
+		<meta name="author" content="Gérald Paméole" />
+		<meta name="keywords" content="développeur, full stack, intelligence artificielle, IA, react, node.js, machine learning, portfolio" />
+		<meta name="theme-color" content="#4f46e5" />
+		<meta property="og:title" content={`${title} | Gérald Paméole`} />
+		<meta property="og:description" content={description} />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://gerald-pameole.com" />
+		<meta property="og:image" content="/images/meta-image.png" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="canonical" href="https://gerald-pameole.com" />
+		<meta name="generator" content={Astro.generator} />
+		<ViewTransitions />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+			rel="stylesheet"
+		/>
 	</head>
-	<body>
-		<div class="stack backgrounds">
-			<Nav />
+	<body class={`min-h-screen flex flex-col ${customClass}`}>
+		<Navbar client:load />
+		<BackButton />
+		<main class="flex-grow">
 			<slot />
-			<Footer />
-		</div>
-
-		<script>
-			// Add "loaded" class once the document has completely loaded.
-			addEventListener('load', () => document.documentElement.classList.add('loaded'));
-		</script>
-
-		<style>
-			:root {
-				--_placeholder-bg: linear-gradient(transparent, transparent);
-				--bg-image-main: url('/assets/backgrounds/bg-main-light-800w.jpg');
-				--bg-image-main-curves: url('/assets/backgrounds/bg-main-light.svg');
-				--bg-image-subtle-1: var(--_placeholder-bg);
-				--bg-image-subtle-2: var(--_placeholder-bg);
-				--bg-image-footer: var(--_placeholder-bg);
-				--bg-svg-blend-mode: overlay;
-				--bg-blend-mode: darken;
-				--bg-image-aspect-ratio: 2.25;
-				--bg-scale: 1.68;
-				--bg-aspect-ratio: calc(var(--bg-image-aspect-ratio) / var(--bg-scale));
-				--bg-gradient-size: calc(var(--bg-scale) * 100%);
-			}
-
-			:root.theme-dark {
-				--bg-image-main: url('/assets/backgrounds/bg-main-dark-800w.jpg');
-				--bg-image-main-curves: url('/assets/backgrounds/bg-main-dark.svg');
-				--bg-svg-blend-mode: darken;
-				--bg-blend-mode: lighten;
-			}
-
-			/* These backgrounds are displayed below the fold, so we lazy load them
-			   once the `.loaded` class has been set.  */
-			:root.loaded {
-				--bg-image-subtle-1: url('/assets/backgrounds/bg-subtle-1-light-800w.jpg');
-				--bg-image-subtle-2: url('/assets/backgrounds/bg-subtle-2-light-800w.jpg');
-				--bg-image-footer: url('/assets/backgrounds/bg-footer-light-800w.jpg');
-			}
-			:root.loaded.theme-dark {
-				--bg-image-subtle-1: url('/assets/backgrounds/bg-subtle-1-dark-800w.jpg');
-				--bg-image-subtle-2: url('/assets/backgrounds/bg-subtle-2-dark-800w.jpg');
-				--bg-image-footer: url('/assets/backgrounds/bg-footer-dark-800w.jpg');
-			}
-
-			@media (min-width: 50em) {
-				:root {
-					--bg-scale: 1;
-					--bg-image-main: url('/assets/backgrounds/bg-main-light-1440w.jpg');
-				}
-				:root.theme-dark {
-					--bg-image-main: url('/assets/backgrounds/bg-main-dark-1440w.jpg');
-				}
-
-				:root.loaded {
-					--bg-image-subtle-1: url('/assets/backgrounds/bg-subtle-1-light-1440w.jpg');
-					--bg-image-subtle-2: url('/assets/backgrounds/bg-subtle-2-light-1440w.jpg');
-					--bg-image-footer: url('/assets/backgrounds/bg-footer-light-1440w.jpg');
-				}
-				:root.loaded.theme-dark {
-					--bg-image-subtle-1: url('/assets/backgrounds/bg-subtle-1-dark-1440w.jpg');
-					--bg-image-subtle-2: url('/assets/backgrounds/bg-subtle-2-dark-1440w.jpg');
-					--bg-image-footer: url('/assets/backgrounds/bg-footer-dark-1440w.jpg');
-				}
-			}
-
-			.backgrounds {
-				min-height: 100%;
-				isolation: isolate;
-				background:
-					/*noise*/
-					url('/assets/backgrounds/noise.png') top center/220px repeat,
-					/*footer*/ var(--bg-image-footer) bottom center/var(--bg-gradient-size) no-repeat,
-					/*header1*/ var(--bg-image-main-curves) top center/var(--bg-gradient-size) no-repeat,
-					/*header2*/ var(--bg-image-main) top center/var(--bg-gradient-size) no-repeat,
-					/*base*/ var(--gray-999);
-				background-blend-mode: /*noise*/
-					overlay,
-					/*footer*/ var(--bg-blend-mode),
-					/*header1*/ var(--bg-svg-blend-mode),
-					/*header2*/ normal,
-					/*base*/ normal;
-			}
-			@media (forced-colors: active) {
-				/* Deactivate custom backgrounds for high contrast users. */
-				.backgrounds {
-					background: none;
-					background-blend-mode: none;
-					--bg-gradient-size: none;
-				}
-			}
-		</style>
+		</main>
+		<BackToTop />
+		<Footer />
 	</body>
 </html>
+
+<style>
+	:root {
+		--_placeholder-bg: linear-gradient(transparent, transparent);
+		--bg-image-main: url('/assets/backgrounds/bg-main-light-800w.jpg');
+		--bg-image-main-curves: url('/assets/backgrounds/bg-main-light.svg');
+		--bg-image-subtle-1: var(--_placeholder-bg);
+		--bg-image-subtle-2: var(--_placeholder-bg);
+		--bg-image-footer: var(--_placeholder-bg);
+		--bg-svg-blend-mode: overlay;
+		--bg-blend-mode: darken;
+		--bg-image-aspect-ratio: 2.25;
+		--bg-scale: 1.68;
+		--bg-aspect-ratio: calc(var(--bg-image-aspect-ratio) / var(--bg-scale));
+		--bg-gradient-size: calc(var(--bg-scale) * 100%);
+		--accent: 136, 58, 234;
+		--accent-light: 224, 204, 250;
+		--accent-dark: 49, 10, 101;
+		--accent-gradient: linear-gradient(
+			45deg,
+			rgb(var(--accent)),
+			rgb(var(--accent-light)) 30%,
+			white 60%
+		);
+	}
+
+	:root.theme-dark {
+		--bg-image-main: url('/assets/backgrounds/bg-main-dark-800w.jpg');
+		--bg-image-main-curves: url('/assets/backgrounds/bg-main-dark.svg');
+		--bg-svg-blend-mode: darken;
+		--bg-blend-mode: lighten;
+	}
+
+	/* These backgrounds are displayed below the fold, so we lazy load them
+	   once the `.loaded` class has been set.  */
+	:root.loaded {
+		--bg-image-subtle-1: url('/assets/backgrounds/bg-subtle-1-light-800w.jpg');
+		--bg-image-subtle-2: url('/assets/backgrounds/bg-subtle-2-light-800w.jpg');
+		--bg-image-footer: url('/assets/backgrounds/bg-footer-light-800w.jpg');
+	}
+	:root.loaded.theme-dark {
+		--bg-image-subtle-1: url('/assets/backgrounds/bg-subtle-1-dark-800w.jpg');
+		--bg-image-subtle-2: url('/assets/backgrounds/bg-subtle-2-dark-800w.jpg');
+		--bg-image-footer: url('/assets/backgrounds/bg-footer-dark-800w.jpg');
+	}
+
+	@media (min-width: 50em) {
+		:root {
+			--bg-scale: 1;
+			--bg-image-main: url('/assets/backgrounds/bg-main-light-1440w.jpg');
+		}
+		:root.theme-dark {
+			--bg-image-main: url('/assets/backgrounds/bg-main-dark-1440w.jpg');
+		}
+
+		:root.loaded {
+			--bg-image-subtle-1: url('/assets/backgrounds/bg-subtle-1-light-1440w.jpg');
+			--bg-image-subtle-2: url('/assets/backgrounds/bg-subtle-2-light-1440w.jpg');
+			--bg-image-footer: url('/assets/backgrounds/bg-footer-light-1440w.jpg');
+		}
+		:root.loaded.theme-dark {
+			--bg-image-subtle-1: url('/assets/backgrounds/bg-subtle-1-dark-1440w.jpg');
+			--bg-image-subtle-2: url('/assets/backgrounds/bg-subtle-2-dark-1440w.jpg');
+			--bg-image-footer: url('/assets/backgrounds/bg-footer-dark-1440w.jpg');
+		}
+	}
+
+	.backgrounds {
+		min-height: 100%;
+		isolation: isolate;
+		background:
+			/*noise*/
+			url('/assets/backgrounds/noise.png') top center/220px repeat,
+			/*footer*/ var(--bg-image-footer) bottom center/var(--bg-gradient-size) no-repeat,
+			/*header1*/ var(--bg-image-main-curves) top center/var(--bg-gradient-size) no-repeat,
+			/*header2*/ var(--bg-image-main) top center/var(--bg-gradient-size) no-repeat,
+			/*base*/ var(--gray-999);
+		background-blend-mode: /*noise*/
+			overlay,
+			/*footer*/ var(--bg-blend-mode),
+			/*header1*/ var(--bg-svg-blend-mode),
+			/*header2*/ normal,
+			/*base*/ normal;
+	}
+	@media (forced-colors: active) {
+		/* Deactivate custom backgrounds for high contrast users. */
+		.backgrounds {
+			background: none;
+			background-blend-mode: none;
+			--bg-gradient-size: none;
+		}
+	}
+
+	html {
+		font-family: system-ui, sans-serif;
+		background: #13151A;
+		background-size: 224px;
+	}
+
+	body {
+		margin: 0;
+		padding: 0;
+		font-size: 16px;
+		line-height: 1.6;
+		font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+	}
+
+	code {
+		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+			Bitstream Vera Sans Mono, Courier New, monospace;
+	}
+</style>
