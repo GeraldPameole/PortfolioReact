@@ -241,4 +241,4 @@
    - Ajouter des animations subtiles pour améliorer l'engagement
    - Mettre en place un système de newsletter ou d'abonnement aux mises à jour
 
-Ces actions vous permettront de finaliser votre portfolio avec les meilleures pratiques actuelles en matière de développement web, optimisation des performances et référencement.
+.
