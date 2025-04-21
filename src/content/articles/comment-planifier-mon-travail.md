@@ -1,7 +1,8 @@
 ---
 title: "Comment Planifier Mon Travail : Guide Pratique pour une Productivité Optimale"
 description: "Cadre méthodologique complet pour une planification efficace du travail, intégrant horizons temporels multiples et équilibre entre réactivité et structure."
-publishDate: "2024-04-03"
+publishDate: 2024-04-03
+type: "article"
 author: Gérald Paméole
 theme: "productivite"
 ---

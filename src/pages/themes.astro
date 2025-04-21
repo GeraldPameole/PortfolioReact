@@ -1,0 +1,292 @@
+---
+import { getCollection } from 'astro:content';
+import PageBanner from '../components/PageBanner.astro';
+import BlogCard from '../components/BlogCard.astro';
+import CallToAction from '../components/CallToAction.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import BackToTop from '../components/BackToTop.astro';
+import { mapToStandardTheme, standardThemes, type ThemeKey } from '../utils/themeUtils';
+
+// Récupération de tous les articles
+const articles = await getCollection('articles');
+const sortedArticles = articles.sort((a, b) => 
+  new Date(b.data.publishDate).getTime() - new Date(a.data.publishDate).getTime()
+);
+
+// Générer la liste des thèmes disponibles
+const availableThemes = Array.from(
+  new Set(
+    sortedArticles.flatMap(article => 
+      article.data.tags ? article.data.tags.map(tag => tag.toLowerCase()) : []
+    )
+  )
+).filter(tag => tag in standardThemes);
+
+// Obtenir le thème depuis l'URL
+const { theme } = Astro.params;
+const currentTheme = theme ? decodeURIComponent(theme) : null;
+
+// Filtrer les articles du thème actuel ou préparer tous les thèmes
+let themeArticles = [];
+if (currentTheme && currentTheme in standardThemes) {
+  themeArticles = sortedArticles.filter(article => 
+    article.data.tags && article.data.tags.some(tag => 
+      tag.toLowerCase() === currentTheme.toLowerCase()
+    )
+  );
+}
+
+// Grouper les articles par thème
+let articlesByTheme = {};
+availableThemes.forEach(theme => {
+  articlesByTheme[theme] = sortedArticles.filter(article => 
+    article.data.tags && article.data.tags.some(tag => 
+      tag.toLowerCase() === theme.toLowerCase()
+    )
+  );
+});
+
+// Ajouter les articles sans thème
+const untaggedArticles = sortedArticles.filter(article => 
+  !article.data.tags || article.data.tags.length === 0 || 
+  !article.data.tags.some(tag => tag.toLowerCase() in standardThemes)
+);
+
+if (untaggedArticles.length > 0) {
+  articlesByTheme["autre"] = untaggedArticles;
+}
+
+// Titre de la page
+const pageTitle = currentTheme 
+  ? `Articles sur ${standardThemes[currentTheme as ThemeKey]?.label || currentTheme}` 
+  : "Tous les thèmes";
+
+// Description de la page
+const pageDescription = currentTheme
+  ? `Découvrez mes articles sur le thème ${standardThemes[currentTheme as ThemeKey]?.label || currentTheme} et approfondissez vos connaissances dans ce domaine.`
+  : "Explorez mes articles classés par thèmes pour trouver facilement le contenu qui vous intéresse.";
+
+// Illustrations pour les thèmes - association de chaque thème à une icône
+const themeIcons: Record<string, string> = {
+  "developpement": "fas fa-code",
+  "technologie": "fas fa-microchip",
+  "carriere": "fas fa-briefcase",
+  "intelligence-artificielle": "fas fa-brain",
+  "architecture": "fas fa-sitemap",
+  "devops": "fas fa-server",
+  "frontend": "fas fa-laptop-code",
+  "backend": "fas fa-database",
+  "mobile": "fas fa-mobile-alt",
+  "design": "fas fa-palette",
+  "performance": "fas fa-tachometer-alt",
+  "securite": "fas fa-shield-alt",
+  "autre": "fas fa-question-circle"
+};
+
+// Définition des labels pour les thèmes
+const themeLabels: Record<string, string> = {
+  "developpement": "Développement",
+  "technologie": "Technologie",
+  "carriere": "Carrière & Formation",
+  "intelligence-artificielle": "Intelligence Artificielle",
+  "architecture": "Architecture Logicielle",
+  "devops": "DevOps & Cloud",
+  "frontend": "Frontend",
+  "backend": "Backend",
+  "mobile": "Mobile",
+  "design": "Design & UX",
+  "performance": "Performance", 
+  "securite": "Sécurité",
+  "autre": "Autre"
+};
+
+// Couleurs pour les thèmes
+const themeColors: Record<string, { gradient: string, text: string, bg: string }> = {
+  "developpement": { gradient: "from-blue-500 to-blue-700", text: "text-blue-600", bg: "bg-blue-100 dark:bg-blue-900/30" },
+  "technologie": { gradient: "from-indigo-500 to-indigo-700", text: "text-indigo-600", bg: "bg-indigo-100 dark:bg-indigo-900/30" },
+  "carriere": { gradient: "from-purple-500 to-purple-700", text: "text-purple-600", bg: "bg-purple-100 dark:bg-purple-900/30" },
+  "intelligence-artificielle": { gradient: "from-emerald-500 to-emerald-700", text: "text-emerald-600", bg: "bg-emerald-100 dark:bg-emerald-900/30" },
+  "architecture": { gradient: "from-amber-500 to-amber-700", text: "text-amber-600", bg: "bg-amber-100 dark:bg-amber-900/30" },
+  "devops": { gradient: "from-green-500 to-green-700", text: "text-green-600", bg: "bg-green-100 dark:bg-green-900/30" },
+  "frontend": { gradient: "from-pink-500 to-pink-700", text: "text-pink-600", bg: "bg-pink-100 dark:bg-pink-900/30" },
+  "backend": { gradient: "from-sky-500 to-sky-700", text: "text-sky-600", bg: "bg-sky-100 dark:bg-sky-900/30" },
+  "mobile": { gradient: "from-orange-500 to-orange-700", text: "text-orange-600", bg: "bg-orange-100 dark:bg-orange-900/30" },
+  "design": { gradient: "from-rose-500 to-rose-700", text: "text-rose-600", bg: "bg-rose-100 dark:bg-rose-900/30" },
+  "performance": { gradient: "from-cyan-500 to-cyan-700", text: "text-cyan-600", bg: "bg-cyan-100 dark:bg-cyan-900/30" },
+  "securite": { gradient: "from-red-500 to-red-700", text: "text-red-600", bg: "bg-red-100 dark:bg-red-900/30" },
+  "autre": { gradient: "from-gray-500 to-gray-700", text: "text-gray-600", bg: "bg-gray-100 dark:bg-gray-900/30" }
+};
+
+// Statistiques
+const totalArticles = sortedArticles.length;
+const totalThemes = Object.keys(articlesByTheme).length;
+const mostPopularTheme = Object.entries(articlesByTheme)
+  .sort((a, b) => b[1].length - a[1].length)[0];
+
+const stats = [
+  { value: totalArticles, label: "Articles publiés", icon: "fas fa-newspaper" },
+  { value: totalThemes, label: "Thèmes différents", icon: "fas fa-tags" },
+  { value: mostPopularTheme ? mostPopularTheme[1].length : 0, 
+    label: mostPopularTheme ? `Articles sur ${themeLabels[mostPopularTheme[0]]}` : "Articles par thème", 
+    icon: "fas fa-star" },
+  { value: Math.round(totalArticles / totalThemes), label: "Moyenne par thème", icon: "fas fa-calculator" }
+];
+---
+
+<BaseLayout 
+  title={pageTitle}
+  description={pageDescription}
+  image="/assets/backgrounds/themes-banner.jpg"
+>
+  <PageBanner 
+    title={pageTitle}
+    subtitle={pageDescription}
+    image="/assets/backgrounds/themes-banner.jpg"
+  />
+
+  <div class="container mx-auto px-4 py-16">
+    {currentTheme ? (
+      <div class="mb-16">
+        <div class="flex items-center mb-8">
+          <div class={`w-12 h-12 rounded-full flex items-center justify-center mr-4 bg-gradient-to-r from-${standardThemes[currentTheme as ThemeKey]?.color || 'blue-500'} to-${standardThemes[currentTheme as ThemeKey]?.colorTo || 'indigo-600'} text-white`}>
+            <span class="text-2xl">{standardThemes[currentTheme as ThemeKey]?.icon || '📚'}</span>
+          </div>
+          <h2 class="text-3xl font-bold text-gray-800 dark:text-white">
+            {standardThemes[currentTheme as ThemeKey]?.label || currentTheme}
+            <span class="ml-2 text-lg font-normal text-gray-500 dark:text-gray-400">
+              ({themeArticles.length} article{themeArticles.length > 1 ? 's' : ''})
+            </span>
+          </h2>
+        </div>
+
+        <!-- Articles du thème -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {themeArticles.map(article => (
+            <BlogCard 
+              title={article.data.title}
+              description={article.data.description}
+              url={`/blog/${article.slug}`}
+              image={article.data.image || `/assets/themes/${standardThemes[currentTheme as ThemeKey]?.image || 'default.webp'}`}
+              date={article.data.publishDate}
+              readingTime={article.data.readingTime ? article.data.readingTime.toString() : "5 min"}
+              tags={article.data.tags || []}
+              theme={currentTheme as ThemeKey}
+              author={article.data.author || "Gérald Paméole"}
+            />
+          ))}
+        </div>
+
+        <div class="mt-12">
+          <a href="/themes" class="inline-flex items-center px-6 py-3 rounded-lg bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 17l-5-5m0 0l5-5m-5 5h12" />
+            </svg>
+            Voir tous les thèmes
+          </a>
+        </div>
+      </div>
+    ) : (
+      <div>
+        <h2 class="text-3xl font-bold mb-12 text-center text-gray-800 dark:text-white">
+          Explorez mes articles par thème
+        </h2>
+
+        <!-- Grille des thèmes -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {Object.entries(articlesByTheme).map(([theme, themeArticles]) => (
+            <a 
+              href={`/themes/${theme}`} 
+              class="group bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden transform transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
+            >
+              <div class="relative h-48 overflow-hidden">
+                <img 
+                  src={`/assets/themes/${standardThemes[theme as ThemeKey]?.image || 'default.webp'}`} 
+                  alt={`Thème ${standardThemes[theme as ThemeKey]?.label || theme}`}
+                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
+                  <div class="p-6 w-full">
+                    <div class="flex items-center mb-2">
+                      <div class={`w-10 h-10 rounded-full flex items-center justify-center mr-3 bg-gradient-to-r from-${standardThemes[theme as ThemeKey]?.color || 'blue-500'} to-${standardThemes[theme as ThemeKey]?.colorTo || 'indigo-600'} text-white`}>
+                        <span class="text-xl">{standardThemes[theme as ThemeKey]?.icon || '📚'}</span>
+                      </div>
+                      <h3 class="text-xl font-bold text-white">
+                        {standardThemes[theme as ThemeKey]?.label || theme}
+                      </h3>
+                    </div>
+                    <p class="text-white/80 text-sm">
+                      {(themeArticles as any[]).length} article{(themeArticles as any[]).length > 1 ? 's' : ''}
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="p-6">
+                <p class="text-gray-600 dark:text-gray-300 mb-4">
+                  {(themeArticles as any[]).slice(0, 3).map((article: any) => article.data.title).join(', ')}
+                  {(themeArticles as any[]).length > 3 ? '...' : ''}
+                </p>
+                <div class="flex justify-between items-center mt-4 pt-4 border-t border-gray-100 dark:border-gray-700">
+                  <span class="text-sm text-gray-600 dark:text-gray-400">
+                    Dernière mise à jour: {new Date((themeArticles as any[])[0]?.data.publishDate).toLocaleDateString('fr-FR', {
+                      year: 'numeric',
+                      month: 'short',
+                    })}
+                  </span>
+                  <span class="text-secondary-warm dark:text-tertiary-light group-hover:translate-x-1 transition-transform duration-300 flex items-center">
+                    Explorer
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                    </svg>
+                  </span>
+                </div>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    )}
+  </div>
+
+  <CallToAction 
+    title="Besoin d'information sur un sujet spécifique ?"
+    description="N'hésitez pas à me contacter si vous souhaitez que j'aborde un thème particulier."
+    buttonText="Me contacter"
+    buttonUrl="/contact"
+  />
+
+  <BackToTop />
+</BaseLayout>
+
+<script>
+  // Animations avec Intersection Observer
+  document.addEventListener('DOMContentLoaded', () => {
+    const cards = document.querySelectorAll('.grid > a, .grid > article');
+    
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => {
+            entry.target.classList.add('opacity-100');
+            entry.target.classList.remove('opacity-0', 'translate-y-8');
+          }, index * 100);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    
+    cards.forEach((card) => {
+      card.classList.add('opacity-0', 'translate-y-8', 'transition-all', 'duration-700');
+      observer.observe(card);
+    });
+  });
+</script>
+
+<style>
+  /* Animations et styles spécifiques */
+  .grid > a, .grid > article {
+    transition: 
+      opacity 0.5s ease,
+      transform 0.5s ease,
+      box-shadow 0.3s ease;
+  }
+</style> 

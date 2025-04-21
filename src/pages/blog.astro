@@ -1,734 +1,225 @@
 ---
 import { getCollection } from 'astro:content';
+import ThemeGrid from '../components/ThemeGrid.astro';
+import CallToAction from '../components/CallToAction.astro';
+import SearchBar from '../components/SearchBar.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { calculateReadingTime, standardThemes, type ThemeKey } from '../utils/themeUtils';
+import BackToTop from '../components/BackToTop.astro';
+import ThemeBadge from '../components/ThemeBadge.astro';
+import ArticleCard from '../components/ArticleCard.astro';
+import '../styles/blog.css';
 
-// Récupération et tri des articles
+// Récupération des articles et livres
 const articles = await getCollection('articles');
-const sortedArticles = articles.sort((a, b) => 
-	b.data.publishDate.getTime() - a.data.publishDate.getTime()
-);
-
-// Récupération et tri des ouvrages
 const books = await getCollection('books');
-const sortedBooks = books.sort((a, b) => 
-	(b.data.publishYear || 0) - (a.data.publishYear || 0)
+
+// Tri des articles par date de publication (du plus récent au plus ancien)
+const sortedArticles = articles.sort((a, b) => 
+	new Date(b.data.publishDate).getTime() - new Date(a.data.publishDate).getTime()
 );
 
-// Définition des thèmes standardisés et leurs images
-const standardThemes = {
-    "developpement-web": {
-        icon: "💻",
-        image: "/images/themes/dev-web.jpg",
-        description: "Technologies et techniques de développement web",
-        color: "from-emerald-500 to-teal-600",
-        altImage: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-    },
-    "productivite": {
-        icon: "⏱️",
-        image: "/images/themes/productivite.jpg",
-        description: "Gestion du temps et productivité professionnelle",
-        color: "from-yellow-500 to-amber-600",
-        altImage: "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-    },
-    "management": {
-        icon: "👥",
-        image: "/images/themes/management.jpg",
-        description: "Gestion d'équipe et leadership",
-        color: "from-purple-500 to-pink-600",
-        altImage: "https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-    },
-    "marketing": {
-        icon: "📈",
-        image: "/images/themes/marketing.jpg",
-        description: "Stratégies marketing et communication",
-        color: "from-orange-500 to-red-600",
-        altImage: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-    },
-    "carriere": {
-        icon: "🎓",
-        image: "/images/themes/formation-carriere.jpg",
-        description: "Développement professionnel et carrière",
-        color: "from-blue-500 to-indigo-600",
-        altImage: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-    },
-    "intelligence-artificielle": {
-        icon: "🤖",
-        image: "/images/themes/ia.jpg",
-        description: "Intelligence artificielle et impacts sociétaux",
-        color: "from-indigo-500 to-blue-600",
-        altImage: "https://images.unsplash.com/photo-1677442135132-81606d062271?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-    }
-};
-
-// Fonction pour mapper un thème original vers un thème standardisé
-function mapToStandardTheme(originalTheme) {
-    // Mapping de thèmes spécifiques vers les catégories standardisées
-    const themeMapping = {
-        // Thèmes par défaut si l'article a un thème non standardisé
-        "developpement-web": "developpement-web",
-        "productivite": "productivite",
-        "management": "management",
-        "marketing": "marketing",
-        "carriere": "carriere",
-        "intelligence-artificielle": "intelligence-artificielle",
-        
-        // Mappings spécifiques pour compatibilité rétroactive
-        "JavaScript": "developpement-web",
-        "React": "developpement-web",
-        "Vue": "developpement-web",
-        "Angular": "developpement-web",
-        "Node.js": "developpement-web",
-        "TypeScript": "developpement-web",
-        "Python": "developpement-web",
-        "Frontend": "developpement-web",
-        "Backend": "developpement-web",
-        "Web": "developpement-web",
-        "Programmation": "developpement-web",
-        
-        "Management": "management",
-        "Leadership": "management",
-        "Innovation": "management",
-        
-        "Marketing": "marketing",
-        "Design": "marketing",
-        "UX": "marketing",
-        "UI": "marketing",
-        
-        "DevOps": "developpement-web",
-        "Agile": "management",
-        "Scrum": "management",
-        "Gestion de projet": "management",
-        
-        "Développement personnel": "carriere",
-        "Carrière": "carriere",
-        "Formation": "carriere",
-        "Littérature générale": "carriere",
-        "Culture": "carriere",
-        
-        "AI": "intelligence-artificielle",
-        "IA": "intelligence-artificielle",
-        
-        // Par défaut
-        "Non classé": "carriere"
-    };
-    
-    return themeMapping[originalTheme] || "carriere";
-}
-
-// Regroupement des articles par thème standardisé
-const articlesByTheme = sortedArticles.reduce((acc, article) => {
-    // Déterminer le thème original (utiliser d'abord theme, sinon les tags)
-    const originalTheme = article.data.theme || 
-                        (article.data.tags && article.data.tags.length > 0 
-                            ? article.data.tags[0] 
-                            : 'Non classé');
-    
-    // Mapper vers un thème standardisé
-    const standardTheme = mapToStandardTheme(originalTheme);
-    
-    // Ajouter le thème original comme propriété pour l'afficher sur la carte
-    const articleWithTheme = {
-        ...article,
-        originalTheme: originalTheme,
-        standardTheme: standardTheme
-    };
-    
-    if (!acc[standardTheme]) {
-        acc[standardTheme] = [];
-    }
-    acc[standardTheme].push(articleWithTheme);
-    return acc;
-}, {} as Record<string, any[]>);
-
-// Regroupement des ouvrages par thème standardisé
-const booksByTheme = sortedBooks.reduce((acc, book) => {
-    // Déterminer le thème original
-    const originalTheme = book.data.category || 'Littérature générale';
-    
-    // Mapper vers un thème standardisé
-    const standardTheme = mapToStandardTheme(originalTheme);
-    
-    // Ajouter le thème original comme propriété pour l'afficher sur la carte
-    const bookWithTheme = {
-        ...book,
-        originalTheme: originalTheme,
-        standardTheme: standardTheme
-    };
-    
-    if (!acc[standardTheme]) {
-        acc[standardTheme] = [];
-    }
-    acc[standardTheme].push(bookWithTheme);
-    return acc;
-}, {} as Record<string, any[]>);
-
-// Fonction pour trouver du contenu similaire modifiée pour fonctionner avec les thèmes standardisés
-function findSimilarContent(item: any, isBook = false, maxItems = 3) {
-    // Déterminer le thème standardisé
-    const standardTheme = item.standardTheme || 
-                         (isBook 
-                          ? mapToStandardTheme(item.data.category || 'Littérature générale')
-                          : mapToStandardTheme(item.data.theme || 
-                                             (item.data.tags && item.data.tags.length > 0 
-                                              ? item.data.tags[0] 
-                                              : 'Non classé')));
-    
-    // Récupérer tous les éléments du même thème standardisé
-    const allThemeItems = isBook ? booksByTheme[standardTheme] : articlesByTheme[standardTheme];
-    
-    if (!allThemeItems) return [];
-    
-    // Filtrer pour exclure l'élément actuel et limiter le nombre
-    return allThemeItems
-        .filter(content => content.slug !== item.slug)
-        .slice(0, maxItems);
-}
-
-// Génération de compétences à partir des tags ou des données
-function generateSkills(item: any, isBook = false): string[] {
-	const skills: string[] = [];
-	
-	if (isBook) {
-		// Pour les livres, générer des compétences en fonction des données disponibles
-		if (item.data.topic) skills.push(`Expertise en ${item.data.topic}`);
-		if (item.data.author) skills.push(`Connaissance des travaux de ${item.data.author}`);
-		skills.push('Analyse critique');
-		skills.push('Culture littéraire');
-		// Ajouter des compétences basées sur d'autres critères si disponibles
-	} else {
-		// Pour les articles, utiliser les tags ou autres propriétés
-		if (item.data.tags && item.data.tags.length > 0) {
-			// Transformer les tags en compétences
-			item.data.tags.forEach((tag: string) => {
-				const skill = `Maîtrise de ${tag}`;
-				if (!skills.includes(skill)) skills.push(skill);
-			});
-		}
-		
-		// Ajouter des compétences génériques
-		skills.push('Rédaction technique');
-		skills.push('Veille technologique');
-	}
-	
-	// Limiter à 4 compétences et s'assurer qu'il y en a au moins 4
-	while (skills.length < 4) {
-		const defaultSkills = [
-			'Analyse et résolution de problèmes',
-			'Communication technique',
-			'Organisation et méthode',
-			"Recherche d'information",
-			'Adaptation et apprentissage continu'
-		];
-		
-		const randomSkill = defaultSkills[Math.floor(Math.random() * defaultSkills.length)];
-		if (!skills.includes(randomSkill)) skills.push(randomSkill);
-	}
-	
-	return skills.slice(0, 4); // Limiter à 4 compétences
-}
-
-function formatDate(date: Date) {
-	return date.toLocaleDateString('fr-FR', {
-		year: 'numeric',
-		month: 'long',
-		day: 'numeric'
-	});
-}
-
-// Fonction pour générer l'URL de partage encodée
-function getShareUrl(title: string, url: string) {
-    const baseUrl = import.meta.env.SITE || 'https://votre-site.com';
-    const fullUrl = `${baseUrl}${url}`;
-    return encodeURIComponent(`${title} ${fullUrl}`);
-}
-
-// Métadonnées pour SEO
-const pageTitle = "Blog & Bibliothèque | Articles et ressources professionnelles";
-const pageDescription = "Explorez ma collection d'articles techniques et d'ouvrages thématiques organisés par domaine d'expertise et découvrez les compétences associées à chaque ressource.";
-
-// Illustrations pour les thèmes - association de chaque thème à une icône
-const themeIcons = {
-    "JavaScript": "📱",
-    "React": "⚛️",
-    "Vue": "🟢",
-    "Angular": "🔴",
-    "Node.js": "🟢",
-    "TypeScript": "🔷",
-    "Python": "🐍",
-    "DevOps": "🚀",
-    "Design": "🎨",
-    "Frontend": "🖥️",
-    "Backend": "⚙️",
-    "Web": "🌐",
-    "Mobile": "📱",
-    "Data": "📊",
-    "AI": "🤖",
-    "Littérature générale": "📚",
-    "Développement personnel": "🌱",
-    "Management": "👥",
-    "Innovation": "💡",
-    "Programmation": "💻",
-    "Non classé": "🔍"
-};
-
-// Obtenir tous les thèmes uniques (articles + livres)
-const allThemes = [...new Set([
-    ...Object.keys(articlesByTheme),
-    ...Object.keys(booksByTheme)
-])];
-
-// Pour chaque thème, compter le nombre total d'éléments (articles + livres)
-const themesWithCount = allThemes.map(theme => {
-    const articleCount = articlesByTheme[theme]?.length || 0;
-    const bookCount = booksByTheme[theme]?.length || 0;
-    const totalCount = articleCount + bookCount;
-    
-    return {
-        name: theme,
-        articleCount,
-        bookCount,
-        totalCount,
-        icon: themeIcons[theme] || "📄"
-    };
-}).sort((a, b) => b.totalCount - a.totalCount);
-
-// Couleurs de fond pour les thèmes (en alternance)
-const bgColors = [
-    "from-blue-500 to-indigo-600",
-    "from-purple-500 to-pink-600",
-    "from-emerald-500 to-teal-600",
-    "from-orange-500 to-red-600",
-    "from-indigo-500 to-blue-600",
-    "from-pink-500 to-rose-600"
+// Statistiques du blog
+const blogStats = [
+	{ value: articles.length, label: "Articles publiés", icon: "fas fa-newspaper" },
+	{ value: books.length, label: "Livres recommandés", icon: "fas fa-book" },
+	{ value: Object.keys(standardThemes).length, label: "Catégories", icon: "fas fa-tags" },
+	{ value: Math.round(articles.reduce((acc, article) => acc + calculateReadingTime(article.body), 0) / articles.length), label: "Min. de lecture en moyenne", icon: "fas fa-clock" }
 ];
+
+// Articles en vedette (les 3 plus récents)
+const featuredArticles = sortedArticles.slice(0, 3);
+// Tous les autres articles
+const remainingArticles = sortedArticles.slice(3);
 ---
 
-<BaseLayout title={pageTitle} description={pageDescription}>
-	<div class="container mx-auto px-4 py-8">
-		<!-- Titre principal optimisé pour le SEO, centré et mis en évidence -->
-		<h1 class="text-5xl font-bold mb-12 text-center bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent py-4">
-			Blog & Bibliothèque
-		</h1>
-		
-		<p class="text-lg text-center max-w-3xl mx-auto mb-12 leading-relaxed">
-			Découvrez mes articles techniques et ouvrages de référence, classés par thème. 
-			Sélectionnez un thème pour explorer les ressources associées.
-		</p>
-		
-		<!-- Section Thèmes avec cartes visuelles -->
-		<section class="mb-16" aria-labelledby="themes-section">
-			<h2 id="themes-section" class="text-3xl font-bold mb-8 border-b pb-2 text-primary text-center">
-				Thèmes disponibles
-			</h2>
-			
-			<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-				{Object.entries(standardThemes).map(([themeName, theme]) => {
-                    const articleCount = articlesByTheme[themeName]?.length || 0;
-                    const bookCount = booksByTheme[themeName]?.length || 0;
-                    const totalCount = articleCount + bookCount;
-                    
-                    return (
-                        <a href={`#theme-${themeName.replace(/\s+/g, '-').toLowerCase()}`} class="group block">
-                            <div class={`h-full bg-gradient-to-br ${theme.color} text-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl flex flex-col`}>
-                                <div class="h-40 overflow-hidden relative">
-                                    <img 
-                                        src={theme.altImage} 
-                                        alt={`Illustration du thème ${themeName}`} 
-                                        class="w-full h-full object-cover opacity-80"
-                                        loading="lazy"
-                                    />
-                                    <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-                                    <span class="absolute bottom-3 right-3 text-4xl" aria-hidden="true">{theme.icon}</span>
-                                </div>
-                                <div class="p-5 flex-1 flex flex-col justify-between">
-                                    <div>
-                                        <h3 class="text-xl font-bold mb-2 group-hover:underline">
-                                            {themeName.charAt(0).toUpperCase() + themeName.slice(1)}
-                                        </h3>
-                                        <p class="text-sm text-white/80 mb-4">
-                                            {theme.description}
-                                        </p>
-                                    </div>
-                                    <div class="flex flex-col gap-2">
-                                        <div class="flex justify-between items-center">
-                                            <span>Articles</span>
-                                            <span class="font-bold bg-white bg-opacity-20 px-3 py-1 rounded-full text-sm">
-                                                {articleCount}
-                                            </span>
-                                        </div>
-                                        <div class="flex justify-between items-center">
-                                            <span>Livres</span>
-                                            <span class="font-bold bg-white bg-opacity-20 px-3 py-1 rounded-full text-sm">
-                                                {bookCount}
-                                            </span>
-                                        </div>
-                                        <div class="mt-4 text-center">
-                                            <span class="inline-block bg-white bg-opacity-20 px-4 py-2 rounded-lg font-semibold text-sm group-hover:bg-opacity-30 transition-all">
-                                                Explorer
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    );
-                })}
+<BaseLayout 
+	title="Blog - Articles et Ressources" 
+	description="Découvrez mes articles sur le développement, la technologie et la carrière tech."
+	customClass="bg-gradient-to-br from-gray-50 to-white dark:from-gray-900 dark:to-gray-800"
+	fullWidth={true}
+>
+	<main class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
+		<!-- En-tête de page -->
+		<section class="py-16 md:py-24 bg-gradient-to-r from-indigo-600/5 to-violet-600/5 rounded-xl mb-12">
+			<div class="max-w-3xl mx-auto text-center">
+				<h1 class="text-4xl md:text-5xl font-bold mb-6 text-gray-800 dark:text-white">
+					Blog & Articles
+				</h1>
+				<p class="text-xl text-gray-600 dark:text-gray-300 mb-8">
+					Découvrez des articles sur le développement web, la technologie et l'évolution professionnelle
+				</p>
+				
+				<!-- Barre de recherche -->
+				<div class="max-w-2xl mx-auto">
+					<SearchBar placeholder="Rechercher un article..." />
+				</div>
 			</div>
 		</section>
 		
-		<!-- Séparateur visuel -->
-		<div class="relative my-16">
-			<div class="absolute inset-0 flex items-center">
-				<div class="w-full border-t border-gray-300 dark:border-gray-700"></div>
-			</div>
-			<div class="relative flex justify-center">
-				<span class="bg-white dark:bg-gray-900 px-3 text-lg text-gray-500 dark:text-gray-400">
-					Contenu par thème
-				</span>
-			</div>
-		</div>
-		
-		<!-- Sections de contenu pour chaque thème standardisé -->
-		{Object.entries(standardThemes).map(([themeName, theme]) => (
-			<section id={`theme-${themeName.replace(/\s+/g, '-').toLowerCase()}`} class="mb-24 scroll-mt-24">
-				<div class="theme-header relative mb-8 overflow-hidden rounded-xl">
-                    <div class="relative">
-                        <img 
-                            src={theme.altImage} 
-                            alt={`Illustration du thème ${themeName}`}
-                            class="w-full h-48 object-cover"
-                            loading="lazy"
-                        />
-                        <div class="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-transparent"></div>
-                    </div>
-                    <div class="absolute inset-0 flex items-center">
-                        <div class="px-8 py-6 text-white">
-                            <div class="flex items-center gap-4">
-                                <span class="text-5xl" aria-hidden="true">{theme.icon}</span>
-                                <div>
-                                    <h2 class="text-3xl font-bold text-white mb-2">
-                                        {themeName.charAt(0).toUpperCase() + themeName.slice(1)}
-                                    </h2>
-                                    <p class="text-white/80">{theme.description}</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-				</div>
-				
-				{/* Articles du thème si disponibles */}
-				{articlesByTheme[themeName] && articlesByTheme[themeName].length > 0 && (
-					<div class="mb-12">
-						<h3 class="text-2xl font-semibold mb-6 text-gray-700 dark:text-gray-300">
-							Articles
-						</h3>
-						<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-							{articlesByTheme[themeName].map((article) => {
-								const skills = generateSkills(article);
-								const similarArticles = findSimilarContent(article, false, 2);
-								return (
-									<article class="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden flex flex-col h-full" 
-										itemscope itemtype="https://schema.org/BlogPosting">
-										<meta itemprop="datePublished" content={article.data.publishDate.toISOString()} />
-										
-										{/* Image et contenu principal */}
-										<a href={`/articles/${article.slug}`} class="block flex-grow" itemprop="url">
-											<div class="relative">
-												{article.data.image ? (
-													<img
-														src={article.data.image}
-														alt={`Image illustrant l'article: ${article.data.title}`}
-														class="w-full h-48 object-cover"
-														itemprop="image"
-														loading="lazy"
-													/>
-												) : (
-													<div class="relative w-full h-48">
-														<img
-															src={theme.image}
-															alt={`Image illustrant le thème: ${themeName}`}
-															class="w-full h-full object-cover"
-															loading="lazy"
-														/>
-														<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-														<div class="absolute bottom-4 left-4">
-															<span class="text-4xl" aria-hidden="true">{theme.icon}</span>
-														</div>
-													</div>
-												)}
-												<div class="absolute top-2 right-2">
-													<span class="inline-block bg-white/90 dark:bg-gray-800/90 px-3 py-1 rounded-full text-xs font-medium shadow-sm">
-														{article.originalTheme}
-													</span>
-												</div>
-											</div>
-											<div class="p-6">
-												<h4 class="text-xl font-semibold mb-2 hover:text-blue-500" itemprop="headline">
-													{article.data.title}
-												</h4>
-												<p class="text-gray-600 dark:text-gray-300 mb-4" itemprop="abstract">
-													{article.data.description}
-												</p>
-												
-												<!-- Compétences développées -->
-												<div class="mb-3">
-													<h5 class="text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Compétences développées:</h5>
-													<div class="flex flex-wrap gap-2">
-														{skills.map(skill => (
-															<span class="inline-block bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-100 text-xs px-2 py-1 rounded-full">
-																{skill}
-															</span>
-														))}
-													</div>
-												</div>
-												
-												<div class="flex items-center text-sm text-gray-500 dark:text-gray-400 pt-2 border-t">
-													<time datetime={article.data.publishDate.toISOString()} itemprop="datePublished">
-														{formatDate(article.data.publishDate)}
-													</time>
-													{article.data.author && (
-														<>
-															<span class="mx-2">•</span>
-															<span itemprop="author" itemscope itemtype="https://schema.org/Person">
-																<span itemprop="name">{article.data.author}</span>
-															</span>
-														</>
-													)}
-												</div>
-											</div>
-										</a>
-										
-										{/* Contenu similaire et partage */}
-										<div class="px-6 pb-4">
-											{similarArticles.length > 0 && (
-												<div class="mb-4 pt-3 border-t border-gray-200 dark:border-gray-700">
-													<h5 class="text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Articles similaires:</h5>
-													<div class="flex flex-col gap-1">
-														{similarArticles.map(similar => (
-															<a href={`/articles/${similar.slug}`} class="text-sm text-blue-600 dark:text-blue-400 hover:underline flex items-center">
-																<svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-																	<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5l7 7-7 7M5 5l7 7-7 7" />
-																</svg>
-																{similar.data.title}
-															</a>
-														))}
-													</div>
-												</div>
-											)}
-											
-											<div class="flex justify-end pt-2">
-												<div class="flex gap-2">
-													<a href={`https://twitter.com/intent/tweet?text=${getShareUrl(article.data.title, `/articles/${article.slug}`)}`} 
-													   target="_blank" 
-													   rel="noopener noreferrer"
-													   class="text-gray-500 hover:text-blue-500 transition-colors"
-													   aria-label="Partager sur Twitter">
-														<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
-															<path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path>
-														</svg>
-													</a>
-													<a href={`https://www.linkedin.com/shareArticle?mini=true&url=${getShareUrl('', `/articles/${article.slug}`)}&title=${encodeURIComponent(article.data.title)}`} 
-													   target="_blank" 
-													   rel="noopener noreferrer"
-													   class="text-gray-500 hover:text-blue-700 transition-colors"
-													   aria-label="Partager sur LinkedIn">
-														<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
-															<path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path>
-														</svg>
-													</a>
-													<a href={`https://www.facebook.com/sharer/sharer.php?u=${getShareUrl('', `/articles/${article.slug}`)}`} 
-													   target="_blank" 
-													   rel="noopener noreferrer"
-													   class="text-gray-500 hover:text-blue-900 transition-colors"
-													   aria-label="Partager sur Facebook">
-														<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
-															<path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path>
-														</svg>
-													</a>
-												</div>
-											</div>
-										</div>
-									</article>
-								);
-							})}
+		<!-- Statistiques du blog -->
+		<section class="mb-16">
+			<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+				{blogStats.map(stat => (
+					<div class="bg-white dark:bg-gray-800 rounded-xl shadow-md p-6 text-center">
+						<div class="flex justify-center mb-4">
+							<span class="w-12 h-12 bg-indigo-100 dark:bg-indigo-900/40 rounded-full flex items-center justify-center">
+								<i class={`${stat.icon} text-indigo-600 dark:text-indigo-400 text-xl`}></i>
+							</span>
 						</div>
+						<span class="block text-3xl font-bold text-gray-800 dark:text-white mb-1">{stat.value}</span>
+						<span class="text-sm text-gray-600 dark:text-gray-400">{stat.label}</span>
 					</div>
-				)}
-				
-				{/* Livres du thème si disponibles */}
-				{booksByTheme[themeName] && booksByTheme[themeName].length > 0 && (
-					<div>
-						<h3 class="text-2xl font-semibold mb-6 text-gray-700 dark:text-gray-300">
-							Ouvrages
-						</h3>
-						<div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
-							{booksByTheme[themeName].map((book) => {
-								const skills = generateSkills(book, true);
-								const similarBooks = findSimilarContent(book, true, 2);
-								return (
-									<article class="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden flex flex-col h-full"
-										itemscope itemtype="https://schema.org/Book">
-										<a href={`/books/${book.slug}`} class="block flex-grow" itemprop="url">
-											<div class="relative">
-												{book.data.coverImage ? (
-													<img
-														src={book.data.coverImage}
-														alt={`Couverture du livre: ${book.data.title}`}
-														class="w-full h-56 object-cover"
-														itemprop="image"
-														loading="lazy"
-													/>
-												) : (
-													<img
-														src={theme.altImage}
-														alt={`Image illustrant le thème: ${themeName}`}
-														class="w-full h-56 object-cover opacity-70"
-														loading="lazy"
-													/>
-												)}
-												<div class="absolute top-2 right-2">
-													<span class="inline-block bg-white/90 dark:bg-gray-800/90 px-3 py-1 rounded-full text-xs font-medium shadow-sm">
-														{book.originalTheme || "Littérature générale"}
-													</span>
-												</div>
-											</div>
-											<div class="p-4">
-												<h4 class="text-lg font-semibold mb-2 hover:text-blue-500" itemprop="name">
-													{book.data.title}
-												</h4>
-												{book.data.author && (
-													<p class="text-sm text-gray-600 dark:text-gray-300 mb-2">
-														par <span itemprop="author" itemscope itemtype="https://schema.org/Person">
-															<span itemprop="name">{book.data.author}</span>
-														</span>
-													</p>
-												)}
-												
-												<!-- Compétences développées -->
-												<div class="mb-3">
-													<h5 class="text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Compétences développées:</h5>
-													<div class="flex flex-wrap gap-1">
-														{skills.map(skill => (
-															<span class="inline-block bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-100 text-xs px-2 py-1 rounded-full">
-																{skill}
-															</span>
-														))}
-													</div>
-												</div>
-												
-												{book.data.publishYear && (
-													<div class="text-xs text-gray-500 dark:text-gray-400 mt-2 pt-2 border-t">
-														Publié: <span itemprop="datePublished">{book.data.publishYear}</span>
-													</div>
-												)}
-											</div>
-										</a>
-										
-										{/* Ouvrages similaires et partage */}
-										<div class="px-4 pb-4 mt-auto">
-											{similarBooks.length > 0 && (
-												<div class="mb-3 pt-2 border-t border-gray-200 dark:border-gray-700">
-													<h5 class="text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Ouvrages similaires:</h5>
-													<div class="flex flex-col gap-1">
-														{similarBooks.map(similar => (
-															<a href={`/books/${similar.slug}`} class="text-sm text-blue-600 dark:text-blue-400 hover:underline flex items-center">
-																<svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-																	<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5l7 7-7 7M5 5l7 7-7 7" />
-																</svg>
-																{similar.data.title}
-															</a>
-														))}
-													</div>
-												</div>
-											)}
-											
-											<div class="flex justify-end pt-1">
-												<div class="flex gap-2">
-													<a href={`https://twitter.com/intent/tweet?text=${getShareUrl(book.data.title, `/books/${book.slug}`)}`} 
-													   target="_blank" 
-													   rel="noopener noreferrer"
-													   class="text-gray-500 hover:text-blue-500 transition-colors"
-													   aria-label="Partager sur Twitter">
-														<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
-															<path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path>
-														</svg>
-													</a>
-													<a href={`https://www.linkedin.com/shareArticle?mini=true&url=${getShareUrl('', `/books/${book.slug}`)}&title=${encodeURIComponent(book.data.title)}`} 
-													   target="_blank" 
-													   rel="noopener noreferrer"
-													   class="text-gray-500 hover:text-blue-700 transition-colors"
-													   aria-label="Partager sur LinkedIn">
-														<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
-															<path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path>
-														</svg>
-													</a>
-													<a href={`https://www.facebook.com/sharer/sharer.php?u=${getShareUrl('', `/books/${book.slug}`)}`} 
-													   target="_blank" 
-													   rel="noopener noreferrer"
-													   class="text-gray-500 hover:text-blue-900 transition-colors"
-													   aria-label="Partager sur Facebook">
-														<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
-															<path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path>
-														</svg>
-													</a>
-												</div>
-											</div>
-										</div>
-									</article>
-								);
-							})}
-						</div>
-					</div>
-				)}
-			</section>
-		))}
+				))}
+			</div>
+		</section>
 		
-		<!-- Bouton retour en haut -->
-		<div class="fixed bottom-8 right-8">
-			<a href="#" class="bg-primary text-white p-3 rounded-full shadow-lg hover:bg-opacity-90 transition-all flex items-center justify-center">
-				<span class="sr-only">Retour en haut</span>
-				<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
-				</svg>
-			</a>
-		</div>
-	</div>
+		<!-- Articles en vedette -->
+		<section class="mb-20">
+			<h2 class="text-3xl font-bold mb-8 text-gray-800 dark:text-white">Articles en vedette</h2>
+			
+			<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+				{featuredArticles.map((article, index) => (
+					<ArticleCard article={article} />
+				))}
+			</div>
+		</section>
+		
+		<!-- Parcourir par thèmes -->
+		<section class="mb-16">
+			<div class="flex items-center justify-between mb-8">
+				<h2 class="text-3xl font-bold text-gray-800 dark:text-white">Parcourir par thème</h2>
+				<a href="/blog/themes" class="text-indigo-600 dark:text-indigo-400 font-medium inline-flex items-center">
+					Voir tous les thèmes
+					<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+					</svg>
+				</a>
+			</div>
+			
+			<div class="flex flex-wrap gap-3 mb-8">
+				{Object.keys(standardThemes).map(theme => (
+					<a href={`/blog/themes/${theme}`}>
+						<ThemeBadge theme={theme} />
+					</a>
+				))}
+			</div>
+		</section>
+		
+		<!-- Articles par thème -->
+		<ThemeGrid 
+			articles={remainingArticles} 
+			title="Tous les articles par thème" 
+			columns={3}
+		/>
+		
+		<!-- Call to action -->
+		<section class="mt-16">
+			<CallToAction
+				title="Vous souhaitez travailler ensemble ?"
+				description="N'hésitez pas à me contacter pour discuter de votre projet ou pour toute question."
+				buttonText="Me contacter"
+				buttonLink="/contact"
+			/>
+		</section>
+	</main>
+	
+	<BackToTop />
 </BaseLayout>
 
 <style>
-	h1 {
-		background-image: linear-gradient(to right, hsl(var(--primary)), #3b82f6);
-		-webkit-background-clip: text;
-		background-clip: text;
-		color: transparent;
-		text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+	.line-clamp-1 {
+		display: -webkit-box;
+		-webkit-line-clamp: 1;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
 	}
 	
-	section {
-		margin-bottom: 4rem;
+	.line-clamp-2 {
+		display: -webkit-box;
+		-webkit-line-clamp: 2;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
 	}
 	
-	.grid {
-		margin-top: 1.5rem;
+	.line-clamp-3 {
+		display: -webkit-box;
+		-webkit-line-clamp: 3;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
 	}
-	
-	article {
-		height: 100%;
-		display: flex;
-		flex-direction: column;
-	}
-	
-	article a {
-		display: flex;
-		flex-direction: column;
-		text-decoration: none;
-	}
-	
-	.hover\:shadow-xl:hover {
-		box-shadow: var(--shadow-lg);
-	}
-	
-	html {
-		scroll-behavior: smooth;
-	}
-</style> 
+</style>
+
+<script is:inline>
+  // Ajout de Font Awesome
+  if (!document.querySelector('#font-awesome')) {
+    const link = document.createElement('link');
+    link.id = 'font-awesome';
+    link.rel = 'stylesheet';
+    link.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css';
+    document.head.appendChild(link);
+  }
+  
+  // Animation pour les éléments au scroll
+  document.addEventListener('DOMContentLoaded', function() {
+    const observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-fade-in');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    
+    document.querySelectorAll('section').forEach(function(section) {
+      observer.observe(section);
+    });
+    
+    // Gestion des erreurs d'images
+    document.querySelectorAll('img').forEach(function(img) {
+      img.addEventListener('error', function() {
+        // Remplacer l'image par une image de placeholder ou une div de fallback
+        const fallbackSrc = '/placeholder-article.webp';
+        if (this.src !== fallbackSrc) {
+          this.src = fallbackSrc;
+        } else {
+          // Si même l'image de fallback échoue, remplacer par un div coloré
+          const div = document.createElement('div');
+          div.className = 'w-full h-full bg-gradient-to-r from-indigo-500 to-blue-500 flex items-center justify-center';
+          div.innerHTML = '<i class="fas fa-newspaper text-white text-4xl"></i>';
+          this.parentNode.replaceChild(div, this);
+        }
+      });
+    });
+    
+    // Gestion des déconnexions du serveur
+    let reconnectAttempts = 0;
+    const maxReconnectAttempts = 5;
+    
+    // Fonction pour se reconnecter au serveur HMR
+    function reconnectToServer() {
+      if (reconnectAttempts < maxReconnectAttempts) {
+        console.log(`Tentative de reconnexion au serveur (${reconnectAttempts + 1}/${maxReconnectAttempts})...`);
+        
+        // Simuler un reload après un délai
+        setTimeout(function() {
+          window.location.reload();
+        }, 3000);
+        
+        reconnectAttempts++;
+      } else {
+        console.error("Impossible de se reconnecter au serveur après plusieurs tentatives.");
+      }
+    }
+    
+    // Écouter les événements de déconnexion
+    window.addEventListener('offline', function() {
+      console.warn('Connexion au réseau perdue.');
+    });
+    
+    window.addEventListener('online', function() {
+      console.log('Connexion au réseau rétablie, tentative de reconnexion...');
+      reconnectToServer();
+    });
+  });
+</script> 

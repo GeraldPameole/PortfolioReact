@@ -1,5 +1,6 @@
 ---
 title: "Eloquent JavaScript"
+type: "book"
 author: "Marijn Haverbeke"
 description: "Une introduction moderne et approfondie à la programmation JavaScript, couvrant les fondamentaux et les concepts avancés"
 profession: "developpement-web"

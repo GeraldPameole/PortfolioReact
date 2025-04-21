@@ -1,0 +1,13 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+echo "🔍 Validating content frontmatter..."
+node scripts/validate-frontmatter.cjs
+
+if [ $? -ne 0 ]; then
+  echo "❌ Validation du frontmatter échouée. Veuillez corriger les erreurs avant de commit."
+  exit 1
+fi
+
+echo "✅ Validation du frontmatter réussie!"
+npm run lint 

@@ -1,24 +1,106 @@
 ---
+import type { CollectionEntry } from 'astro:content';
 
 interface Props {
-	project: {
-		data: {
-			title: string;
-			description: string;
-			img: string;
-			img_alt?: string;
-		};
-		slug: string;
-	};
+	project: CollectionEntry<'work'>;
 }
 
-const { data, slug } = Astro.props.project;
+const { project } = Astro.props;
+const { data, slug } = project;
+
+// Formatage de la date
+const formattedDate = new Date(data.publishDate).toLocaleDateString('fr-FR', {
+	year: 'numeric',
+	month: 'long'
+});
+
+// Génération de couleurs dynamiques basées sur les technologies
+const techColors = {
+	"react": "from-blue-500 to-indigo-600",
+	"vue": "from-emerald-500 to-teal-600",
+	"design": "from-purple-500 to-pink-600",
+	"marketing": "from-orange-500 to-red-600",
+	"default": "from-indigo-500 to-blue-600"
+};
+
+// Récupération d'une couleur basée sur la première technologie si disponible
+const projectColor = data.technologies && data.technologies.length > 0 
+	? (techColors[data.technologies[0].toLowerCase() as keyof typeof techColors] || techColors.default)
+	: techColors.default;
 ---
 
-<a class="card" href={`/work/${slug}`}>
-	<span class="title">{data.title}</span>
-	<img src={data.img} alt={data.img_alt || ''} loading="lazy" decoding="async" />
-</a>
+<article class="group relative bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden transform transition-all duration-300 hover:shadow-xl hover:-translate-y-1 hover:scale-[1.02]">
+	<a href={`/projets/${slug}`} class="block">
+		<!-- Image du projet avec effet de transition -->
+		<div class="relative overflow-hidden">
+			{data.image ? (
+				<div class="aspect-video">
+					<img 
+						src={data.image} 
+						alt={data.title} 
+						class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+						loading="lazy"
+					/>
+				</div>
+			) : (
+				<div class={`aspect-video bg-gradient-to-r ${projectColor} flex items-center justify-center`}>
+					<h3 class="text-2xl font-bold text-white p-6 text-center">{data.title}</h3>
+				</div>
+			)}
+			
+			<!-- Badge technologie principale -->
+			{data.technologies && data.technologies.length > 0 && (
+				<div class="absolute top-3 right-3">
+					<span class={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r ${projectColor} text-white shadow-md`}>
+						{data.technologies[0]}
+					</span>
+				</div>
+			)}
+		</div>
+		
+		<!-- Informations du projet -->
+		<div class="p-6">
+			<div class="flex flex-col">
+				<h3 class="text-xl font-bold mb-2 text-gray-800 dark:text-white transition-colors group-hover:text-blue-600 dark:group-hover:text-blue-400">
+					{data.title}
+				</h3>
+				
+				<div class="text-sm text-gray-500 dark:text-gray-400 mb-4">{formattedDate}</div>
+				
+				<p class="text-gray-600 dark:text-gray-300 mb-4">
+					{data.description}
+				</p>
+				
+				<!-- Technologies du projet -->
+				{data.technologies && data.technologies.length > 0 && (
+					<div class="flex flex-wrap gap-2 mb-4">
+						{data.technologies.map((tech: string) => (
+							<span class="inline-block bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 text-xs px-2 py-1 rounded-full">
+								{tech}
+							</span>
+						))}
+					</div>
+				)}
+				
+				<!-- Call to action -->
+				<div class="pt-2 flex justify-between items-center border-t border-gray-100 dark:border-gray-700 mt-auto">
+					<span class="text-sm text-gray-500 dark:text-gray-400">
+						{data.client || "Projet personnel"}
+					</span>
+					<span class="text-blue-600 dark:text-blue-400 inline-flex items-center font-medium group-hover:translate-x-1 transition-transform duration-300">
+						Voir le projet
+						<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+						</svg>
+					</span>
+				</div>
+			</div>
+		</div>
+	</a>
+	
+	<!-- Overlay flottant au survol avec effet de déplacement -->
+	<div class="absolute inset-x-0 bottom-0 h-2 bg-gradient-to-r {projectColor} transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300"></div>
+</article>
 
 <style>
 	.card {

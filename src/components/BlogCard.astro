@@ -1,40 +1,210 @@
 ---
 interface Props {
-    title: string;
-    description: string;
-    icon: string;
+  url: string;
+  title: string;
+  description: string;
+  date: Date;
+  image?: string;
+  theme?: string;
+  themeIcon?: string;
+  themeColor?: string;
+  readingTime?: string;
+  author?: string;
+  tags?: string[];
+  featured?: boolean;
 }
 
-const { title, description, icon } = Astro.props;
+const { 
+  url, 
+  title, 
+  description, 
+  date, 
+  image, 
+  theme = "Non classé", 
+  themeIcon = "📄", 
+  themeColor = "from-blue-500 to-indigo-600",
+  readingTime = "5 min",
+  author = "Gérald Paméole",
+  tags = [],
+  featured = false
+} = Astro.props;
+
+// Format de la date
+const formattedDate = new Date(date).toLocaleDateString('fr-FR', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+});
+
+// Adapter les classes en fonction du thème
+let themeColorClasses = themeColor;
+let themeGradientClass = "bg-gradient-to-r from-secondary-warm to-tertiary-light";
+
+switch (theme.toLowerCase()) {
+  case "développement web":
+  case "developpement-web":
+  case "developpement web":
+    themeColorClasses = "from-emerald-500 to-teal-600";
+    themeGradientClass = "bg-gradient-to-r from-emerald-500 to-teal-600";
+    break;
+  case "productivité & organisation":
+  case "productivite":
+  case "productivité":
+    themeColorClasses = "from-yellow-500 to-amber-600";
+    themeGradientClass = "bg-gradient-to-r from-yellow-500 to-amber-600";
+    break;
+  case "management & leadership":
+  case "management":
+    themeColorClasses = "from-purple-500 to-pink-600";
+    themeGradientClass = "bg-gradient-to-r from-purple-500 to-pink-600";
+    break;
+  case "marketing digital":
+  case "marketing":
+    themeColorClasses = "from-orange-500 to-red-600";
+    themeGradientClass = "bg-gradient-to-r from-orange-500 to-red-600";
+    break;
+  case "carrière & formation":
+  case "carriere":
+  case "carrière":
+    themeColorClasses = "from-blue-500 to-indigo-600";
+    themeGradientClass = "bg-gradient-to-r from-blue-500 to-indigo-600";
+    break;
+  case "intelligence artificielle":
+  case "intelligence-artificielle":
+    themeColorClasses = "from-indigo-500 to-blue-600";
+    themeGradientClass = "bg-gradient-to-r from-indigo-500 to-blue-600";
+    break;
+  default:
+    // Utiliser les couleurs de notre palette
+    themeColorClasses = "from-secondary-warm to-tertiary-light";
+    themeGradientClass = "bg-gradient-to-r from-secondary-warm to-tertiary-light";
+}
+
+const cardClasses = featured 
+  ? "col-span-2 md:flex md:h-auto" 
+  : "h-full";
+
+const imageClasses = featured 
+  ? "md:w-2/5 h-56 md:h-auto" 
+  : "h-48";
+
+const contentClasses = featured
+  ? "md:w-3/5"
+  : "";
 ---
 
-<div class="blog-card">
-    <div class="icon">
-        <i class={`icon-${icon}`}></i>
+<article class={`group bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden flex flex-col transform transition-all duration-300 hover:shadow-xl hover:-translate-y-1 ${cardClasses}`} itemscope itemtype="https://schema.org/BlogPosting">
+  <meta itemprop="datePublished" content={date.toISOString()} />
+  
+  <a href={url} class="block flex-grow flex flex-col h-full" itemprop="url">
+    <div class={`relative overflow-hidden ${imageClasses}`}>
+      {image ? (
+        <img
+          src={image}
+          alt={`Image illustrant l'article: ${title}`}
+          class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+          itemprop="image"
+          loading="lazy"
+        />
+      ) : (
+        <div class={`w-full h-full ${themeGradientClass}`}>
+          <div class="flex items-center justify-center h-full">
+            <span class="text-5xl text-white">{themeIcon}</span>
+          </div>
+        </div>
+      )}
+      
+      <div class="absolute top-0 left-0 m-3">
+        <span class={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r ${themeColorClasses} text-white shadow-sm`}>
+          <span class="mr-1">{themeIcon}</span> {theme}
+        </span>
+      </div>
+      
+      <div class="absolute bottom-0 right-0 m-3">
+        <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-white/80 dark:bg-gray-800/80 text-gray-700 dark:text-gray-200 shadow-sm">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          {readingTime}
+        </span>
+      </div>
     </div>
-    <h2>{title}</h2>
-    <p>{description}</p>
-</div>
+    
+    <div class={`p-6 flex flex-col flex-grow ${contentClasses}`}>
+      <h3 class="text-xl font-bold mb-2 text-gray-800 dark:text-white transition-colors group-hover:text-secondary-warm dark:group-hover:text-tertiary-light" itemprop="headline">
+        {title}
+      </h3>
+      
+      <p class="text-gray-600 dark:text-gray-300 mb-4 flex-grow" itemprop="abstract">
+        {description}
+      </p>
+      
+      {tags.length > 0 && (
+        <div class="flex flex-wrap gap-2 mb-4">
+          {tags.slice(0, 3).map((tag) => (
+            <span class="text-xs px-2 py-1 rounded-md bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300">
+              #{tag}
+            </span>
+          ))}
+          {tags.length > 3 && (
+            <span class="text-xs px-2 py-1 rounded-md bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300">
+              +{tags.length - 3}
+            </span>
+          )}
+        </div>
+      )}
+      
+      <div class="mt-auto pt-4 border-t border-gray-100 dark:border-gray-700 flex items-center justify-between">
+        <div class="flex items-center">
+          <img src="/assets/profile-small.jpg" alt={author} class="w-8 h-8 rounded-full mr-2" />
+          <div>
+            <span class="text-sm font-medium text-gray-700 dark:text-gray-300" itemprop="author" itemscope itemtype="https://schema.org/Person">
+              <span itemprop="name">{author}</span>
+            </span>
+            <div class="text-xs text-gray-500 dark:text-gray-400">
+              <time datetime={date.toISOString()} itemprop="datePublished">
+                {formattedDate}
+              </time>
+            </div>
+          </div>
+        </div>
+        
+        <span class="text-secondary-warm dark:text-tertiary-light group-hover:translate-x-1 transition-transform duration-300 flex items-center">
+          Lire
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+          </svg>
+        </span>
+      </div>
+    </div>
+  </a>
+</article>
 
 <style>
-    .blog-card {
-        padding: 2rem;
-        border-radius: 8px;
-        background: var(--gray-999);
-        box-shadow: var(--shadow-sm);
-        transition: box-shadow 0.2s ease-in-out;
+  /* Animation au survol */
+  article {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    transform: translateY(0) scale(1);
+    transition: 
+      box-shadow 0.3s ease, 
+      transform 0.3s ease, 
+      background-color 0.3s ease;
+  }
+  
+  article:hover {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    transform: translateY(-0.25rem) scale(1.02);
+  }
+  
+  /* Pour les articles mis en avant */
+  article.featured {
+    border-left: 4px solid var(--color-secondary-warm);
+  }
+  
+  /* Mode sombre */
+  @media (prefers-color-scheme: dark) {
+    article {
+      background-color: var(--color-primary-blue);
     }
-
-    .blog-card:hover {
-        box-shadow: var(--shadow-md);
-    }
-
-    h2 {
-        font-size: 1.5rem;
-        margin: 1rem 0;
-    }
-
-    p {
-        color: var(--gray-300);
-    }
+  }
 </style> 

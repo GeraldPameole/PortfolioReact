@@ -6,6 +6,8 @@ export default {
     extend: {
       colors: {
         primary: {
+          DEFAULT: "hsl(var(--primary))",
+          foreground: "hsl(var(--primary-foreground))",
           50: "#f0f9ff",
           100: "#e0f2fe",
           200: "#bae6fd",
@@ -19,6 +21,8 @@ export default {
           950: "#082f49",
         },
         secondary: {
+          DEFAULT: "hsl(var(--secondary))",
+          foreground: "hsl(var(--secondary-foreground))",
           50: "#f8fafc",
           100: "#f1f5f9",
           200: "#e2e8f0",
@@ -32,6 +36,8 @@ export default {
           950: "#020617",
         },
         accent: {
+          DEFAULT: "hsl(var(--accent))",
+          foreground: "hsl(var(--accent-foreground))",
           50: "#fdf4ff",
           100: "#fae8ff",
           200: "#f5d0fe",

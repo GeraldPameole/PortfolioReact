@@ -1,19 +1,20 @@
 ---
 title: "Zero to One"
+type: "book"
 author: "Peter Thiel"
-description: "Notes sur les startups et comment construire le futur : une vision radicale de l'innovation et de l'entrepreneuriat"
-profession: "entreprise-management"
+description: "Notes sur les startups ou comment construire le futur en créant quelque chose de véritablement nouveau"
+profession: "entrepreneuriat"
 publishYear: 2014
 coverImage: "/assets/books/zero-to-one.jpg"
 amazonLink: "https://www.amazon.fr/Zero-One-Notes-Startups-Future/dp/0804139296/"
-keywords: "innovation, entrepreneuriat, startups, technologie, monopole, concurrence, mondialisation, futur, capital-risque, pensée contraire"
-note: 4.9
+keywords: "innovation, startup, entrepreneuriat, technologie, monopole, concurrence, disruption, futur, création de valeur, venture capital"
+note: 4.7
 relatedContent:
-  - title: "Mentoring et Développement Professionnel : Guide Pratique"
-    url: "/articles/mentoring-developpement-professionnel"
+  - title: "Nouvelles Tendances de Développement Web"
+    url: "/articles/nouvelles-tendances-developpement-web"
     type: "article"
-  - title: "Les Technologies JavaScript Incontournables en 2024"
-    url: "/articles/technologies-javascript-2024"
+  - title: "IA 2024 : Impact Profond sur les Métiers et la Société"
+    url: "/articles/ia-transformation-societe-2024"
     type: "article"
   - title: "The Lean Startup"
     url: "/books/lean-startup"
@@ -36,8 +37,8 @@ Ce livre remet en question les orthodoxies de l'entrepreneuriat moderne et offre
 
 Si vous avez apprécié "Zero to One", ces ressources pourraient vous intéresser :
 
-- [Mentoring et Développement Professionnel : Guide Pratique](/articles/mentoring-developpement-professionnel) - Pour développer votre leadership et votre vision
-- [Les Technologies JavaScript Incontournables en 2024](/articles/technologies-javascript-2024) - Comprendre les technologies disruptives actuelles
+- [Nouvelles Tendances de Développement Web](/articles/nouvelles-tendances-developpement-web) - Comprendre les tendances actuelles en développement web
+- [IA 2024 : Impact Profond sur les Métiers et la Société](/articles/ia-transformation-societe-2024) - Comprendre l'impact potentiel de l'intelligence artificielle sur les métiers et la société
 - [The Lean Startup](/books/lean-startup) - Une approche complémentaire de la création d'entreprise
 
-**Note des lecteurs : 4.9/5** - Un ouvrage fondamental qui transforme la façon de penser l'innovation
+**Note des lecteurs : 4.7/5** - Un ouvrage fondamental qui transforme la façon de penser l'innovation

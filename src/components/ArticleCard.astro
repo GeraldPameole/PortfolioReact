@@ -1,0 +1,117 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { calculateReadingTime, mapToStandardTheme, standardThemes } from '../utils/themeUtils';
+import ThemeBadge from './ThemeBadge.astro';
+
+type Article = CollectionEntry<"articles">;
+
+interface Props {
+	article: Article;
+	variant?: 'compact' | 'full';
+}
+
+const { article, variant = 'full' } = Astro.props;
+const readingTime = calculateReadingTime(article.body);
+
+// Sécurisation de l'accès aux tags
+const firstTag = article.data.tags && article.data.tags.length > 0 ? article.data.tags[0] : null;
+const mainTheme = firstTag ? mapToStandardTheme(firstTag) : 'autre';
+const themeConfig = standardThemes[mainTheme];
+
+// Sélectionner les tags supplémentaires (après le premier qui définit le thème principal)
+const secondaryTags = article.data.tags?.slice(1, 3) || [];
+
+// Vérifier et corriger l'URL de l'image
+function getValidImageUrl(url: string | undefined): string | undefined {
+  if (!url) return undefined;
+  
+  // Si l'URL est absolue et externe, la retourner telle quelle
+  if (/^(https?:)?\/\//.test(url)) return url;
+  
+  // Si l'URL commence par un slash, s'assurer qu'elle commence par un seul slash
+  if (url.startsWith('/')) return url.replace(/^\/+/, '/');
+  
+  // Sinon, ajouter un slash si nécessaire
+  return url.startsWith('/') ? url : `/${url}`;
+}
+
+const imageUrl = getValidImageUrl(article.data.image);
+---
+
+<a href={`/blog/${article.slug}`} class="group">
+	<article class="h-full bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden transform transition-all duration-300 group-hover:shadow-lg group-hover:-translate-y-1 border border-gray-100 dark:border-gray-700">
+		<div class="relative h-52 overflow-hidden">
+			{imageUrl ? (
+				<img 
+					src={imageUrl} 
+					alt={article.data.title} 
+					class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+					onerror="this.onerror=null; this.src='/placeholder-article.webp';"
+				/>
+			) : (
+				<div class="w-full h-full bg-gradient-to-r from-indigo-500 to-blue-500 flex items-center justify-center">
+					<i class={`${themeConfig.icon || 'fas fa-newspaper'} text-white text-4xl`}></i>
+				</div>
+			)}
+			<div class="absolute top-4 left-4 z-10">
+				<ThemeBadge tags={article.data.tags} size="medium" />
+			</div>
+			<div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/70 to-transparent">
+				<div class="flex items-center text-white text-xs">
+					<span class="flex items-center">
+						<i class="fas fa-calendar-alt mr-1"></i>
+						{new Date(article.data.publishDate).toLocaleDateString('fr-FR', {
+							year: 'numeric',
+							month: 'long',
+							day: 'numeric'
+						})}
+					</span>
+					<span class="mx-2">•</span>
+					<span class="flex items-center">
+						<i class="fas fa-clock mr-1"></i>
+						{readingTime} min
+					</span>
+				</div>
+			</div>
+		</div>
+		<div class="p-5">
+			<h3 class="text-lg font-bold mb-3 text-gray-800 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors line-clamp-2">
+				{article.data.title}
+			</h3>
+			<p class="text-gray-600 dark:text-gray-300 text-sm mb-4 line-clamp-3">
+				{article.data.description}
+			</p>
+			<div class="pt-3 border-t border-gray-100 dark:border-gray-700 flex justify-between">
+				<div class="flex flex-wrap gap-2">
+					{secondaryTags.map((tag: string) => (
+						<span class="px-2 py-1 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 rounded text-xs">
+							#{tag}
+						</span>
+					))}
+				</div>
+				<span class="text-indigo-600 dark:text-indigo-400 inline-flex items-center text-sm font-medium group-hover:translate-x-1 transition-transform duration-300">
+					Lire
+					<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+					</svg>
+				</span>
+			</div>
+		</div>
+	</article>
+</a>
+
+<style>
+	.line-clamp-2 {
+		display: -webkit-box;
+		-webkit-line-clamp: 2;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+	}
+	
+	.line-clamp-3 {
+		display: -webkit-box;
+		-webkit-line-clamp: 3;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+	}
+</style> 

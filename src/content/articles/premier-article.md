@@ -1,7 +1,8 @@
 ---
 title: "Mon Premier Article"
 description: "Un article de test pour vérifier le fonctionnement du blog"
-publishDate: "2024-03-23"
+publishDate: 2024-03-23
+type: "article"
 author: "Gerald Pameole"
 image: "/images/articles/premier-article.jpg"
 tags: ["test", "blog"]

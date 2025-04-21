@@ -1,0 +1,53 @@
+/* Optimisations pour les animations */
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-out;
+  animation-fill-mode: both;
+  will-change: opacity, transform;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Optimisations pour réduire la charge serveur lors des transitions */
+img {
+  content-visibility: auto;
+  contain: paint;
+}
+
+/* Éviter les sauts de layout lors du chargement des images */
+.image-container {
+  aspect-ratio: 16 / 9;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* Optimisations pour les appareils à basse consommation */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Fix pour les images manquantes */
+.image-fallback {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to right, #4f46e5, #3b82f6);
+  color: white;
+  font-size: 2rem;
+}

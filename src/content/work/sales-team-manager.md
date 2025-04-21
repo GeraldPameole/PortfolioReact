@@ -3,8 +3,17 @@ title: Manager d'Équipe Commerciale
 publishDate: "2024-01-04"
 description: Management et développement d'une équipe commerciale performante.
 author: Gérald Paméole
-img: /assets/sales-manager.jpg
+img: /assets/sales-team-manager.jpg
 img_alt: Manager commercial en action
+company: SFR
+period: "2012 - 2015"
+location: "Paris, France"
+technologies:
+  - CRM
+  - Gestion d'équipe
+  - Stratégie commerciale
+  - Management
+projectType: "professional"
 tags:
   - Management
   - Vente
@@ -12,114 +21,62 @@ tags:
   - Performance
 ---
 
-<style>
-.article-content {
-    width: 80%;
-    margin: 0 auto;
-    font-family: var(--font-family-sans);
-    color: var(--text-color);
-    line-height: 1.6;
-}
-
-h1 {
-    font-size: var(--text-2xl);
-    color: var(--accent-regular);
-    margin-bottom: 2rem;
-}
-
-h2 {
-    font-size: var(--text-xl);
-    color: var(--accent-dark);
-    margin-top: 3rem;
-    border-bottom: 2px solid var(--accent-regular);
-    padding-bottom: 0.5rem;
-}
-
-h3 {
-    font-size: var(--text-lg);
-    color: var(--accent-dark);
-    margin-top: 2rem;
-}
-
-p {
-    margin-bottom: 1.5rem;
-    font-size: var(--text-md);
-}
-
-ul {
-    margin-left: 2rem;
-    margin-bottom: 1.5rem;
-}
-
-li {
-    margin-bottom: 0.5rem;
-    font-size: var(--text-md);
-}
-
-@media (max-width: 768px) {
-    .article-content {
-        width: 95%;
-    }
-
-    h1 { font-size: var(--text-xl); }
-    h2 { font-size: var(--text-lg); }
-    h3 { font-size: var(--text-md); }
-}
-</style>
-
-<div class="article-content">
-
 # Manager Commercial
 
 ## 🎯 Mission
 
-En tant que Manager Commercial, j'ai dirigé et développé des équipes commerciales performantes, en mettant l'accent sur l'atteinte des objectifs et le développement des talents.
+En tant que Chargé de qualité, formation et développement commercial chez SFR, j'ai dirigé et développé des équipes commerciales performantes, en mettant l'accent sur l'atteinte des objectifs et le développement des compétences dans le secteur compétitif des télécommunications.
 
 ### Responsabilités Clés
 
-- Management d'équipes commerciales
-- Développement du chiffre d'affaires
-- Formation et coaching des équipes
-- Élaboration et suivi de la stratégie commerciale
+- Management d'équipes commerciales dans un secteur stratégique
+- Développement du chiffre d'affaires et optimisation du portefeuille client
+- Formation et coaching des équipes sur les produits et services télécoms
+- Mise en place de techniques d'évaluation et gestion de la relation client
+- Élaboration et suivi des KPIs commerciaux pour des décisions stratégiques
 
 ## 💡 Réalisations Principales
 
 ### Performance Commerciale
 
-- Augmentation du CA de 40% sur 2 ans
-- Développement de nouveaux marchés
-- Optimisation du cycle de vente
+- Augmentation du CA de 40% sur 2 ans dans le secteur confié
+- Développement de nouveaux marchés B2B et B2C
+- Optimisation du cycle de vente et des processus de fidélisation
+- Amélioration de la rentabilité des offres télécoms proposées
 
 ### Management d'Équipe
 
-- Direction d'une équipe de 12 commerciaux
-- Mise en place de programmes de formation
-- Développement des compétences individuelles
+- Direction et coordination d'une équipe de 12 commerciaux multicanaux
+- Mise en place de programmes de formation sur les produits et services SFR
+- Développement des compétences individuelles et collectives de l'équipe
+- Organisation d'événements de motivation et de cohésion d'équipe
 
 ### Innovation & Stratégie
 
-- Implémentation d'outils CRM modernes
-- Digitalisation du processus de vente
-- Création de nouveaux canaux de distribution
+- Implémentation d'outils CRM modernes pour le suivi des performances
+- Digitalisation du processus de vente pour s'adapter aux nouveaux usages
+- Création de nouveaux canaux de distribution adaptés au marché des télécoms
+- Analyse approfondie des données clients pour personnaliser les offres
 
 ## 🛠 Compétences Développées
 
 ### Commerciales
 
-- Négociation complexe
-- Prospection stratégique
-- Gestion grands comptes
+- Négociation complexe avec des clients grands comptes
+- Prospection stratégique dans un marché concurrentiel
+- Gestion des grands comptes et développement de partenariats
+- Élaboration de propositions commerciales sur mesure
 
 ### Management
 
-- Leadership d'équipe
-- Coaching commercial
-- Gestion de la performance
+- Leadership d'équipe dans un environnement exigeant
+- Coaching commercial personnalisé
+- Gestion de la performance et des objectifs
+- Animation de réunions commerciales motivantes
 
 ### Stratégiques
 
-- Analyse de marché
-- Planification commerciale
-- Développement business
-
-</div>
+- Analyse de marché dans le secteur des télécommunications
+- Planification commerciale adaptée aux évolutions du marché
+- Développement business et détection d'opportunités
+- Veille concurrentielle et positionnement stratégique

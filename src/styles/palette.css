@@ -1,0 +1,92 @@
+:root {
+  /* Palette de couleurs principale */
+  --color-primary-dark: #430c05; /* Marron foncé */
+  --color-secondary-warm: #d46f4d; /* Orange-saumon */
+  --color-tertiary-light: #ffbf66; /* Ambre clair */
+  --color-secondary-cool: #08c5d1; /* Turquoise */
+  --color-primary-blue: #00353f; /* Bleu très foncé */
+
+  /* Variables d'utilisation */
+  --text-dark: var(--color-primary-dark);
+  --text-light: #ffffff;
+  --bg-dark: var(--color-primary-blue);
+  --bg-light: #ffffff;
+  --accent-color: var(--color-secondary-cool);
+  --link-color: var(--color-secondary-warm);
+  --link-hover: var(--color-tertiary-light);
+  --card-bg: #f8f9fa;
+  --card-border: var(--color-secondary-warm);
+  --button-primary-bg: var(--color-secondary-warm);
+  --button-primary-hover: var(--color-primary-dark);
+  --button-secondary-bg: var(--color-secondary-cool);
+  --button-secondary-hover: var(--color-primary-blue);
+  --gradient-primary: linear-gradient(
+    135deg,
+    var(--color-primary-dark) 0%,
+    var(--color-secondary-warm) 100%
+  );
+  --gradient-secondary: linear-gradient(
+    135deg,
+    var(--color-secondary-cool) 0%,
+    var(--color-primary-blue) 100%
+  );
+  --gradient-accent: linear-gradient(
+    135deg,
+    var(--color-tertiary-light) 0%,
+    var(--color-secondary-warm) 100%
+  );
+}
+
+/* Classes d'utilité pour les fonds et textes */
+.bg-primary-dark {
+  background-color: var(--color-primary-dark);
+}
+.bg-secondary-warm {
+  background-color: var(--color-secondary-warm);
+}
+.bg-tertiary-light {
+  background-color: var(--color-tertiary-light);
+}
+.bg-secondary-cool {
+  background-color: var(--color-secondary-cool);
+}
+.bg-primary-blue {
+  background-color: var(--color-primary-blue);
+}
+
+.text-primary-dark {
+  color: var(--color-primary-dark);
+}
+.text-secondary-warm {
+  color: var(--color-secondary-warm);
+}
+.text-tertiary-light {
+  color: var(--color-tertiary-light);
+}
+.text-secondary-cool {
+  color: var(--color-secondary-cool);
+}
+.text-primary-blue {
+  color: var(--color-primary-blue);
+}
+
+/* Gradients prédéfinis */
+.gradient-primary {
+  background: var(--gradient-primary);
+}
+.gradient-secondary {
+  background: var(--gradient-secondary);
+}
+.gradient-accent {
+  background: var(--gradient-accent);
+}
+
+/* Mode sombre */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --card-bg: var(--color-primary-blue);
+    --text-dark: #ffffff;
+    --bg-light: var(--color-primary-blue);
+    --bg-dark: #1a1a1a;
+  }
+}

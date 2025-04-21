@@ -1,6 +1,7 @@
 ---
 title: "Management de la Diversité et Inclusion : Impact sur la Performance d'Entreprise"
-publishDate: "2024-05-25"
+publishDate: 2024-05-25
+type: "article"
 author: "Gérald Paméole"
 description: "Stratégies concrètes pour transformer la diversité en avantage compétitif mesurable, et analyse des meilleures pratiques d'inclusion observées dans les organisations performantes."
 theme: "management"

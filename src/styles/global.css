@@ -1,17 +1,17 @@
+@import "./palette.css";
+@import "./typography.css";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    /* Couleurs personnalisées */
-    --accent: 136, 58, 234;
-    --accent-light: 224, 204, 250;
-    --accent-dark: 49, 10, 101;
+    /* Les variables de couleurs sont maintenant définies dans palette.css */
     --accent-gradient: linear-gradient(
       45deg,
-      rgb(var(--accent)),
-      rgb(var(--accent-light)) 30%,
+      var(--color-secondary-warm),
+      var(--color-tertiary-light) 30%,
       white 60%
     );
 
@@ -22,42 +22,42 @@
     --card-foreground: 222.2 84% 4.9%;
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
-    --primary: 221.2 83.2% 53.3%;
+    --primary: var(--color-secondary-warm);
     --primary-foreground: 210 40% 98%;
-    --secondary: 210 40% 96.1%;
+    --secondary: var(--color-secondary-cool);
     --secondary-foreground: 222.2 47.4% 11.2%;
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
-    --accent: 210 40% 96.1%;
+    --accent: var(--color-tertiary-light);
     --accent-foreground: 222.2 47.4% 11.2%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
-    --border: 214.3 31.8% 91.4%;
+    --border: var(--color-secondary-warm);
     --input: 214.3 31.8% 91.4%;
-    --ring: 221.2 83.2% 53.3%;
+    --ring: var(--color-secondary-cool);
     --radius: 0.5rem;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
+    --background: var(--color-primary-blue);
     --foreground: 210 40% 98%;
-    --card: 222.2 84% 4.9%;
+    --card: var(--color-primary-dark);
     --card-foreground: 210 40% 98%;
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
-    --primary: 217.2 91.2% 59.8%;
+    --primary: var(--color-secondary-warm);
     --primary-foreground: 222.2 47.4% 11.2%;
-    --secondary: 217.2 32.6% 17.5%;
+    --secondary: var(--color-secondary-cool);
     --secondary-foreground: 210 40% 98%;
     --muted: 217.2 32.6% 17.5%;
     --muted-foreground: 215 20.2% 65.1%;
-    --accent: 217.2 32.6% 17.5%;
+    --accent: var(--color-tertiary-light);
     --accent-foreground: 210 40% 98%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
-    --border: 217.2 32.6% 17.5%;
+    --border: var(--color-tertiary-light);
     --input: 217.2 32.6% 17.5%;
-    --ring: 224.3 76.3% 48%;
+    --ring: var(--color-secondary-cool);
   }
 
   html {
@@ -81,6 +81,10 @@
 
   * {
     @apply border-gray-200 dark:border-gray-800;
+  }
+
+  :global(body) {
+    padding-top: 0;
   }
 }
 

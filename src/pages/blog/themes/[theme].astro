@@ -1,0 +1,121 @@
+---
+import { getCollection } from 'astro:content';
+import BackToTop from '../../../components/BackToTop.astro';
+import PageBanner from '../../../components/PageBanner.astro';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { standardThemes, type ThemeKey } from '../../../utils/themeUtils';
+import { groupByTheme } from '../../../utils/contentUtils';
+import ArticleCard from '../../../components/ArticleCard.astro';
+import type { CollectionEntry } from 'astro:content';
+
+export async function getStaticPaths() {
+  const themes = Object.keys(standardThemes);
+  return themes.map((theme) => ({
+    params: { theme },
+  }));
+}
+
+const { theme } = Astro.params;
+const themeKey = theme as ThemeKey;
+const themeConfig = standardThemes[themeKey];
+
+if (!themeConfig) {
+  return Astro.redirect('/404');
+}
+
+// Récupération des articles
+const articles = await getCollection('articles');
+const sortedArticles = articles.sort((a, b) => new Date(b.data.publishDate).getTime() - new Date(a.data.publishDate).getTime());
+const groupedArticles = groupByTheme(sortedArticles);
+const themeArticles = groupedArticles[themeKey] || [];
+
+// Métadonnées pour SEO
+const pageTitle = `${themeConfig.label} | Articles et Publications`;
+const pageDescription = `Découvrez tous nos articles sur ${themeConfig.label.toLowerCase()}.`;
+---
+
+<BaseLayout 
+	title={pageTitle} 
+	description={pageDescription}
+	customClass="bg-gradient-to-br from-gray-50 to-white dark:from-gray-900 dark:to-gray-800"
+>
+	<PageBanner 
+		title={themeConfig.label}
+		description={`Découvrez tous nos articles sur ${themeConfig.label.toLowerCase()}`}
+		backgroundGradient={themeConfig.gradient}
+		icon={themeConfig.icon}
+	/>
+
+	<main class="container mx-auto px-4 py-12">
+		<!-- Statistiques -->
+		<div class="mb-8 p-6 bg-white dark:bg-gray-800 rounded-xl shadow-lg">
+			<div class="flex items-center justify-between">
+				<div class="flex items-center">
+					<i class={`${themeConfig.icon} text-2xl ${themeConfig.text} mr-3`}></i>
+					<div>
+						<h2 class="text-xl font-bold text-gray-800 dark:text-white">{themeArticles.length} articles</h2>
+						<p class="text-gray-600 dark:text-gray-300">dans la catégorie {themeConfig.label}</p>
+					</div>
+				</div>
+				<a href="/blog/articles" class="text-indigo-600 dark:text-indigo-400 hover:text-indigo-700 dark:hover:text-indigo-300 font-medium inline-flex items-center">
+					<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+					</svg>
+					Retour aux articles
+				</a>
+			</div>
+		</div>
+
+		<!-- Liste des articles -->
+		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+			{themeArticles.map((article) => (
+				<ArticleCard article={article} />
+			))}
+		</div>
+
+		{themeArticles.length === 0 && (
+			<div class="text-center py-12">
+				<p class="text-gray-600 dark:text-gray-400 text-lg">
+					Aucun article n'est disponible dans cette catégorie pour le moment.
+				</p>
+			</div>
+		)}
+	</main>
+	
+	<BackToTop />
+</BaseLayout>
+
+<style>
+	.animate-fade-in {
+		animation: fadeIn 0.5s ease-in-out;
+	}
+	
+	@keyframes fadeIn {
+		from {
+			opacity: 0;
+			transform: translateY(20px);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+</style>
+
+<script defer is:inline>
+  // Animation pour les éléments au scroll
+  document.addEventListener('DOMContentLoaded', () => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-fade-in');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    
+    document.querySelectorAll('.grid > *').forEach(element => {
+      observer.observe(element);
+    });
+  });
+</script> 

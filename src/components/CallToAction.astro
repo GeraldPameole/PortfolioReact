@@ -1,56 +1,119 @@
 ---
 interface Props {
-	href: string;
+	title?: string;
+	description?: string;
+	buttonText: string;
+	buttonLink: string;
+	backgroundColor?: string;
+	textColor?: string;
+	buttonStyle?: 'primary' | 'secondary' | 'outline' | 'gradient';
+	icon?: string;
+	animate?: boolean;
 }
 
-const { href } = Astro.props;
+const {
+	title = "Prêt à collaborer?",
+	description = "Discutons de votre prochain projet ensemble",
+	buttonText,
+	buttonLink,
+	backgroundColor = "bg-indigo-600 dark:bg-indigo-800",
+	textColor = "text-white",
+	buttonStyle = 'gradient',
+	icon = "arrow-right",
+	animate = true
+} = Astro.props;
+
+// Styles des différents types de boutons
+const buttonStyles = {
+	primary: "bg-white text-indigo-600 hover:bg-gray-100",
+	secondary: "bg-indigo-500 text-white hover:bg-indigo-400",
+	outline: "bg-transparent border-2 border-white text-white hover:bg-white/10",
+	gradient: "bg-gradient-to-r from-white to-gray-100 text-indigo-600 hover:from-gray-100 hover:to-white",
+}
+
+// Icônes disponibles
+const icons = {
+	"arrow-right": `<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
+		<path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+	</svg>`,
+	"chat": `<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
+		<path fill-rule="evenodd" d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z" clip-rule="evenodd" />
+	</svg>`,
+	"code": `<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
+		<path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+	</svg>`,
+	"email": `<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
+		<path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+		<path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+	</svg>`
+}
+
+const selectedButtonStyle = buttonStyles[buttonStyle];
+const selectedIcon = icons[icon as keyof typeof icons] || icons["arrow-right"];
 ---
 
-<a href={href}><slot /></a>
+<div class={`cta-container ${backgroundColor} ${animate ? 'animate-pulse-slow' : ''} rounded-2xl overflow-hidden relative`}>
+	<!-- Cercles décoratifs en arrière-plan -->
+	<div class="absolute -top-24 -left-24 w-64 h-64 bg-white/10 rounded-full blur-2xl"></div>
+	<div class="absolute -bottom-32 -right-32 w-80 h-80 bg-white/5 rounded-full blur-3xl"></div>
+	
+	<div class="relative z-10 p-8 md:p-12 flex flex-col items-center text-center">
+		<!-- Titre animé avec gradient -->
+		{title && (
+			<h2 class={`text-2xl md:text-3xl font-bold ${textColor} mb-4 ${animate ? 'animate-text-gradient bg-clip-text text-transparent bg-gradient-to-r from-white via-gray-200 to-white background-animate' : ''}`}>
+				{title}
+			</h2>
+		)}
+		
+		<!-- Description -->
+		{description && (
+			<p class={`${textColor} text-lg opacity-90 max-w-2xl mb-8`}>
+				{description}
+			</p>
+		)}
+		
+		<!-- Bouton avec effet de survol -->
+		<a 
+			href={buttonLink} 
+			class={`group inline-flex items-center justify-center px-6 py-3 rounded-full font-medium transition-all duration-300 transform hover:scale-105 hover:shadow-lg ${selectedButtonStyle}`}
+		>
+			<span>{buttonText}</span>
+			<span class="inline-block group-hover:translate-x-1 transition-transform duration-300" set:html={selectedIcon} />
+		</a>
+	</div>
+</div>
 
 <style>
-	a {
-		position: relative;
-		display: flex;
-		place-content: center;
-		text-align: center;
-		padding: 0.56em 2em;
-		gap: 0.8em;
-		color: var(--accent-text-over);
-		text-decoration: none;
-		line-height: 1.1;
-		border-radius: 999rem;
-		overflow: hidden;
-		background: var(--gradient-accent-orange);
-		box-shadow: var(--shadow-md);
-		white-space: nowrap;
+	.animate-pulse-slow {
+		animation: pulseSlow 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 	}
-
-	@media (min-width: 20em) {
-		a {
-			font-size: var(--text-lg);
+	
+	@keyframes pulseSlow {
+		0%, 100% {
+			opacity: 1;
+		}
+		50% {
+			opacity: 0.9;
 		}
 	}
-
-	/* Overlay for hover effects. */
-	a::after {
-		content: '';
-		position: absolute;
-		inset: 0;
-		pointer-events: none;
-		transition: background-color var(--theme-transition);
-		mix-blend-mode: overlay;
+	
+	.animate-text-gradient {
+		background-size: 200% 200%;
 	}
-
-	a:focus::after,
-	a:hover::after {
-		background-color: hsla(var(--gray-999-basis), 0.3);
+	
+	.background-animate {
+		animation: gradient 8s ease infinite;
 	}
-
-	@media (min-width: 50em) {
-		a {
-			padding: 1.125rem 2.5rem;
-			font-size: var(--text-xl);
+	
+	@keyframes gradient {
+		0% {
+			background-position: 0% 50%;
+		}
+		50% {
+			background-position: 100% 50%;
+		}
+		100% {
+			background-position: 0% 50%;
 		}
 	}
 </style>

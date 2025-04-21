@@ -1,22 +1,23 @@
 ---
-title: "Influence: Psychologie de la Persuasion"
-author: "Robert Cialdini"
-description: "Comprendre les mécanismes psychologiques qui nous poussent à dire 'oui'"
-profession: "business-strategie"
-publishYear: 2004
+title: "Influence: The Psychology of Persuasion"
+type: "book"
+author: "Robert B. Cialdini"
+description: "Analyse scientifique des six principes psychologiques fondamentaux qui guident notre comportement et influencent nos décisions"
+profession: "psychologie-marketing"
+publishYear: 2006
 coverImage: "/assets/books/influence.jpg"
-amazonLink: "https://www.amazon.fr/Influence-science-practice-Robert-Cialdini/dp/0205609996/"
-keywords: "persuasion, psychologie sociale, influence, marketing, négociation, comportement du consommateur, manipulation, prise de décision"
-note: 4.9
+amazonLink: "https://www.amazon.fr/Influence-Psychology-Persuasion-Robert-Cialdini/dp/006124189X/"
+keywords: "psychologie sociale, persuasion, influence, marketing, comportement humain, prise de décision, négociation, communication persuasive"
+note: 4.8
 relatedContent:
-  - title: "Négocier son Salaire: Techniques Avancées et Psychologie de la Persuasion"
+  - title: "Email Marketing : Comment la Personnalisation Augmente les Conversions"
+    url: "/articles/email-marketing-personnalisation"
+    type: "article"
+  - title: "Négocier son Salaire : Techniques Avancées qui Fonctionnent"
     url: "/articles/negocier-salaire-techniques-avancees"
     type: "article"
-  - title: "Le Mentorat: Catalyseur Méconnu du Développement Professionnel"
-    url: "/articles/mentoring-developpement-professionnel"
-    type: "article"
-  - title: "Atomic Habits"
-    url: "/books/atomic-habits"
+  - title: "Zero to One"
+    url: "/books/zero-to-one"
     type: "book"
 ---
 

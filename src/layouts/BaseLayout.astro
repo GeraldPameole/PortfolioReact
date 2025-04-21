@@ -6,7 +6,7 @@ import { ViewTransitions } from 'astro:transitions';
 import BackButton from '../components/BackButton.astro';
 import BackToTop from '../components/BackToTop.astro';
 import Footer from '../components/Footer.astro';
-import Navbar from '../components/Navbar';
+import Header from '../components/Header.astro';
 import '../styles/global.css';
 
 interface Props {
@@ -14,9 +14,23 @@ interface Props {
 	description?: string;
 	image?: string;
 	customClass?: string;
+  keywords?: string;
+  type?: string;
+  fullWidth?: boolean;
 }
 
-const { title, description = "Développeur Full Stack et Expert en IA", image = "/images/profile.jpg", customClass = "" } = Astro.props;
+const { 
+  title, 
+  description = "Développeur Full Stack et Expert en IA", 
+  image = "/images/profile.jpg", 
+  customClass = "",
+  keywords = "développeur, full stack, intelligence artificielle, IA, react, node.js, machine learning, portfolio",
+  type = "website",
+  fullWidth = false
+} = Astro.props;
+
+// Construction de l'URL canonique
+const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://gerald-pameole.com');
 ---
 
 <!DOCTYPE html>
@@ -27,28 +41,49 @@ const { title, description = "Développeur Full Stack et Expert en IA", image = 
 		<title>{title} | Gérald Paméole</title>
 		<meta name="description" content={description} />
 		<meta name="author" content="Gérald Paméole" />
-		<meta name="keywords" content="développeur, full stack, intelligence artificielle, IA, react, node.js, machine learning, portfolio" />
-		<meta name="theme-color" content="#4f46e5" />
+		<meta name="keywords" content={keywords} />
+		<meta name="theme-color" content="#430C05" />
+		
+		<!-- Open Graph / Meta Tags -->
 		<meta property="og:title" content={`${title} | Gérald Paméole`} />
 		<meta property="og:description" content={description} />
-		<meta property="og:type" content="website" />
-		<meta property="og:url" content="https://gerald-pameole.com" />
-		<meta property="og:image" content="/images/meta-image.png" />
+		<meta property="og:type" content={type} />
+		<meta property="og:url" content={canonicalURL} />
+		<meta property="og:image" content={new URL(image, Astro.site || 'https://gerald-pameole.com')} />
+		<meta property="og:site_name" content="Gérald Paméole | Portfolio" />
+		
+		<!-- Twitter Card -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content={`${title} | Gérald Paméole`} />
+		<meta name="twitter:description" content={description} />
+		<meta name="twitter:image" content={new URL(image, Astro.site || 'https://gerald-pameole.com')} />
+		
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="canonical" href="https://gerald-pameole.com" />
+		<link rel="canonical" href={canonicalURL} />
 		<meta name="generator" content={Astro.generator} />
+		
 		<ViewTransitions />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
-			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
 			rel="stylesheet"
+			media="print"
+      onload="this.media='all'"
 		/>
+    <!-- Chargement de secours pour les polices -->
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+      />
+    </noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 	</head>
 	<body class={`min-h-screen flex flex-col ${customClass}`}>
-		<Navbar client:load />
+		<Header />
 		<BackButton />
-		<main class="flex-grow">
+		<main class={`flex-grow ${fullWidth ? 'w-full' : ''} pt-24 md:pt-28`}>
 			<slot />
 		</main>
 		<BackToTop />
@@ -56,29 +91,25 @@ const { title, description = "Développeur Full Stack et Expert en IA", image = 
 	</body>
 </html>
 
-<style>
+<style define:vars={{
+  bgImageMain: "url('/assets/backgrounds/bg-main-light-800w.jpg')",
+  bgImageMainCurves: "url('/assets/backgrounds/bg-main-light.svg')",
+  bgSvgBlendMode: "overlay",
+  bgBlendMode: "darken"
+}}>
 	:root {
 		--_placeholder-bg: linear-gradient(transparent, transparent);
-		--bg-image-main: url('/assets/backgrounds/bg-main-light-800w.jpg');
-		--bg-image-main-curves: url('/assets/backgrounds/bg-main-light.svg');
+		--bg-image-main: var(--bgImageMain);
+		--bg-image-main-curves: var(--bgImageMainCurves);
 		--bg-image-subtle-1: var(--_placeholder-bg);
 		--bg-image-subtle-2: var(--_placeholder-bg);
 		--bg-image-footer: var(--_placeholder-bg);
-		--bg-svg-blend-mode: overlay;
-		--bg-blend-mode: darken;
+		--bg-svg-blend-mode: var(--bgSvgBlendMode);
+		--bg-blend-mode: var(--bgBlendMode);
 		--bg-image-aspect-ratio: 2.25;
 		--bg-scale: 1.68;
 		--bg-aspect-ratio: calc(var(--bg-image-aspect-ratio) / var(--bg-scale));
 		--bg-gradient-size: calc(var(--bg-scale) * 100%);
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
 	}
 
 	:root.theme-dark {

@@ -1,6 +1,7 @@
 ---
 title: "Vaincre la Procrastination : Solutions Efficaces Basées sur les Neurosciences"
-publishDate: "2024-01-05"
+publishDate: 2024-01-05
+type: "article"
 author: "Gérald Paméole"
 description: "Découvrez les mécanismes cognitifs derrière la procrastination et les techniques pratiques fondées sur les dernières recherches en neurosciences pour surmonter ce frein à la productivité."
 theme: "productivite"

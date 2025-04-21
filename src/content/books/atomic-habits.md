@@ -1,5 +1,6 @@
 ---
 title: "Atomic Habits"
+type: "book"
 author: "James Clear"
 description: "Un moyen facile et prouvé de développer de bonnes habitudes et de se débarrasser des mauvaises"
 profession: "developpement-personnel"

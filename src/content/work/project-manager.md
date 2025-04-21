@@ -3,8 +3,17 @@ title: Chef de Projet Digital
 publishDate: "2024-01-02"
 description: Gestion et coordination de projets digitaux innovants.
 author: Gérald Paméole
-img: /assets/project-manager.jpg
+img: /assets/projectmanagersuit.jpg
 img_alt: Chef de projet en action
+company: KEOS TELECOM
+period: "2021 - Présent"
+location: "Paris, France"
+technologies:
+  - Méthodologies Agiles
+  - Gestion de projet
+  - Télécommunications
+  - Transformation digitale
+projectType: "professional"
 tags:
   - Gestion de projet
   - Agilité
@@ -12,114 +21,62 @@ tags:
   - Innovation
 ---
 
-<style>
-.article-content {
-    width: 80%;
-    margin: 0 auto;
-    font-family: var(--font-family-sans);
-    color: var(--text-color);
-    line-height: 1.6;
-}
-
-h1 {
-    font-size: var(--text-2xl);
-    color: var(--accent-regular);
-    margin-bottom: 2rem;
-}
-
-h2 {
-    font-size: var(--text-xl);
-    color: var(--accent-dark);
-    margin-top: 3rem;
-    border-bottom: 2px solid var(--accent-regular);
-    padding-bottom: 0.5rem;
-}
-
-h3 {
-    font-size: var(--text-lg);
-    color: var(--accent-dark);
-    margin-top: 2rem;
-}
-
-p {
-    margin-bottom: 1.5rem;
-    font-size: var(--text-md);
-}
-
-ul {
-    margin-left: 2rem;
-    margin-bottom: 1.5rem;
-}
-
-li {
-    margin-bottom: 0.5rem;
-    font-size: var(--text-md);
-}
-
-@media (max-width: 768px) {
-    .article-content {
-        width: 95%;
-    }
-    
-    h1 { font-size: var(--text-xl); }
-    h2 { font-size: var(--text-lg); }
-    h3 { font-size: var(--text-md); }
-}
-</style>
-
-<div class="article-content">
-
 # Chef de Projet
 
 ## 🎯 Mission
 
-En tant que Chef de Projet Digital, j'ai piloté des projets de transformation numérique complexes, en mettant l'accent sur l'innovation et l'efficacité opérationnelle.
+En tant que Chef de Projet chez KEOS TELECOM, je pilote des projets complexes d'optimisation d'infrastructures réseau et coordonne des équipes techniques pour garantir une performance optimale des services télécoms, en mettant l'accent sur l'innovation et l'efficacité opérationnelle.
 
 ### Responsabilités Clés
 
-- Pilotage de projets digitaux stratégiques
-- Coordination d'équipes pluridisciplinaires
-- Gestion de la relation client et des parties prenantes
-- Optimisation des processus et des méthodologies
+- Pilotage de projets télécoms stratégiques et d'optimisation d'infrastructures réseau
+- Coordination d'équipes multidisciplinaires pour optimiser la performance et l'évolutivité des réseaux
+- Gestion de la relation client et des parties prenantes dans un environnement complexe
+- Mise en œuvre de processus optimisés pour accroître la performance
+- Gestion proactive de l'expérience utilisateur et leadership dans le contrôle de projets complexes
 
 ## 💡 Réalisations Principales
 
 ### Transformation Digitale
 
-- Mise en place d'une plateforme collaborative pour optimiser la communication inter-services
-- Déploiement d'outils de gestion de projet agiles
-- Digitalisation des processus métier clés
+- Mise en place de solutions collaboratives pour optimiser la communication entre les équipes techniques
+- Déploiement d'outils de gestion de projet agiles adaptés au secteur des télécommunications
+- Digitalisation des processus métier clés pour améliorer l'efficacité opérationnelle
+- Optimisation des infrastructures réseau pour garantir une qualité de service optimale
 
 ### Gestion d'Équipe
 
-- Management d'équipes de 5 à 15 personnes
-- Mise en place de rituels agiles efficaces
-- Développement des compétences et accompagnement
+- Management et coordination d'équipes de 5 à 15 experts techniques
+- Mise en place de rituels agiles efficaces pour suivre l'avancement des projets
+- Développement des compétences techniques et accompagnement des collaborateurs
+- Animation d'ateliers collaboratifs pour résoudre des problèmes techniques complexes
 
 ### Innovation & Performance
 
-- Réduction de 30% des délais de livraison
-- Amélioration de la satisfaction client de 25%
-- Introduction de nouvelles méthodologies de travail
+- Réduction de 30% des délais de livraison des projets d'infrastructure
+- Amélioration de la satisfaction client de 25% grâce à une meilleure qualité de service
+- Introduction de nouvelles méthodologies de travail adaptées aux contraintes du secteur
+- Mise en œuvre de solutions innovantes pour améliorer la fiabilité des réseaux
 
 ## 🛠 Compétences Développées
 
 ### Techniques
 
-- Méthodologies Agiles (Scrum, Kanban)
-- Outils de gestion de projet (Jira, Trello)
-- Solutions collaboratives (Confluence, Teams)
+- Maîtrise des méthodologies Agiles (Scrum, Kanban) appliquées aux projets télécoms
+- Expertise en outils de gestion de projet (Jira, MS Project, Trello)
+- Connaissance approfondie des infrastructures de télécommunication
+- Maîtrise des solutions collaboratives (Confluence, Teams) pour coordonner les équipes distantes
 
 ### Management
 
-- Leadership d'équipe
-- Gestion des parties prenantes
-- Communication stratégique
+- Leadership d'équipes techniques pluridisciplinaires
+- Gestion efficace des parties prenantes et des attentes client
+- Communication stratégique dans un environnement technique complexe
+- Coaching et développement des talents techniques
 
 ### Métier
 
-- Analyse des besoins
-- Gestion budgétaire
-- Planification stratégique
-
-</div>
+- Analyse approfondie des besoins clients dans le secteur des télécommunications
+- Gestion budgétaire et optimisation des coûts de projets d'infrastructure
+- Planification stratégique de déploiements complexes
+- Expertise en optimisation de performance réseau et qualité de service

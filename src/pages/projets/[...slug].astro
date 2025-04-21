@@ -1,0 +1,244 @@
+---
+import { getCollection } from 'astro:content';
+import BackButton from '../../components/BackButton.astro';
+import BackToTop from '../../components/BackToTop.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+export async function getStaticPaths() {
+	const workEntries = await getCollection('work');
+	return workEntries.map(entry => ({
+		params: { slug: entry.slug },
+		props: { entry },
+	}));
+}
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+
+// Récupération de la date formatée
+function formatDate(dateString: string) {
+	return new Date(dateString).toLocaleDateString('fr-FR', {
+		year: 'numeric',
+		month: 'long',
+		day: 'numeric'
+	});
+}
+---
+
+<BaseLayout title={entry.data.title} description={entry.data.description}>
+	<main class="mx-auto max-w-4xl px-4 py-12">
+		<div class="mb-8">
+			<BackButton href="/projets" text="Retour aux projets" />
+		</div>
+
+		<article class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden">
+			<!-- Image principale -->
+			{entry.data.img && (
+				<div class="relative h-80 overflow-hidden">
+					<img
+						src={entry.data.img}
+						alt={entry.data.img_alt || entry.data.title}
+						class="w-full h-full object-cover"
+					/>
+					<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
+						<div class="absolute bottom-0 left-0 p-6 text-white">
+							<h1 class="text-4xl font-bold mb-2">{entry.data.title}</h1>
+							{entry.data.publishDate && (
+								<p class="text-white/80 mb-2">{formatDate(entry.data.publishDate)}</p>
+							)}
+						</div>
+					</div>
+				</div>
+			)}
+
+			<div class="p-8">
+				{!entry.data.img && (
+					<h1 class="text-4xl font-bold mb-4 text-gray-800 dark:text-white">{entry.data.title}</h1>
+				)}
+			
+				<p class="text-xl text-gray-600 dark:text-gray-300 mb-6">{entry.data.description}</p>
+				
+				<!-- Informations CV -->
+				{(entry.data.company || entry.data.period || entry.data.location) && (
+					<div class="bg-gray-100 dark:bg-gray-700 rounded-xl p-6 mb-8">
+						<h2 class="text-lg font-semibold mb-4 text-gray-800 dark:text-white flex items-center">
+							<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-indigo-600 dark:text-indigo-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+							</svg>
+							Détails professionnels
+						</h2>
+						<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+							{entry.data.company && (
+								<div class="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-sm">
+									<span class="text-sm text-indigo-600 dark:text-indigo-400 font-medium block mb-1">Entreprise</span>
+									<span class="font-medium text-gray-800 dark:text-white text-lg">{entry.data.company}</span>
+								</div>
+							)}
+							{entry.data.period && (
+								<div class="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-sm">
+									<span class="text-sm text-indigo-600 dark:text-indigo-400 font-medium block mb-1">Période</span>
+									<span class="font-medium text-gray-800 dark:text-white text-lg">{entry.data.period}</span>
+								</div>
+							)}
+							{entry.data.location && (
+								<div class="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-sm">
+									<span class="text-sm text-indigo-600 dark:text-indigo-400 font-medium block mb-1">Localisation</span>
+									<span class="font-medium text-gray-800 dark:text-white text-lg">{entry.data.location}</span>
+								</div>
+							)}
+						</div>
+					</div>
+				)}
+				
+				<!-- Technologies -->
+				{entry.data.technologies && entry.data.technologies.length > 0 && (
+					<div class="mb-8">
+						<h2 class="text-lg font-semibold mb-4 text-gray-800 dark:text-white flex items-center">
+							<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-indigo-600 dark:text-indigo-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+							</svg>
+							Technologies
+						</h2>
+						<div class="flex flex-wrap gap-2">
+							{entry.data.technologies.map((tech: string) => (
+								<span class="px-4 py-2 text-sm bg-indigo-100 dark:bg-indigo-900/30 text-indigo-800 dark:text-indigo-300 rounded-full font-medium transition hover:scale-105">
+									{tech}
+								</span>
+							))}
+						</div>
+					</div>
+				)}
+				
+				<!-- Tags -->
+				{entry.data.tags && entry.data.tags.length > 0 && (
+					<div class="mb-8">
+						<h2 class="text-lg font-semibold mb-4 text-gray-800 dark:text-white flex items-center">
+							<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-indigo-600 dark:text-indigo-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" />
+							</svg>
+							Compétences
+						</h2>
+						<div class="flex flex-wrap gap-2">
+							{entry.data.tags.map((tag: string) => (
+								<span class="px-3 py-1 text-sm bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-full">
+									{tag}
+								</span>
+							))}
+						</div>
+					</div>
+				)}
+
+				<!-- Contenu principal -->
+				<div class="prose dark:prose-invert max-w-none prose-headings:text-indigo-700 dark:prose-headings:text-indigo-400 prose-a:text-indigo-600 dark:prose-a:text-indigo-400">
+					<Content />
+				</div>
+			</div>
+		</article>
+		
+		<!-- Navigation entre projets -->
+		<div class="flex justify-between items-center mt-12">
+			<a href="/projets" class="inline-flex items-center px-4 py-2 bg-gray-100 dark:bg-gray-800 rounded-lg text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition">
+				<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 17l-5-5m0 0l5-5m-5 5h12" />
+				</svg>
+				Tous les projets
+			</a>
+			
+			<a href="/contact" class="inline-flex items-center px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition">
+				<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+				</svg>
+				Me contacter
+			</a>
+		</div>
+	</main>
+	
+	<BackToTop />
+</BaseLayout>
+
+<style>
+	.prose {
+		font-size: 1.125rem;
+		line-height: 1.75;
+	}
+
+	.prose h2 {
+		font-size: 1.875rem;
+		margin-top: 2.5rem;
+		margin-bottom: 1.25rem;
+		color: var(--accent-dark);
+		border-bottom: 2px solid var(--accent-regular);
+		padding-bottom: 0.5rem;
+	}
+
+	.prose h3 {
+		font-size: 1.5rem;
+		margin-top: 2rem;
+		margin-bottom: 1rem;
+		color: var(--accent-dark);
+	}
+
+	.prose p {
+		margin-bottom: 1.5rem;
+	}
+
+	.prose ul,
+	.prose ol {
+		margin-left: 1.5rem;
+		margin-bottom: 1.5rem;
+	}
+
+	.prose li {
+		margin-bottom: 0.5rem;
+	}
+
+	.prose img {
+		border-radius: 0.5rem;
+		margin: 2rem 0;
+	}
+
+	.prose blockquote {
+		border-left: 4px solid var(--accent-regular);
+		padding-left: 1rem;
+		margin: 1.5rem 0;
+		font-style: italic;
+	}
+
+	.prose code {
+		background-color: var(--gray-999);
+		padding: 0.2rem 0.4rem;
+		border-radius: 0.25rem;
+		font-size: 0.875em;
+	}
+
+	.prose pre {
+		background-color: var(--gray-999);
+		padding: 1rem;
+		border-radius: 0.5rem;
+		overflow-x: auto;
+		margin: 1.5rem 0;
+	}
+
+	.prose pre code {
+		background-color: transparent;
+		padding: 0;
+		border-radius: 0;
+	}
+	
+	.prose .cv-info {
+		background-color: transparent;
+		padding: 0;
+		margin-bottom: 0;
+	}
+	
+	/* Override les styles qui seraient définis dans les fichiers markdown */
+	:global(.article-content) {
+		width: 100% !important;
+		max-width: none !important;
+	}
+	
+	:global(.cv-info) {
+		display: none;
+	}
+</style>

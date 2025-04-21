@@ -1,0 +1,152 @@
+---
+import { getCollection } from 'astro:content';
+import BackToTop from '../../components/BackToTop.astro';
+import CallToAction from '../../components/CallToAction.astro';
+import PageBanner from '../../components/PageBanner.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { calculateReadingTime, mapToStandardTheme, standardThemes, type ThemeKey } from '../../utils/themeUtils';
+import { groupByTheme } from '../../utils/contentUtils';
+import ArticleCard from '../../components/ArticleCard.astro';
+import type { CollectionEntry } from 'astro:content';
+
+// Récupération des articles
+const articles = await getCollection('articles');
+
+// Tri des articles par date de publication (du plus récent au plus ancien)
+const sortedArticles = articles.sort((a, b) => new Date(b.data.publishDate).getTime() - new Date(a.data.publishDate).getTime());
+
+// Définition des 5 thèmes principaux
+const mainThemes: ThemeKey[] = ['developpement', 'technologie', 'carriere', 'formation', 'gestion'];
+
+// Regroupement des articles par thème
+type ArticleEntry = CollectionEntry<'articles'>;
+const groupedArticles: Record<ThemeKey, ArticleEntry[]> = groupByTheme(sortedArticles);
+
+// Sélection des 4 articles les plus récents pour chaque thème
+const featuredArticles = mainThemes.reduce((acc, theme) => {
+  acc[theme] = groupedArticles[theme]?.slice(0, 4) || [];
+  return acc;
+}, {} as Record<ThemeKey, ArticleEntry[]>);
+
+// Métadonnées pour SEO
+const pageTitle = "Blog | Articles sur le Développement Web et l'IA";
+const pageDescription = "Découvrez mes articles sur le développement web, l'intelligence artificielle, et les dernières tendances technologiques.";
+---
+
+<BaseLayout 
+	title={pageTitle} 
+	description={pageDescription}
+	customClass="bg-gradient-to-br from-gray-50 to-white dark:from-gray-900 dark:to-gray-800"
+>
+	<PageBanner 
+		title="Articles & Publications"
+		description="Découvrez mes articles sur le développement web, l'intelligence artificielle et d'autres sujets tech."
+		backgroundGradient="from-indigo-600 to-blue-700"
+		icon="📚"
+	/>
+
+	<main class="container mx-auto px-4 py-12">
+		<!-- Pills de thèmes -->
+		<div class="flex flex-wrap gap-3 mb-8">
+			{mainThemes.map((theme: ThemeKey) => {
+				const themeConfig = standardThemes[theme];
+				return (
+					<a
+						href={`#${theme}`}
+						class={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:scale-105
+							${themeConfig.bg} ${themeConfig.text} hover:bg-opacity-80`}
+					>
+						{themeConfig.icon && <i class={`${themeConfig.icon} mr-2`}></i>}
+						{themeConfig.label}
+						<span class="ml-2 opacity-70">({groupedArticles[theme]?.length || 0})</span>
+					</a>
+				);
+			})}
+		</div>
+
+		<!-- Articles par thème -->
+		{mainThemes.map((theme: ThemeKey) => (
+			<section id={theme} class="mb-16">
+				<div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8">
+					<div class="flex items-center justify-between mb-6">
+						<h2 class="text-2xl font-bold text-gray-800 dark:text-white">
+							{standardThemes[theme].label}
+						</h2>
+						<a 
+							href={`/blog/themes/${theme}`}
+							class="text-indigo-600 dark:text-indigo-400 hover:text-indigo-700 dark:hover:text-indigo-300 font-medium inline-flex items-center"
+						>
+							Voir tout
+							<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+							</svg>
+						</a>
+					</div>
+					<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+						{featuredArticles[theme].map(article => (
+							<ArticleCard article={article} />
+						))}
+					</div>
+					{groupedArticles[theme]?.length > 4 && (
+						<div class="mt-8 text-center">
+							<a 
+								href={`/blog/themes/${theme}`}
+								class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+							>
+								Voir plus d'articles
+								<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+								</svg>
+							</a>
+						</div>
+					)}
+				</div>
+			</section>
+		))}
+	</main>
+	
+	<BackToTop />
+</BaseLayout>
+
+<style>
+	.line-clamp-2 {
+		display: -webkit-box;
+		-webkit-line-clamp: 2;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+	}
+	
+	.line-clamp-3 {
+		display: -webkit-box;
+		-webkit-line-clamp: 3;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+	}
+</style>
+
+<script defer is:inline>
+  // Ajout de Font Awesome
+  if (!document.querySelector('#font-awesome')) {
+    const link = document.createElement('link');
+    link.id = 'font-awesome';
+    link.rel = 'stylesheet';
+    link.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css';
+    document.head.appendChild(link);
+  }
+  
+  // Animation pour les éléments au scroll
+  document.addEventListener('DOMContentLoaded', () => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-fade-in');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    
+    document.querySelectorAll('section').forEach(section => {
+      observer.observe(section);
+    });
+  });
+</script> 

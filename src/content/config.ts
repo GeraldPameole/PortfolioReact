@@ -1,57 +1,59 @@
 import { defineCollection, z } from "astro:content";
 
-const relatedContentSchema = z.object({
+// Schéma commun pour tous les contenus
+const baseSchema = {
   title: z.string(),
-  url: z.string(),
-  type: z.enum(["article", "book"]).optional(),
-});
-
-const articles = defineCollection({
-  type: "content",
-  schema: z.object({
-    title: z.string(),
-    description: z.string(),
-    publishDate: z.string().transform((str) => new Date(str)),
-    author: z.string().optional(),
-    image: z.string().optional(),
-    tags: z.array(z.string()).default([]),
-    theme: z.string().optional(),
-    keywords: z.string().optional(),
-    note: z.number().min(0).max(5).optional(),
-    skills: z.array(z.string()).optional(),
-    relatedContent: z.array(relatedContentSchema).optional(),
-  }),
-});
-
-const books = defineCollection({
-  type: "content",
-  schema: z.object({
-    title: z.string(),
-    description: z.string(),
-    author: z.string(),
-    profession: z.string(),
-    coverImage: z.string().optional(),
-    amazonLink: z.string().optional(),
-    publishYear: z.number().optional(),
-    note: z.number().min(0).max(5).optional(),
-    relatedContent: z.array(relatedContentSchema).optional(),
-  }),
-});
-
-const work = defineCollection({
-  type: "content",
-  schema: z.object({
-    title: z.string(),
-    description: z.string(),
-    publishDate: z.string(),
-    image: z.string().optional(),
-    client: z.string().optional(),
-    technologies: z.array(z.string()).optional(),
-  }),
-});
-
-export const collections = {
-  articles,
-  books,
-  work,
+  description: z.string(),
+  author: z.string().optional(),
+  publishDate: z.date().optional(),
+  updatedDate: z.date().optional(),
+  image: z.string().optional(),
+  tags: z.array(z.string()).optional().default([]),
+  theme: z.string().optional(),
 };
+
+// Schéma pour les articles
+const articleSchema = z.object({
+  ...baseSchema,
+  type: z.literal("article"),
+  publishDate: z.date(),
+  readingTime: z.number().optional(),
+  featured: z.boolean().optional().default(false),
+});
+
+// Schéma pour les livres
+const bookSchema = z.object({
+  ...baseSchema,
+  type: z.literal("book"),
+  author: z.string(),
+  profession: z.string(),
+  coverImage: z.string().optional(),
+  publishYear: z.number().optional(),
+  note: z.number().optional(),
+  amazonLink: z.string().optional(),
+  category: z.string().optional(),
+  relatedContent: z
+    .array(
+      z.object({
+        title: z.string(),
+        url: z.string(),
+        type: z.enum(["article", "book"]).optional(),
+      })
+    )
+    .optional(),
+});
+
+// Définition des collections
+export const collections = {
+  articles: defineCollection({
+    type: "content",
+    schema: articleSchema,
+  }),
+  books: defineCollection({
+    type: "content",
+    schema: bookSchema,
+  }),
+};
+
+export type ArticleSchema = z.infer<typeof articleSchema>;
+export type BookSchema = z.infer<typeof bookSchema>;

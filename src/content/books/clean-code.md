@@ -1,5 +1,6 @@
 ---
 title: "Clean Code"
+type: "book"
 author: "Robert C. Martin"
 description: "Manuel de développement logiciel agile pour créer du code propre et maintenable"
 profession: "developpement-web"

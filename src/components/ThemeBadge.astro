@@ -1,0 +1,27 @@
+---
+import { mapToStandardTheme, standardThemes, type ThemeKey } from '../utils/themeUtils';
+
+type Props = {
+	theme?: string;
+	tags?: string[];
+	size?: 'small' | 'medium' | 'large';
+}
+
+const { theme, tags, size = 'medium' } = Astro.props;
+const defaultTheme = theme || (tags && tags.length > 0 ? tags[0] : "autre");
+const standardTheme = mapToStandardTheme(defaultTheme) as ThemeKey;
+const themeConfig = standardThemes[standardTheme];
+
+// Classes CSS selon la taille choisie
+const sizeClasses = {
+	small: 'px-2 py-0.5 text-xs',
+	medium: 'px-3 py-1 text-xs',
+	large: 'px-4 py-1.5 text-sm'
+};
+---
+
+<span class={`${sizeClasses[size]} rounded-full font-medium inline-flex items-center 
+  ${themeConfig.bg} ${themeConfig.text} shadow-sm transition-all duration-300 hover:shadow`}>
+	{themeConfig.icon && <i class={`${themeConfig.icon} mr-1.5`}></i>}
+	{themeConfig.label}
+</span>

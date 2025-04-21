@@ -1,7 +1,8 @@
 ---
 title: "Intelligence Artificielle : La Révolution Silencieuse qui Transforme notre Société"
 description: "Enquête approfondie sur l'impact de l'IA dans le monde professionnel et social en 2024 : données exclusives, témoignages d'experts et perspectives d'avenir."
-publishDate: "2024-06-15"
+publishDate: 2024-06-15
+type: "article"
 author: "Gérald Paméole"
 theme: "intelligence-artificielle"
 keywords: "IA, Intelligence Artificielle, Développement, Transformation digitale, Société, Éthique, Avenir du travail, Marché de l'IA, Compétences IA"

@@ -1,7 +1,8 @@
 ---
 title: "Mentoring et Développement Professionnel : Guide Complet"
 description: "Comment établir et bénéficier d'une relation de mentorat efficace pour accélérer sa progression de carrière et développer son leadership."
-publishDate: "2024-07-15"
+publishDate: 2024-07-15
+type: "article"
 author: "Gérald Paméole"
 theme: "carriere"
 image: "/assets/articles/mentorat-professionnel.jpg"

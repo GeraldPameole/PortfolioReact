@@ -1,7 +1,8 @@
 ---
 title: "Progressive Web Apps en 2024 : L'Avenir du Web Mobile"
 description: "Comment les PWA révolutionnent l'expérience utilisateur mobile en combinant le meilleur des applications natives et des sites web modernes."
-publishDate: "2024-03-30"
+publishDate: 2024-03-30
+type: "article"
 author: "Gérald Paméole"
 theme: "developpement-web"
 keywords: "PWA, Progressive Web Apps, service worker, application web, expérience hors ligne, web mobile, manifest.json, installation d'app, web APIs, développement frontend"

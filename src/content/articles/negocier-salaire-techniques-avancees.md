@@ -1,7 +1,8 @@
 ---
 title: "Négocier son Salaire : Techniques Avancées pour les Professionnels"
 description: "Guide complet pour maîtriser l'art de la négociation salariale : préparation, techniques de persuasion, objections courantes et stratégies pour obtenir la meilleure rémunération possible."
-publishDate: "2025-01-15"
+publishDate: 2025-01-15
+type: "article"
 author: "Gérald Paméole"
 theme: "carriere"
 image: "/assets/articles/negociation-salaire.jpg"

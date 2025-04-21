@@ -28,7 +28,8 @@ const themeLabels: Record<string, string> = {
 	"management": "Management & Leadership",
 	"productivite": "Productivité & Organisation", 
 	"marketing": "Marketing Digital",
-	"carriere": "Carrière & Formation"
+	"carriere": "Carrière & Formation",
+  "intelligence-artificielle": "Intelligence Artificielle"
 };
 
 // Pour calculer le temps de lecture approximatif
@@ -39,18 +40,61 @@ function getReadingTime(content: string) {
 	return Math.ceil(numberOfWords / wordsPerMinute);
 }
 
-// Extraire l'estimation du temps de lecture (approximatif)
-const readingTime = 5; // Valeur par défaut en minutes
+// Extraire l'estimation du temps de lecture
+const readingTime = getReadingTime(article.body) || 5; // Calcul réel ou valeur par défaut
+
+// Construire les méta-données structurées pour le SEO
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": article.data.title,
+  "description": article.data.description,
+  "image": article.data.image,
+  "datePublished": article.data.publishDate.toISOString(),
+  "dateModified": article.data.publishDate.toISOString(), // Utiliser publishDate si updatedDate n'existe pas
+  "author": {
+    "@type": "Person",
+    "name": article.data.author || "Gérald Paméole"
+  }
+};
+
+// Générer les mots-clés à partir des tags
+const keywords = [
+  article.data.title,
+  article.data.tags?.join(", ") || "",
+  article.data.theme ? themeLabels[article.data.theme] || article.data.theme : "",
+  "article",
+  "blog"
+].filter(Boolean).join(", ");
+
+// Convertir les URL pour les méta tags
+const currentUrl = Astro.url.toString();
 ---
 
 <BaseLayout 
 	title={article.data.title}
 	description={article.data.description}
+  image={article.data.image}
+  keywords={keywords}
+  type="article"
+  fullWidth={true}
 >
-	<article class="container mx-auto px-4 py-8">
+  <!-- Données structurées pour les moteurs de recherche -->
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  
+	<article class="container mx-auto px-4 py-8 article-content">
 		<header class="mb-8">
+			<div class="text-sm text-secondary-warm mb-2">
+        {article.data.theme && (
+          <a href={`/themes/${article.data.theme}`} class="font-semibold hover:underline">
+            {themeLabels[article.data.theme] || article.data.theme}
+          </a>
+        )}
+      </div>
+      
 			<h1 class="text-4xl font-bold mb-4">{article.data.title}</h1>
-			<div class="flex items-center text-sm text-gray-500 dark:text-gray-400">
+			
+      <div class="flex flex-wrap items-center text-sm text-gray-500 dark:text-gray-400 mb-4">
 				<time datetime={article.data.publishDate.toISOString()}>
 					{formatDate(article.data.publishDate)}
 				</time>
@@ -60,18 +104,59 @@ const readingTime = 5; // Valeur par défaut en minutes
 						<span>{article.data.author}</span>
 					</>
 				)}
+        <span class="mx-2">•</span>
+        <span>{readingTime} min de lecture</span>
 			</div>
+      
+      {article.data.tags && article.data.tags.length > 0 && (
+        <div class="flex flex-wrap gap-2 mb-6">
+          {article.data.tags.map((tag: string) => (
+            <a 
+              href={`/tags/${tag}`} 
+              class="text-xs px-3 py-1 rounded-full bg-tertiary-light text-primary-dark hover:bg-secondary-warm"
+            >
+              #{tag}
+            </a>
+          ))}
+        </div>
+      )}
+      
 			{article.data.image && (
 				<img
 					src={article.data.image}
 					alt={article.data.title}
-					class="w-full h-64 object-cover rounded-lg mb-8"
+					class="w-full h-auto max-h-[400px] object-cover rounded-lg mb-8 shadow-md"
+          loading="eager"
+          width="800"
+          height="400"
 				/>
 			)}
 		</header>
+    
 		<div class="prose dark:prose-invert max-w-none">
 			<Content />
 		</div>
+    
+    <footer class="mt-12 pt-8 border-t border-gray-200 dark:border-gray-800">
+      <div class="flex flex-col md:flex-row justify-between items-start md:items-center">
+        <div class="mb-4 md:mb-0">
+          <h4 class="text-xl font-semibold mb-2">À propos de l'auteur</h4>
+          <p class="text-gray-600 dark:text-gray-300">
+            {article.data.author || "Gérald Paméole"} - Développeur Full Stack et Expert en IA
+          </p>
+        </div>
+        
+        <div class="flex items-center space-x-4">
+          <span class="text-sm">Partager :</span>
+          <a href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(article.data.title)}&url=${encodeURIComponent(currentUrl)}`} target="_blank" rel="noopener noreferrer" class="text-secondary-warm hover:text-secondary-cool" aria-label="Partager sur Twitter">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path></svg>
+          </a>
+          <a href={`https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(currentUrl)}&title=${encodeURIComponent(article.data.title)}`} target="_blank" rel="noopener noreferrer" class="text-secondary-warm hover:text-secondary-cool" aria-label="Partager sur LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z"></path></svg>
+          </a>
+        </div>
+      </div>
+    </footer>
 	</article>
 </BaseLayout>
 
@@ -81,24 +166,32 @@ const readingTime = 5; // Valeur par défaut en minutes
 	}
 
 	.prose {
-		font-size: 1.125rem;
-		line-height: 1.75;
+		/* Utilisons nos variables de typographie */
+		font-size: var(--text-base);
+		line-height: var(--leading-relaxed);
 	}
 
 	.prose h2 {
-		font-size: 1.875rem;
+		font-size: var(--text-2xl);
+		font-weight: var(--font-semibold);
+		line-height: var(--leading-tight);
 		margin-top: 2.5rem;
 		margin-bottom: 1.25rem;
+		color: var(--color-primary-dark);
 	}
 
 	.prose h3 {
-		font-size: 1.5rem;
+		font-size: var(--text-xl);
+		font-weight: var(--font-medium);
+		line-height: var(--leading-snug);
 		margin-top: 2rem;
 		margin-bottom: 1rem;
+		color: var(--color-primary-dark);
 	}
 
 	.prose p {
 		margin-bottom: 1.5rem;
+		max-width: 70ch;
 	}
 
 	.prose ul,
@@ -114,24 +207,29 @@ const readingTime = 5; // Valeur par défaut en minutes
 	.prose img {
 		border-radius: 0.5rem;
 		margin: 2rem 0;
+		max-width: 100%;
+		height: auto;
 	}
 
 	.prose blockquote {
-		border-left: 4px solid var(--accent-regular);
+		border-left: 4px solid var(--color-secondary-warm);
 		padding-left: 1rem;
 		margin: 1.5rem 0;
 		font-style: italic;
+		color: var(--color-primary-dark);
 	}
 
 	.prose code {
-		background-color: var(--gray-999);
+		background-color: rgba(0, 0, 0, 0.05);
 		padding: 0.2rem 0.4rem;
 		border-radius: 0.25rem;
 		font-size: 0.875em;
+		font-family: var(--font-mono);
 	}
 
 	.prose pre {
-		background-color: var(--gray-999);
+		background-color: var(--color-primary-blue);
+		color: white;
 		padding: 1rem;
 		border-radius: 0.5rem;
 		overflow-x: auto;
@@ -142,5 +240,17 @@ const readingTime = 5; // Valeur par défaut en minutes
 		background-color: transparent;
 		padding: 0;
 		border-radius: 0;
+		color: inherit;
+	}
+	
+	/* Mode sombre */
+	@media (prefers-color-scheme: dark) {
+		.prose h2, .prose h3, .prose blockquote {
+			color: var(--text-light);
+		}
+		
+		.prose code {
+			background-color: rgba(255, 255, 255, 0.1);
+		}
 	}
 </style> 

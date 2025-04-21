@@ -1,5 +1,6 @@
 ---
 title: "The Lean Startup"
+type: "book"
 author: "Eric Ries"
 description: "Comment les entrepreneurs d'aujourd'hui utilisent l'innovation continue pour créer des entreprises à succès"
 profession: "entreprise-management"

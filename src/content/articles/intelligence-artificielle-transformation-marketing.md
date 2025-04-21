@@ -1,6 +1,7 @@
 ---
 title: "Intelligence Artificielle et Transformation du Marketing"
-publishDate: "2024-05-15"
+publishDate: 2024-05-15
+type: "article"
 author: "Gérald Paméole"
 description: "Découvrez comment l'IA révolutionne les stratégies marketing et offre de nouvelles opportunités pour les entreprises en 2024."
 theme: "marketing"

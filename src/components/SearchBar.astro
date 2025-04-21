@@ -1,0 +1,156 @@
+---
+interface Props {
+  placeholder?: string;
+  targetId?: string;
+  customClass?: string;
+}
+
+const {
+  placeholder = "Rechercher des articles...",
+  targetId = "articlesContainer", 
+  customClass = ""
+} = Astro.props;
+---
+
+<div class={`search-container mb-8 ${customClass}`}>
+  <div class="relative">
+    <input
+      type="text"
+      id="searchInput"
+      class="w-full px-4 py-3 pl-12 rounded-lg bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 shadow-sm focus:outline-none focus:ring-2 focus:ring-secondary-cool text-gray-800 dark:text-white"
+      placeholder={placeholder}
+      aria-label="Rechercher"
+    />
+    <div class="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+      </svg>
+    </div>
+    <button
+      id="clearSearch"
+      class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 hidden"
+      aria-label="Effacer la recherche"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+  </div>
+  <div class="flex flex-wrap gap-2 mt-2" id="activeFilters"></div>
+</div>
+
+<script define:vars={{ targetId }}>
+  document.addEventListener('DOMContentLoaded', () => {
+    const searchInput = document.getElementById('searchInput');
+    const clearButton = document.getElementById('clearSearch');
+    const activeFilters = document.getElementById('activeFilters');
+    const contentContainer = document.getElementById(targetId);
+    
+    if (!searchInput || !clearButton || !contentContainer) return;
+    
+    const contentItems = contentContainer.querySelectorAll('article');
+    const noResultsEl = document.createElement('div');
+    noResultsEl.className = 'w-full text-center py-8 text-gray-500 dark:text-gray-400';
+    noResultsEl.innerHTML = '<p>Aucun résultat trouvé. Essayez une autre recherche.</p>';
+    noResultsEl.style.display = 'none';
+    contentContainer.appendChild(noResultsEl);
+    
+    // Fonction pour effectuer la recherche
+    function performSearch() {
+      const query = searchInput.value.toLowerCase().trim();
+      let hasResults = false;
+      
+      // Gérer l'affichage du bouton d'effacement
+      clearButton.style.display = query ? 'block' : 'none';
+      
+      // Filtrer les éléments
+      contentItems.forEach(item => {
+        const title = item.querySelector('h3')?.textContent?.toLowerCase() || '';
+        const description = item.querySelector('p')?.textContent?.toLowerCase() || '';
+        const theme = item.querySelector('.absolute.top-0 span')?.textContent?.toLowerCase() || '';
+        const tags = Array.from(item.querySelectorAll('.flex.flex-wrap.gap-2 span'))
+          .map(tag => tag.textContent?.toLowerCase() || '');
+        
+        // Vérifier si le texte de recherche correspond
+        const matches = 
+          title.includes(query) || 
+          description.includes(query) || 
+          theme.includes(query) ||
+          tags.some(tag => tag.includes(query));
+        
+        // Afficher ou masquer l'élément
+        if (matches || !query) {
+          item.style.display = '';
+          hasResults = true;
+        } else {
+          item.style.display = 'none';
+        }
+      });
+      
+      // Afficher ou masquer le message "Aucun résultat"
+      noResultsEl.style.display = !hasResults && query ? 'block' : 'none';
+      
+      // Mise à jour des filtres actifs
+      updateActiveFilters(query);
+    }
+    
+    // Mettre à jour les filtres actifs
+    function updateActiveFilters(query) {
+      activeFilters.innerHTML = '';
+      
+      if (query) {
+        const filterTag = document.createElement('span');
+        filterTag.className = 'inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-secondary-warm text-white';
+        filterTag.innerHTML = `
+          ${query}
+          <button class="ml-1 focus:outline-none" aria-label="Supprimer ce filtre">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        `;
+        
+        filterTag.querySelector('button').addEventListener('click', () => {
+          searchInput.value = '';
+          performSearch();
+        });
+        
+        activeFilters.appendChild(filterTag);
+      }
+    }
+    
+    // Gestionnaires d'événements
+    searchInput.addEventListener('input', performSearch);
+    
+    clearButton.addEventListener('click', () => {
+      searchInput.value = '';
+      performSearch();
+      searchInput.focus();
+    });
+    
+    // Initialiser
+    performSearch();
+  });
+</script>
+
+<style>
+  .search-container {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  #searchInput {
+    transition: all 0.3s ease;
+  }
+  
+  #searchInput:focus {
+    box-shadow: 0 0 0 3px rgba(var(--color-secondary-cool), 0.2);
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    #searchInput:focus {
+      border-color: var(--color-secondary-cool);
+    }
+  }
+</style> 

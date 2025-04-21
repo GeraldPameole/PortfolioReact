@@ -1,6 +1,7 @@
 ---
 title: "Email Marketing : Stratégies de Personnalisation pour Maximiser l'Engagement"
-publishDate: "2024-04-15"
+publishDate: 2024-04-15
+type: "article"
 author: "Gérald Paméole"
 description: "Découvrez comment implémenter une personnalisation hyper-ciblée dans vos campagnes d'email marketing pour augmenter significativement vos taux d'ouverture et de conversion."
 theme: "marketing"

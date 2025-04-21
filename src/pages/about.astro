@@ -1,128 +1,345 @@
 ---
 import { getCollection } from 'astro:content';
-import { ViewTransitions } from 'astro:transitions';
+import BackToTop from '../components/BackToTop.astro';
+import CallToAction from '../components/CallToAction.astro';
+import PageBanner from '../components/PageBanner.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 
-// Récupérer les articles et les livres
+// Récupération et tri des articles
 const articles = await getCollection('articles');
-const books = await getCollection('books');
-
-// Trier les articles par date de publication
 const sortedArticles = articles.sort((a, b) => 
-	new Date(b.data.publishDate).getTime() - new Date(a.data.publishDate).getTime()
+	b.data.publishDate.getTime() - a.data.publishDate.getTime()
 );
 
-// Trier les livres par date de publication
+// Récupération et tri des ouvrages
+const books = await getCollection('books');
 const sortedBooks = books.sort((a, b) => 
-	new Date(b.data.publishDate).getTime() - new Date(a.data.publishDate).getTime()
+	(b.data.publishYear || 0) - (a.data.publishYear || 0)
 );
 
-// Compter le nombre total d'articles et de livres
+// Calculer le nombre total d'articles et de livres
 const totalArticles = articles.length;
 const totalBooks = books.length;
+
+// Formater la date
+function formatDate(date: Date): string {
+  return new Date(date).toLocaleDateString('fr-FR', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
+  });
+}
+
+// Valeurs professionnelles
+const values = [
+  {
+    title: "Excellence Opérationnelle",
+    icon: "award",
+    color: "text-blue-600",
+    bgColor: "bg-blue-100 dark:bg-blue-900/30",
+    description: "Je m'engage à transformer la complexité en performance mesurable. J'optimise les processus tout en maximisant les résultats en utilisant une approche méthodique et data-driven."
+  },
+  {
+    title: "Innovation Durable",
+    icon: "lightbulb",
+    color: "text-green-600",
+    bgColor: "bg-green-100 dark:bg-green-900/30",
+    description: "Je crois en la création de solutions innovantes qui répondent aux besoins actuels tout en anticipant les évolutions futures. L'innovation n'a de sens que si elle apporte une valeur durable."
+  },
+  {
+    title: "Développement des Talents",
+    icon: "users",
+    color: "text-purple-600",
+    bgColor: "bg-purple-100 dark:bg-purple-900/30",
+    description: "Je valorise la transmission des compétences et l'optimisation des performances. Je m'investis dans la création de programmes de formation personnalisés qui stimulent la montée en compétences."
+  }
+];
+
+// Expériences professionnelles
+const experiences = [
+  {
+    title: "KEOS TELECOM",
+    position: "Chef de projet",
+    period: "Depuis 2021",
+    description: "Coordination d'équipes multidisciplinaires, performance et évolutivité, optimisation des opérations."
+  },
+  {
+    title: "ACTIV PARTNERS",
+    position: "Développeur web front-end",
+    period: "2019-2021",
+    description: "Gestion de projets web, développement front-end, optimisation de la sécurité des sites web."
+  },
+  {
+    title: "SFR",
+    position: "Chargé de formation & développement",
+    period: "2018-2019",
+    description: "Formation continue, accompagnement stratégique des équipes commerciales, optimisation des performances."
+  },
+  {
+    title: "SFR",
+    position: "Chargé de formation",
+    period: "2016-2018",
+    description: "Développement des compétences, création et analyse d'indicateurs, animation d'ateliers."
+  }
+];
+
+// Domaines d'expertise
+const expertiseDomains = [
+  "Gestion de Projet", "Leadership", "Développement Web", "Optimisation Processus", 
+  "Formation", "Sécurité Web", "Audit Qualité", "Gestion d'Équipe"
+];
 ---
 
-<BaseLayout 
-	title="À propos" 
-	description="Découvrez mon parcours professionnel, mes compétences et ma passion pour le développement web et l'intelligence artificielle."
-	customClass="bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-gray-800"
+<BaseLayout
+  title="À Propos de Moi"
+  description="Découvrez mon parcours, mes compétences et ma vision en tant que chef de projet télécom et développeur web"
+  customClass="bg-gradient-to-br from-gray-50 to-white dark:from-gray-900 dark:to-gray-800"
+  fullWidth={true}
 >
-	<ViewTransitions />
-
-	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-		<div class="text-center mb-16">
-			<h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">
-				À propos de moi
-			</h1>
-			<p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-				Développeur Full Stack passionné par l'innovation technologique et l'intelligence artificielle
-			</p>
-		</div>
-
-		<div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
-			<div class="space-y-8">
-				<div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8">
-					<h2 class="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
-						Mon parcours
-					</h2>
-					<p class="text-gray-600 dark:text-gray-300 mb-4">
-						Avec plus de 10 ans d'expérience dans le développement web, j'ai eu l'opportunité de travailler sur des projets variés, allant des applications web aux solutions d'intelligence artificielle.
-					</p>
-					<p class="text-gray-600 dark:text-gray-300">
-						Mon expertise couvre l'ensemble du cycle de développement, de la conception à la mise en production, en passant par l'optimisation des performances et la sécurité.
-					</p>
-				</div>
-
-				<div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8">
-					<h2 class="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
-						Mes valeurs
-					</h2>
-					<ul class="space-y-4">
-						<li class="flex items-start">
-							<svg class="h-6 w-6 text-indigo-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-							</svg>
-							<span class="text-gray-600 dark:text-gray-300">Qualité et excellence dans le code</span>
-						</li>
-						<li class="flex items-start">
-							<svg class="h-6 w-6 text-indigo-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-							</svg>
-							<span class="text-gray-600 dark:text-gray-300">Innovation et veille technologique</span>
-						</li>
-						<li class="flex items-start">
-							<svg class="h-6 w-6 text-indigo-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-							</svg>
-							<span class="text-gray-600 dark:text-gray-300">Partage des connaissances</span>
-						</li>
-					</ul>
-				</div>
-			</div>
-
-			<div class="space-y-8">
-				<div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8">
-					<h2 class="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
-						Mes contributions
-					</h2>
-					<div class="grid grid-cols-2 gap-4">
-						<div class="text-center p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
-							<div class="text-3xl font-bold text-indigo-600 dark:text-indigo-400">{totalArticles}</div>
-							<div class="text-gray-600 dark:text-gray-300">Articles publiés</div>
-						</div>
-						<div class="text-center p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
-							<div class="text-3xl font-bold text-indigo-600 dark:text-indigo-400">{totalBooks}</div>
-							<div class="text-gray-600 dark:text-gray-300">Livres recommandés</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8">
-					<h2 class="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
-						Mes compétences
-					</h2>
-					<div class="flex flex-wrap gap-2">
-						<span class="px-3 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-800 dark:text-indigo-200 rounded-full text-sm">React</span>
-						<span class="px-3 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-800 dark:text-indigo-200 rounded-full text-sm">Node.js</span>
-						<span class="px-3 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-800 dark:text-indigo-200 rounded-full text-sm">TypeScript</span>
-						<span class="px-3 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-800 dark:text-indigo-200 rounded-full text-sm">Python</span>
-						<span class="px-3 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-800 dark:text-indigo-200 rounded-full text-sm">Machine Learning</span>
-						<span class="px-3 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-800 dark:text-indigo-200 rounded-full text-sm">AWS</span>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<div class="text-center">
-			<a 
-				href="/contact" 
-				class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-			>
-				Me contacter
-				<svg class="ml-2 -mr-1 h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-				</svg>
-			</a>
-		</div>
-	</div>
+  <main class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
+    <!-- En-tête de page -->
+    <section class="py-16 md:py-24 bg-gradient-to-r from-indigo-600/5 to-violet-600/5">
+      <div class="max-w-3xl mx-auto text-center">
+        <h1 class="text-4xl md:text-5xl font-bold mb-6 text-gray-800 dark:text-white">
+          À Propos de Moi
+        </h1>
+        <p class="text-xl text-gray-600 dark:text-gray-300 mb-8">
+          Chef de projet télécom et développeur web avec plus de 15 ans d'expérience dans l'optimisation des processus et la formation d'équipes
+        </p>
+        <div class="flex flex-wrap justify-center gap-3">
+          <span class="px-4 py-2 rounded-full bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-300">
+            Gestion de Projet
+          </span>
+          <span class="px-4 py-2 rounded-full bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-300">
+            Développement Web
+          </span>
+          <span class="px-4 py-2 rounded-full bg-purple-100 text-purple-800 dark:bg-purple-900/30 dark:text-purple-300">
+            Qualité & Process
+          </span>
+          <span class="px-4 py-2 rounded-full bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-300">
+            Formation
+          </span>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Section Profil -->
+    <section class="mb-16">
+      <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8">
+        <div class="flex flex-col md:flex-row gap-12 items-center">
+          <!-- Photo de profil avec effet visuel -->
+          <div class="w-full md:w-2/5 mb-8 md:mb-0">
+            <div class="relative">
+              <!-- Image principale -->
+              <div class="relative z-10 rounded-lg overflow-hidden shadow-xl transform transition-transform duration-500 hover:scale-[1.02]">
+                <img
+                  src="/assets/profile.jpg"
+                  alt="Gérald Paméole - Chef de projet télécom & Développeur Web"
+                  class="w-full h-auto"
+                />
+              </div>
+              
+              <!-- Éléments décoratifs -->
+              <div class="absolute -bottom-5 -right-5 w-full h-full bg-gradient-to-br from-indigo-500 to-purple-600 rounded-lg -z-10"></div>
+              <div class="absolute -top-5 -left-5 w-24 h-24 bg-yellow-400 rounded-full opacity-30 -z-10 animate-pulse"></div>
+            </div>
+            
+            <!-- Statistiques -->
+            <div class="grid grid-cols-3 gap-4 mt-8">
+              <div class="bg-white dark:bg-gray-700 p-4 rounded-lg shadow-md text-center transform transition hover:scale-105">
+                <span class="block text-3xl font-bold text-indigo-600 dark:text-indigo-400">{totalArticles}</span>
+                <span class="text-gray-500 dark:text-gray-400 text-sm">Articles</span>
+              </div>
+              <div class="bg-white dark:bg-gray-700 p-4 rounded-lg shadow-md text-center transform transition hover:scale-105">
+                <span class="block text-3xl font-bold text-indigo-600 dark:text-indigo-400">{totalBooks}</span>
+                <span class="text-gray-500 dark:text-gray-400 text-sm">Livres</span>
+              </div>
+              <div class="bg-white dark:bg-gray-700 p-4 rounded-lg shadow-md text-center transform transition hover:scale-105">
+                <span class="block text-3xl font-bold text-indigo-600 dark:text-indigo-400">15+</span>
+                <span class="text-gray-500 dark:text-gray-400 text-sm">Années d'exp.</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Biographie -->
+          <div class="w-full md:w-3/5">
+            <h2 class="text-3xl font-bold mb-6 text-gray-800 dark:text-white bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
+              Mon Parcours
+            </h2>
+            
+            <div class="prose prose-lg max-w-none dark:prose-invert">
+              <p class="mb-4">
+                Chef de projet télécom et développeur web, je combine une solide expérience en gestion d'équipes multidisciplinaires et en développement d'applications techniques. Mon parcours m'a permis d'acquérir une expertise unique à l'intersection de la gestion de projet et du développement web.
+              </p>
+              
+              <p class="mb-4">
+                Actuellement chez KEOS TELECOM, je pilote des projets complexes d'optimisation d'infrastructures réseau et coordonne des équipes techniques pour garantir une performance optimale des services télécoms. 
+              </p>
+              
+              <p class="mb-4">
+                Mon expérience préalable chez ACTIV PARTNERS en tant que développeur web front-end m'a permis de maîtriser la création d'interfaces utilisateur et la sécurisation d'applications web, tandis que mes années chez SFR ont renforcé mes compétences en formation et développement stratégique.
+              </p>
+              
+              <p>
+                Diplômé d'un titre RNCP niveau 6 et formé en gestion de projet et développement web, je m'investis continuellement dans l'apprentissage de nouvelles compétences pour rester à la pointe de mon domaine.
+              </p>
+            </div>
+            
+            <!-- Badges expertise -->
+            <div class="mt-8">
+              <h3 class="text-xl font-semibold mb-4 text-gray-700 dark:text-gray-300">Domaines d'expertise</h3>
+              <div class="flex flex-wrap gap-2">
+                {expertiseDomains.map(skill => (
+                  <span class="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-full text-sm font-medium">
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Section Parcours Professionnel -->
+    <section class="mb-16">
+      <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8">
+        <h2 class="text-3xl font-bold mb-8 text-center text-gray-800 dark:text-white">
+          Parcours Professionnel
+        </h2>
+        
+        <div class="relative border-l-2 border-indigo-500 dark:border-indigo-400 ml-3 md:ml-6 pl-8 py-4">
+          {experiences.map((exp, index) => (
+            <div class={index !== experiences.length - 1 ? "mb-12" : ""}>
+              <div class="absolute w-4 h-4 bg-indigo-600 rounded-full -left-2 mt-2"></div>
+              <div class="bg-white dark:bg-gray-700 rounded-lg shadow-md p-6 transform transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-4">
+                  <h3 class="text-xl font-bold text-gray-800 dark:text-white">{exp.title}</h3>
+                  <span class="text-indigo-600 dark:text-indigo-400 font-medium">{exp.period}</span>
+                </div>
+                <p class="text-lg font-semibold text-gray-700 dark:text-gray-300 mb-3">{exp.position}</p>
+                <p class="text-gray-600 dark:text-gray-300">{exp.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+    
+    <!-- Section Valeurs -->
+    <section class="mb-16">
+      <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8">
+        <h2 class="text-3xl font-bold mb-8 text-center text-gray-800 dark:text-white">
+          Mes Valeurs Professionnelles
+        </h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {values.map(value => (
+            <div class="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-md transform transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+              <div class="flex items-center gap-3 mb-4">
+                <div class={`p-3 rounded-lg ${value.color} ${value.bgColor}`}>
+                  <span class="text-xl">
+                    <i class={`fas fa-${value.icon}`}></i>
+                  </span>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 dark:text-white">{value.title}</h3>
+              </div>
+              <p class="text-gray-600 dark:text-gray-300">
+                {value.description}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+    
+    <!-- Section Publications Récentes -->
+    <section class="mb-16">
+      <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8">
+        <h2 class="text-3xl font-bold mb-8 text-center text-gray-800 dark:text-white">
+          Publications Récentes
+        </h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {sortedArticles.slice(0, 3).map(article => (
+            <a href={`/blog/${article.slug}`} class="group">
+              <article class="h-full bg-white dark:bg-gray-700 rounded-lg shadow-md overflow-hidden transform transition-all duration-300 group-hover:shadow-lg group-hover:-translate-y-1">
+                {article.data.image && (
+                  <div class="relative h-40 overflow-hidden">
+                    <img 
+                      src={article.data.image} 
+                      alt={article.data.title} 
+                      class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-60"></div>
+                  </div>
+                )}
+                <div class="p-5">
+                  <h3 class="text-lg font-bold mb-2 text-gray-800 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
+                    {article.data.title}
+                  </h3>
+                  <p class="text-gray-500 dark:text-gray-400 text-sm mb-4">
+                    Publié le {formatDate(article.data.publishDate)}
+                  </p>
+                  <p class="text-gray-600 dark:text-gray-300 text-sm line-clamp-3">
+                    {article.data.description}
+                  </p>
+                </div>
+              </article>
+            </a>
+          ))}
+        </div>
+        
+        <div class="text-center mt-8">
+          <a href="/blog" class="inline-block bg-indigo-600 text-white px-6 py-3 rounded-md font-semibold shadow-md hover:bg-indigo-500 transition-colors duration-300">
+            Voir tous les articles
+          </a>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Call to Action -->
+    <section class="mb-16">
+      <div class="bg-gradient-to-r from-indigo-600 to-blue-500 rounded-xl text-white shadow-lg p-8 text-center">
+        <h2 class="text-3xl font-bold text-white mb-4">
+          Intéressé par une collaboration ?
+        </h2>
+        <p class="text-lg text-indigo-100 max-w-3xl mx-auto mb-8">
+          Que vous ayez un projet télécom, web ou besoin d'accompagnement pour vos équipes, n'hésitez pas à me contacter pour discuter de votre projet.
+        </p>
+        <a href="/contact" class="inline-block bg-white text-indigo-600 px-6 py-3 rounded-md font-semibold shadow-md hover:bg-indigo-50 transition-colors duration-300">
+          Me contacter
+        </a>
+      </div>
+    </section>
+  </main>
+  
+  <BackToTop />
 </BaseLayout>
+
+<script defer is:inline>
+  // Ajout de Font Awesome
+  if (!document.querySelector('#font-awesome')) {
+    const link = document.createElement('link');
+    link.id = 'font-awesome';
+    link.rel = 'stylesheet';
+    link.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css';
+    document.head.appendChild(link);
+  }
+  
+  // Animation pour les éléments au scroll
+  document.addEventListener('DOMContentLoaded', () => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-fade-in');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    
+    document.querySelectorAll('section').forEach(section => {
+      observer.observe(section);
+    });
+  });
+</script>

@@ -1,7 +1,8 @@
 ---
 title: "Web Accessibilité : Guide Pratique pour un Web Inclusif"
 description: "Comment concevoir et développer des sites web véritablement accessibles : WCAG 2.2, techniques d'implémentation, tests d'accessibilité et impact sur l'expérience utilisateur et le SEO."
-publishDate: "2024-03-31"
+publishDate: 2024-03-31
+type: "article"
 author: "Gérald Paméole"
 theme: "developpement-web"
 keywords: "accessibilité web, WCAG 2.2, ARIA, développement accessible, UX inclusive, tests d'accessibilité, HTML sémantique, SEO, conformité légale"

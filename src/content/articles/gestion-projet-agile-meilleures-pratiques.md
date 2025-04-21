@@ -1,7 +1,8 @@
 ---
 title: "Gestion de Projet Agile : Meilleures Pratiques et Pièges à Éviter"
 description: "Au-delà des certifications : un guide pragmatique des pratiques agiles qui fonctionnent réellement, basé sur des retours d'expérience de projets de diverses envergures."
-publishDate: "2024-04-02"
+publishDate: 2024-04-02
+type: "article"
 author: Gérald Paméole
 theme: "productivite"
 ---

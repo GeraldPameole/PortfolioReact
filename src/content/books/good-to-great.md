@@ -1,22 +1,23 @@
 ---
 title: "Good to Great"
+type: "book"
 author: "Jim Collins"
-description: "Les principes fondamentaux qui distinguent les entreprises d'exception"
-profession: "entreprise-management"
+description: "Pourquoi certaines entreprises réussissent à passer de bonnes à excellentes, et comment appliquer ces principes à votre organisation"
+profession: "management"
 publishYear: 2001
 coverImage: "/assets/books/good-to-great.jpg"
 amazonLink: "https://www.amazon.fr/Good-Great-Some-Companies-Others/dp/0066620996/"
-keywords: "management, leadership, excellence organisationnelle, performance d'entreprise, culture d'entreprise, stratégie, transformation, succès durable"
-note: 4.8
+keywords: "management, leadership, excellence organisationnelle, performance durable, culture d'entreprise, stratégie d'entreprise, changement organisationnel, succès commercial"
+note: 4.7
 relatedContent:
-  - title: "Importance du Leadership"
+  - title: "L'Importance du Leadership Authentique dans les Organisations Modernes"
     url: "/articles/importance-leadership"
     type: "article"
-  - title: "Gestion Projet Agile Meilleures Pratiques"
-    url: "/articles/gestion-projet-agile-meilleures-pratiques"
+  - title: "Management hybride : Défis et opportunités pour les leaders"
+    url: "/articles/management-hybride-defis-opportunites"
     type: "article"
-  - title: "The Lean Startup"
-    url: "/books/lean-startup"
+  - title: "Zero to One"
+    url: "/books/zero-to-one"
     type: "book"
 ---
 

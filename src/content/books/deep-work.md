@@ -1,18 +1,19 @@
 ---
 title: "Deep Work"
+type: "book"
 author: "Cal Newport"
-description: "Règles pour la concentration dans un monde dispersé"
-profession: "developpement-personnel"
+description: "Règles pour réussir dans un monde distrait et connecté"
+profession: "productivite"
 publishYear: 2016
 coverImage: "/assets/books/deep-work.jpg"
-amazonLink: "https://www.amazon.fr/Deep-work-retrouver-concentration-distrait/dp/2212675212/"
-keywords: "productivité, concentration, distraction numérique, travail intellectuel, attention, performance cognitive, habitudes de travail, économie d'attention"
+amazonLink: "https://www.amazon.fr/Deep-Work-Focused-Success-Distracted/dp/1455586692"
+keywords: "productivité, concentration, travail profond, distraction, focus, attention, performance cognitive, épanouissement professionnel"
 note: 4.8
 relatedContent:
-  - title: "L'Apprentissage Continu: Stratégie Clé pour l'Évolution Professionnelle"
-    url: "/articles/apprentissage-continu-developpement-competences"
+  - title: "Gestion du Temps: Guide Pratique pour les Professionnels Occupés"
+    url: "/articles/gestion-temps-professionnels"
     type: "article"
-  - title: "Methode GTD Expliquée"
+  - title: "La Méthode GTD Expliquée: Organisation et Productivité"
     url: "/articles/methode-gtd-expliquee"
     type: "article"
   - title: "Atomic Habits"
@@ -37,8 +38,8 @@ Ce livre est essentiel pour quiconque cherche à accomplir un travail intellectu
 
 Si vous avez apprécié "Deep Work", ces ressources pourraient vous intéresser :
 
-- [L'Apprentissage Continu: Stratégie Clé pour l'Évolution Professionnelle](/articles/apprentissage-continu-developpement-competences) - Pour approfondir les méthodes d'acquisition de compétences de façon intensive
-- [La Méthode GTD Expliquée](/articles/methode-gtd-expliquee) - Une approche complémentaire à Deep Work pour organiser efficacement son travail
+- [Gestion du Temps: Guide Pratique pour les Professionnels Occupés](/articles/gestion-temps-professionnels) - Pour approfondir les méthodes de gestion du temps
+- [La Méthode GTD Expliquée: Organisation et Productivité](/articles/methode-gtd-expliquee) - Une approche complémentaire à Deep Work pour organiser efficacement son travail
 - [Atomic Habits](/books/atomic-habits) - Comment construire des habitudes durables, y compris celles de concentration profonde
 
 **Note des lecteurs : 4.8/5** - Un livre qui transforme durablement la façon de travailler de ses lecteurs

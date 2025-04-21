@@ -7,7 +7,8 @@
     "start": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "validate:content": "node scripts/validate-frontmatter.cjs"
   },
   "dependencies": {
     "@astrojs/check": "^0.2.1",
@@ -22,6 +23,7 @@
     "@types/react": "^18.2.0",
     "@types/react-dom": "^18.2.0",
     "astro": "^3.6.5",
+    "astro-icon": "^1.1.5",
     "bcrypt": "^5.1.1",
     "express": "^4.21.2",
     "express-session": "^1.18.1",
@@ -30,12 +32,16 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.54.2",
+    "react-icons": "^5.5.0",
     "tailwindcss": "^3.4.17",
     "typescript": "^5.2.2"
   },
   "devDependencies": {
     "@tailwindcss/aspect-ratio": "^0.4.2",
     "@tailwindcss/forms": "^0.5.10",
-    "@tailwindcss/typography": "^0.5.16"
+    "@tailwindcss/typography": "^0.5.16",
+    "glob": "^10.3.10",
+    "gray-matter": "^4.0.3",
+    "husky": "^8.0.0"
   }
 }

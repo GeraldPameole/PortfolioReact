@@ -185,6 +185,195 @@ declare module 'astro:content' {
 
 	type ContentEntryMap = {
 		"articles": {
+"apprentissage-continu-developpement-competences.md": {
+	id: "apprentissage-continu-developpement-competences.md";
+  slug: "apprentissage-continu-developpement-competences";
+  body: string;
+  collection: "articles";
+  data: InferEntrySchema<"articles">
+} & { render(): Render[".md"] };
+"comment-planifier-mon-travail.md": {
+	id: "comment-planifier-mon-travail.md";
+  slug: "comment-planifier-mon-travail";
+  body: string;
+  collection: "articles";
+  data: InferEntrySchema<"articles">
+} & { render(): Render[".md"] };
+"email-marketing-personnalisation.md": {
+	id: "email-marketing-personnalisation.md";
+  slug: "email-marketing-personnalisation";
+  body: string;
+  collection: "articles";
+  data: InferEntrySchema<"articles">
+} & { render(): Render[".md"] };
+"frameworks-javascript-analyse-2024.md": {
+	id: "frameworks-javascript-analyse-2024.md";
+  slug: "frameworks-javascript-analyse-2024";
+  body: string;
+  collection: "articles";
+  data: InferEntrySchema<"articles">
+} & { render(): Render[".md"] };
+"frameworks-javascript-comparaison-2024.md": {
+	id: "frameworks-javascript-comparaison-2024.md";
+  slug: "frameworks-javascript-comparaison-2024";
+  body: string;
+  collection: "articles";
+  data: InferEntrySchema<"articles">
+} & { render(): Render[".md"] };
+"gestion-conflits-equipe.md": {
+	id: "gestion-conflits-equipe.md";
+  slug: "gestion-conflits-equipe";
+  body: string;
+  collection: "articles";
+  data: InferEntrySchema<"articles">
+} & { render(): Render[".md"] };
+"gestion-projet-agile-meilleures-pratiques.md": {
+	id: "gestion-projet-agile-meilleures-pratiques.md";
+  slug: "gestion-projet-agile-meilleures-pratiques";
+  body: string;
+  collection: "articles";
+  data: InferEntrySchema<"articles">
+} & { render(): Render[".md"] };
+"gestion-temps-professionnels.md": {
+	id: "gestion-temps-professionnels.md";
+  slug: "gestion-temps-professionnels";
+  body: string;
+  collection: "articles";
+  data: InferEntrySchema<"articles">
+} & { render(): Render[".md"] };
+"ia-transformation-societe-2024-analyse.md": {
+	id: "ia-transformation-societe-2024-analyse.md";
+  slug: "ia-transformation-societe-2024-analyse";
+  body: string;
+  collection: "articles";
+  data: InferEntrySchema<"articles">
+} & { render(): Render[".md"] };
+"ia-transformation-societe-2024.md": {
+	id: "ia-transformation-societe-2024.md";
+  slug: "ia-transformation-societe-2024";
+  body: string;
+  collection: "articles";
+  data: InferEntrySchema<"articles">
+} & { render(): Render[".md"] };
+"impact-formation-continue-carriere.md": {
+	id: "impact-formation-continue-carriere.md";
+  slug: "impact-formation-continue-carriere";
+  body: string;
+  collection: "articles";
+  data: InferEntrySchema<"articles">
+} & { render(): Render[".md"] };
+"importance-leadership.md": {
+	id: "importance-leadership.md";
+  slug: "importance-leadership";
+  body: string;
+  collection: "articles";
+  data: InferEntrySchema<"articles">
+} & { render(): Render[".md"] };
+"intelligence-artificielle-transformation-marketing.md": {
+	id: "intelligence-artificielle-transformation-marketing.md";
+  slug: "intelligence-artificielle-transformation-marketing";
+  body: string;
+  collection: "articles";
+  data: InferEntrySchema<"articles">
+} & { render(): Render[".md"] };
+"management-diversite-inclusion.md": {
+	id: "management-diversite-inclusion.md";
+  slug: "management-diversite-inclusion";
+  body: string;
+  collection: "articles";
+  data: InferEntrySchema<"articles">
+} & { render(): Render[".md"] };
+"management-hybride-defis-opportunites.md": {
+	id: "management-hybride-defis-opportunites.md";
+  slug: "management-hybride-defis-opportunites";
+  body: string;
+  collection: "articles";
+  data: InferEntrySchema<"articles">
+} & { render(): Render[".md"] };
+"mentoring-developpement-professionnel.md": {
+	id: "mentoring-developpement-professionnel.md";
+  slug: "mentoring-developpement-professionnel";
+  body: string;
+  collection: "articles";
+  data: InferEntrySchema<"articles">
+} & { render(): Render[".md"] };
+"methode-gtd-expliquee.md": {
+	id: "methode-gtd-expliquee.md";
+  slug: "methode-gtd-expliquee";
+  body: string;
+  collection: "articles";
+  data: InferEntrySchema<"articles">
+} & { render(): Render[".md"] };
+"negocier-salaire-techniques-avancees.md": {
+	id: "negocier-salaire-techniques-avancees.md";
+  slug: "negocier-salaire-techniques-avancees";
+  body: string;
+  collection: "articles";
+  data: InferEntrySchema<"articles">
+} & { render(): Render[".md"] };
+"nouvelles-tendances-developpement-web.md": {
+	id: "nouvelles-tendances-developpement-web.md";
+  slug: "nouvelles-tendances-developpement-web";
+  body: string;
+  collection: "articles";
+  data: InferEntrySchema<"articles">
+} & { render(): Render[".md"] };
+"premier-article.md": {
+	id: "premier-article.md";
+  slug: "premier-article";
+  body: string;
+  collection: "articles";
+  data: InferEntrySchema<"articles">
+} & { render(): Render[".md"] };
+"procrastination-solutions-efficaces.md": {
+	id: "procrastination-solutions-efficaces.md";
+  slug: "procrastination-solutions-efficaces";
+  body: string;
+  collection: "articles";
+  data: InferEntrySchema<"articles">
+} & { render(): Render[".md"] };
+"progressive-web-apps-2024.md": {
+	id: "progressive-web-apps-2024.md";
+  slug: "progressive-web-apps-2024";
+  body: string;
+  collection: "articles";
+  data: InferEntrySchema<"articles">
+} & { render(): Render[".md"] };
+"reconversion-professionnelle-reussie.md": {
+	id: "reconversion-professionnelle-reussie.md";
+  slug: "reconversion-professionnelle-reussie";
+  body: string;
+  collection: "articles";
+  data: InferEntrySchema<"articles">
+} & { render(): Render[".md"] };
+"strategies-marketing-digital-2025.md": {
+	id: "strategies-marketing-digital-2025.md";
+  slug: "strategies-marketing-digital-2025";
+  body: string;
+  collection: "articles";
+  data: InferEntrySchema<"articles">
+} & { render(): Render[".md"] };
+"strategies-reseaux-sociaux-b2b.md": {
+	id: "strategies-reseaux-sociaux-b2b.md";
+  slug: "strategies-reseaux-sociaux-b2b";
+  body: string;
+  collection: "articles";
+  data: InferEntrySchema<"articles">
+} & { render(): Render[".md"] };
+"technologies-javascript-2024.md": {
+	id: "technologies-javascript-2024.md";
+  slug: "technologies-javascript-2024";
+  body: string;
+  collection: "articles";
+  data: InferEntrySchema<"articles">
+} & { render(): Render[".md"] };
+"web-accessibilite-guide-pratique.md": {
+	id: "web-accessibilite-guide-pratique.md";
+  slug: "web-accessibilite-guide-pratique";
+  body: string;
+  collection: "articles";
+  data: InferEntrySchema<"articles">
+} & { render(): Render[".md"] };
 };
 "books": {
 "atomic-habits.md": {
@@ -244,34 +433,50 @@ declare module 'astro:content' {
   data: InferEntrySchema<"books">
 } & { render(): Render[".md"] };
 };
+"docs": {
+"guide-images-thematiques.md": {
+	id: "guide-images-thematiques.md";
+  slug: "guide-images-thematiques";
+  body: string;
+  collection: "docs";
+  data: any
+} & { render(): Render[".md"] };
+};
 "work": {
 "former.md": {
 	id: "former.md";
   slug: "former";
   body: string;
   collection: "work";
-  data: InferEntrySchema<"work">
+  data: any
 } & { render(): Render[".md"] };
 "nested/web-developer.md": {
 	id: "nested/web-developer.md";
   slug: "nested/web-developer";
   body: string;
   collection: "work";
-  data: InferEntrySchema<"work">
+  data: any
 } & { render(): Render[".md"] };
 "project-manager.md": {
 	id: "project-manager.md";
   slug: "project-manager";
   body: string;
   collection: "work";
-  data: InferEntrySchema<"work">
+  data: any
 } & { render(): Render[".md"] };
 "sales-team-manager.md": {
 	id: "sales-team-manager.md";
   slug: "sales-team-manager";
   body: string;
   collection: "work";
-  data: InferEntrySchema<"work">
+  data: any
+} & { render(): Render[".md"] };
+"web-developer.md": {
+	id: "web-developer.md";
+  slug: "web-developer";
+  body: string;
+  collection: "work";
+  data: any
 } & { render(): Render[".md"] };
 };
 
