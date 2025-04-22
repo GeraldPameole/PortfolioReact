@@ -1,13 +1,18 @@
 ---
 title: "Progressive Web Apps en 2024 : L'Avenir du Web Mobile"
-description: "Comment les PWA révolutionnent l'expérience utilisateur mobile en combinant le meilleur des applications natives et des sites web modernes."
-publishDate: 2024-03-30
-type: "article"
-author: "Gérald Paméole"
-theme: "developpement-web"
-keywords: "PWA, Progressive Web Apps, service worker, application web, expérience hors ligne, web mobile, manifest.json, installation d'app, web APIs, développement frontend"
+description: >-
+  Comment les PWA révolutionnent l'expérience utilisateur mobile en combinant le
+  meilleur des applications natives et des sites web modernes.
+publishDate: 2024-03-30T00:00:00.000Z
+type: article
+author: Gérald Paméole
+theme: developpement-web
+keywords: >-
+  PWA, Progressive Web Apps, service worker, application web, expérience hors
+  ligne, web mobile, manifest.json, installation d'app, web APIs, développement
+  frontend
 note: 4.7
-image: "/assets/articles/progressive-web-apps.jpg"
+image: "/assets/themes/coding.webp"
 skills:
   - Développement PWA
   - Architecture d'applications web
@@ -17,12 +22,16 @@ skills:
   - Performance web
 relatedContent:
   - title: "Frameworks JavaScript en 2024 : Analyse Comparative pour Bien Choisir"
-    url: "/articles/frameworks-javascript-comparaison-2024"
-  - title: "Les Technologies JavaScript Incontournables en 2024"
-    url: "/articles/technologies-javascript-2024"
-  - title: "Clean Code"
-    url: "/books/clean-code"
-    type: "book"
+    url: /articles/frameworks-javascript-comparaison-2024
+  - title: Les Technologies JavaScript Incontournables en 2024
+    url: /articles/technologies-javascript-2024
+  - title: Clean Code
+    url: /books/clean-code
+    type: book
+tags:
+  - developpement-web
+  - frontend
+  - javascript
 ---
 
 # Progressive Web Apps en 2024 : L'Avenir du Web Mobile
@@ -449,3 +458,13 @@ Pour compléter vos connaissances sur les PWA et le développement web moderne :
 - [Design for How People Learn](/books/design-for-learning) - Un guide utile pour créer des expériences utilisateur intuitives dans vos PWA.
 
 **Note de l'article : 4.7/5** - Évaluation basée sur l'utilité pratique des exemples de code et la clarté des explications techniques.
+
+```html
+<link
+  rel="preload"
+  as="font"
+  type="font/woff2"
+  crossorigin
+  href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap"
+/>
+```

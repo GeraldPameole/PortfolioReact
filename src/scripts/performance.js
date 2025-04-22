@@ -111,15 +111,17 @@ if (!isBrowser) {
       setTimeout(() => {
         const scripts = [
           // Liste des scripts à charger différé
-          "/scripts/analytics.js",
-          "/scripts/social-share.js",
+          // Suppression des références aux scripts manquants
         ];
 
         scripts.forEach((scriptSrc) => {
-          const script = document.createElement("script");
-          script.src = scriptSrc;
-          script.async = true;
-          document.body.appendChild(script);
+          if (scriptSrc) {
+            // Vérifier que le script existe
+            const script = document.createElement("script");
+            script.src = scriptSrc;
+            script.async = true;
+            document.body.appendChild(script);
+          }
         });
       }, 1000);
     });
