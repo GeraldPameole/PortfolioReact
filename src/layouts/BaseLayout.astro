@@ -9,6 +9,9 @@ import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
 import '../styles/global.css';
 
+// Import des scripts d'optimisation des performances
+// Les imports côté serveur ne doivent pas utiliser d'APIs du navigateur
+
 interface Props {
 	title: string;
 	description?: string;
@@ -62,32 +65,126 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://gerald-p
 		<link rel="canonical" href={canonicalURL} />
 		<meta name="generator" content={Astro.generator} />
 		
-		<ViewTransitions />
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<!-- Préchargement des ressources critiques -->
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
-			rel="stylesheet"
-			media="print"
-      onload="this.media='all'"
-		/>
-    <!-- Chargement de secours pour les polices -->
-    <noscript>
-      <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet"
-      />
-    </noscript>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+		
+		<!-- Évite le FOUC (Flash of Unstyled Content) -->
+		<script is:inline define:vars={{ isDarkMode: false }}>
+			// Ce script inline est exécuté immédiatement mais n'utilise pas d'API serveur
+			// Détection du thème sombre côté client uniquement
+			if (typeof localStorage !== 'undefined' && localStorage.getItem('theme') === 'dark' || 
+				(typeof localStorage === 'undefined' && 
+				typeof window !== 'undefined' && 
+				window.matchMedia && 
+				window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+				document.documentElement.classList.add('theme-dark');
+			} else if (typeof document !== 'undefined') {
+				document.documentElement.classList.remove('theme-dark');
+			}
+		</script>
+
+		<!-- Styles et méta-données -->
+		<slot name="head" />
+		
+		<!-- ViewTransitions avec optimisations -->
+		<ViewTransitions fallback="swap" />
 	</head>
 	<body class={`min-h-screen flex flex-col ${customClass}`}>
-		<Header />
-		<BackButton />
-		<main class={`flex-grow ${fullWidth ? 'w-full' : ''} pt-24 md:pt-28`}>
-			<slot />
-		</main>
-		<BackToTop />
-		<Footer />
+		<!-- Indiquer que le contenu principal est en cours de chargement -->
+		<div id="page-loader" class="fixed inset-0 z-50 flex items-center justify-center bg-white dark:bg-dark transition-opacity duration-300">
+			<div class="w-16 h-16 border-4 border-primary-200 border-t-primary-500 rounded-full animate-spin"></div>
+		</div>
+		
+		<div id="main-content">
+			<Header />
+			<BackButton />
+			<main class={`flex-grow ${fullWidth ? 'w-full' : ''} pt-24 md:pt-28`}>
+				<slot />
+			</main>
+			<BackToTop />
+			<Footer />
+		</div>
+		
+		<!-- Script pour le chargement et les transitions (côté client uniquement) -->
+		<script is:inline>
+			// Script initial qui vérifie d'abord si nous sommes côté client
+			if (typeof document !== 'undefined') {
+				document.addEventListener('DOMContentLoaded', () => {
+					const pageLoader = document.getElementById('page-loader');
+					if (pageLoader) {
+						setTimeout(() => {
+							pageLoader.style.opacity = '0';
+							setTimeout(() => {
+								pageLoader.style.display = 'none';
+							}, 300);
+						}, 200);
+					}
+					
+					// Classe pour éviter le FOUC
+					document.documentElement.classList.remove('no-fouc');
+					document.documentElement.classList.add('loaded');
+				});
+				
+				// Optimiser les transitions entre pages
+				document.addEventListener('astro:before-preparation', () => {
+					// Afficher le loader avant la transition
+					const pageLoader = document.getElementById('page-loader');
+					if (pageLoader) {
+						pageLoader.style.display = 'flex';
+						pageLoader.style.opacity = '0.7';
+					}
+				});
+				
+				document.addEventListener('astro:page-load', () => {
+					// Masquer le loader après le chargement de la page
+					const pageLoader = document.getElementById('page-loader');
+					if (pageLoader) {
+						pageLoader.style.opacity = '0';
+						setTimeout(() => {
+							pageLoader.style.display = 'none';
+						}, 300);
+					}
+					
+					// Défiler vers le haut lors des transitions
+					window.scrollTo(0, 0);
+				});
+			}
+		</script>
+		
+		<!-- Traitement des images (côté client uniquement) -->
+		<script is:inline>
+			// Vérifier que nous sommes côté client
+			if (typeof document !== 'undefined' && typeof window !== 'undefined') {
+				// Convertir les images en format webp quand possible
+				document.addEventListener('DOMContentLoaded', () => {
+					if ('createImageBitmap' in window && 'avif' in document.createElement('video')) {
+						document.querySelectorAll('img:not([data-no-optimize])').forEach(img => {
+							// Conversion des images jpg/png en webp quand c'est possible
+							if (img instanceof HTMLImageElement && img.src.match(/\.(jpg|jpeg|png)$/i) && !img.src.includes('webp')) {
+								const newSrc = img.src.replace(/\.(jpg|jpeg|png)$/i, '.webp');
+								const newImg = new Image();
+								newImg.onload = () => { img.src = newSrc; };
+								newImg.onerror = () => { /* Garder l'image originale */ };
+								newImg.src = newSrc;
+							}
+						});
+					}
+				});
+			}
+		</script>
+		
+		<!-- Importer le script de performance côté client uniquement avec frontmatter -->
+		<script>
+			// Importer le script uniquement côté client
+			if (typeof document !== 'undefined') {
+				// Créer dynamiquement un script pour charger le module de performance
+				const script = document.createElement('script');
+				script.src = '/src/scripts/performance.js';
+				document.body.appendChild(script);
+			}
+		</script>
+		
+		<slot name="footer-scripts" />
 	</body>
 </html>
 
@@ -196,5 +293,28 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://gerald-p
 	code {
 		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
 			Bitstream Vera Sans Mono, Courier New, monospace;
+	}
+
+	/* Styles pour éviter le FOUC */
+	.no-fouc {
+		visibility: hidden;
+	}
+	
+	.loaded {
+		visibility: visible;
+		transition: visibility 0s;
+	}
+	
+	/* Optimisations pour les transitions */
+	::view-transition-old(root),
+	::view-transition-new(root) {
+		animation-duration: 0.4s;
+	}
+	
+	@media (prefers-reduced-motion: reduce) {
+		::view-transition-old(root),
+		::view-transition-new(root) {
+			animation-duration: 0.01s;
+		}
 	}
 </style>
