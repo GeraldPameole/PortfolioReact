@@ -1,28 +1,9 @@
 ---
 title: "Apprentissage Continu : Développement des Compétences en 2024"
-publishDate: 2024-09-15
-type: "article"
+description: "Comment l"apprentissage permanent est devenu indispensable pour rester pertinent sur le marché du travail et comment structurer votre démarche d"acquisition de compétences."
 author: "Gérald Paméole"
-description: "Comment l'apprentissage permanent est devenu indispensable pour rester pertinent sur le marché du travail et comment structurer votre démarche d'acquisition de compétences."
-theme: "carriere"
-image: "/assets/articles/apprentissage-continu.jpg"
-keywords: "apprentissage continu, développement de compétences, formation permanente, évolution professionnelle, neuroscience apprentissage, compétences adjacentes, adaptabilité professionnelle"
-note: 4.8
-skills:
-  - Métacognition
-  - Auto-organisation
-  - Curiosité stratégique
-  - Gestion des connaissances
-  - Adaptabilité cognitive
-  - Apprentissage social
-relatedContent:
-  - title: "Le Mentorat: Catalyseur Méconnu du Développement Professionnel"
-    url: "/articles/mentoring-developpement-professionnel"
-  - title: "Réussir sa Reconversion Professionnelle en 2024"
-    url: "/articles/reconversion-professionnelle-reussie"
-  - title: "Deep Work"
-    url: "/books/deep-work"
-    type: "book"
+type: "book"
+skills: 
 ---
 
 # L'Apprentissage Continu: Stratégie Clé pour l'Évolution Professionnelle

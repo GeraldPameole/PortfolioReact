@@ -1,31 +1,19 @@
 ---
-title: "Gestion de la Performance : Guide Complet pour l'Optimisation des Résultats"
-description: "Découvrez les stratégies et méthodes pour optimiser la performance individuelle et collective. Un guide détaillé sur l'évaluation, le développement et la motivation des talents."
-date: '2024-03-20'
-author: 'Gérald Pameole'
 draft: false
-type: 'article'
+title: "Gestion de la Performance : Guide Complet pour l"Optimisation des Résultats"
+description: "Découvrez les stratégies et méthodes pour optimiser la performance individuelle et collective. Un guide détaillé sur l"évaluation, le développement et la motivation des talents."
+date: "2024-03-20"
+author: "Gérald Pameole"
+type: "article"
 featured: false
 readingTime: 15
 hasMermaid: true
-targetAudience: 'Professionnels RH'
-domain: 'Ressources Humaines'
-tags:
-  - 'performance'
-  - 'gestion'
-  - 'évaluation'
-  - 'développement'
-  - 'motivation'
-pillColor: 'green'
-skills:
-  - 'Gestion de la Performance'
-  - 'Évaluation'
-  - 'Développement'
-  - 'Motivation'
-  - 'Leadership'
-relatedArticles:
-  - 'gestion-talents-developpement'
-  - 'gestion-talents-formation'
+targetAudience: "Professionnels RH"
+domain: "Ressources Humaines"
+tags: 
+pillColor: "green"
+skills: 
+relatedArticles: 
 ---
 
 # Gestion de la Performance : Guide Complet pour l'Optimisation des Résultats

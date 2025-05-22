@@ -1,28 +1,9 @@
 ---
-title: "Management de la Diversité et Inclusion : Impact sur la Performance d'Entreprise"
-publishDate: 2024-05-25
-type: "article"
+title: "Management de la Diversité et Inclusion : Impact sur la Performance d"Entreprise"
+description: "Stratégies concrètes pour transformer la diversité en avantage compétitif mesurable, et analyse des meilleures pratiques d"inclusion observées dans les organisations performantes."
 author: "Gérald Paméole"
-description: "Stratégies concrètes pour transformer la diversité en avantage compétitif mesurable, et analyse des meilleures pratiques d'inclusion observées dans les organisations performantes."
-theme: "management"
-image: "/assets/articles/diversite-inclusion.jpg"
-keywords: "diversité, inclusion, management inclusif, avantage compétitif, équité, appartenance, intelligence culturelle, leadership inclusif, performance organisationnelle"
-note: 4.8
-skills:
-  - Intelligence culturelle
-  - Leadership inclusif
-  - Gestion des talents
-  - Développement organisationnel
-  - Communication interculturelle
-  - Résolution de conflits
-relatedContent:
-  - title: "Gestion des Conflits en Équipe : Approche Systémique et Solutions Durables"
-    url: "/articles/gestion-conflits-equipe"
-  - title: "Management Hybride : Défis et Opportunités du Travail Semi-Distant"
-    url: "/articles/management-hybride-defis-opportunites"
-  - title: "Influence"
-    url: "/books/influence"
-    type: "book"
+type: "book"
+skills: 
 ---
 
 # Management de la Diversité et de l'Inclusion: Au-delà des Quotas

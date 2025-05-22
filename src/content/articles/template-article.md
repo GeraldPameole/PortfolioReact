@@ -1,19 +1,19 @@
 ---
-title: "Template d'Article : Guide de Structure"
-description: "Template d'article pour la documentation technique et les guides pratiques"
-date: '2024-03-15'
-author: 'Gérald Pameole'
 draft: false
-type: 'article'
+title: "Template d"Article : Guide de Structure"
+description: "Template d"article pour la documentation technique et les guides pratiques"
+date: "2024-03-15"
+author: "Gérald Pameole"
+type: "article"
 featured: false
 readingTime: 15
-skills: ['Documentation', 'Rédaction technique', 'Structure', 'Format']
 hasMermaid: true
-targetAudience: 'Auteurs et Documentalistes'
-domain: 'Développement Web'
-pillColor: 'blue'
-tags: ['template', 'documentation', 'guide', 'structure', 'format']
-relatedArticles: ['visualisations-mermaid', 'documentation-technique', 'mermaid-example']
+targetAudience: "Auteurs et Documentalistes"
+domain: "Développement Web"
+tags: ["template", "documentation", "guide", "structure", "format"]
+pillColor: "blue"
+skills: ["Documentation", "Rédaction technique", "Structure", "Format"]
+relatedArticles: ["visualisations-mermaid", "documentation-technique", "mermaid-example"]
 ---
 
 # Template d'Article : Guide de Structure

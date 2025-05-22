@@ -1,28 +1,9 @@
 ---
 title: "Vaincre la Procrastination : Solutions Efficaces Basées sur les Neurosciences"
-publishDate: 2024-01-05
-type: "article"
-author: "Gérald Paméole"
 description: "Découvrez les mécanismes cognitifs derrière la procrastination et les techniques pratiques fondées sur les dernières recherches en neurosciences pour surmonter ce frein à la productivité."
-theme: "productivite"
-image: "/assets/articles/vaincre-procrastination.jpg"
-keywords: "procrastination, neurosciences, productivité, gestion du temps, techniques anti-procrastination, habitudes, psychologie cognitive, méthode pomodoro, biais temporel"
-note: 4.7
-skills:
-  - Auto-discipline
-  - Gestion du temps
-  - Psychologie appliquée
-  - Développement d'habitudes
-  - Organisation personnelle
-  - Intelligence émotionnelle
-relatedContent:
-  - title: "La Méthode GTD Expliquée et Adaptée au Contexte Numérique Actuel"
-    url: "/articles/methode-gtd-expliquee"
-  - title: "Gestion du Temps pour Professionnels Surchargés : Approche Stratégique"
-    url: "/articles/gestion-temps-professionnels"
-  - title: "Atomic Habits"
-    url: "/books/atomic-habits"
-    type: "book"
+author: "Gérald Paméole"
+type: "book"
+skills: 
 ---
 
 # Vaincre la Procrastination : Solutions Efficaces Basées sur les Neurosciences

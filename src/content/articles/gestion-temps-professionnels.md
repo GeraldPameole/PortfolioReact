@@ -1,28 +1,9 @@
 ---
 title: "Gestion du Temps pour Professionnels Surchargés : Approche Stratégique"
-publishDate: 2024-05-10
-type: "article"
+description: "Méthodes avancées de gestion du temps pour les professionnels confrontés à des agendas complexes : priorisation matricielle, batching, et création de systèmes plutôt que d"objectifs."
 author: "Gérald Paméole"
-description: "Méthodes avancées de gestion du temps pour les professionnels confrontés à des agendas complexes : priorisation matricielle, batching, et création de systèmes plutôt que d'objectifs."
-theme: "productivite"
-image: "/assets/articles/gestion-temps-strategique.jpg"
-keywords: "gestion du temps, professionnels, priorisation, batching, énergie chronobiologique, deep work, économie de l'attention, productivity, time blocking, travail profond"
-note: 4.8
-skills:
-  - Priorisation stratégique
-  - Gestion de l'énergie
-  - Planification avancée
-  - Focus et concentration
-  - Délégation efficace
-  - Design de systèmes personnels
-relatedContent:
-  - title: "La Méthode GTD Expliquée et Adaptée au Contexte Numérique Actuel"
-    url: "/articles/methode-gtd-expliquee"
-  - title: "Vaincre la Procrastination : Solutions Efficaces Basées sur les Neurosciences"
-    url: "/articles/procrastination-solutions-efficaces"
-  - title: "Deep Work"
-    url: "/books/deep-work"
-    type: "book"
+type: "book"
+skills: 
 ---
 
 # Gestion du Temps pour Professionnels Surchargés : Approche Stratégique

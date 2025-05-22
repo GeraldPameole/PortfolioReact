@@ -1,35 +1,9 @@
 ---
-title: "Intelligence Artificielle en 2024 : Impact Profond sur les Métiers et la Société"
-description: "Analyse factuelle de l'impact de l'IA dans le monde professionnel et social en 2024, avec données récentes, statistiques et implications concrètes pour l'avenir du travail."
-publishDate: 2024-07-01
-type: "article"
+title: "Nouvelles Tendances de Développement Web",
+description: "Analyse factuelle de l"impact de l"IA dans le monde professionnel et social en 2024, avec données récentes, statistiques et implications concrètes pour l"avenir du travail."
 author: "Gérald Paméole"
-theme: "intelligence-artificielle"
-keywords: "IA, Intelligence Artificielle, Développement, Transformation digitale, Société, Éthique, Avenir du travail, Marché de l'IA, Compétences IA"
-image: "/assets/articles/ia-transformation-societe.jpg"
-note: 4.9
-skills:
-  [
-    "Intelligence Artificielle",
-    "Développement logiciel",
-    "Transformation digitale",
-    "Éthique technologique",
-    "Adaptation professionnelle",
-    "Innovation",
-  ]
-relatedContent:
-  [
-    {
-      title: "Intelligence Artificielle et Transformation du Marketing",
-      url: "/articles/intelligence-artificielle-transformation-marketing",
-      type: "article",
-    },
-    {
-      title: "Nouvelles Tendances de Développement Web",
-      url: "/articles/nouvelles-tendances-developpement-web",
-      type: "article",
-    },
-  ]
+type: "article",
+skills: 
 ---
 
 # L'IA en 2024 : Chiffres-clés et Impact sur les Métiers

@@ -1,11 +1,11 @@
 ---
-title: "Intelligence Artificielle et Transformation du Marketing : Guide Complet pour l'Innovation"
-description: "Découvrez comment l'IA révolutionne le marketing moderne. Un guide complet sur les applications, les meilleures pratiques et les stratégies d'implémentation pour transformer votre approche marketing."
-date: '2024-03-20'
-author: 'Gérald Pameole'
 draft: false
-tags: ['intelligence artificielle', 'marketing digital', 'innovation', 'transformation digitale']
-pillColor: 'blue'
+title: "Intelligence Artificielle et Transformation du Marketing : Guide Complet pour l"Innovation"
+description: "Découvrez comment l"IA révolutionne le marketing moderne. Un guide complet sur les applications, les meilleures pratiques et les stratégies d"implémentation pour transformer votre approche marketing."
+date: "2024-03-20"
+author: "Gérald Pameole"
+tags: ["intelligence artificielle", "marketing digital", "innovation", "transformation digitale"]
+pillColor: "blue'
 ---
 
 # Intelligence Artificielle et Transformation du Marketing : Guide Complet pour l'Innovation

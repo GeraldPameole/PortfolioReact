@@ -1,31 +1,19 @@
 ---
-date: '2024-03-15'
-description: "Guide méthodologique sur la synthèse thématique : approches, techniques et bonnes pratiques pour analyser et structurer efficacement l'information"
 draft: false
-title: 'Synthèse Thématique : Guide Méthodologique'
+title: "Synthèse Thématique : Guide Méthodologique"
+description: "Guide méthodologique sur la synthèse thématique : approches, techniques et bonnes pratiques pour analyser et structurer efficacement l"information"
+date: "2024-03-15"
+author: "Gérald Pameole"
 type: article
-author: 'Gérald Pameole'
-tags:
-  - synthèse
-  - analyse
-  - méthodologie
-  - documentation
-  - organisation
 featured: false
 readingTime: 15
-skills:
-  - Analyse
-  - Synthèse
-  - Documentation
-  - Organisation
 hasMermaid: true
-targetAudience: 'Professionnels et Étudiants'
-domain: 'Méthodologie'
-pillColor: 'purple'
-relatedArticles:
-  - gestion-surcharge-informationnelle
-  - gestion-temps-productivite
-  - documentation-technique
+targetAudience: "Professionnels et Étudiants"
+domain: "Méthodologie"
+tags: 
+pillColor: "purple'
+skills: 
+relatedArticles: 
 ---
 
 # Synthèse Thématique : Guide Méthodologique

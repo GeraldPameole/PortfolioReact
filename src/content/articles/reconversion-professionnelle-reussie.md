@@ -1,28 +1,9 @@
 ---
 title: "Reconversion Professionnelle : Guide pour une Transition Réussie"
-publishDate: 2024-11-15
-type: "article"
-author: "Gérald Paméole"
 description: "Guide pratique pour changer de carrière avec succès : stratégies, étapes clés et témoignages inspirants de reconversions réussies."
-theme: "carriere"
-image: "/assets/articles/reconversion-professionnelle.jpg"
-keywords: "reconversion professionnelle, changement de carrière, compétences transférables, formation adulte, réorientation professionnelle, bilan de compétences, financement reconversion, VAE"
-note: 4.8
-skills:
-  - Analyse de carrière
-  - Intelligence émotionnelle
-  - Planification stratégique
-  - Auto-évaluation
-  - Gestion du changement
-  - Résilience
-relatedContent:
-  - title: "L'Apprentissage Continu: Stratégie Clé pour l'Évolution Professionnelle"
-    url: "/articles/apprentissage-continu-developpement-competences"
-  - title: "Négocier son Salaire: Techniques Avancées et Psychologie de la Persuasion"
-    url: "/articles/negocier-salaire-techniques-avancees"
-  - title: "Atomic Habits"
-    url: "/books/atomic-habits"
-    type: "book"
+author: "Gérald Paméole"
+type: "book"
+skills: 
 ---
 
 # Réussir sa Reconversion Professionnelle en 2024

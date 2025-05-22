@@ -1,24 +1,19 @@
 ---
-date: '2024-03-15'
-description: 'Guide stratégique sur la gestion des talents et le recrutement : méthodes, outils et bonnes pratiques pour optimiser vos processus de recrutement'
 draft: false
-title: 'Gestion des Talents et Recrutement : Guide Stratégique'
-type: 'article'
-author: 'Gérald Pameole'
-tags: ['recrutement', 'talents', 'management', 'stratégie']
+title: "Gestion des Talents et Recrutement : Guide Stratégique"
+description: "Guide stratégique sur la gestion des talents et le recrutement : méthodes, outils et bonnes pratiques pour optimiser vos processus de recrutement"
+date: "2024-03-15"
+author: "Gérald Pameole"
+type: "article"
 featured: false
 readingTime: 15
-skills: ['Recrutement', 'Gestion des talents', 'Management', 'Stratégie']
 hasMermaid: true
-targetAudience: 'Professionnels RH et Managers'
-domain: 'Ressources Humaines'
-pillColor: 'orange'
-relatedArticles:
-  [
-    'gestion-performance-evaluation',
-    'gestion-carrieres-evolution',
-    'transformation-numerique-talents',
-  ]
+targetAudience: "Professionnels RH et Managers"
+domain: "Ressources Humaines"
+tags: ["recrutement", "talents", "management", "stratégie"]
+pillColor: "orange"
+skills: ["Recrutement", "Gestion des talents", "Management", "Stratégie"]
+relatedArticles: 
 ---
 
 # Gestion des Talents et Recrutement : Guide Stratégique

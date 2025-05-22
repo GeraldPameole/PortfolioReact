@@ -1,31 +1,19 @@
 ---
-date: '2024-03-15'
-description: 'Collection d\'exemples pratiques et de cas d\'utilisation de Mermaid pour la documentation technique'
 draft: false
-title: 'Exemples Pratiques avec Mermaid'
+title: "Exemples Pratiques avec Mermaid"
+description: "Collection d\"exemples pratiques et de cas d\"utilisation de Mermaid pour la documentation technique"
+date: "2024-03-15"
+author: "Gérald Pameole"
 type: article
-author: 'Gérald Pameole'
-tags:
-  - mermaid
-  - exemples
-  - documentation
-  - diagrammes
-  - tutoriel
 featured: false
 readingTime: 15
-skills:
-  - Mermaid
-  - Documentation technique
-  - Visualisation
-  - Diagrammes
 hasMermaid: true
-targetAudience: 'Développeurs et Documentalistes'
-domain: 'Développement Web'
-pillColor: 'blue'
-relatedArticles:
-  - visualisations-mermaid
-  - documentation-technique
-  - visualisation-donnees
+targetAudience: "Développeurs et Documentalistes"
+domain: "Développement Web"
+tags: 
+pillColor: "blue"
+skills: 
+relatedArticles: 
 ---
 
 # Exemples Pratiques avec Mermaid

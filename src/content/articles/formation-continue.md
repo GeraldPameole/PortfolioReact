@@ -1,19 +1,19 @@
 ---
 draft: false
-title: 'Formation Continue : Guide Complet pour le Développement des Compétences'
-description: "Découvrez les stratégies et méthodes pour développer efficacement la formation continue. Un guide détaillé sur l'apprentissage, le développement et l'application des compétences en continu."
-date: '2024-03-20'
-author: 'Gérald Pameole'
-type: 'article'
+title: "Formation Continue : Guide Complet pour le Développement des Compétences"
+description: "Découvrez les stratégies et méthodes pour développer efficacement la formation continue. Un guide détaillé sur l"apprentissage, le développement et l"application des compétences en continu."
+date: "2024-03-20"
+author: "Gérald Pameole"
+type: "article"
 featured: false
 readingTime: 15
 hasMermaid: true
-targetAudience: 'Professionnels RH et Formateurs'
-domain: 'Formation & Développement'
-tags: ['formation', 'continue', 'développement', 'compétences', 'apprentissage']
-pillColor: 'indigo'
-skills: ['Formation', 'Développement', 'Apprentissage', 'Innovation', 'Soft Skills']
-relatedArticles: ['formation-mentorat', 'gestion-talents-developpement']
+targetAudience: "Professionnels RH et Formateurs"
+domain: "Formation & Développement"
+tags: ["formation", "continue", "développement", "compétences", "apprentissage"]
+pillColor: "indigo"
+skills: ["Formation", "Développement", "Apprentissage", "Innovation", "Soft Skills"]
+relatedArticles: ["formation-mentorat", "gestion-talents-developpement"]
 ---
 
 # Formation Continue : Guide Complet pour le Développement des Compétences

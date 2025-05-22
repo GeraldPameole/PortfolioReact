@@ -1,26 +1,19 @@
 ---
-title: 'Frameworks JavaScript 2024 : Guide Complet pour Choisir la Bonne Technologie'
-description: 'Découvrez une analyse comparative des principaux frameworks JavaScript en 2024. Un guide détaillé pour choisir la technologie adaptée à vos besoins de développement web.'
-date: '2024-03-20'
-author: 'Gérald Pameole'
 draft: false
-type: 'article'
+title: "Frameworks JavaScript 2024 : Guide Complet pour Choisir la Bonne Technologie"
+description: "Découvrez une analyse comparative des principaux frameworks JavaScript en 2024. Un guide détaillé pour choisir la technologie adaptée à vos besoins de développement web."
+date: "2024-03-20"
+author: "Gérald Pameole"
+type: "article"
 featured: false
 readingTime: 15
 hasMermaid: true
-targetAudience: 'Développeurs Web'
-domain: 'Développement Web'
-tags: ['développement web', 'JavaScript', 'frameworks', 'React', 'Vue', 'Angular']
-pillColor: 'green'
-skills:
-  - JavaScript
-  - React
-  - Vue.js
-  - Angular
-  - Architecture web
-relatedArticles:
-  - technologies-javascript-2024
-  - nouvelles-tendances-developpement-web
+targetAudience: "Développeurs Web"
+domain: "Développement Web"
+tags: ["développement web", "JavaScript", "frameworks", "React", "Vue", "Angular"]
+pillColor: "green"
+skills: 
+relatedArticles: 
 ---
 
 # Frameworks JavaScript en 2024 : Guide stratégique pour le développement frontend

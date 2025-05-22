@@ -1,28 +1,9 @@
 ---
 title: "Négocier son Salaire : Techniques Avancées pour les Professionnels"
 description: "Guide complet pour maîtriser l'art de la négociation salariale : préparation, techniques de persuasion, objections courantes et stratégies pour obtenir la meilleure rémunération possible."
-publishDate: 2025-01-15
-type: "article"
 author: "Gérald Paméole"
-theme: "carriere"
-image: "/assets/articles/negociation-salaire.jpg"
-keywords: "négociation salaire, techniques négociation, psychologie persuasion, augmentation salaire, entretien embauche, valeur professionnelle, stratégie négociation, rémunération, BATNA"
-note: 4.9
-skills:
-  - Intelligence émotionnelle
-  - Communication persuasive
-  - Préparation stratégique
-  - Analyse de marché
-  - Assertivité
-  - Résolution de problèmes
-relatedContent:
-  - title: "Réussir sa Reconversion Professionnelle en 2024"
-    url: "/articles/reconversion-professionnelle-reussie"
-  - title: "Le Mentorat: Catalyseur Méconnu du Développement Professionnel"
-    url: "/articles/mentoring-developpement-professionnel"
-  - title: "Influence"
-    url: "/books/influence"
-    type: "book"
+type: "book"
+skills: 
 ---
 
 # Négocier son Salaire: Techniques Avancées et Psychologie de la Persuasion

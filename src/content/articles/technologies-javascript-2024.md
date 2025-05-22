@@ -1,25 +1,9 @@
 ---
 title: "Technologies JavaScript 2024 : Le Guide Complet des Tendances"
 description: "Analyse approfondie des technologies JavaScript essentielles en 2024 : frameworks, outils, bonnes pratiques et tendances émergentes pour rester à la pointe du développement web."
-publishDate: 2024-03-15
-type: "article"
 author: "Gérald Paméole"
-theme: "developpement-web"
-keywords: "JavaScript, technologies web, développement frontend, frameworks, outils, tendances 2024, performance web, architecture moderne"
-note: 4.7
-image: "/assets/articles/technologies-javascript-2024.jpg"
-skills:
-  - Développement JavaScript moderne
-  - Frameworks frontend
-  - Outils de développement
-  - Performance web
-  - Architecture d'application
-  - Veille technologique
-relatedContent:
-  - title: "Frameworks JavaScript en 2024"
-    url: "/articles/frameworks-javascript-comparaison-2024"
-  - title: "Nouvelles Tendances de Développement Web"
-    url: "/articles/nouvelles-tendances-developpement-web"
+type: "article"
+skills: 
 ---
 
 # Technologies JavaScript 2024 : L'État de l'Art

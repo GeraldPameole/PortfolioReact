@@ -1,20 +1,19 @@
 ---
-title: "Gestion de la Performance d'Équipe : Guide Complet pour l'Excellence Collective"
-description: "Guide complet pour optimiser la performance de votre équipe et atteindre l'excellence collective"
-date: '2024-03-15'
-author: 'Gérald Pameole'
 draft: false
-type: 'article'
+title: "Gestion de la Performance d"Équipe : Guide Complet pour l"Excellence Collective"
+description: "Guide complet pour optimiser la performance de votre équipe et atteindre l"excellence collective"
+date: "2024-03-15"
+author: "Gérald Pameole"
+type: "article"
 featured: false
 readingTime: 15
-skills: ["Gestion d'équipe", 'Leadership', 'Communication', 'Évaluation', 'Motivation']
 hasMermaid: true
-targetAudience: "Managers et Leaders d'équipe"
-domain: 'Gestion de projet'
-pillColor: 'blue'
-tags: ['performance', 'équipe', 'management', 'leadership', 'collaboration']
-relatedArticles:
-  ['gestion-talents-performance', 'formation-leadership', 'gestion-projet-performance']
+targetAudience: "Managers et Leaders d"équipe"
+domain: "Gestion de projet"
+tags: ["performance", "équipe", "management", "leadership", "collaboration"]
+pillColor: "blue"
+skills: ["Gestion d"équipe", "Leadership", "Communication", "Évaluation", "Motivation"]
+relatedArticles: 
 ---
 
 # Gestion de la Performance d'Équipe : Guide Complet pour l'Excellence Collective

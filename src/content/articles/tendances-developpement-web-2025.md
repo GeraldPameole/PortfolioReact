@@ -1,27 +1,19 @@
 ---
-title: 'Tendances du Développement Web 2025'
-description: 'Panorama des tendances du web en 2025, des architectures émergentes aux nouvelles technologies.'
-date: '2024-03-15'
 draft: false
-type: 'article'
-author: 'Gérald Pameole'
-tags:
-  - 'développement web'
-  - 'tendances'
-  - 'technologies'
-  - 'innovation'
-  - '2025'
+title: "Tendances du Développement Web 2025"
+description: "Panorama des tendances du web en 2025, des architectures émergentes aux nouvelles technologies."
+date: "2024-03-15"
+author: "Gérald Pameole"
+type: "article"
 featured: false
 readingTime: 5
-skills:
-  - 'veille technologique'
-  - 'innovation'
 hasMermaid: false
-targetAudience: 'Professionnels'
-domain: 'Développement Web'
-pillColor: 'blue'
-relatedArticles:
-  - 'web-tendances-2024'
+targetAudience: "Professionnels"
+domain: "Développement Web"
+tags: 
+pillColor: "blue"
+skills: 
+relatedArticles: 
 ---
 
 ## Introduction

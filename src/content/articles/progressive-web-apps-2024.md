@@ -1,37 +1,10 @@
 ---
-title: "Progressive Web Apps en 2024 : L'Avenir du Web Mobile"
+title: "Progressive Web Apps en 2024 : L"Avenir du Web Mobile"
 description: >-
-  Comment les PWA révolutionnent l'expérience utilisateur mobile en combinant le
-  meilleur des applications natives et des sites web modernes.
-publishDate: 2024-03-30T00:00:00.000Z
-type: article
 author: Gérald Paméole
-theme: developpement-web
-keywords: >-
-  PWA, Progressive Web Apps, service worker, application web, expérience hors
-  ligne, web mobile, manifest.json, installation d'app, web APIs, développement
-  frontend
-note: 4.7
-image: "/assets/themes/coding.webp"
-skills:
-  - Développement PWA
-  - Architecture d'applications web
-  - Optimisation mobile
-  - Service Workers
-  - UX/UI mobile
-  - Performance web
-relatedContent:
-  - title: "Frameworks JavaScript en 2024 : Analyse Comparative pour Bien Choisir"
-    url: /articles/frameworks-javascript-comparaison-2024
-  - title: Les Technologies JavaScript Incontournables en 2024
-    url: /articles/technologies-javascript-2024
-  - title: Clean Code
-    url: /books/clean-code
-    type: book
-tags:
-  - developpement-web
-  - frontend
-  - javascript
+type: book
+tags: 
+skills: 
 ---
 
 # Progressive Web Apps en 2024 : L'Avenir du Web Mobile

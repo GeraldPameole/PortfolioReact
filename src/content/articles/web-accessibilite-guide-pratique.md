@@ -1,35 +1,19 @@
 ---
-title: 'Accessibilité Web : Guide Complet pour un Web Inclusif'
-description: "Découvrez les principes et bonnes pratiques de l'accessibilité web. Un guide détaillé pour créer des sites web accessibles à tous les utilisateurs."
-date: '2024-03-20'
-author: 'Gérald Pameole'
 draft: false
-type: 'article'
+title: "Accessibilité Web : Guide Complet pour un Web Inclusif"
+description: "Découvrez les principes et bonnes pratiques de l"accessibilité web. Un guide détaillé pour créer des sites web accessibles à tous les utilisateurs."
+date: "2024-03-20"
+author: "Gérald Pameole"
+type: "book'
 featured: false
 readingTime: 15
 hasMermaid: true
-targetAudience: 'Développeurs Web'
-domain: 'Développement Web'
-tags: ['développement web', 'accessibilité', 'WCAG', 'inclusion', 'UX']
-pillColor: 'green'
-image: '/assets/articles/accessibilite-web.jpg'
-skills:
-  - Accessibilité Web
-  - WCAG 2.1
-  - HTML sémantique
-  - ARIA
-  - Tests d'accessibilité
-relatedArticles:
-  - web-javascript-modern
-  - web-tendances-2024
-relatedContent:
-  - title: "Progressive Web Apps en 2024 : L'Avenir du Web Mobile"
-    url: '/articles/progressive-web-apps-2024'
-  - title: 'Frameworks JavaScript en 2024 : Analyse Comparative pour Bien Choisir'
-    url: '/articles/frameworks-javascript-comparaison-2024'
-  - title: 'Clean Code'
-    url: '/books/clean-code'
-    type: 'book'
+targetAudience: "Développeurs Web"
+domain: "Développement Web"
+tags: ["développement web", "accessibilité", "WCAG", "inclusion", "UX"]
+pillColor: "green"
+skills: 
+relatedArticles: 
 ---
 
 # Accessibilité Web en 2024 : Guide Pratique pour Développeurs

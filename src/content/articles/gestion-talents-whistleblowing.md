@@ -1,20 +1,19 @@
 ---
 draft: false
-title: 'Signalement Éthique : Guide Complet pour les Entreprises'
-description: "Découvrez les bonnes pratiques pour mettre en place un système de signalement éthique efficace. Un guide détaillé sur la protection des lanceurs d'alerte et la gestion des signalements."
-date: '2024-03-20'
-author: 'Gérald Pameole'
-type: 'article'
+title: "Signalement Éthique : Guide Complet pour les Entreprises"
+description: "Découvrez les bonnes pratiques pour mettre en place un système de signalement éthique efficace. Un guide détaillé sur la protection des lanceurs d"alerte et la gestion des signalements."
+date: "2024-03-20"
+author: "Gérald Pameole"
+type: "article"
 featured: false
 readingTime: 15
 hasMermaid: true
-targetAudience: 'Professionnels RH'
-domain: 'Gestion des Talents'
-tags: ['éthique', 'signalement', 'conformité', 'protection', 'gouvernance']
-pillColor: 'blue'
-skills:
-  ['Gestion des Signalements', 'Conformité', 'Éthique', 'Protection des Données', 'Communication']
-relatedArticles: ['gestion-talents-ethique', 'gestion-talents-culture']
+targetAudience: "Professionnels RH"
+domain: "Gestion des Talents"
+tags: ["éthique", "signalement", "conformité", "protection", "gouvernance"]
+pillColor: "blue"
+skills: 
+relatedArticles: ["gestion-talents-ethique", "gestion-talents-culture']
 ---
 
 # Signalement Éthique : Guide Complet pour les Entreprises

@@ -1,28 +1,9 @@
 ---
 title: "Formation Continue: Accélérateur de Carrière dans le Développement Web"
-description: "Comment la formation continue transforme les parcours professionnels dans le développement web. Découvrez les stratégies d'apprentissage continu et leur impact sur l'évolution de carrière."
-publishDate: 2023-12-15
-type: "article"
+description: "Comment la formation continue transforme les parcours professionnels dans le développement web. Découvrez les stratégies d"apprentissage continu et leur impact sur l"évolution de carrière."
 author: "Gérald Paméole"
-theme: "carriere-developpement"
-keywords: "formation continue, développement web, évolution carrière, upskilling, compétences techniques, apprentissage continu, reconversion professionnelle"
-note: 4.7
-image: "/assets/articles/impact-formation-continue-carriere.jpg"
-timeReading: "9 min"
-skills:
-  - Développement professionnel
-  - Stratégie d'apprentissage
-  - Veille technologique
-  - Reconversion professionnelle
-  - Gestion de carrière tech
-relatedContent:
-  - title: "Les Technologies JavaScript Incontournables en 2024"
-    url: "/articles/technologies-javascript-2024"
-  - title: "Clean Architecture"
-    url: "/books/clean-architecture"
-    type: "book"
-  - title: "Stratégies pour Combattre l'Obsolescence des Compétences"
-    url: "/articles/strategie-obsolescence-competences"
+type: "book"
+skills: 
 ---
 
 # Formation Continue: Accélérateur de Carrière dans le Développement Web

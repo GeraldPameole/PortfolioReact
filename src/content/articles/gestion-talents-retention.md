@@ -1,19 +1,19 @@
 ---
 draft: false
-title: 'Rétention des Talents : Stratégies et Bonnes Pratiques'
-description: 'Guide complet sur la rétention des talents : méthodes, outils et stratégies pour fidéliser vos meilleurs collaborateurs et réduire le turnover.'
-date: '2024-03-20'
-author: 'Gérald Pameole'
-type: 'article'
+title: "Rétention des Talents : Stratégies et Bonnes Pratiques"
+description: "Guide complet sur la rétention des talents : méthodes, outils et stratégies pour fidéliser vos meilleurs collaborateurs et réduire le turnover."
+date: "2024-03-20"
+author: "Gérald Pameole"
+type: "article"
 featured: false
 readingTime: 15
 hasMermaid: true
-targetAudience: 'Professionnels RH'
-domain: 'Gestion des Talents'
-tags: ['rétention', 'fidélisation', 'engagement', 'carrière', 'développement']
-pillColor: 'green'
-skills: ['Gestion des Talents', 'Fidélisation', 'Engagement', 'Développement', 'Communication']
-relatedArticles: ['gestion-talents-attraction', 'gestion-talents-fidelisation']
+targetAudience: "Professionnels RH"
+domain: "Gestion des Talents"
+tags: ["rétention", "fidélisation", "engagement", "carrière", "développement"]
+pillColor: "green"
+skills: ["Gestion des Talents", "Fidélisation", "Engagement", "Développement", "Communication"]
+relatedArticles: ["gestion-talents-attraction", "gestion-talents-fidelisation"]
 ---
 
 # Rétention des Talents : Guide Complet pour la Fidélisation

@@ -1,26 +1,19 @@
 ---
-title: 'Développement des Talents : Guide Complet pour la Croissance'
-description: 'Découvrez les stratégies et méthodes pour développer les talents de vos collaborateurs. Un guide détaillé sur la formation, le mentoring et le développement de carrière.'
-date: '2024-03-20'
-author: 'Gérald Pameole'
 draft: false
-type: 'article'
+title: "Développement des Talents : Guide Complet pour la Croissance"
+description: "Découvrez les stratégies et méthodes pour développer les talents de vos collaborateurs. Un guide détaillé sur la formation, le mentoring et le développement de carrière."
+date: "2024-03-20"
+author: "Gérald Pameole"
+type: "article"
 featured: false
 readingTime: 15
 hasMermaid: true
-targetAudience: 'Professionnels RH'
-domain: 'Formation & Pédagogie'
-tags: ['développement', 'formation', 'mentoring', 'compétences', 'carrière']
-pillColor: 'blue'
-skills:
-  - Développement des Talents
-  - Formation
-  - Mentoring
-  - Planification de Carrière
-  - Évaluation
-relatedArticles:
-  - gestion-talents-formation
-  - gestion-talents-performance
+targetAudience: "Professionnels RH"
+domain: "Formation & Pédagogie"
+tags: ["développement", "formation", "mentoring", "compétences", "carrière"]
+pillColor: "blue"
+skills: 
+relatedArticles: 
 ---
 
 # Développement des Talents : Guide Complet pour la Croissance

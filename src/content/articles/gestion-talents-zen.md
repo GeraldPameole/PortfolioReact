@@ -1,26 +1,19 @@
 ---
-title: 'Bien-être au Travail : Guide Complet pour la Performance'
-description: "Découvrez les stratégies et pratiques pour promouvoir le bien-être et la performance au travail. Un guide détaillé sur la gestion du stress, l'équilibre vie pro/perso et la motivation."
-date: '2024-03-20'
-author: 'Gérald Pameole'
 draft: false
-type: 'article'
+title: "Bien-être au Travail : Guide Complet pour la Performance"
+description: "Découvrez les stratégies et pratiques pour promouvoir le bien-être et la performance au travail. Un guide détaillé sur la gestion du stress, l"équilibre vie pro/perso et la motivation."
+date: "2024-03-20"
+author: "Gérald Pameole"
+type: "article"
 featured: false
 readingTime: 15
 hasMermaid: true
-targetAudience: 'Professionnels RH'
-domain: 'Gestion des Talents'
-tags: ['bien-être', 'performance', 'stress', 'équilibre', 'motivation']
-pillColor: 'yellow'
-skills:
-  - Gestion du Stress
-  - Bien-être au Travail
-  - Équilibre Vie Pro/Perso
-  - Motivation
-  - Performance
-relatedArticles:
-  - gestion-stress-performance
-  - gestion-talents-engagement
+targetAudience: "Professionnels RH"
+domain: "Gestion des Talents"
+tags: ["bien-être", "performance", "stress", "équilibre", "motivation"]
+pillColor: "yellow'
+skills: 
+relatedArticles: 
 ---
 
 # Bien-être au Travail : Guide Complet pour la Performance

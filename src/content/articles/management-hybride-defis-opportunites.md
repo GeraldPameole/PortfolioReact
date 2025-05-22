@@ -1,28 +1,9 @@
 ---
 title: "Management Hybride : Défis et Opportunités du Travail Semi-Distant"
-description: "Analyse des modèles de travail hybride et stratégies de management pour maintenir cohésion d'équipe et performance dans un contexte de travail partiellement à distance."
-publishDate: 2024-02-08
-type: "article"
+description: "Analyse des modèles de travail hybride et stratégies de management pour maintenir cohésion d"équipe et performance dans un contexte de travail partiellement à distance."
 author: "Gérald Paméole"
-theme: "management"
-image: "/assets/articles/travail-hybride.jpg"
-keywords: "management hybride, travail à distance, télétravail, cohésion d'équipe, leadership à distance, communication asynchrone, productivité hybride, future of work"
-note: 4.6
-skills:
-  - Communication digitale
-  - Management à distance
-  - Organisation du travail
-  - Gestion du changement
-  - Leadership adaptatif
-  - Développement d'équipe
-relatedContent:
-  - title: "Gestion des Conflits en Équipe : Approche Systémique et Solutions Durables"
-    url: "/articles/gestion-conflits-equipe"
-  - title: "Management de la Diversité et Inclusion : Impact sur la Performance d'Entreprise"
-    url: "/articles/management-diversite-inclusion"
-  - title: "Deep Work"
-    url: "/books/deep-work"
-    type: "book"
+type: "book"
+skills: 
 ---
 
 # Management Hybride : Défis et Opportunités du Travail Semi-Distant

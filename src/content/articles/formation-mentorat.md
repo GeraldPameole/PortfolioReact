@@ -1,19 +1,19 @@
 ---
 draft: false
-title: 'Formation au Mentorat : Guide Complet pour le Développement des Compétences'
-description: "Découvrez les stratégies et méthodes pour développer efficacement le mentorat. Un guide détaillé sur l'apprentissage, le développement et l'application des compétences de mentorat."
-date: '2024-03-20'
-author: 'Gérald Pameole'
-type: 'article'
+title: "Formation au Mentorat : Guide Complet pour le Développement des Compétences"
+description: "Découvrez les stratégies et méthodes pour développer efficacement le mentorat. Un guide détaillé sur l"apprentissage, le développement et l"application des compétences de mentorat."
+date: "2024-03-20"
+author: "Gérald Pameole"
+type: "article"
 featured: false
 readingTime: 15
 hasMermaid: true
-targetAudience: 'Professionnels RH et Formateurs'
-domain: 'Formation & Développement'
-tags: ['formation', 'mentorat', 'développement', 'compétences', 'leadership']
-pillColor: 'teal'
-skills: ['Formation', 'Mentorat', 'Développement', 'Leadership', 'Soft Skills']
-relatedArticles: ['formation-leadership', 'gestion-talents-developpement']
+targetAudience: "Professionnels RH et Formateurs"
+domain: "Formation & Développement"
+tags: ["formation", "mentorat", "développement", "compétences", "leadership"]
+pillColor: "teal"
+skills: ["Formation", "Mentorat", "Développement", "Leadership", "Soft Skills"]
+relatedArticles: ["formation-leadership", "gestion-talents-developpement"]
 ---
 
 # Formation au Mentorat : Guide Complet pour le Développement des Compétences

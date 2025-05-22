@@ -1,28 +1,9 @@
 ---
 title: "Gestion des Conflits en Équipe : Approche Systémique et Solutions Durables"
-publishDate: 2024-04-20
-type: "article"
-author: "Gérald Paméole"
 description: "Méthodologie structurée pour identifier, analyser et résoudre les conflits au sein des équipes professionnelles, en cultivant un environnement plus résilient."
-theme: "management"
-image: "/assets/articles/gestion-conflits.jpg"
-keywords: "gestion de conflits, médiation professionnelle, conflits d'équipe, communication non-violente, résolution de problèmes, leadership, dialogue structuré, psychologie organisationnelle"
-note: 4.7
-skills:
-  - Médiation
-  - Communication non-violente
-  - Intelligence émotionnelle
-  - Résolution de problèmes
-  - Leadership situationnel
-  - Gestion de crise
-relatedContent:
-  - title: "Management de la Diversité et Inclusion : Impact sur la Performance d'Entreprise"
-    url: "/articles/management-diversite-inclusion"
-  - title: "Management Hybride : Défis et Opportunités du Travail Semi-Distant"
-    url: "/articles/management-hybride-defis-opportunites"
-  - title: "Good to Great"
-    url: "/books/good-to-great"
-    type: "book"
+author: "Gérald Paméole"
+type: "book"
+skills: 
 ---
 
 # Gestion des Conflits en Équipe : Approche Systémique et Solutions Durables

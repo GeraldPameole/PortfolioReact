@@ -1,35 +1,9 @@
 ---
-title: "Intelligence Artificielle : La Révolution Silencieuse qui Transforme notre Société"
-description: "Enquête approfondie sur l'impact de l'IA dans le monde professionnel et social en 2024 : données exclusives, témoignages d'experts et perspectives d'avenir."
-publishDate: 2024-06-15
-type: "article"
+title: "Nouvelles Tendances de Développement Web",
+description: "Enquête approfondie sur l"impact de l"IA dans le monde professionnel et social en 2024 : données exclusives, témoignages d"experts et perspectives d"avenir."
 author: "Gérald Paméole"
-theme: "intelligence-artificielle"
-keywords: "IA, Intelligence Artificielle, Développement, Transformation digitale, Société, Éthique, Avenir du travail, Marché de l'IA, Compétences IA"
-image: "/assets/articles/ia-transformation-societe.jpg"
-note: 4.9
-skills:
-  [
-    "Intelligence Artificielle",
-    "Développement logiciel",
-    "Transformation digitale",
-    "Éthique technologique",
-    "Adaptation professionnelle",
-    "Innovation",
-  ]
-relatedContent:
-  [
-    {
-      title: "Intelligence Artificielle et Transformation du Marketing",
-      url: "/articles/intelligence-artificielle-transformation-marketing",
-      type: "article",
-    },
-    {
-      title: "Nouvelles Tendances de Développement Web",
-      url: "/articles/nouvelles-tendances-developpement-web",
-      type: "article",
-    },
-  ]
+type: "article",
+skills: 
 ---
 
 # IA 2024 : La Révolution Silencieuse qui Redéfinit notre Monde

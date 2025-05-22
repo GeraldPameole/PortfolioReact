@@ -1,26 +1,19 @@
 ---
-title: 'Attraction des Talents : Guide Complet pour le Recrutement'
-description: "Découvrez les stratégies et techniques pour attirer les meilleurs talents. Un guide détaillé sur le recrutement, l'employer branding et la marque employeur."
-date: '2024-03-20'
-author: 'Gérald Pameole'
 draft: false
-type: 'article'
+title: "Attraction des Talents : Guide Complet pour le Recrutement"
+description: "Découvrez les stratégies et techniques pour attirer les meilleurs talents. Un guide détaillé sur le recrutement, l"employer branding et la marque employeur."
+date: "2024-03-20"
+author: "Gérald Pameole"
+type: "article"
 featured: false
 readingTime: 15
 hasMermaid: true
-targetAudience: 'Professionnels RH'
-domain: 'Gestion des Talents'
-tags: ['recrutement', 'attraction', 'employer branding', 'marque employeur', 'talent']
-pillColor: 'yellow'
-skills:
-  - Recrutement
-  - Employer Branding
-  - Marque Employeur
-  - Communication
-  - Stratégie RH
-relatedArticles:
-  - gestion-talents-recrutement
-  - gestion-talents-culture
+targetAudience: "Professionnels RH"
+domain: "Gestion des Talents"
+tags: ["recrutement", "attraction", "employer branding", "marque employeur", "talent"]
+pillColor: "yellow'
+skills: 
+relatedArticles: 
 ---
 
 # Attraction des Talents : Guide Complet pour le Recrutement

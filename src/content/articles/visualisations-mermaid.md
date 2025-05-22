@@ -1,19 +1,19 @@
 ---
-title: 'Visualisations avec Mermaid : Guide Complet'
-description: "Guide complet sur l'utilisation de Mermaid pour créer des visualisations professionnelles dans vos documents"
-date: '2024-03-15'
-author: 'Gérald Pameole'
 draft: false
-type: 'article'
+title: "Visualisations avec Mermaid : Guide Complet"
+description: "Guide complet sur l"utilisation de Mermaid pour créer des visualisations professionnelles dans vos documents"
+date: "2024-03-15"
+author: "Gérald Pameole"
+type: "article"
 featured: false
 readingTime: 15
-skills: ['Mermaid', 'Visualisation', 'Documentation technique', 'Diagrammes']
 hasMermaid: true
-targetAudience: 'Développeurs et Documentalistes'
-domain: 'Développement Web'
-pillColor: 'blue'
-tags: ['mermaid', 'visualisation', 'documentation', 'diagrammes', 'technique']
-relatedArticles: ['mermaid-example', 'documentation-technique', 'visualisation-donnees']
+targetAudience: "Développeurs et Documentalistes"
+domain: "Développement Web"
+tags: ["mermaid", "visualisation", "documentation", "diagrammes", "technique"]
+pillColor: "blue"
+skills: ["Mermaid", "Visualisation", "Documentation technique", "Diagrammes"]
+relatedArticles: ["mermaid-example", "documentation-technique", "visualisation-donnees']
 ---
 
 # Visualisations avec Mermaid : Guide Complet

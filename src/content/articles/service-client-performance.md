@@ -1,31 +1,19 @@
 ---
-date: '2024-03-15'
-description: 'Guide stratégique sur la performance du service client : méthodes, outils et bonnes pratiques pour optimiser la qualité et l\'efficacité du service client'
 draft: false
-title: 'Performance du Service Client : Guide Stratégique'
+title: "Performance du Service Client : Guide Stratégique"
+description: "Guide stratégique sur la performance du service client : méthodes, outils et bonnes pratiques pour optimiser la qualité et l\"efficacité du service client"
+date: "2024-03-15"
+author: "Gérald Pameole"
 type: article
-author: 'Gérald Pameole'
-tags:
-  - service client
-  - performance
-  - qualité
-  - satisfaction
-  - management
 featured: false
 readingTime: 15
-skills:
-  - Service client
-  - Management
-  - Qualité
-  - Performance
 hasMermaid: true
-targetAudience: 'Managers et Professionnels du Service Client'
-domain: 'Service Client'
-pillColor: 'blue'
-relatedArticles:
-  - gestion-performance-equipe
-  - gestion-priorites-efficacite
-  - gestion-connaissances-organisation
+targetAudience: "Managers et Professionnels du Service Client"
+domain: "Service Client"
+tags: 
+pillColor: "blue'
+skills: 
+relatedArticles: 
 ---
 
 # Performance du Service Client : Guide Stratégique

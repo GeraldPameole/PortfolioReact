@@ -1,31 +1,19 @@
 ---
-title: 'Formation des Talents : Guide Complet pour le Développement'
-description: "Découvrez les stratégies et méthodes pour former efficacement vos talents. Un guide détaillé sur la formation, le développement et l'acquisition de compétences."
-date: '2024-03-20'
-author: 'Gérald Pameole'
 draft: false
-type: 'article'
+title: "Formation des Talents : Guide Complet pour le Développement"
+description: "Découvrez les stratégies et méthodes pour former efficacement vos talents. Un guide détaillé sur la formation, le développement et l"acquisition de compétences."
+date: "2024-03-20"
+author: "Gérald Pameole"
+type: "article"
 featured: false
 readingTime: 15
 hasMermaid: true
-targetAudience: 'Professionnels RH'
-domain: 'Formation & Pédagogie'
-tags:
-  - 'formation'
-  - 'développement'
-  - 'compétences'
-  - 'apprentissage'
-  - 'pédagogie'
-pillColor: 'blue'
-skills:
-  - 'Formation'
-  - 'Développement'
-  - 'Pédagogie'
-  - 'Évaluation'
-  - 'Planification'
-relatedArticles:
-  - 'gestion-talents-developpement'
-  - 'gestion-talents-performance'
+targetAudience: "Professionnels RH"
+domain: "Formation & Pédagogie"
+tags: 
+pillColor: "blue"
+skills: 
+relatedArticles: 
 ---
 
 # Formation des Talents : Guide Complet pour le Développement

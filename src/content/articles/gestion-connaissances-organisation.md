@@ -1,24 +1,19 @@
 ---
-date: '2024-03-15'
-description: "Guide stratégique sur la gestion des connaissances et l'organisation : méthodes, outils et bonnes pratiques pour optimiser le partage et la valorisation des connaissances"
 draft: false
-title: 'Gestion des Connaissances et Organisation : Guide Stratégique'
-type: 'article'
-author: 'Gérald Pameole'
-tags: ['connaissances', 'organisation', 'partage', 'innovation']
+title: "Gestion des Connaissances et Organisation : Guide Stratégique"
+description: "Guide stratégique sur la gestion des connaissances et l"organisation : méthodes, outils et bonnes pratiques pour optimiser le partage et la valorisation des connaissances"
+date: "2024-03-15"
+author: "Gérald Pameole"
+type: "article"
 featured: false
 readingTime: 15
-skills: ['Gestion des connaissances', 'Organisation', 'Partage', 'Innovation']
 hasMermaid: true
-targetAudience: 'Professionnels RH et Managers'
-domain: 'Ressources Humaines'
-pillColor: 'indigo'
-relatedArticles:
-  [
-    'gestion-competences-developpement',
-    'gestion-performance-evaluation',
-    'transformation-numerique-talents',
-  ]
+targetAudience: "Professionnels RH et Managers"
+domain: "Ressources Humaines"
+tags: ["connaissances", "organisation", "partage", "innovation"]
+pillColor: "indigo"
+skills: ["Gestion des connaissances", "Organisation", "Partage", "Innovation"]
+relatedArticles: 
 ---
 
 # Gestion des Connaissances en Organisation

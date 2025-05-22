@@ -1,10 +1,8 @@
 ---
-title: "L'Importance du Leadership dans la Transformation des Organisations"
-publishDate: 2024-03-27
-type: "article"
+title: "L"Importance du Leadership dans la Transformation des Organisations"
+description: "Explorez les qualités essentielles d"un leader efficace dans l'environnement professionnel actuel."
 author: Gérald Paméole
-description: "Explorez les qualités essentielles d'un leader efficace dans l'environnement professionnel actuel."
-theme: "management"
+type: "article"
 ---
 
 <style>

@@ -1,19 +1,19 @@
 ---
 draft: false
-title: 'Formation au Leadership : Guide Complet pour le Développement des Compétences'
-description: "Découvrez les stratégies et méthodes pour développer efficacement le leadership. Un guide détaillé sur l'apprentissage, le développement et l'application des compétences de leadership."
-date: '2024-03-20'
-author: 'Gérald Pameole'
-type: 'article'
+title: "Formation au Leadership : Guide Complet pour le Développement des Compétences"
+description: "Découvrez les stratégies et méthodes pour développer efficacement le leadership. Un guide détaillé sur l"apprentissage, le développement et l"application des compétences de leadership."
+date: "2024-03-20"
+author: "Gérald Pameole"
+type: "article"
 featured: false
 readingTime: 15
 hasMermaid: true
-targetAudience: 'Professionnels RH et Formateurs'
-domain: 'Formation & Développement'
-tags: ['formation', 'leadership', 'développement', 'compétences', 'management']
-pillColor: 'green'
-skills: ['Formation', 'Leadership', 'Développement', 'Management', 'Soft Skills']
-relatedArticles: ['formation-mentorat', 'gestion-talents-developpement']
+targetAudience: "Professionnels RH et Formateurs"
+domain: "Formation & Développement"
+tags: ["formation", "leadership", "développement", "compétences", "management"]
+pillColor: "green"
+skills: ["Formation", "Leadership", "Développement", "Management", "Soft Skills"]
+relatedArticles: ["formation-mentorat", "gestion-talents-developpement"]
 ---
 
 # Formation au Leadership : Guide Complet pour le Développement des Compétences

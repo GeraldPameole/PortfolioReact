@@ -1,11 +1,11 @@
 ---
-title: "Optimisation des Processus d'Entreprise : Guide Complet pour l'Efficacité Opérationnelle"
-description: "Découvrez les meilleures pratiques et méthodologies pour optimiser vos processus d'entreprise. Un guide détaillé sur l'amélioration continue, l'automatisation et la transformation digitale."
-date: '2024-03-20'
-author: 'Gérald Pameole'
 draft: false
-tags: ['processus', 'optimisation', 'efficacité', 'transformation digitale']
-pillColor: 'green'
+title: "Optimisation des Processus d"Entreprise : Guide Complet pour l"Efficacité Opérationnelle"
+description: "Découvrez les meilleures pratiques et méthodologies pour optimiser vos processus d"entreprise. Un guide détaillé sur l"amélioration continue, l"automatisation et la transformation digitale."
+date: "2024-03-20"
+author: "Gérald Pameole"
+tags: ["processus", "optimisation", "efficacité", "transformation digitale"]
+pillColor: "green'
 ---
 
 # Optimisation des Processus d'Entreprise : Guide Complet pour l'Efficacité Opérationnelle

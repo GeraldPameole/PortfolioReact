@@ -1,28 +1,9 @@
 ---
 title: "La Méthode GTD Expliquée et Adaptée au Contexte Numérique Actuel"
-publishDate: 2024-04-05
-type: "article"
+description: "Guide complet sur la méthodologie Getting Things Done de David Allen, avec une adaptation moderne pour les outils digitaux et l"environnement de travail hybride."
 author: "Gérald Paméole"
-description: "Guide complet sur la méthodologie Getting Things Done de David Allen, avec une adaptation moderne pour les outils digitaux et l'environnement de travail hybride."
-theme: "productivite"
-image: "/assets/articles/methode-gtd.jpg"
-keywords: "GTD, Getting Things Done, David Allen, productivité, gestion de tâches, organisation, système GTD, flux de travail, capture, clarification, outils numériques, revue hebdomadaire"
-note: 4.9
-skills:
-  - Organisation systémique
-  - Gestion de l'information
-  - Planification stratégique
-  - Clarté mentale
-  - Productivité personnelle
-  - Prise de décision
-relatedContent:
-  - title: "Vaincre la Procrastination : Solutions Efficaces Basées sur les Neurosciences"
-    url: "/articles/procrastination-solutions-efficaces"
-  - title: "Gestion du Temps pour Professionnels Surchargés : Approche Stratégique"
-    url: "/articles/gestion-temps-professionnels"
-  - title: "Deep Work"
-    url: "/books/deep-work"
-    type: "book"
+type: "book"
+skills: 
 ---
 
 # La Méthode GTD Expliquée et Adaptée au Contexte Numérique Actuel

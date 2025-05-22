@@ -1,26 +1,19 @@
 ---
-title: 'Gestion de Projet Agile : Guide Complet des Meilleures Pratiques'
-description: 'Découvrez les meilleures pratiques de la gestion de projet agile. Un guide détaillé sur les méthodologies, outils et techniques pour des projets réussis.'
-date: '2024-03-20'
-author: 'Gérald Pameole'
 draft: false
-type: 'article'
+title: "Gestion de Projet Agile : Guide Complet des Meilleures Pratiques"
+description: "Découvrez les meilleures pratiques de la gestion de projet agile. Un guide détaillé sur les méthodologies, outils et techniques pour des projets réussis."
+date: "2024-03-20"
+author: "Gérald Pameole"
+type: "article"
 featured: false
 readingTime: 20
 hasMermaid: true
-targetAudience: 'Chefs de Projet'
-domain: 'Gestion de Projet'
-tags: ['gestion de projet', 'agile', 'scrum', 'méthodologie', 'collaboration']
-pillColor: 'blue'
-skills:
-  - Gestion de Projet Agile
-  - Scrum
-  - Kanban
-  - Collaboration
-  - Leadership
-relatedArticles:
-  - gestion-projet-risques
-  - gestion-projet-performance
+targetAudience: "Chefs de Projet"
+domain: "Gestion de Projet"
+tags: ["gestion de projet", "agile", "scrum", "méthodologie", "collaboration"]
+pillColor: "blue"
+skills: 
+relatedArticles: 
 ---
 
 # Maîtrisez l'Agilité : Guide Pratique

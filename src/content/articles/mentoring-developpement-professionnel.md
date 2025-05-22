@@ -1,28 +1,9 @@
 ---
 title: "Mentoring et Développement Professionnel : Guide Complet"
-description: "Comment établir et bénéficier d'une relation de mentorat efficace pour accélérer sa progression de carrière et développer son leadership."
-publishDate: 2024-07-15
-type: "article"
+description: "Comment établir et bénéficier d"une relation de mentorat efficace pour accélérer sa progression de carrière et développer son leadership."
 author: "Gérald Paméole"
-theme: "carriere"
-image: "/assets/articles/mentorat-professionnel.jpg"
-keywords: "mentorat professionnel, développement de carrière, coaching, relation mentor-mentoré, apprentissage par modélisation, mentorat inversé, progression professionnelle"
-note: 4.7
-skills:
-  - Communication interpersonnelle
-  - Écoute active
-  - Transmission de savoir
-  - Intelligence émotionnelle
-  - Questionnement socratique
-  - Réflexivité
-relatedContent:
-  - title: "L'Apprentissage Continu: Stratégie Clé pour l'Évolution Professionnelle"
-    url: "/articles/apprentissage-continu-developpement-competences"
-  - title: "Négocier son Salaire: Techniques Avancées et Psychologie de la Persuasion"
-    url: "/articles/negocier-salaire-techniques-avancees"
-  - title: "Influence"
-    url: "/books/influence"
-    type: "book"
+type: "book"
+skills: 
 ---
 
 # Le Mentorat: Catalyseur Méconnu du Développement Professionnel

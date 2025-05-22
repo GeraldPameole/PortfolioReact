@@ -1,26 +1,19 @@
 ---
-title: 'Gestion des Jeunes Talents : Guide Complet pour le Développement'
-description: 'Découvrez les stratégies et méthodes pour attirer, développer et fidéliser les jeunes talents. Un guide détaillé sur le management intergénérationnel et le développement de carrière.'
-date: '2024-03-20'
-author: 'Gérald Pameole'
 draft: false
-type: 'article'
+title: "Gestion des Jeunes Talents : Guide Complet pour le Développement"
+description: "Découvrez les stratégies et méthodes pour attirer, développer et fidéliser les jeunes talents. Un guide détaillé sur le management intergénérationnel et le développement de carrière."
+date: "2024-03-20"
+author: "Gérald Pameole"
+type: "article"
 featured: false
 readingTime: 15
 hasMermaid: true
-targetAudience: 'Professionnels RH'
-domain: 'Gestion des Talents'
-tags: ['jeunes talents', 'développement', 'fidélisation', 'management', 'carrière']
-pillColor: 'yellow'
-skills:
-  - Gestion des Jeunes Talents
-  - Développement de Carrière
-  - Management Intergénérationnel
-  - Formation
-  - Mentoring
-relatedArticles:
-  - gestion-talents-recrutement
-  - gestion-talents-formation
+targetAudience: "Professionnels RH"
+domain: "Gestion des Talents"
+tags: ["jeunes talents", "développement", "fidélisation", "management", "carrière"]
+pillColor: "yellow"
+skills: 
+relatedArticles: 
 ---
 
 # Gestion des Jeunes Talents : Guide Complet pour le Développement
