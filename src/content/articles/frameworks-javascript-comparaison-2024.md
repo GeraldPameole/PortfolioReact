@@ -1,29 +1,26 @@
 ---
-title: "Frameworks JavaScript en 2024 : Guide stratégique pour le développement frontend"
-description: "Analyse comparative des principaux frameworks JavaScript : React, Vue, Angular, Svelte et Solid. Comment choisir l'outil idéal pour votre prochain projet web?"
-publishDate: 2024-02-01
-type: "article"
-author: "Gérald Paméole"
-theme: "developpement-web"
-keywords: "frameworks JavaScript, React, Vue.js, Angular, Svelte, Solid, comparaison frameworks, développement frontend, choix framework web, JavaScript 2024"
-note: 4.8
-image: "/assets/articles/frameworks-javascript-comparaison.jpg"
-timeReading: "8 min"
+title: 'Frameworks JavaScript 2024 : Guide Complet pour Choisir la Bonne Technologie'
+description: 'Découvrez une analyse comparative des principaux frameworks JavaScript en 2024. Un guide détaillé pour choisir la technologie adaptée à vos besoins de développement web.'
+date: '2024-03-20'
+author: 'Gérald Pameole'
+draft: false
+type: 'article'
+featured: false
+readingTime: 15
+hasMermaid: true
+targetAudience: 'Développeurs Web'
+domain: 'Développement Web'
+tags: ['développement web', 'JavaScript', 'frameworks', 'React', 'Vue', 'Angular']
+pillColor: 'green'
 skills:
-  - Analyse comparative
-  - Architecture frontend
-  - Sélection technologique
-  - Frameworks JavaScript
-  - Optimisation de performance web
-  - Développement d'applications modernes
-relatedContent:
-  - title: "Les Technologies JavaScript Incontournables en 2024"
-    url: "/articles/technologies-javascript-2024"
-  - title: "Nouvelles Tendances de Développement Web"
-    url: "/articles/nouvelles-tendances-developpement-web"
-  - title: "Clean Code"
-    url: "/books/clean-code"
-    type: "book"
+  - JavaScript
+  - React
+  - Vue.js
+  - Angular
+  - Architecture web
+relatedArticles:
+  - technologies-javascript-2024
+  - nouvelles-tendances-developpement-web
 ---
 
 # Frameworks JavaScript en 2024 : Guide stratégique pour le développement frontend

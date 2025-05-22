@@ -1,28 +1,35 @@
 ---
-title: "Web Accessibilité : Guide Pratique pour un Web Inclusif"
-description: "Comment concevoir et développer des sites web véritablement accessibles : WCAG 2.2, techniques d'implémentation, tests d'accessibilité et impact sur l'expérience utilisateur et le SEO."
-publishDate: 2024-03-31
-type: "article"
-author: "Gérald Paméole"
-theme: "developpement-web"
-keywords: "accessibilité web, WCAG 2.2, ARIA, développement accessible, UX inclusive, tests d'accessibilité, HTML sémantique, SEO, conformité légale"
-note: 4.9
-image: "/assets/articles/accessibilite-web.jpg"
+title: 'Accessibilité Web : Guide Complet pour un Web Inclusif'
+description: "Découvrez les principes et bonnes pratiques de l'accessibilité web. Un guide détaillé pour créer des sites web accessibles à tous les utilisateurs."
+date: '2024-03-20'
+author: 'Gérald Pameole'
+draft: false
+type: 'article'
+featured: false
+readingTime: 15
+hasMermaid: true
+targetAudience: 'Développeurs Web'
+domain: 'Développement Web'
+tags: ['développement web', 'accessibilité', 'WCAG', 'inclusion', 'UX']
+pillColor: 'green'
+image: '/assets/articles/accessibilite-web.jpg'
 skills:
-  - Développement web accessible
+  - Accessibilité Web
+  - WCAG 2.1
   - HTML sémantique
+  - ARIA
   - Tests d'accessibilité
-  - Implémentation ARIA
-  - Conception UX inclusive
-  - Conformité WCAG
+relatedArticles:
+  - web-javascript-modern
+  - web-tendances-2024
 relatedContent:
   - title: "Progressive Web Apps en 2024 : L'Avenir du Web Mobile"
-    url: "/articles/progressive-web-apps-2024"
-  - title: "Frameworks JavaScript en 2024 : Analyse Comparative pour Bien Choisir"
-    url: "/articles/frameworks-javascript-comparaison-2024"
-  - title: "Clean Code"
-    url: "/books/clean-code"
-    type: "book"
+    url: '/articles/progressive-web-apps-2024'
+  - title: 'Frameworks JavaScript en 2024 : Analyse Comparative pour Bien Choisir'
+    url: '/articles/frameworks-javascript-comparaison-2024'
+  - title: 'Clean Code'
+    url: '/books/clean-code'
+    type: 'book'
 ---
 
 # Accessibilité Web en 2024 : Guide Pratique pour Développeurs
@@ -152,8 +159,8 @@ function trapFocus(element) {
   const firstElement = focusableElements[0];
   const lastElement = focusableElements[focusableElements.length - 1];
 
-  element.addEventListener("keydown", (e) => {
-    if (e.key === "Tab") {
+  element.addEventListener('keydown', (e) => {
+    if (e.key === 'Tab') {
       if (e.shiftKey && document.activeElement === firstElement) {
         e.preventDefault();
         lastElement.focus();
@@ -182,25 +189,14 @@ Les contenus non textuels doivent toujours avoir une alternative.
 
 <!-- Figure avec légende -->
 <figure>
-  <img
-    src="equipe.jpg"
-    alt="L'équipe de développement lors de la conférence React Europe"
-  />
-  <figcaption>
-    Notre équipe présentant le nouveau produit à React Europe 2024
-  </figcaption>
+  <img src="equipe.jpg" alt="L'équipe de développement lors de la conférence React Europe" />
+  <figcaption>Notre équipe présentant le nouveau produit à React Europe 2024</figcaption>
 </figure>
 
 <!-- Vidéo accessible -->
 <video controls>
   <source src="demo.mp4" type="video/mp4" />
-  <track
-    kind="subtitles"
-    src="demo.fr.vtt"
-    srclang="fr"
-    label="Français"
-    default
-  />
+  <track kind="subtitles" src="demo.fr.vtt" srclang="fr" label="Français" default />
   <track kind="subtitles" src="demo.en.vtt" srclang="en" label="English" />
   <p>
     Votre navigateur ne prend pas en charge les vidéos HTML5. Voici
@@ -238,9 +234,9 @@ Les formulaires sont souvent problématiques pour l'accessibilité.
 
 ```javascript
 // Validation de formulaire accessible
-document.querySelector("form").addEventListener("submit", (e) => {
-  const emailInput = document.getElementById("email");
-  const emailError = document.getElementById("email-error");
+document.querySelector('form').addEventListener('submit', (e) => {
+  const emailInput = document.getElementById('email');
+  const emailError = document.getElementById('email-error');
 
   if (!emailInput.validity.valid) {
     e.preventDefault();
@@ -248,10 +244,10 @@ document.querySelector("form").addEventListener("submit", (e) => {
     if (emailInput.validity.valueMissing) {
       emailError.textContent = "L'adresse email est requise.";
     } else if (emailInput.validity.typeMismatch) {
-      emailError.textContent = "Veuillez entrer une adresse email valide.";
+      emailError.textContent = 'Veuillez entrer une adresse email valide.';
     }
 
-    emailInput.setAttribute("aria-invalid", "true");
+    emailInput.setAttribute('aria-invalid', 'true');
     emailInput.focus();
   }
 });
@@ -264,11 +260,7 @@ ARIA (Accessible Rich Internet Applications) permet d'améliorer l'accessibilit�
 ```html
 <!-- Menu déroulant accessible -->
 <div class="dropdown">
-  <button
-    aria-expanded="false"
-    aria-controls="dropdown-menu"
-    id="dropdown-toggle"
-  >
+  <button aria-expanded="false" aria-controls="dropdown-menu" id="dropdown-toggle">
     Options
     <span aria-hidden="true">▼</span>
   </button>
@@ -283,18 +275,18 @@ ARIA (Accessible Rich Internet Applications) permet d'améliorer l'accessibilit�
 
 ```javascript
 // Gestion du menu déroulant
-const button = document.getElementById("dropdown-toggle");
-const menu = document.getElementById("dropdown-menu");
+const button = document.getElementById('dropdown-toggle');
+const menu = document.getElementById('dropdown-menu');
 
-button.addEventListener("click", () => {
-  const expanded = button.getAttribute("aria-expanded") === "true";
-  button.setAttribute("aria-expanded", !expanded);
+button.addEventListener('click', () => {
+  const expanded = button.getAttribute('aria-expanded') === 'true';
+  button.setAttribute('aria-expanded', !expanded);
 
   if (expanded) {
     menu.hidden = true;
   } else {
     menu.hidden = false;
-    menu.querySelector("li a").focus();
+    menu.querySelector('li a').focus();
   }
 });
 ```
@@ -311,12 +303,12 @@ Les contenus qui se mettent à jour dynamiquement doivent être annoncés aux te
 
 ```javascript
 function showNotification(message) {
-  const notificationArea = document.querySelector(".notification-area");
+  const notificationArea = document.querySelector('.notification-area');
   notificationArea.textContent = message;
 
   // Optionnel : effacer après un délai
   setTimeout(() => {
-    notificationArea.textContent = "";
+    notificationArea.textContent = '';
   }, 5000);
 }
 ```
@@ -375,7 +367,7 @@ Les outils automatisés permettent de détecter environ 30% des problèmes d'acc
 
    ```javascript
    // Intégration dans les tests automatisés
-   import { runAxe } from "axe-core/runner";
+   import { runAxe } from 'axe-core/runner';
 
    test("La page d'accueil est accessible", async () => {
      // Configuration de votre page de test
@@ -458,10 +450,7 @@ Voici un exemple montrant comment l'amélioration de l'accessibilité peut impac
   </p>
   <section>
     <h2>1. Optimisez vos titres avec des mots-clés pertinents</h2>
-    <p>
-      Les titres sont l'un des facteurs les plus importants pour le
-      référencement...
-    </p>
+    <p>Les titres sont l'un des facteurs les plus importants pour le référencement...</p>
   </section>
   <!-- Autres sections... -->
 </article>
@@ -571,12 +560,11 @@ Le web a été conçu pour être universellement accessible. À nous, développe
 
 ## Compétences associées à cet article
 
-- **Développement web accessible**
+- **Accessibilité Web**
+- **WCAG 2.1**
 - **HTML sémantique**
-- **ARIA et WAI-ARIA**
+- **ARIA**
 - **Tests d'accessibilité**
-- **UX inclusive**
-- **Conformité légale web**
 
 ## Articles et ressources associés
 
