@@ -10,10 +10,10 @@ readingTime: 12
 hasMermaid: true
 targetAudience: "Professionnels et Étudiants"
 domain: "Productivité & Concentration"
-tags: 
+tags: ""
 pillColor: "purple"
-skills: 
-relatedArticles: 
+skills: ""
+relatedArticles: ""
 ---
 
 # Deep Work : Guide Complet pour une Concentration Maximale

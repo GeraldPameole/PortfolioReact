@@ -1,19 +1,19 @@
 ---
 draft: false
 title: "Guide des Couleurs de Pilules : Signification et Utilisation"
-description: "Guide complet sur l\"utilisation des couleurs de pilules dans la documentation : signification, bonnes pratiques et exemples d\"application"
+description: "Guide complet sur l\\\"utilisation des couleurs de pilules dans la documentation : signification, bonnes pratiques et exemples d\\\"application"
 date: "2024-03-15"
 author: "Gérald Pameole"
-type: article
+type: "article"
 featured: false
 readingTime: 15
 hasMermaid: true
 targetAudience: "Designers et Documentalistes"
 domain: "Design et Documentation"
-tags: 
+tags: ""
 pillColor: "blue"
-skills: 
-relatedArticles: 
+skills: ""
+relatedArticles: ""
 ---
 
 # Guide des Couleurs de Pilules : Signification et Utilisation

@@ -1,7 +1,7 @@
 ---
 draft: false
 title: "Gestion des Connaissances et Organisation : Guide Stratégique"
-description: "Guide stratégique sur la gestion des connaissances et l"organisation : méthodes, outils et bonnes pratiques pour optimiser le partage et la valorisation des connaissances"
+description: "Guide stratégique sur la gestion des connaissances et l\\"organisation : méthodes, outils et bonnes pratiques pour optimiser le partage et la valorisation des connaissances"
 date: "2024-03-15"
 author: "Gérald Pameole"
 type: "article"
@@ -13,7 +13,7 @@ domain: "Ressources Humaines"
 tags: ["connaissances", "organisation", "partage", "innovation"]
 pillColor: "indigo"
 skills: ["Gestion des connaissances", "Organisation", "Partage", "Innovation"]
-relatedArticles: 
+relatedArticles: ""
 ---
 
 # Gestion des Connaissances en Organisation

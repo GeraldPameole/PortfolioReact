@@ -13,7 +13,7 @@ domain: "Ressources Humaines"
 tags: ["compétences", "développement", "formation", "management"]
 pillColor: "teal"
 skills: ["Gestion des compétences", "Développement", "Formation", "Management"]
-relatedArticles: 
+relatedArticles: ""
 ---
 
 # Gestion et Développement des Compétences : Guide Stratégique

@@ -1,10 +1,10 @@
 ---
 draft: false
 title: "Accessibilité Web : Guide Complet pour un Web Inclusif"
-description: "Découvrez les principes et bonnes pratiques de l"accessibilité web. Un guide détaillé pour créer des sites web accessibles à tous les utilisateurs."
+description: "Découvrez les principes et bonnes pratiques de l\\"accessibilité web. Un guide détaillé pour créer des sites web accessibles à tous les utilisateurs."
 date: "2024-03-20"
 author: "Gérald Pameole"
-type: "book'
+type: "book"
 featured: false
 readingTime: 15
 hasMermaid: true
@@ -12,8 +12,8 @@ targetAudience: "Développeurs Web"
 domain: "Développement Web"
 tags: ["développement web", "accessibilité", "WCAG", "inclusion", "UX"]
 pillColor: "green"
-skills: 
-relatedArticles: 
+skills: ""
+relatedArticles: ""
 ---
 
 # Accessibilité Web en 2024 : Guide Pratique pour Développeurs

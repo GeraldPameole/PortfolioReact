@@ -12,8 +12,8 @@ targetAudience: "Professionnels RH"
 domain: "Gestion des Talents"
 tags: ["jeunes talents", "développement", "fidélisation", "management", "carrière"]
 pillColor: "yellow"
-skills: 
-relatedArticles: 
+skills: ""
+relatedArticles: ""
 ---
 
 # Gestion des Jeunes Talents : Guide Complet pour le Développement

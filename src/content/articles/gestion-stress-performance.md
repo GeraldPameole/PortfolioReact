@@ -12,7 +12,7 @@ targetAudience: "Professionnels"
 domain: "Productivité & Organisation"
 tags: ["productivité", "gestion du stress", "performance", "bien-être", "équilibre"]
 pillColor: "turquoise"
-skills: 
+skills: ""
 relatedArticles: ["gestion-temps-productivite", "gestion-surcharge-informationnelle"]
 ---
 

@@ -1,7 +1,7 @@
 ---
 draft: false
-title: "Fidélisation des Talents : Guide Complet pour l"Engagement"
-description: "Découvrez les stratégies et pratiques pour fidéliser vos collaborateurs. Un guide détaillé sur l"engagement, la motivation et le développement de carrière."
+title: "Fidélisation des Talents : Guide Complet pour l\\"Engagement"
+description: "Découvrez les stratégies et pratiques pour fidéliser vos collaborateurs. Un guide détaillé sur l\\"engagement, la motivation et le développement de carrière."
 date: "2024-03-20"
 author: "Gérald Pameole"
 type: "article"
@@ -12,8 +12,8 @@ targetAudience: "Professionnels RH"
 domain: "Gestion des Talents"
 tags: ["fidélisation", "engagement", "motivation", "carrière", "développement"]
 pillColor: "yellow"
-skills: 
-relatedArticles: 
+skills: ""
+relatedArticles: ""
 ---
 
 # Fidélisation des Talents : Guide Complet pour l'Engagement

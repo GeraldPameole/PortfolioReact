@@ -1,9 +1,9 @@
 ---
 title: "Apprentissage Continu : Développement des Compétences en 2024"
-description: "Comment l"apprentissage permanent est devenu indispensable pour rester pertinent sur le marché du travail et comment structurer votre démarche d"acquisition de compétences."
+description: "Comment l\\"apprentissage permanent est devenu indispensable pour rester pertinent sur le marché du travail et comment structurer votre démarche d\\"acquisition de compétences."
 author: "Gérald Paméole"
 type: "book"
-skills: 
+skills: ""
 ---
 
 # L'Apprentissage Continu: Stratégie Clé pour l'Évolution Professionnelle

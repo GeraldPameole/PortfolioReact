@@ -4,16 +4,16 @@ title: "Transformation Numérique en Entreprise : Guide Stratégique"
 description: "Guide complet sur la transformation numérique en entreprise : stratégies, enjeux et bonnes pratiques pour réussir sa transition digitale"
 date: "2024-03-15"
 author: "Gérald Pameole"
-type: article
+type: "article"
 featured: false
 readingTime: 15
 hasMermaid: true
 targetAudience: "Dirigeants et Managers"
 domain: "Transformation Digitale"
-tags: 
+tags: ""
 pillColor: "blue"
-skills: 
-relatedArticles: 
+skills: ""
+relatedArticles: ""
 ---
 
 # Transformation Numérique en Entreprise : Guide Stratégique

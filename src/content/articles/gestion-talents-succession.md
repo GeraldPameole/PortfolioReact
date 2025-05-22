@@ -10,10 +10,10 @@ readingTime: 15
 hasMermaid: true
 targetAudience: "Professionnels RH"
 domain: "Ressources Humaines"
-tags: 
+tags: ""
 pillColor: "blue"
-skills: 
-relatedArticles: 
+skills: ""
+relatedArticles: ""
 ---
 
 # Planification de la Relève : Guide Complet pour la Succession

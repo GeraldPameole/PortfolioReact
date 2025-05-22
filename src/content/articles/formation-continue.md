@@ -1,7 +1,7 @@
 ---
 draft: false
 title: "Formation Continue : Guide Complet pour le Développement des Compétences"
-description: "Découvrez les stratégies et méthodes pour développer efficacement la formation continue. Un guide détaillé sur l"apprentissage, le développement et l"application des compétences en continu."
+description: "Découvrez les stratégies et méthodes pour développer efficacement la formation continue. Un guide détaillé sur l\\"apprentissage, le développement et l\\"application des compétences en continu."
 date: "2024-03-20"
 author: "Gérald Pameole"
 type: "article"

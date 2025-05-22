@@ -3,7 +3,7 @@ title: "Vaincre la Procrastination : Solutions Efficaces Basées sur les Neurosc
 description: "Découvrez les mécanismes cognitifs derrière la procrastination et les techniques pratiques fondées sur les dernières recherches en neurosciences pour surmonter ce frein à la productivité."
 author: "Gérald Paméole"
 type: "book"
-skills: 
+skills: ""
 ---
 
 # Vaincre la Procrastination : Solutions Efficaces Basées sur les Neurosciences

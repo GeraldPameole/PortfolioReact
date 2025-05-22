@@ -1,7 +1,7 @@
 ---
 draft: false
 title: "Formation à la Communication : Guide Complet pour le Développement des Compétences"
-description: "Découvrez les stratégies et méthodes pour développer efficacement la communication. Un guide détaillé sur l"apprentissage, le développement et l"application des compétences de communication."
+description: "Découvrez les stratégies et méthodes pour développer efficacement la communication. Un guide détaillé sur l\\"apprentissage, le développement et l\\"application des compétences de communication."
 date: "2024-03-20"
 author: "Gérald Pameole"
 type: "article"

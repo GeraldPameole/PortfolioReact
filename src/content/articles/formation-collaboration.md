@@ -1,7 +1,7 @@
 ---
 draft: false
-title: "Formation à la Collaboration : Guide Complet pour le Développement du Travail d"Équipe"
-description: "Découvrez les stratégies et méthodes pour développer efficacement la collaboration. Un guide détaillé sur l"apprentissage, le développement et l"application du travail d"équipe."
+title: "Formation à la Collaboration : Guide Complet pour le Développement du Travail d\\"Équipe"
+description: "Découvrez les stratégies et méthodes pour développer efficacement la collaboration. Un guide détaillé sur l\\"apprentissage, le développement et l\\"application du travail d\\"équipe."
 date: "2024-03-20"
 author: "Gérald Pameole"
 type: "article"

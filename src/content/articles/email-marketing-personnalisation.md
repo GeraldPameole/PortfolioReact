@@ -1,6 +1,6 @@
 ---
-title: "Email Marketing : Stratégies de Personnalisation pour Maximiser l"Engagement"
-description: "Découvrez comment implémenter une personnalisation hyper-ciblée dans vos campagnes d"email marketing pour augmenter significativement vos taux d'ouverture et de conversion."
+title: "Email Marketing : Stratégies de Personnalisation pour Maximiser l\\"Engagement"
+description: "Découvrez comment implémenter une personnalisation hyper-ciblée dans vos campagnes d\\"email marketing pour augmenter significativement vos taux d\'ouverture et de conversion."
 author: "Gérald Paméole"
 type: "article"
 ---

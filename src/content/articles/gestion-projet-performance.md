@@ -13,7 +13,7 @@ domain: "Management"
 tags: ["projet", "performance", "management", "stratégie"]
 pillColor: "amber"
 skills: ["Gestion de projet", "Performance", "Management", "Stratégie"]
-relatedArticles: 
+relatedArticles: ""
 ---
 
 # Gestion de Projet et Performance : Guide Stratégique

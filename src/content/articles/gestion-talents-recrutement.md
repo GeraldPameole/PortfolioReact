@@ -13,7 +13,7 @@ domain: "Ressources Humaines"
 tags: ["recrutement", "talents", "management", "stratégie"]
 pillColor: "orange"
 skills: ["Recrutement", "Gestion des talents", "Management", "Stratégie"]
-relatedArticles: 
+relatedArticles: ""
 ---
 
 # Gestion des Talents et Recrutement : Guide Stratégique

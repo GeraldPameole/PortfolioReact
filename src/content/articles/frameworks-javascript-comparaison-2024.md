@@ -12,8 +12,8 @@ targetAudience: "Développeurs Web"
 domain: "Développement Web"
 tags: ["développement web", "JavaScript", "frameworks", "React", "Vue", "Angular"]
 pillColor: "green"
-skills: 
-relatedArticles: 
+skills: ""
+relatedArticles: ""
 ---
 
 # Frameworks JavaScript en 2024 : Guide stratégique pour le développement frontend

@@ -1,7 +1,7 @@
 ---
 draft: false
 title: "Formation au Leadership : Guide Complet pour le Développement des Compétences"
-description: "Découvrez les stratégies et méthodes pour développer efficacement le leadership. Un guide détaillé sur l"apprentissage, le développement et l"application des compétences de leadership."
+description: "Découvrez les stratégies et méthodes pour développer efficacement le leadership. Un guide détaillé sur l\\"apprentissage, le développement et l\\"application des compétences de leadership."
 date: "2024-03-20"
 author: "Gérald Pameole"
 type: "article"

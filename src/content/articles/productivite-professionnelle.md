@@ -10,10 +10,10 @@ readingTime: 12
 hasMermaid: true
 targetAudience: "Professionnels"
 domain: "Productivité & Performance"
-tags: 
+tags: ""
 pillColor: "green"
-skills: 
-relatedArticles: 
+skills: ""
+relatedArticles: ""
 ---
 
 # Productivité Professionnelle : Guide Complet pour Maximiser son Efficacité

@@ -12,8 +12,8 @@ targetAudience: "Développeurs Web"
 domain: "Développement Web"
 tags: ["développement web", "tendances", "innovation", "technologies web", "2024"]
 pillColor: "green"
-skills: 
-relatedArticles: 
+skills: ""
+relatedArticles: ""
 ---
 
 // ... existing code ...

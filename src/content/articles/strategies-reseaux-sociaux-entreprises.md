@@ -1,7 +1,7 @@
 ---
 draft: false
 title: "Stratégies Réseaux Sociaux : Guide Complet pour les Entreprises"
-description: "Découvrez les stratégies et techniques pour développer votre présence sur les réseaux sociaux. Un guide détaillé sur le marketing social, l"engagement et la croissance."
+description: "Découvrez les stratégies et techniques pour développer votre présence sur les réseaux sociaux. Un guide détaillé sur le marketing social, l\\"engagement et la croissance."
 date: "2024-03-20"
 author: "Gérald Pameole"
 type: "article"
@@ -10,10 +10,10 @@ readingTime: 15
 hasMermaid: true
 targetAudience: "Professionnels Marketing"
 domain: "Développement Commercial"
-tags: 
+tags: ""
 pillColor: "red"
-skills: 
-relatedArticles: 
+skills: ""
+relatedArticles: ""
 ---
 
 ## Introduction

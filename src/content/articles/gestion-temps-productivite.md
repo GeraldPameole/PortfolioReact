@@ -4,16 +4,16 @@ title: "Gestion du Temps et Productivité : Guide Pratique"
 description: "Guide pratique sur la gestion du temps et la productivité : méthodes, outils et bonnes pratiques pour optimiser votre efficacité personnelle et professionnelle"
 date: "2024-03-15"
 author: "Gérald Pameole"
-type: article
+type: "article"
 featured: false
 readingTime: 15
 hasMermaid: true
 targetAudience: "Professionnels et Étudiants"
 domain: "Productivité"
-tags: 
+tags: ""
 pillColor: "blue"
-skills: 
-relatedArticles: 
+skills: ""
+relatedArticles: ""
 ---
 
 # Gestion du Temps et Productivité : Guide Pratique

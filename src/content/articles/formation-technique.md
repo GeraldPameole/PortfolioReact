@@ -13,7 +13,7 @@ domain: "Formation"
 tags: ["formation", "technique", "compétences", "développement"]
 pillColor: "rose"
 skills: ["Formation", "Technique", "Compétences", "Développement"]
-relatedArticles: 
+relatedArticles: ""
 ---
 
 # Formation Technique : Guide Stratégique

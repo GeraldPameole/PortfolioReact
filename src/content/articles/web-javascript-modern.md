@@ -12,8 +12,8 @@ targetAudience: "Développeurs JavaScript"
 domain: "Développement Web"
 tags: ["développement web", "javascript", "ES2024", "programmation", "web"]
 pillColor: "green"
-skills: 
-relatedArticles: 
+skills: ""
+relatedArticles: ""
 ---
 
 // ... existing code ...

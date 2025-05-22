@@ -1,7 +1,7 @@
 ---
 draft: false
-title: "Formation à la Créativité : Guide Complet pour le Développement de l"Innovation"
-description: "Découvrez les stratégies et méthodes pour développer efficacement la créativité. Un guide détaillé sur l"apprentissage, le développement et l"application de l"innovation."
+title: "Formation à la Créativité : Guide Complet pour le Développement de l\\"Innovation"
+description: "Découvrez les stratégies et méthodes pour développer efficacement la créativité. Un guide détaillé sur l\\"apprentissage, le développement et l\\"application de l\\"innovation."
 date: "2024-03-20"
 author: "Gérald Pameole"
 type: "article"

@@ -3,7 +3,7 @@ title: "Gestion des Conflits en Équipe : Approche Systémique et Solutions Dura
 description: "Méthodologie structurée pour identifier, analyser et résoudre les conflits au sein des équipes professionnelles, en cultivant un environnement plus résilient."
 author: "Gérald Paméole"
 type: "book"
-skills: 
+skills: ""
 ---
 
 # Gestion des Conflits en Équipe : Approche Systémique et Solutions Durables

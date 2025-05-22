@@ -1,9 +1,9 @@
 ---
 title: "La Méthode GTD Expliquée et Adaptée au Contexte Numérique Actuel"
-description: "Guide complet sur la méthodologie Getting Things Done de David Allen, avec une adaptation moderne pour les outils digitaux et l"environnement de travail hybride."
+description: "Guide complet sur la méthodologie Getting Things Done de David Allen, avec une adaptation moderne pour les outils digitaux et l\\"environnement de travail hybride."
 author: "Gérald Paméole"
 type: "book"
-skills: 
+skills: ""
 ---
 
 # La Méthode GTD Expliquée et Adaptée au Contexte Numérique Actuel

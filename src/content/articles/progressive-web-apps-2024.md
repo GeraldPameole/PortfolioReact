@@ -1,10 +1,10 @@
 ---
-title: "Progressive Web Apps en 2024 : L"Avenir du Web Mobile"
-description: >-
-author: Gérald Paméole
-type: book
-tags: 
-skills: 
+title: "Progressive Web Apps en 2024 : L\\"Avenir du Web Mobile"
+description: ">-"
+author: "Gérald Paméole"
+type: "book"
+tags: ""
+skills: ""
 ---
 
 # Progressive Web Apps en 2024 : L'Avenir du Web Mobile

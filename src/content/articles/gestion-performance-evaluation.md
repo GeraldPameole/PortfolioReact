@@ -1,7 +1,7 @@
 ---
 draft: false
 title: "Gestion de la Performance et Évaluation : Guide Pratique"
-description: "Guide pratique sur la gestion de la performance et l"évaluation : méthodes, outils et bonnes pratiques pour optimiser les processus d"évaluation"
+description: "Guide pratique sur la gestion de la performance et l\\"évaluation : méthodes, outils et bonnes pratiques pour optimiser les processus d\\"évaluation"
 date: "2024-03-15"
 author: "Gérald Pameole"
 type: "article"
@@ -10,10 +10,10 @@ readingTime: 15
 hasMermaid: true
 targetAudience: "Professionnels RH et Managers"
 domain: "Ressources Humaines"
-tags: 
+tags: ""
 pillColor: "blue"
-skills: 
-relatedArticles: 
+skills: ""
+relatedArticles: ""
 ---
 
 # Gestion de la Performance et Évaluation : Guide Pratique

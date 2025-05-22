@@ -12,8 +12,8 @@ targetAudience: "Chefs de Projet"
 domain: "Gestion de Projet"
 tags: ["gestion de projet", "agile", "Scrum", "Kanban", "méthodologie"]
 pillColor: "blue"
-skills: 
-relatedArticles: 
+skills: ""
+relatedArticles: ""
 ---
 
 ##

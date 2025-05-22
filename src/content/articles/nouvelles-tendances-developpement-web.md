@@ -1,7 +1,7 @@
 ---
 title: "Nouvelles Tendances du Développement Web en 2024"
-description: "Exploration des technologies émergentes et des méthodologies qui façonneront l'avenir du développement web dans les prochaines années."
-author: Gérald Paméole
+description: "Exploration des technologies émergentes et des méthodologies qui façonneront l\'avenir du développement web dans les prochaines années."
+author: "Gérald Paméole"
 type: "article"
 ---
 

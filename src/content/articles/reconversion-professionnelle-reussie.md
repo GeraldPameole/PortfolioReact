@@ -3,7 +3,7 @@ title: "Reconversion Professionnelle : Guide pour une Transition Réussie"
 description: "Guide pratique pour changer de carrière avec succès : stratégies, étapes clés et témoignages inspirants de reconversions réussies."
 author: "Gérald Paméole"
 type: "book"
-skills: 
+skills: ""
 ---
 
 # Réussir sa Reconversion Professionnelle en 2024

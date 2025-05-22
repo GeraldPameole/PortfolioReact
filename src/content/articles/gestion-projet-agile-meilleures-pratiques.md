@@ -12,8 +12,8 @@ targetAudience: "Chefs de Projet"
 domain: "Gestion de Projet"
 tags: ["gestion de projet", "agile", "scrum", "méthodologie", "collaboration"]
 pillColor: "blue"
-skills: 
-relatedArticles: 
+skills: ""
+relatedArticles: ""
 ---
 
 # Maîtrisez l'Agilité : Guide Pratique

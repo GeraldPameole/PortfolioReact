@@ -1,7 +1,7 @@
 ---
 draft: false
 title: "Transformation Numérique et Gestion des Talents : Guide Stratégique"
-description: "Guide stratégique sur la transformation numérique et la gestion des talents : méthodes, outils et bonnes pratiques pour adapter les processus RH à l"ère digitale"
+description: "Guide stratégique sur la transformation numérique et la gestion des talents : méthodes, outils et bonnes pratiques pour adapter les processus RH à l\\"ère digitale"
 date: "2024-03-15"
 author: "Gérald Pameole"
 type: "article"
@@ -10,10 +10,10 @@ readingTime: 15
 hasMermaid: true
 targetAudience: "Professionnels RH et Managers"
 domain: "Ressources Humaines"
-tags: 
+tags: ""
 pillColor: "purple"
-skills: 
-relatedArticles: 
+skills: ""
+relatedArticles: ""
 ---
 
 # Transformation Numérique et Gestion des Talents : Guide Stratégique

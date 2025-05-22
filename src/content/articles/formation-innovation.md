@@ -1,7 +1,7 @@
 ---
 draft: false
-title: "Formation à l"Innovation : Guide Complet pour le Développement des Compétences"
-description: "Découvrez les stratégies et méthodes pour développer efficacement l"innovation. Un guide détaillé sur l"apprentissage, le développement et l"application des compétences d"innovation."
+title: "Formation à l\\"Innovation : Guide Complet pour le Développement des Compétences"
+description: "Découvrez les stratégies et méthodes pour développer efficacement l\\"innovation. Un guide détaillé sur l\\"apprentissage, le développement et l\\"application des compétences d\\"innovation."
 date: "2024-03-20"
 author: "Gérald Pameole"
 type: "article"
@@ -13,7 +13,7 @@ domain: "Formation & Développement"
 tags: ["formation", "innovation", "développement", "compétences", "créativité"]
 pillColor: "orange"
 skills: ["Formation", "Innovation", "Développement", "Créativité", "Design Thinking"]
-relatedArticles: ["formation-mentorat", "gestion-talents-developpement']
+relatedArticles: ["formation-mentorat", "gestion-talents-developpement"]
 ---
 
 # Formation à l'Innovation : Guide Complet pour le Développement des Compétences

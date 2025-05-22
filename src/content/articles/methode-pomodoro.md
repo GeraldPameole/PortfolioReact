@@ -10,10 +10,10 @@ readingTime: 10
 hasMermaid: true
 targetAudience: "Professionnels et Étudiants"
 domain: "Productivité & Gestion du Temps"
-tags: 
+tags: ""
 pillColor: "red"
-skills: 
-relatedArticles: 
+skills: ""
+relatedArticles: ""
 ---
 
 # Méthode Pomodoro : Guide Complet pour Optimiser sa Productivité

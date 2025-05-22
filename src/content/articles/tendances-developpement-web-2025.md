@@ -10,10 +10,10 @@ readingTime: 5
 hasMermaid: false
 targetAudience: "Professionnels"
 domain: "Développement Web"
-tags: 
+tags: ""
 pillColor: "blue"
-skills: 
-relatedArticles: 
+skills: ""
+relatedArticles: ""
 ---
 
 ## Introduction

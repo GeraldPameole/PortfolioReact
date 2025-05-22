@@ -1,7 +1,7 @@
 ---
 draft: false
 title: "Formation Professionnelle Continue : Guide Complet pour le Développement des Compétences"
-description: "Découvrez les stratégies et méthodes pour mettre en place une formation professionnelle continue efficace. Un guide détaillé sur l"apprentissage, le développement et l"évolution des compétences."
+description: "Découvrez les stratégies et méthodes pour mettre en place une formation professionnelle continue efficace. Un guide détaillé sur l\\"apprentissage, le développement et l\\"évolution des compétences."
 date: "2024-03-20"
 author: "Gérald Pameole"
 type: "article"

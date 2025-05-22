@@ -1,7 +1,7 @@
 ---
 draft: false
 title: "Gestion de la Diversité : Lutte contre la Xénophobie"
-description: "Guide pratique pour prévenir et gérer les situations de xénophobie en entreprise. Stratégies et bonnes pratiques pour promouvoir l"inclusion et la diversité."
+description: "Guide pratique pour prévenir et gérer les situations de xénophobie en entreprise. Stratégies et bonnes pratiques pour promouvoir l\\"inclusion et la diversité."
 date: "2024-03-20"
 author: "Gérald Pameole"
 type: "article"
@@ -13,7 +13,7 @@ domain: "Gestion des Talents"
 tags: ["diversité", "inclusion", "xénophobie", "discrimination", "culture"]
 pillColor: "red"
 skills: ["Gestion de la Diversité", "Inclusion", "Communication", "Médiation", "Formation"]
-relatedArticles: ["gestion-talents-culture", "gestion-talents-ethique']
+relatedArticles: ["gestion-talents-culture", "gestion-talents-ethique"]
 ---
 
 # Gestion de la Diversité : Guide Complet pour l'Inclusion

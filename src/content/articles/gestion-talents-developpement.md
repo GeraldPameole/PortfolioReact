@@ -12,8 +12,8 @@ targetAudience: "Professionnels RH"
 domain: "Formation & Pédagogie"
 tags: ["développement", "formation", "mentoring", "compétences", "carrière"]
 pillColor: "blue"
-skills: 
-relatedArticles: 
+skills: ""
+relatedArticles: ""
 ---
 
 # Développement des Talents : Guide Complet pour la Croissance

@@ -1,9 +1,9 @@
 ---
-title: "Nouvelles Tendances de Développement Web",
-description: "Enquête approfondie sur l"impact de l"IA dans le monde professionnel et social en 2024 : données exclusives, témoignages d"experts et perspectives d"avenir."
+title: "Nouvelles Tendances de Développement Web\\","
+description: "Enquête approfondie sur l\\"impact de l\\"IA dans le monde professionnel et social en 2024 : données exclusives, témoignages d\\"experts et perspectives d\\"avenir."
 author: "Gérald Paméole"
-type: "article",
-skills: 
+type: "article\\","
+skills: ""
 ---
 
 # IA 2024 : La Révolution Silencieuse qui Redéfinit notre Monde

@@ -12,8 +12,8 @@ targetAudience: "Chefs de Projet"
 domain: "Gestion de Projet"
 tags: ["gestion de projet", "risques", "prévention", "analyse", "mitigation"]
 pillColor: "blue"
-skills: 
-relatedArticles: 
+skills: ""
+relatedArticles: ""
 ---
 
 // ... existing code ...

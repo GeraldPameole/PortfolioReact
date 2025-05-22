@@ -1,9 +1,9 @@
 ---
 title: "Mentoring et Développement Professionnel : Guide Complet"
-description: "Comment établir et bénéficier d"une relation de mentorat efficace pour accélérer sa progression de carrière et développer son leadership."
+description: "Comment établir et bénéficier d\\"une relation de mentorat efficace pour accélérer sa progression de carrière et développer son leadership."
 author: "Gérald Paméole"
 type: "book"
-skills: 
+skills: ""
 ---
 
 # Le Mentorat: Catalyseur Méconnu du Développement Professionnel

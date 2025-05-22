@@ -1,7 +1,7 @@
 ---
 draft: false
 title: "Gestion du Temps : Guide Complet pour Optimiser son Organisation"
-description: "Maîtrisez l"art de la gestion du temps pour une productivité optimale. Découvrez les stratégies et techniques pour mieux organiser votre temps."
+description: "Maîtrisez l\\"art de la gestion du temps pour une productivité optimale. Découvrez les stratégies et techniques pour mieux organiser votre temps."
 date: "2024-03-20"
 author: "Gérald Pameole"
 type: "article"
@@ -10,10 +10,10 @@ readingTime: 12
 hasMermaid: true
 targetAudience: "Professionnels et Étudiants"
 domain: "Productivité & Organisation"
-tags: 
+tags: ""
 pillColor: "blue"
-skills: 
-relatedArticles: 
+skills: ""
+relatedArticles: ""
 ---
 
 # Gestion du Temps : Guide Complet pour Optimiser son Organisation

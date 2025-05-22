@@ -1,7 +1,7 @@
 ---
 draft: false
-title: "Template d"Article : Guide de Structure"
-description: "Template d"article pour la documentation technique et les guides pratiques"
+title: "Template d\\"Article : Guide de Structure"
+description: "Template d\\"article pour la documentation technique et les guides pratiques"
 date: "2024-03-15"
 author: "Gérald Pameole"
 type: "article"
