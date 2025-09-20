@@ -1,10 +1,23 @@
 ---
-title: "Gestion du Temps pour Professionnels Surchargés : Approche Stratégique"
-description: "Méthodes avancées de gestion du temps pour les professionnels confrontés à des agendas complexes : priorisation matricielle, batching, et création de systèmes plutôt que d\\"objectifs."
-author: "Gérald Paméole"
-type: "book"
-skills: ""
+draft: false
+title: "Gestion Temps Professionnels"
+description: "Description de l'article Gestion Temps Professionnels"
+author: "Gérald Pameole"
+type: "article"
+featured: false
+readingTime: 15
+hasMermaid: false
+targetAudience: "Professionnels"
+domain: "Général"
+tags: ["article"]
+pillColor: "blue"
+skills: ["Compétences"]
+relatedArticles: []
+publishDate: "2024-01-01"
 ---
+
+
+
 
 # Gestion du Temps pour Professionnels Surchargés : Approche Stratégique
 

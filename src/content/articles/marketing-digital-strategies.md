@@ -1,20 +1,24 @@
 ---
 draft: false
-title: "Stratégies Marketing Digital : Guide Complet pour la Croissance"
-description: "Découvrez les stratégies et techniques de marketing digital pour développer votre entreprise. Un guide détaillé sur le SEO, le SEM, l\\"email marketing et l\\"analyse."
-date: "2024-03-20"
+title: "Marketing Digital Strategies"
+description: "Description de l'article Marketing Digital Strategies"
 author: "Gérald Pameole"
 type: "article"
 featured: false
-readingTime: 20
-hasMermaid: true
-targetAudience: "Professionnels Marketing"
-domain: "Développement Commercial"
-tags: ""
-pillColor: "red"
-skills: ""
-relatedArticles: ""
+readingTime: 15
+hasMermaid: false
+targetAudience: "Professionnels"
+domain: "Général"
+tags: ["article"]
+pillColor: "blue"
+skills: ["Compétences"]
+relatedArticles: []
+publishDate: "2024-01-01"
 ---
+
+
+
+
 
 ## Introduction
 

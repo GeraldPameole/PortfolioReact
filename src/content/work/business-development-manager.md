@@ -1,27 +1,27 @@
 ---
-title: Responsable Développement Commercial
+title: "Responsable Développement Commercial"
 publishDate: "2023-08-15"
-description: Élaboration et mise en œuvre d'une stratégie de croissance commerciale dans le secteur des services numériques.
-author: Gérald Paméole
-img: /assets/business-development.jpg
-img_alt: Stratégie commerciale et croissance
-company: Digital Solutions
+description: "Élaboration et mise en œuvre d'une stratégie de croissance commerciale dans le secteur des services numériques."
+author: "Gérald Paméole"
+img: "/assets/business-development.jpg"
+img_alt: "Stratégie commerciale et croissance"
+company: "Digital Solutions"
 period: "2019 - 2022"
 location: "Lyon, France"
 technologies:
-  - Vente
-  - Business Development
-  - CRM
-  - Marketing digital
-  - Négociation
-  - Analyse de marché
+- Vente
+- Business Development
+- CRM
+- Marketing digital
+- Négociation
+- Analyse de marché
 domain: "business"
 projectType: "professional"
 tags:
-  - Business Development
-  - Stratégie commerciale
-  - Négociation
-  - Acquisition clients
+- Business Development
+- Stratégie commerciale
+- Négociation
+- Acquisition clients
 ---
 
 # Responsable Développement Commercial

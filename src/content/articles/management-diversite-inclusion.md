@@ -1,10 +1,24 @@
 ---
-title: "Management de la Diversité et Inclusion : Impact sur la Performance d\\"Entreprise"
-description: "Stratégies concrètes pour transformer la diversité en avantage compétitif mesurable, et analyse des meilleures pratiques d\\"inclusion observées dans les organisations performantes."
-author: "Gérald Paméole"
-type: "book"
-skills: ""
+draft: false
+title: "Management Diversite Inclusion"
+description: "Description de l'article Management Diversite Inclusion"
+author: "Gérald Pameole"
+type: "article"
+featured: false
+readingTime: 15
+hasMermaid: false
+targetAudience: "Professionnels"
+domain: "Général"
+tags: ["article"]
+pillColor: "blue"
+skills: ["Compétences"]
+relatedArticles: []
+publishDate: "2024-01-01"
 ---
+
+
+
+
 
 # Management de la Diversité et de l'Inclusion: Au-delà des Quotas
 

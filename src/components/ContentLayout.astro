@@ -1,0 +1,75 @@
+---
+interface Props {
+	title: string;
+	description?: string;
+	container?: 'narrow' | 'default' | 'wide';
+	showBackButton?: boolean;
+	backButtonPosition?: 'top-left' | 'bottom-right';
+	class?: string;
+}
+
+const { 
+	title, 
+	description, 
+	container = 'default',
+	showBackButton = false,
+	backButtonPosition = 'bottom-right',
+	class: className = ''
+} = Astro.props;
+
+// Déterminer la classe de conteneur
+const containerClass = container === 'narrow' ? 'content-container-narrow' : 
+					  container === 'wide' ? 'content-container-wide' : 
+					  'content-container';
+---
+
+<div class={`content-layout ${containerClass} ${className}`}>
+	{showBackButton && (
+		<BackButton position={backButtonPosition} />
+	)}
+	
+	<header class="content-header">
+		<h1 class="content-typography h1">{title}</h1>
+		{description && (
+			<p class="content-typography text-center text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+				{description}
+			</p>
+		)}
+	</header>
+	
+	<main class="content-main">
+		<slot />
+	</main>
+</div>
+
+<style>
+	.content-layout {
+		min-height: 100vh;
+		padding-top: var(--content-spacing-2xl);
+		padding-bottom: var(--content-spacing-2xl);
+	}
+
+	.content-main {
+		margin-top: var(--content-spacing-xl);
+	}
+
+	/* Responsive adjustments */
+	@media (max-width: 768px) {
+		.content-layout {
+			padding-top: var(--content-spacing-xl);
+			padding-bottom: var(--content-spacing-xl);
+		}
+		
+		.content-main {
+			margin-top: var(--content-spacing-lg);
+		}
+	}
+
+	@media (max-width: 480px) {
+		.content-layout {
+			padding-top: var(--content-spacing-lg);
+			padding-bottom: var(--content-spacing-lg);
+		}
+	}
+</style>
+

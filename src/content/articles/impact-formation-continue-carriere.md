@@ -1,10 +1,24 @@
 ---
-title: "Formation Continue: Accélérateur de Carrière dans le Développement Web"
-description: "Comment la formation continue transforme les parcours professionnels dans le développement web. Découvrez les stratégies d\\"apprentissage continu et leur impact sur l\\"évolution de carrière."
-author: "Gérald Paméole"
-type: "book"
-skills: ""
+draft: false
+title: "Impact Formation Continue Carriere"
+description: "Description de l'article Impact Formation Continue Carriere"
+author: "Gérald Pameole"
+type: "article"
+featured: false
+readingTime: 15
+hasMermaid: false
+targetAudience: "Professionnels"
+domain: "Général"
+tags: ["article"]
+pillColor: "blue"
+skills: ["Compétences"]
+relatedArticles: []
+publishDate: "2024-01-01"
 ---
+
+
+
+
 
 # Formation Continue: Accélérateur de Carrière dans le Développement Web
 

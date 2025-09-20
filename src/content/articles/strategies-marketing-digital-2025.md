@@ -1,9 +1,23 @@
 ---
-title: "Stratégies de Marketing Digital 2025 : Tendances et Innovations"
-description: "Anticipez les évolutions du marketing digital et préparez votre stratégie pour les années à venir."
-author: "Gérald Paméole"
+draft: false
+title: "Strategies Marketing Digital 2025"
+description: "Description de l'article Strategies Marketing Digital 2025"
+author: "Gérald Pameole"
 type: "article"
+featured: false
+readingTime: 15
+hasMermaid: false
+targetAudience: "Professionnels"
+domain: "Général"
+tags: ["article"]
+pillColor: "blue"
+skills: ["Compétences"]
+relatedArticles: []
+publishDate: "2024-01-01"
 ---
+
+
+
 
 # Innovez en Marketing Digital : Guide Pratique
 

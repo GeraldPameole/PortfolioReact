@@ -1,20 +1,23 @@
 ---
 draft: false
-title: "Gestion de Projet et Performance : Guide Stratégique"
-description: "Guide stratégique sur la gestion de projet et la performance : méthodes, outils et bonnes pratiques pour optimiser la réussite de vos projets"
-date: "2024-03-15"
+title: "Gestion Projet Performance"
+description: "Description de l'article Gestion Projet Performance"
 author: "Gérald Pameole"
 type: "article"
 featured: false
 readingTime: 15
-hasMermaid: true
-targetAudience: "Chefs de projet et Managers"
-domain: "Management"
-tags: ["projet", "performance", "management", "stratégie"]
-pillColor: "amber"
-skills: ["Gestion de projet", "Performance", "Management", "Stratégie"]
-relatedArticles: ""
+hasMermaid: false
+targetAudience: "Professionnels"
+domain: "Général"
+tags: ["article"]
+pillColor: "blue"
+skills: ["Compétences"]
+relatedArticles: []
+publishDate: "2024-01-01"
 ---
+
+
+
 
 # Gestion de Projet et Performance : Guide Stratégique
 

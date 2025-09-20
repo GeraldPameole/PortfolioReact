@@ -1,10 +1,24 @@
 ---
-title: "Nouvelles Tendances de Développement Web\\","
-description: "Analyse factuelle de l\\"impact de l\\"IA dans le monde professionnel et social en 2024, avec données récentes, statistiques et implications concrètes pour l\\"avenir du travail."
-author: "Gérald Paméole"
-type: "article\\","
-skills: ""
+draft: false
+title: "Ia Transformation Societe 2024"
+description: "Description de l'article Ia Transformation Societe 2024"
+author: "Gérald Pameole"
+type: "article"
+featured: false
+readingTime: 15
+hasMermaid: false
+targetAudience: "Professionnels"
+domain: "Général"
+tags: ["article"]
+pillColor: "blue"
+skills: ["Compétences"]
+relatedArticles: []
+publishDate: "2024-01-01"
 ---
+
+
+
+
 
 # L'IA en 2024 : Chiffres-clés et Impact sur les Métiers
 

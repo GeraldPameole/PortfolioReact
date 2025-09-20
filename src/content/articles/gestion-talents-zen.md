@@ -1,20 +1,24 @@
 ---
 draft: false
-title: "Bien-être au Travail : Guide Complet pour la Performance"
-description: "Découvrez les stratégies et pratiques pour promouvoir le bien-être et la performance au travail. Un guide détaillé sur la gestion du stress, l\\"équilibre vie pro/perso et la motivation."
-date: "2024-03-20"
+title: "Gestion Talents Zen"
+description: "Description de l'article Gestion Talents Zen"
 author: "Gérald Pameole"
 type: "article"
 featured: false
 readingTime: 15
-hasMermaid: true
-targetAudience: "Professionnels RH"
-domain: "Gestion des Talents"
-tags: ["bien-être", "performance", "stress", "équilibre", "motivation"]
-pillColor: "yellow"
-skills: ""
-relatedArticles: ""
+hasMermaid: false
+targetAudience: "Professionnels"
+domain: "Général"
+tags: ["article"]
+pillColor: "blue"
+skills: ["Compétences"]
+relatedArticles: []
+publishDate: "2024-01-01"
 ---
+
+
+
+
 
 # Bien-être au Travail : Guide Complet pour la Performance
 

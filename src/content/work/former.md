@@ -1,24 +1,24 @@
 ---
-title: Formateur Outils et Méthodes
+title: "Formateur Outils et Méthodes"
 publishDate: "2024-01-01"
-description: Formation et accompagnement des professionnels dans leur transformation digitale.
-author: Gérald Paméole
-img: /assets/formator.jpg
-img_alt: Formateur en action
-company: SFR
+description: "Formation et accompagnement des professionnels dans leur transformation digitale."
+author: "Gérald Paméole"
+img: "/assets/formator.jpg"
+img_alt: "Formateur en action"
+company: "SFR"
 period: "2015 - 2018"
 location: "Paris, France"
 technologies:
-  - Formation
-  - E-learning
-  - Outils digitaux
-  - Gestion de projet
+- Formation
+- E-learning
+- Outils digitaux
+- Gestion de projet
 projectType: "professional"
 tags:
-  - Apprentissage
-  - Formation
-  - Pédagogie
-  - Partage de connaissances
+- Apprentissage
+- Formation
+- Pédagogie
+- Partage de connaissances
 ---
 
 # Formateur Outils et Méthodes

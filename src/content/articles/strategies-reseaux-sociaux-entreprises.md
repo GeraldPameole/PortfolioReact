@@ -1,20 +1,24 @@
 ---
 draft: false
-title: "Stratégies Réseaux Sociaux : Guide Complet pour les Entreprises"
-description: "Découvrez les stratégies et techniques pour développer votre présence sur les réseaux sociaux. Un guide détaillé sur le marketing social, l\\"engagement et la croissance."
-date: "2024-03-20"
+title: "Strategies Reseaux Sociaux Entreprises"
+description: "Description de l'article Strategies Reseaux Sociaux Entreprises"
 author: "Gérald Pameole"
 type: "article"
 featured: false
 readingTime: 15
-hasMermaid: true
-targetAudience: "Professionnels Marketing"
-domain: "Développement Commercial"
-tags: ""
-pillColor: "red"
-skills: ""
-relatedArticles: ""
+hasMermaid: false
+targetAudience: "Professionnels"
+domain: "Général"
+tags: ["article"]
+pillColor: "blue"
+skills: ["Compétences"]
+relatedArticles: []
+publishDate: "2024-01-01"
 ---
+
+
+
+
 
 ## Introduction
 

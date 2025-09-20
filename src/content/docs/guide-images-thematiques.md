@@ -1,8 +1,8 @@
 ---
-title: Guide d'Implémentation des Images Thématiques
-description: Guide complet pour la gestion des images thématiques dans les articles du blog
-date: 2024-03-20
-author: Gérald Paméole
+title: "Guide d'Implémentation des Images Thématiques"
+description: "Guide complet pour la gestion des images thématiques dans les articles du blog"
+date: "2024-03-20"
+author: "Gérald Paméole"
 tags: ["documentation", "guide", "images"]
 ---
 

@@ -1,24 +1,24 @@
 ---
-title: Chef de Projet Digital
+title: "Chef de Projet Digital"
 publishDate: "2024-01-02"
-description: Gestion et coordination de projets digitaux innovants.
-author: Gérald Paméole
-img: /assets/projectmanagersuit.jpg
-img_alt: Chef de projet en action
-company: KEOS TELECOM
+description: "Gestion et coordination de projets digitaux innovants."
+author: "Gérald Paméole"
+img: "/assets/projectmanagersuit.jpg"
+img_alt: "Chef de projet en action"
+company: "KEOS TELECOM"
 period: "2021 - Présent"
 location: "Paris, France"
 technologies:
-  - Méthodologies Agiles
-  - Gestion de projet
-  - Télécommunications
-  - Transformation digitale
+- Méthodologies Agiles
+- Gestion de projet
+- Télécommunications
+- Transformation digitale
 projectType: "professional"
 tags:
-  - Gestion de projet
-  - Agilité
-  - Leadership
-  - Innovation
+- Gestion de projet
+- Agilité
+- Leadership
+- Innovation
 ---
 
 # Chef de Projet

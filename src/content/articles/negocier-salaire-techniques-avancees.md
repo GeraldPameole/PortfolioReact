@@ -1,10 +1,23 @@
 ---
-title: "Négocier son Salaire : Techniques Avancées pour les Professionnels"
-description: "Guide complet pour maîtriser l\'art de la négociation salariale : préparation, techniques de persuasion, objections courantes et stratégies pour obtenir la meilleure rémunération possible."
-author: "Gérald Paméole"
-type: "book"
-skills: ""
+draft: false
+title: "Negocier Salaire Techniques Avancees"
+description: "Description de l'article Negocier Salaire Techniques Avancees"
+author: "Gérald Pameole"
+type: "article"
+featured: false
+readingTime: 15
+hasMermaid: false
+targetAudience: "Professionnels"
+domain: "Général"
+tags: ["article"]
+pillColor: "blue"
+skills: ["Compétences"]
+relatedArticles: []
+publishDate: "2024-01-01"
 ---
+
+
+
 
 # Négocier son Salaire: Techniques Avancées et Psychologie de la Persuasion
 

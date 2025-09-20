@@ -39,7 +39,7 @@ const domainColors = {
 	'DevOps': { color: 'orange', icon: 'fas fa-server', bg: 'bg-orange-100', text: 'text-orange-800' },
 	'Cloud': { color: 'sky', icon: 'fas fa-cloud', bg: 'bg-sky-100', text: 'text-sky-800' },
 	'Data': { color: 'teal', icon: 'fas fa-database', bg: 'bg-teal-100', text: 'text-teal-800' },
-	'Autre': { color: 'gray', icon: 'fas fa-code', bg: 'bg-gray-100', text: 'text-gray-800' }
+	'Autre': { color: 'gray', icon: 'fas fa-code', bg: 'bg-gray-100', text: 'text-[#111827]' }
 };
 
 // Formater la date
@@ -74,9 +74,9 @@ function getDomainColor(domain: string) {
 	<div class="bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-gray-800 min-h-screen">
 		<!-- En-tête -->
 		<div class="pt-24 pb-16 px-4">
-			<div class="max-w-4xl mx-auto text-center">
-				<h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">Compétences & Expertise</h1>
-				<p class="text-lg text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto">
+			<div class="content-container-narrow text-center">
+				<h1 class="text-4xl font-bold text-[#111827] dark:text-white mb-4">Compétences & Expertise</h1>
+				<p class="text-lg text-[#111827] dark:text-gray-300 mb-8 max-w-3xl mx-auto">
 					Plus de 15 ans d'expérience dans la gestion de projets télécoms, le développement web,
 					et l'optimisation des processus d'entreprise.
 				</p>
@@ -96,7 +96,7 @@ function getDomainColor(domain: string) {
 			</div>
 		</div>
 		
-		<div class="max-w-7xl mx-auto px-4 pb-24">
+		<div class="content-container-wide pb-24">
 			<!-- Projets par domaine -->
 			{Object.entries(projectsByDomain).map(([domain, domainProjects]) => {
 				const domainColor = getDomainColor(domain);
@@ -110,9 +110,9 @@ function getDomainColor(domain: string) {
 									<div class={`w-10 h-10 rounded-lg bg-${domainColor.color}-600 dark:bg-${domainColor.color}-500/30 flex items-center justify-center mr-3`}>
 										<i class={`${domainColor.icon} text-white dark:text-${domainColor.color}-400`}></i>
 									</div>
-									<h2 class="text-xl font-bold text-gray-900 dark:text-white">{domain}</h2>
+									<h2 class="text-xl font-bold text-[#111827] dark:text-white">{domain}</h2>
 								</div>
-								<p class="text-gray-600 dark:text-gray-300 mb-5 text-sm">
+								<p class="text-[#111827] dark:text-gray-300 mb-5 text-sm">
 									{domain === 'Développement Web' && 'Conception et développement d\'applications web front-end et back-end.'}
 									{domain === 'Gestion de Projet' && 'Expertise en pilotage de projets complexes dans le secteur des télécommunications.'}
 									{domain === 'Formation' && 'Développement des compétences, coaching et formation des équipes et individus.'}
@@ -129,8 +129,8 @@ function getDomainColor(domain: string) {
 								{domainProjects.length > 0 && (
 									<div class="mb-4">
 										<div class="flex justify-between text-sm mb-1">
-											<span class="text-gray-600 dark:text-gray-300">{domain}</span>
-											<span class="text-gray-900 dark:text-white">{percentage}%</span>
+											<span class="text-[#111827] dark:text-gray-300">{domain}</span>
+											<span class="text-[#111827] dark:text-white">{percentage}%</span>
 										</div>
 										<div class="h-2 w-full rounded-full bg-gray-200 dark:bg-gray-700">
 											<div
@@ -163,10 +163,10 @@ function getDomainColor(domain: string) {
 												)}
 												
 												<div class="p-5 flex-grow flex flex-col">
-													<h3 class="font-semibold text-gray-900 dark:text-white mb-2 group-hover:text-${domainColor.color}-600 dark:group-hover:text-${domainColor.color}-400 transition-colors">
+													<h3 class="font-semibold text-[#111827] dark:text-white mb-2 group-hover:text-${domainColor.color}-600 dark:group-hover:text-${domainColor.color}-400 transition-colors">
 														{project.data.title}
 													</h3>
-													<p class="text-sm text-gray-600 dark:text-gray-300 mb-4 line-clamp-2 flex-grow">
+													<p class="text-sm text-[#111827] dark:text-gray-300 mb-4 line-clamp-2 flex-grow">
 														{project.data.description}
 													</p>
 													
@@ -179,7 +179,7 @@ function getDomainColor(domain: string) {
 																	</span>
 																))}
 																{project.data.technologies.length > 3 && (
-																	<span class="text-xs px-2 py-1 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 rounded-full">
+																	<span class="text-xs px-2 py-1 bg-gray-100 dark:bg-gray-700 text-[#111827] dark:text-gray-400 rounded-full">
 																		+{project.data.technologies.length - 3}
 																	</span>
 																)}
@@ -222,7 +222,7 @@ function getDomainColor(domain: string) {
 			
 			<!-- Tous les projets -->
 			<section id="voir-tous-les-projets" class="pt-8 mt-8 border-t border-gray-200 dark:border-gray-700">
-				<h2 class="text-2xl font-bold text-center text-gray-900 dark:text-white mb-12">
+				<h2 class="text-2xl font-bold text-center text-[#111827] dark:text-white mb-12">
 					Tous les projets
 				</h2>
 				
@@ -273,11 +273,11 @@ function getDomainColor(domain: string) {
 									</div>
 									
 									<div class="p-6 flex-grow flex flex-col">
-										<h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-${domainColor.color}-600 dark:group-hover:text-${domainColor.color}-400 transition-colors">
+										<h3 class="text-xl font-bold text-[#111827] dark:text-white mb-2 group-hover:text-${domainColor.color}-600 dark:group-hover:text-${domainColor.color}-400 transition-colors">
 											{project.data.title}
 										</h3>
 										
-										<p class="text-sm text-gray-600 dark:text-gray-300 mb-6 flex-grow">
+										<p class="text-sm text-[#111827] dark:text-gray-300 mb-6 flex-grow">
 											{project.data.description}
 										</p>
 										
@@ -311,8 +311,8 @@ function getDomainColor(domain: string) {
 			
 			<!-- Contact -->
 			<div class="mt-16 text-center">
-				<h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-6">Vous avez un projet en tête ?</h2>
-				<p class="text-lg text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
+				<h2 class="text-2xl font-bold text-[#111827] dark:text-white mb-6">Vous avez un projet en tête ?</h2>
+				<p class="text-lg text-[#111827] dark:text-gray-300 mb-8 max-w-2xl mx-auto">
 					N'hésitez pas à me contacter pour discuter de votre projet. Je serai ravi de vous aider à le concrétiser.
 				</p>
 				<a href="/contact" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-colors duration-200">
@@ -448,8 +448,8 @@ function getDomainColor(domain: string) {
 .bg-gray-600 { background-color: #4b5563; }
 .bg-gray-700 { background-color: #374151; }
 .text-gray-400 { color: #9ca3af; }
-.text-gray-600 { color: #4b5563; }
-.text-gray-800 { color: #1f2937; }
+.text-[#111827] { color: #4b5563; }
+.text-[#111827] { color: #1f2937; }
 
 /* Styles pour les effets de survol et transitions */
 .hide-scrollbar {

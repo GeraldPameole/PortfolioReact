@@ -1,20 +1,23 @@
 ---
 draft: false
-title: "Formation à la Créativité : Guide Complet pour le Développement de l\\"Innovation"
-description: "Découvrez les stratégies et méthodes pour développer efficacement la créativité. Un guide détaillé sur l\\"apprentissage, le développement et l\\"application de l\\"innovation."
-date: "2024-03-20"
+title: "Formation Creativite"
+description: "Description de l'article Formation Creativite"
 author: "Gérald Pameole"
 type: "article"
 featured: false
 readingTime: 15
-hasMermaid: true
-targetAudience: "Professionnels RH et Formateurs"
-domain: "Formation & Développement"
-tags: ["formation", "créativité", "innovation", "développement", "design"]
-pillColor: "purple"
-skills: ["Formation", "Créativité", "Innovation", "Développement", "Design"]
-relatedArticles: ["formation-mentorat", "gestion-talents-developpement"]
+hasMermaid: false
+targetAudience: "Professionnels"
+domain: "Général"
+tags: ["article"]
+pillColor: "blue"
+skills: ["Compétences"]
+relatedArticles: []
+publishDate: "2024-01-01"
 ---
+
+
+
 
 # Formation à la Créativité : Guide Complet pour le Développement de l'Innovation
 

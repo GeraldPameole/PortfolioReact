@@ -1,20 +1,23 @@
 ---
 draft: false
-title: "Productivité Professionnelle : Guide Complet pour Maximiser son Efficacité"
-description: "Découvrez les stratégies et techniques pour augmenter votre productivité professionnelle. Un guide pratique pour optimiser votre efficacité au travail."
-date: "2024-03-20"
+title: "Productivite Professionnelle"
+description: "Description de l'article Productivite Professionnelle"
 author: "Gérald Pameole"
 type: "article"
 featured: false
-readingTime: 12
-hasMermaid: true
+readingTime: 15
+hasMermaid: false
 targetAudience: "Professionnels"
-domain: "Productivité & Performance"
-tags: ""
-pillColor: "green"
-skills: ""
-relatedArticles: ""
+domain: "Général"
+tags: ["article"]
+pillColor: "blue"
+skills: ["Compétences"]
+relatedArticles: []
+publishDate: "2024-01-01"
 ---
+
+
+
 
 # Productivité Professionnelle : Guide Complet pour Maximiser son Efficacité
 

@@ -1,20 +1,24 @@
 ---
 draft: false
-title: "Stratégies de Contenu : Guide Complet pour le Marketing de Contenu"
-description: "Découvrez les stratégies et techniques pour créer et diffuser du contenu marketing efficace. Un guide détaillé sur la création, la distribution et l\\"analyse de contenu."
-date: "2024-03-20"
+title: "Marketing Content Strategies"
+description: "Description de l'article Marketing Content Strategies"
 author: "Gérald Pameole"
 type: "article"
 featured: false
 readingTime: 15
-hasMermaid: true
-targetAudience: "Professionnels Marketing"
-domain: "Développement Commercial"
-tags: ""
-pillColor: "red"
-skills: ""
-relatedArticles: ""
+hasMermaid: false
+targetAudience: "Professionnels"
+domain: "Général"
+tags: ["article"]
+pillColor: "blue"
+skills: ["Compétences"]
+relatedArticles: []
+publishDate: "2024-01-01"
 ---
+
+
+
+
 
 ## Introduction
 

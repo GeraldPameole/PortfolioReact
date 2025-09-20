@@ -1,6 +1,5 @@
 ---
 import { getCollection } from 'astro:content';
-import BackToTop from '../components/BackToTop.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 
 // Récupération des projets
@@ -15,31 +14,31 @@ const sortedProjects = projects.sort((a, b) => {
 const projectCategories = {
 	'management': {
 		name: 'Gestion de Projet Télécom',
-		icon: 'tasks',
-		color: 'green',
-		colorClass: 'bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-300',
+		icon: 'fas fa-tasks',
+		color: 'blue',
+		colorClass: 'bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-300',
 		description: 'Coordination d\'équipes multidisciplinaires, processus d\'optimisation et infrastructures télécom.',
 		examples: ['Business: The Ultimate Resource', 'Tout comprendre à l\'entreprise']
 	},
 	'developpement-web': {
 		name: 'Développement Web',
-		icon: 'code',
-		color: 'blue',
-		colorClass: 'bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-300',
+		icon: 'fas fa-laptop-code',
+		color: 'green',
+		colorClass: 'bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-300',
 		description: 'Applications web, frameworks et technologies front/back-end.',
 		examples: ['Design Patterns', 'Patterns of Enterprise Application Architecture']
 	},
 	'business': {
 		name: 'Développement Commercial',
-		icon: 'handshake',
-		color: 'amber',
-		colorClass: 'bg-amber-100 text-amber-800 dark:bg-amber-900/30 dark:text-amber-300',
+		icon: 'fas fa-handshake',
+		color: 'orange',
+		colorClass: 'bg-orange-100 text-orange-800 dark:bg-orange-900/30 dark:text-orange-300',
 		description: 'Stratégies commerciales, relation client et techniques de vente.',
 		examples: ['Le Personal MBA', 'Lean Startup', 'Zero to One']
 	},
 	'qualite-process': {
 		name: 'Qualité & Process',
-		icon: 'check-circle',
+		icon: 'fas fa-check-circle',
 		color: 'purple',
 		colorClass: 'bg-purple-100 text-purple-800 dark:bg-purple-900/30 dark:text-purple-300',
 		description: 'Clean code, DevOps, tests et intégration continue.',
@@ -47,7 +46,7 @@ const projectCategories = {
 	},
 	'developpement-personnel': {
 		name: 'Formation & Pédagogie',
-		icon: 'graduation-cap',
+		icon: 'fas fa-graduation-cap',
 		color: 'red',
 		colorClass: 'bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-300',
 		description: 'Accompagnement, programmes de formation et optimisation des performances.',
@@ -55,13 +54,13 @@ const projectCategories = {
 	}
 };
 
-// Les catégories de l'ancienne classification
-const oldCategories = {
-	'gestion': 'management',
-	'developpement': 'developpement-web',
-	'formation': 'developpement-personnel',
-	'commercial': 'entrepreneuriat',
-	'qualite': 'qualite-process'
+// Rôles par catégorie (affiché sur la carte)
+const roleByCategory = {
+	management: "Chef de Projet Télécom",
+	'developpement-web': "Développeur Web Full Stack",
+	business: "Manager d'Équipe Commerciale",
+	'qualite-process': "Responsable Qualité & Process",
+	'developpement-personnel': "Formateur & Coach"
 };
 
 // Grouper les projets par catégorie
@@ -98,666 +97,190 @@ sortedProjects.forEach(project => {
 			groupedProjects['business'].push(project);
 			assigned = true;
 		}
-		else if (techs.some((t: string) => ['qualité', 'process', 'amélioration', 'audit', 'conformité', 'kpi', 'devops', 'tests', 'methodes'].includes(t))) {
+		else if (techs.some((t: string) => ['qualité', 'process', 'devops', 'test', 'ci/cd', 'clean code'].includes(t))) {
 			groupedProjects['qualite-process'].push(project);
 			assigned = true;
 		}
 	}
 	
-	// Si non assigné par technologie, utiliser le domaine s'il existe
-	if (!assigned && project.data.domain) {
-		const domain = project.data.domain.toLowerCase();
-		if (domain.includes('web') || domain.includes('développement')) {
-			groupedProjects['developpement-web'].push(project);
-		} 
-		else if (domain.includes('gestion') || domain.includes('projet') || domain.includes('management')) {
-			groupedProjects['management'].push(project);
-		}
-		else if (domain.includes('formation') || domain.includes('conseil') || domain.includes('développement personnel')) {
-			groupedProjects['developpement-personnel'].push(project);
-		}
-		else if (domain.includes('commercial') || domain.includes('business') || domain.includes('vente') || domain.includes('startup')) {
-			groupedProjects['business'].push(project);
-		}
-		else if (domain.includes('qualité') || domain.includes('process') || domain.includes('devops') || domain.includes('methodes')) {
-			groupedProjects['qualite-process'].push(project);
-		}
-		else if (domain.includes('autre')) {
-			// Répartir les projets "autre" dans les catégories spécifiques
-			// Pour l'exemple, nous allons les répartir équitablement entre les catégories demandées
-			const title = project.data.title.toLowerCase();
-			if (title.includes('qualité') || title.includes('methode') || title.includes('process')) {
-				groupedProjects['qualite-process'].push(project);
-			} else if (title.includes('formation') || title.includes('pédagogie')) {
-				groupedProjects['developpement-personnel'].push(project);
-			} else if (title.includes('telecom') || title.includes('gestion') || title.includes('projet')) {
-				groupedProjects['management'].push(project);
-			} else {
-				// Par défaut, ajouter à développement web
-				groupedProjects['developpement-web'].push(project);
-			}
-		}
-		else {
-			// Distribution contrôlée des projets "autre"
-			const categories = ['developpement-web', 'management', 'developpement-personnel'];
-			const index = groupedProjects['autre'].length % 3;
-			groupedProjects[categories[index]].push(project);
-		}
-	} 
-	// Si toujours non assigné, distribuer aux catégories spécifiques
-	else if (!assigned) {
-		// Distribution contrôlée des projets non assignés
-		const title = project.data.title.toLowerCase();
-		if (title.includes('qualité') || title.includes('methode') || title.includes('process')) {
-			groupedProjects['qualite-process'].push(project);
-		} else if (title.includes('formation') || title.includes('pédagogie')) {
-			groupedProjects['developpement-personnel'].push(project);
-		} else if (title.includes('telecom') || title.includes('gestion') || title.includes('projet')) {
-			groupedProjects['management'].push(project);
-		} else {
-			// Par défaut, ajouter à développement web
-			groupedProjects['developpement-web'].push(project);
-		}
+	if (!assigned) {
+		groupedProjects['autre'].push(project);
 	}
 });
 
-// Certains projets peuvent être déplacés de l'ancienne classification
-for (const [oldCat, newCat] of Object.entries(oldCategories)) {
-	if (groupedProjects[oldCat]) {
-		groupedProjects[oldCat].forEach(project => {
-			if (!groupedProjects[newCat].some(p => p.slug === project.slug)) {
-				groupedProjects[newCat].push(project);
-			}
-		});
-	}
-}
-
-// Ajouter manuellement un projet "Chargé de Qualité et Méthodes" à la catégorie qualite-process s'il n'existe pas déjà
-// Vérifier si un projet avec ce titre existe déjà
-const qualityProjectExists = groupedProjects['qualite-process'].some(project => 
-	project.data.title === "Chargé de Qualité et Méthodes"
-);
-
-// Si le projet n'existe pas, créer une entrée simulée
-if (!qualityProjectExists && groupedProjects['autre'].length > 0) {
-	// Utiliser un projet existant comme base et modifier ses propriétés
-	const baseProject = groupedProjects['autre'][0];
-	
-	// Supprimer ce projet de la catégorie "autre"
-	groupedProjects['autre'] = groupedProjects['autre'].filter((_, index) => index !== 0);
-	
-	// Créer une copie modifiée du projet
-	const qualityProject = {
-		...baseProject,
-		data: {
-			...baseProject.data,
-			title: "Chargé de Qualité et Méthodes",
-			description: "Mise en place de processus d'amélioration continue et de méthodes d'assurance qualité pour les projets informatiques.",
-			technologies: ["Qualité", "Méthodes", "Process", "Amélioration continue", "Audit"],
-			domain: "qualite-process"
-		}
-	};
-	
-	// Ajouter à la catégorie qualite-process
-	groupedProjects['qualite-process'].push(qualityProject);
-}
-
-// Formater la date
-function formatDate(dateString: string): string {
-	return new Date(dateString).toLocaleDateString('fr-FR', {
+// Fonction pour formater la date
+function formatDate(date: Date): string {
+	return date.toLocaleDateString('fr-FR', {
 		year: 'numeric',
-		month: 'long'
+		month: 'long',
+		day: 'numeric'
 	});
-}
-
-// Obtenir les 2 projets les plus récents de chaque catégorie
-function getTopProjectsForCategory(category: string): typeof projects {
-	return (groupedProjects[category] || []).slice(0, 2);
 }
 ---
 
 <BaseLayout
-	title="Projets | Gérald Paméole"
-	description="Découvrez mes projets et réalisations en développement web, gestion de projet, qualité & process, entrepreneuriat et développement personnel."
-	customClass="projects-page"
-	fullWidth={true}
+	title="Projets" 
+	description="Découvrez mes projets en gestion de projet télécom, développement web, qualité et formation. Portfolio de réalisations professionnelles."
+	customClass="bg-gradient-to-br from-gray-50 to-white dark:from-gray-900 dark:to-gray-800"
 >
 	<!-- En-tête de page -->
-	<section class="py-16 md:py-24 bg-gradient-to-r from-indigo-600/5 to-violet-600/5">
-		<div class="w-full px-4 sm:px-6 lg:px-8">
-			<div class="max-w-4xl mx-auto text-center">
-				<h1 class="text-4xl md:text-5xl font-bold mb-6 text-gray-800 dark:text-white">
-					Projets & Réalisations
+	<section class="py-16 md:py-24 bg-gradient-to-r from-indigo-600/5 to-violet-600/5 w-screen" style="margin-left: calc(50% - 50vw); margin-right: calc(50% - 50vw);">
+		<div class="content-container text-center">
+			<h1 class="text-4xl md:text-5xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-blue-500">
+				Mes Projets
 				</h1>
-				<p class="text-xl text-gray-600 dark:text-gray-300 mb-8">
-					Une sélection de mes projets répartis par domaines d'expertise.
-					Chaque projet illustre mon savoir-faire et mes compétences dans différents secteurs d'activité.
+			<p class="text-xl text-[#111827] dark:text-gray-200 mb-6">
+				Une sélection de mes réalisations en gestion de projet, développement web et optimisation des processus
+			</p>
+			<div class="flex flex-wrap justify-center gap-3 mb-8">
+				<span class="px-4 py-2 rounded-full bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-300">Gestion de Projet</span>
+				<span class="px-4 py-2 rounded-full bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-300">Développement Web</span>
+				<span class="px-4 py-2 rounded-full bg-purple-100 text-purple-800 dark:bg-purple-900/30 dark:text-purple-300">Qualité & Process</span>
+				<span class="px-4 py-2 rounded-full bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-300">Formation</span>
+				<span class="px-4 py-2 rounded-full bg-orange-100 text-orange-800 dark:bg-orange-900/30 dark:text-orange-300">Développement Commercial</span>
+			</div>
+		</div>
+	</section>
+
+	<!-- Section Domaines d'Expertise -->
+	<main class="py-20 bg-gray-50 dark:bg-gray-900">
+		<div class="content-container">
+			<div class="text-center mb-16">
+				<h2 class="text-4xl font-bold text-[#111827] dark:text-white mb-4">
+					Domaines d'Expertise
+			</h2>
+				<p class="text-xl text-[#111827] dark:text-gray-300 max-w-3xl mx-auto">
+					Découvrez mes compétences dans 5 domaines clés, chacun représentant une expertise spécifique
 				</p>
 			</div>
-		</div>
-	</section>
-
-	<!-- Section des domaines professionnels (style cartes) -->
-	<section class="py-8 bg-white dark:bg-gray-900">
-		<div class="w-full px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-			<h2 class="text-3xl font-bold text-gray-800 dark:text-white text-center mb-12">
-				Distribution par domaine professionnel
-			</h2>
 			
-			<!-- Première rangée : 2 cartes -->
-			<div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-				{Object.entries(projectCategories).slice(0, 2).map(([key, category]) => (
-					<a href={`#${key}`} class="block group">
-						<div class={`h-full p-8 rounded-xl transition-all duration-300 hover:shadow-lg ${key === 'management' ? 'bg-green-50 dark:bg-green-900/10' : ''} ${key === 'developpement-web' ? 'bg-blue-50 dark:bg-blue-900/10' : ''} ${key === 'business' ? 'bg-amber-50 dark:bg-amber-900/10' : ''} ${key === 'qualite-process' ? 'bg-purple-50 dark:bg-purple-900/10' : ''}`}>
-							<div class="flex items-center mb-4">
-								<div class={`flex h-12 w-12 items-center justify-center rounded-full ${category.colorClass.split(' ')[0]}`}>
-									<i class={`fas fa-${category.icon} text-xl ${category.colorClass.split(' ')[1]}`}></i>
+									<!-- Ligne 1: 3 cartes occupant 80% de la largeur -->
+			<div class="w-4/5 mx-auto mb-8">
+				<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+					{Object.entries(projectCategories).slice(0, 3).map(([categoryKey, category]) => (
+						<article class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 hover:transform hover:scale-[1.02] border border-gray-100 dark:border-gray-700 h-[420px]">
+							<div class="flex flex-col items-center text-center h-full justify-between">
+								<div class="flex flex-col items-center">
+									<div class={`p-4 rounded-2xl ${category.colorClass} inline-flex items-center justify-center mb-5 shadow-md`}>
+										<i class={`${category.icon} text-3xl`}></i>
+									</div>
+									<h3 class="text-xl font-bold text-[#111827] dark:text-white mb-4">{category.name}</h3>
+									<p class="text-[#111827] dark:text-gray-300 mb-5 text-sm leading-relaxed">{category.description}</p>
+									<div class="bg-gray-50 dark:bg-gray-700 px-4 py-2 rounded-full mb-5">
+										<p class="text-sm text-gray-600 dark:text-gray-400 font-medium">{roleByCategory[categoryKey as keyof typeof roleByCategory]}</p>
+									</div>
 								</div>
-								<h3 class="ml-4 text-xl font-bold text-gray-800 dark:text-white">
-									{category.name}
-								</h3>
+								<div class="flex flex-col items-center">
+									<div class="flex flex-wrap justify-center gap-2 mb-5">
+										{(groupedProjects[categoryKey][0]?.data.technologies ?? ['Leadership','Organisation','Planification']).slice(0,3).map((pill: string) => (
+											<span class="px-2 py-1 text-xs font-medium bg-gray-200 text-gray-800 dark:bg-gray-600 dark:text-gray-200 rounded-full">{pill}</span>
+										))}
+									</div>
+									{groupedProjects[categoryKey].length > 0 ? (
+										<a href={`/projets/${groupedProjects[categoryKey][0].slug}`} class="inline-flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline font-medium text-sm">
+											Voir le projet <i class="fas fa-arrow-right"></i>
+										</a>
+									) : (
+										<a href="#" class="inline-flex items-center gap-2 text-blue-600 dark:text-blue-400 opacity-70 cursor-not-allowed text-sm">
+											Bientôt disponible
+										</a>
+									)}
+								</div>
 							</div>
-							
-							<p class="mb-4 text-gray-600 dark:text-gray-300">
-								{category.description}
-							</p>
-							
-							<ul class="mt-4 text-sm text-gray-600 dark:text-gray-400">
-								{groupedProjects[key]?.slice(0, 2).map(project => (
-									<li class="mb-1 truncate">• {project.data.title}</li>
-								))}
-								{groupedProjects[key] && groupedProjects[key].length > 2 && (
-									<li class="text-sm italic">+ {groupedProjects[key].length - 2} autres projets</li>
-								)}
-							</ul>
-						</div>
-					</a>
-				))}
+						</article>
+					))}
+				</div>
 			</div>
 			
-			<!-- Deuxième rangée : 2 cartes -->
-			<div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-				{Object.entries(projectCategories).slice(2, 4).map(([key, category]) => (
-					<a href={`#${key}`} class="block group">
-						<div class={`h-full p-8 rounded-xl transition-all duration-300 hover:shadow-lg ${key === 'management' ? 'bg-green-50 dark:bg-green-900/10' : ''} ${key === 'developpement-web' ? 'bg-blue-50 dark:bg-blue-900/10' : ''} ${key === 'business' ? 'bg-amber-50 dark:bg-amber-900/10' : ''} ${key === 'qualite-process' ? 'bg-purple-50 dark:bg-purple-900/10' : ''}`}>
-							<div class="flex items-center mb-4">
-								<div class={`flex h-12 w-12 items-center justify-center rounded-full ${category.colorClass.split(' ')[0]}`}>
-									<i class={`fas fa-${category.icon} text-xl ${category.colorClass.split(' ')[1]}`}></i>
+			<!-- Ligne 2: 2 cartes se répartissant l'espace restant -->
+			<div class="w-4/5 mx-auto">
+				<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+					{Object.entries(projectCategories).slice(3, 5).map(([categoryKey, category]) => (
+						<article class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 hover:transform hover:scale-[1.02] border border-gray-100 dark:border-gray-700 h-[420px]">
+							<div class="flex flex-col items-center text-center h-full justify-between">
+								<div class="flex flex-col items-center">
+									<div class={`p-4 rounded-2xl ${category.colorClass} inline-flex items-center justify-center mb-5 shadow-md`}>
+										<i class={`${category.icon} text-3xl`}></i>
+									</div>
+									<h3 class="text-xl font-bold text-[#111827] dark:text-white mb-4">{category.name}</h3>
+									<p class="text-[#111827] dark:text-gray-300 mb-5 text-sm leading-relaxed">{category.description}</p>
+									<div class="bg-gray-50 dark:bg-gray-700 px-4 py-2 rounded-full mb-5">
+										<p class="text-sm text-gray-600 dark:text-gray-400 font-medium">{roleByCategory[categoryKey as keyof typeof roleByCategory]}</p>
+									</div>
 								</div>
-								<h3 class="ml-4 text-xl font-bold text-gray-800 dark:text-white">
-									{category.name}
-								</h3>
-							</div>
-							
-							<p class="mb-4 text-gray-600 dark:text-gray-300">
-								{category.description}
-							</p>
-							
-							<ul class="mt-4 text-sm text-gray-600 dark:text-gray-400">
-								{groupedProjects[key]?.slice(0, 2).map(project => (
-									<li class="mb-1 truncate">• {project.data.title}</li>
-								))}
-								{groupedProjects[key] && groupedProjects[key].length > 2 && (
-									<li class="text-sm italic">+ {groupedProjects[key].length - 2} autres projets</li>
-								)}
-							</ul>
-						</div>
-					</a>
-				))}
-			</div>
-			
-			<!-- Dernière carte centrée -->
-			<div class="flex justify-center">
-				{Object.entries(projectCategories).slice(4, 5).map(([key, category]) => (
-					<a href={`#${key}`} class="block group md:w-1/2">
-						<div class={`h-full p-8 rounded-xl transition-all duration-300 hover:shadow-lg ${key === 'developpement-personnel' ? 'bg-red-50 dark:bg-red-900/10' : ''}`}>
-							<div class="flex items-center mb-4">
-								<div class={`flex h-12 w-12 items-center justify-center rounded-full ${category.colorClass.split(' ')[0]}`}>
-									<i class={`fas fa-${category.icon} text-xl ${category.colorClass.split(' ')[1]}`}></i>
+								<div class="flex flex-col items-center">
+									<div class="flex flex-wrap justify-center gap-2 mb-5">
+										{(groupedProjects[categoryKey][0]?.data.technologies ?? ['Stratégie','Relation client','Négociation']).slice(0,3).map((pill: string) => (
+											<span class="px-2 py-1 text-xs font-medium bg-gray-200 text-gray-800 dark:bg-gray-600 dark:text-gray-200 rounded-full">{pill}</span>
+										))}
+									</div>
+									{groupedProjects[categoryKey].length > 0 ? (
+										<a href={`/projets/${groupedProjects[categoryKey][0].slug}`} class="inline-flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline font-medium text-sm">
+											Voir le projet <i class="fas fa-arrow-right"></i>
+										</a>
+									) : (
+										<a href="#" class="inline-flex items-center gap-2 text-blue-600 dark:text-blue-400 opacity-70 cursor-not-allowed text-sm">
+											Bientôt disponible
+										</a>
+									)}
 								</div>
-								<h3 class="ml-4 text-xl font-bold text-gray-800 dark:text-white">
-									{category.name}
-								</h3>
 							</div>
-							
-							<p class="mb-4 text-gray-600 dark:text-gray-300">
-								{category.description}
-							</p>
-							
-							<ul class="mt-4 text-sm text-gray-600 dark:text-gray-400">
-								{groupedProjects[key]?.slice(0, 2).map(project => (
-									<li class="mb-1 truncate">• {project.data.title}</li>
-								))}
-								{groupedProjects[key] && groupedProjects[key].length > 2 && (
-									<li class="text-sm italic">+ {groupedProjects[key].length - 2} autres projets</li>
-								)}
-							</ul>
-						</div>
-					</a>
-				))}
+						</article>
+					))}
+				</div>
 			</div>
 		</div>
-	</section>
+	</main>
 
-	<!-- Section des projets par catégorie -->
-	<section class="py-16 bg-gray-50 dark:bg-gray-800">
-		<div class="w-full px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-			<h2 class="text-3xl font-bold text-gray-800 dark:text-white text-center mb-12">
-				Mes projets par domaine
-			</h2>
-			
-			<!-- Première rangée : 2 cartes -->
-			<div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-				{Object.entries(projectCategories).slice(0, 2).map(([key, category]) => (
-					groupedProjects[key].length > 0 && (
-					<div id={key} class="mb-10">
-						<div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden transition-transform hover:scale-[1.01] h-full">
-							<div class="p-6 border-b border-gray-100 dark:border-gray-700">
-								<div class="flex items-center gap-3 mb-4">
-									<div class={`p-3 rounded-lg ${category.colorClass}`}>
-										<span class="text-xl">
-											<i class={`fas fa-${category.icon}`}></i>
-										</span>
-									</div>
-									<h3 class="text-2xl font-bold text-gray-800 dark:text-white">
-										{category.name}
-									</h3>
-								</div>
-								<p class="text-gray-600 dark:text-gray-300 mt-1 mb-4">
-									{category.description}
-								</p>
-								
-								{groupedProjects[key].slice(0, 1).map((project) => (
-									<a href={`/projets/${project.slug}`} class="group block">
-										<div class="bg-white dark:bg-gray-700 rounded-lg shadow-md p-6 border border-gray-100 dark:border-gray-600 transform transition-all duration-300 hover:shadow-xl hover:-translate-y-2 flex flex-col h-full">
-											<div class="relative h-48 mb-4 overflow-hidden rounded-lg">
-												{project.data.img ? (
-													<img 
-														src={project.data.img} 
-														alt={project.data.img_alt || project.data.title} 
-														class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-													/>
-												) : (
-													<div class={`w-full h-full ${key === 'management' ? 'bg-green-600 dark:bg-green-700' : ''} ${key === 'developpement-web' ? 'bg-blue-600 dark:bg-blue-700' : ''} ${key === 'business' ? 'bg-amber-600 dark:bg-amber-700' : ''} ${key === 'qualite-process' ? 'bg-purple-600 dark:bg-purple-700' : ''} ${key === 'developpement-personnel' ? 'bg-red-600 dark:bg-red-700' : ''} flex items-center justify-center`}>
-														<i class={`fas fa-${category.icon} text-white text-3xl`}></i>
-													</div>
-												)}
-												<div class="absolute top-2 right-2">
-													<span class="text-xs px-2 py-1 rounded-full bg-black/50 text-white backdrop-blur-sm">
-														{formatDate(project.data.publishDate)}
-													</span>
-												</div>
-											</div>
-											
-											<div class="flex-grow">
-												<h4 class="text-lg font-bold text-gray-800 dark:text-white mb-2 group-hover:text-${category.color}-600 transition-colors">
-													{project.data.title}
-												</h4>
-												<p class="text-gray-600 dark:text-gray-300 text-sm mb-4 line-clamp-2">
-													{project.data.description}
-												</p>
-												
-												<!-- Ajout du domaine du projet -->
-												<div class="mb-3">
-													<span class={`text-xs px-2 py-1 rounded-full ${category.colorClass}`}>
-														{key === 'management' ? 'Chef de Projet Télécom' : ''}
-														{key === 'developpement-web' ? 'Développeur Web' : ''}
-														{key === 'business' ? 'Responsable Commercial' : ''}
-														{key === 'qualite-process' ? 'Chargé de Qualité' : ''}
-														{key === 'developpement-personnel' ? 'Formateur' : ''}
-													</span>
-												</div>
-												
-												{project.data.technologies && project.data.technologies.length > 0 && (
-													<div class="flex flex-wrap gap-2 mt-auto">
-														{project.data.technologies.slice(0, 3).map((tech: string) => (
-															<span class="text-xs px-2 py-1 bg-gray-100 dark:bg-gray-600 text-gray-700 dark:text-gray-300 rounded-full">
-																{tech}
-															</span>
-														))}
-														{project.data.technologies.length > 3 && (
-															<span class="text-xs px-2 py-1 bg-gray-100 dark:bg-gray-600 text-gray-700 dark:text-gray-300 rounded-full">
-																+{project.data.technologies.length - 3}
-															</span>
-														)}
-													</div>
-												)}
-											</div>
-											
-											<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-600">
-												<span class={`text-sm text-${category.color}-600 dark:text-${category.color}-400 flex items-center justify-end font-medium group-hover:translate-x-1 transition-transform duration-300`}>
-													Voir les détails
-													<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-														<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-													</svg>
-												</span>
-											</div>
-										</div>
-									</a>
-								))}
-							</div>
-						</div>
-					</div>
-					)
-				))}
-			</div>
-			
-			<!-- Deuxième rangée : 2 cartes -->
-			<div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-				{Object.entries(projectCategories).slice(2, 4).map(([key, category]) => (
-					groupedProjects[key].length > 0 && (
-					<div id={key} class="mb-10">
-						<div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden transition-transform hover:scale-[1.01] h-full">
-							<div class="p-6 border-b border-gray-100 dark:border-gray-700">
-								<div class="flex items-center gap-3 mb-4">
-									<div class={`p-3 rounded-lg ${category.colorClass}`}>
-										<span class="text-xl">
-											<i class={`fas fa-${category.icon}`}></i>
-										</span>
-									</div>
-									<h3 class="text-2xl font-bold text-gray-800 dark:text-white">
-										{category.name}
-									</h3>
-								</div>
-								<p class="text-gray-600 dark:text-gray-300 mt-1 mb-4">
-									{category.description}
-								</p>
-								
-								{groupedProjects[key].slice(0, 1).map((project) => (
-									<a href={`/projets/${project.slug}`} class="group block">
-										<div class="bg-white dark:bg-gray-700 rounded-lg shadow-md p-6 border border-gray-100 dark:border-gray-600 transform transition-all duration-300 hover:shadow-xl hover:-translate-y-2 flex flex-col h-full">
-											<div class="relative h-48 mb-4 overflow-hidden rounded-lg">
-												{project.data.img ? (
-													<img 
-														src={project.data.img} 
-														alt={project.data.img_alt || project.data.title} 
-														class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-													/>
-												) : (
-													<div class={`w-full h-full ${key === 'management' ? 'bg-green-600 dark:bg-green-700' : ''} ${key === 'developpement-web' ? 'bg-blue-600 dark:bg-blue-700' : ''} ${key === 'business' ? 'bg-amber-600 dark:bg-amber-700' : ''} ${key === 'qualite-process' ? 'bg-purple-600 dark:bg-purple-700' : ''} ${key === 'developpement-personnel' ? 'bg-red-600 dark:bg-red-700' : ''} flex items-center justify-center`}>
-														<i class={`fas fa-${category.icon} text-white text-3xl`}></i>
-													</div>
-												)}
-												<div class="absolute top-2 right-2">
-													<span class="text-xs px-2 py-1 rounded-full bg-black/50 text-white backdrop-blur-sm">
-														{formatDate(project.data.publishDate)}
-													</span>
-												</div>
-											</div>
-											
-											<div class="flex-grow">
-												<h4 class="text-lg font-bold text-gray-800 dark:text-white mb-2 group-hover:text-${category.color}-600 transition-colors">
-													{project.data.title}
-												</h4>
-												<p class="text-gray-600 dark:text-gray-300 text-sm mb-4 line-clamp-2">
-													{project.data.description}
-												</p>
-												
-												<!-- Ajout du domaine du projet -->
-												<div class="mb-3">
-													<span class={`text-xs px-2 py-1 rounded-full ${category.colorClass}`}>
-														{key === 'management' ? 'Chef de Projet Télécom' : ''}
-														{key === 'developpement-web' ? 'Développeur Web' : ''}
-														{key === 'business' ? 'Responsable Commercial' : ''}
-														{key === 'qualite-process' ? 'Chargé de Qualité' : ''}
-														{key === 'developpement-personnel' ? 'Formateur' : ''}
-													</span>
-												</div>
-												
-												{project.data.technologies && project.data.technologies.length > 0 && (
-													<div class="flex flex-wrap gap-2 mt-auto">
-														{project.data.technologies.slice(0, 3).map((tech: string) => (
-															<span class="text-xs px-2 py-1 bg-gray-100 dark:bg-gray-600 text-gray-700 dark:text-gray-300 rounded-full">
-																{tech}
-															</span>
-														))}
-														{project.data.technologies.length > 3 && (
-															<span class="text-xs px-2 py-1 bg-gray-100 dark:bg-gray-600 text-gray-700 dark:text-gray-300 rounded-full">
-																+{project.data.technologies.length - 3}
-															</span>
-														)}
-													</div>
-												)}
-											</div>
-											
-											<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-600">
-												<span class={`text-sm text-${category.color}-600 dark:text-${category.color}-400 flex items-center justify-end font-medium group-hover:translate-x-1 transition-transform duration-300`}>
-													Voir les détails
-													<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-														<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-													</svg>
-												</span>
-											</div>
-										</div>
-									</a>
-								))}
-							</div>
-						</div>
-					</div>
-					)
-				))}
-			</div>
-			
-			<!-- Dernière carte centrée -->
-			<div class="flex justify-center">
-				{Object.entries(projectCategories).slice(4, 5).map(([key, category]) => (
-					groupedProjects[key].length > 0 && (
-					<div id={key} class="mb-10 md:w-1/2">
-						<div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden transition-transform hover:scale-[1.01] h-full">
-							<div class="p-6 border-b border-gray-100 dark:border-gray-700">
-								<div class="flex items-center gap-3 mb-4">
-									<div class={`p-3 rounded-lg ${category.colorClass}`}>
-										<span class="text-xl">
-											<i class={`fas fa-${category.icon}`}></i>
-										</span>
-									</div>
-									<h3 class="text-2xl font-bold text-gray-800 dark:text-white">
-										{category.name}
-									</h3>
-								</div>
-								<p class="text-gray-600 dark:text-gray-300 mt-1 mb-4">
-									{category.description}
-								</p>
-								
-								{groupedProjects[key].slice(0, 1).map((project) => (
-									<a href={`/projets/${project.slug}`} class="group block">
-										<div class="bg-white dark:bg-gray-700 rounded-lg shadow-md p-6 border border-gray-100 dark:border-gray-600 transform transition-all duration-300 hover:shadow-xl hover:-translate-y-2 flex flex-col h-full">
-											<div class="relative h-48 mb-4 overflow-hidden rounded-lg">
-												{project.data.img ? (
-													<img 
-														src={project.data.img} 
-														alt={project.data.img_alt || project.data.title} 
-														class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-													/>
-												) : (
-													<div class={`w-full h-full ${key === 'management' ? 'bg-green-600 dark:bg-green-700' : ''} ${key === 'developpement-web' ? 'bg-blue-600 dark:bg-blue-700' : ''} ${key === 'business' ? 'bg-amber-600 dark:bg-amber-700' : ''} ${key === 'qualite-process' ? 'bg-purple-600 dark:bg-purple-700' : ''} ${key === 'developpement-personnel' ? 'bg-red-600 dark:bg-red-700' : ''} flex items-center justify-center`}>
-														<i class={`fas fa-${category.icon} text-white text-3xl`}></i>
-													</div>
-												)}
-												<div class="absolute top-2 right-2">
-													<span class="text-xs px-2 py-1 rounded-full bg-black/50 text-white backdrop-blur-sm">
-														{formatDate(project.data.publishDate)}
-													</span>
-												</div>
-											</div>
-											
-											<div class="flex-grow">
-												<h4 class="text-lg font-bold text-gray-800 dark:text-white mb-2 group-hover:text-${category.color}-600 transition-colors">
-													{project.data.title}
-												</h4>
-												<p class="text-gray-600 dark:text-gray-300 text-sm mb-4 line-clamp-2">
-													{project.data.description}
-												</p>
-												
-												<!-- Ajout du domaine du projet -->
-												<div class="mb-3">
-													<span class={`text-xs px-2 py-1 rounded-full ${category.colorClass}`}>
-														{key === 'management' ? 'Chef de Projet Télécom' : ''}
-														{key === 'developpement-web' ? 'Développeur Web' : ''}
-														{key === 'business' ? 'Responsable Commercial' : ''}
-														{key === 'qualite-process' ? 'Chargé de Qualité' : ''}
-														{key === 'developpement-personnel' ? 'Formateur' : ''}
-													</span>
-												</div>
-												
-												{project.data.technologies && project.data.technologies.length > 0 && (
-													<div class="flex flex-wrap gap-2 mt-auto">
-														{project.data.technologies.slice(0, 3).map((tech: string) => (
-															<span class="text-xs px-2 py-1 bg-gray-100 dark:bg-gray-600 text-gray-700 dark:text-gray-300 rounded-full">
-																{tech}
-															</span>
-														))}
-														{project.data.technologies.length > 3 && (
-															<span class="text-xs px-2 py-1 bg-gray-100 dark:bg-gray-600 text-gray-700 dark:text-gray-300 rounded-full">
-																+{project.data.technologies.length - 3}
-															</span>
-														)}
-													</div>
-												)}
-											</div>
-											
-											<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-600">
-												<span class={`text-sm text-${category.color}-600 dark:text-${category.color}-400 flex items-center justify-end font-medium group-hover:translate-x-1 transition-transform duration-300`}>
-													Voir les détails
-													<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-														<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-													</svg>
-												</span>
-											</div>
-										</div>
-									</a>
-								))}
-							</div>
-						</div>
-					</div>
-					)
-				))}
-			</div>
-		</div>
-	</section>
-
-	<!-- Section Contact -->
-	<section class="py-16 bg-gray-50 dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700">
-		<div class="container mx-auto px-4">
-			<div class="max-w-3xl mx-auto text-center">
-				<h2 class="text-2xl font-bold text-gray-800 dark:text-white mb-4">Vous avez un projet en tête ?</h2>
-				<p class="text-lg text-gray-600 dark:text-gray-300 mb-8">
-					N'hésitez pas à me contacter pour discuter de votre projet. Je serai ravi de vous aider à le concrétiser et à trouver des solutions adaptées à vos besoins.
+	<!-- Call-to-action -->
+	<section class="py-16 bg-white dark:bg-gray-800">
+		<div class="content-container">
+			<div class="bg-gradient-to-r from-indigo-600 to-violet-600 rounded-xl text-white text-center p-12">
+				<h2 class="text-3xl font-bold mb-4">Envie de collaborer ?</h2>
+				<p class="text-xl mb-8 opacity-90">
+					Discutons de vos projets et voyons comment je peux vous aider à les concrétiser
 				</p>
-				<a href="/contact" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-colors duration-200">
-					<i class="fas fa-paper-plane mr-2"></i>
+				<div class="flex flex-col sm:flex-row gap-4 justify-center">
+					<a href="/contact" class="px-8 py-3 bg-white text-indigo-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
 					Me contacter
 				</a>
+					<a href="/about" class="px-8 py-3 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors">
+						En savoir plus
+					</a>
+				</div>
 			</div>
 		</div>
 	</section>
-	
-	<BackToTop />
 </BaseLayout>
 
-<script defer is:inline>
-	// Ajout de Font Awesome
+	<script>
+		// Chargement de FontAwesome si pas déjà présent
 	if (!document.querySelector('#font-awesome')) {
 		const link = document.createElement('link');
+			link.rel = 'stylesheet';
 		link.id = 'font-awesome';
-		link.rel = 'stylesheet';
 		link.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css';
 		document.head.appendChild(link);
 	}
-	
-	// Animation au scroll
-	document.addEventListener('DOMContentLoaded', function() {
-		const observer = new IntersectionObserver((entries) => {
-			entries.forEach(entry => {
-				if (entry.isIntersecting) {
-					entry.target.classList.add('animate-fade-in');
-					observer.unobserve(entry.target);
-				}
-			});
-		}, { threshold: 0.1 });
-		
-		document.querySelectorAll('.projects-page section > div > div[id], a.group').forEach(section => {
-			section.classList.add('opacity-0');
-			observer.observe(section);
-		});
-	});
 </script>
 
 <style>
-	/* Animation de fade in */
-	.animate-fade-in {
-		animation: fadeIn 0.6s ease-out forwards;
-	}
-	
-	@keyframes fadeIn {
-		from {
-			opacity: 0;
-			transform: translateY(20px);
-		}
-		to {
-			opacity: 1;
-			transform: translateY(0);
-		}
-	}
-	
-	/* Classes d'utilitaires pour les couleurs */
-	.bg-blue-50 { background-color: #eff6ff; }
-	.bg-blue-100 { background-color: #dbeafe; }
-	.bg-blue-600 { background-color: #2563eb; }
-	.bg-blue-700 { background-color: #1d4ed8; }
-	.text-blue-600 { color: #2563eb; }
-	.text-blue-400 { color: #60a5fa; }
-	.text-blue-800 { color: #1e40af; }
-	.text-blue-300 { color: #93c5fd; }
-	
-	.bg-green-50 { background-color: #f0fdf4; }
-	.bg-green-100 { background-color: #d1fae5; }
-	.bg-green-600 { background-color: #059669; }
-	.bg-green-700 { background-color: #047857; }
-	.text-green-600 { color: #059669; }
-	.text-green-400 { color: #34d399; }
-	.text-green-800 { color: #065f46; }
-	.text-green-300 { color: #6ee7b7; }
-	
-	.bg-purple-50 { background-color: #faf5ff; }
-	.bg-purple-100 { background-color: #ede9fe; }
-	.bg-purple-600 { background-color: #7c3aed; }
-	.bg-purple-700 { background-color: #6d28d9; }
-	.text-purple-600 { color: #7c3aed; }
-	.text-purple-400 { color: #a78bfa; }
-	.text-purple-800 { color: #5b21b6; }
-	.text-purple-300 { color: #c4b5fd; }
-	
-	.bg-red-50 { background-color: #fef2f2; }
-	.bg-red-100 { background-color: #fee2e2; }
-	.bg-red-600 { background-color: #dc2626; }
-	.bg-red-700 { background-color: #b91c1c; }
-	.text-red-600 { color: #dc2626; }
-	.text-red-400 { color: #f87171; }
-	.text-red-800 { color: #991b1b; }
-	.text-red-300 { color: #fca5a5; }
-	
-	.bg-amber-50 { background-color: #fffbeb; }
-	.bg-amber-100 { background-color: #fef3c7; }
-	.bg-amber-600 { background-color: #d97706; }
-	.bg-amber-700 { background-color: #b45309; }
-	.text-amber-600 { color: #d97706; }
-	.text-amber-400 { color: #fbbf24; }
-	.text-amber-800 { color: #92400e; }
-	.text-amber-300 { color: #fcd34d; }
-	
-	/* Utilitaires pour le contenu */
-	.line-clamp-2 {
-		display: -webkit-box;
-		-webkit-line-clamp: 2;
-		-webkit-box-orient: vertical;
-		overflow: hidden;
-	}
-	
+	/* Styles cohérents avec le design system */
 	.line-clamp-3 {
 		display: -webkit-box;
 		-webkit-line-clamp: 3;
 		-webkit-box-orient: vertical;
 		overflow: hidden;
+	}
+	
+	/* Responsive */
+	@media (max-width: 768px) {
+		.content-container {
+			padding: 0 1rem;
+		}
+		
+		section {
+			padding: 1.5rem;
+		}
 	}
 </style> 

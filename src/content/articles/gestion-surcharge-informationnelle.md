@@ -1,20 +1,24 @@
 ---
 draft: false
-title: "Gestion de la Surcharge Informationnelle : Guide Pratique"
-description: "Guide pratique sur la gestion de la surcharge informationnelle : stratégies, outils et bonnes pratiques pour optimiser votre productivité dans un monde d\\"information"
-date: "2024-03-15"
+title: "Gestion Surcharge Informationnelle"
+description: "Description de l'article Gestion Surcharge Informationnelle"
 author: "Gérald Pameole"
 type: "article"
 featured: false
 readingTime: 15
-hasMermaid: true
-targetAudience: "Professionnels et Étudiants"
-domain: "Productivité"
-tags: ""
+hasMermaid: false
+targetAudience: "Professionnels"
+domain: "Général"
+tags: ["article"]
 pillColor: "blue"
-skills: ""
-relatedArticles: ""
+skills: ["Compétences"]
+relatedArticles: []
+publishDate: "2024-01-01"
 ---
+
+
+
+
 
 # Gestion de la Surcharge Informationnelle : Guide Pratique
 

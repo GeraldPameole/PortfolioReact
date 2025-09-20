@@ -1,9 +1,23 @@
 ---
-title: "Email Marketing : Stratégies de Personnalisation pour Maximiser l\\"Engagement"
-description: "Découvrez comment implémenter une personnalisation hyper-ciblée dans vos campagnes d\\"email marketing pour augmenter significativement vos taux d\'ouverture et de conversion."
-author: "Gérald Paméole"
+draft: false
+title: "Email Marketing Personnalisation"
+description: "Description de l'article Email Marketing Personnalisation"
+author: "Gérald Pameole"
 type: "article"
+featured: false
+readingTime: 15
+hasMermaid: false
+targetAudience: "Professionnels"
+domain: "Général"
+tags: ["article"]
+pillColor: "blue"
+skills: ["Compétences"]
+relatedArticles: []
+publishDate: "2024-01-01"
 ---
+
+
+
 
 # La Personnalisation Avancée en Email Marketing: Au-delà du Prénom
 

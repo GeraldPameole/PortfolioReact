@@ -1,20 +1,23 @@
 ---
 draft: false
-title: "Formation à l\\"Adaptation : Guide Complet pour le Développement de la Flexibilité"
-description: "Découvrez les stratégies et méthodes pour développer efficacement l\\"adaptation. Un guide détaillé sur l\\"apprentissage, le développement et l\\"application de la flexibilité."
-date: "2024-03-20"
+title: "Formation Adaptation"
+description: "Description de l'article Formation Adaptation"
 author: "Gérald Pameole"
 type: "article"
 featured: false
 readingTime: 15
-hasMermaid: true
-targetAudience: "Professionnels RH et Formateurs"
-domain: "Formation & Développement"
-tags: ["formation", "adaptation", "flexibilité", "développement", "changement"]
-pillColor: "purple"
-skills: ["Formation", "Adaptation", "Flexibilité", "Développement", "Changement"]
-relatedArticles: ["formation-mentorat", "gestion-talents-developpement"]
+hasMermaid: false
+targetAudience: "Professionnels"
+domain: "Général"
+tags: ["article"]
+pillColor: "blue"
+skills: ["Compétences"]
+relatedArticles: []
+publishDate: "2024-01-01"
 ---
+
+
+
 
 # Formation à l'Adaptation : Guide Complet pour le Développement de la Flexibilité
 

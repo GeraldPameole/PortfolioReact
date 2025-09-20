@@ -1,20 +1,23 @@
 ---
 draft: false
-title: "Gestion des Priorités et Efficacité : Guide Complet pour Atteindre vos Objectifs"
-description: "Guide complet pour gérer efficacement vos priorités et atteindre vos objectifs personnels et professionnels"
-date: "2024-03-15"
+title: "Gestion Priorites Efficacite"
+description: "Description de l'article Gestion Priorites Efficacite"
 author: "Gérald Pameole"
 type: "article"
 featured: false
 readingTime: 15
-hasMermaid: true
-targetAudience: "Professionnels et Entrepreneurs"
-domain: "Développement Personnel"
-tags: ""
-pillColor: "purple"
-skills: ""
-relatedArticles: ""
+hasMermaid: false
+targetAudience: "Professionnels"
+domain: "Général"
+tags: ["article"]
+pillColor: "blue"
+skills: ["Compétences"]
+relatedArticles: []
+publishDate: "2024-01-01"
 ---
+
+
+
 
 # Gestion des Priorités et Efficacité : Guide Complet pour Atteindre vos Objectifs
 

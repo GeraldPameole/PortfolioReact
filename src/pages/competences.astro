@@ -1,100 +1,219 @@
 ---
+import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 
-const skills = [
-	{
-		category: 'Front-end',
-		items: [
-			{ name: 'React', level: 90 },
-			{ name: 'Vue.js', level: 85 },
-			{ name: 'TypeScript', level: 80 },
-			{ name: 'Tailwind CSS', level: 95 },
-			{ name: 'HTML/CSS', level: 95 }
-		]
+// Récupérer tous les articles
+const allArticles = await getCollection('articles');
+
+// Définir les domaines de compétence principaux
+const domainesCompetences = {
+	"Formation & Développement": {
+		description: "Articles sur la formation, le développement des compétences et l'apprentissage continu",
+		color: "blue",
+		icon: "fas fa-graduation-cap"
 	},
-	{
-		category: 'Back-end',
-		items: [
-			{ name: 'Node.js', level: 85 },
-			{ name: 'Express', level: 80 },
-			{ name: 'MongoDB', level: 75 },
-			{ name: 'PostgreSQL', level: 70 },
-			{ name: 'REST APIs', level: 85 }
-		]
+	"Gestion des Talents": {
+		description: "Stratégies et méthodes pour gérer, développer et fidéliser les talents",
+		color: "green", 
+		icon: "fas fa-users"
 	},
-	{
-		category: 'Outils & Méthodologies',
-		items: [
-			{ name: 'Git', level: 90 },
-			{ name: 'Docker', level: 70 },
-			{ name: 'CI/CD', level: 75 },
-			{ name: 'Agile', level: 85 },
-			{ name: 'TDD', level: 80 }
-		]
+	"Développement Web": {
+		description: "Tendances, technologies et bonnes pratiques du développement web moderne",
+		color: "purple",
+		icon: "fas fa-code"
+	},
+	"Management": {
+		description: "Leadership, gestion d'équipe et management de projet",
+		color: "orange",
+		icon: "fas fa-briefcase"
+	},
+	"Développement Commercial": {
+		description: "Marketing digital, stratégies commerciales et développement business",
+		color: "red",
+		icon: "fas fa-chart-line"
+	},
+	"Transformation Digitale": {
+		description: "Innovation technologique et transformation des organisations",
+		color: "indigo",
+		icon: "fas fa-digital-tachograph"
+	},
+	"Productivité & Gestion du Temps": {
+		description: "Méthodes et outils pour optimiser sa productivité et gérer son temps",
+		color: "teal",
+		icon: "fas fa-clock"
+	},
+	"Développement Personnel": {
+		description: "Développement des soft skills et compétences personnelles",
+		color: "pink",
+		icon: "fas fa-user-graduate"
+	},
+	"Formation & Pédagogie": {
+		description: "Méthodes pédagogiques et techniques de formation",
+		color: "yellow",
+		icon: "fas fa-chalkboard-teacher"
+	},
+	"Ressources Humaines": {
+		description: "Gestion RH, évaluation et développement des compétences",
+		color: "emerald",
+		icon: "fas fa-hands-helping"
 	}
-];
+};
+
+// Fonction pour obtenir les 5 meilleurs articles d'un domaine
+function getTopArticlesForDomain(articles: any[], domain: string, limit: number = 5) {
+	return articles
+		.filter(article => article.data.domain === domain)
+		.sort((a, b) => {
+			// Prioriser les articles featured
+			if (a.data.featured && !b.data.featured) return -1;
+			if (!a.data.featured && b.data.featured) return 1;
+			// Puis par date (plus récent en premier)
+			return new Date(b.data.date).getTime() - new Date(a.data.date).getTime();
+		})
+		.slice(0, limit);
+}
+
+// Obtenir les articles par domaine
+const articlesByDomain: Record<string, any[]> = {};
+Object.keys(domainesCompetences).forEach(domain => {
+	articlesByDomain[domain] = getTopArticlesForDomain(allArticles, domain);
+});
+
+// Fonction pour formater la date
+function formatDate(date: string) {
+	return new Date(date).toLocaleDateString('fr-FR', {
+		year: 'numeric',
+		month: 'long',
+		day: 'numeric'
+	});
+}
+
+// Fonction pour calculer le temps de lecture
+function calculateReadingTime(content: string) {
+	const wordsPerMinute = 200;
+	const wordCount = content.split(' ').length;
+	return Math.ceil(wordCount / wordsPerMinute);
+}
+
+// Couleurs pour les badges
+const colorClasses = {
+	blue: "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200",
+	green: "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200",
+	purple: "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200",
+	orange: "bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-200",
+	red: "bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200",
+	indigo: "bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-200",
+	teal: "bg-teal-100 text-teal-800 dark:bg-teal-900 dark:text-teal-200",
+	pink: "bg-pink-100 text-pink-800 dark:bg-pink-900 dark:text-pink-200",
+	yellow: "bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200",
+	emerald: "bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-200"
+};
 ---
 
 <BaseLayout
-	title="Compétences | Gérald Paméole"
-	description="Découvrez mes compétences techniques en développement web full stack."
-	customClass="skills-page"
+	title="Domaines de Compétences | Gérald Paméole"
+	description="Découvrez mes articles organisés par domaines de compétences : formation, gestion des talents, développement web, management et plus encore."
 >
-	<!-- En-tête de page -->
-	<section class="py-16 md:py-24 bg-gradient-to-r from-indigo-600/5 to-violet-600/5">
-		<div class="container mx-auto px-4">
-			<div class="max-w-3xl mx-auto text-center">
-				<h1 class="text-4xl md:text-5xl font-bold mb-6 text-gray-800 dark:text-white">
-					Expertise en développement web
+	<div class="bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-gray-800 min-h-screen">
+		<!-- En-tête -->
+		<div class="pt-24 pb-16 px-4 bg-gradient-to-r from-indigo-600/5 to-violet-600/5">
+			<div class="content-container text-center">
+				<h1 class="text-4xl font-bold text-[#111827] dark:text-white mb-4">
+					Domaines de Compétences
 				</h1>
-				<p class="text-xl text-gray-600 dark:text-gray-300 mb-8">
-					Je maîtrise l'ensemble des technologies nécessaires pour créer des applications web modernes et performantes.
+				<p class="text-lg text-[#111827] dark:text-gray-300 mb-8 max-w-4xl mx-auto">
+					Explorez mes articles organisés par domaines de compétences. Chaque section présente les 5 articles les plus pertinents pour approfondir vos connaissances dans ces domaines clés.
 				</p>
-				<div class="flex flex-wrap justify-center gap-3">
-					<span class="px-4 py-2 rounded-full bg-indigo-100 text-indigo-800 dark:bg-indigo-900/30 dark:text-indigo-300">
-						Front-end
-					</span>
-					<span class="px-4 py-2 rounded-full bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-300">
-						Back-end
-					</span>
-					<span class="px-4 py-2 rounded-full bg-purple-100 text-purple-800 dark:bg-purple-900/30 dark:text-purple-300">
-						DevOps
-					</span>
-				</div>
 			</div>
 		</div>
-	</section>
 
-	<!-- Contenu principal -->
-	<section class="py-16 bg-white dark:bg-gray-900">
-		<div class="container mx-auto px-4">
-			<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-				{skills.map((skill) => (
-					<div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden">
-						<div class="p-6 border-b border-gray-100 dark:border-gray-700">
-							<h2 class="text-xl font-bold text-gray-800 dark:text-white">{skill.category}</h2>
+		<!-- Contenu principal -->
+		<div class="content-container-wide pb-16">
+			{Object.entries(domainesCompetences).map(([domain, config]) => {
+				const articles = articlesByDomain[domain];
+				const colorClass = colorClasses[config.color as keyof typeof colorClasses];
+				
+				return (
+					<section class="mb-16">
+						<div class="mb-8">
+							<div class="flex items-center gap-3 mb-4">
+								<div class={`p-3 rounded-lg ${colorClass}`}>
+									<i class={`${config.icon} text-xl`}></i>
+								</div>
+								<h2 class="text-3xl font-bold text-[#111827] dark:text-white">
+									{domain}
+								</h2>
+							</div>
+							<p class="text-lg text-[#111827] dark:text-gray-300 mb-6">
+								{config.description}
+							</p>
 						</div>
-						<div class="p-6">
-							<div class="space-y-5">
-								{skill.items.map((item) => (
-									<div>
-										<div class="flex justify-between text-sm mb-2">
-											<span class="text-gray-600 dark:text-gray-300">{item.name}</span>
-											<span class="text-gray-900 dark:text-white font-medium">{item.level}%</span>
+
+						{articles.length > 0 ? (
+							<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+								{articles.map((article) => (
+									<article class="bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+										<div class="p-6">
+											<div class="flex items-center gap-2 mb-3">
+												{article.data.featured && (
+													<span class="px-2 py-1 text-xs font-medium bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200 rounded-full">
+														À la une
+													</span>
+												)}
+												<span class="px-2 py-1 text-xs font-medium bg-gray-100 text-[#111827] dark:bg-gray-700 dark:text-gray-200 rounded-full">
+													{article.data.readingTime || calculateReadingTime(article.body)} min
+												</span>
+											</div>
+											
+											<h3 class="text-xl font-bold text-[#111827] dark:text-white mb-3 line-clamp-2">
+												<a href={`/articles/${article.slug}`} class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+													{article.data.title}
+												</a>
+											</h3>
+											
+											<p class="text-[#111827] dark:text-gray-300 mb-4 line-clamp-3">
+												{article.data.description}
+											</p>
+											
+											<div class="flex items-center justify-between">
+												<span class="text-sm text-gray-500 dark:text-gray-400">
+													{formatDate(article.data.date)}
+												</span>
+												<a href={`/articles/${article.slug}`} 
+												   class="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 font-medium text-sm transition-colors">
+													Lire l'article →
+												</a>
+											</div>
 										</div>
-										<div class="mt-1 h-2 w-full rounded-full bg-gray-200 dark:bg-gray-700">
-											<div
-												class="h-2 rounded-full bg-indigo-600 dark:bg-indigo-400"
-												style={`width: ${item.level}%`}
-											/>
-										</div>
-									</div>
+									</article>
 								))}
 							</div>
-						</div>
-					</div>
-				))}
-			</div>
+						) : (
+							<div class="text-center py-8">
+								<p class="text-gray-500 dark:text-gray-400">
+									Aucun article disponible pour ce domaine pour le moment.
+								</p>
+							</div>
+						)}
+					</section>
+				);
+			})}
 		</div>
-	</section>
+	</div>
 </BaseLayout>
+
+<style>
+	.line-clamp-2 {
+		display: -webkit-box;
+		-webkit-line-clamp: 2;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+	}
+	
+	.line-clamp-3 {
+		display: -webkit-box;
+		-webkit-line-clamp: 3;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+	}
+</style>

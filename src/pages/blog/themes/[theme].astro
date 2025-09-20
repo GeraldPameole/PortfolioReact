@@ -53,8 +53,8 @@ const pageDescription = `Découvrez tous nos articles sur ${themeConfig.label.to
 				<div class="flex items-center">
 					<i class={`${themeConfig.icon} text-2xl ${themeConfig.text} mr-3`}></i>
 					<div>
-						<h2 class="text-xl font-bold text-gray-800 dark:text-white">{themeArticles.length} articles</h2>
-						<p class="text-gray-600 dark:text-gray-300">dans la catégorie {themeConfig.label}</p>
+						<h2 class="text-xl font-bold text-[#111827] dark:text-white">{themeArticles.length} articles</h2>
+						<p class="text-[#111827] dark:text-gray-300">dans la catégorie {themeConfig.label}</p>
 					</div>
 				</div>
 				<a href="/blog/articles" class="text-indigo-600 dark:text-indigo-400 hover:text-indigo-700 dark:hover:text-indigo-300 font-medium inline-flex items-center">
@@ -75,7 +75,7 @@ const pageDescription = `Découvrez tous nos articles sur ${themeConfig.label.to
 
 		{themeArticles.length === 0 && (
 			<div class="text-center py-12">
-				<p class="text-gray-600 dark:text-gray-400 text-lg">
+				<p class="text-[#111827] dark:text-gray-400 text-lg">
 					Aucun article n'est disponible dans cette catégorie pour le moment.
 				</p>
 			</div>

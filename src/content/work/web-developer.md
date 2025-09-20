@@ -1,25 +1,25 @@
 ---
-title: Développeur Web Front-End
+title: "Développeur Web Front-End"
 publishDate: "2024-01-03"
-description: Conception et développement d'applications web modernes et interfaces utilisateur.
-author: Gérald Paméole
-img: /assets/webdeveloppersuitbackblue.jpg
-img_alt: Développeur web en action
-company: ACTIV PARTNERS
+description: "Conception et développement d'applications web modernes et interfaces utilisateur."
+author: "Gérald Paméole"
+img: "/assets/webdeveloppersuitbackblue.jpg"
+img_alt: "Développeur web en action"
+company: "ACTIV PARTNERS"
 period: "2019 - 2021"
 location: "Paris, France"
 technologies:
-  - JavaScript
-  - React
-  - HTML/CSS
-  - TypeScript
-  - Node.js
+- JavaScript
+- React
+- HTML/CSS
+- TypeScript
+- Node.js
 projectType: "professional"
 tags:
-  - Développement
-  - Front-end
-  - UX/UI
-  - Web Design
+- Développement
+- Front-end
+- UX/UI
+- Web Design
 ---
 
 # Développeur Web Front-End

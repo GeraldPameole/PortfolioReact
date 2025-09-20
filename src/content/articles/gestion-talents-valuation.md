@@ -1,20 +1,24 @@
 ---
 draft: false
-title: "Évaluation des Talents : Guide Complet pour la Performance"
-description: "Découvrez les méthodes et outils pour évaluer efficacement les talents et la performance. Un guide détaillé sur l\\"évaluation continue, le feedback et le développement."
-date: "2024-03-20"
+title: "Gestion Talents Valuation"
+description: "Description de l'article Gestion Talents Valuation"
 author: "Gérald Pameole"
 type: "article"
 featured: false
 readingTime: 15
-hasMermaid: true
-targetAudience: "Professionnels RH"
-domain: "Gestion des Talents"
-tags: ["évaluation", "performance", "feedback", "développement", "compétences"]
-pillColor: "yellow"
-skills: ""
-relatedArticles: ""
+hasMermaid: false
+targetAudience: "Professionnels"
+domain: "Général"
+tags: ["article"]
+pillColor: "blue"
+skills: ["Compétences"]
+relatedArticles: []
+publishDate: "2024-01-01"
 ---
+
+
+
+
 
 # Évaluation des Talents : Guide Complet pour la Performance
 

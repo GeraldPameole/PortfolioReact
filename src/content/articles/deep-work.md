@@ -1,20 +1,23 @@
 ---
 draft: false
-title: "Deep Work : Guide Complet pour une Concentration Maximale"
-description: "Découvrez comment la méthode Deep Work peut transformer votre productivité. Un guide pratique pour développer une concentration profonde et efficace."
-date: "2024-03-20"
+title: "Deep Work"
+description: "Description de l'article Deep Work"
 author: "Gérald Pameole"
 type: "article"
 featured: false
-readingTime: 12
-hasMermaid: true
-targetAudience: "Professionnels et Étudiants"
-domain: "Productivité & Concentration"
-tags: ""
-pillColor: "purple"
-skills: ""
-relatedArticles: ""
+readingTime: 15
+hasMermaid: false
+targetAudience: "Professionnels"
+domain: "Général"
+tags: ["article"]
+pillColor: "blue"
+skills: ["Compétences"]
+relatedArticles: []
+publishDate: "2024-01-01"
 ---
+
+
+
 
 # Deep Work : Guide Complet pour une Concentration Maximale
 

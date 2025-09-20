@@ -1,12 +1,24 @@
 ---
 draft: false
-title: "Gestion de la Qualité en Entreprise : Guide Complet pour l\\"Excellence Opérationnelle"
-description: "Découvrez les méthodologies et outils pour mettre en place une gestion de la qualité efficace. Un guide détaillé sur les normes, les processus et l\\"amélioration continue."
-date: "2024-03-20"
+title: "Gestion Qualite Entreprise"
+description: "Description de l'article Gestion Qualite Entreprise"
 author: "Gérald Pameole"
-tags: ["qualité", "processus", "amélioration continue", "ISO 9001", "excellence opérationnelle"]
-pillColor: "orange"
+type: "article"
+featured: false
+readingTime: 15
+hasMermaid: false
+targetAudience: "Professionnels"
+domain: "Général"
+tags: ["article"]
+pillColor: "blue"
+skills: ["Compétences"]
+relatedArticles: []
+publishDate: "2024-01-01"
 ---
+
+
+
+
 
 # Gestion de la Qualité en Entreprise : Guide Complet pour l'Excellence Opérationnelle
 

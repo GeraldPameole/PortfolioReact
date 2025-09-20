@@ -1,20 +1,24 @@
 ---
 draft: false
-title: "Gestion de la Qualité et Amélioration Continue : Guide Stratégique"
-description: "Guide stratégique sur la gestion de la qualité et l\\"amélioration continue : méthodes, outils et bonnes pratiques pour optimiser vos processus"
-date: "2024-03-15"
+title: "Gestion Qualite Amelioration"
+description: "Description de l'article Gestion Qualite Amelioration"
 author: "Gérald Pameole"
 type: "article"
 featured: false
 readingTime: 15
-hasMermaid: true
-targetAudience: "Professionnels Qualité et Managers"
-domain: "Qualité"
-tags: ["qualité", "amélioration", "processus", "excellence"]
-pillColor: "emerald"
-skills: ["Gestion de la qualité", "Amélioration continue", "Processus", "Excellence"]
-relatedArticles: ""
+hasMermaid: false
+targetAudience: "Professionnels"
+domain: "Général"
+tags: ["article"]
+pillColor: "blue"
+skills: ["Compétences"]
+relatedArticles: []
+publishDate: "2024-01-01"
 ---
+
+
+
+
 
 # Gestion de la Qualité et Amélioration Continue : Guide Pratique
 

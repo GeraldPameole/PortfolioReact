@@ -1,10 +1,23 @@
 ---
-title: "Mon Premier Article"
-description: "Un article de test pour vérifier le fonctionnement du blog"
-author: "Gerald Pameole"
+draft: false
+title: "Premier Article"
+description: "Description de l'article Premier Article"
+author: "Gérald Pameole"
 type: "article"
-tags: ["test", "blog"]
+featured: false
+readingTime: 15
+hasMermaid: false
+targetAudience: "Professionnels"
+domain: "Général"
+tags: ["article"]
+pillColor: "blue"
+skills: ["Compétences"]
+relatedArticles: []
+publishDate: "2024-01-01"
 ---
+
+
+
 
 # Mon Premier Article
 

@@ -1,10 +1,24 @@
 ---
-title: "Management Hybride : Défis et Opportunités du Travail Semi-Distant"
-description: "Analyse des modèles de travail hybride et stratégies de management pour maintenir cohésion d\\"équipe et performance dans un contexte de travail partiellement à distance."
-author: "Gérald Paméole"
-type: "book"
-skills: ""
+draft: false
+title: "Management Hybride Defis Opportunites"
+description: "Description de l'article Management Hybride Defis Opportunites"
+author: "Gérald Pameole"
+type: "article"
+featured: false
+readingTime: 15
+hasMermaid: false
+targetAudience: "Professionnels"
+domain: "Général"
+tags: ["article"]
+pillColor: "blue"
+skills: ["Compétences"]
+relatedArticles: []
+publishDate: "2024-01-01"
 ---
+
+
+
+
 
 # Management Hybride : Défis et Opportunités du Travail Semi-Distant
 

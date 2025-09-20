@@ -1,81 +1,31 @@
 ---
-title: Développeur Web Full Stack
+title: "Développeur Web Full Stack"
 publishDate: "2024-01-03"
-description: Conception et développement d'applications web modernes et performantes.
-author: Gérald Paméole
-img: /assets/web-developer.jpg
-img_alt: Développeur web en action
+description: "Conception et développement d'applications web modernes et performantes."
+author: "Gérald Paméole"
+img: "/assets/web-developer.jpg"
+img_alt: "Développeur web en action"
+company: "ACTIV PARTNERS"
+period: "2019-2021"
+location: "Paris, France"
+technologies:
+  - React
+  - JavaScript
+  - Node.js
+  - TypeScript
+  - Redux
+  - REST APIs
+  - Git
+  - Jest
 tags:
   - Développement Web
   - JavaScript
   - React
   - Node.js
+  - Frontend
+  - Backend
+  - Full Stack
 ---
-
-<style>
-.article-content {
-    width: 80%;
-    margin: 0 auto;
-    font-family: var(--font-family-sans);
-    color: var(--text-color);
-    line-height: 1.6;
-}
-
-h1 {
-    font-size: var(--text-2xl);
-    color: var(--accent-regular);
-    margin-bottom: 2rem;
-}
-
-h2 {
-    font-size: var(--text-xl);
-    color: var(--accent-dark);
-    margin-top: 3rem;
-    border-bottom: 2px solid var(--accent-regular);
-    padding-bottom: 0.5rem;
-}
-
-h3 {
-    font-size: var(--text-lg);
-    color: var(--accent-dark);
-    margin-top: 2rem;
-}
-
-p {
-    margin-bottom: 1.5rem;
-    font-size: var(--text-md);
-}
-
-ul {
-    margin-left: 2rem;
-    margin-bottom: 1.5rem;
-}
-
-li {
-    margin-bottom: 0.5rem;
-    font-size: var(--text-md);
-}
-
-blockquote {
-    border-left: 4px solid var(--accent-regular);
-    padding-left: 1rem;
-    margin: 2rem 0;
-    font-style: italic;
-    color: var(--accent-dark);
-}
-
-@media (max-width: 768px) {
-    .article-content {
-        width: 95%;
-    }
-    
-    h1 { font-size: var(--text-xl); }
-    h2 { font-size: var(--text-lg); }
-    h3 { font-size: var(--text-md); }
-}
-</style>
-
-<div class="article-content">
 
 # Développeur React JS
 
@@ -89,59 +39,70 @@ Je suis un développeur React JS passionné par la création d'interfaces utilis
 
 ### React & Écosystème
 
-- Hooks
-- Redux
-- Context API
+- **Hooks** : Maîtrise complète des hooks React (useState, useEffect, useContext, hooks personnalisés)
+- **Redux** : Gestion d'état complexe avec Redux Toolkit et middleware
+- **Context API** : Architecture de partage de données entre composants
 
 ### Architecture Frontend
 
-- SPA
-- Composants réutilisables
-- Architecture modulaire
+- **SPA** : Développement d'applications single-page optimisées
+- **Composants réutilisables** : Création de bibliothèques de composants modulaires
+- **Architecture modulaire** : Structuration de projets maintenables et évolutifs
 
-### Intégration
+### Intégration & APIs
 
-- REST APIs
-- Tests unitaires
-- CI/CD
+- **REST APIs** : Intégration et consommation d'APIs RESTful
+- **Tests unitaires** : Jest, React Testing Library, TDD
+- **CI/CD** : Pipelines d'intégration et déploiement continus
 
-### Optimisation
+### Optimisation Performance
 
-- Performance
-- SEO
-- Accessibilité
+- **Performance** : Lazy loading, code splitting, optimisation du bundle
+- **SEO** : Server-side rendering avec Next.js
+- **Accessibilité** : Respect des standards WCAG 2.1
 
-### Collaboration
+### Outils & Collaboration
 
-- Git
-- Code Review
-- Documentation
+- **Git** : Workflow Git avancé, branching strategies
+- **Code Review** : Processus de révision et amélioration continue
+- **Documentation** : Storybook, JSDoc, documentation technique
 
-## 🛠 Vision & Approche
+## 🛠 Réalisations Clés
 
-### Innovation
+### Refonte Application E-commerce
 
-- Veille technologique continue
-- Adoption des meilleures pratiques
-- Expérimentation de nouvelles solutions
+- Migration d'une application legacy vers React moderne
+- Amélioration des performances de 40%
+- Implémentation d'un design system complet
 
-### Qualité
+### Dashboard Analytics
 
-- Architecture robuste
-- Code maintenable
-- Tests automatisés
+- Développement d'un tableau de bord en temps réel
+- Intégration de graphiques interactifs avec D3.js
+- Architecture micro-frontends
 
-### Collaboration
+### Progressive Web App
 
-- Communication étroite avec les équipes
-- Partage de connaissances
-- Mentorat technique
+- Transformation d'un site web en PWA
+- Fonctionnalités offline avec Service Workers
+- Notifications push et synchronisation background
 
-## 🎯 Objectifs
+## 🎯 Vision & Approche
 
-- Offrir une expérience utilisateur exceptionnelle
-- Respecter les standards modernes du web
-- S'adapter aux évolutions technologiques
-- Contribuer à l'innovation technique
+### Innovation Continue
 
-</div>
+- **Veille technologique** : Suivi des évolutions React et écosystème JavaScript
+- **Meilleures pratiques** : Adoption et promotion des standards modernes
+- **Expérimentation** : Prototypage de nouvelles solutions techniques
+
+### Qualité & Excellence
+
+- **Architecture robuste** : Patterns de conception éprouvés
+- **Code maintenable** : Clean code, SOLID principles
+- **Tests automatisés** : Couverture de tests élevée, TDD
+
+### Collaboration & Mentoring
+
+- **Communication** : Interface technique/métier efficace
+- **Partage de connaissances** : Formations internes, documentation
+- **Mentorat** : Accompagnement des développeurs junior

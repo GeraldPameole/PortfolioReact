@@ -1,20 +1,23 @@
 ---
 draft: false
-title: "Gestion de la Succession : Guide Complet pour la Pérennité"
-description: "Découvrez les stratégies et méthodes pour assurer la continuité et le développement des talents clés. Un guide détaillé sur la planification de la succession et le transfert des compétences."
-date: "2024-03-20"
+title: "Gestion Talents Succession"
+description: "Description de l'article Gestion Talents Succession"
 author: "Gérald Pameole"
 type: "article"
 featured: false
 readingTime: 15
-hasMermaid: true
-targetAudience: "Professionnels RH"
-domain: "Ressources Humaines"
-tags: ""
+hasMermaid: false
+targetAudience: "Professionnels"
+domain: "Général"
+tags: ["article"]
 pillColor: "blue"
-skills: ""
-relatedArticles: ""
+skills: ["Compétences"]
+relatedArticles: []
+publishDate: "2024-01-01"
 ---
+
+
+
 
 # Planification de la Relève : Guide Complet pour la Succession
 

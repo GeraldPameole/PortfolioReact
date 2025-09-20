@@ -1,20 +1,23 @@
 ---
 draft: false
-title: "Gestion des Risques en Projet : Guide Stratégique"
-description: "Guide stratégique sur la gestion des risques en projet : méthodes, outils et bonnes pratiques pour anticiper et gérer efficacement les risques projet"
-date: "2024-03-15"
+title: "Gestion Risques Projet"
+description: "Description de l'article Gestion Risques Projet"
 author: "Gérald Pameole"
 type: "article"
 featured: false
 readingTime: 15
-hasMermaid: true
-targetAudience: "Chefs de Projet et Managers"
-domain: "Management de Projet"
-tags: ""
+hasMermaid: false
+targetAudience: "Professionnels"
+domain: "Général"
+tags: ["article"]
 pillColor: "blue"
-skills: ""
-relatedArticles: ""
+skills: ["Compétences"]
+relatedArticles: []
+publishDate: "2024-01-01"
 ---
+
+
+
 
 # Gestion des Risques en Projet : Guide Stratégique
 

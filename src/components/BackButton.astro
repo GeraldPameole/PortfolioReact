@@ -1,10 +1,11 @@
 ---
-// Composant pour revenir à la page précédente
+const { position = "top-left" } = Astro.props;
+const buttonId = `backButton-${position}`;
 ---
 
 <button
-  id="backButton"
-  class="fixed top-20 left-4 flex items-center bg-secondary-warm hover:bg-primary-dark text-white py-2 px-4 rounded-lg shadow-lg z-50 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-secondary-cool"
+  id={buttonId}
+  class={`fixed ${position === 'bottom-right' ? 'bottom-5 right-5' : 'top-20 left-4'} flex items-center bg-secondary-warm hover:bg-primary-dark text-white py-2 px-4 rounded-lg shadow-lg z-[9999] transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-secondary-cool`}
   aria-label="Retour à la page précédente"
 >
   <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -14,24 +15,16 @@
 </button>
 
 <script>
-  // Script pour gérer le bouton retour
   document.addEventListener('DOMContentLoaded', () => {
-    const backButton = document.getElementById('backButton');
-    
+    const backButton = document.getElementById("backButton-" + ("${position}" || "top-left"));
     if (!backButton) return;
-
-    // Masquer le bouton sur la page d'accueil
     if (window.location.pathname === '/' || window.location.pathname === '/index.html') {
       backButton.style.display = 'none';
       return;
     }
-
-    // Action au clic sur le bouton
     backButton.addEventListener('click', () => {
       window.history.back();
     });
-    
-    // Animation d'entrée
     setTimeout(() => {
       backButton.classList.add('translate-x-0', 'opacity-100');
       backButton.classList.remove('opacity-0', '-translate-x-4');
@@ -40,24 +33,24 @@
 </script>
 
 <style>
-  #backButton {
+  [id^="backButton"] {
     transform: translateX(-1rem);
     opacity: 0;
     transition: all 0.3s ease-out;
+    z-index: 9999;
   }
-  
   @media (max-width: 640px) {
-    #backButton {
-      top: 4.5rem;
-      left: 0.75rem;
+    [id^="backButton"] {
+      top: unset;
+      left: unset;
+      bottom: 1.25rem;
+      right: 1.25rem;
       padding: 0.5rem;
     }
-    
-    #backButton span {
+    [id^="backButton"] span {
       display: none;
     }
-    
-    #backButton svg {
+    [id^="backButton"] svg {
       margin-right: 0;
     }
   }

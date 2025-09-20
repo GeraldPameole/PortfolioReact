@@ -1,10 +1,24 @@
 ---
-title: "Mentoring et Développement Professionnel : Guide Complet"
-description: "Comment établir et bénéficier d\\"une relation de mentorat efficace pour accélérer sa progression de carrière et développer son leadership."
-author: "Gérald Paméole"
-type: "book"
-skills: ""
+draft: false
+title: "Mentoring Developpement Professionnel"
+description: "Description de l'article Mentoring Developpement Professionnel"
+author: "Gérald Pameole"
+type: "article"
+featured: false
+readingTime: 15
+hasMermaid: false
+targetAudience: "Professionnels"
+domain: "Général"
+tags: ["article"]
+pillColor: "blue"
+skills: ["Compétences"]
+relatedArticles: []
+publishDate: "2024-01-01"
 ---
+
+
+
+
 
 # Le Mentorat: Catalyseur Méconnu du Développement Professionnel
 

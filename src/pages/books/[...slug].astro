@@ -1,4 +1,5 @@
 ---
+import BackButton from '@/components/BackButton.astro';
 import type { CollectionEntry } from 'astro:content';
 import { getCollection } from 'astro:content';
 import Layout from '../../layouts/BaseLayout.astro';
@@ -31,7 +32,7 @@ const professionLabels: Record<string, string> = {
 	title={book.data.title}
 	description={book.data.description}
 >
-	<div class="book-container">
+	<div class="content-container-wide py-12">
 		<div class="book-meta-top">
 			<a href="/blog" class="back-link">&larr; Retour aux livres</a>
 			<span class="book-profession">{professionLabels[book.data.profession as string] || book.data.profession}</span>
@@ -71,44 +72,41 @@ const professionLabels: Record<string, string> = {
 					<p class="book-description">{book.data.description}</p>
 				</header>
 
-				<div class="book-full-content">
+				<div class="book-content-typography">
 					<Content />
 				</div>
 			</div>
 		</div>
+		<BackButton position="bottom-right" />
 	</div>
 </Layout>
 
 <style>
-	.book-container {
-		max-width: 1100px;
-		margin: 3rem auto;
-		padding: 0 1.5rem;
-	}
-
+	/* Styles spécifiques à la page livre */
 	.book-meta-top {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		margin-bottom: 2rem;
+		margin-bottom: var(--content-spacing-xl);
 	}
 
 	.back-link {
 		display: inline-flex;
 		align-items: center;
-		color: var(--accent-regular);
+		gap: 0.5rem;
+		color: var(--color-secondary-warm);
 		text-decoration: none;
 		font-weight: 500;
 		transition: color 0.2s ease;
 	}
 
 	.back-link:hover {
-		color: var(--accent-dark);
+		color: var(--color-tertiary-light);
 	}
 
 	.book-profession {
 		display: inline-block;
-		background-color: var(--accent-regular);
+		background-color: var(--color-secondary-warm);
 		color: white;
 		font-size: var(--text-xs);
 		font-weight: 600;
@@ -121,67 +119,75 @@ const professionLabels: Record<string, string> = {
 	.book-content-wrapper {
 		display: grid;
 		grid-template-columns: minmax(200px, 1fr) 3fr;
-		gap: 3rem;
+		gap: var(--content-spacing-2xl);
 	}
 
 	.book-sidebar {
 		display: flex;
 		flex-direction: column;
-		gap: 1.5rem;
+		gap: var(--content-spacing-lg);
 	}
 
 	.book-cover {
 		width: 100%;
-		border-radius: 0.5rem;
-		box-shadow: var(--shadow-md);
+		border-radius: var(--content-border-radius);
+		box-shadow: var(--content-shadow-md);
 	}
 
 	.book-cover-placeholder {
 		aspect-ratio: 2/3;
-		background: linear-gradient(135deg, var(--gray-800) 0%, var(--gray-600) 100%);
-		border-radius: 0.5rem;
+		background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-secondary-warm) 100%);
+		border-radius: var(--content-border-radius);
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		padding: 1.5rem;
+		padding: var(--content-spacing-lg);
 		text-align: center;
-		box-shadow: var(--shadow-md);
+		box-shadow: var(--content-shadow-md);
 	}
 
 	.book-title-placeholder {
 		font-weight: bold;
-		color: var(--gray-0);
+		color: white;
 		font-size: var(--text-lg);
-		margin-bottom: 1rem;
+		margin-bottom: var(--content-spacing-md);
 	}
 
 	.book-author-placeholder {
-		color: var(--gray-300);
+		color: rgba(255, 255, 255, 0.8);
 		font-size: var(--text-sm);
 	}
 
 	.book-details {
 		display: flex;
 		flex-direction: column;
-		gap: 1rem;
-		margin-top: 1rem;
+		gap: var(--content-spacing-md);
+		margin-top: var(--content-spacing-md);
+		background-color: rgba(0, 0, 0, 0.05);
+		padding: var(--content-spacing-lg);
+		border-radius: var(--content-border-radius);
+		border: 1px solid rgba(0, 0, 0, 0.1);
 	}
 
 	.book-detail {
 		display: flex;
 		flex-direction: column;
-		gap: 0.25rem;
+		gap: var(--content-spacing-xs);
 	}
 
 	.detail-label {
 		font-size: var(--text-xs);
-		color: var(--gray-400);
+		color: var(--color-primary-dark);
+		font-weight: 500;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
 	}
 
 	.detail-value {
 		font-size: var(--text-sm);
-		color: var(--gray-0);
+		color: var(--color-primary-dark);
+		font-weight: 600;
 	}
 
 	.amazon-link {
@@ -189,13 +195,13 @@ const professionLabels: Record<string, string> = {
 		background-color: #FF9900;
 		color: black;
 		padding: 0.5rem 1rem;
-		border-radius: 0.25rem;
+		border-radius: var(--content-border-radius);
 		text-align: center;
 		text-decoration: none;
 		font-weight: 600;
 		font-size: var(--text-sm);
 		transition: background-color 0.2s ease;
-		margin-top: 0.5rem;
+		margin-top: var(--content-spacing-sm);
 	}
 
 	.amazon-link:hover {
@@ -205,74 +211,34 @@ const professionLabels: Record<string, string> = {
 	.book-main-content {
 		display: flex;
 		flex-direction: column;
-		gap: 2rem;
+		gap: var(--content-spacing-xl);
 	}
 
 	.book-header {
-		border-bottom: 1px solid var(--gray-800);
-		padding-bottom: 1.5rem;
+		border-bottom: 2px solid var(--color-secondary-warm);
+		padding-bottom: var(--content-spacing-lg);
 	}
 
 	h1 {
-		font-size: var(--text-3xl);
-		color: var(--gray-0);
-		margin-bottom: 0.5rem;
+		font-size: var(--text-4xl);
+		color: var(--color-primary-dark);
+		margin-bottom: var(--content-spacing-sm);
 		line-height: 1.2;
 	}
 
 	.book-author {
-		font-size: var(--text-lg);
-		color: var(--accent-regular);
-		margin-bottom: 1rem;
+		font-size: var(--text-xl);
+		color: var(--color-secondary-warm);
+		margin-bottom: var(--content-spacing-md);
 	}
 
 	.book-description {
-		font-size: var(--text-md);
-		color: var(--gray-300);
+		font-size: var(--text-lg);
+		color: var(--color-primary-dark);
 		line-height: 1.6;
 	}
 
-	.book-full-content {
-		font-size: var(--text-md);
-		line-height: 1.7;
-		color: var(--gray-200);
-	}
-
-	.book-full-content :global(h2) {
-		font-size: var(--text-xl);
-		color: var(--accent-regular);
-		margin: 2rem 0 1rem 0;
-	}
-
-	.book-full-content :global(h3) {
-		font-size: var(--text-lg);
-		color: var(--accent-dark);
-		margin: 1.5rem 0 0.8rem 0;
-	}
-
-	.book-full-content :global(p) {
-		margin-bottom: 1.25rem;
-	}
-
-	.book-full-content :global(ul), .book-full-content :global(ol) {
-		padding-left: 1.75rem;
-		margin-bottom: 1.25rem;
-	}
-
-	.book-full-content :global(li) {
-		margin-bottom: 0.75rem;
-	}
-
-	.book-full-content :global(blockquote) {
-		border-left: 4px solid var(--accent-regular);
-		padding: 0.75rem 1.5rem;
-		font-style: italic;
-		margin: 1.5rem 0;
-		color: var(--gray-300);
-		background-color: var(--gray-999_40);
-		border-radius: 0 0.5rem 0.5rem 0;
-	}
-
+	/* Responsive design */
 	@media (max-width: 768px) {
 		.book-content-wrapper {
 			grid-template-columns: 1fr;
@@ -287,11 +253,29 @@ const professionLabels: Record<string, string> = {
 		}
 
 		h1 {
-			font-size: var(--text-2xl);
+			font-size: var(--text-3xl);
 		}
 
 		.book-profession {
 			font-size: 0.65rem;
+		}
+	}
+
+	/* Mode sombre */
+	@media (prefers-color-scheme: dark) {
+		.book-details {
+			background-color: rgba(255, 255, 255, 0.05);
+			border-color: rgba(255, 255, 255, 0.1);
+		}
+
+		.detail-label,
+		.detail-value,
+		.book-description {
+			color: var(--text-light);
+		}
+
+		h1 {
+			color: var(--text-light);
 		}
 	}
 </style> 

@@ -1,0 +1,655 @@
+/* ========================================
+   STYLES SPÉCIFIQUES POUR LES LIVRES
+   ======================================== */
+
+/* ========================================
+   LAYOUT PRINCIPAL DES LIVRES
+   ======================================== */
+.book-content-wrapper {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: var(--content-spacing-2xl);
+  align-items: start;
+}
+
+@media (max-width: 1024px) {
+  .book-content-wrapper {
+    grid-template-columns: 1fr;
+    gap: var(--content-spacing-xl);
+  }
+}
+
+/* ========================================
+   SIDEBAR DES LIVRES
+   ======================================== */
+.book-sidebar {
+  position: sticky;
+  top: var(--content-spacing-lg);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.95) 0%,
+    rgba(255, 255, 255, 0.98) 100%
+  );
+  -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px);
+  border-radius: var(--content-border-radius-lg);
+  padding: var(--content-spacing-xl);
+  box-shadow: var(--content-shadow-lg);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  transition: all 0.3s ease;
+}
+
+/* Mode sombre */
+.dark .book-sidebar {
+  background: linear-gradient(
+    135deg,
+    rgba(31, 41, 55, 0.95) 0%,
+    rgba(55, 65, 81, 0.98) 100%
+  );
+  border-color: rgba(75, 85, 99, 0.4);
+}
+
+.book-sidebar:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    var(--content-shadow-lg),
+    0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.dark .book-sidebar:hover {
+  box-shadow:
+    var(--content-shadow-lg),
+    0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* ========================================
+   COUVERTURE DES LIVRES
+   ======================================== */
+.book-cover {
+  width: 100%;
+  height: auto;
+  border-radius: var(--content-border-radius-lg);
+  box-shadow: var(--content-shadow-lg);
+  margin-bottom: var(--content-spacing-xl);
+  border: 3px solid white;
+  transition: all 0.3s ease;
+}
+
+.dark .book-cover {
+  border-color: var(--color-gray-600);
+}
+
+.book-cover:hover {
+  transform: scale(1.02);
+  box-shadow:
+    var(--content-shadow-lg),
+    0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.book-cover-placeholder {
+  width: 100%;
+  height: 450px;
+  background: linear-gradient(
+    135deg,
+    var(--color-tertiary-light),
+    var(--color-secondary-warm)
+  );
+  border-radius: var(--content-border-radius-lg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  padding: var(--content-spacing-xl);
+  margin-bottom: var(--content-spacing-xl);
+  box-shadow: var(--content-shadow-md);
+  position: relative;
+  overflow: hidden;
+}
+
+.book-cover-placeholder::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    45deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.1) 50%,
+    transparent 70%
+  );
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.book-title-placeholder {
+  font-size: var(--text-xl);
+  font-weight: var(--font-bold);
+  margin-bottom: var(--content-spacing-md);
+  position: relative;
+  z-index: 1;
+}
+
+.book-author-placeholder {
+  font-size: var(--text-base);
+  opacity: 0.9;
+  position: relative;
+  z-index: 1;
+}
+
+/* ========================================
+   DÉTAILS DES LIVRES
+   ======================================== */
+.book-details .book-detail {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--content-spacing-md) 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.dark .book-details .book-detail {
+  border-bottom-color: rgba(255, 255, 255, 0.08);
+}
+
+.book-details .book-detail:last-child {
+  border-bottom: none;
+}
+
+.book-details .book-detail:hover {
+  padding-left: var(--content-spacing-sm);
+  background: rgba(0, 0, 0, 0.02);
+  border-radius: var(--content-border-radius);
+}
+
+.dark .book-details .book-detail:hover {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.book-details .detail-label {
+  font-size: var(--text-sm);
+  color: var(--color-gray-600);
+  font-weight: 500;
+}
+
+.dark .book-details .detail-label {
+  color: var(--color-gray-400);
+}
+
+.book-details .detail-value {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-primary-dark);
+}
+
+.dark .book-details .detail-value {
+  color: var(--color-gray-200);
+}
+
+/* ========================================
+   LIEN AMAZON
+   ======================================== */
+.amazon-link {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: var(--content-spacing-md) var(--content-spacing-lg);
+  background: linear-gradient(135deg, #ff9900, #ff8800);
+  color: white;
+  text-decoration: none;
+  border-radius: var(--content-border-radius);
+  font-weight: 600;
+  margin-top: var(--content-spacing-lg);
+  transition: all 0.3s ease;
+  box-shadow: var(--content-shadow-sm);
+  position: relative;
+  overflow: hidden;
+}
+
+.amazon-link::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: left 0.5s ease;
+}
+
+.amazon-link:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--content-shadow-lg);
+  background: linear-gradient(135deg, #ff8800, #ff9900);
+}
+
+.amazon-link:hover::before {
+  left: 100%;
+}
+
+.amazon-link:active {
+  transform: translateY(-1px);
+}
+
+/* ========================================
+   CONTENU PRINCIPAL DES LIVRES
+   ======================================== */
+.book-main-content {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.9) 0%,
+    rgba(255, 255, 255, 0.95) 100%
+  );
+  -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px);
+  border-radius: var(--content-border-radius-lg);
+  padding: var(--content-spacing-2xl);
+  box-shadow: var(--content-shadow-lg);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: all 0.3s ease;
+}
+
+.dark .book-main-content {
+  background: linear-gradient(
+    135deg,
+    rgba(17, 24, 39, 0.9) 0%,
+    rgba(31, 41, 55, 0.95) 100%
+  );
+  border-color: rgba(75, 85, 99, 0.3);
+}
+
+.book-main-content:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    var(--content-shadow-lg),
+    0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.dark .book-main-content:hover {
+  box-shadow:
+    var(--content-shadow-lg),
+    0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* ========================================
+   EN-TÊTE DES LIVRES
+   ======================================== */
+.book-header {
+  text-align: center;
+  margin-bottom: var(--content-spacing-2xl);
+  padding-bottom: var(--content-spacing-xl);
+  border-bottom: 3px solid var(--color-secondary-warm);
+  position: relative;
+}
+
+.dark .book-header {
+  border-bottom-color: var(--color-tertiary-light);
+}
+
+.book-header::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: var(--color-tertiary-light);
+  border-radius: 2px;
+}
+
+.dark .book-header::after {
+  background: var(--color-secondary-warm);
+}
+
+.book-header h1 {
+  font-size: var(--text-4xl);
+  font-weight: var(--font-bold);
+  color: var(--color-primary-dark);
+  margin-bottom: var(--content-spacing-lg);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  line-height: var(--leading-tight);
+}
+
+.dark .book-header h1 {
+  color: var(--color-tertiary-light);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.book-header .book-author {
+  font-size: var(--text-xl);
+  color: var(--color-secondary-warm);
+  margin-bottom: var(--content-spacing-lg);
+  font-weight: 500;
+  font-style: italic;
+}
+
+.dark .book-header .book-author {
+  color: var(--color-tertiary-light);
+}
+
+.book-header .book-description {
+  font-size: var(--text-lg);
+  color: var(--color-gray-700);
+  line-height: var(--leading-relaxed);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.dark .book-header .book-description {
+  color: var(--color-gray-300);
+}
+
+/* ========================================
+   TYPOGRAPHIE SPÉCIFIQUE AUX LIVRES
+   ======================================== */
+.book-content-typography p {
+  margin-bottom: var(--content-spacing-lg);
+  line-height: var(--leading-relaxed);
+  color: var(--color-gray-800);
+  font-size: var(--text-base);
+  text-align: justify;
+}
+
+.dark .book-content-typography p {
+  color: var(--color-gray-200);
+}
+
+.book-content-typography p:first-of-type {
+  font-size: var(--text-lg);
+  color: var(--color-gray-700);
+  font-style: italic;
+}
+
+.dark .book-content-typography p:first-of-type {
+  color: var(--color-gray-400);
+}
+
+.book-content-typography ul,
+.book-content-typography ol {
+  margin: var(--content-spacing-lg) 0;
+  padding-left: var(--content-spacing-xl);
+}
+
+.book-content-typography li {
+  margin-bottom: var(--content-spacing-md);
+  line-height: var(--leading-relaxed);
+  color: var(--color-gray-800);
+  font-size: var(--text-base);
+}
+
+.dark .book-content-typography li {
+  color: var(--color-gray-200);
+}
+
+.book-content-typography li::marker {
+  color: var(--color-secondary-warm);
+  font-weight: 600;
+}
+
+.dark .book-content-typography li::marker {
+  color: var(--color-tertiary-light);
+}
+
+.book-content-typography blockquote {
+  margin: var(--content-spacing-xl) 0;
+  padding: var(--content-spacing-lg) var(--content-spacing-xl);
+  border-left: 5px solid var(--color-secondary-warm);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.9)
+  );
+  border-radius: 0 var(--content-border-radius-lg)
+    var(--content-border-radius-lg) 0;
+  font-style: italic;
+  position: relative;
+}
+
+.dark .book-content-typography blockquote {
+  background: linear-gradient(
+    135deg,
+    rgba(55, 65, 81, 0.7),
+    rgba(75, 85, 99, 0.9)
+  );
+  border-left-color: var(--color-tertiary-light);
+}
+
+.book-content-typography blockquote::before {
+  content: '"';
+  position: absolute;
+  top: var(--content-spacing-md);
+  left: var(--content-spacing-md);
+  font-size: 4rem;
+  color: var(--color-secondary-warm);
+  opacity: 0.3;
+  font-family: serif;
+}
+
+.dark .book-content-typography blockquote::before {
+  color: var(--color-tertiary-light);
+}
+
+.book-content-typography blockquote p {
+  margin: 0;
+  color: var(--color-gray-700);
+  font-size: var(--text-lg);
+  line-height: var(--leading-relaxed);
+  padding-left: var(--content-spacing-lg);
+}
+
+.dark .book-content-typography blockquote p {
+  color: var(--color-gray-300);
+}
+
+.book-content-typography code {
+  background: rgba(0, 0, 0, 0.08);
+  padding: 0.3em 0.6em;
+  border-radius: 0.375rem;
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+  color: var(--color-primary-dark);
+  font-weight: 500;
+}
+
+.dark .book-content-typography code {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--color-tertiary-light);
+}
+
+.book-content-typography pre {
+  background: var(--color-primary-dark);
+  color: var(--color-tertiary-light);
+  padding: var(--content-spacing-lg);
+  border-radius: var(--content-border-radius-lg);
+  overflow-x: auto;
+  margin: var(--content-spacing-xl) 0;
+  box-shadow: var(--content-shadow-lg);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.book-content-typography pre code {
+  background: none;
+  padding: 0;
+  color: inherit;
+  font-weight: normal;
+}
+
+.book-content-typography table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: var(--content-spacing-xl) 0;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: var(--content-border-radius-lg);
+  overflow: hidden;
+  box-shadow: var(--content-shadow-md);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.dark .book-content-typography table {
+  background: rgba(55, 65, 81, 0.9);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.book-content-typography th,
+.book-content-typography td {
+  padding: var(--content-spacing-md);
+  text-align: left;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.dark .book-content-typography th,
+.dark .book-content-typography td {
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+}
+
+.book-content-typography th {
+  background: linear-gradient(
+    135deg,
+    var(--color-secondary-warm),
+    var(--color-tertiary-light)
+  );
+  color: white;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wide);
+}
+
+.dark .book-content-typography th {
+  background: linear-gradient(
+    135deg,
+    var(--color-tertiary-light),
+    var(--color-secondary-warm)
+  );
+  color: var(--color-primary-dark);
+}
+
+.book-content-typography tr:hover {
+  background: rgba(0, 0, 0, 0.03);
+}
+
+.dark .book-content-typography tr:hover {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.book-content-typography hr {
+  border: none;
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--color-secondary-warm),
+    var(--color-tertiary-light),
+    transparent
+  );
+  margin: var(--content-spacing-2xl) 0;
+  border-radius: 2px;
+}
+
+.dark .book-content-typography hr {
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--color-tertiary-light),
+    var(--color-secondary-warm),
+    transparent
+  );
+}
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+@media (max-width: 1024px) {
+  .book-sidebar {
+    position: static;
+    margin-bottom: var(--content-spacing-lg);
+  }
+
+  .book-content-wrapper {
+    gap: var(--content-spacing-lg);
+  }
+}
+
+@media (max-width: 768px) {
+  .book-content-wrapper {
+    gap: var(--content-spacing-md);
+  }
+
+  .book-sidebar,
+  .book-main-content {
+    padding: var(--content-spacing-lg);
+  }
+
+  .book-header h1 {
+    font-size: var(--text-3xl);
+  }
+
+  .book-header .book-author {
+    font-size: var(--text-lg);
+  }
+
+  .book-header .book-description {
+    font-size: var(--text-base);
+  }
+
+  .book-content-typography p,
+  .book-content-typography li {
+    font-size: var(--text-sm);
+  }
+
+  .book-content-typography blockquote {
+    padding: var(--content-spacing-md);
+  }
+
+  .book-content-typography blockquote::before {
+    font-size: 3rem;
+    top: var(--content-spacing-sm);
+    left: var(--content-spacing-sm);
+  }
+
+  .book-content-typography blockquote p {
+    padding-left: var(--content-spacing-md);
+    font-size: var(--text-base);
+  }
+}
+
+@media (max-width: 480px) {
+  .book-sidebar,
+  .book-main-content {
+    padding: var(--content-spacing-md);
+  }
+
+  .book-header h1 {
+    font-size: var(--text-2xl);
+  }
+
+  .book-header .book-author {
+    font-size: var(--text-base);
+  }
+
+  .book-cover-placeholder {
+    height: 350px;
+    padding: var(--content-spacing-lg);
+  }
+
+  .book-title-placeholder {
+    font-size: var(--text-lg);
+  }
+}

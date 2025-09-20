@@ -1,27 +1,27 @@
 ---
-title: Chargé de Qualité et Process
+title: "Chargé de Qualité et Process"
 publishDate: "2023-10-22"
-description: Mise en place et optimisation des processus qualité et des méthodologies de développement dans un environnement IT agile.
-author: Gérald Paméole
-img: /assets/quality-process.jpg
-img_alt: Diagramme de process et tableau kanban
-company: TechInnovate
+description: "Mise en place et optimisation des processus qualité et des méthodologies de développement dans un environnement IT agile."
+author: "Gérald Paméole"
+img: "/assets/quality-process.jpg"
+img_alt: "Diagramme de process et tableau kanban"
+company: "TechInnovate"
 period: "2018 - 2022"
 location: "Nantes, France"
 technologies:
-  - Gestion de qualité
-  - ITIL
-  - Méthodes agiles
-  - DevOps
-  - Outils de test
-  - Amélioration continue
+- Gestion de qualité
+- ITIL
+- Méthodes agiles
+- DevOps
+- Outils de test
+- Amélioration continue
 domain: "qualite-process"
 projectType: "professional"
 tags:
-  - Qualité
-  - Process
-  - Amélioration continue
-  - DevOps
+- Qualité
+- Process
+- Amélioration continue
+- DevOps
 ---
 
 # Chargé de Qualité et Process

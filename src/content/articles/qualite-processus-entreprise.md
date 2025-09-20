@@ -1,12 +1,24 @@
 ---
 draft: false
-title: "Qualité des Processus en Entreprise : Guide pour l\\"Excellence Opérationnelle"
-description: "Apprenez à mettre en place et maintenir des processus de qualité dans votre entreprise. Un guide complet pour l\\"amélioration continue et l\\"excellence opérationnelle."
-date: "2024-03-20"
+title: "Qualite Processus Entreprise"
+description: "Description de l'article Qualite Processus Entreprise"
 author: "Gérald Pameole"
-tags: ["qualité", "processus", "amélioration continue", "excellence opérationnelle"]
-pillColor: "orange"
+type: "article"
+featured: false
+readingTime: 15
+hasMermaid: false
+targetAudience: "Professionnels"
+domain: "Général"
+tags: ["article"]
+pillColor: "blue"
+skills: ["Compétences"]
+relatedArticles: []
+publishDate: "2024-01-01"
 ---
+
+
+
+
 
 # Qualité des Processus en Entreprise : Guide pour l'Excellence Opérationnelle
 

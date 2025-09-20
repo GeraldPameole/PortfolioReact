@@ -1,20 +1,24 @@
 ---
 draft: false
-title: "Formation à la Communication : Guide Complet pour le Développement des Compétences"
-description: "Découvrez les stratégies et méthodes pour développer efficacement la communication. Un guide détaillé sur l\\"apprentissage, le développement et l\\"application des compétences de communication."
-date: "2024-03-20"
+title: "Formation Communication"
+description: "Description de l'article Formation Communication"
 author: "Gérald Pameole"
 type: "article"
 featured: false
 readingTime: 15
-hasMermaid: true
-targetAudience: "Professionnels RH et Formateurs"
-domain: "Formation & Développement"
-tags: ["formation", "communication", "développement", "compétences", "leadership"]
+hasMermaid: false
+targetAudience: "Professionnels"
+domain: "Général"
+tags: ["article"]
 pillColor: "blue"
-skills: ["Formation", "Communication", "Développement", "Leadership", "Soft Skills"]
-relatedArticles: ["formation-mentorat", "gestion-talents-developpement"]
+skills: ["Compétences"]
+relatedArticles: []
+publishDate: "2024-01-01"
 ---
+
+
+
+
 
 # Formation à la Communication : Guide Complet pour le Développement des Compétences
 

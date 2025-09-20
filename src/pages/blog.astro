@@ -1,140 +1,308 @@
 ---
 import { getCollection } from 'astro:content';
-import ThemeGrid from '../components/ThemeGrid.astro';
-import CallToAction from '../components/CallToAction.astro';
-import SearchBar from '../components/SearchBar.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { calculateReadingTime, standardThemes, type ThemeKey } from '../utils/themeUtils';
-import BackToTop from '../components/BackToTop.astro';
-import ThemeBadge from '../components/ThemeBadge.astro';
-import ArticleCard from '../components/ArticleCard.astro';
-import '../styles/blog.css';
 
 // Récupération des articles et livres
 const articles = await getCollection('articles');
 const books = await getCollection('books');
 
 // Tri des articles par date de publication (du plus récent au plus ancien)
-const sortedArticles = articles.sort((a, b) => 
-	new Date(b.data.publishDate).getTime() - new Date(a.data.publishDate).getTime()
-);
+const sortedArticles = articles.sort((a, b) => {
+	const dateA = new Date(a.data.publishDate || '2024-01-01');
+	const dateB = new Date(b.data.publishDate || '2024-01-01');
+	return dateB.getTime() - dateA.getTime();
+});
 
-// Statistiques du blog
-const blogStats = [
-	{ value: articles.length, label: "Articles publiés", icon: "fas fa-newspaper" },
-	{ value: books.length, label: "Livres recommandés", icon: "fas fa-book" },
-	{ value: Object.keys(standardThemes).length, label: "Catégories", icon: "fas fa-tags" },
-	{ value: Math.round(articles.reduce((acc, article) => acc + calculateReadingTime(article.body), 0) / articles.length), label: "Min. de lecture en moyenne", icon: "fas fa-clock" }
-];
+// Tri des livres par année de publication
+const sortedBooks = books.sort((a, b) => (b.data.publishYear || 0) - (a.data.publishYear || 0));
 
-// Articles en vedette (les 3 plus récents)
-const featuredArticles = sortedArticles.slice(0, 3);
-// Tous les autres articles
-const remainingArticles = sortedArticles.slice(3);
+// Définition des thèmes avec couleurs cohérentes
+const themes = {
+	'Formation & Développement': {
+		description: 'Articles sur la formation, le développement des compétences et l\'apprentissage continu',
+		color: 'blue',
+		icon: 'fas fa-graduation-cap',
+		articles: sortedArticles.filter(article => 
+			article.data.tags?.some(tag => 
+				['formation', 'développement', 'apprentissage', 'compétences'].includes(tag.toLowerCase())
+			)
+		).slice(0, 3)
+	},
+	'Gestion des Talents': {
+		description: 'Stratégies et méthodes pour gérer, développer et fidéliser les talents',
+		color: 'green',
+		icon: 'fas fa-users',
+		articles: sortedArticles.filter(article => 
+			article.data.tags?.some(tag => 
+				['talents', 'gestion', 'recrutement', 'fidélisation', 'rétention'].includes(tag.toLowerCase())
+			)
+		).slice(0, 3)
+	},
+	'Développement Web': {
+		description: 'Tendances, technologies et bonnes pratiques du développement web moderne',
+		color: 'purple',
+		icon: 'fas fa-code',
+		articles: sortedArticles.filter(article => 
+			article.data.tags?.some(tag => 
+				['développement web', 'javascript', 'react', 'frontend', 'backend', 'technologies'].includes(tag.toLowerCase())
+			)
+		).slice(0, 3)
+	},
+	'Management': {
+		description: 'Leadership, gestion d\'équipe et management de projet',
+		color: 'orange',
+		icon: 'fas fa-briefcase',
+		articles: sortedArticles.filter(article => 
+			article.data.tags?.some(tag => 
+				['management', 'leadership', 'gestion de projet', 'équipe'].includes(tag.toLowerCase())
+			)
+		).slice(0, 3)
+	},
+	'Innovation & Stratégie': {
+		description: 'Innovation technologique, stratégie d\'entreprise et transformation digitale',
+		color: 'teal',
+		icon: 'fas fa-lightbulb',
+		articles: sortedArticles.filter(article => 
+			article.data.tags?.some(tag => 
+				['innovation', 'stratégie', 'transformation', 'digital', 'technologie'].includes(tag.toLowerCase())
+			)
+		).slice(0, 3)
+	},
+	'Qualité & Processus': {
+		description: 'Optimisation des processus, qualité et amélioration continue',
+		color: 'indigo',
+		icon: 'fas fa-chart-line',
+		articles: sortedArticles.filter(article => 
+			article.data.tags?.some(tag => 
+				['qualité', 'processus', 'optimisation', 'amélioration', 'efficacité'].includes(tag.toLowerCase())
+			)
+		).slice(0, 3)
+	},
+	'Communication & Leadership': {
+		description: 'Communication efficace, leadership et développement personnel',
+		color: 'red',
+		icon: 'fas fa-comments',
+		articles: sortedArticles.filter(article => 
+			article.data.tags?.some(tag => 
+				['communication', 'leadership', 'développement personnel', 'soft skills'].includes(tag.toLowerCase())
+			)
+		).slice(0, 3)
+	}
+};
+
+// Couleurs pour les badges (cohérentes avec la page d'accueil)
+const colorClasses = {
+	blue: "bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-300",
+	green: "bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-300",
+	purple: "bg-purple-100 text-purple-800 dark:bg-purple-900/30 dark:text-purple-300",
+	orange: "bg-orange-100 text-orange-800 dark:bg-orange-900/30 dark:text-orange-300",
+	teal: "bg-teal-100 text-teal-800 dark:bg-teal-900/30 dark:text-teal-300",
+	indigo: "bg-indigo-100 text-indigo-800 dark:bg-indigo-900/30 dark:text-indigo-300",
+	red: "bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-300"
+};
+
+// Fonction pour formater la date
+function formatDate(date: string): string {
+	return new Date(date).toLocaleDateString('fr-FR', {
+		year: 'numeric',
+		month: 'long',
+		day: 'numeric'
+	});
+}
+
+// Statistiques
+const totalArticles = articles.length;
+const totalBooks = books.length;
+const totalThemes = Object.keys(themes).length;
 ---
 
 <BaseLayout 
-	title="Blog - Articles et Ressources" 
-	description="Découvrez mes articles sur le développement, la technologie et la carrière tech."
+	title="Blog & Articles" 
+	description="Découvrez mes articles et recommandations de livres organisés par thèmes. Expertise en gestion de projet, développement web et formation."
 	customClass="bg-gradient-to-br from-gray-50 to-white dark:from-gray-900 dark:to-gray-800"
-	fullWidth={true}
 >
-	<main class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
+	<main class="content-container-wide py-12">
 		<!-- En-tête de page -->
-		<section class="py-16 md:py-24 bg-gradient-to-r from-indigo-600/5 to-violet-600/5 rounded-xl mb-12">
-			<div class="max-w-3xl mx-auto text-center">
-				<h1 class="text-4xl md:text-5xl font-bold mb-6 text-gray-800 dark:text-white">
+		<section class="py-16 md:py-24 bg-gradient-to-r from-indigo-600/10 to-violet-600/10 w-screen" style="margin-left: calc(50% - 50vw); margin-right: calc(50% - 50vw)">
+			<div class="content-container text-center">
+				<h1 class="text-4xl md:text-5xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-blue-500">
 					Blog & Articles
 				</h1>
-				<p class="text-xl text-gray-600 dark:text-gray-300 mb-8">
-					Découvrez des articles sur le développement web, la technologie et l'évolution professionnelle
+				<p class="text-xl text-[#111827] dark:text-gray-200 mb-6">
+					Partage de connaissances, expériences et recommandations pour votre développement professionnel
 				</p>
+				<div class="flex flex-wrap justify-center gap-3 mb-8">
+					<span class="px-4 py-2 rounded-full bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-300">Gestion de Projet</span>
+					<span class="px-4 py-2 rounded-full bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-300">Développement Web</span>
+					<span class="px-4 py-2 rounded-full bg-purple-100 text-purple-800 dark:bg-purple-900/30 dark:text-purple-300">Qualité & Process</span>
+					<span class="px-4 py-2 rounded-full bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-300">Formation</span>
+					<span class="px-4 py-2 rounded-full bg-orange-100 text-orange-800 dark:bg-orange-900/30 dark:text-orange-300">Développement Commercial</span>
+				</div>
 				
-				<!-- Barre de recherche -->
-				<div class="max-w-2xl mx-auto">
-					<SearchBar placeholder="Rechercher un article..." />
+				<!-- Statistiques -->
+				<div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-8">
+					<div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg">
+						<div class="text-3xl font-bold text-indigo-600 mb-2">{totalArticles}</div>
+						<div class="text-gray-600 dark:text-gray-400">Articles publiés</div>
+					</div>
+					<div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg">
+						<div class="text-3xl font-bold text-violet-600 mb-2">{totalBooks}</div>
+						<div class="text-gray-600 dark:text-gray-400">Livres recommandés</div>
+					</div>
+					<div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg">
+						<div class="text-3xl font-bold text-blue-600 mb-2">{totalThemes}</div>
+						<div class="text-gray-600 dark:text-gray-400">Thèmes couverts</div>
+					</div>
 				</div>
 			</div>
 		</section>
 		
-		<!-- Statistiques du blog -->
-		<section class="mb-16">
-			<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-				{blogStats.map(stat => (
-					<div class="bg-white dark:bg-gray-800 rounded-xl shadow-md p-6 text-center">
-						<div class="flex justify-center mb-4">
-							<span class="w-12 h-12 bg-indigo-100 dark:bg-indigo-900/40 rounded-full flex items-center justify-center">
-								<i class={`${stat.icon} text-indigo-600 dark:text-indigo-400 text-xl`}></i>
-							</span>
+		<!-- Sections par thèmes -->
+		<div class="content-container">
+			{Object.entries(themes).map(([themeName, config]) => {
+				const colorClass = colorClasses[config.color as keyof typeof colorClasses];
+				
+				return (
+					<section class="bg-white dark:bg-gray-800 rounded-xl shadow-lg mb-16 p-8">
+						<div class="flex items-center gap-4 mb-8">
+							<div class={`p-4 rounded-xl ${colorClass}`}>
+								<i class={`${config.icon} text-2xl`}></i>
+							</div>
+							<div>
+								<h2 class="text-3xl font-bold text-[#111827] dark:text-white mb-2">{themeName}</h2>
+								<p class="text-lg text-[#111827] dark:text-gray-300">{config.description}</p>
+							</div>
 						</div>
-						<span class="block text-3xl font-bold text-gray-800 dark:text-white mb-1">{stat.value}</span>
-						<span class="text-sm text-gray-600 dark:text-gray-400">{stat.label}</span>
+						
+						{config.articles.length > 0 ? (
+							<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+								{config.articles.map((article) => (
+									<article class="bg-gray-50 dark:bg-gray-700 rounded-lg p-6 hover:shadow-md transition-shadow duration-300">
+										<div class="flex items-center gap-2 mb-3">
+											{article.data.featured && (
+												<span class="px-2 py-1 text-xs font-medium bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200 rounded-full">
+													À la une
+												</span>
+											)}
+											<span class="px-2 py-1 text-xs font-medium bg-gray-100 text-[#111827] dark:bg-gray-600 dark:text-gray-200 rounded-full">
+												{article.data.readingTime || 5} min
+											</span>
+										</div>
+										
+										<h3 class="text-lg font-bold text-[#111827] dark:text-white mb-2 line-clamp-2">
+											<a href={`/articles/${article.slug}`} class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+												{article.data.title}
+											</a>
+										</h3>
+										
+										<p class="text-[#111827] dark:text-gray-300 mb-4 line-clamp-2">
+											{article.data.description}
+										</p>
+										
+										<div class="flex items-center justify-between">
+											<span class="text-sm text-gray-500 dark:text-gray-400">
+												{formatDate(article.data.publishDate)}
+											</span>
+											<a href={`/articles/${article.slug}`} 
+											   class="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 font-medium text-sm transition-colors">
+												Lire →
+											</a>
 					</div>
+									</article>
 				))}
 			</div>
-		</section>
-		
-		<!-- Articles en vedette -->
-		<section class="mb-20">
-			<h2 class="text-3xl font-bold mb-8 text-gray-800 dark:text-white">Articles en vedette</h2>
-			
-			<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-				{featuredArticles.map((article, index) => (
-					<ArticleCard article={article} />
-				))}
+						) : (
+							<div class="text-center py-8 text-gray-500 dark:text-gray-400">
+								Aucun article disponible pour ce thème pour le moment.
+							</div>
+						)}
+						
+						<div class="text-center mt-8">
+							<a href="/articles" class="inline-flex items-center gap-2 px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors font-medium">
+								Voir tous les articles
+								<i class="fas fa-arrow-right"></i>
+							</a>
 			</div>
 		</section>
-		
-		<!-- Parcourir par thèmes -->
-		<section class="mb-16">
-			<div class="flex items-center justify-between mb-8">
-				<h2 class="text-3xl font-bold text-gray-800 dark:text-white">Parcourir par thème</h2>
-				<a href="/blog/themes" class="text-indigo-600 dark:text-indigo-400 font-medium inline-flex items-center">
-					Voir tous les thèmes
-					<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-					</svg>
-				</a>
+				);
+			})}
+		</div>
+
+		<!-- Section des livres recommandés -->
+		<section class="bg-white dark:bg-gray-800 rounded-xl shadow-lg mb-16">
+			<div class="content-container p-8">
+				<div class="text-center mb-12">
+					<h2 class="text-3xl font-bold text-[#111827] dark:text-white mb-4">
+						Livres recommandés
+					</h2>
+					<p class="text-lg text-[#111827] dark:text-gray-300">
+						Une sélection de livres qui ont marqué mon parcours professionnel
+					</p>
+				</div>
+				
+				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+					{sortedBooks.slice(0, 6).map((book) => (
+						<article class="bg-gray-50 dark:bg-gray-700 rounded-lg p-6 hover:shadow-md transition-shadow duration-300">
+							{book.data.cover && (
+								<div class="mb-4">
+									<img src={book.data.cover} alt={book.data.title} class="w-full h-48 object-cover rounded-lg" />
+								</div>
+							)}
+							
+							<h3 class="text-xl font-bold text-[#111827] dark:text-white mb-3">
+								<a href={`/books/${book.slug}`} class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+									{book.data.title}
+								</a>
+							</h3>
+							
+							<p class="text-[#111827] dark:text-gray-300 mb-4 line-clamp-3">
+								{book.data.description}
+							</p>
+							
+							<div class="flex items-center justify-between">
+								<span class="text-sm text-gray-500 dark:text-gray-400">
+									{book.data.author} • {book.data.publishYear}
+								</span>
+								<a href={`/books/${book.slug}`} 
+								   class="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 font-medium text-sm transition-colors">
+									Voir le livre →
+								</a>
+							</div>
+						</article>
+					))}
 			</div>
 			
-			<div class="flex flex-wrap gap-3 mb-8">
-				{Object.keys(standardThemes).map(theme => (
-					<a href={`/blog/themes/${theme}`}>
-						<ThemeBadge theme={theme} />
+				<div class="text-center mt-8">
+					<a href="/books" class="inline-flex items-center gap-2 px-6 py-3 bg-violet-600 text-white rounded-lg hover:bg-violet-700 transition-colors font-medium">
+						Voir tous les livres
+						<i class="fas fa-arrow-right"></i>
 					</a>
-				))}
+				</div>
 			</div>
 		</section>
 		
-		<!-- Articles par thème -->
-		<ThemeGrid 
-			articles={remainingArticles} 
-			title="Tous les articles par thème" 
-			columns={3}
-		/>
-		
-		<!-- Call to action -->
-		<section class="mt-16">
-			<CallToAction
-				title="Vous souhaitez travailler ensemble ?"
-				description="N'hésitez pas à me contacter pour discuter de votre projet ou pour toute question."
-				buttonText="Me contacter"
-				buttonLink="/contact"
-			/>
+		<!-- Call-to-action -->
+		<section class="bg-gradient-to-r from-indigo-600 to-violet-600 rounded-xl text-white text-center p-12">
+			<h2 class="text-3xl font-bold mb-4">Restez connecté</h2>
+			<p class="text-xl mb-8 opacity-90">
+				Recevez mes derniers articles et recommandations directement dans votre boîte mail
+			</p>
+			<div class="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
+				<input 
+					type="email" 
+					placeholder="Votre email" 
+					class="px-6 py-3 rounded-lg text-gray-900 flex-1"
+				/>
+				<button class="px-8 py-3 bg-white text-indigo-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+					S'abonner
+				</button>
+			</div>
 		</section>
 	</main>
-	
-	<BackToTop />
 </BaseLayout>
 
 <style>
-	.line-clamp-1 {
-		display: -webkit-box;
-		-webkit-line-clamp: 1;
-		-webkit-box-orient: vertical;
-		overflow: hidden;
-	}
-	
+	/* Styles cohérents avec le design system */
 	.line-clamp-2 {
 		display: -webkit-box;
 		-webkit-line-clamp: 2;
@@ -147,6 +315,17 @@ const remainingArticles = sortedArticles.slice(3);
 		-webkit-line-clamp: 3;
 		-webkit-box-orient: vertical;
 		overflow: hidden;
+	}
+	
+	/* Responsive */
+	@media (max-width: 768px) {
+		.content-container {
+			padding: 0 1rem;
+		}
+		
+		section {
+			padding: 1.5rem;
+		}
 	}
 </style>
 

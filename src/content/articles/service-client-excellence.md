@@ -1,12 +1,24 @@
 ---
 draft: false
-title: "Excellence du Service Client : Guide Complet pour une Expérience Client Exceptionnelle"
-description: "Découvrez les stratégies et meilleures pratiques pour offrir un service client d\\"excellence. Un guide détaillé sur la satisfaction client, la fidélisation et la différenciation par le service."
-date: "2024-03-20"
+title: "Service Client Excellence"
+description: "Description de l'article Service Client Excellence"
 author: "Gérald Pameole"
-tags: ["service client", "expérience client", "satisfaction", "fidélisation"]
-pillColor: "purple"
+type: "article"
+featured: false
+readingTime: 15
+hasMermaid: false
+targetAudience: "Professionnels"
+domain: "Général"
+tags: ["article"]
+pillColor: "blue"
+skills: ["Compétences"]
+relatedArticles: []
+publishDate: "2024-01-01"
 ---
+
+
+
+
 
 # Excellence du Service Client : Guide Complet pour une Expérience Client Exceptionnelle
 

@@ -1,20 +1,23 @@
 ---
 draft: false
-title: "Méthode Pomodoro : Guide Complet pour Optimiser sa Productivité"
-description: "Découvrez comment la méthode Pomodoro peut transformer votre productivité. Un guide pratique pour maîtriser cette technique de gestion du temps."
-date: "2024-03-20"
+title: "Methode Pomodoro"
+description: "Description de l'article Methode Pomodoro"
 author: "Gérald Pameole"
 type: "article"
 featured: false
-readingTime: 10
-hasMermaid: true
-targetAudience: "Professionnels et Étudiants"
-domain: "Productivité & Gestion du Temps"
-tags: ""
-pillColor: "red"
-skills: ""
-relatedArticles: ""
+readingTime: 15
+hasMermaid: false
+targetAudience: "Professionnels"
+domain: "Général"
+tags: ["article"]
+pillColor: "blue"
+skills: ["Compétences"]
+relatedArticles: []
+publishDate: "2024-01-01"
 ---
+
+
+
 
 # Méthode Pomodoro : Guide Complet pour Optimiser sa Productivité
 

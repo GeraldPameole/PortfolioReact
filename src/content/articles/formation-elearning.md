@@ -1,20 +1,24 @@
 ---
 draft: false
-title: "E-Learning : Guide Complet pour la Formation en Ligne"
-description: "Découvrez les stratégies et outils pour développer un e-learning efficace. Un guide détaillé sur la conception, l\\"implémentation et l\\"évaluation des formations en ligne."
-date: "2024-03-20"
+title: "Formation Elearning"
+description: "Description de l'article Formation Elearning"
 author: "Gérald Pameole"
 type: "article"
 featured: false
 readingTime: 15
-hasMermaid: true
-targetAudience: "Professionnels RH"
-domain: "Formation & Pédagogie"
-tags: ""
-pillColor: "purple"
-skills: ""
-relatedArticles: ""
+hasMermaid: false
+targetAudience: "Professionnels"
+domain: "Général"
+tags: ["article"]
+pillColor: "blue"
+skills: ["Compétences"]
+relatedArticles: []
+publishDate: "2024-01-01"
 ---
+
+
+
+
 
 ## Introduction
 

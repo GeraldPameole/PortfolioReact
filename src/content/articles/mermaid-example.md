@@ -1,20 +1,23 @@
 ---
 draft: false
-title: "Exemples Pratiques avec Mermaid"
-description: "Collection d\\\"exemples pratiques et de cas d\\\"utilisation de Mermaid pour la documentation technique"
-date: "2024-03-15"
+title: "Mermaid Example"
+description: "Description de l'article Mermaid Example"
 author: "Gérald Pameole"
 type: "article"
 featured: false
 readingTime: 15
-hasMermaid: true
-targetAudience: "Développeurs et Documentalistes"
-domain: "Développement Web"
-tags: ""
+hasMermaid: false
+targetAudience: "Professionnels"
+domain: "Général"
+tags: ["article"]
 pillColor: "blue"
-skills: ""
-relatedArticles: ""
+skills: ["Compétences"]
+relatedArticles: []
+publishDate: "2024-01-01"
 ---
+
+
+
 
 # Exemples Pratiques avec Mermaid
 

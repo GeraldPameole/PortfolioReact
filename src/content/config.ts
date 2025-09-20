@@ -5,8 +5,8 @@ const baseSchema = {
   title: z.string(),
   description: z.string(),
   author: z.string().optional(),
-  publishDate: z.date().optional(),
-  updatedDate: z.date().optional(),
+  publishDate: z.string().optional(),
+  updatedDate: z.string().optional(),
   image: z.string().optional(),
   tags: z.array(z.string()).optional().default([]),
   theme: z.string().optional(),
@@ -16,7 +16,7 @@ const baseSchema = {
 const articleSchema = z.object({
   ...baseSchema,
   type: z.literal("article"),
-  publishDate: z.date(),
+  publishDate: z.string(),
   readingTime: z.number().optional(),
   featured: z.boolean().optional().default(false),
 });

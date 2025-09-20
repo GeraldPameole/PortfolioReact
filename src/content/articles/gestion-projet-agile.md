@@ -1,19 +1,22 @@
 ---
 draft: false
-title: "Gestion de Projet Agile : Guide Complet pour les Équipes Modernes"
-description: "Découvrez les méthodologies et pratiques agiles pour gérer efficacement vos projets. Un guide détaillé sur Scrum, Kanban et les meilleures pratiques de gestion de projet."
-date: "2024-03-20"
+title: "Gestion Projet Agile"
+description: "Description de l'article Gestion Projet Agile"
 author: "Gérald Pameole"
 type: "article"
 featured: false
-readingTime: 12
-hasMermaid: true
-targetAudience: "Chefs de Projet"
-domain: "Gestion de Projet"
-tags: ["gestion de projet", "agile", "Scrum", "Kanban", "méthodologie"]
+readingTime: 15
+hasMermaid: false
+targetAudience: "Professionnels"
+domain: "Général"
+tags: ["article"]
 pillColor: "blue"
-skills: ""
-relatedArticles: ""
+skills: ["Compétences"]
+relatedArticles: []
+publishDate: "2024-01-01"
 ---
+
+
+
 
 ##

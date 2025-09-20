@@ -77,7 +77,7 @@ const themesWithCount = allThemes.map(theme => {
 		bookCount,
 		totalCount,
 		icon: standardThemes[theme]?.icon || "fas fa-file-alt",
-		color: standardThemes[theme]?.color?.text || "text-gray-600",
+		color: standardThemes[theme]?.color?.text || "text-[#111827]",
 		bg: standardThemes[theme]?.color?.bg || "bg-gray-100 dark:bg-gray-900/30",
 		gradient: standardThemes[theme]?.color?.gradient || "from-gray-500 to-gray-700"
 	};
@@ -101,7 +101,7 @@ const pageDescription = "Explorez ma collection d'articles et ressources organis
 	description={pageDescription}
 	customClass="bg-gradient-to-br from-gray-50 to-white dark:from-gray-900 dark:to-gray-800"
 >
-	<main class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
+	<main class="content-container-wide py-12">
 		<!-- Bannière de page -->
 		<PageBanner 
 			title="Articles par Thématique"
@@ -134,9 +134,9 @@ const pageDescription = "Explorez ma collection d'articles et ressources organis
 						<span class="text-3xl text-indigo-600 dark:text-indigo-400">
 							<i class="fas fa-newspaper"></i>
 						</span>
-						<span class="text-4xl font-bold text-gray-800 dark:text-white">{articlesCollection.length}</span>
+						<span class="text-4xl font-bold text-[#111827] dark:text-white">{articlesCollection.length}</span>
 					</div>
-					<p class="text-gray-600 dark:text-gray-300 text-sm">Articles publiés</p>
+					<p class="text-[#111827] dark:text-gray-300 text-sm">Articles publiés</p>
 				</div>
 				
 				<div class="bg-white dark:bg-gray-800 rounded-xl shadow-md p-6 transform transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
@@ -144,9 +144,9 @@ const pageDescription = "Explorez ma collection d'articles et ressources organis
 						<span class="text-3xl text-indigo-600 dark:text-indigo-400">
 							<i class="fas fa-book"></i>
 						</span>
-						<span class="text-4xl font-bold text-gray-800 dark:text-white">{allBooks.length}</span>
+						<span class="text-4xl font-bold text-[#111827] dark:text-white">{allBooks.length}</span>
 					</div>
-					<p class="text-gray-600 dark:text-gray-300 text-sm">Livres recommandés</p>
+					<p class="text-[#111827] dark:text-gray-300 text-sm">Livres recommandés</p>
 				</div>
 				
 				<div class="bg-white dark:bg-gray-800 rounded-xl shadow-md p-6 transform transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
@@ -154,9 +154,9 @@ const pageDescription = "Explorez ma collection d'articles et ressources organis
 						<span class="text-3xl text-indigo-600 dark:text-indigo-400">
 							<i class="fas fa-tags"></i>
 						</span>
-						<span class="text-4xl font-bold text-gray-800 dark:text-white">{allThemes.length}</span>
+						<span class="text-4xl font-bold text-[#111827] dark:text-white">{allThemes.length}</span>
 					</div>
-					<p class="text-gray-600 dark:text-gray-300 text-sm">Thématiques</p>
+					<p class="text-[#111827] dark:text-gray-300 text-sm">Thématiques</p>
 				</div>
 				
 				<div class="bg-white dark:bg-gray-800 rounded-xl shadow-md p-6 transform transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
@@ -164,11 +164,11 @@ const pageDescription = "Explorez ma collection d'articles et ressources organis
 						<span class="text-3xl text-indigo-600 dark:text-indigo-400">
 							<i class="fas fa-clock"></i>
 						</span>
-						<span class="text-4xl font-bold text-gray-800 dark:text-white">
+						<span class="text-4xl font-bold text-[#111827] dark:text-white">
 							{Math.round(articlesCollection.reduce((acc, article) => acc + calculateReadingTime(article.body), 0) / articlesCollection.length)}
 						</span>
 					</div>
-					<p class="text-gray-600 dark:text-gray-300 text-sm">Min. de lecture en moyenne</p>
+					<p class="text-[#111827] dark:text-gray-300 text-sm">Min. de lecture en moyenne</p>
 				</div>
 			</div>
 		</section>
@@ -202,7 +202,7 @@ const pageDescription = "Explorez ma collection d'articles et ressources organis
 				<!-- Articles -->
 				{articlesByTheme[theme.name as ThemeKey] && articlesByTheme[theme.name as ThemeKey].length > 0 && (
 					<div class="mb-10">
-						<h3 class="text-xl font-semibold mb-6 text-gray-800 dark:text-white flex items-center">
+						<h3 class="text-xl font-semibold mb-6 text-[#111827] dark:text-white flex items-center">
 							<i class="fas fa-newspaper text-indigo-600 dark:text-indigo-400 mr-2"></i>
 							Articles
 						</h3>
@@ -238,16 +238,16 @@ const pageDescription = "Explorez ma collection d'articles et ressources organis
 											</div>
 										</div>
 										<div class="p-5">
-											<h4 class="text-lg font-bold mb-3 text-gray-800 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors line-clamp-2">
+											<h4 class="text-lg font-bold mb-3 text-[#111827] dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors line-clamp-2">
 												{article.data.title}
 											</h4>
-											<p class="text-gray-600 dark:text-gray-300 text-sm mb-4 line-clamp-3">
+											<p class="text-[#111827] dark:text-gray-300 text-sm mb-4 line-clamp-3">
 												{article.data.description}
 											</p>
 											<div class="pt-3 border-t border-gray-100 dark:border-gray-700 flex justify-between">
 												<div class="flex flex-wrap gap-2">
 													{article.data.tags && article.data.tags.slice(0, 2).map((tag: string) => (
-														<span class="px-2 py-1 bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 rounded text-xs">
+														<span class="px-2 py-1 bg-gray-100 dark:bg-gray-800 text-[#111827] dark:text-gray-300 rounded text-xs">
 															#{tag}
 														</span>
 													))}
@@ -270,7 +270,7 @@ const pageDescription = "Explorez ma collection d'articles et ressources organis
 				<!-- Livres -->
 				{booksByTheme[theme.name as ThemeKey] && booksByTheme[theme.name as ThemeKey].length > 0 && (
 					<div>
-						<h3 class="text-xl font-semibold mb-6 text-gray-800 dark:text-white flex items-center">
+						<h3 class="text-xl font-semibold mb-6 text-[#111827] dark:text-white flex items-center">
 							<i class="fas fa-book text-indigo-600 dark:text-indigo-400 mr-2"></i>
 							Livres recommandés
 						</h3>
@@ -300,13 +300,13 @@ const pageDescription = "Explorez ma collection d'articles et ressources organis
 											)}
 										</div>
 										<div class="p-5">
-											<h4 class="text-lg font-bold mb-1 text-gray-800 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors line-clamp-1">
+											<h4 class="text-lg font-bold mb-1 text-[#111827] dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors line-clamp-1">
 												{book.data.title}
 											</h4>
 											<p class="text-indigo-600 dark:text-indigo-400 text-sm mb-3">
 												{book.data.author}
 											</p>
-											<p class="text-gray-600 dark:text-gray-300 text-sm line-clamp-3">
+											<p class="text-[#111827] dark:text-gray-300 text-sm line-clamp-3">
 												{book.data.description}
 											</p>
 										</div>

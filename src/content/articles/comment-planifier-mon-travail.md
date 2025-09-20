@@ -1,8 +1,19 @@
 ---
-title: "Comment Planifier Mon Travail : Guide Pratique pour une Productivité Optimale"
-description: "Cadre méthodologique complet pour une planification efficace du travail, intégrant horizons temporels multiples et équilibre entre réactivité et structure."
-author: "Gérald Paméole"
+draft: false
+title: "Comment Planifier Mon Travail"
+description: "Description de l'article Comment Planifier Mon Travail"
+author: "Gérald Pameole"
 type: "article"
+featured: false
+readingTime: 15
+hasMermaid: false
+targetAudience: "Professionnels"
+domain: "Général"
+tags: ["article"]
+pillColor: "blue"
+skills: ["Compétences"]
+relatedArticles: []
+publishDate: "2024-01-01"
 ---
 
 # Maîtrisez Votre Temps : Guide de Planification

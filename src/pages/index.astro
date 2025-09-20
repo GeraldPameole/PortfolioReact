@@ -19,30 +19,37 @@ const expertiseDomains = [
 	{
 		title: "Gestion de Projet Télécom",
 		icon: "fas fa-tasks",
-		color: "text-blue-600",
-		bgColor: "bg-blue-100 dark:bg-blue-900/30",
+		color: "text-white",
+		bgColor: "bg-green-600 dark:bg-green-500",
 		description: "Coordination d'équipes multidisciplinaires, mise en place de processus d'optimisation réseau, et amélioration continue de la performance des infrastructures télécom."
 	},
 	{
 		title: "Développement Web",
 		icon: "fas fa-laptop-code",
-		color: "text-green-600",
-		bgColor: "bg-green-100 dark:bg-green-900/30",
+		color: "text-white",
+		bgColor: "bg-blue-600 dark:bg-blue-500",
 		description: "Conception d'applications web front-end et back-end, optimisation de la sécurité et de la performance des sites, et implémentation d'architecture réseau robuste."
 	},
 	{
 		title: "Qualité & Process",
 		icon: "fas fa-clipboard-check",
-		color: "text-purple-600",
-		bgColor: "bg-purple-100 dark:bg-purple-900/30",
+		color: "text-white",
+		bgColor: "bg-purple-600 dark:bg-purple-500",
 		description: "Mise en place et supervision de processus qualité, audits et conformité, KPIs et tableaux de bord, et amélioration continue des processus d'entreprise."
 	},
 	{
 		title: "Formation & Coaching",
 		icon: "fas fa-graduation-cap",
-		color: "text-red-600",
-		bgColor: "bg-red-100 dark:bg-red-900/30",
+		color: "text-white",
+		bgColor: "bg-red-600 dark:bg-red-500",
 		description: "Accompagnement des équipes commerciales et techniques, élaboration de programmes de formation sur mesure, et évaluation des performances pour optimiser les résultats."
+	},
+	{
+		title: "Développement Commercial",
+		icon: "fas fa-handshake",
+		color: "text-white",
+		bgColor: "bg-orange-600 dark:bg-orange-500",
+		description: "Stratégies commerciales, relation client, techniques de vente et développement business pour maximiser la croissance."
 	}
 ];
 
@@ -72,6 +79,90 @@ const experiences = [
 const pageTitle = "Gérald Paméole | Développeur Web Full Stack & Expert React";
 const pageDescription = "Portfolio de Gérald Paméole, développeur web full stack spécialisé en React, Node.js et TypeScript. Découvrez mes projets, compétences et services.";
 
+// Récupérer tous les articles
+const allArticles = await getCollection('articles');
+
+// Définir les domaines de compétence principaux avec leurs meilleurs articles
+const domainesCompetences = {
+  "Formation & Développement": {
+    description: "Articles sur la formation, le développement des compétences et l'apprentissage continu",
+    color: "blue",
+    icon: "fas fa-graduation-cap",
+    articles: allArticles
+      .filter(article => article.data.tags?.some(tag => 
+        ['formation', 'développement', 'apprentissage', 'compétences'].includes(tag.toLowerCase())
+      ))
+      .sort((a, b) => {
+        if (a.data.featured && !b.data.featured) return -1;
+        if (!a.data.featured && b.data.featured) return 1;
+        return new Date(b.data.publishDate).getTime() - new Date(a.data.publishDate).getTime();
+      })
+      .slice(0, 3)
+  },
+  "Gestion des Talents": {
+    description: "Stratégies et méthodes pour gérer, développer et fidéliser les talents",
+    color: "green", 
+    icon: "fas fa-users",
+    articles: allArticles
+      .filter(article => article.data.tags?.some(tag => 
+        ['talents', 'gestion', 'recrutement', 'fidélisation', 'rétention'].includes(tag.toLowerCase())
+      ))
+      .sort((a, b) => {
+        if (a.data.featured && !b.data.featured) return -1;
+        if (!a.data.featured && b.data.featured) return 1;
+        return new Date(b.data.publishDate).getTime() - new Date(a.data.publishDate).getTime();
+      })
+      .slice(0, 3)
+  },
+  "Développement Web": {
+    description: "Tendances, technologies et bonnes pratiques du développement web moderne",
+    color: "purple",
+    icon: "fas fa-code",
+    articles: allArticles
+      .filter(article => article.data.tags?.some(tag => 
+        ['développement web', 'javascript', 'react', 'frontend', 'backend', 'technologies'].includes(tag.toLowerCase())
+      ))
+      .sort((a, b) => {
+        if (a.data.featured && !b.data.featured) return -1;
+        if (!a.data.featured && b.data.featured) return 1;
+        return new Date(b.data.publishDate).getTime() - new Date(a.data.publishDate).getTime();
+      })
+      .slice(0, 3)
+  },
+  "Management": {
+    description: "Leadership, gestion d'équipe et management de projet",
+    color: "orange",
+    icon: "fas fa-briefcase",
+    articles: allArticles
+      .filter(article => article.data.tags?.some(tag => 
+        ['management', 'leadership', 'gestion de projet', 'équipe'].includes(tag.toLowerCase())
+      ))
+      .sort((a, b) => {
+        if (a.data.featured && !b.data.featured) return -1;
+        if (!a.data.featured && b.data.featured) return 1;
+        return new Date(b.data.publishDate).getTime() - new Date(a.data.publishDate).getTime();
+      })
+      .slice(0, 3)
+  }
+};
+
+// Fonction pour formater la date
+function formatDate(date: Date) {
+	return date.toLocaleDateString('fr-FR', {
+		year: 'numeric',
+		month: 'long',
+		day: 'numeric'
+	});
+}
+
+// Couleurs pour les badges
+const colorClasses = {
+	blue: "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200",
+	green: "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200",
+	purple: "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200",
+	orange: "bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-200"
+};
+
 // Syntaxe complète des composants Astro :
 // https://docs.astro.build/core-concepts/astro-components/
 ---
@@ -80,15 +171,15 @@ const pageDescription = "Portfolio de Gérald Paméole, développeur web full st
 	description={pageDescription}
 	customClass="bg-gradient-to-br from-gray-50 to-white dark:from-gray-900 dark:to-gray-800"
 >
-	<main class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
+	<main class="content-container-wide py-12">
 		<!-- En-tête de page -->
 		<section class="py-16 md:py-24 bg-gradient-to-r from-indigo-600/5 to-violet-600/5">
-			<div class="max-w-3xl mx-auto text-center">
+			<div class="content-container text-center">
 				<h1 class="text-4xl md:text-5xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-blue-500">
 					Gérald Paméole
 				</h1>
-				<p class="text-xl font-semibold text-gray-800 dark:text-gray-200 mb-6">Chef de projet télécom & Développeur Web</p>
-				<p class="text-lg text-gray-600 dark:text-gray-300 mb-8">
+				<p class="text-xl font-semibold text-[#111827] dark:text-gray-200 mb-6">Chef de projet télécom & Développeur Web</p>
+				<p class="text-lg text-[#111827] dark:text-gray-300 mb-8">
 					Fort de plus de 15 ans d'expérience, je pilote des projets complexes dans le secteur des télécommunications 
 					et développe des applications web performantes. J'optimise les processus d'entreprise et forme des équipes 
 					pour atteindre l'excellence opérationnelle.
@@ -106,6 +197,9 @@ const pageDescription = "Portfolio de Gérald Paméole, développeur web full st
 					<span class="px-4 py-2 rounded-full bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-300">
 						Formation
 					</span>
+					<span class="px-4 py-2 rounded-full bg-orange-100 text-orange-800 dark:bg-orange-900/30 dark:text-orange-300">
+						Développement Commercial
+					</span>
 				</div>
 				<div class="flex items-center justify-center gap-x-6">
 					<a href="/projets" class="rounded-md bg-indigo-600 px-5 py-3 text-base font-semibold text-white shadow-md hover:bg-indigo-500 transition-colors duration-300">
@@ -120,57 +214,224 @@ const pageDescription = "Portfolio de Gérald Paméole, développeur web full st
 		
 		<!-- Domaines d'expertise -->
 		<section class="py-16 bg-white dark:bg-gray-800 rounded-xl shadow-lg mb-16">
-			<div class="max-w-3xl mx-auto text-center mb-12">
-				<h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+			<div class="content-container text-center mb-12">
+				<h2 class="text-3xl font-bold text-[#111827] dark:text-white mb-4">
 					Mes domaines d'expertise
 				</h2>
-				<p class="text-lg text-gray-600 dark:text-gray-300">
+				<p class="text-lg text-[#111827] dark:text-gray-300">
 					Je propose des solutions personnalisées pour répondre aux besoins spécifiques de votre entreprise.
 				</p>
 			</div>
 			
-			<div class="grid grid-cols-1 md:grid-cols-2 gap-8 px-6">
-				{expertiseDomains.map((domain) => (
-					<div class="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
-						<div class="flex items-center gap-3 mb-4">
-							<div class={`p-3 rounded-lg ${domain.color} ${domain.bgColor}`}>
-								<span class="text-xl">
+				<!-- Disposition en croix : 4 cartes aux coins + 1 au centre -->
+	<div class="relative px-6">
+		<!-- Grille 3x3 avec positions spécifiques -->
+		<div class="grid grid-cols-3 grid-rows-3 gap-4 max-w-4xl mx-auto">
+			<!-- Carte 1 - Position haut gauche (0,0) -->
+			<div class="col-start-1 row-start-1 flex justify-center items-center">
+				{(() => { const domain = expertiseDomains[0]; return (
+					<div class="group relative bg-gradient-to-br from-green-50 via-green-100 to-emerald-100 dark:from-green-900/20 dark:via-green-800/30 dark:to-emerald-800/20 p-4 w-full flex flex-col justify-center text-center rounded-2xl border-2 border-green-300 dark:border-green-600 shadow-lg transition-all duration-400 transform-gpu hover:-translate-y-2 hover:scale-105 hover:shadow-xl hover:rotate-1" style="aspect-ratio: 1 / 1;">
+						<div class="flex items-center justify-center gap-2 mb-2">
+							<div class={`p-2 rounded-lg ${domain.color} ${domain.bgColor}`}>
+								<span class="text-lg">
 									<i class={domain.icon}></i>
 								</span>
 							</div>
-							<h3 class="text-xl font-bold text-gray-900 dark:text-white">{domain.title}</h3>
 						</div>
-						<p class="text-gray-600 dark:text-gray-300">
+						<h3 class="text-sm font-bold text-[#111827] dark:text-white mb-2">{domain.title}</h3>
+						<p class="text-xs text-[#111827] dark:text-gray-300 opacity-90">
 							{domain.description}
 						</p>
 					</div>
-				))}
+				) })()}
+			</div>
+
+			<!-- Carte 2 - Position haut droite (0,2) -->
+			<div class="col-start-3 row-start-1 flex justify-center items-center">
+				{(() => { const domain = expertiseDomains[1]; return (
+					<div class="group relative bg-gradient-to-br from-blue-50 via-blue-100 to-sky-100 dark:from-blue-900/20 dark:via-blue-800/30 dark:to-sky-800/20 p-4 w-full flex flex-col justify-center text-center rounded-2xl border-2 border-blue-300 dark:border-blue-600 shadow-lg transition-all duration-400 transform-gpu hover:-translate-y-2 hover:scale-105 hover:shadow-xl hover:rotate-1" style="aspect-ratio: 1 / 1;">
+						<div class="flex items-center justify-center gap-2 mb-2">
+							<div class={`p-2 rounded-lg ${domain.color} ${domain.bgColor}`}>
+								<span class="text-lg">
+									<i class={domain.icon}></i>
+								</span>
+							</div>
+						</div>
+						<h3 class="text-sm font-bold text-[#111827] dark:text-white mb-2">{domain.title}</h3>
+						<p class="text-xs text-[#111827] dark:text-gray-300 opacity-90">
+							{domain.description}
+						</p>
+					</div>
+				) })()}
+			</div>
+
+			<!-- Carte 5 - Position centre (1,1) -->
+			<div class="col-start-2 row-start-2 flex justify-center items-center">
+				{(() => { const domain = expertiseDomains[4]; return (
+					<div class="group relative bg-gradient-to-br from-orange-50 via-orange-100 to-amber-100 dark:from-orange-900/30 dark:via-orange-800/20 dark:to-amber-800/30 p-4 w-full flex flex-col justify-center text-center rounded-2xl border-2 border-orange-300 dark:border-orange-500 shadow-xl transition-all duration-500 transform-gpu hover:-translate-y-3 hover:scale-110 hover:shadow-2xl hover:rotate-1" style="aspect-ratio: 1 / 1;">
+						<div class="flex items-center justify-center gap-2 mb-2">
+							<div class={`p-2 rounded-lg ${domain.color} ${domain.bgColor} shadow-lg`}>
+								<span class="text-lg">
+									<i class={domain.icon}></i>
+								</span>
+							</div>
+						</div>
+						<h3 class="text-sm font-bold text-[#111827] dark:text-white mb-2">{domain.title}</h3>
+						<p class="text-xs text-[#111827] dark:text-gray-300 opacity-90">
+							{domain.description}
+						</p>
+					</div>
+				) })()}
+			</div>
+
+			<!-- Carte 3 - Position bas gauche (2,0) -->
+			<div class="col-start-1 row-start-3 flex justify-center items-center">
+				{(() => { const domain = expertiseDomains[2]; return (
+					<div class="group relative bg-gradient-to-br from-purple-50 via-purple-100 to-violet-100 dark:from-purple-900/20 dark:via-purple-800/30 dark:to-violet-800/20 p-4 w-full flex flex-col justify-center text-center rounded-2xl border-2 border-purple-300 dark:border-purple-600 shadow-lg transition-all duration-400 transform-gpu hover:-translate-y-2 hover:scale-105 hover:shadow-xl hover:rotate-1" style="aspect-ratio: 1 / 1;">
+						<div class="flex items-center justify-center gap-2 mb-2">
+							<div class={`p-2 rounded-lg ${domain.color} ${domain.bgColor}`}>
+								<span class="text-lg">
+									<i class={domain.icon}></i>
+								</span>
+							</div>
+						</div>
+						<h3 class="text-sm font-bold text-[#111827] dark:text-white mb-2">{domain.title}</h3>
+						<p class="text-xs text-[#111827] dark:text-gray-300 opacity-90">
+							{domain.description}
+						</p>
+					</div>
+				) })()}
+			</div>
+
+			<!-- Carte 4 - Position bas droite (2,2) -->
+			<div class="col-start-3 row-start-3 flex justify-center items-center">
+				{(() => { const domain = expertiseDomains[3]; return (
+					<div class="group relative bg-gradient-to-br from-red-50 via-red-100 to-rose-100 dark:from-red-900/20 dark:via-red-800/30 dark:to-rose-800/20 p-4 w-full flex flex-col justify-center text-center rounded-2xl border-2 border-red-300 dark:border-red-600 shadow-lg transition-all duration-400 transform-gpu hover:-translate-y-2 hover:scale-105 hover:shadow-xl hover:rotate-1" style="aspect-ratio: 1 / 1;">
+						<div class="flex items-center justify-center gap-2 mb-2">
+							<div class={`p-2 rounded-lg ${domain.color} ${domain.bgColor}`}>
+								<span class="text-lg">
+									<i class={domain.icon}></i>
+								</span>
+							</div>
+						</div>
+						<h3 class="text-sm font-bold text-[#111827] dark:text-white mb-2">{domain.title}</h3>
+						<p class="text-xs text-[#111827] dark:text-gray-300 opacity-90">
+							{domain.description}
+						</p>
+					</div>
+				) })()}
+			</div>
+		</div>
+			</div>
+		</section>
+		
+		<!-- Domaines de compétences -->
+		<section class="py-16 bg-white dark:bg-gray-800 rounded-xl shadow-lg mb-16">
+			<div class="content-container text-center mb-12">
+				<h2 class="text-3xl font-bold text-[#111827] dark:text-white mb-4">
+					Mes domaines d'expertise
+				</h2>
+				<p class="text-lg text-[#111827] dark:text-gray-300">
+					Découvrez mes articles organisés par domaines de compétences. Chaque section présente les articles les plus pertinents.
+				</p>
+			</div>
+			
+			<div class="content-container-wide px-6">
+				{Object.entries(domainesCompetences).map(([domain, config]) => {
+					const colorClass = colorClasses[config.color as keyof typeof colorClasses];
+					
+					return (
+						<div class="mb-12">
+							<div class="flex items-center gap-3 mb-6">
+								<div class={`p-3 rounded-lg ${colorClass}`}>
+									<i class={`${config.icon} text-xl`}></i>
+								</div>
+								<div>
+									<h3 class="text-2xl font-bold text-[#111827] dark:text-white">{domain}</h3>
+									<p class="text-[#111827] dark:text-gray-300">{config.description}</p>
+								</div>
+							</div>
+							
+							{config.articles.length > 0 ? (
+								<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+									{config.articles.map((article) => (
+										<article class="bg-gray-50 dark:bg-gray-700 rounded-lg p-6 hover:shadow-md transition-shadow duration-300">
+											<div class="flex items-center gap-2 mb-3">
+												{article.data.featured && (
+													<span class="px-2 py-1 text-xs font-medium bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200 rounded-full">
+														À la une
+													</span>
+												)}
+												<span class="px-2 py-1 text-xs font-medium bg-gray-100 text-[#111827] dark:bg-gray-600 dark:text-gray-200 rounded-full">
+													{article.data.readingTime || 5} min
+												</span>
+											</div>
+											
+											<h4 class="text-lg font-bold text-[#111827] dark:text-white mb-2 line-clamp-2">
+												<a href={`/articles/${article.slug}`} class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+													{article.data.title}
+												</a>
+											</h4>
+											
+											<p class="text-[#111827] dark:text-gray-300 mb-4 line-clamp-2">
+												{article.data.description}
+											</p>
+											
+											<div class="flex items-center justify-between">
+												<span class="text-sm text-gray-500 dark:text-gray-400">
+													{formatDate(article.data.publishDate)}
+												</span>
+												<a href={`/articles/${article.slug}`} 
+												   class="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 font-medium text-sm transition-colors">
+													Lire →
+												</a>
+											</div>
+										</article>
+									))}
+								</div>
+							) : (
+								<div class="text-center py-8">
+									<p class="text-gray-500 dark:text-gray-400">
+										Aucun article disponible pour ce domaine pour le moment.
+									</p>
+								</div>
+							)}
+							
+							<div class="text-center mt-6">
+								<a href="/competences" class="inline-flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 font-medium transition-colors">
+									Voir tous les articles de ce domaine
+									<i class="fas fa-arrow-right"></i>
+								</a>
+							</div>
+						</div>
+					);
+				})}
 			</div>
 		</section>
 		
 		<!-- Parcours professionnel -->
 		<section class="py-16 bg-white dark:bg-gray-800 rounded-xl shadow-lg mb-16">
-			<div class="max-w-3xl mx-auto text-center mb-12">
-				<h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+			<div class="content-container text-center mb-12">
+				<h2 class="text-3xl font-bold text-[#111827] dark:text-white mb-4">
 					Mon parcours professionnel
 				</h2>
-				<p class="text-lg text-gray-600 dark:text-gray-300">
+				<p class="text-lg text-[#111827] dark:text-gray-300">
 					Une expérience diversifiée qui renforce mes compétences en gestion de projet, développement web et commercial et me permet de comprendre les enjeux et besoins de votre entreprise.
 				</p>
 			</div>
 			
-			<div class="max-w-3xl mx-auto px-6">
+			<div class="content-container px-6">
 				<div class="relative border-l-2 border-indigo-500 dark:border-indigo-400 ml-3 md:ml-6 pl-8 py-4">
 					{experiences.map((exp, index) => (
 						<div class={index !== experiences.length - 1 ? "mb-12" : ""}>
 							<div class="absolute w-4 h-4 bg-indigo-600 rounded-full -left-2 mt-2"></div>
 							<div class="bg-white dark:bg-gray-700 rounded-lg shadow-md p-6 transform transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
 								<div class="flex flex-col md:flex-row md:justify-between md:items-center mb-4">
-									<h3 class="text-xl font-bold text-gray-800 dark:text-white">{exp.company}</h3>
+									<h3 class="text-xl font-bold text-[#111827] dark:text-white">{exp.company}</h3>
 									<span class="text-indigo-600 dark:text-indigo-400 font-medium">{exp.period}</span>
 								</div>
 								<p class="text-lg font-semibold text-gray-700 dark:text-gray-300 mb-3">{exp.position}</p>
-								<p class="text-gray-600 dark:text-gray-300">
+								<p class="text-[#111827] dark:text-gray-300">
 									{exp.description}
 								</p>
 							</div>
@@ -182,7 +443,7 @@ const pageDescription = "Portfolio de Gérald Paméole, développeur web full st
 		
 		<!-- Appel à l'action -->
 		<section class="py-16 bg-gradient-to-r from-indigo-600 to-blue-500 rounded-xl text-white shadow-lg">
-			<div class="max-w-3xl mx-auto text-center px-6">
+			<div class="content-container text-center px-6">
 				<h2 class="text-3xl font-bold text-white mb-4">
 					Besoin d'un expert pour votre projet ?
 				</h2>
@@ -199,11 +460,7 @@ const pageDescription = "Portfolio de Gérald Paméole, développeur web full st
 </BaseLayout>
 
 <style>
-	.container {
-		max-width: 1200px;
-		margin: 0 auto;
-		padding: 2rem;
-	}
+	/* Styles de conteneur gérés par content.css */
 
 	h1 {
 		text-align: center;
@@ -217,7 +474,7 @@ const pageDescription = "Portfolio de Gérald Paméole, développeur web full st
 
 	p {
 		text-align: center;
-		color: var(--gray-300);
+		color: var(--color-primary-dark);
 		margin-bottom: 2rem;
 	}
 
@@ -286,7 +543,7 @@ const pageDescription = "Portfolio de Gérald Paméole, développeur web full st
 		background:
 			url('/assets/backgrounds/noise.png') top center/220px repeat,
 			var(--hero-bg) center center / var(--bg-gradient-size) no-repeat,
-			var(--gray-999);
+			var(--color-primary-dark);
 		background-blend-mode: overlay, normal, normal, normal;
 		mix-blend-mode: var(--bg-blend-mode);
 		z-index: -1;
@@ -301,7 +558,7 @@ const pageDescription = "Portfolio de Gérald Paméole, développeur web full st
 		text-align: center;
 		max-width: 50ch;
 		font-size: var(--text-md);
-		color: var(--gray-300);
+		color: var(--color-primary-dark);
 	}
 
 	.section-header h3 {
@@ -343,6 +600,13 @@ const pageDescription = "Portfolio de Gérald Paméole, développeur web full st
 		}
 	}
 
+	.line-clamp-2 {
+		display: -webkit-box;
+		-webkit-line-clamp: 2;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+	}
+
 	/* ====================================================== */
 
 	.mention-card {
@@ -351,9 +615,9 @@ const pageDescription = "Portfolio de Gérald Paméole, développeur web full st
 		justify-content: center;
 		align-items: center;
 		text-align: center;
-		border: 1px solid var(--gray-800);
+		border: 1px solid var(--color-primary-dark);
 		border-radius: 1.5rem;
-		color: var(--gray-300);
+		color: var(--color-primary-dark);
 		background: var(--gradient-subtle);
 		box-shadow: var(--shadow-sm);
 	}

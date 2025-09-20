@@ -1,24 +1,24 @@
 ---
-title: Manager d'Équipe Commerciale
+title: "Manager d'Équipe Commerciale"
 publishDate: "2024-01-04"
-description: Management et développement d'une équipe commerciale performante.
-author: Gérald Paméole
-img: /assets/sales-team-manager.jpg
-img_alt: Manager commercial en action
-company: SFR
+description: "Management et développement d'une équipe commerciale performante."
+author: "Gérald Paméole"
+img: "/assets/sales-team-manager.jpg"
+img_alt: "Manager commercial en action"
+company: "SFR"
 period: "2012 - 2015"
 location: "Paris, France"
 technologies:
-  - CRM
-  - Gestion d'équipe
-  - Stratégie commerciale
-  - Management
+- CRM
+- Gestion d'équipe
+- Stratégie commerciale
+- Management
 projectType: "professional"
 tags:
-  - Management
-  - Vente
-  - Leadership
-  - Performance
+- Management
+- Vente
+- Leadership
+- Performance
 ---
 
 # Manager Commercial

@@ -1,0 +1,584 @@
+/* ========================================
+   AMÉLIORATIONS DE LA LISIBILITÉ GLOBALE
+   ======================================== */
+
+/* ========================================
+   OPTIMISATIONS DE BASE
+   ======================================== */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-feature-settings:
+    "kern" 1,
+    "liga" 1,
+    "calt" 1;
+  text-rendering: optimizeLegibility;
+  line-height: var(--leading-relaxed);
+}
+
+/* ========================================
+   AMÉLIORATIONS DE LA TYPOGRAPHIE
+   ======================================== */
+.content-typography,
+.article-content-typography,
+.book-content-typography {
+  /* Amélioration de la lisibilité des paragraphes */
+  p {
+    text-align: justify;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    word-break: break-word;
+    overflow-wrap: break-word;
+
+    /* Espacement optimal entre les paragraphes */
+    & + p {
+      margin-top: var(--content-spacing-lg);
+    }
+  }
+
+  /* Amélioration de la lisibilité des listes */
+  ul,
+  ol {
+    li {
+      /* Espacement optimal entre les éléments de liste */
+      & + li {
+        margin-top: var(--content-spacing-sm);
+      }
+
+      /* Amélioration des puces et numéros */
+      &::marker {
+        font-weight: 600;
+        color: var(--color-secondary-warm);
+
+        .dark & {
+          color: var(--color-tertiary-light);
+        }
+      }
+    }
+  }
+
+  /* Amélioration de la lisibilité des liens */
+  a {
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: all 0.3s ease;
+    font-weight: 500;
+
+    &:hover {
+      border-bottom-color: currentColor;
+    }
+
+    /* Liens externes */
+    &[href^="http"]::after {
+      content: " ↗";
+      font-size: 0.8em;
+      opacity: 0.7;
+    }
+  }
+
+  /* Amélioration de la lisibilité des citations */
+  blockquote {
+    position: relative;
+    margin: var(--content-spacing-xl) 0;
+    padding: var(--content-spacing-lg) var(--content-spacing-xl);
+
+    /* Effet de guillemets décoratifs */
+    &::before,
+    &::after {
+      font-family: serif;
+      font-size: 3rem;
+      position: absolute;
+      opacity: 0.3;
+      color: var(--color-secondary-warm);
+
+      .dark & {
+        color: var(--color-tertiary-light);
+      }
+    }
+
+    &::before {
+      content: '"';
+      top: var(--content-spacing-sm);
+      left: var(--content-spacing-sm);
+    }
+
+    &::after {
+      content: '"';
+      bottom: var(--content-spacing-sm);
+      right: var(--content-spacing-sm);
+    }
+
+    p {
+      margin: 0;
+      font-style: italic;
+      font-size: var(--text-lg);
+      line-height: var(--leading-relaxed);
+      text-align: center;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  /* Amélioration de la lisibilité du code */
+  code {
+    font-family: var(--font-mono);
+    font-size: 0.9em;
+    padding: 0.2em 0.4em;
+    border-radius: 0.25rem;
+    background: rgba(0, 0, 0, 0.08);
+    color: var(--color-primary-dark);
+    font-weight: 500;
+
+    .dark & {
+      background: rgba(255, 255, 255, 0.08);
+      color: var(--color-tertiary-light);
+    }
+  }
+
+  pre {
+    background: var(--color-primary-dark);
+    color: var(--color-tertiary-light);
+    padding: var(--content-spacing-lg);
+    border-radius: var(--content-border-radius);
+    overflow-x: auto;
+    margin: var(--content-spacing-xl) 0;
+    box-shadow: var(--content-shadow-md);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    code {
+      background: none;
+      padding: 0;
+      color: inherit;
+      font-weight: normal;
+    }
+  }
+
+  /* Amélioration de la lisibilité des tableaux */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: var(--content-spacing-xl) 0;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: var(--content-border-radius);
+    overflow: hidden;
+    box-shadow: var(--content-shadow-sm);
+
+    .dark & {
+      background: rgba(55, 65, 81, 0.9);
+    }
+
+    th,
+    td {
+      padding: var(--content-spacing-md);
+      text-align: left;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      vertical-align: top;
+
+      .dark & {
+        border-bottom-color: rgba(255, 255, 255, 0.1);
+      }
+    }
+
+    th {
+      background: linear-gradient(
+        135deg,
+        var(--color-secondary-warm),
+        var(--color-tertiary-light)
+      );
+      color: white;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: var(--tracking-wide);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+
+      .dark & {
+        background: linear-gradient(
+          135deg,
+          var(--color-tertiary-light),
+          var(--color-secondary-warm)
+        );
+        color: var(--color-primary-dark);
+      }
+    }
+
+    tr {
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background: rgba(0, 0, 0, 0.05);
+
+        .dark & {
+          background: rgba(255, 255, 255, 0.05);
+        }
+      }
+
+      &:nth-child(even) {
+        background: rgba(0, 0, 0, 0.02);
+
+        .dark & {
+          background: rgba(255, 255, 255, 0.02);
+        }
+      }
+    }
+  }
+
+  /* Amélioration de la lisibilité des images */
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--content-border-radius);
+    box-shadow: var(--content-shadow-sm);
+    margin: var(--content-spacing-lg) 0;
+    border: 2px solid white;
+    transition: all 0.3s ease;
+
+    .dark & {
+      border-color: var(--color-gray-600);
+    }
+
+    &:hover {
+      transform: scale(1.02);
+      box-shadow: var(--content-shadow-md);
+    }
+  }
+
+  /* Amélioration de la lisibilité des séparateurs */
+  hr {
+    border: none;
+    height: 3px;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      var(--color-secondary-warm),
+      var(--color-tertiary-light),
+      transparent
+    );
+    margin: var(--content-spacing-2xl) 0;
+    border-radius: 2px;
+
+    .dark & {
+      background: linear-gradient(
+        90deg,
+        transparent,
+        var(--color-tertiary-light),
+        var(--color-secondary-warm),
+        transparent
+      );
+    }
+  }
+
+  /* Amélioration de la lisibilité des titres */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    scroll-margin-top: var(--content-spacing-xl);
+
+    /* Liens d'ancrage pour les titres */
+    &[id] {
+      position: relative;
+
+      &::before {
+        content: "#";
+        position: absolute;
+        left: -1.5em;
+        opacity: 0;
+        color: var(--color-secondary-warm);
+        font-weight: normal;
+        transition: opacity 0.3s ease;
+
+        .dark & {
+          color: var(--color-tertiary-light);
+        }
+      }
+
+      &:hover::before {
+        opacity: 1;
+      }
+    }
+  }
+
+  /* Amélioration de la lisibilité des listes de définitions */
+  dl {
+    margin: var(--content-spacing-lg) 0;
+
+    dt {
+      font-weight: var(--font-semibold);
+      color: var(--color-primary-dark);
+      margin-top: var(--content-spacing-md);
+      margin-bottom: var(--content-spacing-xs);
+
+      .dark & {
+        color: var(--color-tertiary-light);
+      }
+    }
+
+    dd {
+      margin-left: var(--content-spacing-lg);
+      margin-bottom: var(--content-spacing-md);
+      color: var(--color-gray-700);
+
+      .dark & {
+        color: var(--color-gray-300);
+      }
+    }
+  }
+
+  /* Amélioration de la lisibilité des abréviations */
+  abbr {
+    border-bottom: 1px dotted var(--color-secondary-warm);
+    cursor: help;
+    text-decoration: none;
+
+    .dark & {
+      border-bottom-color: var(--color-tertiary-light);
+    }
+  }
+
+  /* Amélioration de la lisibilité des marquages */
+  mark {
+    background: linear-gradient(
+      120deg,
+      var(--color-tertiary-light) 0%,
+      var(--color-secondary-warm) 100%
+    );
+    color: white;
+    padding: 0.1em 0.3em;
+    border-radius: 0.25rem;
+    font-weight: 500;
+  }
+
+  /* Amélioration de la lisibilité des insertions et suppressions */
+  ins {
+    background: rgba(34, 197, 94, 0.2);
+    color: var(--color-primary-dark);
+    text-decoration: none;
+    padding: 0.1em 0.3em;
+    border-radius: 0.25rem;
+
+    .dark & {
+      color: var(--color-tertiary-light);
+    }
+  }
+
+  del {
+    background: rgba(239, 68, 68, 0.2);
+    color: var(--color-gray-600);
+    text-decoration: line-through;
+    padding: 0.1em 0.3em;
+    border-radius: 0.25rem;
+
+    .dark & {
+      color: var(--color-gray-400);
+    }
+  }
+}
+
+/* ========================================
+   AMÉLIORATIONS DE L'ACCESSIBILITÉ
+   ======================================== */
+/* Focus visible pour l'accessibilité */
+*:focus {
+  outline: 2px solid var(--color-secondary-warm);
+  outline-offset: 2px;
+}
+
+/* Amélioration du contraste pour les liens */
+a:focus {
+  outline: 3px solid var(--color-secondary-warm);
+  outline-offset: 3px;
+}
+
+/* Amélioration de la lisibilité pour les lecteurs d'écran */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Amélioration de la navigation au clavier */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: var(--color-secondary-warm);
+  color: white;
+  padding: 8px;
+  text-decoration: none;
+  border-radius: 4px;
+  z-index: 1000;
+
+  &:focus {
+    top: 6px;
+  }
+}
+
+/* ========================================
+   AMÉLIORATIONS DE LA PERFORMANCE
+   ======================================== */
+/* Optimisation des animations */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Optimisation du rendu */
+.content-typography,
+.article-content-typography,
+.book-content-typography {
+  contain: layout style paint;
+  will-change: auto;
+}
+
+/* ========================================
+   RESPONSIVE ET ADAPTATIONS
+   ======================================== */
+@media (max-width: 768px) {
+  .content-typography,
+  .article-content-typography,
+  .book-content-typography {
+    /* Réduction de la taille des polices sur mobile */
+    p,
+    li,
+    td,
+    th {
+      font-size: var(--text-sm);
+    }
+
+    /* Ajustement des espacements sur mobile */
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      scroll-margin-top: var(--content-spacing-lg);
+    }
+
+    /* Optimisation des tableaux sur mobile */
+    table {
+      font-size: var(--text-xs);
+
+      th,
+      td {
+        padding: var(--content-spacing-sm);
+      }
+    }
+
+    /* Optimisation des citations sur mobile */
+    blockquote {
+      padding: var(--content-spacing-md);
+      margin: var(--content-spacing-lg) 0;
+
+      &::before,
+      &::after {
+        font-size: 2rem;
+      }
+
+      p {
+        font-size: var(--text-base);
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .content-typography,
+  .article-content-typography,
+  .book-content-typography {
+    /* Ajustements supplémentaires pour très petits écrans */
+    p,
+    li {
+      text-align: left;
+      hyphens: none;
+      -webkit-hyphens: none;
+      -ms-hyphens: none;
+    }
+
+    /* Optimisation des listes sur très petits écrans */
+    ul,
+    ol {
+      padding-left: var(--content-spacing-md);
+    }
+
+    /* Optimisation des tableaux sur très petits écrans */
+    table {
+      display: block;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+  }
+}
+
+/* ========================================
+   MODE IMPRESSION
+   ======================================== */
+@media print {
+  .content-typography,
+  .article-content-typography,
+  .book-content-typography {
+    /* Optimisations pour l'impression */
+    * {
+      background: transparent !important;
+      color: black !important;
+      box-shadow: none !important;
+      text-shadow: none !important;
+    }
+
+    /* Amélioration de la lisibilité à l'impression */
+    p,
+    li {
+      text-align: left;
+      hyphens: auto;
+      -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+    }
+
+    /* Optimisation des liens à l'impression */
+    a {
+      text-decoration: underline;
+
+      &[href^="http"]::after {
+        content: " (" attr(href) ")";
+        font-size: 0.8em;
+        opacity: 0.7;
+      }
+    }
+
+    /* Optimisation des tableaux à l'impression */
+    table {
+      border: 1px solid black;
+
+      th,
+      td {
+        border: 1px solid black;
+      }
+    }
+  }
+}

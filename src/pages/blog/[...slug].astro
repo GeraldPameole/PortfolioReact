@@ -32,20 +32,20 @@ const pageDescription = article.data.description;
 	<main class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-12">
 		<BackButton href="/blog" text="Retour aux articles" />
 		
-		<article class="prose prose-lg dark:prose-invert max-w-none">
+		<article class="content-typography prose-lg dark:prose-invert max-w-none">
 			<header class="mb-12">
 				<div class="flex items-center gap-4 mb-6">
 					<span class={`px-4 py-2 rounded-full text-sm font-medium ${themeConfig.bg} ${themeConfig.text}`}>
 						{themeConfig.label}
 					</span>
-					<time class="text-gray-600 dark:text-gray-400">
+					<time class="text-[#111827] dark:text-gray-400">
 						{new Date(article.data.publishDate).toLocaleDateString('fr-FR', {
 							year: 'numeric',
 							month: 'long',
 							day: 'numeric'
 						})}
 					</time>
-					<span class="text-gray-600 dark:text-gray-400 flex items-center">
+					<span class="text-[#111827] dark:text-gray-400 flex items-center">
 						<i class="fas fa-clock mr-1"></i>
 						{calculateReadingTime(article.body)} min de lecture
 					</span>
@@ -63,12 +63,12 @@ const pageDescription = article.data.description;
 					</div>
 				)}
 				
-				<p class="text-xl text-gray-600 dark:text-gray-300 mb-8">{article.data.description}</p>
+				<p class="text-xl text-[#111827] dark:text-gray-300 mb-8">{article.data.description}</p>
 				
 				{article.data.tags && article.data.tags.length > 0 && (
 					<div class="flex flex-wrap gap-2">
 						{article.data.tags.map((tag: string) => (
-							<span class="px-3 py-1 bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 rounded-full text-sm">
+							<span class="px-3 py-1 bg-gray-100 dark:bg-gray-800 text-[#111827] dark:text-gray-300 rounded-full text-sm">
 								#{tag}
 							</span>
 						))}
@@ -84,9 +84,7 @@ const pageDescription = article.data.description;
 </BaseLayout>
 
 <style>
-	.prose {
-		@apply text-gray-800 dark:text-gray-200;
-	}
+	/* Styles unifiés gérés par content.css */
 	
 	.prose h2 {
 		@apply text-3xl font-bold mt-12 mb-6;

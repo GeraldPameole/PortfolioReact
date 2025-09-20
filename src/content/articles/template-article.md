@@ -1,20 +1,23 @@
 ---
 draft: false
-title: "Template d\\"Article : Guide de Structure"
-description: "Template d\\"article pour la documentation technique et les guides pratiques"
-date: "2024-03-15"
+title: "Template Article"
+description: "Description de l'article Template Article"
 author: "Gérald Pameole"
 type: "article"
 featured: false
 readingTime: 15
-hasMermaid: true
-targetAudience: "Auteurs et Documentalistes"
-domain: "Développement Web"
-tags: ["template", "documentation", "guide", "structure", "format"]
+hasMermaid: false
+targetAudience: "Professionnels"
+domain: "Général"
+tags: ["article"]
 pillColor: "blue"
-skills: ["Documentation", "Rédaction technique", "Structure", "Format"]
-relatedArticles: ["visualisations-mermaid", "documentation-technique", "mermaid-example"]
+skills: ["Compétences"]
+relatedArticles: []
+publishDate: "2024-01-01"
 ---
+
+
+
 
 # Template d'Article : Guide de Structure
 
@@ -28,21 +31,21 @@ Ce template sert de guide pour créer des articles techniques bien structurés e
 
 ```yaml
 ---
-date: 'YYYY-MM-DD'
+date: "YYYY-MM-DD"
 description: "Description concise de l'article"
 draft: false
 title: "Titre de l'Article"
-type: 'article'
+type: "article"
 author: "Nom de l'Auteur"
-tags: ['tag1', 'tag2', 'tag3']
+tags: ["tag1", "tag2", "tag3"]
 featured: false
 readingTime: 15
-skills: ['skill1', 'skill2']
+skills: ["skill1", "skill2"]
 hasMermaid: true/false
-targetAudience: 'Public cible'
-domain: 'Domaine'
-pillColor: 'couleur'
-relatedArticles: ['article1', 'article2']
+targetAudience: "Public cible"
+domain: "Domaine"
+pillColor: "couleur"
+relatedArticles: ["article1", "article2"]
 ---
 ```
 
@@ -94,7 +97,7 @@ relatedArticles: ['article1', 'article2']
 ```javascript
 // Exemple de code
 function example() {
-  console.log('Hello World');
+  console.log("Hello World");
 }
 ```
 

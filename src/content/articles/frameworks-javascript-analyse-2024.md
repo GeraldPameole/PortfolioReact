@@ -1,10 +1,24 @@
 ---
-title: "La Guerre des Frameworks JavaScript en 2024 : Analyse Stratégique du Nouveau Paysage Frontend"
-description: "Analyse objective de l\\"écosystème des frameworks JavaScript avec données statistiques récentes, critères de sélection précis et recommandations sectorielles pour choisir entre React, Vue, Angular, Svelte et Solid."
-author: "Gérald Paméole"
-type: "book"
-skills: ""
+draft: false
+title: "Frameworks Javascript Analyse 2024"
+description: "Description de l'article Frameworks Javascript Analyse 2024"
+author: "Gérald Pameole"
+type: "article"
+featured: false
+readingTime: 15
+hasMermaid: false
+targetAudience: "Professionnels"
+domain: "Général"
+tags: ["article"]
+pillColor: "blue"
+skills: ["Compétences"]
+relatedArticles: []
+publishDate: "2024-01-01"
 ---
+
+
+
+
 
 # La Guerre des Frameworks JavaScript en 2024 : État des Lieux et Perspectives
 

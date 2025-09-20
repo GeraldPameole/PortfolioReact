@@ -1,20 +1,23 @@
 ---
 draft: false
-title: "Gestion des Compétences et Développement : Guide Stratégique"
-description: "Guide stratégique sur la gestion des compétences et le développement : méthodes, outils et bonnes pratiques pour développer les compétences de vos équipes"
-date: "2024-03-15"
+title: "Gestion Competences Developpement"
+description: "Description de l'article Gestion Competences Developpement"
 author: "Gérald Pameole"
 type: "article"
 featured: false
 readingTime: 15
-hasMermaid: true
-targetAudience: "Professionnels RH et Managers"
-domain: "Ressources Humaines"
-tags: ["compétences", "développement", "formation", "management"]
-pillColor: "teal"
-skills: ["Gestion des compétences", "Développement", "Formation", "Management"]
-relatedArticles: ""
+hasMermaid: false
+targetAudience: "Professionnels"
+domain: "Général"
+tags: ["article"]
+pillColor: "blue"
+skills: ["Compétences"]
+relatedArticles: []
+publishDate: "2024-01-01"
 ---
+
+
+
 
 # Gestion et Développement des Compétences : Guide Stratégique
 

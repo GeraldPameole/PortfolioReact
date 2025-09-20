@@ -1,10 +1,23 @@
 ---
-title: "Gestion des Conflits en Équipe : Approche Systémique et Solutions Durables"
-description: "Méthodologie structurée pour identifier, analyser et résoudre les conflits au sein des équipes professionnelles, en cultivant un environnement plus résilient."
-author: "Gérald Paméole"
-type: "book"
-skills: ""
+draft: false
+title: "Gestion Conflits Equipe"
+description: "Description de l'article Gestion Conflits Equipe"
+author: "Gérald Pameole"
+type: "article"
+featured: false
+readingTime: 15
+hasMermaid: false
+targetAudience: "Professionnels"
+domain: "Général"
+tags: ["article"]
+pillColor: "blue"
+skills: ["Compétences"]
+relatedArticles: []
+publishDate: "2024-01-01"
 ---
+
+
+
 
 # Gestion des Conflits en Équipe : Approche Systémique et Solutions Durables
 

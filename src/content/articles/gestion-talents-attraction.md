@@ -1,20 +1,24 @@
 ---
 draft: false
-title: "Attraction des Talents : Guide Complet pour le Recrutement"
-description: "Découvrez les stratégies et techniques pour attirer les meilleurs talents. Un guide détaillé sur le recrutement, l\\"employer branding et la marque employeur."
-date: "2024-03-20"
+title: "Gestion Talents Attraction"
+description: "Description de l'article Gestion Talents Attraction"
 author: "Gérald Pameole"
 type: "article"
 featured: false
 readingTime: 15
-hasMermaid: true
-targetAudience: "Professionnels RH"
-domain: "Gestion des Talents"
-tags: ["recrutement", "attraction", "employer branding", "marque employeur", "talent"]
-pillColor: "yellow"
-skills: ""
-relatedArticles: ""
+hasMermaid: false
+targetAudience: "Professionnels"
+domain: "Général"
+tags: ["article"]
+pillColor: "blue"
+skills: ["Compétences"]
+relatedArticles: []
+publishDate: "2024-01-01"
 ---
+
+
+
+
 
 # Attraction des Talents : Guide Complet pour le Recrutement
 

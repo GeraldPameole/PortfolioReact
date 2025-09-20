@@ -1,9 +1,23 @@
 ---
-title: "Stratégies Efficaces sur les Réseaux Sociaux pour le B2B"
-description: "Guide complet des meilleures pratiques pour développer une présence B2B percutante sur les réseaux sociaux et générer des leads qualifiés."
-author: "Gérald Paméole"
+draft: false
+title: "Strategies Reseaux Sociaux B2b"
+description: "Description de l'article Strategies Reseaux Sociaux B2b"
+author: "Gérald Pameole"
 type: "article"
+featured: false
+readingTime: 15
+hasMermaid: false
+targetAudience: "Professionnels"
+domain: "Général"
+tags: ["article"]
+pillColor: "blue"
+skills: ["Compétences"]
+relatedArticles: []
+publishDate: "2024-01-01"
 ---
+
+
+
 
 # Stratégies Efficaces sur les Réseaux Sociaux pour le B2B
 

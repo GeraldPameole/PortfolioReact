@@ -1,121 +1,126 @@
-import { getCollection } from 'astro:content';
+---
 import type { CollectionEntry } from 'astro:content';
+import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 
 const articles = await getCollection('articles');
-const sortedArticles = articles.sort((a, b) => 
-  b.data.publishDate.getTime() - a.data.publishDate.getTime()
-);
+// Tri des articles par date de publication (du plus récent au plus ancien)
+const sortedArticles = articles.sort((a, b) => {
+	const dateA = new Date(a.data.publishDate || '2024-01-01');
+	const dateB = new Date(b.data.publishDate || '2024-01-01');
+	return dateB.getTime() - dateA.getTime();
+});
+---
 
 <BaseLayout title="Articles" description="Liste des articles">
-  <div class="container mx-auto px-4 py-8">
-    <h1 class="text-4xl font-bold mb-8">Articles</h1>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      {sortedArticles.map((article: CollectionEntry<'articles'>) => (
-        <article class="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden">
-          {article.data.image && (
-            <img
-              src={article.data.image}
-              alt={article.data.title}
-              class="w-full h-48 object-cover"
-            />
-          )}
-          <div class="p-6">
-            <h2 class="text-xl font-semibold mb-2">
-              <a href={`/articles/${article.slug}`} class="hover:text-blue-500">
-                {article.data.title}
-              </a>
-            </h2>
-            <p class="text-gray-600 dark:text-gray-300 mb-4">
-              {article.data.description}
-            </p>
-            <div class="flex items-center text-sm text-gray-500 dark:text-gray-400">
-              <time datetime={article.data.publishDate.toISOString()}>
-                {new Date(article.data.publishDate).toLocaleDateString('fr-FR', {
-                  year: 'numeric',
-                  month: 'long',
-                  day: 'numeric'
-                })}
-              </time>
-              {article.data.author && (
-                <>
-                  <span class="mx-2">•</span>
-                  <span>{article.data.author}</span>
-                </>
-              )}
-            </div>
-          </div>
-        </article>
-      ))}
-    </div>
-  </div>
+	<!-- En-tête de page -->
+	<section class="py-16 md:py-24 bg-gradient-to-r from-indigo-600/5 to-violet-600/5">
+		<div class="content-container text-center">
+			<h1 class="text-4xl font-bold mb-6 text-[#111827] dark:text-white">Articles</h1>
+			<p class="text-lg text-[#111827] dark:text-gray-300 mb-8">
+				Découvrez mes articles sur le développement web, la gestion de projet, la formation et bien plus encore.
+			</p>
+		</div>
+	</section>
+
+	<div class="content-container py-8">
+		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+			{sortedArticles.map((article: CollectionEntry<'articles'>) => (
+				<article class="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:transform hover:scale-105">
+					{article.data.image && (
+						<img src={article.data.image} alt={article.data.title} class="w-full h-48 object-cover" />
+					)}
+					<div class="p-6">
+						<h2 class="text-xl font-semibold mb-2">
+							<a href={`/articles/${article.slug}`} class="hover:text-blue-500 transition-colors">
+								{article.data.title}
+							</a>
+						</h2>
+						<p class="text-[#111827] dark:text-gray-300 mb-4">
+							{article.data.description}
+						</p>
+						<div class="flex items-center text-sm text-gray-500 dark:text-gray-400">
+							<time datetime={new Date(article.data.publishDate || '2024-01-01').toISOString()}>
+								{new Date(article.data.publishDate || '2024-01-01').toLocaleDateString('fr-FR', {
+									year: 'numeric',
+									month: 'long',
+									day: 'numeric'
+								})}
+							</time>
+							{article.data.author && (
+								<>
+									<span class="mx-2">•</span>
+									<span>{article.data.author}</span>
+								</>
+							)}
+						</div>
+					</div>
+				</article>
+			))}
+		</div>
+	</div>
 </BaseLayout>
 
 <style>
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem;
-  }
+	/* Styles de conteneur gérés par content.css */
+	.articles-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+		gap: 2rem;
+		margin-top: 2rem;
+	}
 
-  .articles-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
-  }
+	.article-card {
+		padding: 1.5rem;
+		border-radius: 8px;
+		background: rgba(0, 0, 0, 0.05);
+		box-shadow: var(--shadow-sm);
+		transition: transform 0.2s ease-in-out;
+	}
 
-  .article-card {
-    padding: 1.5rem;
-    border-radius: 8px;
-    background: var(--gray-999_40);
-    box-shadow: var(--shadow-sm);
-    transition: transform 0.2s ease-in-out;
-  }
+	.article-card:hover {
+		transform: translateY(-5px);
+		box-shadow: var(--shadow-md);
+	}
 
-  .article-card:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-md);
-  }
+	h1 {
+		text-align: center;
+		margin-bottom: 2rem;
+		color: var(--text-light);
+	}
 
-  h1 {
-    text-align: center;
-    margin-bottom: 2rem;
-    color: var(--gray-0);
-  }
+	h2 {
+		margin-bottom: 1rem;
+		color: var(--text-light);
+	}
 
-  h2 {
-    margin-bottom: 1rem;
-    color: var(--gray-0);
-  }
+	p {
+		color: var(--color-primary-dark);
+		margin-bottom: 1rem;
+	}
 
-  p {
-    color: var(--gray-300);
-    margin-bottom: 1rem;
-  }
+	.article-meta {
+		font-size: 0.9rem;
+		color: var(--color-primary-dark);
+		margin-bottom: 1rem;
+		display: flex;
+		gap: 1rem;
+	}
 
-  .article-meta {
-    font-size: 0.9rem;
-    color: var(--gray-400);
-    margin-bottom: 1rem;
-    display: flex;
-    gap: 1rem;
-  }
+	.read-more {
+		color: var(--color-secondary-warm);
+		text-decoration: none;
+		font-weight: 500;
+		display: inline-flex;
+		align-items: center;
+		gap: 0.5rem;
+	}
 
-  .read-more {
-    color: var(--accent-regular);
-    text-decoration: none;
-    font-weight: 500;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-  }
+	.read-more:hover .arrow {
+		transform: translateX(4px);
+	}
 
-  .read-more:hover .arrow {
-    transform: translateX(4px);
-  }
-
-  .arrow {
-    transition: transform 0.2s ease;
-  }
+	.arrow {
+		transition: transform 0.2s;
+	}
 </style> 

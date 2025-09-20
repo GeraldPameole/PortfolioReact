@@ -1,13 +1,46 @@
 :root {
   /* Palette de couleurs principale */
-  --color-primary-dark: #430c05; /* Marron foncé */
+  --color-primary-dark: #111827; /* Gris très foncé */
   --color-secondary-warm: #d46f4d; /* Orange-saumon */
   --color-tertiary-light: #ffbf66; /* Ambre clair */
   --color-secondary-cool: #08c5d1; /* Turquoise */
   --color-primary-blue: #00353f; /* Bleu très foncé */
 
+  /* Variables de typographie */
+  --font-primary:
+    "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, sans-serif;
+  --font-mono:
+    Menlo, Monaco, "Lucida Console", "Liberation Mono", "DejaVu Sans Mono",
+    "Bitstream Vera Sans Mono", "Courier New", monospace;
+
+  /* Variables de taille de texte */
+  --text-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
+  --text-sm: clamp(0.875rem, 0.8rem + 0.375vw, 1rem);
+  --text-base: clamp(1rem, 0.925rem + 0.375vw, 1.125rem);
+  --text-lg: clamp(1.125rem, 1rem + 0.625vw, 1.25rem);
+  --text-xl: clamp(1.25rem, 1.125rem + 0.625vw, 1.5rem);
+  --text-2xl: clamp(1.5rem, 1.375rem + 0.625vw, 1.875rem);
+  --text-3xl: clamp(1.875rem, 1.75rem + 0.625vw, 2.25rem);
+  --text-4xl: clamp(2.25rem, 2rem + 1.25vw, 3rem);
+  --text-5xl: clamp(3rem, 2.75rem + 1.25vw, 3.75rem);
+
+  /* Variables de line-height */
+  --leading-tight: 1.1;
+  --leading-snug: 1.3;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.625;
+  --leading-loose: 1.8;
+
+  /* Variables de font-weight */
+  --font-light: 300;
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+
   /* Variables d'utilisation */
-  --text-dark: var(--color-primary-dark);
+  --text-dark: #111827;
   --text-light: #ffffff;
   --bg-dark: var(--color-primary-blue);
   --bg-light: #ffffff;

@@ -1,19 +1,22 @@
 ---
 draft: false
-title: "Gestion des Risques Projet : Guide Complet pour la Prévention"
-description: "Découvrez les méthodes et outils pour identifier, analyser et gérer les risques dans vos projets. Un guide détaillé sur la prévention et la mitigation des risques."
-date: "2024-03-20"
+title: "Gestion Projet Risques"
+description: "Description de l'article Gestion Projet Risques"
 author: "Gérald Pameole"
 type: "article"
 featured: false
 readingTime: 15
-hasMermaid: true
-targetAudience: "Chefs de Projet"
-domain: "Gestion de Projet"
-tags: ["gestion de projet", "risques", "prévention", "analyse", "mitigation"]
+hasMermaid: false
+targetAudience: "Professionnels"
+domain: "Général"
+tags: ["article"]
 pillColor: "blue"
-skills: ""
-relatedArticles: ""
+skills: ["Compétences"]
+relatedArticles: []
+publishDate: "2024-01-01"
 ---
+
+
+
 
 // ... existing code ...

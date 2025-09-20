@@ -1,0 +1,92 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Test des Styles Unifiés" description="Page de test pour vérifier le système de design unifié">
+	<div class="content-container py-12">
+		<header class="content-header">
+			<h1 class="content-typography h1">Test des Styles Unifiés</h1>
+			<p class="content-typography text-center text-lg text-[#111827] dark:text-gray-300">
+				Cette page teste tous les composants du système de design unifié
+			</p>
+		</header>
+
+		<main class="content-main">
+			<div class="content-typography">
+				<h2>Test de la hiérarchie des titres</h2>
+				<p>Ce paragraphe teste l'espacement et la typographie unifiés. Il devrait avoir un espacement cohérent avec les autres éléments.</p>
+				
+				<h3>Test du niveau 3</h3>
+				<p>Un autre paragraphe pour tester la continuité des styles.</p>
+				
+				<h4>Test du niveau 4</h4>
+				<p>Continuons avec un autre niveau de titre.</p>
+
+				<h2>Test des listes</h2>
+				<ul>
+					<li>Premier élément de liste</li>
+					<li>Deuxième élément avec du texte plus long pour tester le wrapping</li>
+					<li>Troisième élément</li>
+				</ul>
+
+				<ol>
+					<li>Premier élément numéroté</li>
+					<li>Deuxième élément numéroté</li>
+					<li>Troisième élément numéroté</li>
+				</ol>
+
+				<h2>Test des citations</h2>
+				<blockquote>
+					Ceci est une citation de test pour vérifier que les styles des blockquotes sont correctement appliqués.
+				</blockquote>
+
+				<h2>Test du code</h2>
+				<p>Voici du code inline : <code>const example = "test";</code></p>
+				
+				<pre><code>// Bloc de code
+function testStyles() {
+  console.log("Les styles fonctionnent !");
+  return true;
+}</code></pre>
+
+				<h2>Test des liens</h2>
+				<p>Voici un <a href="#">lien de test</a> pour vérifier les styles des liens.</p>
+
+				<h2>Test des tableaux</h2>
+				<table>
+					<thead>
+						<tr>
+							<th>Colonne 1</th>
+							<th>Colonne 2</th>
+							<th>Colonne 3</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Donnée 1</td>
+							<td>Donnée 2</td>
+							<td>Donnée 3</td>
+						</tr>
+						<tr>
+							<td>Donnée 4</td>
+							<td>Donnée 5</td>
+							<td>Donnée 6</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<h2>Test des composants</h2>
+				<div class="content-card">
+					<h3>Contenu dans une carte</h3>
+					<p>Cette carte utilise la classe <code>.content-card</code> pour un style uniforme.</p>
+				</div>
+
+				<div class="content-section">
+					<h3>Section de contenu</h3>
+					<p>Cette section utilise la classe <code>.content-section</code>.</p>
+				</div>
+			</div>
+		</main>
+	</div>
+</BaseLayout>
+

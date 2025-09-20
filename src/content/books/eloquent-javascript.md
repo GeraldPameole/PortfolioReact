@@ -23,7 +23,7 @@ relatedContent:
 
 "Eloquent JavaScript" est une référence incontournable pour quiconque souhaite maîtriser JavaScript en profondeur. Ce livre va bien au-delà d'un simple manuel technique ; il offre une compréhension profonde du langage, de ses subtilités et de sa philosophie. Marijn Haverbeke guide le lecteur à travers un parcours d'apprentissage progressif qui combine théorie et pratique avec élégance.
 
-## Points forts de l'ouvrage :
+## Points forts de l'ouvrage
 
 1. **Approche pédagogique progressive** - Du code le plus simple aux patterns avancés, chaque concept est construit sur les précédents
 2. **Exercices pratiques stimulants** - Des défis de programmation qui renforcent la compréhension et encouragent l'expérimentation

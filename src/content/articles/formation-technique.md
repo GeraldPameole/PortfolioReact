@@ -1,20 +1,23 @@
 ---
 draft: false
-title: "Formation Technique : Guide Stratégique"
-description: "Guide stratégique sur la formation technique : méthodes, outils et bonnes pratiques pour développer les compétences techniques de vos équipes"
-date: "2024-03-15"
+title: "Formation Technique"
+description: "Description de l'article Formation Technique"
 author: "Gérald Pameole"
 type: "article"
 featured: false
 readingTime: 15
-hasMermaid: true
-targetAudience: "Formateurs et Managers"
-domain: "Formation"
-tags: ["formation", "technique", "compétences", "développement"]
-pillColor: "rose"
-skills: ["Formation", "Technique", "Compétences", "Développement"]
-relatedArticles: ""
+hasMermaid: false
+targetAudience: "Professionnels"
+domain: "Général"
+tags: ["article"]
+pillColor: "blue"
+skills: ["Compétences"]
+relatedArticles: []
+publishDate: "2024-01-01"
 ---
+
+
+
 
 # Formation Technique : Guide Stratégique
 

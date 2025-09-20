@@ -1,20 +1,24 @@
 ---
 draft: false
-title: "Gestion de la Rémunération : Guide Complet pour l\\"Équité"
-description: "Découvrez les stratégies et méthodes pour mettre en place une politique de rémunération équitable et motivante. Un guide détaillé sur la structuration, l\\"évaluation et l\\"évolution des rémunérations."
-date: "2024-03-20"
+title: "Gestion Talents Remuneration"
+description: "Description de l'article Gestion Talents Remuneration"
 author: "Gérald Pameole"
 type: "article"
 featured: false
 readingTime: 15
-hasMermaid: true
-targetAudience: "Professionnels RH"
-domain: "Ressources Humaines"
-tags: ""
-pillColor: "purple"
-skills: ""
-relatedArticles: ""
+hasMermaid: false
+targetAudience: "Professionnels"
+domain: "Général"
+tags: ["article"]
+pillColor: "blue"
+skills: ["Compétences"]
+relatedArticles: []
+publishDate: "2024-01-01"
 ---
+
+
+
+
 
 # Rémunération des Talents : Guide Complet pour la Motivation
 

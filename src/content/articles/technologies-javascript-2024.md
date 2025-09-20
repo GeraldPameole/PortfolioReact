@@ -1,10 +1,23 @@
 ---
-title: "Technologies JavaScript 2024 : Le Guide Complet des Tendances"
-description: "Analyse approfondie des technologies JavaScript essentielles en 2024 : frameworks, outils, bonnes pratiques et tendances émergentes pour rester à la pointe du développement web."
-author: "Gérald Paméole"
+draft: false
+title: "Technologies Javascript 2024"
+description: "Description de l'article Technologies Javascript 2024"
+author: "Gérald Pameole"
 type: "article"
-skills: ""
+featured: false
+readingTime: 15
+hasMermaid: false
+targetAudience: "Professionnels"
+domain: "Général"
+tags: ["article"]
+pillColor: "blue"
+skills: ["Compétences"]
+relatedArticles: []
+publishDate: "2024-01-01"
 ---
+
+
+
 
 # Technologies JavaScript 2024 : L'État de l'Art
 

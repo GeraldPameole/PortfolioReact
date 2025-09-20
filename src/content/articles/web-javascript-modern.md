@@ -1,19 +1,22 @@
 ---
 draft: false
-title: "JavaScript Moderne : Guide Complet des Nouvelles Fonctionnalités"
-description: "Découvrez les dernières fonctionnalités de JavaScript et comment les utiliser efficacement. Un guide détaillé sur ES2024 et les bonnes pratiques de développement."
-date: "2024-03-20"
+title: "Web Javascript Modern"
+description: "Description de l'article Web Javascript Modern"
 author: "Gérald Pameole"
 type: "article"
 featured: false
-readingTime: 20
-hasMermaid: true
-targetAudience: "Développeurs JavaScript"
-domain: "Développement Web"
-tags: ["développement web", "javascript", "ES2024", "programmation", "web"]
-pillColor: "green"
-skills: ""
-relatedArticles: ""
+readingTime: 15
+hasMermaid: false
+targetAudience: "Professionnels"
+domain: "Général"
+tags: ["article"]
+pillColor: "blue"
+skills: ["Compétences"]
+relatedArticles: []
+publishDate: "2024-01-01"
 ---
+
+
+
 
 // ... existing code ...
