@@ -13,9 +13,71 @@ interface Props {
 const { article, variant = 'full' } = Astro.props;
 const readingTime = calculateReadingTime(article.body);
 
+// Fonction pour déterminer le domaine d'un article
+function determinerDomaine(article: Article): string {
+  const titre = article.data.title?.toLowerCase() || '';
+  const slug = article.slug.toLowerCase();
+  
+  if (titre.includes('formation') || slug.includes('formation') || titre.includes('apprentissage') || titre.includes('compétences')) {
+    return 'formation';
+  }
+  if (titre.includes('gestion') && (titre.includes('projet') || slug.includes('projet'))) {
+    return 'gestion-projet';
+  }
+  if (titre.includes('web') || titre.includes('javascript') || titre.includes('react') || titre.includes('développement')) {
+    return 'web-developpement';
+  }
+  if (titre.includes('qualité') || titre.includes('iso') || titre.includes('audit') || titre.includes('processus')) {
+    return 'gestion-qualite';
+  }
+  if (titre.includes('commercial') || titre.includes('marketing') || titre.includes('vente') || titre.includes('client')) {
+    return 'developpement-commercial';
+  }
+  
+  return 'formation'; // Domaine par défaut
+}
+
+// Configuration des domaines
+const domainesConfig = {
+  'formation': {
+    nom: 'Formation & Pédagogie',
+    couleur: 'red',
+    icone: 'fas fa-graduation-cap',
+    classes: 'bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-300'
+  },
+  'gestion-projet': {
+    nom: 'Gestion de Projet',
+    couleur: 'blue',
+    icone: 'fas fa-project-diagram',
+    classes: 'bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-300'
+  },
+  'web-developpement': {
+    nom: 'Développement Web',
+    couleur: 'green',
+    icone: 'fas fa-code',
+    classes: 'bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-300'
+  },
+  'gestion-qualite': {
+    nom: 'Gestion de la Qualité',
+    couleur: 'purple',
+    icone: 'fas fa-award',
+    classes: 'bg-purple-100 text-purple-800 dark:bg-purple-900/30 dark:text-purple-300'
+  },
+  'developpement-commercial': {
+    nom: 'Développement Commercial',
+    couleur: 'orange',
+    icone: 'fas fa-chart-line',
+    classes: 'bg-orange-100 text-orange-800 dark:bg-orange-900/30 dark:text-orange-300'
+  }
+};
+
+// Déterminer le domaine de l'article
+const domaine = determinerDomaine(article);
+const domaineConfig = domainesConfig[domaine as keyof typeof domainesConfig] || domainesConfig['formation'];
+
 // Sécurisation de l'accès aux tags
 const firstTag = article.data.tags && article.data.tags.length > 0 ? article.data.tags[0] : null;
-const mainTheme = firstTag ? mapToStandardTheme(firstTag) : 'autre';
+const mainTheme = firstTag ? mapToStandardTheme(firstTag) : 'developpement';
 const themeConfig = standardThemes[mainTheme];
 
 // Sélectionner les tags supplémentaires (après le premier qui définit le thème principal)
@@ -75,6 +137,14 @@ const imageUrl = getValidImageUrl(article.data.image);
 			</div>
 		</div>
 		<div class="p-5">
+			<!-- Pill de domaine -->
+			<div class="mb-3">
+				<span class={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium ${domaineConfig.classes}`}>
+					<i class={`${domaineConfig.icone} mr-1`}></i>
+					{domaineConfig.nom}
+				</span>
+			</div>
+			
 			<h3 class="text-lg font-bold mb-3 text-gray-800 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors line-clamp-2">
 				{article.data.title}
 			</h3>

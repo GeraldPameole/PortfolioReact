@@ -15,8 +15,66 @@ const articles = await getCollection('articles');
 // Tri des articles par date de publication (du plus récent au plus ancien)
 const sortedArticles = articles.sort((a, b) => new Date(b.data.publishDate).getTime() - new Date(a.data.publishDate).getTime());
 
+// Définition des 5 domaines principaux avec leurs couleurs
+const domainesPrincipaux = {
+  'formation': {
+    nom: 'Formation & Pédagogie',
+    couleur: 'red',
+    icone: 'fas fa-graduation-cap',
+    description: 'Articles sur la formation, le développement des compétences et l\'apprentissage continu'
+  },
+  'gestion-projet': {
+    nom: 'Gestion de Projet',
+    couleur: 'blue',
+    icone: 'fas fa-project-diagram',
+    description: 'Méthodologies agiles, leadership d\'équipe et gestion de projets complexes'
+  },
+  'web-developpement': {
+    nom: 'Développement Web',
+    couleur: 'green',
+    icone: 'fas fa-code',
+    description: 'Technologies web modernes, frameworks JavaScript et développement full-stack'
+  },
+  'gestion-qualite': {
+    nom: 'Gestion de la Qualité',
+    couleur: 'purple',
+    icone: 'fas fa-award',
+    description: 'Certifications ISO, Six Sigma et amélioration continue des processus'
+  },
+  'developpement-commercial': {
+    nom: 'Développement Commercial',
+    couleur: 'orange',
+    icone: 'fas fa-chart-line',
+    description: 'Stratégies commerciales, marketing digital et techniques de vente'
+  }
+};
+
 // Définition des 5 thèmes principaux
 const mainThemes: ThemeKey[] = ['developpement', 'technologie', 'carriere', 'formation', 'gestion'];
+
+// Fonction pour déterminer le domaine d'un article
+function determinerDomaine(article: ArticleEntry): string {
+  const titre = article.data.title?.toLowerCase() || '';
+  const slug = article.slug.toLowerCase();
+  
+  if (titre.includes('formation') || slug.includes('formation') || titre.includes('apprentissage') || titre.includes('compétences')) {
+    return 'formation';
+  }
+  if (titre.includes('gestion') && (titre.includes('projet') || slug.includes('projet'))) {
+    return 'gestion-projet';
+  }
+  if (titre.includes('web') || titre.includes('javascript') || titre.includes('react') || titre.includes('développement')) {
+    return 'web-developpement';
+  }
+  if (titre.includes('qualité') || titre.includes('iso') || titre.includes('audit') || titre.includes('processus')) {
+    return 'gestion-qualite';
+  }
+  if (titre.includes('commercial') || titre.includes('marketing') || titre.includes('vente') || titre.includes('client')) {
+    return 'developpement-commercial';
+  }
+  
+  return 'formation'; // Domaine par défaut
+}
 
 // Regroupement des articles par thème
 type ArticleEntry = CollectionEntry<'articles'>;

@@ -1,0 +1,151 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { getCollection } from 'astro:content';
+import EnhancedArticleCard from './EnhancedArticleCard.astro';
+
+interface Props {
+  currentArticle: CollectionEntry<"articles">;
+  limit?: number;
+}
+
+const { currentArticle, limit = 4 } = Astro.props;
+
+// Récupérer tous les articles
+const allArticles = await getCollection('articles');
+
+// Fonction pour déterminer le domaine d'un article
+function determinerDomaine(article: CollectionEntry<"articles">): string {
+  const titre = article.data.title?.toLowerCase() || '';
+  const slug = article.slug.toLowerCase();
+  
+  if (titre.includes('formation') || slug.includes('formation') || titre.includes('apprentissage') || titre.includes('compétences')) {
+    return 'formation';
+  }
+  if (titre.includes('gestion') && (titre.includes('projet') || slug.includes('projet'))) {
+    return 'gestion-projet';
+  }
+  if (titre.includes('web') || titre.includes('javascript') || titre.includes('react') || titre.includes('développement')) {
+    return 'web-developpement';
+  }
+  if (titre.includes('qualité') || titre.includes('iso') || titre.includes('audit') || titre.includes('processus')) {
+    return 'gestion-qualite';
+  }
+  if (titre.includes('commercial') || titre.includes('marketing') || titre.includes('vente') || titre.includes('client')) {
+    return 'developpement-commercial';
+  }
+  
+  return 'formation';
+}
+
+// Fonction pour calculer la similarité entre articles
+function calculateSimilarity(article1: CollectionEntry<"articles">, article2: CollectionEntry<"articles">): number {
+  let score = 0;
+  
+  // Même domaine = score élevé
+  if (determinerDomaine(article1) === determinerDomaine(article2)) {
+    score += 50;
+  }
+  
+  // Mots-clés communs
+  const keywords1 = (article1.data as any).keywords || [];
+  const keywords2 = (article2.data as any).keywords || [];
+  const commonKeywords = keywords1.filter((k: string) => keywords2.includes(k));
+  score += commonKeywords.length * 10;
+  
+  // Tags communs
+  const tags1 = article1.data.tags || [];
+  const tags2 = article2.data.tags || [];
+  const commonTags = tags1.filter((t: string) => tags2.includes(t));
+  score += commonTags.length * 5;
+  
+  // Mots communs dans le titre
+  const title1 = article1.data.title?.toLowerCase().split(' ') || [];
+  const title2 = article2.data.title?.toLowerCase().split(' ') || [];
+  const commonWords = title1.filter((w: string) => title2.includes(w) && w.length > 3);
+  score += commonWords.length * 3;
+  
+  return score;
+}
+
+// Trouver les articles connexes
+const currentDomain = determinerDomaine(currentArticle);
+const relatedArticles = allArticles
+  .filter(article => article.slug !== currentArticle.slug)
+  .map(article => ({
+    article,
+    similarity: calculateSimilarity(currentArticle, article)
+  }))
+  .sort((a, b) => b.similarity - a.similarity)
+  .slice(0, limit)
+  .map(item => item.article);
+
+// Configuration des domaines
+const domainesConfig = {
+  'formation': {
+    nom: 'Formation & Pédagogie',
+    couleur: 'red',
+    icone: 'fas fa-graduation-cap',
+    classes: 'bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-300'
+  },
+  'gestion-projet': {
+    nom: 'Gestion de Projet',
+    couleur: 'blue',
+    icone: 'fas fa-project-diagram',
+    classes: 'bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-300'
+  },
+  'web-developpement': {
+    nom: 'Développement Web',
+    couleur: 'green',
+    icone: 'fas fa-code',
+    classes: 'bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-300'
+  },
+  'gestion-qualite': {
+    nom: 'Gestion de la Qualité',
+    couleur: 'purple',
+    icone: 'fas fa-award',
+    classes: 'bg-purple-100 text-purple-800 dark:bg-purple-900/30 dark:text-purple-300'
+  },
+  'developpement-commercial': {
+    nom: 'Développement Commercial',
+    couleur: 'orange',
+    icone: 'fas fa-chart-line',
+    classes: 'bg-orange-100 text-orange-800 dark:bg-orange-900/30 dark:text-orange-300'
+  }
+};
+
+const currentDomainConfig = domainesConfig[currentDomain as keyof typeof domainesConfig] || domainesConfig['formation'];
+---
+
+{relatedArticles.length > 0 && (
+  <section class="mt-12 pt-8 border-t border-gray-200 dark:border-gray-700">
+    <div class="flex items-center gap-3 mb-6">
+      <div class={`w-10 h-10 rounded-lg bg-gradient-to-br from-${currentDomainConfig.couleur}-500 to-${currentDomainConfig.couleur}-600 flex items-center justify-center`}>
+        <i class={`${currentDomainConfig.icone} text-white text-lg`}></i>
+      </div>
+      <div>
+        <h3 class="text-xl font-bold text-gray-800 dark:text-white">
+          Articles Connexes
+        </h3>
+        <p class="text-sm text-gray-600 dark:text-gray-400">
+          Découvrez d'autres articles sur {currentDomainConfig.nom.toLowerCase()}
+        </p>
+      </div>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      {relatedArticles.map((article) => (
+        <EnhancedArticleCard article={article} variant="related" />
+      ))}
+    </div>
+    
+    <!-- Bouton pour voir plus d'articles -->
+    <div class="mt-6 text-center">
+      <a href="/blog" 
+         class="inline-flex items-center px-6 py-3 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors duration-300">
+        <i class="fas fa-th-large mr-2"></i>
+        Voir tous les articles
+        <i class="fas fa-arrow-right ml-2"></i>
+      </a>
+    </div>
+  </section>
+)}

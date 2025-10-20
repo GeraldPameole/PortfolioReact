@@ -5,7 +5,8 @@ export type ThemeKey =
   | "carriere"
   | "formation"
   | "gestion"
-  | "qualite";
+  | "qualite"
+  | "autre";
 
 export interface ThemeConfig {
   label: string;

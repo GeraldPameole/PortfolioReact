@@ -22,9 +22,9 @@ tags:
   - JavaScript
   - React
   - Node.js
-  - Frontend
-  - Backend
-  - Full Stack
+    - Frontend
+    - Backend
+    - Full Stack
 ---
 
 # Développeur React JS

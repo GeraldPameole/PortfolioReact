@@ -6,7 +6,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 export async function getStaticPaths() {
 	const articles = await getCollection('articles');
 	
-	return articles.map((article) => ({
+	return articles.map((article: any) => ({
 		params: { slug: article.slug },
 		props: { article }
 	}));
@@ -14,6 +14,47 @@ export async function getStaticPaths() {
 
 const { article } = Astro.props;
 const { Content } = await article.render();
+
+// Récupérer tous les articles pour les articles connexes
+const allArticles = await getCollection('articles');
+
+// Fonction pour calculer la similarité entre articles
+function calculateSimilarity(article1: any, article2: any): number {
+  let score = 0;
+  
+  // Similarité des tags
+  if (article1.data.tags && article2.data.tags) {
+    const commonTags = article1.data.tags.filter((tag: string) => 
+      article2.data.tags.includes(tag)
+    ).length;
+    score += commonTags * 2;
+  }
+  
+  // Similarité des mots-clés
+  if (article1.data.keywords && article2.data.keywords) {
+    const commonKeywords = article1.data.keywords.filter((keyword: string) => 
+      article2.data.keywords.includes(keyword)
+    ).length;
+    score += commonKeywords * 3;
+  }
+  
+  // Similarité du thème
+  if (article1.data.theme === article2.data.theme) {
+    score += 5;
+  }
+  
+  return score;
+}
+
+// Trouver les articles connexes
+const relatedArticles = allArticles
+  .filter(a => a.slug !== article.slug)
+  .map(a => ({
+    ...a,
+    similarity: calculateSimilarity(article, a)
+  }))
+  .sort((a, b) => b.similarity - a.similarity)
+  .slice(0, 3);
 
 function formatDate(date: string | Date) {
 	const dateObj = typeof date === 'string' ? new Date(date) : date;
@@ -53,20 +94,53 @@ const jsonLd = {
   "description": article.data.description,
   "image": article.data.image,
   "datePublished": article.data.publishDate.toString(),
-  "dateModified": article.data.publishDate.toString(), // Utiliser publishDate si updatedDate n'existe pas
+  "dateModified": article.data.publishDate.toString(),
   "author": {
     "@type": "Person",
     "name": article.data.author || "Gérald Paméole"
-  }
+  },
+  "keywords": (article.data as any).keywords ? (article.data as any).keywords.join(", ") : "",
+  "about": (article.data as any).keywords ? (article.data as any).keywords.map((keyword: string) => ({
+    "@type": "Thing",
+    "name": keyword.replace("#", ""),
+    "identifier": keyword
+  })) : [],
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": Astro.url.toString()
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Gérald Paméole",
+    "url": "https://geraldpameole.com"
+  },
+  "articleSection": article.data.tags ? article.data.tags.join(", ") : "",
+  "wordCount": article.body.split(/\s+/).length,
+  "timeRequired": `PT${readingTime}M`
 };
 
-// Générer les mots-clés à partir des tags
-const keywords = [
-  article.data.title,
-  article.data.tags?.join(", ") || "",
+// Générer les mots-clés SEO optimisés
+const seoKeywords = [
+  ...((article.data as any).keywords || []).map((k: string) => k.replace("#", "")),
+  ...(article.data.tags || []),
   article.data.theme ? themeLabels[article.data.theme] || article.data.theme : "",
   "article",
-  "blog"
+  "blog",
+  "gerald pameole",
+  "expertise",
+  "conseil"
+].filter(Boolean).join(", ");
+
+// Mots-clés pour les meta tags
+const metaKeywords = [
+  article.data.title,
+  ...((article.data as any).keywords || []).map((k: string) => k.replace("#", "")),
+  ...(article.data.tags || []),
+  "formation",
+  "gestion projet",
+  "développement web",
+  "qualité",
+  "commercial"
 ].filter(Boolean).join(", ");
 
 // Convertir les URL pour les méta tags
@@ -77,7 +151,7 @@ const currentUrl = Astro.url.toString();
 	title={article.data.title}
 	description={article.data.description}
   image={article.data.image}
-  keywords={keywords}
+  keywords={metaKeywords}
   type="article"
   fullWidth={true}
 >
@@ -110,16 +184,42 @@ const currentUrl = Astro.url.toString();
         <span>{readingTime} min de lecture</span>
 			</div>
       
+      <!-- Mots-clés SEO avec hashtags -->
+      {(article.data as any).keywords && (article.data as any).keywords.length > 0 && (
+        <div class="article-seo-keywords">
+          <div class="flex items-center gap-2 mb-3">
+            <i class="fas fa-hashtag text-blue-500"></i>
+            <span class="text-sm font-medium text-gray-600 dark:text-gray-400">Mots-clés SEO :</span>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            {(article.data as any).keywords.map((keyword: string, index: number) => (
+              <span class="seo-keyword px-3 py-2 text-sm font-medium bg-gradient-to-r from-blue-100 to-indigo-100 text-blue-700 dark:from-blue-900/30 dark:to-indigo-900/30 dark:text-blue-300 rounded-full hover:from-blue-200 hover:to-indigo-200 dark:hover:from-blue-800/50 dark:hover:to-indigo-800/50 transition-all duration-300 cursor-pointer hover:scale-105 hover:shadow-md" 
+                data-keyword={keyword}
+                title={`Rechercher d'autres articles avec le mot-clé ${keyword}`}>
+                {keyword}
+              </span>
+            ))}
+          </div>
+        </div>
+      )}
+      
+      <!-- Tags thématiques -->
       {article.data.tags && article.data.tags.length > 0 && (
         <div class="article-tags">
+          <div class="flex items-center gap-2 mb-3">
+            <i class="fas fa-tags text-purple-500"></i>
+            <span class="text-sm font-medium text-gray-600 dark:text-gray-400">Thématiques :</span>
+          </div>
+          <div class="flex flex-wrap gap-2">
           {article.data.tags.map((tag: string) => (
             <a 
               href={`/tags/${tag}`} 
-              class="tag-link"
+                class="tag-link px-3 py-1 bg-purple-100 text-purple-800 dark:bg-purple-900/30 dark:text-purple-300 rounded-full text-sm font-medium hover:bg-purple-200 dark:hover:bg-purple-800/50 transition-colors"
             >
               #{tag}
             </a>
           ))}
+          </div>
         </div>
       )}
       
@@ -138,6 +238,78 @@ const currentUrl = Astro.url.toString();
 		<div class="article-content-typography">
 			<Content />
 		</div>
+    
+    <!-- Section Articles connexes -->
+    {relatedArticles.length > 0 && (
+      <section class="mt-16 py-12 bg-gradient-to-br from-gray-50 to-blue-50 dark:from-gray-800 dark:to-gray-900 rounded-2xl">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-[#111827] dark:text-white mb-4">
+            Articles connexes
+          </h2>
+          <p class="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+            Continuez votre lecture avec ces articles qui pourraient vous intéresser
+          </p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {relatedArticles.map((relatedArticle, index) => (
+            <article class="related-article-card bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 group" style={`animation-delay: ${index * 0.1}s`}>
+              <!-- Image miniature -->
+              <div class="relative overflow-hidden rounded-lg h-32 mb-4 bg-gradient-to-br from-indigo-500 to-purple-600">
+                {relatedArticle.data.image ? (
+                  <img src={relatedArticle.data.image} alt={relatedArticle.data.title} class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                ) : (
+                  <div class="w-full h-full flex items-center justify-center">
+                    <i class="fas fa-newspaper text-3xl text-white/80"></i>
+                  </div>
+                )}
+                <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+              </div>
+              
+              <!-- Contenu -->
+              <h3 class="text-lg font-bold text-[#111827] dark:text-white mb-2 line-clamp-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                <a href={`/articles/${relatedArticle.slug}`} class="hover:underline">
+                  {relatedArticle.data.title}
+                </a>
+              </h3>
+              
+              <p class="text-gray-600 dark:text-gray-300 mb-4 line-clamp-2 text-sm">
+                {relatedArticle.data.description}
+              </p>
+              
+              <!-- Mots-clés connexes -->
+              {relatedArticle.data.keywords && relatedArticle.data.keywords.length > 0 && (
+                <div class="flex flex-wrap gap-1 mb-4">
+                  {relatedArticle.data.keywords.slice(0, 3).map((keyword: string) => (
+                    <span class="px-2 py-1 text-xs font-medium bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300 rounded-full">
+                      {keyword}
+                    </span>
+                  ))}
+                </div>
+              )}
+              
+              <div class="flex items-center justify-between">
+                <span class="text-xs text-gray-500 dark:text-gray-400">
+                  {formatDate(relatedArticle.data.publishDate)}
+                </span>
+                <a href={`/articles/${relatedArticle.slug}`} 
+                   class="inline-flex items-center gap-1 text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 font-medium text-sm transition-all duration-300 hover:gap-2">
+                  Lire
+                  <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                </a>
+              </div>
+            </article>
+          ))}
+        </div>
+        
+        <div class="text-center mt-8">
+          <a href="/blog" class="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-lg hover:from-indigo-700 hover:to-purple-700 font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg">
+            <i class="fas fa-th-large"></i>
+            Voir tous les articles
+          </a>
+        </div>
+      </section>
+    )}
     
     <footer class="mt-12 pt-8 border-t border-gray-200 dark:border-gray-800">
       <div class="flex flex-col md:flex-row justify-between items-start md:items-center">
@@ -269,6 +441,98 @@ const currentUrl = Astro.url.toString();
 		}
 	}
 
+	/* Styles pour les mots-clés SEO */
+	.article-seo-keywords {
+		margin: var(--content-spacing-lg) 0;
+		padding: var(--content-spacing-md);
+		background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+		border-radius: var(--content-border-radius);
+		border-left: 4px solid var(--color-primary);
+	}
+	
+	.seo-keyword {
+		display: inline-block;
+		transition: all 0.3s ease;
+		position: relative;
+		overflow: hidden;
+	}
+	
+	.seo-keyword::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: -100%;
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+		transition: left 0.5s;
+	}
+	
+	.seo-keyword:hover::before {
+		left: 100%;
+	}
+	
+	.seo-keyword:hover {
+		transform: translateY(-2px);
+		box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+	}
+	
+	/* Styles pour les articles connexes */
+	.related-article-card {
+		position: relative;
+		overflow: hidden;
+		transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+		transform-style: preserve-3d;
+	}
+	
+	.related-article-card:hover {
+		transform: translateY(-4px) rotateX(1deg);
+		box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+	}
+	
+	.related-article-card::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: -100%;
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+		transition: left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+		z-index: 10;
+		pointer-events: none;
+	}
+	
+	.related-article-card:hover::before {
+		left: 100%;
+	}
+	
+	/* Animation d'apparition pour les articles connexes */
+	.related-article-card {
+		opacity: 0;
+		transform: translateY(20px);
+		animation: relatedArticleAppear 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+	}
+	
+	@keyframes relatedArticleAppear {
+		0% {
+			opacity: 0;
+			transform: translateY(20px);
+		}
+		100% {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+	
+	/* Mode sombre pour les mots-clés SEO */
+	@media (prefers-color-scheme: dark) {
+		.article-seo-keywords {
+			background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+			border-left-color: var(--color-primary);
+		}
+	}
+
 	/* Responsive */
 	@media (max-width: 768px) {
 		.article-title {
@@ -284,5 +548,78 @@ const currentUrl = Astro.url.toString();
 		.article-meta .mx-2 {
 			display: none;
 		}
+		
+		.seo-keyword {
+			font-size: var(--text-xs);
+			padding: var(--content-spacing-xs) var(--content-spacing-sm);
+		}
 	}
 </style> 
+
+<script is:inline>
+  // Gestion des mots-clés SEO sur les pages d'articles
+  document.addEventListener('DOMContentLoaded', function() {
+    const seoKeywords = document.querySelectorAll('.seo-keyword');
+    
+    seoKeywords.forEach(keyword => {
+      // Animation d'apparition
+      keyword.style.opacity = '0';
+      keyword.style.transform = 'translateY(10px)';
+      
+      setTimeout(() => {
+        keyword.style.transition = 'all 0.3s ease';
+        keyword.style.opacity = '1';
+        keyword.style.transform = 'translateY(0)';
+      }, Math.random() * 500);
+      
+      // Gestion du clic
+      keyword.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        const keywordText = this.getAttribute('data-keyword');
+        
+        // Effet visuel de clic
+        this.style.transform = 'scale(1.1)';
+        this.style.background = 'linear-gradient(45deg, #3b82f6, #1d4ed8)';
+        this.style.color = 'white';
+        
+        setTimeout(() => {
+          this.style.transform = 'scale(1)';
+          this.style.background = '';
+          this.style.color = '';
+        }, 200);
+        
+        // Redirection vers la page blog optimisée avec filtre
+        const cleanKeyword = keywordText.replace('#', '').toLowerCase();
+        const blogUrl = `/blog/${cleanKeyword}`;
+        window.location.href = blogUrl;
+      });
+      
+      // Effet de survol
+      keyword.addEventListener('mouseenter', function() {
+        this.style.transform = 'translateY(-2px) scale(1.05)';
+        this.style.boxShadow = '0 4px 12px rgba(59, 130, 246, 0.3)';
+      });
+      
+      keyword.addEventListener('mouseleave', function() {
+        this.style.transform = 'translateY(0) scale(1)';
+        this.style.boxShadow = '';
+      });
+    });
+    
+    // Gestion des paramètres URL pour le filtrage
+    const urlParams = new URLSearchParams(window.location.search);
+    const keywordParam = urlParams.get('keyword');
+    
+    if (keywordParam) {
+      // Mettre en évidence le mot-clé correspondant
+      seoKeywords.forEach(keyword => {
+        if (keyword.getAttribute('data-keyword') === keywordParam) {
+          keyword.style.background = 'linear-gradient(45deg, #3b82f6, #1d4ed8)';
+          keyword.style.color = 'white';
+          keyword.style.boxShadow = '0 4px 12px rgba(59, 130, 246, 0.4)';
+        }
+      });
+    }
+  });
+</script> 

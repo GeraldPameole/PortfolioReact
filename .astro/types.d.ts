@@ -185,6 +185,13 @@ declare module 'astro:content' {
 
 	type ContentEntryMap = {
 		"articles": {
+"agile-scrum-methodologies.md": {
+	id: "agile-scrum-methodologies.md";
+  slug: "agile-scrum-methodologies";
+  body: string;
+  collection: "articles";
+  data: InferEntrySchema<"articles">
+} & { render(): Render[".md"] };
 "apprentissage-continu-developpement-competences.md": {
 	id: "apprentissage-continu-developpement-competences.md";
   slug: "apprentissage-continu-developpement-competences";
@@ -234,13 +241,6 @@ declare module 'astro:content' {
   collection: "articles";
   data: InferEntrySchema<"articles">
 } & { render(): Render[".md"] };
-"formation-continue.md": {
-	id: "formation-continue.md";
-  slug: "formation-continue";
-  body: string;
-  collection: "articles";
-  data: InferEntrySchema<"articles">
-} & { render(): Render[".md"] };
 "formation-creativite.md": {
 	id: "formation-creativite.md";
   slug: "formation-creativite";
@@ -251,6 +251,13 @@ declare module 'astro:content' {
 "formation-elearning.md": {
 	id: "formation-elearning.md";
   slug: "formation-elearning";
+  body: string;
+  collection: "articles";
+  data: InferEntrySchema<"articles">
+} & { render(): Render[".md"] };
+"formation-equipes-commerciales.md": {
+	id: "formation-equipes-commerciales.md";
+  slug: "formation-equipes-commerciales";
   body: string;
   collection: "articles";
   data: InferEntrySchema<"articles">
@@ -598,6 +605,13 @@ declare module 'astro:content' {
   collection: "articles";
   data: InferEntrySchema<"articles">
 } & { render(): Render[".md"] };
+"leadership-equipes-performance.md": {
+	id: "leadership-equipes-performance.md";
+  slug: "leadership-equipes-performance";
+  body: string;
+  collection: "articles";
+  data: InferEntrySchema<"articles">
+} & { render(): Render[".md"] };
 "management-diversite-inclusion.md": {
 	id: "management-diversite-inclusion.md";
   slug: "management-diversite-inclusion";
@@ -717,9 +731,23 @@ declare module 'astro:content' {
   collection: "articles";
   data: InferEntrySchema<"articles">
 } & { render(): Render[".md"] };
+"react-performance-optimisation.md": {
+	id: "react-performance-optimisation.md";
+  slug: "react-performance-optimisation";
+  body: string;
+  collection: "articles";
+  data: InferEntrySchema<"articles">
+} & { render(): Render[".md"] };
 "reconversion-professionnelle-reussie.md": {
 	id: "reconversion-professionnelle-reussie.md";
   slug: "reconversion-professionnelle-reussie";
+  body: string;
+  collection: "articles";
+  data: InferEntrySchema<"articles">
+} & { render(): Render[".md"] };
+"recrutement-talents-digitaux.md": {
+	id: "recrutement-talents-digitaux.md";
+  slug: "recrutement-talents-digitaux";
   body: string;
   collection: "articles";
   data: InferEntrySchema<"articles">
@@ -783,6 +811,13 @@ declare module 'astro:content' {
 "tendances-developpement-web-2025.md": {
 	id: "tendances-developpement-web-2025.md";
   slug: "tendances-developpement-web-2025";
+  body: string;
+  collection: "articles";
+  data: InferEntrySchema<"articles">
+} & { render(): Render[".md"] };
+"transformation-digitale-telecom.md": {
+	id: "transformation-digitale-telecom.md";
+  slug: "transformation-digitale-telecom";
   body: string;
   collection: "articles";
   data: InferEntrySchema<"articles">
@@ -919,6 +954,13 @@ declare module 'astro:content' {
   collection: "work";
   data: any
 } & { render(): Render[".md"] };
+"plateforme-ecommerce-sfr.md": {
+	id: "plateforme-ecommerce-sfr.md";
+  slug: "plateforme-ecommerce-sfr";
+  body: string;
+  collection: "work";
+  data: any
+} & { render(): Render[".md"] };
 "project-manager.md": {
 	id: "project-manager.md";
   slug: "project-manager";
@@ -936,6 +978,13 @@ declare module 'astro:content' {
 "sales-team-manager.md": {
 	id: "sales-team-manager.md";
   slug: "sales-team-manager";
+  body: string;
+  collection: "work";
+  data: any
+} & { render(): Render[".md"] };
+"transformation-orange-business.md": {
+	id: "transformation-orange-business.md";
+  slug: "transformation-orange-business";
   body: string;
   collection: "work";
   data: any

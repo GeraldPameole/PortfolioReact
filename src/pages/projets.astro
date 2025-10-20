@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { DOMAINS_CONFIG, COLOR_CLASSES, TEXT_COLORS, ICON_COLORS } from '../config/domains';
 
 // Récupération des projets
 const projects = await getCollection('work');
@@ -10,48 +11,13 @@ const sortedProjects = projects.sort((a, b) => {
 	return new Date(b.data.publishDate).getTime() - new Date(a.data.publishDate).getTime();
 });
 
-// Définir les catégories de projets avec les mêmes codes couleurs que les domaines d'expertise
+// Utiliser la configuration centralisée des domaines
 const projectCategories = {
-	'management': {
-		name: 'Gestion de Projet Télécom',
-		icon: 'fas fa-tasks',
-		color: 'blue',
-		colorClass: 'bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-300',
-		description: 'Coordination d\'équipes multidisciplinaires, processus d\'optimisation et infrastructures télécom.',
-		examples: ['Business: The Ultimate Resource', 'Tout comprendre à l\'entreprise']
-	},
-	'developpement-web': {
-		name: 'Développement Web',
-		icon: 'fas fa-laptop-code',
-		color: 'green',
-		colorClass: 'bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-300',
-		description: 'Applications web, frameworks et technologies front/back-end.',
-		examples: ['Design Patterns', 'Patterns of Enterprise Application Architecture']
-	},
-	'business': {
-		name: 'Développement Commercial',
-		icon: 'fas fa-handshake',
-		color: 'orange',
-		colorClass: 'bg-orange-100 text-orange-800 dark:bg-orange-900/30 dark:text-orange-300',
-		description: 'Stratégies commerciales, relation client et techniques de vente.',
-		examples: ['Le Personal MBA', 'Lean Startup', 'Zero to One']
-	},
-	'qualite-process': {
-		name: 'Qualité & Process',
-		icon: 'fas fa-check-circle',
-		color: 'purple',
-		colorClass: 'bg-purple-100 text-purple-800 dark:bg-purple-900/30 dark:text-purple-300',
-		description: 'Clean code, DevOps, tests et intégration continue.',
-		examples: ['The DevOps Handbook', 'Clean Code']
-	},
-	'developpement-personnel': {
-		name: 'Formation & Pédagogie',
-		icon: 'fas fa-graduation-cap',
-		color: 'red',
-		colorClass: 'bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-300',
-		description: 'Accompagnement, programmes de formation et optimisation des performances.',
-		examples: ['Atomic Habits', 'La Bible de l\'efficacité professionnelle']
-	}
+	'management': DOMAINS_CONFIG['gestion-projet'],
+	'developpement-web': DOMAINS_CONFIG['developpement-web'],
+	'business': DOMAINS_CONFIG['developpement-commercial'],
+	'qualite-process': DOMAINS_CONFIG['qualite-process'],
+	'developpement-personnel': DOMAINS_CONFIG['formation']
 };
 
 // Rôles par catégorie (affiché sur la carte)
@@ -109,8 +75,9 @@ sortedProjects.forEach(project => {
 });
 
 // Fonction pour formater la date
-function formatDate(date: Date): string {
-	return date.toLocaleDateString('fr-FR', {
+function formatDate(date: Date | string): string {
+	const dateObj = typeof date === 'string' ? new Date(date) : date;
+	return dateObj.toLocaleDateString('fr-FR', {
 		year: 'numeric',
 		month: 'long',
 		day: 'numeric'
@@ -119,25 +86,25 @@ function formatDate(date: Date): string {
 ---
 
 <BaseLayout
-	title="Projets" 
-	description="Découvrez mes projets en gestion de projet télécom, développement web, qualité et formation. Portfolio de réalisations professionnelles."
+	title="Projets & Réalisations | Gérald Paméole | Chef de Projet Télécom" 
+	description="Portfolio de projets et réalisations dans les télécommunications et le développement web. Découvrez mes interventions en gestion de projet, transformation digitale et développement commercial."
 	customClass="bg-gradient-to-br from-gray-50 to-white dark:from-gray-900 dark:to-gray-800"
 >
 	<!-- En-tête de page -->
 	<section class="py-16 md:py-24 bg-gradient-to-r from-indigo-600/5 to-violet-600/5 w-screen" style="margin-left: calc(50% - 50vw); margin-right: calc(50% - 50vw);">
 		<div class="content-container text-center">
 			<h1 class="text-4xl md:text-5xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-blue-500">
-				Mes Projets
+				Mes Réalisations
 				</h1>
 			<p class="text-xl text-[#111827] dark:text-gray-200 mb-6">
-				Une sélection de mes réalisations en gestion de projet, développement web et optimisation des processus
+				Une sélection de mes interventions en gestion de projet, développement web et optimisation des processus
 			</p>
 			<div class="flex flex-wrap justify-center gap-3 mb-8">
-				<span class="px-4 py-2 rounded-full bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-300">Gestion de Projet</span>
-				<span class="px-4 py-2 rounded-full bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-300">Développement Web</span>
-				<span class="px-4 py-2 rounded-full bg-purple-100 text-purple-800 dark:bg-purple-900/30 dark:text-purple-300">Qualité & Process</span>
-				<span class="px-4 py-2 rounded-full bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-300">Formation</span>
-				<span class="px-4 py-2 rounded-full bg-orange-100 text-orange-800 dark:bg-orange-900/30 dark:text-orange-300">Développement Commercial</span>
+				<span class={`px-4 py-2 rounded-full ${COLOR_CLASSES.blue}`}>Gestion de Projet</span>
+				<span class={`px-4 py-2 rounded-full ${COLOR_CLASSES.green}`}>Développement Web</span>
+				<span class={`px-4 py-2 rounded-full ${COLOR_CLASSES.purple}`}>Qualité & Process</span>
+				<span class={`px-4 py-2 rounded-full ${COLOR_CLASSES.red}`}>Formation</span>
+				<span class={`px-4 py-2 rounded-full ${COLOR_CLASSES.orange}`}>Développement Commercial</span>
 			</div>
 		</div>
 	</section>
@@ -174,23 +141,23 @@ function formatDate(date: Date): string {
 									<div class="flex flex-wrap justify-center gap-2 mb-5">
 										{(groupedProjects[categoryKey][0]?.data.technologies ?? ['Leadership','Organisation','Planification']).slice(0,3).map((pill: string) => (
 											<span class="px-2 py-1 text-xs font-medium bg-gray-200 text-gray-800 dark:bg-gray-600 dark:text-gray-200 rounded-full">{pill}</span>
-										))}
-									</div>
+				))}
+			</div>
 									{groupedProjects[categoryKey].length > 0 ? (
-										<a href={`/projets/${groupedProjects[categoryKey][0].slug}`} class="inline-flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline font-medium text-sm">
+										<a href={`/projets/${groupedProjects[categoryKey][0].slug}`} class="inline-flex items-center gap-2 ${TEXT_COLORS[config.color as keyof typeof TEXT_COLORS] || TEXT_COLORS.blue} hover:underline font-medium text-sm">
 											Voir le projet <i class="fas fa-arrow-right"></i>
 										</a>
 									) : (
-										<a href="#" class="inline-flex items-center gap-2 text-blue-600 dark:text-blue-400 opacity-70 cursor-not-allowed text-sm">
+										<a href="#" class="inline-flex items-center gap-2 ${TEXT_COLORS[config.color as keyof typeof TEXT_COLORS] || TEXT_COLORS.blue} opacity-70 cursor-not-allowed text-sm">
 											Bientôt disponible
 										</a>
 									)}
 								</div>
 							</div>
 						</article>
-					))}
-				</div>
+				))}
 			</div>
+		</div>
 			
 			<!-- Ligne 2: 2 cartes se répartissant l'espace restant -->
 			<div class="w-4/5 mx-auto">
@@ -215,19 +182,19 @@ function formatDate(date: Date): string {
 										))}
 									</div>
 									{groupedProjects[categoryKey].length > 0 ? (
-										<a href={`/projets/${groupedProjects[categoryKey][0].slug}`} class="inline-flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline font-medium text-sm">
+										<a href={`/projets/${groupedProjects[categoryKey][0].slug}`} class="inline-flex items-center gap-2 ${TEXT_COLORS[config.color as keyof typeof TEXT_COLORS] || TEXT_COLORS.blue} hover:underline font-medium text-sm">
 											Voir le projet <i class="fas fa-arrow-right"></i>
 										</a>
 									) : (
-										<a href="#" class="inline-flex items-center gap-2 text-blue-600 dark:text-blue-400 opacity-70 cursor-not-allowed text-sm">
+										<a href="#" class="inline-flex items-center gap-2 ${TEXT_COLORS[config.color as keyof typeof TEXT_COLORS] || TEXT_COLORS.blue} opacity-70 cursor-not-allowed text-sm">
 											Bientôt disponible
 										</a>
-									)}
-								</div>
+												)}
+											</div>
 							</div>
 						</article>
 					))}
-				</div>
+					</div>
 			</div>
 		</div>
 	</main>
@@ -273,6 +240,79 @@ function formatDate(date: Date): string {
 		overflow: hidden;
 	}
 	
+	/* Animations CSS avancées */
+	@keyframes fadeInUp {
+		from {
+			opacity: 0;
+			transform: translateY(30px);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+
+	@keyframes float {
+		0%, 100% {
+			transform: translateY(0px);
+		}
+		50% {
+			transform: translateY(-20px);
+		}
+	}
+
+	@keyframes pulse-glow {
+		0%, 100% {
+			box-shadow: 0 0 5px rgba(99, 102, 241, 0.3);
+		}
+		50% {
+			box-shadow: 0 0 20px rgba(99, 102, 241, 0.6);
+		}
+	}
+
+	.animate-fade-in-up {
+		animation: fadeInUp 0.8s ease-out forwards;
+	}
+
+	.animate-float {
+		animation: float 3s ease-in-out infinite;
+	}
+
+	.animate-pulse-glow {
+		animation: pulse-glow 2s ease-in-out infinite;
+	}
+
+	/* Effets de hover améliorés */
+	.hover-lift {
+		transition: transform 0.3s ease, box-shadow 0.3s ease;
+	}
+
+	.hover-lift:hover {
+		transform: translateY(-5px);
+		box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+	}
+
+	/* Effet de brillance sur les cartes */
+	.card-shine {
+		position: relative;
+		overflow: hidden;
+	}
+
+	.card-shine::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: -100%;
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+		transition: left 0.5s;
+	}
+
+	.card-shine:hover::before {
+		left: 100%;
+	}
+
 	/* Responsive */
 	@media (max-width: 768px) {
 		.content-container {
@@ -283,4 +323,100 @@ function formatDate(date: Date): string {
 			padding: 1.5rem;
 		}
 	}
-</style> 
+</style>
+
+<!-- Script pour les animations et interactions -->
+<script defer is:inline>
+	// Ajout de Font Awesome
+	if (!document.querySelector('#font-awesome')) {
+		const link = document.createElement('link');
+		link.id = 'font-awesome';
+		link.rel = 'stylesheet';
+		link.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css';
+		document.head.appendChild(link);
+	}
+	
+  // Animation pour les éléments au scroll
+  document.addEventListener('DOMContentLoaded', () => {
+		const observer = new IntersectionObserver((entries) => {
+			entries.forEach(entry => {
+				if (entry.isIntersecting) {
+					entry.target.classList.add('animate-fade-in');
+					observer.unobserve(entry.target);
+				}
+			});
+		}, { threshold: 0.1 });
+		
+    document.querySelectorAll('section').forEach(section => {
+			observer.observe(section);
+		});
+
+    // Effet de parallaxe pour les éléments flottants
+    window.addEventListener('scroll', () => {
+      const scrolled = window.pageYOffset;
+      const parallaxElements = document.querySelectorAll('.animate-float');
+      
+      parallaxElements.forEach((element, index) => {
+        const speed = 0.5 + (index * 0.1);
+        element.style.transform = `translateY(${scrolled * speed}px)`;
+      });
+    });
+
+    // Effet de brillance sur les cartes au survol
+    document.querySelectorAll('.card-shine').forEach(card => {
+      card.addEventListener('mouseenter', () => {
+        card.style.animation = 'pulse-glow 0.6s ease-in-out';
+      });
+      
+      card.addEventListener('mouseleave', () => {
+        card.style.animation = '';
+      });
+    });
+
+    // Animation des icônes au survol
+    document.querySelectorAll('.group').forEach(group => {
+      group.addEventListener('mouseenter', () => {
+        const icon = group.querySelector('i');
+        if (icon) {
+          icon.style.transform = 'scale(1.2) rotate(5deg)';
+          icon.style.transition = 'transform 0.3s ease';
+        }
+      });
+      
+      group.addEventListener('mouseleave', () => {
+        const icon = group.querySelector('i');
+        if (icon) {
+          icon.style.transform = 'scale(1) rotate(0deg)';
+        }
+      });
+    });
+
+    // Effet de particules flottantes
+    function createParticle() {
+      const particle = document.createElement('div');
+      particle.className = 'particle';
+      particle.style.cssText = `
+        position: fixed;
+        width: 4px;
+        height: 4px;
+        background: linear-gradient(45deg, #3b82f6, #8b5cf6);
+        border-radius: 50%;
+        pointer-events: none;
+        z-index: 1;
+        animation: float 6s ease-in-out infinite;
+      `;
+      
+      particle.style.left = Math.random() * window.innerWidth + 'px';
+      particle.style.top = window.innerHeight + 'px';
+      
+      document.body.appendChild(particle);
+      
+      setTimeout(() => {
+        particle.remove();
+      }, 6000);
+    }
+
+    // Créer des particules périodiquement
+    setInterval(createParticle, 3000);
+  });
+</script> 

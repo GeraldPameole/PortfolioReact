@@ -1,5 +1,6 @@
 ---
 import { getCollection } from 'astro:content';
+import { COLOR_CLASSES, TEXT_COLORS, ICON_COLORS } from '../config/domains';
 import BaseLayout from '../layouts/BaseLayout.astro';
 
 // Récupération et tri des articles
@@ -19,8 +20,9 @@ const totalArticles = articles.length;
 const totalBooks = books.length;
 
 // Formater la date
-function formatDate(date: string): string {
-  return new Date(date).toLocaleDateString('fr-FR', {
+function formatDate(date: Date | string): string {
+  const dateObj = typeof date === 'string' ? new Date(date) : date;
+  return dateObj.toLocaleDateString('fr-FR', {
     year: 'numeric',
     month: 'long',
     day: 'numeric'
@@ -88,8 +90,8 @@ const expertiseDomains = [
 ---
 
 <BaseLayout
-  title="À Propos de Moi"
-  description="Découvrez mon parcours, mes compétences et ma vision en tant que chef de projet télécom et développeur web"
+  title="À Propos | Gérald Paméole | Consultant Transformation Digitale"
+  description="Découvrez mon parcours, mes compétences et ma vision en tant que consultant transformation digitale et chef de projet télécom"
   customClass="bg-gradient-to-br from-gray-50 to-white dark:from-gray-900 dark:to-gray-800"
   fullWidth={true}
 >
@@ -104,15 +106,15 @@ const expertiseDomains = [
           Chef de projet télécom & Développeur Web avec plus de 15 ans d'expérience
         </p>
         <div class="flex flex-wrap justify-center gap-3 mb-8">
-          <span class="px-4 py-2 rounded-full bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-300">Gestion de Projet</span>
-          <span class="px-4 py-2 rounded-full bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-300">Développement Web</span>
-          <span class="px-4 py-2 rounded-full bg-purple-100 text-purple-800 dark:bg-purple-900/30 dark:text-purple-300">Qualité & Process</span>
-          <span class="px-4 py-2 rounded-full bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-300">Formation</span>
-          <span class="px-4 py-2 rounded-full bg-orange-100 text-orange-800 dark:bg-orange-900/30 dark:text-orange-300">Développement Commercial</span>
+          <span class={`px-4 py-2 rounded-full ${COLOR_CLASSES.blue}`}>Gestion de Projet</span>
+          <span class={`px-4 py-2 rounded-full ${COLOR_CLASSES.green}`}>Développement Web</span>
+          <span class={`px-4 py-2 rounded-full ${COLOR_CLASSES.purple}`}>Qualité & Process</span>
+          <span class={`px-4 py-2 rounded-full ${COLOR_CLASSES.red}`}>Formation</span>
+          <span class={`px-4 py-2 rounded-full ${COLOR_CLASSES.orange}`}>Développement Commercial</span>
         </div>
       </div>
     </section>
-
+    
     <!-- Section de présentation -->
     <section class="bg-white dark:bg-gray-800 rounded-xl shadow-lg mb-16">
       <div class="content-container p-8">
@@ -131,9 +133,9 @@ const expertiseDomains = [
             </p>
             <p class="text-lg text-[#111827] dark:text-gray-300">
               Je m'engage à créer des solutions durables qui transforment les défis en opportunités de croissance.
-            </p>
-          </div>
-          
+              </p>
+            </div>
+            
           <div class="text-center">
             <div class="w-64 h-64 mx-auto mb-6 rounded-full bg-gradient-to-br from-indigo-600 to-violet-600 p-1">
               <div class="w-full h-full rounded-full bg-white dark:bg-gray-800 flex items-center justify-center">
@@ -150,7 +152,7 @@ const expertiseDomains = [
         </div>
       </div>
     </section>
-
+    
     <!-- Valeurs professionnelles -->
     <section class="bg-white dark:bg-gray-800 rounded-xl shadow-lg mb-16">
       <div class="content-container p-8">
@@ -183,7 +185,7 @@ const expertiseDomains = [
         <div class="text-center mb-12">
           <h2 class="text-3xl font-bold text-[#111827] dark:text-white mb-4">
             Expérience Professionnelle
-          </h2>
+        </h2>
           <p class="text-lg text-[#111827] dark:text-gray-300">
             Un parcours riche en défis et en réussites
           </p>
@@ -194,10 +196,10 @@ const expertiseDomains = [
             <div class="flex items-start gap-6 p-6 bg-gray-50 dark:bg-gray-700 rounded-xl">
               <div class="w-12 h-12 bg-indigo-600 text-white rounded-full flex items-center justify-center font-bold text-lg">
                 {index + 1}
-              </div>
+                </div>
               <div class="flex-1">
                 <h3 class="text-xl font-bold text-[#111827] dark:text-white mb-2">{exp.title}</h3>
-                <p class="text-indigo-600 dark:text-indigo-400 font-medium mb-2">{exp.position}</p>
+                <p class="text-blue-600 dark:text-blue-400 font-medium mb-2">{exp.position}</p>
                 <p class="text-gray-600 dark:text-gray-400 mb-2">{exp.period}</p>
                 <p class="text-[#111827] dark:text-gray-300">{exp.description}</p>
               </div>
@@ -206,14 +208,14 @@ const expertiseDomains = [
         </div>
       </div>
     </section>
-
+    
     <!-- Domaines d'expertise -->
     <section class="bg-white dark:bg-gray-800 rounded-xl shadow-lg mb-16">
       <div class="content-container p-8">
         <div class="text-center mb-12">
           <h2 class="text-3xl font-bold text-[#111827] dark:text-white mb-4">
             Domaines d'Expertise
-          </h2>
+        </h2>
           <p class="text-lg text-[#111827] dark:text-gray-300">
             Compétences techniques et managériales
           </p>
@@ -228,14 +230,14 @@ const expertiseDomains = [
         </div>
       </div>
     </section>
-
+    
     <!-- Derniers articles et livres -->
     <section class="bg-white dark:bg-gray-800 rounded-xl shadow-lg mb-16">
       <div class="content-container p-8">
         <div class="text-center mb-12">
           <h2 class="text-3xl font-bold text-[#111827] dark:text-white mb-4">
             Mes Dernières Publications
-          </h2>
+        </h2>
           <p class="text-lg text-[#111827] dark:text-gray-300">
             Articles récents et recommandations de livres
           </p>
@@ -250,7 +252,7 @@ const expertiseDomains = [
                 <div class="p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
                   <h4 class="font-semibold text-[#111827] dark:text-white mb-2">
                     <a href={`/articles/${article.slug}`} class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
-                      {article.data.title}
+                    {article.data.title}
                     </a>
                   </h4>
                   <p class="text-sm text-gray-600 dark:text-gray-400 mb-2">
@@ -287,8 +289,8 @@ const expertiseDomains = [
                     {book.data.description}
                   </p>
                 </div>
-              ))}
-            </div>
+          ))}
+        </div>
             <div class="text-center mt-4">
               <a href="/books" class="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 font-medium">
                 Voir tous les livres →
@@ -298,7 +300,7 @@ const expertiseDomains = [
         </div>
       </div>
     </section>
-
+    
     <!-- Call-to-action -->
     <section class="bg-gradient-to-r from-indigo-600 to-violet-600 rounded-xl text-white text-center p-12">
       <h2 class="text-3xl font-bold mb-4">Envie d'échanger ?</h2>

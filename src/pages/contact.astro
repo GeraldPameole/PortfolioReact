@@ -1,154 +1,337 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 
-const contactInfo = [
-	{
-		name: 'Email',
-		value: 'contact@geraldpameole.com',
-		icon: 'mail'
-	},
-	{
-		name: 'LinkedIn',
-		value: 'linkedin.com/in/geraldpameole',
-		icon: 'linkedin'
-	},
-	{
-		name: 'GitHub',
-		value: 'github.com/geraldpameole',
-		icon: 'github'
-	}
-];
-
-// Métadonnées SEO optimisées
-const pageTitle = "Contact | Gérald Paméole - Développeur Web Full Stack";
-const pageDescription = "Contactez Gérald Paméole pour discuter de vos projets de développement web, obtenir un devis ou poser vos questions sur mes services de développement personnalisés.";
+// Métadonnées SEO
+const pageTitle = "Contact | Gérald Paméole - Expert Transformation Digitale";
+const pageDescription = "Contactez Gérald Paméole pour vos projets de transformation digitale, développement web ou formation. Consultation gratuite et devis personnalisé sous 24h.";
 ---
 
 <BaseLayout
 	title={pageTitle}
 	description={pageDescription}
-	fullWidth={true}
+	customClass="bg-gradient-to-br from-gray-50 to-white dark:from-gray-900 dark:to-gray-800"
 >
-	<div class="bg-white dark:bg-gray-900" itemscope itemtype="https://schema.org/ContactPage">
-		<div class="content-container-wide px-6 lg:px-8">
-			<!-- En-tête uniformisé avec py-16 md:py-24 -->
-			<section class="py-16 md:py-24 bg-gradient-to-r from-indigo-600/5 to-violet-600/5">
-				<div class="content-container-narrow text-center">
-					<h1 class="text-4xl font-bold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-blue-500 sm:text-5xl mb-4 text-center">
-						Contact
+	<main class="content-container py-12">
+		<!-- En-tête de page -->
+		<section class="py-16 md:py-24 bg-gradient-to-r from-indigo-600/5 to-violet-600/5 rounded-xl mb-16">
+			<div class="content-container text-center">
+				<h1 class="text-4xl md:text-5xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-blue-500">
+					Contactez-moi
 					</h1>
-					<p class="mt-2 text-2xl font-bold tracking-tight text-[#111827] dark:text-white sm:text-3xl" itemprop="name">
-						Discutons de votre projet
-					</p>
-					<p class="mt-6 text-lg leading-8 text-[#111827] dark:text-gray-300" itemprop="description">
-						N'hésitez pas à me contacter pour discuter de vos projets ou pour toute autre question. 
-						Je vous répondrai dans les meilleurs délais.
+				<p class="text-xl text-[#111827] dark:text-gray-200 mb-6">
+					Prêt à transformer votre entreprise ?
+				</p>
+				<p class="text-lg text-[#111827] dark:text-gray-300 max-w-3xl mx-auto">
+					Discutons de vos besoins en transformation digitale, développement web ou formation. 
+					Consultation gratuite et devis personnalisé sous 24h.
 					</p>
 				</div>
 			</section>
 			
-			<div class="content-container-narrow mt-16 sm:mt-20">
-				<form action="#" method="POST" class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2" aria-labelledby="contact-form-heading">
-					<h2 id="contact-form-heading" class="sr-only">Formulaire de contact</h2>
-					
-					<div class="sm:col-span-2">
-						<label for="name" class="block text-sm font-semibold leading-6 text-[#111827] dark:text-white">
-							Nom
-						</label>
-						<div class="mt-2.5">
-							<input
-								type="text"
-								name="name"
-								id="name"
-								autocomplete="name"
-								class="block w-full rounded-md border-0 px-3.5 py-2 text-[#111827] dark:text-white shadow-sm ring-1 ring-inset ring-gray-300 dark:ring-gray-700 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 dark:focus:ring-indigo-400 sm:text-sm sm:leading-6 dark:bg-gray-800"
-								aria-required="true"
-							/>
+		<!-- Formulaire de contact -->
+		<section class="py-16 bg-white dark:bg-gray-800 rounded-xl shadow-lg mb-16">
+			<div class="content-container">
+				<div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+					<!-- Informations de contact -->
+					<div>
+						<h2 class="text-3xl font-bold text-[#111827] dark:text-white mb-6">
+							Informations de contact
+						</h2>
+						
+						<div class="space-y-6">
+							<div class="flex items-start gap-4">
+								<div class="flex-shrink-0 w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-center justify-center">
+									<i class="fas fa-envelope text-blue-600 dark:text-blue-400 text-xl"></i>
+								</div>
+								<div>
+									<h3 class="text-lg font-semibold text-[#111827] dark:text-white mb-1">Email</h3>
+									<p class="text-[#111827] dark:text-gray-300">gerald.pameole@example.com</p>
+									<p class="text-sm text-gray-500 dark:text-gray-400">Réponse sous 24h</p>
+								</div>
+							</div>
+
+							<div class="flex items-start gap-4">
+								<div class="flex-shrink-0 w-12 h-12 bg-green-100 dark:bg-green-900/30 rounded-lg flex items-center justify-center">
+									<i class="fas fa-phone text-green-600 dark:text-green-400 text-xl"></i>
+								</div>
+								<div>
+									<h3 class="text-lg font-semibold text-[#111827] dark:text-white mb-1">Téléphone</h3>
+									<p class="text-[#111827] dark:text-gray-300">+33 6 12 34 56 78</p>
+									<p class="text-sm text-gray-500 dark:text-gray-400">Lun-Ven 9h-18h</p>
+								</div>
+							</div>
+
+							<div class="flex items-start gap-4">
+								<div class="flex-shrink-0 w-12 h-12 bg-purple-100 dark:bg-purple-900/30 rounded-lg flex items-center justify-center">
+									<i class="fas fa-map-marker-alt text-purple-600 dark:text-purple-400 text-xl"></i>
+								</div>
+								<div>
+									<h3 class="text-lg font-semibold text-[#111827] dark:text-white mb-1">Localisation</h3>
+									<p class="text-[#111827] dark:text-gray-300">Paris, France</p>
+									<p class="text-sm text-gray-500 dark:text-gray-400">Déplacements possibles</p>
+								</div>
+							</div>
+
+							<div class="flex items-start gap-4">
+								<div class="flex-shrink-0 w-12 h-12 bg-orange-100 dark:bg-orange-900/30 rounded-lg flex items-center justify-center">
+									<i class="fas fa-calendar-alt text-orange-600 dark:text-orange-400 text-xl"></i>
+								</div>
+								<div>
+									<h3 class="text-lg font-semibold text-[#111827] dark:text-white mb-1">Disponibilité</h3>
+									<p class="text-[#111827] dark:text-gray-300">Consultation gratuite</p>
+									<p class="text-sm text-gray-500 dark:text-gray-400">30 min par appel</p>
+								</div>
+							</div>
+						</div>
+
+						<!-- Réseaux sociaux -->
+						<div class="mt-8">
+							<h3 class="text-lg font-semibold text-[#111827] dark:text-white mb-4">Suivez-moi</h3>
+							<div class="flex gap-4">
+								<a href="#" class="w-10 h-10 bg-blue-600 text-white rounded-lg flex items-center justify-center hover:bg-blue-700 transition-colors">
+									<i class="fab fa-linkedin-in"></i>
+								</a>
+								<a href="#" class="w-10 h-10 bg-gray-800 text-white rounded-lg flex items-center justify-center hover:bg-gray-900 transition-colors">
+									<i class="fab fa-github"></i>
+								</a>
+								<a href="#" class="w-10 h-10 bg-blue-400 text-white rounded-lg flex items-center justify-center hover:bg-blue-500 transition-colors">
+									<i class="fab fa-twitter"></i>
+								</a>
+							</div>
 						</div>
 					</div>
-					<div class="sm:col-span-2">
-						<label for="email" class="block text-sm font-semibold leading-6 text-[#111827] dark:text-white">
-							Email
+
+					<!-- Formulaire -->
+					<div>
+						<h2 class="text-3xl font-bold text-[#111827] dark:text-white mb-6">
+							Envoyez-moi un message
+						</h2>
+
+						<form id="contactForm" class="space-y-6">
+							<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+								<div>
+									<label for="firstName" class="block text-sm font-medium text-[#111827] dark:text-gray-200 mb-2">
+										Prénom *
+									</label>
+									<input
+										type="text"
+										id="firstName"
+										name="firstName"
+										required
+										class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent bg-white dark:bg-gray-700 text-[#111827] dark:text-white"
+										placeholder="Votre prénom"
+									>
+								</div>
+								<div>
+									<label for="lastName" class="block text-sm font-medium text-[#111827] dark:text-gray-200 mb-2">
+										Nom *
+									</label>
+									<input
+										type="text"
+										id="lastName"
+										name="lastName"
+										required
+										class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent bg-white dark:bg-gray-700 text-[#111827] dark:text-white"
+										placeholder="Votre nom"
+									>
+								</div>
+							</div>
+
+							<div>
+								<label for="email" class="block text-sm font-medium text-[#111827] dark:text-gray-200 mb-2">
+									Email *
 						</label>
-						<div class="mt-2.5">
 							<input
 								type="email"
+									id="email"
 								name="email"
-								id="email"
-								autocomplete="email"
-								class="block w-full rounded-md border-0 px-3.5 py-2 text-[#111827] dark:text-white shadow-sm ring-1 ring-inset ring-gray-300 dark:ring-gray-700 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 dark:focus:ring-indigo-400 sm:text-sm sm:leading-6 dark:bg-gray-800"
-								aria-required="true"
-							/>
+									required
+									class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent bg-white dark:bg-gray-700 text-[#111827] dark:text-white"
+									placeholder="votre@email.com"
+								>
+							</div>
+
+							<div>
+								<label for="company" class="block text-sm font-medium text-[#111827] dark:text-gray-200 mb-2">
+									Entreprise
+								</label>
+								<input
+									type="text"
+									id="company"
+									name="company"
+									class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent bg-white dark:bg-gray-700 text-[#111827] dark:text-white"
+									placeholder="Nom de votre entreprise"
+								>
+							</div>
+
+							<div>
+								<label for="service" class="block text-sm font-medium text-[#111827] dark:text-gray-200 mb-2">
+									Service souhaité *
+								</label>
+								<select
+									id="service"
+									name="service"
+									required
+									class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent bg-white dark:bg-gray-700 text-[#111827] dark:text-white"
+								>
+									<option value="">Sélectionnez un service</option>
+									<option value="gestion-projet">Gestion de Projet Télécom</option>
+									<option value="developpement-web">Développement Web</option>
+									<option value="qualite-process">Qualité & Process</option>
+									<option value="formation">Formation & Coaching</option>
+									<option value="developpement-commercial">Développement Commercial</option>
+									<option value="consultation">Consultation</option>
+									<option value="autre">Autre</option>
+								</select>
 						</div>
+
+							<div>
+								<label for="budget" class="block text-sm font-medium text-[#111827] dark:text-gray-200 mb-2">
+									Budget estimé
+								</label>
+								<select
+									id="budget"
+									name="budget"
+									class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent bg-white dark:bg-gray-700 text-[#111827] dark:text-white"
+								>
+									<option value="">Sélectionnez un budget</option>
+									<option value="<5k">Moins de 5 000€</option>
+									<option value="5k-15k">5 000€ - 15 000€</option>
+									<option value="15k-50k">15 000€ - 50 000€</option>
+									<option value="50k-100k">50 000€ - 100 000€</option>
+									<option value=">100k">Plus de 100 000€</option>
+									<option value="discussion">À discuter</option>
+								</select>
 					</div>
-					<div class="sm:col-span-2">
-						<label for="message" class="block text-sm font-semibold leading-6 text-[#111827] dark:text-white">
-							Message
+
+							<div>
+								<label for="message" class="block text-sm font-medium text-[#111827] dark:text-gray-200 mb-2">
+									Message *
 						</label>
-						<div class="mt-2.5">
 							<textarea
+									id="message"
 								name="message"
-								id="message"
-								rows={4}
-								class="block w-full rounded-md border-0 px-3.5 py-2 text-[#111827] dark:text-white shadow-sm ring-1 ring-inset ring-gray-300 dark:ring-gray-700 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 dark:focus:ring-indigo-400 sm:text-sm sm:leading-6 dark:bg-gray-800"
-								aria-required="true"
+									rows="5"
+									required
+									class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent bg-white dark:bg-gray-700 text-[#111827] dark:text-white"
+									placeholder="Décrivez votre projet et vos besoins..."
 							></textarea>
 						</div>
+
+							<div class="flex items-start gap-3">
+								<input
+									type="checkbox"
+									id="privacy"
+									name="privacy"
+									required
+									class="mt-1 w-4 h-4 text-indigo-600 border-gray-300 rounded focus:ring-indigo-500"
+								>
+								<label for="privacy" class="text-sm text-[#111827] dark:text-gray-300">
+									J'accepte que mes données soient utilisées pour répondre à ma demande. *
+								</label>
 					</div>
-					<div class="sm:col-span-2">
+
 						<button
 							type="submit"
-							class="block w-full rounded-md bg-indigo-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-							aria-label="Envoyer votre message"
+								class="w-full bg-indigo-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-indigo-700 transition-colors duration-300 flex items-center justify-center gap-2"
 						>
-							Envoyer
+								<i class="fas fa-paper-plane"></i>
+								Envoyer le message
 						</button>
-					</div>
 				</form>
-			</div>
-			
-			<div class="mx-auto mt-16 max-w-2xl sm:mt-20">
-				<h2 class="text-2xl font-bold mb-8 text-[#111827] dark:text-white text-center">Autres moyens de contact</h2>
-				<div class="grid grid-cols-1 gap-x-8 gap-y-10 sm:grid-cols-3" itemprop="contactPoint" itemscope itemtype="https://schema.org/ContactPoint">
-					{contactInfo.map((info) => (
-						<div class="flex items-center gap-x-3">
-							<div class="flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
-								{info.icon === 'mail' && (
-									<svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-										<path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
-									</svg>
-								)}
-								{info.icon === 'linkedin' && (
-									<svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-										<path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-									</svg>
-								)}
-								{info.icon === 'github' && (
-									<svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-										<path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-									</svg>
-								)}
-							</div>
-							<div>
-								<h3 class="text-sm font-semibold leading-6 text-[#111827] dark:text-white">{info.name}</h3>
-								<p class="mt-1 text-sm leading-6 text-[#111827] dark:text-gray-300" itemprop="contactType">
-									{info.value}
+
+						<!-- Message de confirmation -->
+						<div id="successMessage" class="hidden mt-6 p-4 bg-green-100 dark:bg-green-900/30 border border-green-300 dark:border-green-600 rounded-lg">
+							<div class="flex items-center gap-2">
+								<i class="fas fa-check-circle text-green-600 dark:text-green-400"></i>
+								<p class="text-green-800 dark:text-green-200 font-medium">
+									Message envoyé avec succès ! Je vous répondrai sous 24h.
 								</p>
 							</div>
 						</div>
-					))}
+					</div>
 				</div>
+			</div>
+		</section>
+
+		<!-- FAQ -->
+		<section class="py-16 bg-gradient-to-r from-indigo-50 to-blue-50 dark:from-gray-800 dark:to-gray-700 rounded-xl shadow-lg">
+			<div class="content-container">
+				<h2 class="text-3xl font-bold text-[#111827] dark:text-white text-center mb-12">
+					Questions fréquentes
+				</h2>
+				
+				<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+					<div class="bg-white dark:bg-gray-700 rounded-lg p-6 shadow-md">
+						<h3 class="text-lg font-semibold text-[#111827] dark:text-white mb-3">
+							Quel est votre délai de réponse ?
+						</h3>
+						<p class="text-[#111827] dark:text-gray-300">
+							Je m'engage à répondre à toutes les demandes sous 24h, même le weekend. 
+							Pour les projets urgents, n'hésitez pas à me téléphoner directement.
+						</p>
+					</div>
+
+					<div class="bg-white dark:bg-gray-700 rounded-lg p-6 shadow-md">
+						<h3 class="text-lg font-semibold text-[#111827] dark:text-white mb-3">
+							Proposez-vous une consultation gratuite ?
+						</h3>
+						<p class="text-[#111827] dark:text-gray-300">
+							Oui, je propose une consultation gratuite de 30 minutes pour évaluer 
+							vos besoins et vous proposer la meilleure approche pour votre projet.
+						</p>
+					</div>
+
+					<div class="bg-white dark:bg-gray-700 rounded-lg p-6 shadow-md">
+						<h3 class="text-lg font-semibold text-[#111827] dark:text-white mb-3">
+							Travaillez-vous à distance ?
+						</h3>
+						<p class="text-[#111827] dark:text-gray-300">
+							Absolument ! Je travaille avec des clients du monde entier. 
+							Les réunions se font via Teams, Zoom ou Google Meet selon vos préférences.
+						</p>
+					</div>
+
+					<div class="bg-white dark:bg-gray-700 rounded-lg p-6 shadow-md">
+						<h3 class="text-lg font-semibold text-[#111827] dark:text-white mb-3">
+							Quels sont vos tarifs ?
+						</h3>
+						<p class="text-[#111827] dark:text-gray-300">
+							Mes tarifs varient selon la complexité et la durée du projet. 
+							Je fournis toujours un devis détaillé et transparent avant de commencer.
+						</p>
 			</div>
 		</div>
 	</div>
+		</section>
+	</main>
 </BaseLayout>
 
-<style>
-	h1 {
-		background-image: linear-gradient(to right, #4f46e5, #3b82f6);
-		-webkit-background-clip: text;
-		background-clip: text;
-		color: transparent;
-		text-shadow: 0 2px 4px rgba(0,0,0,0.1);
-	}
-</style> 
+<!-- Script pour le formulaire de contact -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+	const form = document.getElementById('contactForm');
+	const successMessage = document.getElementById('successMessage');
+
+	form?.addEventListener('submit', function(e) {
+		e.preventDefault();
+		
+		// Simulation d'envoi (à remplacer par votre logique d'envoi)
+		setTimeout(() => {
+			if (form) form.style.display = 'none';
+			if (successMessage) successMessage.classList.remove('hidden');
+		}, 1000);
+	});
+});
+</script>
+
+<!-- Script pour charger Font Awesome -->
+<script defer is:inline>
+if (!document.querySelector('#font-awesome')) {
+	const link = document.createElement('link');
+	link.id = 'font-awesome';
+	link.rel = 'stylesheet';
+	link.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css';
+	document.head.appendChild(link);
+}
+</script>

@@ -19,6 +19,7 @@ const articleSchema = z.object({
   publishDate: z.string(),
   readingTime: z.number().optional(),
   featured: z.boolean().optional().default(false),
+  keywords: z.array(z.string()).optional().default([]),
 });
 
 // Schéma pour les livres
