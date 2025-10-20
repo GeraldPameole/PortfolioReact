@@ -10,16 +10,27 @@ const books = await getCollection("books");
 - Récupération des collections d'articles et de livres
 - Utilisation de l'API Astro pour accéder au contenu
 
-## 2. Tri des Articles
+## 2. Tri des Articles (Version Améliorée)
 
 ```typescript
+// Version actuelle
 const sortedArticles = articles.sort(
   (a, b) => b.data.publishDate.getTime() - a.data.publishDate.getTime()
 );
+
+// Version améliorée avec gestion d'erreurs
+const sortedArticles = articles
+  .filter((article) => article.data.publishDate) // Filtre les articles sans date
+  .sort((a, b) => {
+    const dateA = new Date(a.data.publishDate);
+    const dateB = new Date(b.data.publishDate);
+    return dateB.getTime() - dateA.getTime();
+  });
 ```
 
 - Tri des articles par date de publication
-- Utilisation de `getTime()` pour la comparaison des dates
+- Filtrage des articles sans date valide
+- Gestion d'erreurs robuste
 
 ## 3. Tri des Livres
 
@@ -32,9 +43,10 @@ const sortedBooks = books.sort(
 - Tri des livres par année de publication
 - Gestion des valeurs nulles avec l'opérateur `||`
 
-## 4. Définition des Thèmes Standardisés
+## 4. Définition des Thèmes Standardisés (Version Améliorée)
 
 ```typescript
+// Version actuelle
 const standardThemes = {
   "developpement-web": {
     icon: "💻",
@@ -44,14 +56,40 @@ const standardThemes = {
     altImage: "https://images.unsplash.com/...",
   },
 };
+
+// Version améliorée avec validation et fallbacks
+const standardThemes = {
+  "developpement-web": {
+    icon: "💻",
+    image: "/images/themes/dev-web.jpg",
+    description: "Technologies et techniques de développement web",
+    color: "from-emerald-500 to-teal-600",
+    altImage: "https://images.unsplash.com/...",
+    keywords: ["javascript", "react", "vue", "angular", "nodejs"],
+    fallbackColor: "#10B981",
+  },
+  "gestion-projet": {
+    icon: "📋",
+    image: "/images/themes/project-mgmt.jpg",
+    description: "Gestion de projet et leadership",
+    color: "from-blue-500 to-indigo-600",
+    altImage: "https://images.unsplash.com/...",
+    keywords: ["agile", "scrum", "management", "leadership"],
+    fallbackColor: "#3B82F6",
+  },
+  // ... autres thèmes
+};
 ```
 
 - Configuration des thèmes avec leurs propriétés
 - Association d'icônes, images et couleurs
+- Mots-clés pour la recherche intelligente
+- Couleurs de fallback pour la robustesse
 
-## 5. Mapping des Thèmes
+## 5. Mapping des Thèmes (Version Améliorée)
 
 ```typescript
+// Version actuelle
 function mapToStandardTheme(originalTheme) {
   const themeMapping = {
     JavaScript: "developpement-web",
@@ -60,10 +98,45 @@ function mapToStandardTheme(originalTheme) {
   };
   return themeMapping[originalTheme] || "carriere";
 }
+
+// Version améliorée avec validation et fallbacks
+function mapToStandardTheme(originalTheme: string): string {
+  if (!originalTheme) return "carriere";
+
+  const normalizedTheme = originalTheme.toLowerCase().trim();
+  const themeMapping = {
+    javascript: "developpement-web",
+    react: "developpement-web",
+    vue: "developpement-web",
+    angular: "developpement-web",
+    nodejs: "developpement-web",
+    typescript: "developpement-web",
+    html: "developpement-web",
+    css: "developpement-web",
+    agile: "gestion-projet",
+    scrum: "gestion-projet",
+    management: "gestion-projet",
+    leadership: "gestion-projet",
+    projet: "gestion-projet",
+    formation: "formation-coaching",
+    coaching: "formation-coaching",
+    pedagogie: "formation-coaching",
+    qualite: "qualite-process",
+    iso: "qualite-process",
+    processus: "qualite-process",
+    commercial: "developpement-commercial",
+    vente: "developpement-commercial",
+    marketing: "developpement-commercial",
+  };
+
+  return themeMapping[normalizedTheme] || "carriere";
+}
 ```
 
 - Conversion des thèmes spécifiques en thèmes standardisés
-- Gestion des cas par défaut
+- Normalisation des entrées (minuscules, trim)
+- Gestion des cas par défaut robuste
+- Mapping étendu pour plus de précision
 
 ## 6. Regroupement des Articles par Thème
 
@@ -95,9 +168,10 @@ const booksByTheme = sortedBooks.reduce((acc, book) => {
 - Organisation des livres par catégorie
 - Utilisation de catégories prédéfinies
 
-## 8. Recherche de Contenu Similaire
+## 8. Recherche de Contenu Similaire (Version Améliorée)
 
 ```typescript
+// Version actuelle
 function findSimilarContent(item, isBook = false, maxItems = 3) {
   const standardTheme =
     item.standardTheme ||
@@ -106,9 +180,52 @@ function findSimilarContent(item, isBook = false, maxItems = 3) {
       : mapToStandardTheme(item.data.theme));
   // ...
 }
+
+// Version améliorée avec scoring et cache
+const similarContentCache = new Map();
+
+function findSimilarContent(item, isBook = false, maxItems = 3) {
+  const cacheKey = `${item.slug}-${isBook}`;
+  if (similarContentCache.has(cacheKey)) {
+    return similarContentCache.get(cacheKey);
+  }
+
+  const standardTheme =
+    item.standardTheme ||
+    (isBook
+      ? mapToStandardTheme(item.data.category)
+      : mapToStandardTheme(item.data.theme));
+
+  const similar = allContent
+    .filter((content) => {
+      if (content.slug === item.slug) return false;
+      const contentTheme = isBook
+        ? mapToStandardTheme(content.data.category)
+        : mapToStandardTheme(content.data.theme);
+      return contentTheme === standardTheme;
+    })
+    .sort((a, b) => {
+      // Scoring basé sur les tags communs
+      const scoreA = calculateSimilarityScore(item, a);
+      const scoreB = calculateSimilarityScore(item, b);
+      return scoreB - scoreA;
+    })
+    .slice(0, maxItems);
+
+  similarContentCache.set(cacheKey, similar);
+  return similar;
+}
+
+function calculateSimilarityScore(item1, item2) {
+  const tags1 = item1.data.tags || [];
+  const tags2 = item2.data.tags || [];
+  const commonTags = tags1.filter((tag) => tags2.includes(tag));
+  return commonTags.length;
+}
 ```
 
-- Identification de contenu lié
+- Identification de contenu lié avec scoring intelligent
+- Cache pour améliorer les performances
 - Limitation du nombre de résultats
 
 ## 9. Génération de Compétences
@@ -695,3 +812,628 @@ Des routes dynamiques semblent ne pas trouver les pages correspondantes :
 - Standardiser la gestion des thèmes et couleurs
 - Documenter les composants complexes
 - Créer une bibliothèque de composants pour faciliter la maintenance
+
+---
+
+# Nouvelles Fonctionnalités - Effets 3D et Animations Avancées
+
+## 41. Effet Cube 3D avec CSS Transform
+
+```astro
+<!-- Cube 3D avec CSS et JavaScript -->
+<div class="cube-container">
+  <div class="cube" id="competence-cube">
+    <!-- Face 1 - Gestion de Projet -->
+    <div class="cube-face front" data-domain="gestion-projet">
+      <div class="face-content">
+        <i class="fas fa-tasks text-4xl mb-4"></i>
+        <h3>Gestion de Projet</h3>
+      </div>
+    </div>
+
+    <!-- Face 2 - Développement Web -->
+    <div class="cube-face back" data-domain="developpement-web">
+      <div class="face-content">
+        <i class="fas fa-laptop-code text-4xl mb-4"></i>
+        <h3>Développement Web</h3>
+      </div>
+    </div>
+
+    <!-- Autres faces... -->
+  </div>
+</div>
+
+<style>
+.cube-container {
+  perspective: 1000px;
+  perspective-origin: center center;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cube {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  transform-style: preserve-3d;
+  transition: transform 0.6s ease-in-out;
+  cursor: pointer;
+}
+
+.cube-face {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.cube-face.front { transform: rotateY(0deg) translateZ(100px); }
+.cube-face.back { transform: rotateY(180deg) translateZ(100px); }
+.cube-face.right { transform: rotateY(90deg) translateZ(100px); }
+.cube-face.left { transform: rotateY(-90deg) translateZ(100px); }
+.cube-face.top { transform: rotateX(90deg) translateZ(100px); }
+.cube-face.bottom { transform: rotateX(-90deg) translateZ(100px); }
+
+.cube:hover {
+  transform: rotateX(-10deg) rotateY(10deg);
+}
+
+/* Animation de rotation automatique */
+@keyframes autoRotate {
+  0% { transform: rotateX(0deg) rotateY(0deg); }
+  25% { transform: rotateX(0deg) rotateY(90deg); }
+  50% { transform: rotateX(0deg) rotateY(180deg); }
+  75% { transform: rotateX(0deg) rotateY(270deg); }
+  100% { transform: rotateX(0deg) rotateY(360deg); }
+}
+
+.cube.auto-rotate {
+  animation: autoRotate 20s infinite linear;
+}
+</style>
+
+<script>
+let currentRotation = { x: 0, y: 0 };
+let isAutoRotating = true;
+let autoRotateInterval;
+
+const cube = document.getElementById('competence-cube');
+
+// Rotation automatique
+function startAutoRotation() {
+  autoRotateInterval = setInterval(() => {
+    if (isAutoRotating) {
+      currentRotation.y += 1;
+      cube.style.transform = `rotateX(${currentRotation.x}deg) rotateY(${currentRotation.y}deg)`;
+    }
+  }, 50);
+}
+
+// Gestion des clics
+cube.addEventListener('click', (e) => {
+  const face = e.target.closest('.cube-face');
+  if (face && face.dataset.domain) {
+    isAutoRotating = false;
+    clearInterval(autoRotateInterval);
+
+    // Animation vers la face sélectionnée
+    const domain = face.dataset.domain;
+    rotateToFace(domain);
+
+    // Redirection après animation
+    setTimeout(() => {
+      window.location.href = `/skills#${domain}`;
+    }, 1000);
+  }
+});
+
+function rotateToFace(domain) {
+  const rotations = {
+    'gestion-projet': { x: 0, y: 0 },
+    'developpement-web': { x: 0, y: 180 },
+    'qualite-process': { x: 0, y: 90 },
+    'formation': { x: 0, y: -90 },
+    'commercial': { x: 90, y: 0 }
+  };
+
+  const target = rotations[domain];
+  if (target) {
+    cube.style.transform = `rotateX(${target.x}deg) rotateY(${target.y}deg)`;
+  }
+}
+
+// Démarrer la rotation automatique
+startAutoRotation();
+</script>
+```
+
+- Effet cube 3D interactif pour les compétences
+- Rotation automatique avec pause au survol
+- Navigation par clic vers les sections correspondantes
+- Animations fluides avec CSS transforms
+
+## 42. Gestion d'État Avancée avec Cache
+
+```typescript
+// Cache intelligent pour les performances
+class ContentCache {
+  private cache = new Map();
+  private maxSize = 100;
+  private ttl = 5 * 60 * 1000; // 5 minutes
+
+  set(key: string, value: any): void {
+    if (this.cache.size >= this.maxSize) {
+      const firstKey = this.cache.keys().next().value;
+      this.cache.delete(firstKey);
+    }
+
+    this.cache.set(key, {
+      value,
+      timestamp: Date.now(),
+    });
+  }
+
+  get(key: string): any | null {
+    const item = this.cache.get(key);
+    if (!item) return null;
+
+    if (Date.now() - item.timestamp > this.ttl) {
+      this.cache.delete(key);
+      return null;
+    }
+
+    return item.value;
+  }
+
+  clear(): void {
+    this.cache.clear();
+  }
+}
+
+// Utilisation
+const contentCache = new ContentCache();
+
+function getCachedContent(key: string, fetcher: () => any) {
+  const cached = contentCache.get(key);
+  if (cached) return cached;
+
+  const fresh = fetcher();
+  contentCache.set(key, fresh);
+  return fresh;
+}
+```
+
+- Cache intelligent avec TTL (Time To Live)
+- Gestion automatique de la taille du cache
+- Amélioration des performances de chargement
+
+## 43. Validation de Données Robuste
+
+```typescript
+// Validateur de schéma pour les articles
+interface ArticleSchema {
+  title: string;
+  description: string;
+  publishDate: Date;
+  tags: string[];
+  featured?: boolean;
+  readingTime?: number;
+}
+
+function validateArticle(article: any): ArticleSchema | null {
+  try {
+    // Validation des champs requis
+    if (!article.title || typeof article.title !== "string") {
+      console.warn("Article invalide: titre manquant");
+      return null;
+    }
+
+    if (!article.description || typeof article.description !== "string") {
+      console.warn("Article invalide: description manquante");
+      return null;
+    }
+
+    if (!article.publishDate) {
+      console.warn("Article invalide: date de publication manquante");
+      return null;
+    }
+
+    // Normalisation des données
+    return {
+      title: article.title.trim(),
+      description: article.description.trim(),
+      publishDate: new Date(article.publishDate),
+      tags: Array.isArray(article.tags) ? article.tags : [],
+      featured: Boolean(article.featured),
+      readingTime: article.readingTime || calculateReadingTime(article.content),
+    };
+  } catch (error) {
+    console.error("Erreur de validation:", error);
+    return null;
+  }
+}
+
+function calculateReadingTime(content: string): number {
+  const wordsPerMinute = 200;
+  const wordCount = content.split(/\s+/).length;
+  return Math.ceil(wordCount / wordsPerMinute);
+}
+```
+
+- Validation robuste des données d'articles
+- Normalisation automatique des entrées
+- Calcul automatique du temps de lecture
+- Gestion d'erreurs gracieuse
+
+## 44. Optimisation des Images avec Lazy Loading
+
+```typescript
+// Lazy loading intelligent avec intersection observer
+class ImageLazyLoader {
+  private observer: IntersectionObserver;
+  private loadedImages = new Set();
+
+  constructor() {
+    this.observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            this.loadImage(entry.target as HTMLImageElement);
+            this.observer.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        rootMargin: "50px",
+        threshold: 0.1,
+      }
+    );
+  }
+
+  observe(img: HTMLImageElement): void {
+    if (this.loadedImages.has(img.src)) return;
+    this.observer.observe(img);
+  }
+
+  private loadImage(img: HTMLImageElement): void {
+    const src = img.dataset.src;
+    if (!src) return;
+
+    const newImg = new Image();
+    newImg.onload = () => {
+      img.src = src;
+      img.classList.add("loaded");
+      this.loadedImages.add(src);
+    };
+    newImg.onerror = () => {
+      img.src = "/images/placeholder.jpg"; // Fallback
+      img.classList.add("error");
+    };
+    newImg.src = src;
+  }
+}
+
+// Utilisation
+const lazyLoader = new ImageLazyLoader();
+document.querySelectorAll("img[data-src]").forEach((img) => {
+  lazyLoader.observe(img);
+});
+```
+
+- Chargement paresseux des images
+- Gestion des erreurs avec images de fallback
+- Optimisation des performances de page
+
+## 45. Gestion des Erreurs Centralisée
+
+```typescript
+// Système de gestion d'erreurs centralisé
+class ErrorHandler {
+  private errors: Error[] = [];
+  private maxErrors = 50;
+
+  log(error: Error, context?: string): void {
+    const errorWithContext = {
+      ...error,
+      context,
+      timestamp: new Date().toISOString(),
+      userAgent: navigator.userAgent,
+      url: window.location.href,
+    };
+
+    this.errors.push(errorWithContext);
+
+    if (this.errors.length > this.maxErrors) {
+      this.errors.shift();
+    }
+
+    console.error("Erreur capturée:", errorWithContext);
+
+    // Envoyer à un service de monitoring (optionnel)
+    this.sendToMonitoring(errorWithContext);
+  }
+
+  private sendToMonitoring(error: any): void {
+    // Intégration avec Sentry, LogRocket, etc.
+    if (typeof window !== "undefined" && window.gtag) {
+      window.gtag("event", "exception", {
+        description: error.message,
+        fatal: false,
+      });
+    }
+  }
+
+  getErrors(): Error[] {
+    return [...this.errors];
+  }
+
+  clearErrors(): void {
+    this.errors = [];
+  }
+}
+
+// Utilisation globale
+const errorHandler = new ErrorHandler();
+
+// Wrapper pour les fonctions async
+function withErrorHandling<T extends any[], R>(fn: (...args: T) => Promise<R>) {
+  return async (...args: T): Promise<R | null> => {
+    try {
+      return await fn(...args);
+    } catch (error) {
+      errorHandler.log(error as Error, fn.name);
+      return null;
+    }
+  };
+}
+```
+
+- Gestion centralisée des erreurs
+- Logging contextuel avec métadonnées
+- Intégration avec les services de monitoring
+- Wrapper pour la gestion d'erreurs automatique
+
+## 46. Performance Monitoring
+
+```typescript
+// Monitoring des performances
+class PerformanceMonitor {
+  private metrics: Map<string, number[]> = new Map();
+
+  measure(name: string, fn: () => any): any {
+    const start = performance.now();
+    const result = fn();
+    const end = performance.now();
+
+    const duration = end - start;
+    this.recordMetric(name, duration);
+
+    return result;
+  }
+
+  async measureAsync<T>(name: string, fn: () => Promise<T>): Promise<T> {
+    const start = performance.now();
+    const result = await fn();
+    const end = performance.now();
+
+    const duration = end - start;
+    this.recordMetric(name, duration);
+
+    return result;
+  }
+
+  private recordMetric(name: string, value: number): void {
+    if (!this.metrics.has(name)) {
+      this.metrics.set(name, []);
+    }
+
+    const values = this.metrics.get(name)!;
+    values.push(value);
+
+    // Garder seulement les 100 dernières valeurs
+    if (values.length > 100) {
+      values.shift();
+    }
+  }
+
+  getAverageTime(name: string): number {
+    const values = this.metrics.get(name);
+    if (!values || values.length === 0) return 0;
+
+    return values.reduce((sum, val) => sum + val, 0) / values.length;
+  }
+
+  getSlowestOperations(limit = 10): Array<{ name: string; avgTime: number }> {
+    const operations = Array.from(this.metrics.entries())
+      .map(([name, values]) => ({
+        name,
+        avgTime: this.getAverageTime(name),
+      }))
+      .sort((a, b) => b.avgTime - a.avgTime)
+      .slice(0, limit);
+
+    return operations;
+  }
+}
+
+// Utilisation
+const perfMonitor = new PerformanceMonitor();
+
+// Mesurer une fonction
+const result = perfMonitor.measure("article-processing", () => {
+  return processArticles(articles);
+});
+
+// Mesurer une fonction async
+const asyncResult = await perfMonitor.measureAsync("data-fetch", async () => {
+  return await fetchData();
+});
+```
+
+- Monitoring des performances en temps réel
+- Détection des opérations lentes
+- Métriques moyennes et historiques
+- Optimisation basée sur les données
+
+## 47. Accessibilité Avancée
+
+```typescript
+// Gestionnaire d'accessibilité
+class AccessibilityManager {
+  private focusTrap: HTMLElement | null = null;
+  private skipLinks: HTMLElement[] = [];
+
+  init(): void {
+    this.setupSkipLinks();
+    this.setupFocusManagement();
+    this.setupKeyboardNavigation();
+    this.setupScreenReaderSupport();
+  }
+
+  private setupSkipLinks(): void {
+    this.skipLinks = Array.from(document.querySelectorAll("[data-skip-link]"));
+
+    this.skipLinks.forEach((link) => {
+      link.addEventListener("click", (e) => {
+        e.preventDefault();
+        const target = document.querySelector(link.getAttribute("href")!);
+        if (target) {
+          target.focus();
+          target.scrollIntoView({ behavior: "smooth" });
+        }
+      });
+    });
+  }
+
+  private setupFocusManagement(): void {
+    // Gestion du focus pour les modales
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && this.focusTrap) {
+        this.closeFocusTrap();
+      }
+    });
+  }
+
+  private setupKeyboardNavigation(): void {
+    // Navigation au clavier pour les composants personnalisés
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Tab") {
+        this.handleTabNavigation(e);
+      }
+    });
+  }
+
+  private setupScreenReaderSupport(): void {
+    // Annonces pour les lecteurs d'écran
+    const announcer = document.createElement("div");
+    announcer.setAttribute("aria-live", "polite");
+    announcer.setAttribute("aria-atomic", "true");
+    announcer.className = "sr-only";
+    document.body.appendChild(announcer);
+
+    // Fonction pour annoncer des changements
+    window.announceToScreenReader = (message: string) => {
+      announcer.textContent = message;
+      setTimeout(() => {
+        announcer.textContent = "";
+      }, 1000);
+    };
+  }
+
+  openFocusTrap(element: HTMLElement): void {
+    this.focusTrap = element;
+    element.focus();
+
+    // Piéger le focus dans l'élément
+    const focusableElements = element.querySelectorAll(
+      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+    );
+
+    const firstElement = focusableElements[0] as HTMLElement;
+    const lastElement = focusableElements[
+      focusableElements.length - 1
+    ] as HTMLElement;
+
+    element.addEventListener("keydown", (e) => {
+      if (e.key === "Tab") {
+        if (e.shiftKey) {
+          if (document.activeElement === firstElement) {
+            lastElement.focus();
+            e.preventDefault();
+          }
+        } else {
+          if (document.activeElement === lastElement) {
+            firstElement.focus();
+            e.preventDefault();
+          }
+        }
+      }
+    });
+  }
+
+  closeFocusTrap(): void {
+    this.focusTrap = null;
+  }
+
+  private handleTabNavigation(e: KeyboardEvent): void {
+    // Logique personnalisée pour la navigation au clavier
+    const activeElement = document.activeElement;
+
+    if (activeElement?.hasAttribute("data-keyboard-nav")) {
+      const direction = e.shiftKey ? "prev" : "next";
+      const nextElement = this.findNextFocusableElement(
+        activeElement,
+        direction
+      );
+
+      if (nextElement) {
+        nextElement.focus();
+        e.preventDefault();
+      }
+    }
+  }
+
+  private findNextFocusableElement(
+    current: Element,
+    direction: "prev" | "next"
+  ): HTMLElement | null {
+    const focusableElements = Array.from(
+      document.querySelectorAll(
+        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+      )
+    ) as HTMLElement[];
+
+    const currentIndex = focusableElements.indexOf(current as HTMLElement);
+
+    if (direction === "next") {
+      return focusableElements[currentIndex + 1] || focusableElements[0];
+    } else {
+      return (
+        focusableElements[currentIndex - 1] ||
+        focusableElements[focusableElements.length - 1]
+      );
+    }
+  }
+}
+
+// Initialisation
+const a11yManager = new AccessibilityManager();
+document.addEventListener("DOMContentLoaded", () => {
+  a11yManager.init();
+});
+```
+
+- Gestion complète de l'accessibilité
+- Navigation au clavier personnalisée
+- Support des lecteurs d'écran
+- Piégeage du focus pour les modales
