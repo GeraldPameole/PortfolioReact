@@ -185,681 +185,681 @@ declare module 'astro:content' {
 
 	type ContentEntryMap = {
 		"articles": {
-"agile-scrum-methodologies.md": {
-	id: "agile-scrum-methodologies.md";
-  slug: "agile-scrum-methodologies";
+"articles-generaux/comment-planifier-mon-travail.md": {
+	id: "articles-generaux/comment-planifier-mon-travail.md";
+  slug: "articles-generaux/comment-planifier-mon-travail";
   body: string;
   collection: "articles";
   data: InferEntrySchema<"articles">
 } & { render(): Render[".md"] };
-"apprentissage-continu-developpement-competences.md": {
-	id: "apprentissage-continu-developpement-competences.md";
-  slug: "apprentissage-continu-developpement-competences";
+"articles-generaux/premier-article.md": {
+	id: "articles-generaux/premier-article.md";
+  slug: "articles-generaux/premier-article";
   body: string;
   collection: "articles";
   data: InferEntrySchema<"articles">
 } & { render(): Render[".md"] };
-"comment-planifier-mon-travail.md": {
-	id: "comment-planifier-mon-travail.md";
-  slug: "comment-planifier-mon-travail";
+"articles-generaux/synthese-thematiques.md": {
+	id: "articles-generaux/synthese-thematiques.md";
+  slug: "articles-generaux/synthese-thematiques";
   body: string;
   collection: "articles";
   data: InferEntrySchema<"articles">
 } & { render(): Render[".md"] };
-"deep-work.md": {
-	id: "deep-work.md";
-  slug: "deep-work";
+"articles-generaux/template-article.md": {
+	id: "articles-generaux/template-article.md";
+  slug: "articles-generaux/template-article";
   body: string;
   collection: "articles";
   data: InferEntrySchema<"articles">
 } & { render(): Render[".md"] };
-"email-marketing-personnalisation.md": {
-	id: "email-marketing-personnalisation.md";
-  slug: "email-marketing-personnalisation";
+"developpement-commercial/negocier-salaire-techniques-avancees.md": {
+	id: "developpement-commercial/negocier-salaire-techniques-avancees.md";
+  slug: "developpement-commercial/negocier-salaire-techniques-avancees";
   body: string;
   collection: "articles";
   data: InferEntrySchema<"articles">
 } & { render(): Render[".md"] };
-"formation-adaptation.md": {
-	id: "formation-adaptation.md";
-  slug: "formation-adaptation";
+"developpement-commercial/recrutement-talents-digitaux.md": {
+	id: "developpement-commercial/recrutement-talents-digitaux.md";
+  slug: "developpement-commercial/recrutement-talents-digitaux";
   body: string;
   collection: "articles";
   data: InferEntrySchema<"articles">
 } & { render(): Render[".md"] };
-"formation-collaboration.md": {
-	id: "formation-collaboration.md";
-  slug: "formation-collaboration";
+"developpement-web/frameworks-javascript-analyse-2024.md": {
+	id: "developpement-web/frameworks-javascript-analyse-2024.md";
+  slug: "developpement-web/frameworks-javascript-analyse-2024";
   body: string;
   collection: "articles";
   data: InferEntrySchema<"articles">
 } & { render(): Render[".md"] };
-"formation-communication.md": {
-	id: "formation-communication.md";
-  slug: "formation-communication";
+"developpement-web/frameworks-javascript-comparaison-2024.md": {
+	id: "developpement-web/frameworks-javascript-comparaison-2024.md";
+  slug: "developpement-web/frameworks-javascript-comparaison-2024";
   body: string;
   collection: "articles";
   data: InferEntrySchema<"articles">
 } & { render(): Render[".md"] };
-"formation-creativite.md": {
-	id: "formation-creativite.md";
-  slug: "formation-creativite";
+"developpement-web/progressive-web-apps-2024.md": {
+	id: "developpement-web/progressive-web-apps-2024.md";
+  slug: "developpement-web/progressive-web-apps-2024";
   body: string;
   collection: "articles";
   data: InferEntrySchema<"articles">
 } & { render(): Render[".md"] };
-"formation-elearning.md": {
-	id: "formation-elearning.md";
-  slug: "formation-elearning";
+"developpement-web/react-performance-optimisation.md": {
+	id: "developpement-web/react-performance-optimisation.md";
+  slug: "developpement-web/react-performance-optimisation";
   body: string;
   collection: "articles";
   data: InferEntrySchema<"articles">
 } & { render(): Render[".md"] };
-"formation-equipes-commerciales.md": {
-	id: "formation-equipes-commerciales.md";
-  slug: "formation-equipes-commerciales";
+"developpement-web/technologies-javascript-2024.md": {
+	id: "developpement-web/technologies-javascript-2024.md";
+  slug: "developpement-web/technologies-javascript-2024";
   body: string;
   collection: "articles";
   data: InferEntrySchema<"articles">
 } & { render(): Render[".md"] };
-"formation-innovation.md": {
-	id: "formation-innovation.md";
-  slug: "formation-innovation";
+"developpement-web/tendances-developpement-web-2025.md": {
+	id: "developpement-web/tendances-developpement-web-2025.md";
+  slug: "developpement-web/tendances-developpement-web-2025";
   body: string;
   collection: "articles";
   data: InferEntrySchema<"articles">
 } & { render(): Render[".md"] };
-"formation-leadership.md": {
-	id: "formation-leadership.md";
-  slug: "formation-leadership";
+"developpement-web/web-accessibilite-guide-pratique.md": {
+	id: "developpement-web/web-accessibilite-guide-pratique.md";
+  slug: "developpement-web/web-accessibilite-guide-pratique";
   body: string;
   collection: "articles";
   data: InferEntrySchema<"articles">
 } & { render(): Render[".md"] };
-"formation-mentorat.md": {
-	id: "formation-mentorat.md";
-  slug: "formation-mentorat";
+"developpement-web/web-javascript-modern.md": {
+	id: "developpement-web/web-javascript-modern.md";
+  slug: "developpement-web/web-javascript-modern";
   body: string;
   collection: "articles";
   data: InferEntrySchema<"articles">
 } & { render(): Render[".md"] };
-"formation-professionnelle-continue.md": {
-	id: "formation-professionnelle-continue.md";
-  slug: "formation-professionnelle-continue";
+"developpement-web/web-tendances-2024.md": {
+	id: "developpement-web/web-tendances-2024.md";
+  slug: "developpement-web/web-tendances-2024";
   body: string;
   collection: "articles";
   data: InferEntrySchema<"articles">
 } & { render(): Render[".md"] };
-"formation-soft-skills.md": {
-	id: "formation-soft-skills.md";
-  slug: "formation-soft-skills";
+"formation/apprentissage-continu-developpement-competences.md": {
+	id: "formation/apprentissage-continu-developpement-competences.md";
+  slug: "formation/apprentissage-continu-developpement-competences";
   body: string;
   collection: "articles";
   data: InferEntrySchema<"articles">
 } & { render(): Render[".md"] };
-"formation-talents-guide.md": {
-	id: "formation-talents-guide.md";
-  slug: "formation-talents-guide";
+"formation/formation-adaptation.md": {
+	id: "formation/formation-adaptation.md";
+  slug: "formation/formation-adaptation";
   body: string;
   collection: "articles";
   data: InferEntrySchema<"articles">
 } & { render(): Render[".md"] };
-"formation-technique.md": {
-	id: "formation-technique.md";
-  slug: "formation-technique";
+"formation/formation-collaboration.md": {
+	id: "formation/formation-collaboration.md";
+  slug: "formation/formation-collaboration";
   body: string;
   collection: "articles";
   data: InferEntrySchema<"articles">
 } & { render(): Render[".md"] };
-"frameworks-javascript-analyse-2024.md": {
-	id: "frameworks-javascript-analyse-2024.md";
-  slug: "frameworks-javascript-analyse-2024";
+"formation/formation-communication.md": {
+	id: "formation/formation-communication.md";
+  slug: "formation/formation-communication";
   body: string;
   collection: "articles";
   data: InferEntrySchema<"articles">
 } & { render(): Render[".md"] };
-"frameworks-javascript-comparaison-2024.md": {
-	id: "frameworks-javascript-comparaison-2024.md";
-  slug: "frameworks-javascript-comparaison-2024";
+"formation/formation-creativite.md": {
+	id: "formation/formation-creativite.md";
+  slug: "formation/formation-creativite";
   body: string;
   collection: "articles";
   data: InferEntrySchema<"articles">
 } & { render(): Render[".md"] };
-"gestion-competences-developpement.md": {
-	id: "gestion-competences-developpement.md";
-  slug: "gestion-competences-developpement";
+"formation/formation-elearning.md": {
+	id: "formation/formation-elearning.md";
+  slug: "formation/formation-elearning";
   body: string;
   collection: "articles";
   data: InferEntrySchema<"articles">
 } & { render(): Render[".md"] };
-"gestion-conflits-equipe.md": {
-	id: "gestion-conflits-equipe.md";
-  slug: "gestion-conflits-equipe";
+"formation/formation-equipes-commerciales.md": {
+	id: "formation/formation-equipes-commerciales.md";
+  slug: "formation/formation-equipes-commerciales";
   body: string;
   collection: "articles";
   data: InferEntrySchema<"articles">
 } & { render(): Render[".md"] };
-"gestion-connaissances-organisation.md": {
-	id: "gestion-connaissances-organisation.md";
-  slug: "gestion-connaissances-organisation";
+"formation/formation-innovation.md": {
+	id: "formation/formation-innovation.md";
+  slug: "formation/formation-innovation";
   body: string;
   collection: "articles";
   data: InferEntrySchema<"articles">
 } & { render(): Render[".md"] };
-"gestion-performance-equipe.md": {
-	id: "gestion-performance-equipe.md";
-  slug: "gestion-performance-equipe";
+"formation/formation-mentorat.md": {
+	id: "formation/formation-mentorat.md";
+  slug: "formation/formation-mentorat";
   body: string;
   collection: "articles";
   data: InferEntrySchema<"articles">
 } & { render(): Render[".md"] };
-"gestion-performance-evaluation.md": {
-	id: "gestion-performance-evaluation.md";
-  slug: "gestion-performance-evaluation";
+"formation/formation-professionnelle-continue.md": {
+	id: "formation/formation-professionnelle-continue.md";
+  slug: "formation/formation-professionnelle-continue";
   body: string;
   collection: "articles";
   data: InferEntrySchema<"articles">
 } & { render(): Render[".md"] };
-"gestion-priorites-efficacite.md": {
-	id: "gestion-priorites-efficacite.md";
-  slug: "gestion-priorites-efficacite";
+"formation/formation-soft-skills.md": {
+	id: "formation/formation-soft-skills.md";
+  slug: "formation/formation-soft-skills";
   body: string;
   collection: "articles";
   data: InferEntrySchema<"articles">
 } & { render(): Render[".md"] };
-"gestion-projet-agile-meilleures-pratiques.md": {
-	id: "gestion-projet-agile-meilleures-pratiques.md";
-  slug: "gestion-projet-agile-meilleures-pratiques";
+"formation/formation-talents-guide.md": {
+	id: "formation/formation-talents-guide.md";
+  slug: "formation/formation-talents-guide";
   body: string;
   collection: "articles";
   data: InferEntrySchema<"articles">
 } & { render(): Render[".md"] };
-"gestion-projet-agile.md": {
-	id: "gestion-projet-agile.md";
-  slug: "gestion-projet-agile";
+"formation/formation-technique.md": {
+	id: "formation/formation-technique.md";
+  slug: "formation/formation-technique";
   body: string;
   collection: "articles";
   data: InferEntrySchema<"articles">
 } & { render(): Render[".md"] };
-"gestion-projet-performance.md": {
-	id: "gestion-projet-performance.md";
-  slug: "gestion-projet-performance";
+"formation/impact-formation-continue-carriere.md": {
+	id: "formation/impact-formation-continue-carriere.md";
+  slug: "formation/impact-formation-continue-carriere";
   body: string;
   collection: "articles";
   data: InferEntrySchema<"articles">
 } & { render(): Render[".md"] };
-"gestion-projet-risques.md": {
-	id: "gestion-projet-risques.md";
-  slug: "gestion-projet-risques";
+"formation/mentoring-developpement-professionnel.md": {
+	id: "formation/mentoring-developpement-professionnel.md";
+  slug: "formation/mentoring-developpement-professionnel";
   body: string;
   collection: "articles";
   data: InferEntrySchema<"articles">
 } & { render(): Render[".md"] };
-"gestion-qualite-amelioration.md": {
-	id: "gestion-qualite-amelioration.md";
-  slug: "gestion-qualite-amelioration";
+"gestion-connaissances/gestion-connaissances-organisation.md": {
+	id: "gestion-connaissances/gestion-connaissances-organisation.md";
+  slug: "gestion-connaissances/gestion-connaissances-organisation";
   body: string;
   collection: "articles";
   data: InferEntrySchema<"articles">
 } & { render(): Render[".md"] };
-"gestion-qualite-certification.md": {
-	id: "gestion-qualite-certification.md";
-  slug: "gestion-qualite-certification";
+"gestion-projet/agile-scrum-methodologies.md": {
+	id: "gestion-projet/agile-scrum-methodologies.md";
+  slug: "gestion-projet/agile-scrum-methodologies";
   body: string;
   collection: "articles";
   data: InferEntrySchema<"articles">
 } & { render(): Render[".md"] };
-"gestion-qualite-entreprise.md": {
-	id: "gestion-qualite-entreprise.md";
-  slug: "gestion-qualite-entreprise";
+"gestion-projet/gestion-performance-equipe.md": {
+	id: "gestion-projet/gestion-performance-equipe.md";
+  slug: "gestion-projet/gestion-performance-equipe";
   body: string;
   collection: "articles";
   data: InferEntrySchema<"articles">
 } & { render(): Render[".md"] };
-"gestion-qualite-processus.md": {
-	id: "gestion-qualite-processus.md";
-  slug: "gestion-qualite-processus";
+"gestion-projet/gestion-performance-evaluation.md": {
+	id: "gestion-projet/gestion-performance-evaluation.md";
+  slug: "gestion-projet/gestion-performance-evaluation";
   body: string;
   collection: "articles";
   data: InferEntrySchema<"articles">
 } & { render(): Render[".md"] };
-"gestion-qualite-strategie.md": {
-	id: "gestion-qualite-strategie.md";
-  slug: "gestion-qualite-strategie";
+"gestion-projet/gestion-projet-agile-meilleures-pratiques.md": {
+	id: "gestion-projet/gestion-projet-agile-meilleures-pratiques.md";
+  slug: "gestion-projet/gestion-projet-agile-meilleures-pratiques";
   body: string;
   collection: "articles";
   data: InferEntrySchema<"articles">
 } & { render(): Render[".md"] };
-"gestion-risques-projet.md": {
-	id: "gestion-risques-projet.md";
-  slug: "gestion-risques-projet";
+"gestion-projet/gestion-projet-agile.md": {
+	id: "gestion-projet/gestion-projet-agile.md";
+  slug: "gestion-projet/gestion-projet-agile";
   body: string;
   collection: "articles";
   data: InferEntrySchema<"articles">
 } & { render(): Render[".md"] };
-"gestion-stress-performance.md": {
-	id: "gestion-stress-performance.md";
-  slug: "gestion-stress-performance";
+"gestion-projet/gestion-projet-performance.md": {
+	id: "gestion-projet/gestion-projet-performance.md";
+  slug: "gestion-projet/gestion-projet-performance";
   body: string;
   collection: "articles";
   data: InferEntrySchema<"articles">
 } & { render(): Render[".md"] };
-"gestion-surcharge-informationnelle.md": {
-	id: "gestion-surcharge-informationnelle.md";
-  slug: "gestion-surcharge-informationnelle";
+"gestion-projet/gestion-projet-risques.md": {
+	id: "gestion-projet/gestion-projet-risques.md";
+  slug: "gestion-projet/gestion-projet-risques";
   body: string;
   collection: "articles";
   data: InferEntrySchema<"articles">
 } & { render(): Render[".md"] };
-"gestion-talents-attraction.md": {
-	id: "gestion-talents-attraction.md";
-  slug: "gestion-talents-attraction";
+"gestion-projet/gestion-risques-projet.md": {
+	id: "gestion-projet/gestion-risques-projet.md";
+  slug: "gestion-projet/gestion-risques-projet";
   body: string;
   collection: "articles";
   data: InferEntrySchema<"articles">
 } & { render(): Render[".md"] };
-"gestion-talents-developpement.md": {
-	id: "gestion-talents-developpement.md";
-  slug: "gestion-talents-developpement";
+"gestion-talents/gestion-competences-developpement.md": {
+	id: "gestion-talents/gestion-competences-developpement.md";
+  slug: "gestion-talents/gestion-competences-developpement";
   body: string;
   collection: "articles";
   data: InferEntrySchema<"articles">
 } & { render(): Render[".md"] };
-"gestion-talents-fidelisation.md": {
-	id: "gestion-talents-fidelisation.md";
-  slug: "gestion-talents-fidelisation";
+"gestion-talents/gestion-conflits-equipe.md": {
+	id: "gestion-talents/gestion-conflits-equipe.md";
+  slug: "gestion-talents/gestion-conflits-equipe";
   body: string;
   collection: "articles";
   data: InferEntrySchema<"articles">
 } & { render(): Render[".md"] };
-"gestion-talents-formation.md": {
-	id: "gestion-talents-formation.md";
-  slug: "gestion-talents-formation";
+"gestion-talents/gestion-talents-attraction.md": {
+	id: "gestion-talents/gestion-talents-attraction.md";
+  slug: "gestion-talents/gestion-talents-attraction";
   body: string;
   collection: "articles";
   data: InferEntrySchema<"articles">
 } & { render(): Render[".md"] };
-"gestion-talents-performance.md": {
-	id: "gestion-talents-performance.md";
-  slug: "gestion-talents-performance";
+"gestion-talents/gestion-talents-developpement.md": {
+	id: "gestion-talents/gestion-talents-developpement.md";
+  slug: "gestion-talents/gestion-talents-developpement";
   body: string;
   collection: "articles";
   data: InferEntrySchema<"articles">
 } & { render(): Render[".md"] };
-"gestion-talents-recrutement.md": {
-	id: "gestion-talents-recrutement.md";
-  slug: "gestion-talents-recrutement";
+"gestion-talents/gestion-talents-fidelisation.md": {
+	id: "gestion-talents/gestion-talents-fidelisation.md";
+  slug: "gestion-talents/gestion-talents-fidelisation";
   body: string;
   collection: "articles";
   data: InferEntrySchema<"articles">
 } & { render(): Render[".md"] };
-"gestion-talents-remuneration.md": {
-	id: "gestion-talents-remuneration.md";
-  slug: "gestion-talents-remuneration";
+"gestion-talents/gestion-talents-formation.md": {
+	id: "gestion-talents/gestion-talents-formation.md";
+  slug: "gestion-talents/gestion-talents-formation";
   body: string;
   collection: "articles";
   data: InferEntrySchema<"articles">
 } & { render(): Render[".md"] };
-"gestion-talents-retention.md": {
-	id: "gestion-talents-retention.md";
-  slug: "gestion-talents-retention";
+"gestion-talents/gestion-talents-performance.md": {
+	id: "gestion-talents/gestion-talents-performance.md";
+  slug: "gestion-talents/gestion-talents-performance";
   body: string;
   collection: "articles";
   data: InferEntrySchema<"articles">
 } & { render(): Render[".md"] };
-"gestion-talents-succession.md": {
-	id: "gestion-talents-succession.md";
-  slug: "gestion-talents-succession";
+"gestion-talents/gestion-talents-recrutement.md": {
+	id: "gestion-talents/gestion-talents-recrutement.md";
+  slug: "gestion-talents/gestion-talents-recrutement";
   body: string;
   collection: "articles";
   data: InferEntrySchema<"articles">
 } & { render(): Render[".md"] };
-"gestion-talents-valuation.md": {
-	id: "gestion-talents-valuation.md";
-  slug: "gestion-talents-valuation";
+"gestion-talents/gestion-talents-remuneration.md": {
+	id: "gestion-talents/gestion-talents-remuneration.md";
+  slug: "gestion-talents/gestion-talents-remuneration";
   body: string;
   collection: "articles";
   data: InferEntrySchema<"articles">
 } & { render(): Render[".md"] };
-"gestion-talents-whistleblowing.md": {
-	id: "gestion-talents-whistleblowing.md";
-  slug: "gestion-talents-whistleblowing";
+"gestion-talents/gestion-talents-retention.md": {
+	id: "gestion-talents/gestion-talents-retention.md";
+  slug: "gestion-talents/gestion-talents-retention";
   body: string;
   collection: "articles";
   data: InferEntrySchema<"articles">
 } & { render(): Render[".md"] };
-"gestion-talents-xenophobia.md": {
-	id: "gestion-talents-xenophobia.md";
-  slug: "gestion-talents-xenophobia";
+"gestion-talents/gestion-talents-succession.md": {
+	id: "gestion-talents/gestion-talents-succession.md";
+  slug: "gestion-talents/gestion-talents-succession";
   body: string;
   collection: "articles";
   data: InferEntrySchema<"articles">
 } & { render(): Render[".md"] };
-"gestion-talents-youth.md": {
-	id: "gestion-talents-youth.md";
-  slug: "gestion-talents-youth";
+"gestion-talents/gestion-talents-valuation.md": {
+	id: "gestion-talents/gestion-talents-valuation.md";
+  slug: "gestion-talents/gestion-talents-valuation";
   body: string;
   collection: "articles";
   data: InferEntrySchema<"articles">
 } & { render(): Render[".md"] };
-"gestion-talents-zen.md": {
-	id: "gestion-talents-zen.md";
-  slug: "gestion-talents-zen";
+"gestion-talents/gestion-talents-whistleblowing.md": {
+	id: "gestion-talents/gestion-talents-whistleblowing.md";
+  slug: "gestion-talents/gestion-talents-whistleblowing";
   body: string;
   collection: "articles";
   data: InferEntrySchema<"articles">
 } & { render(): Render[".md"] };
-"gestion-temps-productivite.md": {
-	id: "gestion-temps-productivite.md";
-  slug: "gestion-temps-productivite";
+"gestion-talents/gestion-talents-xenophobia.md": {
+	id: "gestion-talents/gestion-talents-xenophobia.md";
+  slug: "gestion-talents/gestion-talents-xenophobia";
   body: string;
   collection: "articles";
   data: InferEntrySchema<"articles">
 } & { render(): Render[".md"] };
-"gestion-temps-professionnels.md": {
-	id: "gestion-temps-professionnels.md";
-  slug: "gestion-temps-professionnels";
+"gestion-talents/gestion-talents-youth.md": {
+	id: "gestion-talents/gestion-talents-youth.md";
+  slug: "gestion-talents/gestion-talents-youth";
   body: string;
   collection: "articles";
   data: InferEntrySchema<"articles">
 } & { render(): Render[".md"] };
-"gestion-temps.md": {
-	id: "gestion-temps.md";
-  slug: "gestion-temps";
+"gestion-talents/gestion-talents-zen.md": {
+	id: "gestion-talents/gestion-talents-zen.md";
+  slug: "gestion-talents/gestion-talents-zen";
   body: string;
   collection: "articles";
   data: InferEntrySchema<"articles">
 } & { render(): Render[".md"] };
-"ia-transformation-societe-2024-analyse.md": {
-	id: "ia-transformation-societe-2024-analyse.md";
-  slug: "ia-transformation-societe-2024-analyse";
+"innovation-technologies/ia-transformation-societe-2024-analyse.md": {
+	id: "innovation-technologies/ia-transformation-societe-2024-analyse.md";
+  slug: "innovation-technologies/ia-transformation-societe-2024-analyse";
   body: string;
   collection: "articles";
   data: InferEntrySchema<"articles">
 } & { render(): Render[".md"] };
-"ia-transformation-societe-2024.md": {
-	id: "ia-transformation-societe-2024.md";
-  slug: "ia-transformation-societe-2024";
+"innovation-technologies/ia-transformation-societe-2024.md": {
+	id: "innovation-technologies/ia-transformation-societe-2024.md";
+  slug: "innovation-technologies/ia-transformation-societe-2024";
   body: string;
   collection: "articles";
   data: InferEntrySchema<"articles">
 } & { render(): Render[".md"] };
-"impact-formation-continue-carriere.md": {
-	id: "impact-formation-continue-carriere.md";
-  slug: "impact-formation-continue-carriere";
+"innovation-technologies/intelligence-artificielle-transformation-marketing.md": {
+	id: "innovation-technologies/intelligence-artificielle-transformation-marketing.md";
+  slug: "innovation-technologies/intelligence-artificielle-transformation-marketing";
   body: string;
   collection: "articles";
   data: InferEntrySchema<"articles">
 } & { render(): Render[".md"] };
-"importance-leadership.md": {
-	id: "importance-leadership.md";
-  slug: "importance-leadership";
+"innovation-technologies/nouvelles-tendances-developpement-web.md": {
+	id: "innovation-technologies/nouvelles-tendances-developpement-web.md";
+  slug: "innovation-technologies/nouvelles-tendances-developpement-web";
   body: string;
   collection: "articles";
   data: InferEntrySchema<"articles">
 } & { render(): Render[".md"] };
-"intelligence-artificielle-transformation-marketing.md": {
-	id: "intelligence-artificielle-transformation-marketing.md";
-  slug: "intelligence-artificielle-transformation-marketing";
+"leadership-management/formation-leadership.md": {
+	id: "leadership-management/formation-leadership.md";
+  slug: "leadership-management/formation-leadership";
   body: string;
   collection: "articles";
   data: InferEntrySchema<"articles">
 } & { render(): Render[".md"] };
-"leadership-equipes-performance.md": {
-	id: "leadership-equipes-performance.md";
-  slug: "leadership-equipes-performance";
+"leadership-management/importance-leadership.md": {
+	id: "leadership-management/importance-leadership.md";
+  slug: "leadership-management/importance-leadership";
   body: string;
   collection: "articles";
   data: InferEntrySchema<"articles">
 } & { render(): Render[".md"] };
-"management-diversite-inclusion.md": {
-	id: "management-diversite-inclusion.md";
-  slug: "management-diversite-inclusion";
+"leadership-management/leadership-equipes-performance.md": {
+	id: "leadership-management/leadership-equipes-performance.md";
+  slug: "leadership-management/leadership-equipes-performance";
   body: string;
   collection: "articles";
   data: InferEntrySchema<"articles">
 } & { render(): Render[".md"] };
-"management-hybride-defis-opportunites.md": {
-	id: "management-hybride-defis-opportunites.md";
-  slug: "management-hybride-defis-opportunites";
+"leadership-management/management-diversite-inclusion.md": {
+	id: "leadership-management/management-diversite-inclusion.md";
+  slug: "leadership-management/management-diversite-inclusion";
   body: string;
   collection: "articles";
   data: InferEntrySchema<"articles">
 } & { render(): Render[".md"] };
-"marketing-content-strategies.md": {
-	id: "marketing-content-strategies.md";
-  slug: "marketing-content-strategies";
+"leadership-management/management-hybride-defis-opportunites.md": {
+	id: "leadership-management/management-hybride-defis-opportunites.md";
+  slug: "leadership-management/management-hybride-defis-opportunites";
   body: string;
   collection: "articles";
   data: InferEntrySchema<"articles">
 } & { render(): Render[".md"] };
-"marketing-digital-strategies.md": {
-	id: "marketing-digital-strategies.md";
-  slug: "marketing-digital-strategies";
+"marketing-communication/email-marketing-personnalisation.md": {
+	id: "marketing-communication/email-marketing-personnalisation.md";
+  slug: "marketing-communication/email-marketing-personnalisation";
   body: string;
   collection: "articles";
   data: InferEntrySchema<"articles">
 } & { render(): Render[".md"] };
-"mentoring-developpement-professionnel.md": {
-	id: "mentoring-developpement-professionnel.md";
-  slug: "mentoring-developpement-professionnel";
+"marketing-communication/marketing-content-strategies.md": {
+	id: "marketing-communication/marketing-content-strategies.md";
+  slug: "marketing-communication/marketing-content-strategies";
   body: string;
   collection: "articles";
   data: InferEntrySchema<"articles">
 } & { render(): Render[".md"] };
-"mermaid-example.md": {
-	id: "mermaid-example.md";
-  slug: "mermaid-example";
+"marketing-communication/marketing-digital-strategies.md": {
+	id: "marketing-communication/marketing-digital-strategies.md";
+  slug: "marketing-communication/marketing-digital-strategies";
   body: string;
   collection: "articles";
   data: InferEntrySchema<"articles">
 } & { render(): Render[".md"] };
-"methode-gtd-expliquee.md": {
-	id: "methode-gtd-expliquee.md";
-  slug: "methode-gtd-expliquee";
+"marketing-communication/strategies-marketing-digital-2025.md": {
+	id: "marketing-communication/strategies-marketing-digital-2025.md";
+  slug: "marketing-communication/strategies-marketing-digital-2025";
   body: string;
   collection: "articles";
   data: InferEntrySchema<"articles">
 } & { render(): Render[".md"] };
-"methode-pomodoro.md": {
-	id: "methode-pomodoro.md";
-  slug: "methode-pomodoro";
+"marketing-communication/strategies-reseaux-sociaux-b2b.md": {
+	id: "marketing-communication/strategies-reseaux-sociaux-b2b.md";
+  slug: "marketing-communication/strategies-reseaux-sociaux-b2b";
   body: string;
   collection: "articles";
   data: InferEntrySchema<"articles">
 } & { render(): Render[".md"] };
-"negocier-salaire-techniques-avancees.md": {
-	id: "negocier-salaire-techniques-avancees.md";
-  slug: "negocier-salaire-techniques-avancees";
+"marketing-communication/strategies-reseaux-sociaux-entreprises.md": {
+	id: "marketing-communication/strategies-reseaux-sociaux-entreprises.md";
+  slug: "marketing-communication/strategies-reseaux-sociaux-entreprises";
   body: string;
   collection: "articles";
   data: InferEntrySchema<"articles">
 } & { render(): Render[".md"] };
-"nouvelles-tendances-developpement-web.md": {
-	id: "nouvelles-tendances-developpement-web.md";
-  slug: "nouvelles-tendances-developpement-web";
+"outils-techniques/mermaid-example.md": {
+	id: "outils-techniques/mermaid-example.md";
+  slug: "outils-techniques/mermaid-example";
   body: string;
   collection: "articles";
   data: InferEntrySchema<"articles">
 } & { render(): Render[".md"] };
-"optimisation-processus-entreprise.md": {
-	id: "optimisation-processus-entreprise.md";
-  slug: "optimisation-processus-entreprise";
+"outils-techniques/pillcolor-guide.md": {
+	id: "outils-techniques/pillcolor-guide.md";
+  slug: "outils-techniques/pillcolor-guide";
   body: string;
   collection: "articles";
   data: InferEntrySchema<"articles">
 } & { render(): Render[".md"] };
-"pillcolor-guide.md": {
-	id: "pillcolor-guide.md";
-  slug: "pillcolor-guide";
+"outils-techniques/visualisations-mermaid.md": {
+	id: "outils-techniques/visualisations-mermaid.md";
+  slug: "outils-techniques/visualisations-mermaid";
   body: string;
   collection: "articles";
   data: InferEntrySchema<"articles">
 } & { render(): Render[".md"] };
-"premier-article.md": {
-	id: "premier-article.md";
-  slug: "premier-article";
+"productivite-methodes/deep-work.md": {
+	id: "productivite-methodes/deep-work.md";
+  slug: "productivite-methodes/deep-work";
   body: string;
   collection: "articles";
   data: InferEntrySchema<"articles">
 } & { render(): Render[".md"] };
-"procrastination-solutions-efficaces.md": {
-	id: "procrastination-solutions-efficaces.md";
-  slug: "procrastination-solutions-efficaces";
+"productivite-methodes/gestion-priorites-efficacite.md": {
+	id: "productivite-methodes/gestion-priorites-efficacite.md";
+  slug: "productivite-methodes/gestion-priorites-efficacite";
   body: string;
   collection: "articles";
   data: InferEntrySchema<"articles">
 } & { render(): Render[".md"] };
-"productivite-professionnelle.md": {
-	id: "productivite-professionnelle.md";
-  slug: "productivite-professionnelle";
+"productivite-methodes/gestion-stress-performance.md": {
+	id: "productivite-methodes/gestion-stress-performance.md";
+  slug: "productivite-methodes/gestion-stress-performance";
   body: string;
   collection: "articles";
   data: InferEntrySchema<"articles">
 } & { render(): Render[".md"] };
-"progressive-web-apps-2024.md": {
-	id: "progressive-web-apps-2024.md";
-  slug: "progressive-web-apps-2024";
+"productivite-methodes/gestion-surcharge-informationnelle.md": {
+	id: "productivite-methodes/gestion-surcharge-informationnelle.md";
+  slug: "productivite-methodes/gestion-surcharge-informationnelle";
   body: string;
   collection: "articles";
   data: InferEntrySchema<"articles">
 } & { render(): Render[".md"] };
-"qualite-processus-entreprise.md": {
-	id: "qualite-processus-entreprise.md";
-  slug: "qualite-processus-entreprise";
+"productivite-methodes/gestion-temps-productivite.md": {
+	id: "productivite-methodes/gestion-temps-productivite.md";
+  slug: "productivite-methodes/gestion-temps-productivite";
   body: string;
   collection: "articles";
   data: InferEntrySchema<"articles">
 } & { render(): Render[".md"] };
-"react-performance-optimisation.md": {
-	id: "react-performance-optimisation.md";
-  slug: "react-performance-optimisation";
+"productivite-methodes/gestion-temps-professionnels.md": {
+	id: "productivite-methodes/gestion-temps-professionnels.md";
+  slug: "productivite-methodes/gestion-temps-professionnels";
   body: string;
   collection: "articles";
   data: InferEntrySchema<"articles">
 } & { render(): Render[".md"] };
-"reconversion-professionnelle-reussie.md": {
-	id: "reconversion-professionnelle-reussie.md";
-  slug: "reconversion-professionnelle-reussie";
+"productivite-methodes/gestion-temps.md": {
+	id: "productivite-methodes/gestion-temps.md";
+  slug: "productivite-methodes/gestion-temps";
   body: string;
   collection: "articles";
   data: InferEntrySchema<"articles">
 } & { render(): Render[".md"] };
-"recrutement-talents-digitaux.md": {
-	id: "recrutement-talents-digitaux.md";
-  slug: "recrutement-talents-digitaux";
+"productivite-methodes/methode-gtd-expliquee.md": {
+	id: "productivite-methodes/methode-gtd-expliquee.md";
+  slug: "productivite-methodes/methode-gtd-expliquee";
   body: string;
   collection: "articles";
   data: InferEntrySchema<"articles">
 } & { render(): Render[".md"] };
-"service-client-excellence.md": {
-	id: "service-client-excellence.md";
-  slug: "service-client-excellence";
+"productivite-methodes/methode-pomodoro.md": {
+	id: "productivite-methodes/methode-pomodoro.md";
+  slug: "productivite-methodes/methode-pomodoro";
   body: string;
   collection: "articles";
   data: InferEntrySchema<"articles">
 } & { render(): Render[".md"] };
-"service-client-performance.md": {
-	id: "service-client-performance.md";
-  slug: "service-client-performance";
+"productivite-methodes/procrastination-solutions-efficaces.md": {
+	id: "productivite-methodes/procrastination-solutions-efficaces.md";
+  slug: "productivite-methodes/procrastination-solutions-efficaces";
   body: string;
   collection: "articles";
   data: InferEntrySchema<"articles">
 } & { render(): Render[".md"] };
-"strategies-marketing-digital-2025.md": {
-	id: "strategies-marketing-digital-2025.md";
-  slug: "strategies-marketing-digital-2025";
+"productivite-methodes/productivite-professionnelle.md": {
+	id: "productivite-methodes/productivite-professionnelle.md";
+  slug: "productivite-methodes/productivite-professionnelle";
   body: string;
   collection: "articles";
   data: InferEntrySchema<"articles">
 } & { render(): Render[".md"] };
-"strategies-reseaux-sociaux-b2b.md": {
-	id: "strategies-reseaux-sociaux-b2b.md";
-  slug: "strategies-reseaux-sociaux-b2b";
+"qualite-process/gestion-qualite-amelioration.md": {
+	id: "qualite-process/gestion-qualite-amelioration.md";
+  slug: "qualite-process/gestion-qualite-amelioration";
   body: string;
   collection: "articles";
   data: InferEntrySchema<"articles">
 } & { render(): Render[".md"] };
-"strategies-reseaux-sociaux-entreprises.md": {
-	id: "strategies-reseaux-sociaux-entreprises.md";
-  slug: "strategies-reseaux-sociaux-entreprises";
+"qualite-process/gestion-qualite-certification.md": {
+	id: "qualite-process/gestion-qualite-certification.md";
+  slug: "qualite-process/gestion-qualite-certification";
   body: string;
   collection: "articles";
   data: InferEntrySchema<"articles">
 } & { render(): Render[".md"] };
-"synthese-thematiques.md": {
-	id: "synthese-thematiques.md";
-  slug: "synthese-thematiques";
+"qualite-process/gestion-qualite-entreprise.md": {
+	id: "qualite-process/gestion-qualite-entreprise.md";
+  slug: "qualite-process/gestion-qualite-entreprise";
   body: string;
   collection: "articles";
   data: InferEntrySchema<"articles">
 } & { render(): Render[".md"] };
-"technologies-javascript-2024.md": {
-	id: "technologies-javascript-2024.md";
-  slug: "technologies-javascript-2024";
+"qualite-process/gestion-qualite-processus.md": {
+	id: "qualite-process/gestion-qualite-processus.md";
+  slug: "qualite-process/gestion-qualite-processus";
   body: string;
   collection: "articles";
   data: InferEntrySchema<"articles">
 } & { render(): Render[".md"] };
-"template-article.md": {
-	id: "template-article.md";
-  slug: "template-article";
+"qualite-process/gestion-qualite-strategie.md": {
+	id: "qualite-process/gestion-qualite-strategie.md";
+  slug: "qualite-process/gestion-qualite-strategie";
   body: string;
   collection: "articles";
   data: InferEntrySchema<"articles">
 } & { render(): Render[".md"] };
-"tendances-developpement-web-2025.md": {
-	id: "tendances-developpement-web-2025.md";
-  slug: "tendances-developpement-web-2025";
+"qualite-process/optimisation-processus-entreprise.md": {
+	id: "qualite-process/optimisation-processus-entreprise.md";
+  slug: "qualite-process/optimisation-processus-entreprise";
   body: string;
   collection: "articles";
   data: InferEntrySchema<"articles">
 } & { render(): Render[".md"] };
-"transformation-digitale-telecom.md": {
-	id: "transformation-digitale-telecom.md";
-  slug: "transformation-digitale-telecom";
+"qualite-process/qualite-processus-entreprise.md": {
+	id: "qualite-process/qualite-processus-entreprise.md";
+  slug: "qualite-process/qualite-processus-entreprise";
   body: string;
   collection: "articles";
   data: InferEntrySchema<"articles">
 } & { render(): Render[".md"] };
-"transformation-numerique-entreprise.md": {
-	id: "transformation-numerique-entreprise.md";
-  slug: "transformation-numerique-entreprise";
+"reconversion-carriere/reconversion-professionnelle-reussie.md": {
+	id: "reconversion-carriere/reconversion-professionnelle-reussie.md";
+  slug: "reconversion-carriere/reconversion-professionnelle-reussie";
   body: string;
   collection: "articles";
   data: InferEntrySchema<"articles">
 } & { render(): Render[".md"] };
-"transformation-numerique-talents.md": {
-	id: "transformation-numerique-talents.md";
-  slug: "transformation-numerique-talents";
+"service-client/service-client-excellence.md": {
+	id: "service-client/service-client-excellence.md";
+  slug: "service-client/service-client-excellence";
   body: string;
   collection: "articles";
   data: InferEntrySchema<"articles">
 } & { render(): Render[".md"] };
-"visualisations-mermaid.md": {
-	id: "visualisations-mermaid.md";
-  slug: "visualisations-mermaid";
+"service-client/service-client-performance.md": {
+	id: "service-client/service-client-performance.md";
+  slug: "service-client/service-client-performance";
   body: string;
   collection: "articles";
   data: InferEntrySchema<"articles">
 } & { render(): Render[".md"] };
-"web-accessibilite-guide-pratique.md": {
-	id: "web-accessibilite-guide-pratique.md";
-  slug: "web-accessibilite-guide-pratique";
+"transformation-digitale/transformation-digitale-telecom.md": {
+	id: "transformation-digitale/transformation-digitale-telecom.md";
+  slug: "transformation-digitale/transformation-digitale-telecom";
   body: string;
   collection: "articles";
   data: InferEntrySchema<"articles">
 } & { render(): Render[".md"] };
-"web-javascript-modern.md": {
-	id: "web-javascript-modern.md";
-  slug: "web-javascript-modern";
+"transformation-digitale/transformation-numerique-entreprise.md": {
+	id: "transformation-digitale/transformation-numerique-entreprise.md";
+  slug: "transformation-digitale/transformation-numerique-entreprise";
   body: string;
   collection: "articles";
   data: InferEntrySchema<"articles">
 } & { render(): Render[".md"] };
-"web-tendances-2024.md": {
-	id: "web-tendances-2024.md";
-  slug: "web-tendances-2024";
+"transformation-digitale/transformation-numerique-talents.md": {
+	id: "transformation-digitale/transformation-numerique-talents.md";
+  slug: "transformation-digitale/transformation-numerique-talents";
   body: string;
   collection: "articles";
   data: InferEntrySchema<"articles">

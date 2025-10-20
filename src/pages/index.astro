@@ -1,5 +1,6 @@
 ---
 import { getCollection } from 'astro:content';
+import { FEATURED_ARTICLES_BY_DOMAIN, getFeaturedArticlesForDomain } from '../config/featured-articles';
 
 // Layout import — provides basic page elements: <head>, <nav>, <footer> etc.
 import BaseLayout from '../layouts/BaseLayout.astro';
@@ -82,67 +83,49 @@ const pageDescription = "Portfolio de Gérald Paméole, développeur web full st
 // Récupérer tous les articles
 const allArticles = await getCollection('articles');
 
-// Définir les domaines de compétence principaux avec leurs meilleurs articles
+// Fonction pour obtenir les articles d'un domaine spécifique
+function getArticlesForDomain(domain: string) {
+  const featuredSlugs = getFeaturedArticlesForDomain(domain);
+  return allArticles.filter(article => 
+    featuredSlugs.includes(article.slug)
+  ).sort((a, b) => {
+    if (a.data.featured && !b.data.featured) return -1;
+    if (!a.data.featured && b.data.featured) return 1;
+    return new Date(b.data.publishDate).getTime() - new Date(a.data.publishDate).getTime();
+  });
+}
+
+// Définir les domaines de compétence principaux avec leurs articles sélectionnés
 const domainesCompetences = {
   "Formation & Développement": {
     description: "Articles sur la formation, le développement des compétences et l'apprentissage continu",
     color: "blue",
     icon: "fas fa-graduation-cap",
-    articles: allArticles
-      .filter(article => article.data.tags?.some(tag => 
-        ['formation', 'développement', 'apprentissage', 'compétences'].includes(tag.toLowerCase())
-      ))
-      .sort((a, b) => {
-        if (a.data.featured && !b.data.featured) return -1;
-        if (!a.data.featured && b.data.featured) return 1;
-        return new Date(b.data.publishDate).getTime() - new Date(a.data.publishDate).getTime();
-      })
-      .slice(0, 3)
+    articles: getArticlesForDomain('formation')
   },
   "Gestion des Talents": {
     description: "Stratégies et méthodes pour gérer, développer et fidéliser les talents",
     color: "green", 
     icon: "fas fa-users",
-    articles: allArticles
-      .filter(article => article.data.tags?.some(tag => 
-        ['talents', 'gestion', 'recrutement', 'fidélisation', 'rétention'].includes(tag.toLowerCase())
-      ))
-      .sort((a, b) => {
-        if (a.data.featured && !b.data.featured) return -1;
-        if (!a.data.featured && b.data.featured) return 1;
-        return new Date(b.data.publishDate).getTime() - new Date(a.data.publishDate).getTime();
-      })
-      .slice(0, 3)
+    articles: getArticlesForDomain('gestion-talents')
   },
   "Développement Web": {
     description: "Tendances, technologies et bonnes pratiques du développement web moderne",
     color: "purple",
     icon: "fas fa-code",
-    articles: allArticles
-      .filter(article => article.data.tags?.some(tag => 
-        ['développement web', 'javascript', 'react', 'frontend', 'backend', 'technologies'].includes(tag.toLowerCase())
-      ))
-      .sort((a, b) => {
-        if (a.data.featured && !b.data.featured) return -1;
-        if (!a.data.featured && b.data.featured) return 1;
-        return new Date(b.data.publishDate).getTime() - new Date(a.data.publishDate).getTime();
-      })
-      .slice(0, 3)
+    articles: getArticlesForDomain('developpement-web')
   },
-  "Management": {
-    description: "Leadership, gestion d'équipe et management de projet",
+  "Gestion de Projet": {
+    description: "Méthodologies, outils et bonnes pratiques pour la gestion de projet",
     color: "orange",
-    icon: "fas fa-briefcase",
-    articles: allArticles
-      .filter(article => article.data.tags?.some(tag => 
-        ['management', 'leadership', 'gestion de projet', 'équipe'].includes(tag.toLowerCase())
-      ))
-      .sort((a, b) => {
-        if (a.data.featured && !b.data.featured) return -1;
-        if (!a.data.featured && b.data.featured) return 1;
-        return new Date(b.data.publishDate).getTime() - new Date(a.data.publishDate).getTime();
-      })
-      .slice(0, 3)
+    icon: "fas fa-tasks",
+    articles: getArticlesForDomain('gestion-projet')
+  },
+  "Qualité & Processus": {
+    description: "Amélioration continue, certification et optimisation des processus",
+    color: "red",
+    icon: "fas fa-check-circle",
+    articles: getArticlesForDomain('qualite-process')
   }
 };
 

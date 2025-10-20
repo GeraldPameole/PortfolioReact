@@ -1,6 +1,6 @@
 ---
 import { getCollection } from 'astro:content';
-import { COLOR_CLASSES, TEXT_COLORS, ICON_COLORS } from '../config/domains';
+import { COLOR_CLASSES } from '../config/domains';
 import BaseLayout from '../layouts/BaseLayout.astro';
 
 // Récupération et tri des articles
@@ -56,9 +56,9 @@ const values = [
 
 // Expériences professionnelles
 const experiences = [
-  {
+{
     title: "KEOS TELECOM",
-    position: "Chef de projet",
+    position: "Chef de projet pilotage d'activité",
     period: "Depuis 2021",
     description: "Coordination d'équipes multidisciplinaires, performance et évolutivité, optimisation des opérations."
   },
@@ -70,17 +70,29 @@ const experiences = [
   },
   {
     title: "SFR",
-    position: "Chargé de formation & développement",
-    period: "2018-2019",
-    description: "Formation continue, accompagnement stratégique des équipes commerciales, optimisation des performances."
+    position: " Superviseur développement commercial Rétention",
+    period: "2015-2018",
+    description: "Formation continue, accompagnement stratégique des équipes commerciales, développement et optimisation des performances commerciales."
   },
   {
     title: "SFR",
-    position: "Chargé de formation",
-    period: "2016-2018",
-    description: "Développement des compétences, création et analyse d'indicateurs, animation d'ateliers."
-  }
-];
+    position: "Chargé de qualité ",
+    period: "2012-2015",
+    description: "Mise en place et suivi des standards de qualité, évaluation de la qualité du service, formation et coaching, gestion des plaintes et retours, analyse et reporting."
+  },
+  {
+    title: "SFR",
+    position: "Chargé de formation Outils et Méthodes",
+    period: "2009-2012",
+    description: "Conception et animation de formations sur les outils et méthodes de travail, support et accompagnement des équipes commerciales, développement des compétences et optimisation des performances."
+  },
+  {
+    title: "SFR",
+    position: "Chargé de développement commercial",
+    period: "2006-2009",
+    description: "Développement commercial, optimisation des KPIs, processus de vente et fidélisation."
+  }];;
+
 
 // Domaines d'expertise
 const expertiseDomains = [
