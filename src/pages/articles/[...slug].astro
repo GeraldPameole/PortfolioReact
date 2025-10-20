@@ -257,7 +257,7 @@ const currentUrl = Astro.url.toString();
               <!-- Image miniature -->
               <div class="relative overflow-hidden rounded-lg h-32 mb-4 bg-gradient-to-br from-indigo-500 to-purple-600">
                 {relatedArticle.data.image ? (
-                  <img src={relatedArticle.data.image} alt={relatedArticle.data.title} class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                  <img src={relatedArticle.data.image} alt={relatedArticle.data.title} loading="lazy" decoding="async" fetchpriority="low" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                 ) : (
                   <div class="w-full h-full flex items-center justify-center">
                     <i class="fas fa-newspaper text-3xl text-white/80"></i>

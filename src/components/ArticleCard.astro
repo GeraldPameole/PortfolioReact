@@ -104,12 +104,13 @@ const imageUrl = getValidImageUrl(article.data.image);
 	<article class="h-full bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden transform transition-all duration-300 group-hover:shadow-lg group-hover:-translate-y-1 border border-gray-100 dark:border-gray-700">
 		<div class="relative h-52 overflow-hidden">
 			{imageUrl ? (
-				<img 
-					src={imageUrl} 
-					alt={article.data.title} 
-					class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-					onerror="this.onerror=null; this.src='/placeholder-article.webp';"
-				/>
+            <img 
+                src={imageUrl} 
+                alt={article.data.title} 
+                loading="lazy" decoding="async" fetchpriority="low"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                onerror="this.onerror=null; this.src='/placeholder-article.webp';"
+            />
 			) : (
 				<div class="w-full h-full bg-gradient-to-r from-indigo-500 to-blue-500 flex items-center justify-center">
 					<i class={`${themeConfig.icon || 'fas fa-newspaper'} text-white text-4xl`}></i>

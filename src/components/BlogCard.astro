@@ -104,7 +104,7 @@ const contentClasses = featured
           alt={`Image illustrant l'article: ${title}`}
           class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
           itemprop="image"
-          loading="lazy"
+          loading="lazy" decoding="async" fetchpriority="low"
         />
       ) : (
         <div class={`w-full h-full ${themeGradientClass}`}>
@@ -156,7 +156,7 @@ const contentClasses = featured
       
       <div class="mt-auto pt-4 border-t border-gray-100 dark:border-gray-700 flex items-center justify-between">
         <div class="flex items-center">
-          <img src="/assets/profile-small.jpg" alt={author} class="w-8 h-8 rounded-full mr-2" />
+        <img src="/assets/profile-small.jpg" alt={author} loading="lazy" decoding="async" fetchpriority="low" class="w-8 h-8 rounded-full mr-2" />
           <div>
             <span class="text-sm font-medium text-gray-700 dark:text-gray-300" itemprop="author" itemscope itemtype="https://schema.org/Person">
               <span itemprop="name">{author}</span>

@@ -117,6 +117,7 @@ const imageUrl = getValidImageUrl(article.data.image);
         <img 
           src={imageUrl} 
           alt={article.data.title} 
+          loading="lazy" decoding="async" fetchpriority="low"
           class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
           onerror="this.onerror=null; this.src='/placeholder-article.webp';"
         />
@@ -242,6 +243,7 @@ const imageUrl = getValidImageUrl(article.data.image);
           <img 
             src={imageUrl} 
             alt={article.data.title} 
+            loading="lazy" decoding="async" fetchpriority="low"
             class="w-full h-full object-cover"
           />
         ) : (

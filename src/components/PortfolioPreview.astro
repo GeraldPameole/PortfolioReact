@@ -35,12 +35,12 @@ const projectColor = data.technologies && data.technologies.length > 0
 		<div class="relative overflow-hidden">
 			{data.image ? (
 				<div class="aspect-video">
-					<img 
-						src={data.image} 
-						alt={data.title} 
-						class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-						loading="lazy"
-					/>
+                    <img 
+                        src={data.image} 
+                        alt={data.title} 
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        loading="lazy" decoding="async" fetchpriority="low"
+                    />
 				</div>
 			) : (
 				<div class={`aspect-video bg-gradient-to-r ${projectColor} flex items-center justify-center`}>
