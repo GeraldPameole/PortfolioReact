@@ -393,9 +393,9 @@ const totalDomaines = Object.keys(domainesCompetences).length;
 										<article class="modern-article-card group" style={`animation-delay: ${index * 0.2}s`}>
 											<!-- Image de couverture avec overlay -->
 											<div class="relative overflow-hidden rounded-t-2xl h-48 bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500">
-												{article.data.image ? (
-													<img src={article.data.image} alt={article.data.title} class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
-												) : (
+                                                {article.data.image ? (
+                                                    <img src={article.data.image} alt={article.data.title} loading="lazy" decoding="async" fetchpriority="low" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                                                ) : (
 													<div class="w-full h-full flex items-center justify-center">
 														<i class={`${config.icon} text-6xl text-white/80`}></i>
 													</div>
@@ -582,7 +582,7 @@ const totalDomaines = Object.keys(domainesCompetences).length;
 						<article class="bg-gray-50 dark:bg-gray-700 rounded-lg p-6 hover:shadow-md transition-shadow duration-300">
 							{(book.data as any).cover && (
 								<div class="mb-4">
-									<img src={(book.data as any).cover} alt={book.data.title} class="w-full h-48 object-cover rounded-lg" />
+                                    <img src={(book.data as any).cover} alt={book.data.title} loading="lazy" decoding="async" fetchpriority="low" class="w-full h-48 object-cover rounded-lg" />
 								</div>
 							)}
 							

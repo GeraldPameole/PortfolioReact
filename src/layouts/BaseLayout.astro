@@ -68,6 +68,11 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://gerald-p
 		
 		<!-- Préchargement des ressources critiques -->
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+		<link rel="dns-prefetch" href="//fonts.gstatic.com" />
+		<link rel="dns-prefetch" href="//fonts.googleapis.com" />
+		<link rel="dns-prefetch" href="//cdnjs.cloudflare.com" />
 		
 		<!-- Évite le FOUC (Flash of Unstyled Content) -->
 		<script is:inline define:vars={{ isDarkMode: false }}>
