@@ -1,7 +1,7 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
 import { getFeaturedArticlesForDomain } from '../config/featured-articles';
+import BaseLayout from '../layouts/BaseLayout.astro';
 
 // Récupérer tous les articles
 const allArticles = await getCollection('articles');
