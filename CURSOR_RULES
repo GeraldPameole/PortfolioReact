@@ -1,0 +1,384 @@
+# CURSOR RULES - Portfolio Gérald Paméole
+
+## 🎯 CONTEXTE DU PROJET
+
+- **Framework**: Astro 3.6.5 avec React, TypeScript, Tailwind CSS
+- **Type**: Portfolio professionnel multi-domaines (développement web, gestion de projet, formation)
+- **Architecture**: Site statique avec collections de contenu (articles, livres, projets)
+- **Langue**: Français (i18n configuré pour fr/en/es)
+- **Déploiement**: Site statique sur https://geraldpameole.fr
+
+## 🏗️ ARCHITECTURE & STRUCTURE
+
+### Organisation des Fichiers
+
+```
+src/
+├── components/          # Composants Astro (.astro) et React (.tsx)
+├── config/             # Configuration centralisée (domaines, articles)
+├── content/            # Collections de contenu (articles/, books/, work/)
+├── layouts/            # Layouts Astro (BaseLayout.astro)
+├── pages/              # Pages Astro (routing automatique)
+├── styles/             # CSS global et spécialisés
+├── utils/              # Utilitaires TypeScript
+└── types/              # Définitions TypeScript
+```
+
+### Règles de Nommage
+
+- **Composants Astro**: PascalCase.astro (ex: ArticleCard.astro)
+- **Composants React**: PascalCase.tsx (ex: Navbar.tsx)
+- **Pages**: kebab-case.astro (ex: blog.astro, about.astro)
+- **Utilitaires**: camelCase.ts (ex: themeUtils.ts)
+- **Collections**: kebab-case/ (ex: articles/, books/)
+
+## 🎨 DESIGN SYSTEM & STYLING
+
+### Tailwind CSS
+
+- **Configuration**: Utiliser les couleurs du système (primary, secondary, accent)
+- **Dark Mode**: Toujours implémenter avec `dark:` prefix
+- **Responsive**: Mobile-first avec breakpoints (sm:, md:, lg:, xl:)
+- **Couleurs**: Utiliser les classes définies dans `src/config/domains.ts`
+
+### Couleurs par Domaine
+
+```typescript
+// Utiliser les couleurs définies dans domains.ts
+const colorClasses = {
+  blue: "bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-300",
+  green: "bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-300",
+  // ... autres couleurs
+};
+```
+
+### Icônes
+
+- **Font Awesome**: Utiliser les classes `fas fa-*` définies dans `domains.ts`
+- **Cohérence**: Toujours utiliser les icônes du système de configuration
+
+## 📝 GESTION DU CONTENU
+
+### Collections Astro
+
+- **Articles**: Schéma défini dans `src/content/config.ts`
+- **Validation**: Utiliser Zod pour la validation des schémas
+- **Métadonnées**: Toujours inclure title, description, publishDate, tags
+
+### Articles par Domaine
+
+- **Configuration**: Utiliser `src/config/featured-articles.ts`
+- **Organisation**: Articles organisés dans des dossiers par domaine
+- **Sélection**: 3 articles maximum par domaine sur les pages principales
+
+### Frontmatter Standard
+
+```yaml
+---
+draft: false
+title: "Titre de l'article"
+description: "Description courte et claire"
+author: "Gérald Paméole"
+type: "article"
+featured: true
+readingTime: 8
+publishDate: "2024-01-01"
+tags: ["tag1", "tag2"]
+keywords: ["#keyword1", "#keyword2"]
+---
+```
+
+## 🧩 COMPOSANTS
+
+### Composants Astro
+
+- **Props**: Définir des interfaces TypeScript pour les props
+- **Slots**: Utiliser `<slot />` pour le contenu dynamique
+- **Client Directives**: Utiliser `client:load` pour les composants interactifs
+
+### Composants React
+
+- **Props**: Toujours typer avec TypeScript
+- **Hooks**: Utiliser les hooks React standards
+- **Performance**: Utiliser `React.memo` si nécessaire
+
+### Exemple de Composant Astro
+
+```astro
+---
+interface Props {
+  article: CollectionEntry<'articles'>;
+  variant?: 'full' | 'compact';
+}
+
+const { article, variant = 'full' } = Astro.props;
+---
+
+<div class="article-card">
+  <h3>{article.data.title}</h3>
+  <p>{article.data.description}</p>
+</div>
+```
+
+## 🔧 CONFIGURATION & UTILITAIRES
+
+### Configuration Centralisée
+
+- **Domaines**: Utiliser `src/config/domains.ts` pour les configurations
+- **Articles**: Utiliser `src/config/featured-articles.ts` pour la sélection
+- **Thèmes**: Utiliser `src/utils/themeUtils.ts` pour les thèmes
+
+### Fonctions Utilitaires
+
+- **Type Safety**: Toujours typer les paramètres et retours
+- **Validation**: Utiliser Zod pour la validation des données
+- **Performance**: Optimiser les fonctions de filtrage et tri
+
+### Exemple de Fonction Utilitaire
+
+```typescript
+export function getArticlesForDomain(
+  domain: string
+): CollectionEntry<"articles">[] {
+  const featuredSlugs = getFeaturedArticlesForDomain(domain);
+  return articles
+    .filter((article) => featuredSlugs.includes(article.slug))
+    .sort((a, b) => {
+      if (a.data.featured && !b.data.featured) return -1;
+      return (
+        new Date(b.data.publishDate).getTime() -
+        new Date(a.data.publishDate).getTime()
+      );
+    });
+}
+```
+
+## 📱 RESPONSIVE DESIGN
+
+### Breakpoints Tailwind
+
+- **Mobile**: Base (pas de prefix)
+- **Tablet**: `sm:` (640px+)
+- **Desktop**: `md:` (768px+)
+- **Large**: `lg:` (1024px+)
+- **XL**: `xl:` (1280px+)
+
+### Grilles Responsives
+
+```astro
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+  <!-- Contenu -->
+</div>
+```
+
+## ⚡ PERFORMANCE
+
+### Optimisation des Images
+
+- **Format**: Utiliser WebP quand possible
+- **Lazy Loading**: Toujours ajouter `loading="lazy"`
+- **Attributs**: Inclure `width` et `height` pour éviter CLS
+- **Fallback**: Prévoir des images de fallback
+
+### Exemple d'Image Optimisée
+
+```astro
+<img
+  src={article.data.image}
+  alt={article.data.title}
+  width="400"
+  height="250"
+  loading="lazy"
+  decoding="async"
+  fetchpriority="low"
+  class="w-full h-48 object-cover rounded-lg"
+/>
+```
+
+### Préchargement
+
+- **Ressources critiques**: Utiliser `preconnect` et `dns-prefetch`
+- **Fonts**: Précharger les polices Google Fonts
+- **CDN**: Précharger les ressources externes
+
+## 🔍 SEO & ACCESSIBILITÉ
+
+### SEO
+
+- **Méta tags**: Toujours inclure title, description, keywords
+- **Open Graph**: Implémenter les balises OG
+- **Structured Data**: Utiliser JSON-LD quand approprié
+- **URLs**: Utiliser des URLs propres et descriptives
+
+### Accessibilité
+
+- **Alt text**: Toujours inclure pour les images
+- **ARIA**: Utiliser les attributs ARIA appropriés
+- **Contraste**: Vérifier les ratios de contraste
+- **Navigation**: Support clavier complet
+
+### Exemple de Méta Tags
+
+```astro
+---
+const pageTitle = "Titre de la page";
+const pageDescription = "Description SEO optimisée";
+---
+
+<BaseLayout title={pageTitle} description={pageDescription}>
+  <!-- Contenu -->
+</BaseLayout>
+```
+
+## 🚀 DÉPLOIEMENT & BUILD
+
+### Scripts NPM
+
+- **dev**: `npm run dev` (développement)
+- **build**: `npm run build` (production avec vérification TypeScript)
+- **preview**: `npm run preview` (prévisualisation)
+
+### Configuration Astro
+
+- **Site URL**: https://geraldpameole.fr
+- **i18n**: Français par défaut, support EN/ES
+- **Integrations**: MDX, React, Tailwind, Icon
+
+## 🧪 TESTING & QUALITÉ
+
+### TypeScript
+
+- **Strict Mode**: Activer le mode strict
+- **Types**: Toujours typer les props et fonctions
+- **Interfaces**: Définir des interfaces claires
+
+### Validation
+
+- **Build**: `astro check` avant chaque build
+- **Content**: Valider le frontmatter avec Zod
+- **Links**: Vérifier les liens internes
+
+## 📚 CONVENTIONS DE CODE
+
+### TypeScript
+
+- **Interfaces**: Préfixer avec `I` ou utiliser des noms descriptifs
+- **Types**: Utiliser `type` pour les unions simples
+- **Enums**: Utiliser `const` assertions pour les objets
+
+### Astro
+
+- **Scripts**: Utiliser `is:inline` pour les scripts inline
+- **Styles**: Préférer les classes Tailwind aux styles inline
+- **Client Directives**: Utiliser `client:load` pour l'hydratation
+
+### React
+
+- **Hooks**: Utiliser les hooks standards (useState, useEffect, etc.)
+- **Props**: Toujours typer avec des interfaces
+- **Performance**: Utiliser React.memo pour les composants coûteux
+
+## 🔄 GESTION DES ÉTATS
+
+### État Global
+
+- **Configuration**: Utiliser les fichiers de config centralisés
+- **Thèmes**: Gérer via localStorage et classes CSS
+- **Navigation**: Utiliser les états React locaux
+
+### État Local
+
+- **Composants**: Utiliser useState pour l'état local
+- **Formulaires**: Utiliser react-hook-form
+- **Animations**: Utiliser framer-motion
+
+## 🎨 ANIMATIONS & INTERACTIONS
+
+### Framer Motion
+
+- **Animations**: Utiliser pour les transitions complexes
+- **Performance**: Éviter les animations coûteuses
+- **Accessibilité**: Respecter `prefers-reduced-motion`
+
+### CSS Animations
+
+- **Tailwind**: Utiliser les classes d'animation définies
+- **Custom**: Définir dans le CSS global si nécessaire
+
+## 📊 ANALYTICS & MONITORING
+
+### Performance
+
+- **Core Web Vitals**: Optimiser LCP, FID, CLS
+- **Images**: Utiliser des formats modernes et lazy loading
+- **Fonts**: Optimiser le chargement des polices
+
+### Analytics
+
+- **Tracking**: Implémenter Google Analytics si nécessaire
+- **Events**: Tracker les interactions importantes
+
+## 🛠️ OUTILS & WORKFLOW
+
+### Développement
+
+- **IDE**: Utiliser VS Code avec extensions Astro/TypeScript
+- **Git**: Utiliser des messages de commit conventionnels
+- **Linting**: Utiliser ESLint et Prettier
+
+### Déploiement
+
+- **Build**: Vérifier que `npm run build` passe
+- **Preview**: Tester avec `npm run preview`
+- **Production**: Déployer uniquement après validation
+
+## 🚨 RÈGLES IMPORTANTES
+
+### ❌ À ÉVITER
+
+- Ne pas utiliser de styles inline (préférer Tailwind)
+- Ne pas oublier les attributs d'accessibilité
+- Ne pas ignorer les erreurs TypeScript
+- Ne pas utiliser de composants React non optimisés
+- Ne pas oublier le lazy loading des images
+
+### ✅ À FAIRE
+
+- Toujours typer les props et fonctions
+- Utiliser la configuration centralisée
+- Implémenter le dark mode
+- Optimiser les performances
+- Tester la responsivité
+- Valider le contenu avec Zod
+
+## ✅ CHECKLIST DE CODE REVIEW
+
+Avant chaque commit, vérifier :
+
+- [ ] **TypeScript** : pas d'erreurs, pas de `any`
+- [ ] **Accessibilité** : alt, aria, keyboard navigation
+- [ ] **Performance** : images optimisées, lazy loading
+- [ ] **SEO** : meta tags, structure sémantique
+- [ ] **Responsive** : mobile, tablet, desktop
+- [ ] **Dark mode** : fonctionne correctement
+- [ ] **Console** : pas d'erreurs ou warnings
+
+## 📖 RESSOURCES
+
+### Documentation
+
+- **Astro**: https://docs.astro.build
+- **Tailwind**: https://tailwindcss.com/docs
+- **TypeScript**: https://www.typescriptlang.org/docs
+- **React**: https://react.dev
+
+### Outils
+
+- **Astro Check**: Vérification TypeScript
+- **Tailwind IntelliSense**: Autocomplétion CSS
+- **Prettier**: Formatage du code
+- **ESLint**: Linting du code
+
+---
+
+**Note**: Ces règles sont spécifiques au projet Portfolio Gérald Paméole et doivent être adaptées selon l'évolution du projet.

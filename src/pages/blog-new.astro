@@ -1,0 +1,318 @@
+---
+import { getCollection } from 'astro:content';
+import { getFeaturedArticlesForDomain } from '../config/featured-articles';
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+// Récupération des articles et livres
+const articles = await getCollection('articles');
+const books = await getCollection('books');
+
+// Tri des articles par date de publication (du plus récent au plus ancien)
+const sortedArticles = articles.sort((a, b) => {
+	const dateA = new Date(a.data.publishDate || '2024-01-01');
+	const dateB = new Date(b.data.publishDate || '2024-01-01');
+	return dateB.getTime() - dateA.getTime();
+});
+
+// Tri des livres par année de publication
+const sortedBooks = books.sort((a, b) => (b.data.publishYear || 0) - (a.data.publishYear || 0));
+
+// Fonction pour obtenir les articles d'un domaine spécifique
+function getArticlesForDomain(domain: string) {
+  const featuredSlugs = getFeaturedArticlesForDomain(domain);
+  return articles.filter(article => 
+    featuredSlugs.includes(article.slug)
+  ).sort((a, b) => {
+    if (a.data.featured && !b.data.featured) return -1;
+    if (!a.data.featured && b.data.featured) return 1;
+    return new Date(b.data.publishDate).getTime() - new Date(a.data.publishDate).getTime();
+  });
+}
+
+// Définition des domaines de compétence utilisant la nouvelle configuration
+const domainesCompetences = {
+	"Formation & Pédagogie": {
+		description: "Articles sur la formation, le développement des compétences et l'apprentissage continu",
+		color: "red",
+		icon: "fas fa-graduation-cap",
+		keywords: ["#formation", "#apprentissage", "#compétences", "#mentorat", "#elearning", "#développement", "#softskills", "#continue", "#pédagogie", "#coaching"],
+		articles: getArticlesForDomain('formation').slice(0, 6)
+	},
+	"Gestion de Projet Télécom": {
+		description: "Pilotage de projets complexes, gestion d'équipes et méthodologies agiles",
+		color: "blue", 
+		icon: "fas fa-tasks",
+		keywords: ["#gestionprojet", "#agile", "#scrum", "#management", "#équipe", "#performance", "#risques", "#temps", "#priorités", "#productivité", "#leadership"],
+		articles: getArticlesForDomain('gestion-projet').slice(0, 6)
+	},
+	"Développement Web & Technologies": {
+		description: "Tendances, technologies et bonnes pratiques du développement web moderne",
+		color: "purple",
+		icon: "fas fa-code",
+		keywords: ["#web", "#javascript", "#react", "#frontend", "#backend", "#technologies", "#frameworks", "#performance", "#accessibilité", "#pwa", "#tendances"],
+		articles: getArticlesForDomain('developpement-web').slice(0, 6)
+	},
+	"Qualité & Processus": {
+		description: "Amélioration continue, certification et optimisation des processus",
+		color: "orange",
+		icon: "fas fa-check-circle",
+		keywords: ["#qualité", "#processus", "#amélioration", "#certification", "#optimisation", "#iso", "#sixsigma", "#lean", "#audit", "#conformité"],
+		articles: getArticlesForDomain('qualite-process').slice(0, 6)
+	},
+	"Gestion des Talents": {
+		description: "Stratégies et méthodes pour gérer, développer et fidéliser les talents",
+		color: "green",
+		icon: "fas fa-users",
+		keywords: ["#talents", "#gestion", "#recrutement", "#fidélisation", "#rétention", "#diversité", "#inclusion", "#leadership", "#management"],
+		articles: getArticlesForDomain('gestion-talents').slice(0, 6)
+	},
+	"Développement Commercial": {
+		description: "Stratégies commerciales, négociation et développement de partenariats",
+		color: "indigo",
+		icon: "fas fa-handshake",
+		keywords: ["#commercial", "#négociation", "#partenariats", "#vente", "#relation", "#client", "#stratégie"],
+		articles: getArticlesForDomain('developpement-commercial').slice(0, 6)
+	},
+	"Productivité & Méthodes": {
+		description: "Techniques de productivité, gestion du temps et méthodes de travail",
+		color: "teal",
+		icon: "fas fa-clock",
+		keywords: ["#productivité", "#temps", "#méthodes", "#gtd", "#pomodoro", "#deepwork", "#efficacité"],
+		articles: getArticlesForDomain('productivite-methodes').slice(0, 6)
+	},
+	"Transformation Digitale": {
+		description: "IA, transformation numérique et nouvelles technologies",
+		color: "pink",
+		icon: "fas fa-robot",
+		keywords: ["#ia", "#transformation", "#numérique", "#innovation", "#technologies", "#futur"],
+		articles: getArticlesForDomain('transformation-digitale').slice(0, 6)
+	}
+};
+
+// Couleurs pour les badges
+const colorClasses = {
+	red: "bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-300",
+	blue: "bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-300",
+	purple: "bg-purple-100 text-purple-800 dark:bg-purple-900/30 dark:text-purple-300",
+	orange: "bg-orange-100 text-orange-800 dark:bg-orange-900/30 dark:text-orange-300",
+	green: "bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-300",
+	indigo: "bg-indigo-100 text-indigo-800 dark:bg-indigo-900/30 dark:text-indigo-300",
+	teal: "bg-teal-100 text-teal-800 dark:bg-teal-900/30 dark:text-teal-300",
+	pink: "bg-pink-100 text-pink-800 dark:bg-pink-900/30 dark:text-pink-300"
+};
+
+// Fonction pour formater la date
+function formatDate(date: Date | string): string {
+	const dateObj = typeof date === 'string' ? new Date(date) : date;
+	return dateObj.toLocaleDateString('fr-FR', {
+		year: 'numeric',
+		month: 'long',
+		day: 'numeric'
+	});
+}
+
+// Statistiques
+const totalArticles = articles.length;
+const totalBooks = books.length;
+const totalDomaines = Object.keys(domainesCompetences).length;
+---
+
+<BaseLayout title="Blog | Gérald Paméole" description="Découvrez mes articles sur le développement web, la gestion de projet, la formation et bien plus encore.">
+	<div class="min-h-screen bg-gray-50 dark:bg-gray-900">
+		<!-- Header -->
+		<section class="py-20 bg-gradient-to-r from-indigo-600 to-purple-700 text-white">
+			<div class="container mx-auto px-4 text-center">
+				<h1 class="text-4xl md:text-5xl font-bold mb-6">Blog & Articles</h1>
+				<p class="text-xl max-w-3xl mx-auto mb-8">
+					Explorez mes articles organisés par domaine d'expertise. Découvrez des contenus spécialisés 
+					sur le développement web, la gestion de projet, la formation et bien plus encore.
+				</p>
+				
+				<!-- Statistiques -->
+				<div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-2xl mx-auto">
+					<div class="bg-white/10 backdrop-blur-sm rounded-lg p-4">
+						<div class="text-3xl font-bold">{totalArticles}</div>
+						<div class="text-sm opacity-90">Articles</div>
+					</div>
+					<div class="bg-white/10 backdrop-blur-sm rounded-lg p-4">
+						<div class="text-3xl font-bold">{totalBooks}</div>
+						<div class="text-sm opacity-90">Livres</div>
+					</div>
+					<div class="bg-white/10 backdrop-blur-sm rounded-lg p-4">
+						<div class="text-3xl font-bold">{totalDomaines}</div>
+						<div class="text-sm opacity-90">Domaines</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Navigation rapide -->
+		<section class="py-8 bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700">
+			<div class="container mx-auto px-4">
+				<div class="flex flex-wrap gap-2 justify-center">
+					{Object.entries(domainesCompetences).map(([domainName, domain]) => (
+						<a 
+							href={`#${domainName.toLowerCase().replace(/\s+/g, '-')}`}
+							class="px-4 py-2 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-full text-sm hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors"
+						>
+							<i class={`${domain.icon} mr-2`}></i>
+							{domainName}
+						</a>
+					))}
+				</div>
+			</div>
+		</section>
+
+		<!-- Articles par domaine -->
+		<section class="py-16">
+			<div class="container mx-auto px-4">
+				{Object.entries(domainesCompetences).map(([domainName, domain]) => (
+					<div id={domainName.toLowerCase().replace(/\s+/g, '-')} class="mb-16">
+						<!-- Header du domaine -->
+						<div class="text-center mb-12">
+							<div class="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-600 text-white rounded-full mb-4">
+								<i class={`${domain.icon} text-2xl`}></i>
+							</div>
+							<h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">{domainName}</h2>
+							<p class="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mb-6">
+								{domain.description}
+							</p>
+							
+							<!-- Keywords -->
+							<div class="flex flex-wrap gap-2 justify-center">
+								{domain.keywords.slice(0, 5).map((keyword) => (
+									<span class={`px-3 py-1 rounded-full text-sm ${colorClasses[domain.color]}`}>
+										{keyword}
+									</span>
+								))}
+							</div>
+						</div>
+
+						<!-- Articles du domaine -->
+						{domain.articles.length > 0 ? (
+							<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+								{domain.articles.map((article) => (
+									<article class="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+										<!-- Image de l'article -->
+										<div class="h-48 bg-gradient-to-br from-indigo-500 to-purple-600 relative overflow-hidden">
+											<div class="absolute inset-0 bg-black/20"></div>
+											<div class="absolute bottom-4 left-4 text-white">
+												<div class="flex items-center space-x-2">
+													<span class="text-sm font-medium">{article.data.readingTime} min</span>
+													<span class="text-sm">•</span>
+													<span class="text-sm">{formatDate(article.data.publishDate)}</span>
+												</div>
+											</div>
+											{article.data.featured && (
+												<div class="absolute top-4 right-4">
+													<span class="bg-yellow-400 text-yellow-900 px-2 py-1 rounded-full text-xs font-medium">
+														⭐ Mis en avant
+													</span>
+												</div>
+											)}
+										</div>
+
+										<!-- Contenu de l'article -->
+										<div class="p-6">
+											<h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3 line-clamp-2">
+												{article.data.title}
+											</h3>
+											<p class="text-gray-600 dark:text-gray-300 mb-4 line-clamp-3">
+												{article.data.description}
+											</p>
+											
+											<!-- Tags -->
+											<div class="flex flex-wrap gap-2 mb-4">
+												{article.data.tags?.slice(0, 3).map((tag) => (
+													<span class="px-2 py-1 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 text-xs rounded">
+														{tag}
+													</span>
+												))}
+											</div>
+
+											<!-- Lien vers l'article -->
+											<a 
+												href={`/articles/${article.slug}`}
+												class="inline-flex items-center text-indigo-600 dark:text-indigo-400 hover:text-indigo-800 dark:hover:text-indigo-300 font-medium"
+											>
+												Lire l'article
+												<svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+													<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+												</svg>
+											</a>
+										</div>
+									</article>
+								))}
+							</div>
+						) : (
+							<div class="text-center py-12">
+								<div class="w-16 h-16 bg-gray-100 dark:bg-gray-700 rounded-full flex items-center justify-center mx-auto mb-4">
+									<i class={`${domain.icon} text-2xl text-gray-400`}></i>
+								</div>
+								<h3 class="text-lg font-medium text-gray-900 dark:text-white mb-2">Aucun article disponible</h3>
+								<p class="text-gray-600 dark:text-gray-400">Des articles seront bientôt ajoutés dans ce domaine.</p>
+							</div>
+						)}
+
+						<!-- Lien vers plus d'articles du domaine -->
+						{domain.articles.length > 0 && (
+							<div class="text-center mt-8">
+								<a 
+									href={`/domaines#${domainName.toLowerCase().replace(/\s+/g, '-')}`}
+									class="inline-flex items-center px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors"
+								>
+									Voir tous les articles de {domainName}
+									<svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+									</svg>
+								</a>
+							</div>
+						)}
+					</div>
+				))}
+			</div>
+		</section>
+
+		<!-- CTA -->
+		<section class="py-16 bg-gray-100 dark:bg-gray-800">
+			<div class="container mx-auto px-4 text-center">
+				<h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+					Intéressé par un sujet spécifique ?
+				</h2>
+				<p class="text-lg text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
+					N'hésitez pas à me contacter pour discuter de vos besoins ou pour en savoir plus sur mes compétences.
+				</p>
+				<div class="flex flex-col sm:flex-row gap-4 justify-center">
+					<a 
+						href="/contact" 
+						class="inline-block px-8 py-3 bg-indigo-600 text-white font-medium rounded-lg hover:bg-indigo-700 transition-colors"
+					>
+						Me contacter
+					</a>
+					<a 
+						href="/domaines" 
+						class="inline-block px-8 py-3 border border-indigo-600 text-indigo-600 dark:text-indigo-400 font-medium rounded-lg hover:bg-indigo-50 dark:hover:bg-indigo-900/20 transition-colors"
+					>
+						Explorer les domaines
+					</a>
+				</div>
+			</div>
+		</section>
+	</div>
+</BaseLayout>
+
+<style>
+	.line-clamp-2 {
+		display: -webkit-box;
+		-webkit-line-clamp: 2;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+	}
+	
+	.line-clamp-3 {
+		display: -webkit-box;
+		-webkit-line-clamp: 3;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+	}
+</style>
