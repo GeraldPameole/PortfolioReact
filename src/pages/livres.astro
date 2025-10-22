@@ -15,39 +15,35 @@ const sortedBooks = books.sort((a, b) => {
   return (b.data.publishYear || 0) - (a.data.publishYear || 0);
 });
 
-// Catégorisation des livres
+// Catégorisation des livres basée sur la profession
 const categories = {
   "Développement & Tech": books.filter(book => 
-    book.data.category === "développement" || 
-    book.data.tags?.some(tag => 
-      tag.toLowerCase().includes('développement') || 
-      tag.toLowerCase().includes('tech') ||
-      tag.toLowerCase().includes('programming')
-    )
+    book.data.profession === "developpement-web" ||
+    book.data.keywords?.toLowerCase().includes('développement') ||
+    book.data.keywords?.toLowerCase().includes('code') ||
+    book.data.keywords?.toLowerCase().includes('programming') ||
+    book.data.keywords?.toLowerCase().includes('javascript')
   ),
-  "Management & Leadership": books.filter(book => 
-    book.data.category === "management" || 
-    book.data.tags?.some(tag => 
-      tag.toLowerCase().includes('management') || 
-      tag.toLowerCase().includes('leadership') ||
-      tag.toLowerCase().includes('équipe')
-    )
-  ),
-  "Productivité & Méthodes": books.filter(book => 
-    book.data.category === "productivité" || 
-    book.data.tags?.some(tag => 
-      tag.toLowerCase().includes('productivité') || 
-      tag.toLowerCase().includes('méthode') ||
-      tag.toLowerCase().includes('temps')
-    )
+  "Développement Personnel": books.filter(book => 
+    book.data.profession === "developpement-personnel" ||
+    book.data.keywords?.toLowerCase().includes('habitudes') ||
+    book.data.keywords?.toLowerCase().includes('productivité') ||
+    book.data.keywords?.toLowerCase().includes('focus') ||
+    book.data.keywords?.toLowerCase().includes('travail')
   ),
   "Business & Stratégie": books.filter(book => 
-    book.data.category === "business" || 
-    book.data.tags?.some(tag => 
-      tag.toLowerCase().includes('business') || 
-      tag.toLowerCase().includes('stratégie') ||
-      tag.toLowerCase().includes('marketing')
-    )
+    book.data.profession === "business" ||
+    book.data.keywords?.toLowerCase().includes('business') ||
+    book.data.keywords?.toLowerCase().includes('startup') ||
+    book.data.keywords?.toLowerCase().includes('innovation') ||
+    book.data.keywords?.toLowerCase().includes('influence')
+  ),
+  "Management & Leadership": books.filter(book => 
+    book.data.profession === "management" ||
+    book.data.keywords?.toLowerCase().includes('management') ||
+    book.data.keywords?.toLowerCase().includes('leadership') ||
+    book.data.keywords?.toLowerCase().includes('équipe') ||
+    book.data.keywords?.toLowerCase().includes('entreprise')
   )
 };
 
@@ -111,18 +107,73 @@ const topRatedBooks = books.filter(book => book.data.note && book.data.note >= 4
 			</div>
 		</section>
 
-		<!-- Navigation par Catégorie -->
-		<section class="py-8 bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700">
+		<!-- Résumé des Livres -->
+		<section class="py-16 bg-white dark:bg-gray-800">
 			<div class="container mx-auto px-4">
-				<div class="flex flex-wrap gap-3 justify-center">
-					{Object.entries(categories).map(([categoryName, categoryBooks]) => (
-						<a 
-							href={`#${categoryName.toLowerCase().replace(/\s+/g, '-')}`}
-							class="px-6 py-3 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-full text-sm hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors font-medium"
-						>
-							{categoryName} ({categoryBooks.length})
-						</a>
+				<div class="text-center mb-12">
+					<h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+						📖 Aperçu de ma Bibliothèque
+					</h2>
+					<p class="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+						Une sélection personnelle de {totalBooks} livres qui ont marqué mon parcours professionnel. 
+						Chaque livre a été lu, analysé et noté pour vous aider dans vos choix de lecture.
+					</p>
+				</div>
+
+				<!-- Grille des meilleurs livres -->
+				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+					{sortedBooks.slice(0, 4).map((book) => (
+						<div class="bg-gray-50 dark:bg-gray-700 rounded-xl p-4 hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors">
+							<div class="flex items-center space-x-3">
+								<div class="flex-shrink-0">
+									<div class="w-12 h-12 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-lg flex items-center justify-center">
+										<span class="text-white font-bold text-lg">
+											{book.data.note ? book.data.note.toFixed(1) : 'N/A'}
+										</span>
+									</div>
+								</div>
+								<div class="flex-1 min-w-0">
+									<h3 class="text-sm font-semibold text-gray-900 dark:text-white truncate">
+										{book.data.title}
+									</h3>
+									<p class="text-xs text-gray-600 dark:text-gray-400 truncate">
+										{book.data.author}
+									</p>
+									{book.data.note && (
+										<div class="flex items-center mt-1">
+											{Array.from({ length: 5 }).map((_, i) => (
+												<svg 
+													key={i}
+													class={`w-3 h-3 ${i < book.data.note! ? 'text-yellow-400' : 'text-gray-300'}`}
+													fill="currentColor" 
+													viewBox="0 0 20 20"
+												>
+													<path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+												</svg>
+											))}
+										</div>
+									)}
+								</div>
+							</div>
+						</div>
 					))}
+				</div>
+
+				<!-- Navigation par Catégorie -->
+				<div class="text-center">
+					<h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-6">
+						Explorez par catégorie
+					</h3>
+					<div class="flex flex-wrap gap-3 justify-center">
+						{Object.entries(categories).map(([categoryName, categoryBooks]) => (
+							<a 
+								href={`#${categoryName.toLowerCase().replace(/\s+/g, '-')}`}
+								class="px-6 py-3 bg-indigo-100 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300 rounded-full text-sm hover:bg-indigo-200 dark:hover:bg-indigo-900/50 transition-colors font-medium"
+							>
+								{categoryName} ({categoryBooks.length})
+							</a>
+						))}
+					</div>
 				</div>
 			</div>
 		</section>
@@ -201,29 +252,64 @@ const topRatedBooks = books.filter(book => book.data.note && book.data.note >= 4
 											</h3>
 											<p class="text-sm text-gray-600 dark:text-gray-400 mb-3">
 												par <span class="font-medium">{book.data.author}</span>
-											</p>
-											<p class="text-gray-600 dark:text-gray-300 text-sm line-clamp-3 mb-4">
-												{book.data.description}
+												{book.data.publishYear && (
+													<span class="text-gray-500"> • {book.data.publishYear}</span>
+												)}
 											</p>
 											
-											<!-- Tags -->
-											{book.data.tags && book.data.tags.length > 0 && (
-												<div class="flex flex-wrap gap-2 mb-4">
-													{book.data.tags.slice(0, 3).map((tag) => (
-														<span class="px-2 py-1 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 text-xs rounded">
-															{tag}
-														</span>
-													))}
+											<!-- Résumé du livre -->
+											<div class="mb-4">
+												<p class="text-gray-600 dark:text-gray-300 text-sm line-clamp-3 mb-3">
+													{book.data.description}
+												</p>
+												
+												<!-- Extrait du contenu si disponible -->
+												{book.body && (
+													<div class="bg-gray-50 dark:bg-gray-700 rounded-lg p-3 mb-3">
+														<p class="text-xs text-gray-600 dark:text-gray-400 italic line-clamp-2">
+															{book.body.substring(0, 150)}...
+														</p>
+													</div>
+												)}
+											</div>
+											
+											<!-- Keywords/Tags -->
+											{book.data.keywords && (
+												<div class="mb-4">
+													<div class="flex flex-wrap gap-1">
+														{book.data.keywords.split(',').slice(0, 4).map((keyword) => (
+															<span class="px-2 py-1 bg-indigo-100 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300 text-xs rounded-full">
+																{keyword.trim()}
+															</span>
+														))}
+													</div>
+												</div>
+											)}
+
+											<!-- Contenu lié -->
+											{book.data.relatedContent && book.data.relatedContent.length > 0 && (
+												<div class="mb-4">
+													<p class="text-xs text-gray-500 dark:text-gray-400 mb-2">Contenu lié :</p>
+													<div class="space-y-1">
+														{book.data.relatedContent.slice(0, 2).map((related) => (
+															<a 
+																href={related.url}
+																class="block text-xs text-indigo-600 dark:text-indigo-400 hover:text-indigo-800 dark:hover:text-indigo-300 truncate"
+															>
+																{related.type === 'article' ? '📄' : '📚'} {related.title}
+															</a>
+														))}
+													</div>
 												</div>
 											)}
 
 											<!-- Actions -->
-											<div class="flex items-center justify-between">
+											<div class="flex items-center justify-between pt-2 border-t border-gray-200 dark:border-gray-600">
 												<a 
 													href={`/books/${book.slug}`}
 													class="inline-flex items-center text-indigo-600 dark:text-indigo-400 hover:text-indigo-800 dark:hover:text-indigo-300 font-medium text-sm"
 												>
-													Lire la critique
+													Lire la critique complète
 													<svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 														<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
 													</svg>
