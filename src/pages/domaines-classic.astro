@@ -1,0 +1,225 @@
+---
+import { getCollection } from 'astro:content';
+import { getFeaturedArticlesForDomain } from '../config/featured-articles';
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+// Récupérer tous les articles
+const allArticles = await getCollection('articles');
+
+// Fonction pour obtenir les articles d'un domaine spécifique
+function getArticlesForDomain(domain: string) {
+  const featuredSlugs = getFeaturedArticlesForDomain(domain);
+  return allArticles.filter(article => 
+    featuredSlugs.includes(article.slug)
+  ).sort((a, b) => {
+    if (a.data.featured && !b.data.featured) return -1;
+    if (!a.data.featured && b.data.featured) return 1;
+    return new Date(b.data.publishDate).getTime() - new Date(a.data.publishDate).getTime();
+  });
+}
+
+// Configuration des domaines avec leurs métadonnées
+const domainesConfig = {
+  'gestion-projet': {
+    name: 'Gestion de Projet',
+    description: 'Méthodologies, outils et bonnes pratiques pour la gestion de projet',
+    icon: 'fas fa-tasks',
+    color: 'blue',
+    gradient: 'from-blue-500 to-indigo-600'
+  },
+  'developpement-web': {
+    name: 'Développement Web',
+    description: 'Tendances, technologies et bonnes pratiques du développement web moderne',
+    icon: 'fas fa-code',
+    color: 'purple',
+    gradient: 'from-purple-500 to-pink-600'
+  },
+  'qualite-process': {
+    name: 'Qualité & Processus',
+    description: 'Amélioration continue, certification et optimisation des processus',
+    icon: 'fas fa-check-circle',
+    color: 'red',
+    gradient: 'from-red-500 to-orange-600'
+  },
+  'formation': {
+    name: 'Formation & Pédagogie',
+    description: 'Articles sur la formation, le développement des compétences et l\'apprentissage continu',
+    icon: 'fas fa-graduation-cap',
+    color: 'green',
+    gradient: 'from-green-500 to-emerald-600'
+  },
+  'gestion-talents': {
+    name: 'Gestion des Talents',
+    description: 'Stratégies et méthodes pour gérer, développer et fidéliser les talents',
+    icon: 'fas fa-users',
+    color: 'indigo',
+    gradient: 'from-indigo-500 to-blue-600'
+  },
+  'developpement-commercial': {
+    name: 'Développement Commercial',
+    description: 'Stratégies commerciales, négociation et développement de partenariats',
+    icon: 'fas fa-handshake',
+    color: 'orange',
+    gradient: 'from-orange-500 to-yellow-600'
+  },
+  'productivite-methodes': {
+    name: 'Productivité & Méthodes',
+    description: 'Techniques de productivité, gestion du temps et méthodes de travail',
+    icon: 'fas fa-clock',
+    color: 'teal',
+    gradient: 'from-teal-500 to-cyan-600'
+  },
+  'transformation-digitale': {
+    name: 'Transformation Digitale',
+    description: 'IA, transformation numérique et nouvelles technologies',
+    icon: 'fas fa-robot',
+    color: 'pink',
+    gradient: 'from-pink-500 to-rose-600'
+  },
+  'marketing-communication': {
+    name: 'Marketing & Communication',
+    description: 'Stratégies marketing digital, réseaux sociaux et communication',
+    icon: 'fas fa-bullhorn',
+    color: 'yellow',
+    gradient: 'from-yellow-500 to-orange-600'
+  },
+  'leadership-management': {
+    name: 'Leadership & Management',
+    description: 'Leadership, management d\'équipe et gestion des conflits',
+    icon: 'fas fa-user-tie',
+    color: 'gray',
+    gradient: 'from-gray-500 to-slate-600'
+  }
+};
+
+// Fonction pour formater la date
+function formatDate(date: Date) {
+  return date.toLocaleDateString('fr-FR', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
+  });
+}
+---
+
+<BaseLayout title="Domaines d'Expertise | Gérald Paméole" description="Explorez mes domaines d'expertise et découvrez mes articles spécialisés dans chaque domaine.">
+  <div class="min-h-screen bg-gray-50 dark:bg-gray-900">
+    <!-- Header -->
+    <section class="py-20 bg-gradient-to-r from-indigo-600 to-purple-700 text-white">
+      <div class="container mx-auto px-4 text-center">
+        <h1 class="text-4xl md:text-5xl font-bold mb-6">Domaines d'Expertise</h1>
+        <p class="text-xl max-w-3xl mx-auto">
+          Découvrez mes domaines de spécialisation et explorez mes articles dédiés à chaque expertise
+        </p>
+      </div>
+    </section>
+
+    <!-- Domaines Grid -->
+    <section class="py-16">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {Object.entries(domainesConfig).map(([domainKey, config]) => {
+            const articles = getArticlesForDomain(domainKey);
+            return (
+              <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                <!-- Header du domaine -->
+                <div class={`bg-gradient-to-r ${config.gradient} p-6 text-white`}>
+                  <div class="flex items-center mb-4">
+                    <div class="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center mr-4">
+                      <i class={`${config.icon} text-2xl`}></i>
+                    </div>
+                    <div>
+                      <h3 class="text-xl font-bold">{config.name}</h3>
+                      <p class="text-sm opacity-90">{articles.length} article{articles.length > 1 ? 's' : ''}</p>
+                    </div>
+                  </div>
+                  <p class="text-sm opacity-90">{config.description}</p>
+                </div>
+
+                <!-- Articles du domaine -->
+                <div class="p-6">
+                  {articles.length > 0 ? (
+                    <div class="space-y-3">
+                      {articles.slice(0, 3).map((article) => (
+                        <a 
+                          href={`/articles/${article.slug}`} 
+                          class="block p-3 bg-gray-50 dark:bg-gray-700 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors"
+                        >
+                          <h4 class="font-semibold text-gray-900 dark:text-white text-sm mb-1 line-clamp-2">
+                            {article.data.title}
+                          </h4>
+                          <p class="text-xs text-gray-600 dark:text-gray-400 line-clamp-2">
+                            {article.data.description}
+                          </p>
+                          <div class="flex items-center justify-between mt-2">
+                            <span class="text-xs text-gray-500 dark:text-gray-400">
+                              {formatDate(new Date(article.data.publishDate))}
+                            </span>
+                            <span class="text-xs text-gray-500 dark:text-gray-400">
+                              {article.data.readingTime} min
+                            </span>
+                          </div>
+                        </a>
+                      ))}
+                      
+                      {articles.length > 3 && (
+                        <div class="text-center pt-2">
+                          <a 
+                            href={`/blog?domaine=${domainKey}`} 
+                            class="text-sm text-indigo-600 dark:text-indigo-400 hover:text-indigo-800 dark:hover:text-indigo-300 font-medium"
+                          >
+                            Voir tous les articles ({articles.length})
+                          </a>
+                        </div>
+                      )}
+                    </div>
+                  ) : (
+                    <div class="text-center py-8 text-gray-500 dark:text-gray-400">
+                      <i class={`${config.icon} text-3xl mb-2 block`}></i>
+                      <p class="text-sm">Aucun article disponible pour le moment</p>
+                    </div>
+                  )}
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-16 bg-gray-100 dark:bg-gray-800">
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+          Intéressé par un domaine spécifique ?
+        </h2>
+        <p class="text-lg text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
+          N'hésitez pas à me contacter pour discuter de vos besoins ou pour en savoir plus sur mes compétences.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a 
+            href="/contact" 
+            class="inline-block px-8 py-3 bg-indigo-600 text-white font-medium rounded-lg hover:bg-indigo-700 transition-colors"
+          >
+            Me contacter
+          </a>
+          <a 
+            href="/blog" 
+            class="inline-block px-8 py-3 border border-indigo-600 text-indigo-600 dark:text-indigo-400 font-medium rounded-lg hover:bg-indigo-50 dark:hover:bg-indigo-900/20 transition-colors"
+          >
+            Voir tous les articles
+          </a>
+        </div>
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+</style>

@@ -1,7 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
-import BaseLayout from '../layouts/BaseLayout.astro';
 import { getFeaturedArticlesForDomain } from '../config/featured-articles';
+import BaseLayout from '../layouts/BaseLayout.astro';
 
 // Récupération des articles et livres
 const articles = await getCollection('articles');
@@ -30,55 +30,48 @@ function getArticlesForDomain(domain: string) {
 }
 
 // Définition des domaines de compétence avec 2 articles maximum par domaine
-// Utilisation des mêmes couleurs que la page d'accueil
 const domainesCompetences = {
 	"Formation & Pédagogie": {
 		description: "Articles sur la formation, le développement des compétences et l'apprentissage continu",
 		color: "red",
 		icon: "fas fa-graduation-cap",
-		gradient: "from-red-600 to-red-500",
-		bgColor: "bg-red-600 dark:bg-red-500",
+		gradient: "from-red-500 to-pink-600",
 		articles: getArticlesForDomain('formation').slice(0, 2)
 	},
 	"Gestion de Projet Télécom": {
 		description: "Pilotage de projets complexes, gestion d'équipes et méthodologies agiles",
-		color: "green", 
+		color: "blue", 
 		icon: "fas fa-tasks",
-		gradient: "from-green-600 to-green-500",
-		bgColor: "bg-green-600 dark:bg-green-500",
+		gradient: "from-blue-500 to-indigo-600",
 		articles: getArticlesForDomain('gestion-projet').slice(0, 2)
 	},
 	"Développement Web & Technologies": {
 		description: "Tendances, technologies et bonnes pratiques du développement web moderne",
-		color: "blue",
-		icon: "fas fa-laptop-code",
-		gradient: "from-blue-600 to-blue-500",
-		bgColor: "bg-blue-600 dark:bg-blue-500",
+		color: "purple",
+		icon: "fas fa-code",
+		gradient: "from-purple-500 to-violet-600",
 		articles: getArticlesForDomain('developpement-web').slice(0, 2)
 	},
 	"Qualité & Processus": {
 		description: "Amélioration continue, certification et optimisation des processus",
-		color: "purple",
-		icon: "fas fa-clipboard-check",
-		gradient: "from-purple-600 to-purple-500",
-		bgColor: "bg-purple-600 dark:bg-purple-500",
-		articles: getArticlesForDomain('qualite-process').slice(0, 2)
-	},
-	"Développement Commercial": {
-		description: "Stratégies commerciales, négociation et développement de partenariats",
 		color: "orange",
-		icon: "fas fa-handshake",
-		gradient: "from-orange-600 to-orange-500",
-		bgColor: "bg-orange-600 dark:bg-orange-500",
-		articles: getArticlesForDomain('developpement-commercial').slice(0, 2)
+		icon: "fas fa-check-circle",
+		gradient: "from-orange-500 to-red-600",
+		articles: getArticlesForDomain('qualite-process').slice(0, 2)
 	},
 	"Gestion des Talents": {
 		description: "Stratégies et méthodes pour gérer, développer et fidéliser les talents",
-		color: "teal",
+		color: "green",
 		icon: "fas fa-users",
-		gradient: "from-teal-500 to-cyan-600",
-		bgColor: "bg-teal-600 dark:bg-teal-500",
+		gradient: "from-green-500 to-emerald-600",
 		articles: getArticlesForDomain('gestion-talents').slice(0, 2)
+	},
+	"Productivité & Méthodes": {
+		description: "Techniques de productivité, gestion du temps et méthodes de travail",
+		color: "teal",
+		icon: "fas fa-clock",
+		gradient: "from-teal-500 to-cyan-600",
+		articles: getArticlesForDomain('productivite-methodes').slice(0, 2)
 	}
 };
 
@@ -132,7 +125,7 @@ const totalDomaines = Object.keys(domainesCompetences).length;
 				<div class="animate-fade-in-up">
 					<h1 class="text-6xl md:text-8xl font-black mb-8 bg-gradient-to-r from-white via-purple-200 to-pink-200 bg-clip-text text-transparent animate-gradient">
 						📝 Blog
-				</h1>
+					</h1>
 					<h2 class="text-4xl md:text-6xl font-bold mb-6 text-white/90 animate-slide-in-right">
 						& Articles
 					</h2>
@@ -148,9 +141,9 @@ const totalDomaines = Object.keys(domainesCompetences).length;
 					<div class="group bg-white/10 backdrop-blur-sm rounded-3xl p-8 hover:bg-white/20 transition-all duration-500 transform hover:scale-110 hover:rotate-1 animate-fade-in-up delay-100">
 						<div class="text-5xl font-black mb-2 bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
 							{totalArticles}
-				</div>
+						</div>
 						<div class="text-sm opacity-90 font-medium">Articles</div>
-							</div>
+					</div>
 					<div class="group bg-white/10 backdrop-blur-sm rounded-3xl p-8 hover:bg-white/20 transition-all duration-500 transform hover:scale-110 hover:-rotate-1 animate-fade-in-up delay-200">
 						<div class="text-5xl font-black mb-2 bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent">
 							{totalBooks}
@@ -160,13 +153,13 @@ const totalDomaines = Object.keys(domainesCompetences).length;
 					<div class="group bg-white/10 backdrop-blur-sm rounded-3xl p-8 hover:bg-white/20 transition-all duration-500 transform hover:scale-110 hover:rotate-1 animate-fade-in-up delay-300">
 						<div class="text-5xl font-black mb-2 bg-gradient-to-r from-pink-400 to-purple-500 bg-clip-text text-transparent">
 							{totalDomaines}
-							</div>
-						<div class="text-sm opacity-90 font-medium">Domaines</div>
 						</div>
+						<div class="text-sm opacity-90 font-medium">Domaines</div>
+					</div>
 				</div>
 			</div>
 		</section>
-		
+
 		<!-- Section Livres Recommandés avec Style Créatif -->
 		<section class="py-20 bg-gradient-to-br from-slate-800 to-purple-900 relative">
 			<div class="container mx-auto px-4">
@@ -175,7 +168,7 @@ const totalDomaines = Object.keys(domainesCompetences).length;
 						<h2 class="text-5xl font-black mb-6 bg-gradient-to-r from-yellow-400 via-pink-500 to-purple-600 bg-clip-text text-transparent animate-gradient">
 							📚 Livres Recommandés
 						</h2>
-				</div>
+					</div>
 					<p class="text-xl text-white/80 max-w-3xl mx-auto">
 						Découvrez ma sélection de livres qui ont <span class="text-yellow-300 font-bold">marqué</span> mon parcours professionnel.
 					</p>
@@ -189,8 +182,8 @@ const totalDomaines = Object.keys(domainesCompetences).length;
 								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
 							</svg>
 						</a>
-			</div>
-		</div>
+					</div>
+				</div>
 
 				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
 					{livresRecommandes.map((book, index) => (
@@ -214,25 +207,25 @@ const totalDomaines = Object.keys(domainesCompetences).length;
 															>
 																<path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
 															</svg>
-								))}
-							</div>
+														))}
+													</div>
 												</>
 											)}
-						</div>
-													</div>
+										</div>
+									</div>
 									{book.data.featured && (
 										<div class="absolute top-4 right-4">
 											<span class="bg-yellow-400 text-yellow-900 px-2 py-1 rounded-full text-xs font-medium">
 												⭐ Mis en avant
-														</span>
+											</span>
 										</div>
-													)}
-												</div>
-												
+									)}
+								</div>
+
 								<div class="p-6">
 									<h3 class="text-xl font-bold text-white mb-3 line-clamp-2 group-hover:text-yellow-300 transition-colors">
 										{book.data.title}
-													</h3>
+									</h3>
 									<p class="text-sm text-white/70 mb-3">
 										par {book.data.author}
 									</p>
@@ -249,12 +242,12 @@ const totalDomaines = Object.keys(domainesCompetences).length;
 											<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
 										</svg>
 									</a>
-												</div>
-											</div>
+								</div>
+							</div>
 						</div>
 					))}
-														</div>
-													</div>
+				</div>
+			</div>
 		</section>
 
 		<!-- Articles par Domaine avec Layout Créatif -->
@@ -269,8 +262,8 @@ const totalDomaines = Object.keys(domainesCompetences).length;
 					<p class="text-xl text-white/80 max-w-3xl mx-auto">
 						Explorez mes articles <span class="text-yellow-300 font-bold">spécialisés</span>, organisés par domaine de compétence.
 					</p>
-													</div>
-													
+				</div>
+
 				<div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
 					{Object.entries(domainesCompetences).map(([domainName, domain], index) => (
 						<div class={`group relative animate-fade-in-up delay-${index * 150}`}>
@@ -284,16 +277,16 @@ const totalDomaines = Object.keys(domainesCompetences).length;
 										<div class="flex items-center mb-4">
 											<div class="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center mr-4 backdrop-blur-sm transform group-hover:rotate-12 transition-transform">
 												<i class={`${domain.icon} text-2xl`}></i>
-												</div>
+											</div>
 											<div>
 												<h3 class="text-2xl font-bold">{domainName}</h3>
 												<p class="text-sm opacity-90">{domain.articles.length} article{domain.articles.length > 1 ? 's' : ''} sélectionné{domain.articles.length > 1 ? 's' : ''}</p>
-					</div>
-			</div>
+											</div>
+										</div>
 										<p class="text-sm opacity-90 leading-relaxed">{domain.description}</p>
 									</div>
-												</div>
-												
+								</div>
+
 								<!-- Articles du domaine -->
 								<div class="p-8">
 									{domain.articles.length > 0 ? (
@@ -304,16 +297,16 @@ const totalDomaines = Object.keys(domainesCompetences).length;
 														<div class="flex-shrink-0">
 															<div class={`w-12 h-12 bg-gradient-to-r ${domain.gradient} rounded-xl flex items-center justify-center transform group-hover/article:rotate-12 transition-transform`}>
 																<i class={`${domain.icon} text-white text-lg`}></i>
+															</div>
 														</div>
-													</div>
 														<div class="flex-1 min-w-0">
 															<h4 class="text-lg font-semibold text-white mb-2 group-hover/article:text-yellow-300 transition-colors line-clamp-2">
-														{article.data.title}
+																{article.data.title}
 															</h4>
 															<p class="text-white/70 text-sm mb-3 line-clamp-2">
-													{article.data.description}
-												</p>
-												<div class="flex items-center justify-between">
+																{article.data.description}
+															</p>
+															<div class="flex items-center justify-between">
 																<div class="flex items-center space-x-4 text-xs text-white/50">
 																	<span>{formatDate(article.data.publishDate)}</span>
 																	<span>•</span>
@@ -336,9 +329,9 @@ const totalDomaines = Object.keys(domainesCompetences).length;
 																</a>
 															</div>
 														</div>
-												</div>
-											</article>
-										))}
+													</div>
+												</article>
+											))}
 											
 											<!-- Lien vers plus d'articles -->
 											<div class="pt-4 border-t border-white/20">
@@ -351,23 +344,23 @@ const totalDomaines = Object.keys(domainesCompetences).length;
 														<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
 													</svg>
 												</a>
-									</div>
+											</div>
 										</div>
 									) : (
 										<div class="text-center py-12">
 											<div class="w-16 h-16 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-4 transform rotate-12">
 												<i class={`${domain.icon} text-2xl text-white/50`}></i>
-								</div>
+											</div>
 											<h3 class="text-lg font-medium text-white mb-2">Aucun article disponible</h3>
 											<p class="text-white/60">Des articles seront bientôt ajoutés dans ce domaine.</p>
+										</div>
+									)}
+								</div>
 							</div>
-						)}
-			</div>
-		</div>
 						</div>
 					))}
-					</div>
 				</div>
+			</div>
 		</section>
 
 		<!-- CTA Section avec Style Décalé -->
@@ -377,7 +370,7 @@ const totalDomaines = Object.keys(domainesCompetences).length;
 				<div class="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-indigo-600/20 to-purple-600/20"></div>
 				<div class="absolute top-1/4 left-1/4 w-96 h-96 bg-white/10 rounded-full blur-3xl animate-pulse"></div>
 				<div class="absolute bottom-1/4 right-1/4 w-64 h-64 bg-white/5 rounded-full blur-3xl animate-pulse delay-1000"></div>
-								</div>
+			</div>
 			
 			<div class="container mx-auto px-4 text-center relative z-10">
 				<div class="transform rotate-1 inline-block">
@@ -411,7 +404,7 @@ const totalDomaines = Object.keys(domainesCompetences).length;
 				</div>
 			</div>
 		</section>
-				</div>
+	</div>
 </BaseLayout>
 
 <style>
@@ -428,25 +421,25 @@ const totalDomaines = Object.keys(domainesCompetences).length;
 		-webkit-box-orient: vertical;
 		overflow: hidden;
 	}
-	
+
 	@keyframes fade-in-up {
 		from { 
-			opacity: 0;
+			opacity: 0; 
 			transform: translateY(30px); 
 		}
 		to { 
-			opacity: 1;
+			opacity: 1; 
 			transform: translateY(0); 
 		}
 	}
-	
+
 	@keyframes slide-in-right {
 		from { 
-			opacity: 0;
+			opacity: 0; 
 			transform: translateX(30px); 
 		}
 		to { 
-			opacity: 1;
+			opacity: 1; 
 			transform: translateX(0); 
 		}
 	}
@@ -455,11 +448,11 @@ const totalDomaines = Object.keys(domainesCompetences).length;
 		0%, 100% { background-position: 0% 50%; }
 		50% { background-position: 100% 50%; }
 	}
-	
+
 	.animate-fade-in-up {
 		animation: fade-in-up 0.8s ease-out forwards;
 	}
-	
+
 	.animate-slide-in-right {
 		animation: slide-in-right 1s ease-out;
 	}
@@ -493,7 +486,7 @@ const totalDomaines = Object.keys(domainesCompetences).length;
 	/* Scroll animations */
 	@media (prefers-reduced-motion: no-preference) {
 		.animate-fade-in-up {
-		opacity: 0;
+			opacity: 0;
 			transform: translateY(30px);
 			animation: fade-in-up 0.8s ease-out forwards;
 		}

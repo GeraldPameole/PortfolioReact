@@ -1,0 +1,459 @@
+---
+import { getCollection } from 'astro:content';
+import { getFeaturedArticlesForDomain } from '../config/featured-articles';
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+// Récupérer tous les articles
+const allArticles = await getCollection('articles');
+
+// Fonction pour obtenir les articles d'un domaine spécifique
+function getArticlesForDomain(domain: string) {
+  const featuredSlugs = getFeaturedArticlesForDomain(domain);
+  return allArticles.filter(article => 
+    featuredSlugs.includes(article.slug)
+  ).sort((a, b) => {
+    if (a.data.featured && !b.data.featured) return -1;
+    if (!a.data.featured && b.data.featured) return 1;
+    return new Date(b.data.publishDate).getTime() - new Date(a.data.publishDate).getTime();
+  });
+}
+
+// Fonction pour obtenir TOUS les articles d'un domaine (pas seulement les featured)
+function getAllArticlesForDomain(domain: string) {
+  return allArticles.filter(article => {
+    // Vérifier si l'article est dans le bon dossier
+    const articlePath = article.id;
+    return articlePath.includes(domain);
+  }).sort((a, b) => {
+    if (a.data.featured && !b.data.featured) return -1;
+    if (!a.data.featured && b.data.featured) return 1;
+    return new Date(b.data.publishDate).getTime() - new Date(a.data.publishDate).getTime();
+  });
+}
+
+// Configuration des domaines avec leurs métadonnées
+const domainesConfig = {
+  'gestion-projet': {
+    name: 'Gestion de Projet',
+    description: 'Méthodologies, outils et bonnes pratiques pour la gestion de projet',
+    icon: 'fas fa-tasks',
+    color: 'blue',
+    gradient: 'from-blue-500 to-indigo-600'
+  },
+  'developpement-web': {
+    name: 'Développement Web',
+    description: 'Tendances, technologies et bonnes pratiques du développement web moderne',
+    icon: 'fas fa-code',
+    color: 'purple',
+    gradient: 'from-purple-500 to-pink-600'
+  },
+  'qualite-process': {
+    name: 'Qualité & Processus',
+    description: 'Amélioration continue, certification et optimisation des processus',
+    icon: 'fas fa-check-circle',
+    color: 'red',
+    gradient: 'from-red-500 to-orange-600'
+  },
+  'formation': {
+    name: 'Formation & Pédagogie',
+    description: 'Articles sur la formation, le développement des compétences et l\'apprentissage continu',
+    icon: 'fas fa-graduation-cap',
+    color: 'green',
+    gradient: 'from-green-500 to-emerald-600'
+  },
+  'developpement-commercial': {
+    name: 'Développement Commercial',
+    description: 'Stratégies commerciales, négociation et développement de partenariats',
+    icon: 'fas fa-handshake',
+    color: 'orange',
+    gradient: 'from-orange-500 to-red-600'
+  },
+  'gestion-talents': {
+    name: 'Gestion des Talents',
+    description: 'Stratégies et méthodes pour gérer, développer et fidéliser les talents',
+    icon: 'fas fa-users',
+    color: 'teal',
+    gradient: 'from-teal-500 to-cyan-600'
+  },
+  'productivite-methodes': {
+    name: 'Productivité & Méthodes',
+    description: 'Techniques de productivité, gestion du temps et méthodes de travail',
+    icon: 'fas fa-clock',
+    color: 'indigo',
+    gradient: 'from-indigo-500 to-purple-600'
+  },
+  'transformation-digitale': {
+    name: 'Transformation Digitale',
+    description: 'IA, transformation numérique et nouvelles technologies',
+    icon: 'fas fa-robot',
+    color: 'pink',
+    gradient: 'from-pink-500 to-rose-600'
+  },
+  'marketing-communication': {
+    name: 'Marketing & Communication',
+    description: 'Stratégies marketing digital, réseaux sociaux et communication d\'entreprise',
+    icon: 'fas fa-bullhorn',
+    color: 'yellow',
+    gradient: 'from-yellow-500 to-orange-600'
+  },
+  'leadership-management': {
+    name: 'Leadership & Management',
+    description: 'Leadership, management d\'équipe et développement des compétences managériales',
+    icon: 'fas fa-crown',
+    color: 'purple',
+    gradient: 'from-purple-500 to-violet-600'
+  },
+  'innovation-technologies': {
+    name: 'Innovation & Technologies',
+    description: 'Innovation, nouvelles technologies et tendances émergentes',
+    icon: 'fas fa-lightbulb',
+    color: 'cyan',
+    gradient: 'from-cyan-500 to-blue-600'
+  },
+  'service-client': {
+    name: 'Service Client',
+    description: 'Excellence du service client, satisfaction et fidélisation',
+    icon: 'fas fa-headset',
+    color: 'emerald',
+    gradient: 'from-emerald-500 to-green-600'
+  },
+  'gestion-connaissances': {
+    name: 'Gestion des Connaissances',
+    description: 'Gestion et partage des connaissances organisationnelles',
+    icon: 'fas fa-brain',
+    color: 'violet',
+    gradient: 'from-violet-500 to-purple-600'
+  },
+  'reconversion-carriere': {
+    name: 'Reconversion & Carrière',
+    description: 'Reconversion professionnelle, évolution de carrière et développement personnel',
+    icon: 'fas fa-route',
+    color: 'rose',
+    gradient: 'from-rose-500 to-pink-600'
+  },
+  'outils-techniques': {
+    name: 'Outils & Techniques',
+    description: 'Outils, techniques et méthodes pratiques pour améliorer la productivité',
+    icon: 'fas fa-tools',
+    color: 'slate',
+    gradient: 'from-slate-500 to-gray-600'
+  }
+};
+
+// Fonction pour formater la date
+function formatDate(date: Date | string): string {
+  const dateObj = typeof date === 'string' ? new Date(date) : date;
+  return dateObj.toLocaleDateString('fr-FR', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
+  });
+}
+
+// Statistiques
+const totalDomaines = Object.keys(domainesConfig).length;
+const totalArticles = allArticles.length;
+---
+
+<BaseLayout title="Domaines d'Expertise | Gérald Paméole" description="Explorez mes domaines d'expertise et découvrez tous mes articles organisés par thème.">
+	<div class="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white overflow-hidden">
+		<!-- Hero Section avec Animation 3D -->
+		<section class="relative py-32 bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-600 text-white overflow-hidden">
+			<!-- Background Animation Complexe -->
+			<div class="absolute inset-0">
+				<div class="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-indigo-600/20 to-purple-600/20"></div>
+				<div class="absolute top-1/4 left-1/4 w-96 h-96 bg-white/10 rounded-full blur-3xl animate-pulse"></div>
+				<div class="absolute bottom-1/4 right-1/4 w-64 h-64 bg-white/5 rounded-full blur-3xl animate-pulse delay-1000"></div>
+				<div class="absolute top-1/2 left-1/2 w-32 h-32 bg-white/15 rounded-full blur-2xl animate-bounce delay-500"></div>
+				<!-- Formes géométriques flottantes -->
+				<div class="absolute top-20 left-20 w-4 h-4 bg-white/20 rotate-45 animate-spin"></div>
+				<div class="absolute top-40 right-32 w-6 h-6 bg-white/15 rounded-full animate-ping"></div>
+				<div class="absolute bottom-32 left-1/3 w-3 h-3 bg-white/25 rotate-12 animate-pulse"></div>
+				<div class="absolute top-60 right-20 w-5 h-5 bg-white/10 rounded-full animate-bounce delay-700"></div>
+			</div>
+			
+			<div class="container mx-auto px-4 text-center relative z-10">
+				<div class="animate-fade-in-up">
+					<h1 class="text-6xl md:text-8xl font-black mb-8 bg-gradient-to-r from-white via-purple-200 to-pink-200 bg-clip-text text-transparent animate-gradient">
+						🎯 Domaines
+					</h1>
+					<h2 class="text-4xl md:text-6xl font-bold mb-6 text-white/90 animate-slide-in-right">
+						d'Expertise
+					</h2>
+				</div>
+				<p class="text-xl md:text-2xl max-w-4xl mx-auto mb-12 opacity-90 animate-fade-in-up delay-300">
+					Explorez mes <span class="text-yellow-300 font-bold">{totalDomaines} domaines d'expertise</span> et découvrez 
+					<span class="text-pink-300 font-bold">{totalArticles} articles</span> organisés par thème pour une 
+					<span class="text-cyan-300 font-bold">navigation intuitive</span>.
+				</p>
+				
+				<!-- Statistiques avec Animation Staggered -->
+				<div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+					<div class="group bg-white/10 backdrop-blur-sm rounded-3xl p-8 hover:bg-white/20 transition-all duration-500 transform hover:scale-110 hover:rotate-1 animate-fade-in-up delay-100">
+						<div class="text-5xl font-black mb-2 bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
+							{totalDomaines}
+						</div>
+						<div class="text-sm opacity-90 font-medium">Domaines</div>
+					</div>
+					<div class="group bg-white/10 backdrop-blur-sm rounded-3xl p-8 hover:bg-white/20 transition-all duration-500 transform hover:scale-110 hover:-rotate-1 animate-fade-in-up delay-200">
+						<div class="text-5xl font-black mb-2 bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent">
+							{totalArticles}
+						</div>
+						<div class="text-sm opacity-90 font-medium">Articles</div>
+					</div>
+					<div class="group bg-white/10 backdrop-blur-sm rounded-3xl p-8 hover:bg-white/20 transition-all duration-500 transform hover:scale-110 hover:rotate-1 animate-fade-in-up delay-300">
+						<div class="text-5xl font-black mb-2 bg-gradient-to-r from-pink-400 to-purple-500 bg-clip-text text-transparent">
+							100%
+						</div>
+						<div class="text-sm opacity-90 font-medium">Expertise</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Domaines avec Articles -->
+		<section class="py-20 bg-gradient-to-br from-slate-800 to-purple-900">
+			<div class="container mx-auto px-4">
+				<div class="text-center mb-16">
+					<div class="transform -rotate-1 inline-block">
+						<h2 class="text-5xl font-black mb-6 bg-gradient-to-r from-yellow-400 via-pink-500 to-purple-600 bg-clip-text text-transparent animate-gradient">
+							📚 Articles par Thème
+						</h2>
+					</div>
+					<p class="text-xl text-white/80 max-w-3xl mx-auto">
+						Chaque domaine contient tous les articles <span class="text-yellow-300 font-bold">spécialisés</span> sur le sujet.
+					</p>
+				</div>
+
+				<div class="space-y-20">
+					{Object.entries(domainesConfig).map(([domainKey, domain], index) => {
+						const allDomainArticles = getAllArticlesForDomain(domainKey);
+						return (
+							<div id={domainKey} class={`animate-fade-in-up delay-${index * 100}`}>
+								<!-- Header du domaine -->
+								<div class="text-center mb-12">
+									<div class="transform rotate-1 inline-block">
+										<h3 class="text-4xl font-black mb-4 bg-gradient-to-r from-yellow-400 via-pink-500 to-purple-600 bg-clip-text text-transparent animate-gradient">
+											{domain.name}
+										</h3>
+									</div>
+									<p class="text-lg text-white/70 max-w-2xl mx-auto mb-6">
+										{domain.description}
+									</p>
+									<div class="inline-block transform -rotate-1 bg-white/10 backdrop-blur-sm rounded-2xl px-6 py-3 border border-white/20">
+										<p class="text-sm text-white/80 font-medium">
+											{allDomainArticles.length} article{allDomainArticles.length > 1 ? 's' : ''} dans ce domaine
+										</p>
+									</div>
+								</div>
+
+								<!-- Articles du domaine -->
+								{allDomainArticles.length > 0 ? (
+									<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+										{allDomainArticles.map((article, articleIndex) => (
+											<article class={`group relative animate-fade-in-up delay-${articleIndex * 100}`}>
+												<div class="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-3xl shadow-2xl overflow-hidden hover:shadow-purple-500/25 transition-all duration-500 transform hover:scale-105 hover:-rotate-1 border border-white/20">
+													<!-- Image de l'article -->
+													<div class={`h-48 bg-gradient-to-br ${domain.gradient} relative overflow-hidden`}>
+														<div class="absolute inset-0 bg-black/20"></div>
+														<div class="absolute bottom-4 left-4 text-white">
+															<div class="flex items-center space-x-2">
+																<span class="text-sm font-medium">{article.data.readingTime} min</span>
+																<span class="text-sm">•</span>
+																<span class="text-sm">{formatDate(article.data.publishDate)}</span>
+															</div>
+														</div>
+														{article.data.featured && (
+															<div class="absolute top-4 right-4">
+																<span class="bg-yellow-400 text-yellow-900 px-2 py-1 rounded-full text-xs font-medium">
+																	⭐ Mis en avant
+																</span>
+															</div>
+														)}
+														<div class="absolute top-4 left-4">
+															<div class="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center">
+																<i class={`${domain.icon} text-white text-lg`}></i>
+															</div>
+														</div>
+													</div>
+
+													<!-- Contenu de l'article -->
+													<div class="p-6">
+														<h4 class="text-xl font-bold text-white mb-3 line-clamp-2 group-hover:text-yellow-300 transition-colors">
+															{article.data.title}
+														</h4>
+														<p class="text-white/70 text-sm mb-4 line-clamp-3">
+															{article.data.description}
+														</p>
+														
+														<!-- Tags -->
+														{article.data.tags && article.data.tags.length > 0 && (
+															<div class="flex flex-wrap gap-2 mb-4">
+																{article.data.tags.slice(0, 3).map((tag) => (
+																	<span class="px-2 py-1 bg-white/10 backdrop-blur-sm text-white/80 text-xs rounded-full border border-white/20">
+																		{tag}
+																	</span>
+																))}
+															</div>
+														)}
+
+														<!-- Lien vers l'article -->
+														<a 
+															href={`/articles/${article.slug}`}
+															class="inline-flex items-center text-indigo-300 hover:text-yellow-300 font-medium text-sm transform hover:translate-x-1 transition-all"
+														>
+															Lire l'article
+															<svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+																<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+															</svg>
+														</a>
+													</div>
+												</div>
+											</article>
+										))}
+									</div>
+								) : (
+									<div class="text-center py-16">
+										<div class="w-24 h-24 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-6 transform rotate-12">
+											<i class={`${domain.icon} text-3xl text-white/50`}></i>
+										</div>
+										<h3 class="text-2xl font-bold text-white mb-4">Aucun article dans ce domaine</h3>
+										<p class="text-white/60">Des articles seront bientôt ajoutés dans ce domaine.</p>
+									</div>
+								)}
+							</div>
+						);
+					})}
+				</div>
+			</div>
+		</section>
+
+		<!-- CTA Section -->
+		<section class="py-24 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white relative overflow-hidden">
+			<!-- Background Animation -->
+			<div class="absolute inset-0">
+				<div class="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-indigo-600/20 to-purple-600/20"></div>
+				<div class="absolute top-1/4 left-1/4 w-96 h-96 bg-white/10 rounded-full blur-3xl animate-pulse"></div>
+				<div class="absolute bottom-1/4 right-1/4 w-64 h-64 bg-white/5 rounded-full blur-3xl animate-pulse delay-1000"></div>
+			</div>
+			
+			<div class="container mx-auto px-4 text-center relative z-10">
+				<div class="transform -rotate-1 inline-block">
+					<h2 class="text-6xl font-black mb-8 bg-gradient-to-r from-white via-yellow-200 to-pink-200 bg-clip-text text-transparent animate-gradient">
+						Besoin d'aide ?
+					</h2>
+				</div>
+				<p class="text-2xl mb-12 max-w-4xl mx-auto opacity-90">
+					Vous cherchez des conseils dans un <span class="text-yellow-300 font-bold">domaine spécifique</span> ? 
+					N'hésitez pas à me <span class="text-pink-300 font-bold">contacter</span> !
+				</p>
+				<div class="flex flex-col sm:flex-row gap-8 justify-center">
+					<a 
+						href="/contact" 
+						class="group inline-flex items-center px-12 py-6 bg-white text-indigo-600 font-bold rounded-2xl hover:bg-gray-100 transition-all duration-300 transform hover:scale-110 hover:-rotate-1 shadow-2xl"
+					>
+						Me contacter
+						<svg class="ml-3 w-6 h-6 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+						</svg>
+					</a>
+					<a 
+						href="/blog" 
+						class="group inline-flex items-center px-12 py-6 border-2 border-white text-white font-bold rounded-2xl hover:bg-white hover:text-indigo-600 transition-all duration-300 transform hover:scale-110 hover:rotate-1"
+					>
+						Voir le blog
+						<svg class="ml-3 w-6 h-6 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+						</svg>
+					</a>
+				</div>
+			</div>
+		</section>
+	</div>
+</BaseLayout>
+
+<style>
+	.line-clamp-2 {
+		display: -webkit-box;
+		-webkit-line-clamp: 2;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+	}
+	
+	.line-clamp-3 {
+		display: -webkit-box;
+		-webkit-line-clamp: 3;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+	}
+
+	@keyframes fade-in-up {
+		from { 
+			opacity: 0; 
+			transform: translateY(30px); 
+		}
+		to { 
+			opacity: 1; 
+			transform: translateY(0); 
+		}
+	}
+
+	@keyframes slide-in-right {
+		from { 
+			opacity: 0; 
+			transform: translateX(30px); 
+		}
+		to { 
+			opacity: 1; 
+			transform: translateX(0); 
+		}
+	}
+
+	@keyframes gradient {
+		0%, 100% { background-position: 0% 50%; }
+		50% { background-position: 100% 50%; }
+	}
+
+	.animate-fade-in-up {
+		animation: fade-in-up 0.8s ease-out forwards;
+	}
+
+	.animate-slide-in-right {
+		animation: slide-in-right 1s ease-out;
+	}
+
+	.animate-gradient {
+		background-size: 200% 200%;
+		animation: gradient 3s ease infinite;
+	}
+
+	/* Délais d'animation */
+	.delay-100 { animation-delay: 0.1s; }
+	.delay-200 { animation-delay: 0.2s; }
+	.delay-300 { animation-delay: 0.3s; }
+	.delay-500 { animation-delay: 0.5s; }
+	.delay-700 { animation-delay: 0.7s; }
+	.delay-1000 { animation-delay: 1s; }
+
+	/* Effets de hover avancés */
+	.group:hover .group-hover\:translate-x-1 {
+		transform: translateX(0.25rem);
+	}
+
+	.group:hover .group-hover\:scale-110 {
+		transform: scale(1.1);
+	}
+
+	.group:hover .group-hover\:rotate-12 {
+		transform: rotate(12deg);
+	}
+
+	/* Scroll animations */
+	@media (prefers-reduced-motion: no-preference) {
+		.animate-fade-in-up {
+			opacity: 0;
+			transform: translateY(30px);
+			animation: fade-in-up 0.8s ease-out forwards;
+		}
+	}
+</style>
