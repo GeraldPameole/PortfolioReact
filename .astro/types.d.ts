@@ -185,20 +185,6 @@ declare module 'astro:content' {
 
 	type ContentEntryMap = {
 		"articles": {
-"articles-generaux/comment-planifier-mon-travail.md": {
-	id: "articles-generaux/comment-planifier-mon-travail.md";
-  slug: "articles-generaux/comment-planifier-mon-travail";
-  body: string;
-  collection: "articles";
-  data: InferEntrySchema<"articles">
-} & { render(): Render[".md"] };
-"articles-generaux/premier-article.md": {
-	id: "articles-generaux/premier-article.md";
-  slug: "articles-generaux/premier-article";
-  body: string;
-  collection: "articles";
-  data: InferEntrySchema<"articles">
-} & { render(): Render[".md"] };
 "articles-generaux/synthese-thematiques.md": {
 	id: "articles-generaux/synthese-thematiques.md";
   slug: "articles-generaux/synthese-thematiques";
@@ -692,6 +678,13 @@ declare module 'astro:content' {
 "outils-techniques/visualisations-mermaid.md": {
 	id: "outils-techniques/visualisations-mermaid.md";
   slug: "outils-techniques/visualisations-mermaid";
+  body: string;
+  collection: "articles";
+  data: InferEntrySchema<"articles">
+} & { render(): Render[".md"] };
+"productivite-methodes/comment-planifier-mon-travail.md": {
+	id: "productivite-methodes/comment-planifier-mon-travail.md";
+  slug: "productivite-methodes/comment-planifier-mon-travail";
   body: string;
   collection: "articles";
   data: InferEntrySchema<"articles">

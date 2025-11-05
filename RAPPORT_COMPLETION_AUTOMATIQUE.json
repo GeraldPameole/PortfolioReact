@@ -1,0 +1,846 @@
+{
+  "totalProcessed": 91,
+  "totalArticles": 96,
+  "byDomain": {
+    "developpement-web": {
+      "domain": "developpement-web",
+      "processed": 6,
+      "total": 9,
+      "results": [
+        {
+          "file": "frameworks-javascript-analyse-2024.md",
+          "processed": true,
+          "hasPlaceholders": false,
+          "sectionOrder": false,
+          "missingSections": 1,
+          "sourceCount": 0
+        },
+        {
+          "file": "progressive-web-apps-2024.md",
+          "processed": true,
+          "hasPlaceholders": false,
+          "sectionOrder": false,
+          "missingSections": 0,
+          "sourceCount": 0
+        },
+        {
+          "file": "technologies-javascript-2024.md",
+          "processed": true,
+          "hasPlaceholders": false,
+          "sectionOrder": false,
+          "missingSections": 0,
+          "sourceCount": 0
+        },
+        {
+          "file": "tendances-developpement-web-2025.md",
+          "processed": true,
+          "hasPlaceholders": false,
+          "sectionOrder": false,
+          "missingSections": 0,
+          "sourceCount": 0
+        },
+        {
+          "file": "web-accessibilite-guide-pratique.md",
+          "processed": true,
+          "hasPlaceholders": false,
+          "sectionOrder": false,
+          "missingSections": 0,
+          "sourceCount": 0
+        },
+        {
+          "file": "web-javascript-modern.md",
+          "processed": true,
+          "hasPlaceholders": false,
+          "sectionOrder": false,
+          "missingSections": 0,
+          "sourceCount": 0
+        }
+      ]
+    },
+    "gestion-talents": {
+      "domain": "gestion-talents",
+      "processed": 15,
+      "total": 16,
+      "results": [
+        {
+          "file": "gestion-competences-developpement.md",
+          "processed": true,
+          "hasPlaceholders": false,
+          "sectionOrder": false,
+          "missingSections": 0,
+          "sourceCount": 0
+        },
+        {
+          "file": "gestion-conflits-equipe.md",
+          "processed": true,
+          "hasPlaceholders": false,
+          "sectionOrder": false,
+          "missingSections": 1,
+          "sourceCount": 0
+        },
+        {
+          "file": "gestion-talents-attraction.md",
+          "processed": true,
+          "hasPlaceholders": false,
+          "sectionOrder": false,
+          "missingSections": 0,
+          "sourceCount": 0
+        },
+        {
+          "file": "gestion-talents-developpement.md",
+          "processed": true,
+          "hasPlaceholders": false,
+          "sectionOrder": false,
+          "missingSections": 0,
+          "sourceCount": 0
+        },
+        {
+          "file": "gestion-talents-fidelisation.md",
+          "processed": true,
+          "hasPlaceholders": false,
+          "sectionOrder": false,
+          "missingSections": 0,
+          "sourceCount": 0
+        },
+        {
+          "file": "gestion-talents-formation.md",
+          "processed": true,
+          "hasPlaceholders": false,
+          "sectionOrder": false,
+          "missingSections": 1,
+          "sourceCount": 0
+        },
+        {
+          "file": "gestion-talents-performance.md",
+          "processed": true,
+          "hasPlaceholders": false,
+          "sectionOrder": false,
+          "missingSections": 1,
+          "sourceCount": 0
+        },
+        {
+          "file": "gestion-talents-recrutement.md",
+          "processed": true,
+          "hasPlaceholders": false,
+          "sectionOrder": false,
+          "missingSections": 0,
+          "sourceCount": 0
+        },
+        {
+          "file": "gestion-talents-remuneration.md",
+          "processed": true,
+          "hasPlaceholders": false,
+          "sectionOrder": false,
+          "missingSections": 0,
+          "sourceCount": 0
+        },
+        {
+          "file": "gestion-talents-retention.md",
+          "processed": true,
+          "hasPlaceholders": false,
+          "sectionOrder": false,
+          "missingSections": 1,
+          "sourceCount": 0
+        },
+        {
+          "file": "gestion-talents-succession.md",
+          "processed": true,
+          "hasPlaceholders": false,
+          "sectionOrder": false,
+          "missingSections": 0,
+          "sourceCount": 0
+        },
+        {
+          "file": "gestion-talents-whistleblowing.md",
+          "processed": true,
+          "hasPlaceholders": false,
+          "sectionOrder": false,
+          "missingSections": 0,
+          "sourceCount": 0
+        },
+        {
+          "file": "gestion-talents-xenophobia.md",
+          "processed": true,
+          "hasPlaceholders": false,
+          "sectionOrder": false,
+          "missingSections": 0,
+          "sourceCount": 0
+        },
+        {
+          "file": "gestion-talents-youth.md",
+          "processed": true,
+          "hasPlaceholders": false,
+          "sectionOrder": false,
+          "missingSections": 0,
+          "sourceCount": 0
+        },
+        {
+          "file": "gestion-talents-zen.md",
+          "processed": true,
+          "hasPlaceholders": false,
+          "sectionOrder": false,
+          "missingSections": 0,
+          "sourceCount": 0
+        }
+      ]
+    },
+    "formation": {
+      "domain": "formation",
+      "processed": 15,
+      "total": 15,
+      "results": [
+        {
+          "file": "apprentissage-continu-developpement-competences.md",
+          "processed": true,
+          "hasPlaceholders": false,
+          "sectionOrder": false,
+          "missingSections": 1,
+          "sourceCount": 0
+        },
+        {
+          "file": "formation-adaptation.md",
+          "processed": true,
+          "hasPlaceholders": false,
+          "sectionOrder": false,
+          "missingSections": 1,
+          "sourceCount": 0
+        },
+        {
+          "file": "formation-collaboration.md",
+          "processed": true,
+          "hasPlaceholders": false,
+          "sectionOrder": false,
+          "missingSections": 1,
+          "sourceCount": 0
+        },
+        {
+          "file": "formation-communication.md",
+          "processed": true,
+          "hasPlaceholders": false,
+          "sectionOrder": false,
+          "missingSections": 0,
+          "sourceCount": 0
+        },
+        {
+          "file": "formation-creativite.md",
+          "processed": true,
+          "hasPlaceholders": false,
+          "sectionOrder": false,
+          "missingSections": 0,
+          "sourceCount": 0
+        },
+        {
+          "file": "formation-elearning.md",
+          "processed": true,
+          "hasPlaceholders": false,
+          "sectionOrder": false,
+          "missingSections": 1,
+          "sourceCount": 0
+        },
+        {
+          "file": "formation-equipes-commerciales.md",
+          "processed": true,
+          "hasPlaceholders": false,
+          "sectionOrder": false,
+          "missingSections": 0,
+          "sourceCount": 0
+        },
+        {
+          "file": "formation-innovation.md",
+          "processed": true,
+          "hasPlaceholders": false,
+          "sectionOrder": false,
+          "missingSections": 0,
+          "sourceCount": 0
+        },
+        {
+          "file": "formation-mentorat.md",
+          "processed": true,
+          "hasPlaceholders": false,
+          "sectionOrder": false,
+          "missingSections": 0,
+          "sourceCount": 0
+        },
+        {
+          "file": "formation-professionnelle-continue.md",
+          "processed": true,
+          "hasPlaceholders": false,
+          "sectionOrder": false,
+          "missingSections": 0,
+          "sourceCount": 0
+        },
+        {
+          "file": "formation-soft-skills.md",
+          "processed": true,
+          "hasPlaceholders": false,
+          "sectionOrder": false,
+          "missingSections": 0,
+          "sourceCount": 0
+        },
+        {
+          "file": "formation-talents-guide.md",
+          "processed": true,
+          "hasPlaceholders": false,
+          "sectionOrder": false,
+          "missingSections": 0,
+          "sourceCount": 0
+        },
+        {
+          "file": "formation-technique.md",
+          "processed": true,
+          "hasPlaceholders": false,
+          "sectionOrder": false,
+          "missingSections": 1,
+          "sourceCount": 0
+        },
+        {
+          "file": "impact-formation-continue-carriere.md",
+          "processed": true,
+          "hasPlaceholders": false,
+          "sectionOrder": false,
+          "missingSections": 0,
+          "sourceCount": 0
+        },
+        {
+          "file": "mentoring-developpement-professionnel.md",
+          "processed": true,
+          "hasPlaceholders": false,
+          "sectionOrder": false,
+          "missingSections": 0,
+          "sourceCount": 0
+        }
+      ]
+    },
+    "gestion-projet": {
+      "domain": "gestion-projet",
+      "processed": 8,
+      "total": 8,
+      "results": [
+        {
+          "file": "agile-scrum-methodologies.md",
+          "processed": true,
+          "hasPlaceholders": false,
+          "sectionOrder": false,
+          "missingSections": 1,
+          "sourceCount": 0
+        },
+        {
+          "file": "gestion-performance-equipe.md",
+          "processed": true,
+          "hasPlaceholders": false,
+          "sectionOrder": false,
+          "missingSections": 1,
+          "sourceCount": 0
+        },
+        {
+          "file": "gestion-performance-evaluation.md",
+          "processed": true,
+          "hasPlaceholders": false,
+          "sectionOrder": false,
+          "missingSections": 1,
+          "sourceCount": 0
+        },
+        {
+          "file": "gestion-projet-agile-meilleures-pratiques.md",
+          "processed": true,
+          "hasPlaceholders": false,
+          "sectionOrder": false,
+          "missingSections": 0,
+          "sourceCount": 0
+        },
+        {
+          "file": "gestion-projet-agile.md",
+          "processed": true,
+          "hasPlaceholders": false,
+          "sectionOrder": false,
+          "missingSections": 1,
+          "sourceCount": 0
+        },
+        {
+          "file": "gestion-projet-performance.md",
+          "processed": true,
+          "hasPlaceholders": false,
+          "sectionOrder": false,
+          "missingSections": 0,
+          "sourceCount": 0
+        },
+        {
+          "file": "gestion-projet-risques.md",
+          "processed": true,
+          "hasPlaceholders": false,
+          "sectionOrder": false,
+          "missingSections": 1,
+          "sourceCount": 0
+        },
+        {
+          "file": "gestion-risques-projet.md",
+          "processed": true,
+          "hasPlaceholders": false,
+          "sectionOrder": false,
+          "missingSections": 0,
+          "sourceCount": 0
+        }
+      ]
+    },
+    "productivite-methodes": {
+      "domain": "productivite-methodes",
+      "processed": 12,
+      "total": 12,
+      "results": [
+        {
+          "file": "comment-planifier-mon-travail.md",
+          "processed": true,
+          "hasPlaceholders": false,
+          "sectionOrder": false,
+          "missingSections": 0,
+          "sourceCount": 0
+        },
+        {
+          "file": "deep-work.md",
+          "processed": true,
+          "hasPlaceholders": false,
+          "sectionOrder": false,
+          "missingSections": 1,
+          "sourceCount": 0
+        },
+        {
+          "file": "gestion-priorites-efficacite.md",
+          "processed": true,
+          "hasPlaceholders": false,
+          "sectionOrder": false,
+          "missingSections": 0,
+          "sourceCount": 0
+        },
+        {
+          "file": "gestion-stress-performance.md",
+          "processed": true,
+          "hasPlaceholders": false,
+          "sectionOrder": false,
+          "missingSections": 0,
+          "sourceCount": 0
+        },
+        {
+          "file": "gestion-surcharge-informationnelle.md",
+          "processed": true,
+          "hasPlaceholders": false,
+          "sectionOrder": false,
+          "missingSections": 0,
+          "sourceCount": 0
+        },
+        {
+          "file": "gestion-temps-productivite.md",
+          "processed": true,
+          "hasPlaceholders": false,
+          "sectionOrder": false,
+          "missingSections": 0,
+          "sourceCount": 0
+        },
+        {
+          "file": "gestion-temps-professionnels.md",
+          "processed": true,
+          "hasPlaceholders": false,
+          "sectionOrder": false,
+          "missingSections": 0,
+          "sourceCount": 0
+        },
+        {
+          "file": "gestion-temps.md",
+          "processed": true,
+          "hasPlaceholders": false,
+          "sectionOrder": false,
+          "missingSections": 0,
+          "sourceCount": 0
+        },
+        {
+          "file": "methode-gtd-expliquee.md",
+          "processed": true,
+          "hasPlaceholders": false,
+          "sectionOrder": false,
+          "missingSections": 0,
+          "sourceCount": 0
+        },
+        {
+          "file": "methode-pomodoro.md",
+          "processed": true,
+          "hasPlaceholders": false,
+          "sectionOrder": false,
+          "missingSections": 0,
+          "sourceCount": 0
+        },
+        {
+          "file": "procrastination-solutions-efficaces.md",
+          "processed": true,
+          "hasPlaceholders": false,
+          "sectionOrder": false,
+          "missingSections": 0,
+          "sourceCount": 0
+        },
+        {
+          "file": "productivite-professionnelle.md",
+          "processed": true,
+          "hasPlaceholders": false,
+          "sectionOrder": false,
+          "missingSections": 0,
+          "sourceCount": 0
+        }
+      ]
+    },
+    "qualite-process": {
+      "domain": "qualite-process",
+      "processed": 7,
+      "total": 7,
+      "results": [
+        {
+          "file": "gestion-qualite-amelioration.md",
+          "processed": true,
+          "hasPlaceholders": false,
+          "sectionOrder": false,
+          "missingSections": 0,
+          "sourceCount": 0
+        },
+        {
+          "file": "gestion-qualite-certification.md",
+          "processed": true,
+          "hasPlaceholders": false,
+          "sectionOrder": false,
+          "missingSections": 0,
+          "sourceCount": 0
+        },
+        {
+          "file": "gestion-qualite-entreprise.md",
+          "processed": true,
+          "hasPlaceholders": false,
+          "sectionOrder": false,
+          "missingSections": 0,
+          "sourceCount": 0
+        },
+        {
+          "file": "gestion-qualite-processus.md",
+          "processed": true,
+          "hasPlaceholders": false,
+          "sectionOrder": false,
+          "missingSections": 0,
+          "sourceCount": 0
+        },
+        {
+          "file": "gestion-qualite-strategie.md",
+          "processed": true,
+          "hasPlaceholders": false,
+          "sectionOrder": false,
+          "missingSections": 0,
+          "sourceCount": 0
+        },
+        {
+          "file": "optimisation-processus-entreprise.md",
+          "processed": true,
+          "hasPlaceholders": false,
+          "sectionOrder": false,
+          "missingSections": 0,
+          "sourceCount": 0
+        },
+        {
+          "file": "qualite-processus-entreprise.md",
+          "processed": true,
+          "hasPlaceholders": false,
+          "sectionOrder": false,
+          "missingSections": 0,
+          "sourceCount": 0
+        }
+      ]
+    },
+    "marketing-communication": {
+      "domain": "marketing-communication",
+      "processed": 6,
+      "total": 6,
+      "results": [
+        {
+          "file": "email-marketing-personnalisation.md",
+          "processed": true,
+          "hasPlaceholders": false,
+          "sectionOrder": false,
+          "missingSections": 0,
+          "sourceCount": 0
+        },
+        {
+          "file": "marketing-content-strategies.md",
+          "processed": true,
+          "hasPlaceholders": false,
+          "sectionOrder": false,
+          "missingSections": 0,
+          "sourceCount": 0
+        },
+        {
+          "file": "marketing-digital-strategies.md",
+          "processed": true,
+          "hasPlaceholders": false,
+          "sectionOrder": false,
+          "missingSections": 0,
+          "sourceCount": 0
+        },
+        {
+          "file": "strategies-marketing-digital-2025.md",
+          "processed": true,
+          "hasPlaceholders": false,
+          "sectionOrder": false,
+          "missingSections": 0,
+          "sourceCount": 0
+        },
+        {
+          "file": "strategies-reseaux-sociaux-b2b.md",
+          "processed": true,
+          "hasPlaceholders": false,
+          "sectionOrder": false,
+          "missingSections": 0,
+          "sourceCount": 0
+        },
+        {
+          "file": "strategies-reseaux-sociaux-entreprises.md",
+          "processed": true,
+          "hasPlaceholders": false,
+          "sectionOrder": false,
+          "missingSections": 0,
+          "sourceCount": 0
+        }
+      ]
+    },
+    "leadership-management": {
+      "domain": "leadership-management",
+      "processed": 5,
+      "total": 5,
+      "results": [
+        {
+          "file": "formation-leadership.md",
+          "processed": true,
+          "hasPlaceholders": false,
+          "sectionOrder": false,
+          "missingSections": 0,
+          "sourceCount": 0
+        },
+        {
+          "file": "importance-leadership.md",
+          "processed": true,
+          "hasPlaceholders": false,
+          "sectionOrder": false,
+          "missingSections": 0,
+          "sourceCount": 0
+        },
+        {
+          "file": "leadership-equipes-performance.md",
+          "processed": true,
+          "hasPlaceholders": false,
+          "sectionOrder": false,
+          "missingSections": 0,
+          "sourceCount": 0
+        },
+        {
+          "file": "management-diversite-inclusion.md",
+          "processed": true,
+          "hasPlaceholders": false,
+          "sectionOrder": false,
+          "missingSections": 1,
+          "sourceCount": 0
+        },
+        {
+          "file": "management-hybride-defis-opportunites.md",
+          "processed": true,
+          "hasPlaceholders": false,
+          "sectionOrder": false,
+          "missingSections": 0,
+          "sourceCount": 0
+        }
+      ]
+    },
+    "transformation-digitale": {
+      "domain": "transformation-digitale",
+      "processed": 3,
+      "total": 3,
+      "results": [
+        {
+          "file": "transformation-digitale-telecom.md",
+          "processed": true,
+          "hasPlaceholders": false,
+          "sectionOrder": false,
+          "missingSections": 0,
+          "sourceCount": 0
+        },
+        {
+          "file": "transformation-numerique-entreprise.md",
+          "processed": true,
+          "hasPlaceholders": false,
+          "sectionOrder": false,
+          "missingSections": 0,
+          "sourceCount": 0
+        },
+        {
+          "file": "transformation-numerique-talents.md",
+          "processed": true,
+          "hasPlaceholders": false,
+          "sectionOrder": false,
+          "missingSections": 0,
+          "sourceCount": 0
+        }
+      ]
+    },
+    "service-client": {
+      "domain": "service-client",
+      "processed": 2,
+      "total": 2,
+      "results": [
+        {
+          "file": "service-client-excellence.md",
+          "processed": true,
+          "hasPlaceholders": false,
+          "sectionOrder": false,
+          "missingSections": 0,
+          "sourceCount": 0
+        },
+        {
+          "file": "service-client-performance.md",
+          "processed": true,
+          "hasPlaceholders": false,
+          "sectionOrder": false,
+          "missingSections": 0,
+          "sourceCount": 0
+        }
+      ]
+    },
+    "reconversion-carriere": {
+      "domain": "reconversion-carriere",
+      "processed": 1,
+      "total": 1,
+      "results": [
+        {
+          "file": "reconversion-professionnelle-reussie.md",
+          "processed": true,
+          "hasPlaceholders": false,
+          "sectionOrder": false,
+          "missingSections": 0,
+          "sourceCount": 0
+        }
+      ]
+    },
+    "outils-techniques": {
+      "domain": "outils-techniques",
+      "processed": 3,
+      "total": 3,
+      "results": [
+        {
+          "file": "mermaid-example.md",
+          "processed": true,
+          "hasPlaceholders": false,
+          "sectionOrder": false,
+          "missingSections": 1,
+          "sourceCount": 0
+        },
+        {
+          "file": "pillcolor-guide.md",
+          "processed": true,
+          "hasPlaceholders": false,
+          "sectionOrder": false,
+          "missingSections": 1,
+          "sourceCount": 0
+        },
+        {
+          "file": "visualisations-mermaid.md",
+          "processed": true,
+          "hasPlaceholders": false,
+          "sectionOrder": false,
+          "missingSections": 1,
+          "sourceCount": 0
+        }
+      ]
+    },
+    "innovation-technologies": {
+      "domain": "innovation-technologies",
+      "processed": 4,
+      "total": 4,
+      "results": [
+        {
+          "file": "ia-transformation-societe-2024-analyse.md",
+          "processed": true,
+          "hasPlaceholders": false,
+          "sectionOrder": false,
+          "missingSections": 0,
+          "sourceCount": 0
+        },
+        {
+          "file": "ia-transformation-societe-2024.md",
+          "processed": true,
+          "hasPlaceholders": false,
+          "sectionOrder": false,
+          "missingSections": 0,
+          "sourceCount": 0
+        },
+        {
+          "file": "intelligence-artificielle-transformation-marketing.md",
+          "processed": true,
+          "hasPlaceholders": false,
+          "sectionOrder": false,
+          "missingSections": 0,
+          "sourceCount": 0
+        },
+        {
+          "file": "nouvelles-tendances-developpement-web.md",
+          "processed": true,
+          "hasPlaceholders": false,
+          "sectionOrder": false,
+          "missingSections": 0,
+          "sourceCount": 0
+        }
+      ]
+    },
+    "gestion-connaissances": {
+      "domain": "gestion-connaissances",
+      "processed": 1,
+      "total": 1,
+      "results": [
+        {
+          "file": "gestion-connaissances-organisation.md",
+          "processed": true,
+          "hasPlaceholders": false,
+          "sectionOrder": false,
+          "missingSections": 0,
+          "sourceCount": 0
+        }
+      ]
+    },
+    "developpement-commercial": {
+      "domain": "developpement-commercial",
+      "processed": 2,
+      "total": 2,
+      "results": [
+        {
+          "file": "negocier-salaire-techniques-avancees.md",
+          "processed": true,
+          "hasPlaceholders": false,
+          "sectionOrder": false,
+          "missingSections": 1,
+          "sourceCount": 0
+        },
+        {
+          "file": "recrutement-talents-digitaux.md",
+          "processed": true,
+          "hasPlaceholders": false,
+          "sectionOrder": false,
+          "missingSections": 0,
+          "sourceCount": 0
+        }
+      ]
+    },
+    "articles-generaux": {
+      "domain": "articles-generaux",
+      "processed": 1,
+      "total": 2,
+      "results": [
+        {
+          "file": "synthese-thematiques.md",
+          "processed": true,
+          "hasPlaceholders": false,
+          "sectionOrder": false,
+          "missingSections": 0,
+          "sourceCount": 0
+        }
+      ]
+    }
+  }
+}

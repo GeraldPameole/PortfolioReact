@@ -1,0 +1,325 @@
+---
+---
+
+<div id="article-progress-container" class="article-progress-container">
+  <div id="article-progress-bar" class="article-progress-bar">
+    <div id="article-progress-fill" class="article-progress-fill"></div>
+  </div>
+  <div id="article-progress-text" class="article-progress-text">0%</div>
+</div>
+
+<style>
+  .article-progress-container {
+    position: fixed;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    pointer-events: none;
+  }
+
+  .article-progress-bar {
+    width: 4px;
+    height: 300px;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+  }
+
+  .dark .article-progress-bar {
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  .article-progress-fill {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background: linear-gradient(180deg, #3b82f6 0%, #8b5cf6 100%);
+    border-radius: 2px;
+    transition: height 0.1s ease-out;
+    box-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+  }
+
+  .article-progress-text {
+    font-size: 12px;
+    font-weight: 600;
+    color: #3b82f6;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 4px 8px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    min-width: 40px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+  }
+
+  .dark .article-progress-text {
+    color: #8b5cf6;
+    background: rgba(30, 30, 30, 0.9);
+  }
+
+  @media (max-width: 1024px) {
+    .article-progress-container {
+      right: 10px;
+    }
+
+    .article-progress-bar {
+      height: 200px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .article-progress-container {
+      display: none;
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const progressFill = document.getElementById('article-progress-fill');
+    const progressText = document.getElementById('article-progress-text');
+    const articleContent = document.querySelector('article') || document.querySelector('.content') || document.querySelector('.article-content-typography') || document.querySelector('.content-typography');
+
+    if (!articleContent || !progressFill || !progressText) {
+      return;
+    }
+
+    function updateProgress() {
+      const articleTop = articleContent.offsetTop;
+      const articleHeight = articleContent.offsetHeight;
+      const windowHeight = window.innerHeight;
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+      // Calculer la position de début et fin de l'article visible
+      const articleBottom = articleTop + articleHeight;
+      const viewportTop = scrollTop;
+      const viewportBottom = scrollTop + windowHeight;
+
+      // Calculer le pourcentage de lecture
+      let progress = 0;
+
+      if (viewportTop < articleTop && viewportBottom > articleBottom) {
+        // L'article est entièrement visible
+        progress = 100;
+      } else if (viewportTop >= articleTop && viewportBottom <= articleBottom) {
+        // La fenêtre est entièrement dans l'article
+        const scrolled = viewportTop - articleTop;
+        progress = (scrolled / (articleHeight - windowHeight)) * 100;
+      } else if (viewportTop < articleTop) {
+        // Le haut de l'article n'est pas encore atteint
+        progress = 0;
+      } else if (viewportBottom > articleBottom) {
+        // Le bas de l'article est dépassé
+        progress = 100;
+      } else {
+        // Cas général
+        const visibleHeight = Math.min(viewportBottom, articleBottom) - Math.max(viewportTop, articleTop);
+        progress = (visibleHeight / articleHeight) * 100;
+      }
+
+      // Limiter entre 0 et 100
+      progress = Math.max(0, Math.min(100, progress));
+
+      // Mettre à jour la barre de progression
+      progressFill.style.height = `${progress}%`;
+      progressText.textContent = `${Math.round(progress)}%`;
+
+      // Ajouter une classe pour l'animation
+      if (progress > 0) {
+        progressFill.style.opacity = '1';
+      } else {
+        progressFill.style.opacity = '0.5';
+      }
+    }
+
+    // Mettre à jour au scroll
+    let ticking = false;
+    window.addEventListener('scroll', function() {
+      if (!ticking) {
+        window.requestAnimationFrame(function() {
+          updateProgress();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    });
+
+    // Mettre à jour au resize
+    window.addEventListener('resize', updateProgress);
+
+    // Mise à jour initiale
+    updateProgress();
+  });
+</script>
+
+---
+
+<div id="article-progress-container" class="article-progress-container">
+  <div id="article-progress-bar" class="article-progress-bar">
+    <div id="article-progress-fill" class="article-progress-fill"></div>
+  </div>
+  <div id="article-progress-text" class="article-progress-text">0%</div>
+</div>
+
+<style>
+  .article-progress-container {
+    position: fixed;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    pointer-events: none;
+  }
+
+  .article-progress-bar {
+    width: 4px;
+    height: 300px;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+  }
+
+  .dark .article-progress-bar {
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  .article-progress-fill {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background: linear-gradient(180deg, #3b82f6 0%, #8b5cf6 100%);
+    border-radius: 2px;
+    transition: height 0.1s ease-out;
+    box-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+  }
+
+  .article-progress-text {
+    font-size: 12px;
+    font-weight: 600;
+    color: #3b82f6;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 4px 8px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    min-width: 40px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+  }
+
+  .dark .article-progress-text {
+    color: #8b5cf6;
+    background: rgba(30, 30, 30, 0.9);
+  }
+
+  @media (max-width: 1024px) {
+    .article-progress-container {
+      right: 10px;
+    }
+
+    .article-progress-bar {
+      height: 200px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .article-progress-container {
+      display: none;
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const progressFill = document.getElementById('article-progress-fill');
+    const progressText = document.getElementById('article-progress-text');
+    const articleContent = document.querySelector('article') || document.querySelector('.content') || document.querySelector('.article-content-typography') || document.querySelector('.content-typography');
+
+    if (!articleContent || !progressFill || !progressText) {
+      return;
+    }
+
+    function updateProgress() {
+      const articleTop = articleContent.offsetTop;
+      const articleHeight = articleContent.offsetHeight;
+      const windowHeight = window.innerHeight;
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+      // Calculer la position de début et fin de l'article visible
+      const articleBottom = articleTop + articleHeight;
+      const viewportTop = scrollTop;
+      const viewportBottom = scrollTop + windowHeight;
+
+      // Calculer le pourcentage de lecture
+      let progress = 0;
+
+      if (viewportTop < articleTop && viewportBottom > articleBottom) {
+        // L'article est entièrement visible
+        progress = 100;
+      } else if (viewportTop >= articleTop && viewportBottom <= articleBottom) {
+        // La fenêtre est entièrement dans l'article
+        const scrolled = viewportTop - articleTop;
+        progress = (scrolled / (articleHeight - windowHeight)) * 100;
+      } else if (viewportTop < articleTop) {
+        // Le haut de l'article n'est pas encore atteint
+        progress = 0;
+      } else if (viewportBottom > articleBottom) {
+        // Le bas de l'article est dépassé
+        progress = 100;
+      } else {
+        // Cas général
+        const visibleHeight = Math.min(viewportBottom, articleBottom) - Math.max(viewportTop, articleTop);
+        progress = (visibleHeight / articleHeight) * 100;
+      }
+
+      // Limiter entre 0 et 100
+      progress = Math.max(0, Math.min(100, progress));
+
+      // Mettre à jour la barre de progression
+      progressFill.style.height = `${progress}%`;
+      progressText.textContent = `${Math.round(progress)}%`;
+
+      // Ajouter une classe pour l'animation
+      if (progress > 0) {
+        progressFill.style.opacity = '1';
+      } else {
+        progressFill.style.opacity = '0.5';
+      }
+    }
+
+    // Mettre à jour au scroll
+    let ticking = false;
+    window.addEventListener('scroll', function() {
+      if (!ticking) {
+        window.requestAnimationFrame(function() {
+          updateProgress();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    });
+
+    // Mettre à jour au resize
+    window.addEventListener('resize', updateProgress);
+
+    // Mise à jour initiale
+    updateProgress();
+  });
+</script>
+

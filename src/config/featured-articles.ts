@@ -2,78 +2,87 @@
 export const FEATURED_ARTICLES_BY_DOMAIN = {
   "gestion-projet": [
     "agile-scrum-methodologies",
-    "gestion-projet-agile-meilleures-pratiques", 
-    "gestion-risques-projet"
+    "gestion-performance-equipe",
+    "gestion-performance-evaluation",
   ],
   "developpement-web": [
     "frameworks-javascript-analyse-2024",
-    "react-performance-optimisation",
-    "progressive-web-apps-2024"
+    "frameworks-javascript-comparaison-2024",
+    "progressive-web-apps-2024",
   ],
   "qualite-process": [
+    "gestion-qualite-amelioration",
     "gestion-qualite-certification",
-    "optimisation-processus-entreprise",
-    "gestion-qualite-strategie"
+    "gestion-qualite-entreprise",
   ],
-  "formation": [
-    "formation-professionnelle-continue",
-    "mentoring-developpement-professionnel",
-    "apprentissage-continu-developpement-competences"
+  formation: [
+    "apprentissage-continu-developpement-competences",
+    "formation-adaptation",
+    "formation-collaboration",
   ],
   "developpement-commercial": [
     "negocier-salaire-techniques-avancees",
-    "recrutement-talents-digitaux"
+    "recrutement-talents-digitaux",
   ],
   "gestion-talents": [
-    "gestion-talents-developpement",
-    "leadership-equipes-performance",
-    "management-diversite-inclusion"
+    "gestion-competences-developpement",
+    "gestion-conflits-equipe",
+    "gestion-talents-attraction",
   ],
   "productivite-methodes": [
-    "gestion-temps-professionnels",
+    "gestion-priorites-efficacite",
     "methode-gtd-expliquee",
-    "deep-work"
+    "deep-work",
   ],
   "transformation-digitale": [
-    "ia-transformation-societe-2024",
     "transformation-numerique-entreprise",
-    "nouvelles-tendances-developpement-web"
+    "transformation-digitale-telecom",
+    "transformation-numerique-talents",
   ],
   "marketing-communication": [
     "marketing-digital-strategies",
     "strategies-reseaux-sociaux-entreprises",
-    "email-marketing-personnalisation"
+    "email-marketing-personnalisation",
   ],
   "leadership-management": [
     "formation-leadership",
     "importance-leadership",
-    "management-hybride-defis-opportunites"
+    "management-hybride-defis-opportunites",
   ],
   "innovation-technologies": [
     "ia-transformation-societe-2024-analyse",
     "intelligence-artificielle-transformation-marketing",
-    "nouvelles-tendances-developpement-web"
+    "nouvelles-tendances-developpement-web",
   ],
   "service-client": [
     "service-client-excellence",
-    "service-client-performance"
+    "service-client-performance",
+    "service-client-strategies",
   ],
   "gestion-connaissances": [
-    "gestion-connaissances-organisation"
+    "gestion-connaissances-organisation",
+    "partage-connaissances-equipes",
+    "capital-humain-entreprise",
   ],
   "reconversion-carriere": [
-    "reconversion-professionnelle-reussie"
+    "reconversion-professionnelle-reussie",
+    "changement-carriere-opportunites",
+    "transition-professionnelle",
   ],
   "outils-techniques": [
     "mermaid-example",
     "visualisations-mermaid",
-    "pillcolor-guide"
-  ]
+    "pillcolor-guide",
+  ],
 } as const;
 
 // Fonction pour obtenir les articles mis en avant d'un domaine
 export function getFeaturedArticlesForDomain(domain: string): string[] {
-  return FEATURED_ARTICLES_BY_DOMAIN[domain as keyof typeof FEATURED_ARTICLES_BY_DOMAIN] || [];
+  return (
+    FEATURED_ARTICLES_BY_DOMAIN[
+      domain as keyof typeof FEATURED_ARTICLES_BY_DOMAIN
+    ] || []
+  );
 }
 
 // Fonction pour vérifier si un article est mis en avant

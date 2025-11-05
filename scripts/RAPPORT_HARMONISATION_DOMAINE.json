@@ -1,0 +1,2458 @@
+{
+  "date": "2025-11-04T08:40:11.303Z",
+  "total": 95,
+  "domains": {
+    "articles-generaux": {
+      "total": 2,
+      "issues": {
+        "structure": 0,
+        "order": 2,
+        "incomplete": 5,
+        "missing": 3,
+        "duplicates": 5
+      },
+      "articles": [
+        {
+          "domain": "articles-generaux",
+          "file": "comment-planifier-mon-travail.md",
+          "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/articles-generaux/comment-planifier-mon-travail.md",
+          "issues": {
+            "structure": [],
+            "order": [
+              "Section 7 est mal placée dans l'ordre"
+            ],
+            "incomplete": [
+              "Section 1 semble vide ou très courte",
+              "Section 2 contient des placeholders",
+              "Section 4 contient des placeholders",
+              "Section 8 contient des placeholders"
+            ],
+            "missing": [
+              "Section obligatoire manquante: 1. FONDAMENTAUX DU SUJET",
+              "Section obligatoire manquante: 6. SOURCES ET RÉFÉRENCES"
+            ],
+            "duplicates": [
+              "Section 1 dupliquée: \"FONDAMENTAUX DE LA PLANIFICATION DU TRAVAIL\"",
+              "Section 6 dupliquée: \"BONNES PRATIQUES ET RÈGLES D'OR\"",
+              "Section 7 dupliquée: \"ARTICLES ANNEXES\""
+            ]
+          },
+          "hasIssues": true
+        },
+        {
+          "domain": "articles-generaux",
+          "file": "synthese-thematiques.md",
+          "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/articles-generaux/synthese-thematiques.md",
+          "issues": {
+            "structure": [],
+            "order": [
+              "Section 7 est mal placée dans l'ordre"
+            ],
+            "incomplete": [
+              "Section 1 semble vide ou très courte"
+            ],
+            "missing": [
+              "Section obligatoire manquante: 6. SOURCES ET RÉFÉRENCES"
+            ],
+            "duplicates": [
+              "Section 6 dupliquée: \"BONNES PRATIQUES\"",
+              "Section 7 dupliquée: \"ARTICLES ANNEXES\""
+            ]
+          },
+          "hasIssues": true
+        }
+      ]
+    },
+    "developpement-commercial": {
+      "total": 2,
+      "issues": {
+        "structure": 0,
+        "order": 0,
+        "incomplete": 6,
+        "missing": 6,
+        "duplicates": 13
+      },
+      "articles": [
+        {
+          "domain": "developpement-commercial",
+          "file": "negocier-salaire-techniques-avancees.md",
+          "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/developpement-commercial/negocier-salaire-techniques-avancees.md",
+          "issues": {
+            "structure": [],
+            "order": [],
+            "incomplete": [
+              "Section 1 semble vide ou très courte",
+              "Section 2 semble vide ou très courte",
+              "Section 3 contient des placeholders"
+            ],
+            "missing": [
+              "Section obligatoire manquante: 1. FONDAMENTAUX DU SUJET",
+              "Section obligatoire manquante: 2. ANALYSE APPROFONDIE",
+              "Section obligatoire manquante: 6. SOURCES ET RÉFÉRENCES"
+            ],
+            "duplicates": [
+              "Section 1 dupliquée: \"PSYCHOLOGIE DE LA NÉGOCIA\"",
+              "Section 2 dupliquée: \"PRÉPARATION STRATÉGIQUE\"",
+              "Section 3 dupliquée: \"TECHNIQUES DE PERSUASION AVANCÉES\"",
+              "Section 4 dupliquée: \"GESTION DES OBJECTIONS\"",
+              "Section 5 dupliquée: \"DÉFIS MAJEURS ET SOLUTIONS INNOVANTES\"",
+              "Section 6 dupliquée: \"CAS PRATIQUES ET RETOURS D'EXPÉRIENCE\"",
+              "Section 7 dupliquée: \"CONCLUSION ET RECOMMANDATIONS\""
+            ]
+          },
+          "hasIssues": true
+        },
+        {
+          "domain": "developpement-commercial",
+          "file": "recrutement-talents-digitaux.md",
+          "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/developpement-commercial/recrutement-talents-digitaux.md",
+          "issues": {
+            "structure": [],
+            "order": [],
+            "incomplete": [
+              "Section 1 semble vide ou très courte",
+              "Section 2 semble vide ou très courte",
+              "Section 3 contient des placeholders"
+            ],
+            "missing": [
+              "Section obligatoire manquante: 1. FONDAMENTAUX DU SUJET",
+              "Section obligatoire manquante: 2. ANALYSE APPROFONDIE",
+              "Section obligatoire manquante: 6. SOURCES ET RÉFÉRENCES"
+            ],
+            "duplicates": [
+              "Section 1 dupliquée: \"ÉCOSYSTÈME DES TALENTS DI\"",
+              "Section 2 dupliquée: \"STRATÉGIES D'ATTRACTION DES TALENTS\"",
+              "Section 3 dupliquée: \"PROCESSUS DE SÉLECTION OPTIMISÉ\"",
+              "Section 4 dupliquée: \"TECHNIQUES DE RÉTENTION\"",
+              "Section 6 dupliquée: \"CAS PRATIQUES ET RETOURS D'EXPÉRIENCE\"",
+              "Section 7 dupliquée: \"CONCLUSION ET RECOMMANDATIONS\""
+            ]
+          },
+          "hasIssues": true
+        }
+      ]
+    },
+    "developpement-web": {
+      "total": 9,
+      "issues": {
+        "structure": 0,
+        "order": 6,
+        "incomplete": 10,
+        "missing": 14,
+        "duplicates": 30
+      },
+      "articles": [
+        {
+          "domain": "developpement-web",
+          "file": "frameworks-javascript-analyse-2024.md",
+          "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/developpement-web/frameworks-javascript-analyse-2024.md",
+          "issues": {
+            "structure": [],
+            "order": [],
+            "incomplete": [
+              "Section 2 semble vide ou très courte",
+              "Section 3 contient des placeholders"
+            ],
+            "missing": [
+              "Section obligatoire manquante: 1. FONDAMENTAUX DU SUJET",
+              "Section obligatoire manquante: 2. ANALYSE APPROFONDIE",
+              "Section obligatoire manquante: 6. SOURCES ET RÉFÉRENCES"
+            ],
+            "duplicates": [
+              "Section 1 dupliquée: \"LE PARADOXE DU CHOIX DE FRAMEWORK\"",
+              "Section 2 dupliquée: \"MA MÉTHODOLOGIE \"C.H.O.I.S.I.R.\" - FRAMEWORK ÉPROUVÉ\"",
+              "Section 3 dupliquée: \"LES 3 ERREURS FATALES QUE J'AI COMMISES (ET CORRIGÉES)\"",
+              "Section 4 dupliquée: \"OUTILS CONCRETS QUE J'UTILISE AU QUOTIDIEN\"",
+              "Section 6 dupliquée: \"MES 5 INDICATEURS DE CHOIX QUI COMPTENT VRAIMENT\"",
+              "Section 7 dupliquée: \"CAS D'ÉTUDE : TRANSFORMATION D'UN PROJET EN 6 MOIS\""
+            ]
+          },
+          "hasIssues": true
+        },
+        {
+          "domain": "developpement-web",
+          "file": "frameworks-javascript-comparaison-2024.md",
+          "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/developpement-web/frameworks-javascript-comparaison-2024.md",
+          "issues": {
+            "structure": [],
+            "order": [],
+            "incomplete": [
+              "Section 2 semble vide ou très courte",
+              "Section 3 contient des placeholders"
+            ],
+            "missing": [
+              "Section obligatoire manquante: 1. FONDAMENTAUX DU SUJET",
+              "Section obligatoire manquante: 2. ANALYSE APPROFONDIE"
+            ],
+            "duplicates": [
+              "Section 1 dupliquée: \"ÉCOSYSTÈME JAVASCRIPT 2024 : ÉTAT DES LIEUX\"",
+              "Section 2 dupliquée: \"ANALYSE COMPARATIVE DÉTAILLÉE\"",
+              "Section 3 dupliquée: \"MÉTHODOLOGIE DE SÉLECTION : C.H.O.I.S.I.R.\"",
+              "Section 4 dupliquée: \"RECOMMANDATIONS PRATIQUES PAR CONTEXTE\"",
+              "Section 6 dupliquée: \"BONNES PRATIQUES ET STANDARDS\"",
+              "Section 7 dupliquée: \"CONCLUSION ET RECOMMANDATIONS FINALES\""
+            ]
+          },
+          "hasIssues": true
+        },
+        {
+          "domain": "developpement-web",
+          "file": "progressive-web-apps-2024.md",
+          "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/developpement-web/progressive-web-apps-2024.md",
+          "issues": {
+            "structure": [],
+            "order": [],
+            "incomplete": [],
+            "missing": [
+              "Section obligatoire manquante: 1. FONDAMENTAUX DU SUJET",
+              "Section obligatoire manquante: 2. ANALYSE APPROFONDIE",
+              "Section obligatoire manquante: 6. SOURCES ET RÉFÉRENCES"
+            ],
+            "duplicates": [
+              "Section 1 dupliquée: \"ÉCOSYSTÈME PWA 2024 : ÉTAT DES LIEUX\"",
+              "Section 2 dupliquée: \"ARCHITECTURE ET COMPOSANTS TECHNIQUES\"",
+              "Section 3 dupliquée: \"STRATÉGIES D'OPTIMISATION PERFORMANCE\"",
+              "Section 4 dupliquée: \"FONCTIONNALITÉS AVANCÉES\"",
+              "Section 6 dupliquée: \"BONNES PRATIQUES ET STANDARDS\"",
+              "Section 7 dupliquée: \"CONCLUSION ET RECOMMANDATIONS\""
+            ]
+          },
+          "hasIssues": true
+        },
+        {
+          "domain": "developpement-web",
+          "file": "react-performance-optimisation.md",
+          "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/developpement-web/react-performance-optimisation.md",
+          "issues": {
+            "structure": [],
+            "order": [
+              "Section 7 est mal placée dans l'ordre"
+            ],
+            "incomplete": [
+              "Section 1 semble vide ou très courte"
+            ],
+            "missing": [
+              "Section obligatoire manquante: 6. SOURCES ET RÉFÉRENCES"
+            ],
+            "duplicates": [
+              "Section 6 dupliquée: \"BONNES PRATIQUES\"",
+              "Section 7 dupliquée: \"ARTICLES ANNEXES\""
+            ]
+          },
+          "hasIssues": true
+        },
+        {
+          "domain": "developpement-web",
+          "file": "technologies-javascript-2024.md",
+          "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/developpement-web/technologies-javascript-2024.md",
+          "issues": {
+            "structure": [],
+            "order": [
+              "Section 7 est mal placée dans l'ordre"
+            ],
+            "incomplete": [
+              "Section 1 semble vide ou très courte"
+            ],
+            "missing": [
+              "Section obligatoire manquante: 6. SOURCES ET RÉFÉRENCES"
+            ],
+            "duplicates": [
+              "Section 6 dupliquée: \"BONNES PRATIQUES\"",
+              "Section 7 dupliquée: \"ARTICLES ANNEXES\""
+            ]
+          },
+          "hasIssues": true
+        },
+        {
+          "domain": "developpement-web",
+          "file": "tendances-developpement-web-2025.md",
+          "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/developpement-web/tendances-developpement-web-2025.md",
+          "issues": {
+            "structure": [],
+            "order": [
+              "Section 7 est mal placée dans l'ordre"
+            ],
+            "incomplete": [
+              "Section 1 semble vide ou très courte"
+            ],
+            "missing": [
+              "Section obligatoire manquante: 6. SOURCES ET RÉFÉRENCES"
+            ],
+            "duplicates": [
+              "Section 6 dupliquée: \"BONNES PRATIQUES\"",
+              "Section 7 dupliquée: \"ARTICLES ANNEXES\""
+            ]
+          },
+          "hasIssues": true
+        },
+        {
+          "domain": "developpement-web",
+          "file": "web-accessibilite-guide-pratique.md",
+          "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/developpement-web/web-accessibilite-guide-pratique.md",
+          "issues": {
+            "structure": [],
+            "order": [
+              "Section 7 est mal placée dans l'ordre"
+            ],
+            "incomplete": [
+              "Section 1 semble vide ou très courte"
+            ],
+            "missing": [
+              "Section obligatoire manquante: 6. SOURCES ET RÉFÉRENCES"
+            ],
+            "duplicates": [
+              "Section 6 dupliquée: \"BONNES PRATIQUES\"",
+              "Section 7 dupliquée: \"ARTICLES ANNEXES\""
+            ]
+          },
+          "hasIssues": true
+        },
+        {
+          "domain": "developpement-web",
+          "file": "web-javascript-modern.md",
+          "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/developpement-web/web-javascript-modern.md",
+          "issues": {
+            "structure": [],
+            "order": [
+              "Section 7 est mal placée dans l'ordre"
+            ],
+            "incomplete": [
+              "Section 1 semble vide ou très courte"
+            ],
+            "missing": [
+              "Section obligatoire manquante: 6. SOURCES ET RÉFÉRENCES"
+            ],
+            "duplicates": [
+              "Section 6 dupliquée: \"BONNES PRATIQUES\"",
+              "Section 7 dupliquée: \"ARTICLES ANNEXES\""
+            ]
+          },
+          "hasIssues": true
+        },
+        {
+          "domain": "developpement-web",
+          "file": "web-tendances-2024.md",
+          "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/developpement-web/web-tendances-2024.md",
+          "issues": {
+            "structure": [],
+            "order": [
+              "Section 7 est mal placée dans l'ordre"
+            ],
+            "incomplete": [
+              "Section 1 semble vide ou très courte"
+            ],
+            "missing": [
+              "Section obligatoire manquante: 6. SOURCES ET RÉFÉRENCES"
+            ],
+            "duplicates": [
+              "Section 6 dupliquée: \"BONNES PRATIQUES\"",
+              "Section 7 dupliquée: \"ARTICLES ANNEXES\""
+            ]
+          },
+          "hasIssues": true
+        }
+      ]
+    },
+    "formation": {
+      "total": 15,
+      "issues": {
+        "structure": 0,
+        "order": 11,
+        "incomplete": 11,
+        "missing": 24,
+        "duplicates": 47
+      },
+      "articles": [
+        {
+          "domain": "formation",
+          "file": "apprentissage-continu-developpement-competences.md",
+          "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/formation/apprentissage-continu-developpement-competences.md",
+          "issues": {
+            "structure": [],
+            "order": [],
+            "incomplete": [],
+            "missing": [
+              "Section obligatoire manquante: 1. FONDAMENTAUX DU SUJET",
+              "Section obligatoire manquante: 2. ANALYSE APPROFONDIE",
+              "Section obligatoire manquante: 6. SOURCES ET RÉFÉRENCES"
+            ],
+            "duplicates": [
+              "Section 1 dupliquée: \"LE PARADOXE DE L'APPRENTISSAGE MODERNE\"",
+              "Section 2 dupliquée: \"MA MÉTHODOLOGIE \"A.P.P.R.E.N.D.R.E.\" - FRAMEWORK ÉPROUVÉ\"",
+              "Section 3 dupliquée: \"LES 3 ERREURS FATALES QUE J'AI COMMISES (ET CORRIGÉES)\"",
+              "Section 4 dupliquée: \"OUTILS CONCRETS QUE J'UTILISE AU QUOTIDIEN\"",
+              "Section 6 dupliquée: \"MES 5 INDICATEURS D'APPRENTISSAGE QUI COMPTENT VRAIMENT\"",
+              "Section 7 dupliquée: \"CAS D'ÉTUDE : TRANSFORMATION D'UN MANAGER EN 6 MOIS\""
+            ]
+          },
+          "hasIssues": true
+        },
+        {
+          "domain": "formation",
+          "file": "formation-adaptation.md",
+          "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/formation/formation-adaptation.md",
+          "issues": {
+            "structure": [],
+            "order": [],
+            "incomplete": [],
+            "missing": [
+              "Section obligatoire manquante: 1. FONDAMENTAUX DU SUJET",
+              "Section obligatoire manquante: 2. ANALYSE APPROFONDIE",
+              "Section obligatoire manquante: 6. SOURCES ET RÉFÉRENCES"
+            ],
+            "duplicates": [
+              "Section 1 dupliquée: \"LE PARADOXE DE L'ADAPTATION MODERNE\"",
+              "Section 2 dupliquée: \"MA MÉTHODOLOGIE \"A.D.A.P.T.E.R.\" - FRAMEWORK ÉPROUVÉ\"",
+              "Section 3 dupliquée: \"LES 3 ERREURS FATALES QUE J'AI COMMISES (ET CORRIGÉES)\"",
+              "Section 4 dupliquée: \"OUTILS CONCRETS QUE J'UTILISE AU QUOTIDIEN\"",
+              "Section 6 dupliquée: \"MES 5 INDICATEURS D'ADAPTATION QUI COMPTENT VRAIMENT\"",
+              "Section 7 dupliquée: \"CAS D'ÉTUDE : TRANSFORMATION D'UNE ÉQUIPE EN 6 MOIS\""
+            ]
+          },
+          "hasIssues": true
+        },
+        {
+          "domain": "formation",
+          "file": "formation-collaboration.md",
+          "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/formation/formation-collaboration.md",
+          "issues": {
+            "structure": [],
+            "order": [],
+            "incomplete": [],
+            "missing": [
+              "Section obligatoire manquante: 1. FONDAMENTAUX DU SUJET",
+              "Section obligatoire manquante: 2. ANALYSE APPROFONDIE",
+              "Section obligatoire manquante: 6. SOURCES ET RÉFÉRENCES"
+            ],
+            "duplicates": [
+              "Section 1 dupliquée: \"LE PARADOXE DE LA COLLABORATION MODERNE\"",
+              "Section 2 dupliquée: \"MA MÉTHODOLOGIE \"C.O.L.L.A.B.O.R.E.R.\" - FRAMEWORK ÉPROUVÉ\"",
+              "Section 3 dupliquée: \"LES 3 ERREURS FATALES QUE J'AI COMMISES (ET CORRIGÉES)\"",
+              "Section 4 dupliquée: \"OUTILS CONCRETS QUE J'UTILISE AU QUOTIDIEN\"",
+              "Section 6 dupliquée: \"MES 5 INDICATEURS DE COLLABORATION QUI COMPTENT VRAIMENT\"",
+              "Section 7 dupliquée: \"CAS D'ÉTUDE : TRANSFORMATION D'UNE ÉQUIPE EN 6 MOIS\""
+            ]
+          },
+          "hasIssues": true
+        },
+        {
+          "domain": "formation",
+          "file": "formation-communication.md",
+          "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/formation/formation-communication.md",
+          "issues": {
+            "structure": [],
+            "order": [
+              "Section 7 est mal placée dans l'ordre"
+            ],
+            "incomplete": [
+              "Section 1 semble vide ou très courte"
+            ],
+            "missing": [
+              "Section obligatoire manquante: 6. SOURCES ET RÉFÉRENCES"
+            ],
+            "duplicates": [
+              "Section 6 dupliquée: \"BONNES PRATIQUES\"",
+              "Section 7 dupliquée: \"ARTICLES ANNEXES\""
+            ]
+          },
+          "hasIssues": true
+        },
+        {
+          "domain": "formation",
+          "file": "formation-creativite.md",
+          "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/formation/formation-creativite.md",
+          "issues": {
+            "structure": [],
+            "order": [
+              "Section 7 est mal placée dans l'ordre"
+            ],
+            "incomplete": [
+              "Section 1 semble vide ou très courte"
+            ],
+            "missing": [
+              "Section obligatoire manquante: 6. SOURCES ET RÉFÉRENCES"
+            ],
+            "duplicates": [
+              "Section 6 dupliquée: \"BONNES PRATIQUES\"",
+              "Section 7 dupliquée: \"ARTICLES ANNEXES\""
+            ]
+          },
+          "hasIssues": true
+        },
+        {
+          "domain": "formation",
+          "file": "formation-elearning.md",
+          "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/formation/formation-elearning.md",
+          "issues": {
+            "structure": [],
+            "order": [
+              "Section 7 est mal placée dans l'ordre"
+            ],
+            "incomplete": [
+              "Section 1 semble vide ou très courte"
+            ],
+            "missing": [
+              "Section obligatoire manquante: 1. FONDAMENTAUX DU SUJET",
+              "Section obligatoire manquante: 6. SOURCES ET RÉFÉRENCES"
+            ],
+            "duplicates": [
+              "Section 1 dupliquée: \"FONDAMENTAUX DE L'E-LEARNING\"",
+              "Section 6 dupliquée: \"BONNES PRATIQUES D'EXCELLENCE\"",
+              "Section 7 dupliquée: \"ARTICLES ANNEXES\""
+            ]
+          },
+          "hasIssues": true
+        },
+        {
+          "domain": "formation",
+          "file": "formation-equipes-commerciales.md",
+          "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/formation/formation-equipes-commerciales.md",
+          "issues": {
+            "structure": [],
+            "order": [
+              "Section 7 est mal placée dans l'ordre"
+            ],
+            "incomplete": [
+              "Section 1 semble vide ou très courte"
+            ],
+            "missing": [
+              "Section obligatoire manquante: 6. SOURCES ET RÉFÉRENCES"
+            ],
+            "duplicates": [
+              "Section 6 dupliquée: \"BONNES PRATIQUES\"",
+              "Section 7 dupliquée: \"ARTICLES ANNEXES\""
+            ]
+          },
+          "hasIssues": true
+        },
+        {
+          "domain": "formation",
+          "file": "formation-innovation.md",
+          "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/formation/formation-innovation.md",
+          "issues": {
+            "structure": [],
+            "order": [
+              "Section 7 est mal placée dans l'ordre"
+            ],
+            "incomplete": [
+              "Section 1 semble vide ou très courte"
+            ],
+            "missing": [
+              "Section obligatoire manquante: 6. SOURCES ET RÉFÉRENCES"
+            ],
+            "duplicates": [
+              "Section 6 dupliquée: \"BONNES PRATIQUES\"",
+              "Section 7 dupliquée: \"ARTICLES ANNEXES\""
+            ]
+          },
+          "hasIssues": true
+        },
+        {
+          "domain": "formation",
+          "file": "formation-mentorat.md",
+          "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/formation/formation-mentorat.md",
+          "issues": {
+            "structure": [],
+            "order": [
+              "Section 7 est mal placée dans l'ordre"
+            ],
+            "incomplete": [
+              "Section 1 semble vide ou très courte"
+            ],
+            "missing": [
+              "Section obligatoire manquante: 6. SOURCES ET RÉFÉRENCES"
+            ],
+            "duplicates": [
+              "Section 6 dupliquée: \"BONNES PRATIQUES\"",
+              "Section 7 dupliquée: \"ARTICLES ANNEXES\""
+            ]
+          },
+          "hasIssues": true
+        },
+        {
+          "domain": "formation",
+          "file": "formation-professionnelle-continue.md",
+          "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/formation/formation-professionnelle-continue.md",
+          "issues": {
+            "structure": [],
+            "order": [
+              "Section 7 est mal placée dans l'ordre"
+            ],
+            "incomplete": [
+              "Section 1 semble vide ou très courte"
+            ],
+            "missing": [
+              "Section obligatoire manquante: 6. SOURCES ET RÉFÉRENCES"
+            ],
+            "duplicates": [
+              "Section 6 dupliquée: \"BONNES PRATIQUES\"",
+              "Section 7 dupliquée: \"ARTICLES ANNEXES\""
+            ]
+          },
+          "hasIssues": true
+        },
+        {
+          "domain": "formation",
+          "file": "formation-soft-skills.md",
+          "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/formation/formation-soft-skills.md",
+          "issues": {
+            "structure": [],
+            "order": [
+              "Section 7 est mal placée dans l'ordre"
+            ],
+            "incomplete": [
+              "Section 1 semble vide ou très courte"
+            ],
+            "missing": [
+              "Section obligatoire manquante: 6. SOURCES ET RÉFÉRENCES"
+            ],
+            "duplicates": [
+              "Section 6 dupliquée: \"BONNES PRATIQUES\"",
+              "Section 7 dupliquée: \"ARTICLES ANNEXES\""
+            ]
+          },
+          "hasIssues": true
+        },
+        {
+          "domain": "formation",
+          "file": "formation-talents-guide.md",
+          "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/formation/formation-talents-guide.md",
+          "issues": {
+            "structure": [],
+            "order": [
+              "Section 7 est mal placée dans l'ordre"
+            ],
+            "incomplete": [
+              "Section 1 semble vide ou très courte"
+            ],
+            "missing": [
+              "Section obligatoire manquante: 6. SOURCES ET RÉFÉRENCES"
+            ],
+            "duplicates": [
+              "Section 6 dupliquée: \"BONNES PRATIQUES\"",
+              "Section 7 dupliquée: \"ARTICLES ANNEXES\""
+            ]
+          },
+          "hasIssues": true
+        },
+        {
+          "domain": "formation",
+          "file": "formation-technique.md",
+          "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/formation/formation-technique.md",
+          "issues": {
+            "structure": [],
+            "order": [],
+            "incomplete": [],
+            "missing": [
+              "Section obligatoire manquante: 1. FONDAMENTAUX DU SUJET",
+              "Section obligatoire manquante: 2. ANALYSE APPROFONDIE",
+              "Section obligatoire manquante: 6. SOURCES ET RÉFÉRENCES"
+            ],
+            "duplicates": [
+              "Section 1 dupliquée: \"LE PARADOXE DE LA FORMATION TECHNIQUE MODERNE\"",
+              "Section 2 dupliquée: \"MA MÉTHODOLOGIE \"T.E.C.H.N.I.Q.U.E.\" - FRAMEWORK ÉPROUVÉ\"",
+              "Section 3 dupliquée: \"LES 3 ERREURS FATALES QUE J'AI COMMISES (ET CORRIGÉES)\"",
+              "Section 4 dupliquée: \"OUTILS CONCRETS QUE J'UTILISE AU QUOTIDIEN\"",
+              "Section 6 dupliquée: \"MES 5 INDICATEURS DE FORMATION TECHNIQUE QUI COMPTENT VRAIMENT\"",
+              "Section 7 dupliquée: \"CAS D'ÉTUDE : TRANSFORMATION D'UNE ÉQUIPE TECHNIQUE EN 6 MOIS\""
+            ]
+          },
+          "hasIssues": true
+        },
+        {
+          "domain": "formation",
+          "file": "impact-formation-continue-carriere.md",
+          "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/formation/impact-formation-continue-carriere.md",
+          "issues": {
+            "structure": [],
+            "order": [
+              "Section 7 est mal placée dans l'ordre"
+            ],
+            "incomplete": [
+              "Section 1 semble vide ou très courte"
+            ],
+            "missing": [
+              "Section obligatoire manquante: 6. SOURCES ET RÉFÉRENCES"
+            ],
+            "duplicates": [
+              "Section 6 dupliquée: \"BONNES PRATIQUES\"",
+              "Section 7 dupliquée: \"ARTICLES ANNEXES\""
+            ]
+          },
+          "hasIssues": true
+        },
+        {
+          "domain": "formation",
+          "file": "mentoring-developpement-professionnel.md",
+          "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/formation/mentoring-developpement-professionnel.md",
+          "issues": {
+            "structure": [],
+            "order": [
+              "Section 7 est mal placée dans l'ordre"
+            ],
+            "incomplete": [
+              "Section 1 semble vide ou très courte"
+            ],
+            "missing": [
+              "Section obligatoire manquante: 6. SOURCES ET RÉFÉRENCES"
+            ],
+            "duplicates": [
+              "Section 6 dupliquée: \"BONNES PRATIQUES\"",
+              "Section 7 dupliquée: \"ARTICLES ANNEXES\""
+            ]
+          },
+          "hasIssues": true
+        }
+      ]
+    },
+    "gestion-connaissances": {
+      "total": 1,
+      "issues": {
+        "structure": 0,
+        "order": 1,
+        "incomplete": 1,
+        "missing": 2,
+        "duplicates": 3
+      },
+      "articles": [
+        {
+          "domain": "gestion-connaissances",
+          "file": "gestion-connaissances-organisation.md",
+          "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/gestion-connaissances/gestion-connaissances-organisation.md",
+          "issues": {
+            "structure": [],
+            "order": [
+              "Section 7 est mal placée dans l'ordre"
+            ],
+            "incomplete": [
+              "Section 1 semble vide ou très courte"
+            ],
+            "missing": [
+              "Section obligatoire manquante: 1. FONDAMENTAUX DU SUJET",
+              "Section obligatoire manquante: 6. SOURCES ET RÉFÉRENCES"
+            ],
+            "duplicates": [
+              "Section 1 dupliquée: \"FONDAMENTAUX DE LA GESTION DES CONNAISSANCES\"",
+              "Section 6 dupliquée: \"BONNES PRATIQUES ET RÈGLES D'OR\"",
+              "Section 7 dupliquée: \"ARTICLES ANNEXES\""
+            ]
+          },
+          "hasIssues": true
+        }
+      ]
+    },
+    "gestion-projet": {
+      "total": 8,
+      "issues": {
+        "structure": 0,
+        "order": 4,
+        "incomplete": 7,
+        "missing": 17,
+        "duplicates": 33
+      },
+      "articles": [
+        {
+          "domain": "gestion-projet",
+          "file": "agile-scrum-methodologies.md",
+          "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/gestion-projet/agile-scrum-methodologies.md",
+          "issues": {
+            "structure": [],
+            "order": [],
+            "incomplete": [
+              "Section 3 contient des placeholders"
+            ],
+            "missing": [
+              "Section obligatoire manquante: 1. FONDAMENTAUX DU SUJET",
+              "Section obligatoire manquante: 2. ANALYSE APPROFONDIE",
+              "Section obligatoire manquante: 6. SOURCES ET RÉFÉRENCES"
+            ],
+            "duplicates": [
+              "Section 1 dupliquée: \"LE PARADOXE DE L'AGILE MODERNE\"",
+              "Section 2 dupliquée: \"MA MÉTHODOLOGIE \"A.G.I.L.E. P.R.O.J.E.T.\" - FRAMEWORK ÉPROUVÉ\"",
+              "Section 3 dupliquée: \"LES 3 ERREURS FATALES QUE J'AI COMMISES (ET CORRIGÉES)\"",
+              "Section 4 dupliquée: \"OUTILS CONCRETS QUE J'UTILISE AU QUOTIDIEN\"",
+              "Section 6 dupliquée: \"MES 5 INDICATEURS AGILE QUI COMPTENT VRAIMENT\"",
+              "Section 7 dupliquée: \"CAS D'ÉTUDE : TRANSFORMATION D'UNE ÉQUIPE EN 6 MOIS\""
+            ]
+          },
+          "hasIssues": true
+        },
+        {
+          "domain": "gestion-projet",
+          "file": "gestion-performance-equipe.md",
+          "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/gestion-projet/gestion-performance-equipe.md",
+          "issues": {
+            "structure": [],
+            "order": [],
+            "incomplete": [],
+            "missing": [
+              "Section obligatoire manquante: 1. FONDAMENTAUX DU SUJET",
+              "Section obligatoire manquante: 2. ANALYSE APPROFONDIE",
+              "Section obligatoire manquante: 6. SOURCES ET RÉFÉRENCES"
+            ],
+            "duplicates": [
+              "Section 1 dupliquée: \"LE PARADOXE DE LA PERFORMANCE D'ÉQUIPE\"",
+              "Section 2 dupliquée: \"MA MÉTHODOLOGIE \"P.E.R.F.O.R.M.A.N.C.E.\" - FRAMEWORK ÉPROUVÉ\"",
+              "Section 3 dupliquée: \"LES 3 ERREURS FATALES QUE J'AI COMMISES (ET CORRIGÉES)\"",
+              "Section 4 dupliquée: \"OUTILS CONCRETS QUE J'UTILISE AU QUOTIDIEN\"",
+              "Section 6 dupliquée: \"MES 5 INDICATEURS DE PERFORMANCE QUI COMPTENT VRAIMENT\"",
+              "Section 7 dupliquée: \"CAS D'ÉTUDE : TRANSFORMATION D'UNE ÉQUIPE EN 6 MOIS\""
+            ]
+          },
+          "hasIssues": true
+        },
+        {
+          "domain": "gestion-projet",
+          "file": "gestion-performance-evaluation.md",
+          "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/gestion-projet/gestion-performance-evaluation.md",
+          "issues": {
+            "structure": [],
+            "order": [],
+            "incomplete": [
+              "Section 2 semble vide ou très courte",
+              "Section 3 contient des placeholders"
+            ],
+            "missing": [
+              "Section obligatoire manquante: 1. FONDAMENTAUX DU SUJET",
+              "Section obligatoire manquante: 2. ANALYSE APPROFONDIE",
+              "Section obligatoire manquante: 6. SOURCES ET RÉFÉRENCES"
+            ],
+            "duplicates": [
+              "Section 1 dupliquée: \"LE PARADOXE DE L'ÉVALUATION MODERNE\"",
+              "Section 2 dupliquée: \"MA MÉTHODOLOGIE \"É.V.A.L.U.E.R.\" - FRAMEWORK ÉPROUVÉ\"",
+              "Section 3 dupliquée: \"LES 3 ERREURS FATALES QUE J'AI COMMISES (ET CORRIGÉES)\"",
+              "Section 4 dupliquée: \"OUTILS CONCRETS QUE J'UTILISE AU QUOTIDIEN\"",
+              "Section 6 dupliquée: \"MES 5 INDICATEURS D'ÉVALUATION QUI COMPTENT VRAIMENT\"",
+              "Section 7 dupliquée: \"CAS D'ÉTUDE : TRANSFORMATION D'UN MANAGER EN 6 MOIS\""
+            ]
+          },
+          "hasIssues": true
+        },
+        {
+          "domain": "gestion-projet",
+          "file": "gestion-projet-agile-meilleures-pratiques.md",
+          "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/gestion-projet/gestion-projet-agile-meilleures-pratiques.md",
+          "issues": {
+            "structure": [],
+            "order": [
+              "Section 7 est mal placée dans l'ordre"
+            ],
+            "incomplete": [
+              "Section 1 semble vide ou très courte"
+            ],
+            "missing": [
+              "Section obligatoire manquante: 6. SOURCES ET RÉFÉRENCES"
+            ],
+            "duplicates": [
+              "Section 6 dupliquée: \"BONNES PRATIQUES\"",
+              "Section 7 dupliquée: \"ARTICLES ANNEXES\""
+            ]
+          },
+          "hasIssues": true
+        },
+        {
+          "domain": "gestion-projet",
+          "file": "gestion-projet-agile.md",
+          "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/gestion-projet/gestion-projet-agile.md",
+          "issues": {
+            "structure": [],
+            "order": [
+              "Section 7 est mal placée dans l'ordre"
+            ],
+            "incomplete": [
+              "Section 1 semble vide ou très courte"
+            ],
+            "missing": [
+              "Section obligatoire manquante: 1. FONDAMENTAUX DU SUJET",
+              "Section obligatoire manquante: 6. SOURCES ET RÉFÉRENCES"
+            ],
+            "duplicates": [
+              "Section 1 dupliquée: \"FONDAMENTAUX DE L'AGILITÉ\"",
+              "Section 6 dupliquée: \"BONNES PRATIQUES D'EXCELLENCE\"",
+              "Section 7 dupliquée: \"ARTICLES ANNEXES\""
+            ]
+          },
+          "hasIssues": true
+        },
+        {
+          "domain": "gestion-projet",
+          "file": "gestion-projet-performance.md",
+          "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/gestion-projet/gestion-projet-performance.md",
+          "issues": {
+            "structure": [],
+            "order": [
+              "Section 7 est mal placée dans l'ordre"
+            ],
+            "incomplete": [
+              "Section 1 semble vide ou très courte"
+            ],
+            "missing": [
+              "Section obligatoire manquante: 6. SOURCES ET RÉFÉRENCES"
+            ],
+            "duplicates": [
+              "Section 6 dupliquée: \"BONNES PRATIQUES\"",
+              "Section 7 dupliquée: \"ARTICLES ANNEXES\""
+            ]
+          },
+          "hasIssues": true
+        },
+        {
+          "domain": "gestion-projet",
+          "file": "gestion-projet-risques.md",
+          "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/gestion-projet/gestion-projet-risques.md",
+          "issues": {
+            "structure": [],
+            "order": [],
+            "incomplete": [],
+            "missing": [
+              "Section obligatoire manquante: 1. FONDAMENTAUX DU SUJET",
+              "Section obligatoire manquante: 2. ANALYSE APPROFONDIE",
+              "Section obligatoire manquante: 6. SOURCES ET RÉFÉRENCES"
+            ],
+            "duplicates": [
+              "Section 1 dupliquée: \"LE PARADOXE DE LA GESTION DES RISQUES MODERNE\"",
+              "Section 2 dupliquée: \"MA MÉTHODOLOGIE \"R.I.S.Q.U.E.S.\" - FRAMEWORK ÉPROUVÉ\"",
+              "Section 3 dupliquée: \"LES 3 ERREURS FATALES QUE J'AI COMMISES (ET CORRIGÉES)\"",
+              "Section 4 dupliquée: \"OUTILS CONCRETS QUE J'UTILISE AU QUOTIDIEN\"",
+              "Section 6 dupliquée: \"MES 5 INDICATEURS DE GESTION DES RISQUES QUI COMPTENT VRAIMENT\"",
+              "Section 7 dupliquée: \"CAS D'ÉTUDE : SAUVETAGE D'UN PROJET EN DIFFICULTÉ\""
+            ]
+          },
+          "hasIssues": true
+        },
+        {
+          "domain": "gestion-projet",
+          "file": "gestion-risques-projet.md",
+          "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/gestion-projet/gestion-risques-projet.md",
+          "issues": {
+            "structure": [],
+            "order": [
+              "Section 7 est mal placée dans l'ordre"
+            ],
+            "incomplete": [
+              "Section 1 semble vide ou très courte"
+            ],
+            "missing": [
+              "Section obligatoire manquante: 6. SOURCES ET RÉFÉRENCES"
+            ],
+            "duplicates": [
+              "Section 6 dupliquée: \"BONNES PRATIQUES\"",
+              "Section 7 dupliquée: \"ARTICLES ANNEXES\""
+            ]
+          },
+          "hasIssues": true
+        }
+      ]
+    },
+    "gestion-talents": {
+      "total": 16,
+      "issues": {
+        "structure": 0,
+        "order": 13,
+        "incomplete": 29,
+        "missing": 35,
+        "duplicates": 76
+      },
+      "articles": [
+        {
+          "domain": "gestion-talents",
+          "file": "gestion-competences-developpement.md",
+          "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/gestion-talents/gestion-competences-developpement.md",
+          "issues": {
+            "structure": [],
+            "order": [],
+            "incomplete": [
+              "Section 1 semble vide ou très courte",
+              "Section 2 semble vide ou très courte",
+              "Section 3 contient des placeholders"
+            ],
+            "missing": [
+              "Section obligatoire manquante: 1. FONDAMENTAUX DU SUJET",
+              "Section obligatoire manquante: 2. ANALYSE APPROFONDIE",
+              "Section obligatoire manquante: 6. SOURCES ET RÉFÉRENCES"
+            ],
+            "duplicates": [
+              "Section 1 dupliquée: \"ÉCOSYSTÈME DU DÉVELOPPEME\"",
+              "Section 2 dupliquée: \"STRATÉGIES D'ÉVALUATION DES COMPÉTENCES\"",
+              "Section 3 dupliquée: \"PLANS DE DÉVELOPPEMENT PERSONNALISÉS\"",
+              "Section 4 dupliquée: \"STRATÉGIES DE RÉTENTION ET MOTIVATION\"",
+              "Section 6 dupliquée: \"CAS PRATIQUES ET RETOURS D'EXPÉRIENCE\"",
+              "Section 7 dupliquée: \"CONCLUSION ET RECOMMANDATIONS\""
+            ]
+          },
+          "hasIssues": true
+        },
+        {
+          "domain": "gestion-talents",
+          "file": "gestion-conflits-equipe.md",
+          "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/gestion-talents/gestion-conflits-equipe.md",
+          "issues": {
+            "structure": [],
+            "order": [],
+            "incomplete": [
+              "Section 1 semble vide ou très courte",
+              "Section 2 semble vide ou très courte",
+              "Section 3 contient des placeholders"
+            ],
+            "missing": [
+              "Section obligatoire manquante: 1. FONDAMENTAUX DU SUJET",
+              "Section obligatoire manquante: 2. ANALYSE APPROFONDIE",
+              "Section obligatoire manquante: 6. SOURCES ET RÉFÉRENCES"
+            ],
+            "duplicates": [
+              "Section 1 dupliquée: \"ÉCOSYSTÈME DES CONFLITS D\"",
+              "Section 2 dupliquée: \"TYPOLOGIE DES CONFLITS\"",
+              "Section 3 dupliquée: \"STRATÉGIES DE PRÉVENTION\"",
+              "Section 4 dupliquée: \"TECHNIQUES DE RÉSOLUTION\"",
+              "Section 6 dupliquée: \"DÉFIS ET SOLUTIONS\"",
+              "Section 7 dupliquée: \"CAS PRATIQUES ET RETOURS D'EXPÉRIENCE\""
+            ]
+          },
+          "hasIssues": true
+        },
+        {
+          "domain": "gestion-talents",
+          "file": "gestion-talents-attraction.md",
+          "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/gestion-talents/gestion-talents-attraction.md",
+          "issues": {
+            "structure": [],
+            "order": [
+              "Section 7 est mal placée dans l'ordre"
+            ],
+            "incomplete": [
+              "Section 1 semble vide ou très courte"
+            ],
+            "missing": [
+              "Section obligatoire manquante: 1. FONDAMENTAUX DU SUJET",
+              "Section obligatoire manquante: 6. SOURCES ET RÉFÉRENCES"
+            ],
+            "duplicates": [
+              "Section 1 dupliquée: \"FONDAMENTAUX DE L'ATTRACTION DES TALENTS\"",
+              "Section 6 dupliquée: \"BONNES PRATIQUES ET RÈGLES D'OR\"",
+              "Section 7 dupliquée: \"ARTICLES ANNEXES\""
+            ]
+          },
+          "hasIssues": true
+        },
+        {
+          "domain": "gestion-talents",
+          "file": "gestion-talents-developpement.md",
+          "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/gestion-talents/gestion-talents-developpement.md",
+          "issues": {
+            "structure": [],
+            "order": [
+              "Section 7 est mal placée dans l'ordre"
+            ],
+            "incomplete": [
+              "Section 1 semble vide ou très courte"
+            ],
+            "missing": [
+              "Section obligatoire manquante: 1. FONDAMENTAUX DU SUJET",
+              "Section obligatoire manquante: 6. SOURCES ET RÉFÉRENCES"
+            ],
+            "duplicates": [
+              "Section 1 dupliquée: \"FONDAMENTAUX DU DÉVELOPPEMENT DES TALENTS\"",
+              "Section 6 dupliquée: \"BONNES PRATIQUES ET RÈGLES D'OR\"",
+              "Section 7 dupliquée: \"ARTICLES ANNEXES\""
+            ]
+          },
+          "hasIssues": true
+        },
+        {
+          "domain": "gestion-talents",
+          "file": "gestion-talents-fidelisation.md",
+          "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/gestion-talents/gestion-talents-fidelisation.md",
+          "issues": {
+            "structure": [],
+            "order": [
+              "Section 7 est mal placée dans l'ordre"
+            ],
+            "incomplete": [
+              "Section 1 semble vide ou très courte",
+              "Section 2 semble vide ou très courte",
+              "Section 3 contient des placeholders"
+            ],
+            "missing": [
+              "Section obligatoire manquante: 1. FONDAMENTAUX DU SUJET",
+              "Section obligatoire manquante: 2. ANALYSE APPROFONDIE"
+            ],
+            "duplicates": [
+              "Section 1 dupliquée: \"COMPRENDRE LA FIDÉLISATION DES TALENTS\"",
+              "Section 2 dupliquée: \"LES PILIERS DE LA FIDÉLISATION DES TALENTS\"",
+              "Section 3 dupliquée: \"STRATÉGIES D'EXCELLENCE POUR LA FIDÉLISATION\"",
+              "Section 6 dupliquée: \"BONNES PRATIQUES : MES RECOMMANDATIONS EXPERTES\"",
+              "Section 7 dupliquée: \"ARTICLES ANNEXES\""
+            ]
+          },
+          "hasIssues": true
+        },
+        {
+          "domain": "gestion-talents",
+          "file": "gestion-talents-formation.md",
+          "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/gestion-talents/gestion-talents-formation.md",
+          "issues": {
+            "structure": [],
+            "order": [],
+            "incomplete": [
+              "Section 1 semble vide ou très courte",
+              "Section 2 semble vide ou très courte",
+              "Section 3 contient des placeholders"
+            ],
+            "missing": [
+              "Section obligatoire manquante: 1. FONDAMENTAUX DU SUJET",
+              "Section obligatoire manquante: 2. ANALYSE APPROFONDIE",
+              "Section obligatoire manquante: 6. SOURCES ET RÉFÉRENCES"
+            ],
+            "duplicates": [
+              "Section 1 dupliquée: \"LE PARADOXE DE LA FORMATION DES TALENTS MODERNE\"",
+              "Section 2 dupliquée: \"MA MÉTHODOLOGIE \"F.O.R.M.A.T.I.O.N.\" - FRAMEWORK ÉPROUVÉ\"",
+              "Section 3 dupliquée: \"LES 3 ERREURS FATALES QUE J'AI COMMISES (ET CORRIGÉES)\"",
+              "Section 4 dupliquée: \"OUTILS CONCRETS QUE J'UTILISE AU QUOTIDIEN\"",
+              "Section 6 dupliquée: \"MES 5 INDICATEURS DE FORMATION QUI COMPTENT VRAIMENT\"",
+              "Section 7 dupliquée: \"CAS D'ÉTUDE : TRANSFORMATION D'UN PROGRAMME DE FORMATION\""
+            ]
+          },
+          "hasIssues": true
+        },
+        {
+          "domain": "gestion-talents",
+          "file": "gestion-talents-performance.md",
+          "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/gestion-talents/gestion-talents-performance.md",
+          "issues": {
+            "structure": [],
+            "order": [],
+            "incomplete": [
+              "Section 1 semble vide ou très courte",
+              "Section 2 semble vide ou très courte",
+              "Section 3 contient des placeholders"
+            ],
+            "missing": [
+              "Section obligatoire manquante: 1. FONDAMENTAUX DU SUJET",
+              "Section obligatoire manquante: 2. ANALYSE APPROFONDIE",
+              "Section obligatoire manquante: 6. SOURCES ET RÉFÉRENCES"
+            ],
+            "duplicates": [
+              "Section 1 dupliquée: \"LE PARADOXE DE LA PERFORMANCE DES TALENTS MODERNE\"",
+              "Section 2 dupliquée: \"MA MÉTHODOLOGIE \"P.E.R.F.O.R.M.A.N.C.E.\" - FRAMEWORK ÉPROUVÉ\"",
+              "Section 3 dupliquée: \"LES 3 ERREURS FATALES QUE J'AI COMMISES (ET CORRIGÉES)\"",
+              "Section 4 dupliquée: \"OUTILS CONCRETS QUE J'UTILISE AU QUOTIDIEN\"",
+              "Section 6 dupliquée: \"MES 5 INDICATEURS DE PERFORMANCE QUI COMPTENT VRAIMENT\"",
+              "Section 7 dupliquée: \"CAS D'ÉTUDE : TRANSFORMATION D'UN TALENT SOUS-PERFORMANT\""
+            ]
+          },
+          "hasIssues": true
+        },
+        {
+          "domain": "gestion-talents",
+          "file": "gestion-talents-recrutement.md",
+          "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/gestion-talents/gestion-talents-recrutement.md",
+          "issues": {
+            "structure": [],
+            "order": [
+              "Section 7 est mal placée dans l'ordre"
+            ],
+            "incomplete": [
+              "Section 1 semble vide ou très courte"
+            ],
+            "missing": [
+              "Section obligatoire manquante: 1. FONDAMENTAUX DU SUJET",
+              "Section obligatoire manquante: 6. SOURCES ET RÉFÉRENCES"
+            ],
+            "duplicates": [
+              "Section 1 dupliquée: \"FONDAMENTAUX DU RECRUTEMENT MODERNE\"",
+              "Section 6 dupliquée: \"BONNES PRATIQUES ET RÈGLES D'OR DU RECRUTEMENT MODERNE\"",
+              "Section 7 dupliquée: \"ARTICLES ANNEXES\""
+            ]
+          },
+          "hasIssues": true
+        },
+        {
+          "domain": "gestion-talents",
+          "file": "gestion-talents-remuneration.md",
+          "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/gestion-talents/gestion-talents-remuneration.md",
+          "issues": {
+            "structure": [],
+            "order": [
+              "Section 7 est mal placée dans l'ordre"
+            ],
+            "incomplete": [
+              "Section 1 semble vide ou très courte"
+            ],
+            "missing": [
+              "Section obligatoire manquante: 1. FONDAMENTAUX DU SUJET",
+              "Section obligatoire manquante: 6. SOURCES ET RÉFÉRENCES"
+            ],
+            "duplicates": [
+              "Section 1 dupliquée: \"LE PARADOXE DE LA RÉMUNÉRATION DES TALENTS MODERNE\"",
+              "Section 2 dupliquée: \"ANALYSE APPROFONDIE\"",
+              "Section 6 dupliquée: \"BONNES PRATIQUES\"",
+              "Section 7 dupliquée: \"ARTICLES ANNEXES\""
+            ]
+          },
+          "hasIssues": true
+        },
+        {
+          "domain": "gestion-talents",
+          "file": "gestion-talents-retention.md",
+          "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/gestion-talents/gestion-talents-retention.md",
+          "issues": {
+            "structure": [],
+            "order": [],
+            "incomplete": [
+              "Section 1 semble vide ou très courte",
+              "Section 2 semble vide ou très courte"
+            ],
+            "missing": [
+              "Section obligatoire manquante: 1. FONDAMENTAUX DU SUJET",
+              "Section obligatoire manquante: 2. ANALYSE APPROFONDIE",
+              "Section obligatoire manquante: 6. SOURCES ET RÉFÉRENCES"
+            ],
+            "duplicates": [
+              "Section 1 dupliquée: \"LE PARADOXE DE LA RÉTENTION DES TALENTS MODERNE\"",
+              "Section 2 dupliquée: \"MA MÉTHODOLOGIE \"R.É.T.E.N.T.I.O.N.\" - FRAMEWORK ÉPROUVÉ\"",
+              "Section 3 dupliquée: \"LES 3 ERREURS FATALES QUE J'AI COMMISES (ET CORRIGÉES)\"",
+              "Section 4 dupliquée: \"OUTILS CONCRETS QUE J'UTILISE AU QUOTIDIEN\"",
+              "Section 6 dupliquée: \"MES 5 INDICATEURS DE RÉTENTION QUI COMPTENT VRAIMENT\"",
+              "Section 7 dupliquée: \"CAS D'ÉTUDE : TRANSFORMATION D'UNE ORGANISATION À FORT TAUX DE DÉPARTS\""
+            ]
+          },
+          "hasIssues": true
+        },
+        {
+          "domain": "gestion-talents",
+          "file": "gestion-talents-succession.md",
+          "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/gestion-talents/gestion-talents-succession.md",
+          "issues": {
+            "structure": [],
+            "order": [
+              "Section 7 est mal placée dans l'ordre",
+              "Section 8 est mal placée dans l'ordre"
+            ],
+            "incomplete": [
+              "Section 1 semble vide ou très courte",
+              "Section 2 semble vide ou très courte"
+            ],
+            "missing": [
+              "Section obligatoire manquante: 1. FONDAMENTAUX DU SUJET",
+              "Section obligatoire manquante: 2. ANALYSE APPROFONDIE",
+              "Section obligatoire manquante: 6. SOURCES ET RÉFÉRENCES"
+            ],
+            "duplicates": [
+              "Section 1 dupliquée: \"LE PARADOXE DE LA PLANIFICATION DE SUCCESSION MODERNE\"",
+              "Section 2 dupliquée: \"MA MÉTHODOLOGIE \"S.U.C.C.E.S.S.I.O.N.\" - FRAMEWORK ÉPROUVÉ\"",
+              "Section 6 dupliquée: \"MES 5 INDICATEURS DE SUCCESSION QUI COMPTENT VRAIMENT\"",
+              "Section 3 dupliquée: \"STRATÉGIES ET MÉTHODOLOGIES\"",
+              "Section 4 dupliquée: \"OUTILS ET TECHNOLOGIES\"",
+              "Section 5 dupliquée: \"DÉFIS ET SOLUTIONS\"",
+              "Section 6 dupliquée: \"BONNES PRATIQUES\"",
+              "Section 7 dupliquée: \"CONCLUSION SYNTHÉTIQUE\"",
+              "Section 8 dupliquée: \"ÉLÉMENTS COMPLÉMENTAIRES\"",
+              "Section 7 dupliquée: \"ARTICLES ANNEXES\""
+            ]
+          },
+          "hasIssues": true
+        },
+        {
+          "domain": "gestion-talents",
+          "file": "gestion-talents-valuation.md",
+          "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/gestion-talents/gestion-talents-valuation.md",
+          "issues": {
+            "structure": [],
+            "order": [
+              "Section 7 est mal placée dans l'ordre",
+              "Section 8 est mal placée dans l'ordre"
+            ],
+            "incomplete": [
+              "Section 1 semble vide ou très courte",
+              "Section 2 semble vide ou très courte"
+            ],
+            "missing": [
+              "Section obligatoire manquante: 1. FONDAMENTAUX DU SUJET",
+              "Section obligatoire manquante: 2. ANALYSE APPROFONDIE",
+              "Section obligatoire manquante: 6. SOURCES ET RÉFÉRENCES"
+            ],
+            "duplicates": [
+              "Section 1 dupliquée: \"LE PARADOXE DE L'ÉVALUATION DES TALENTS MODERNE\"",
+              "Section 2 dupliquée: \"MA MÉTHODOLOGIE \"V.A.L.O.R.I.S.A.T.I.O.N.\" - FRAMEWORK ÉPROUVÉ\"",
+              "Section 6 dupliquée: \"MES 5 INDICATEURS DE VALORISATION QUI COMPTENT VRAIMENT\"",
+              "Section 3 dupliquée: \"STRATÉGIES ET MÉTHODOLOGIES\"",
+              "Section 4 dupliquée: \"OUTILS ET TECHNOLOGIES\"",
+              "Section 5 dupliquée: \"DÉFIS ET SOLUTIONS\"",
+              "Section 6 dupliquée: \"BONNES PRATIQUES\"",
+              "Section 7 dupliquée: \"CONCLUSION SYNTHÉTIQUE\"",
+              "Section 8 dupliquée: \"ÉLÉMENTS COMPLÉMENTAIRES\"",
+              "Section 7 dupliquée: \"ARTICLES ANNEXES\""
+            ]
+          },
+          "hasIssues": true
+        },
+        {
+          "domain": "gestion-talents",
+          "file": "gestion-talents-whistleblowing.md",
+          "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/gestion-talents/gestion-talents-whistleblowing.md",
+          "issues": {
+            "structure": [],
+            "order": [
+              "Section 7 est mal placée dans l'ordre"
+            ],
+            "incomplete": [
+              "Section 1 semble vide ou très courte"
+            ],
+            "missing": [
+              "Section obligatoire manquante: 6. SOURCES ET RÉFÉRENCES"
+            ],
+            "duplicates": [
+              "Section 6 dupliquée: \"BONNES PRATIQUES\"",
+              "Section 7 dupliquée: \"ARTICLES ANNEXES\""
+            ]
+          },
+          "hasIssues": true
+        },
+        {
+          "domain": "gestion-talents",
+          "file": "gestion-talents-xenophobia.md",
+          "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/gestion-talents/gestion-talents-xenophobia.md",
+          "issues": {
+            "structure": [],
+            "order": [
+              "Section 7 est mal placée dans l'ordre"
+            ],
+            "incomplete": [
+              "Section 1 semble vide ou très courte"
+            ],
+            "missing": [
+              "Section obligatoire manquante: 6. SOURCES ET RÉFÉRENCES"
+            ],
+            "duplicates": [
+              "Section 6 dupliquée: \"BONNES PRATIQUES\"",
+              "Section 7 dupliquée: \"ARTICLES ANNEXES\""
+            ]
+          },
+          "hasIssues": true
+        },
+        {
+          "domain": "gestion-talents",
+          "file": "gestion-talents-youth.md",
+          "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/gestion-talents/gestion-talents-youth.md",
+          "issues": {
+            "structure": [],
+            "order": [
+              "Section 7 est mal placée dans l'ordre"
+            ],
+            "incomplete": [
+              "Section 1 semble vide ou très courte"
+            ],
+            "missing": [
+              "Section obligatoire manquante: 6. SOURCES ET RÉFÉRENCES"
+            ],
+            "duplicates": [
+              "Section 6 dupliquée: \"BONNES PRATIQUES\"",
+              "Section 7 dupliquée: \"ARTICLES ANNEXES\""
+            ]
+          },
+          "hasIssues": true
+        },
+        {
+          "domain": "gestion-talents",
+          "file": "gestion-talents-zen.md",
+          "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/gestion-talents/gestion-talents-zen.md",
+          "issues": {
+            "structure": [],
+            "order": [
+              "Section 7 est mal placée dans l'ordre"
+            ],
+            "incomplete": [
+              "Section 1 semble vide ou très courte"
+            ],
+            "missing": [
+              "Section obligatoire manquante: 6. SOURCES ET RÉFÉRENCES"
+            ],
+            "duplicates": [
+              "Section 6 dupliquée: \"BONNES PRATIQUES\"",
+              "Section 7 dupliquée: \"ARTICLES ANNEXES\""
+            ]
+          },
+          "hasIssues": true
+        }
+      ]
+    },
+    "innovation-technologies": {
+      "total": 4,
+      "issues": {
+        "structure": 0,
+        "order": 4,
+        "incomplete": 4,
+        "missing": 5,
+        "duplicates": 10
+      },
+      "articles": [
+        {
+          "domain": "innovation-technologies",
+          "file": "ia-transformation-societe-2024-analyse.md",
+          "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/innovation-technologies/ia-transformation-societe-2024-analyse.md",
+          "issues": {
+            "structure": [],
+            "order": [
+              "Section 7 est mal placée dans l'ordre"
+            ],
+            "incomplete": [
+              "Section 1 semble vide ou très courte"
+            ],
+            "missing": [
+              "Section obligatoire manquante: 6. SOURCES ET RÉFÉRENCES"
+            ],
+            "duplicates": [
+              "Section 6 dupliquée: \"BONNES PRATIQUES\"",
+              "Section 7 dupliquée: \"ARTICLES ANNEXES\""
+            ]
+          },
+          "hasIssues": true
+        },
+        {
+          "domain": "innovation-technologies",
+          "file": "ia-transformation-societe-2024.md",
+          "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/innovation-technologies/ia-transformation-societe-2024.md",
+          "issues": {
+            "structure": [],
+            "order": [
+              "Section 7 est mal placée dans l'ordre"
+            ],
+            "incomplete": [
+              "Section 1 semble vide ou très courte"
+            ],
+            "missing": [
+              "Section obligatoire manquante: 1. FONDAMENTAUX DU SUJET",
+              "Section obligatoire manquante: 6. SOURCES ET RÉFÉRENCES"
+            ],
+            "duplicates": [
+              "Section 1 dupliquée: \"FONDAMENTAUX DE L'INTELLIGENCE ARTIFICIELLE ET DE SON IMPACT SOCIÉTAL\"",
+              "Section 4 dupliquée: \"ÉCOSYSTÈME TECHNOLOGIQUE ET OUTILS IA\"",
+              "Section 6 dupliquée: \"BONNES PRATIQUES ET RÈGLES D'OR\"",
+              "Section 7 dupliquée: \"ARTICLES ANNEXES\""
+            ]
+          },
+          "hasIssues": true
+        },
+        {
+          "domain": "innovation-technologies",
+          "file": "intelligence-artificielle-transformation-marketing.md",
+          "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/innovation-technologies/intelligence-artificielle-transformation-marketing.md",
+          "issues": {
+            "structure": [],
+            "order": [
+              "Section 7 est mal placée dans l'ordre"
+            ],
+            "incomplete": [
+              "Section 1 semble vide ou très courte"
+            ],
+            "missing": [
+              "Section obligatoire manquante: 6. SOURCES ET RÉFÉRENCES"
+            ],
+            "duplicates": [
+              "Section 6 dupliquée: \"BONNES PRATIQUES\"",
+              "Section 7 dupliquée: \"ARTICLES ANNEXES\""
+            ]
+          },
+          "hasIssues": true
+        },
+        {
+          "domain": "innovation-technologies",
+          "file": "nouvelles-tendances-developpement-web.md",
+          "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/innovation-technologies/nouvelles-tendances-developpement-web.md",
+          "issues": {
+            "structure": [],
+            "order": [
+              "Section 7 est mal placée dans l'ordre"
+            ],
+            "incomplete": [
+              "Section 1 semble vide ou très courte"
+            ],
+            "missing": [
+              "Section obligatoire manquante: 6. SOURCES ET RÉFÉRENCES"
+            ],
+            "duplicates": [
+              "Section 6 dupliquée: \"BONNES PRATIQUES\"",
+              "Section 7 dupliquée: \"ARTICLES ANNEXES\""
+            ]
+          },
+          "hasIssues": true
+        }
+      ]
+    },
+    "leadership-management": {
+      "total": 5,
+      "issues": {
+        "structure": 0,
+        "order": 4,
+        "incomplete": 7,
+        "missing": 9,
+        "duplicates": 17
+      },
+      "articles": [
+        {
+          "domain": "leadership-management",
+          "file": "formation-leadership.md",
+          "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/leadership-management/formation-leadership.md",
+          "issues": {
+            "structure": [],
+            "order": [
+              "Section 7 est mal placée dans l'ordre"
+            ],
+            "incomplete": [
+              "Section 1 semble vide ou très courte"
+            ],
+            "missing": [
+              "Section obligatoire manquante: 6. SOURCES ET RÉFÉRENCES"
+            ],
+            "duplicates": [
+              "Section 6 dupliquée: \"BONNES PRATIQUES\"",
+              "Section 7 dupliquée: \"ARTICLES ANNEXES\""
+            ]
+          },
+          "hasIssues": true
+        },
+        {
+          "domain": "leadership-management",
+          "file": "importance-leadership.md",
+          "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/leadership-management/importance-leadership.md",
+          "issues": {
+            "structure": [],
+            "order": [
+              "Section 7 est mal placée dans l'ordre"
+            ],
+            "incomplete": [
+              "Section 1 semble vide ou très courte"
+            ],
+            "missing": [
+              "Section obligatoire manquante: 1. FONDAMENTAUX DU SUJET",
+              "Section obligatoire manquante: 6. SOURCES ET RÉFÉRENCES"
+            ],
+            "duplicates": [
+              "Section 1 dupliquée: \"FONDAMENTAUX DU LEADERSHIP MODERNE\"",
+              "Section 6 dupliquée: \"BONNES PRATIQUES ET RÈGLES D'OR DU LEADERSHIP MODERNE\"",
+              "Section 7 dupliquée: \"ARTICLES ANNEXES\""
+            ]
+          },
+          "hasIssues": true
+        },
+        {
+          "domain": "leadership-management",
+          "file": "leadership-equipes-performance.md",
+          "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/leadership-management/leadership-equipes-performance.md",
+          "issues": {
+            "structure": [],
+            "order": [
+              "Section 7 est mal placée dans l'ordre"
+            ],
+            "incomplete": [
+              "Section 1 semble vide ou très courte"
+            ],
+            "missing": [
+              "Section obligatoire manquante: 1. FONDAMENTAUX DU SUJET",
+              "Section obligatoire manquante: 6. SOURCES ET RÉFÉRENCES"
+            ],
+            "duplicates": [
+              "Section 1 dupliquée: \"FONDAMENTAUX DU LEADERSHIP MODERNE\"",
+              "Section 4 dupliquée: \"OUTILS ET TECHNIQUES DE LEADERSHIP\"",
+              "Section 6 dupliquée: \"BONNES PRATIQUES ET RÈGLES D'OR\"",
+              "Section 7 dupliquée: \"ARTICLES ANNEXES\""
+            ]
+          },
+          "hasIssues": true
+        },
+        {
+          "domain": "leadership-management",
+          "file": "management-diversite-inclusion.md",
+          "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/leadership-management/management-diversite-inclusion.md",
+          "issues": {
+            "structure": [],
+            "order": [],
+            "incomplete": [
+              "Section 1 semble vide ou très courte",
+              "Section 2 semble vide ou très courte",
+              "Section 3 contient des placeholders"
+            ],
+            "missing": [
+              "Section obligatoire manquante: 1. FONDAMENTAUX DU SUJET",
+              "Section obligatoire manquante: 2. ANALYSE APPROFONDIE",
+              "Section obligatoire manquante: 6. SOURCES ET RÉFÉRENCES"
+            ],
+            "duplicates": [
+              "Section 1 dupliquée: \"COMPRENDRE LA VRAIE DIVERSITÉ AU-DELÀ DES CLICHÉS\"",
+              "Section 2 dupliquée: \"MA MÉTHODOLOGIE ÉPROUVÉE : LE FRAMEWORK \"C.A.R.E.\"\"",
+              "Section 3 dupliquée: \"LES 3 ERREURS FATALES QUE J'AI COMMISES (ET CORRIGÉES)\"",
+              "Section 4 dupliquée: \"OUTILS CONCRETS QUE J'UTILISE AU QUOTIDIEN\"",
+              "Section 6 dupliquée: \"MES 5 INDICATEURS D'INCLUSION QUI COMPTENT VRAIMENT\"",
+              "Section 7 dupliquée: \"CAS D'ÉTUDE : TRANSFORMATION D'UNE ÉQUIPE DE 20 PERSONNES\""
+            ]
+          },
+          "hasIssues": true
+        },
+        {
+          "domain": "leadership-management",
+          "file": "management-hybride-defis-opportunites.md",
+          "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/leadership-management/management-hybride-defis-opportunites.md",
+          "issues": {
+            "structure": [],
+            "order": [
+              "Section 7 est mal placée dans l'ordre"
+            ],
+            "incomplete": [
+              "Section 1 semble vide ou très courte"
+            ],
+            "missing": [
+              "Section obligatoire manquante: 6. SOURCES ET RÉFÉRENCES"
+            ],
+            "duplicates": [
+              "Section 6 dupliquée: \"BONNES PRATIQUES\"",
+              "Section 7 dupliquée: \"ARTICLES ANNEXES\""
+            ]
+          },
+          "hasIssues": true
+        }
+      ]
+    },
+    "marketing-communication": {
+      "total": 6,
+      "issues": {
+        "structure": 0,
+        "order": 6,
+        "incomplete": 6,
+        "missing": 7,
+        "duplicates": 13
+      },
+      "articles": [
+        {
+          "domain": "marketing-communication",
+          "file": "email-marketing-personnalisation.md",
+          "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/marketing-communication/email-marketing-personnalisation.md",
+          "issues": {
+            "structure": [],
+            "order": [
+              "Section 7 est mal placée dans l'ordre"
+            ],
+            "incomplete": [
+              "Section 1 semble vide ou très courte"
+            ],
+            "missing": [
+              "Section obligatoire manquante: 6. SOURCES ET RÉFÉRENCES"
+            ],
+            "duplicates": [
+              "Section 6 dupliquée: \"BONNES PRATIQUES\"",
+              "Section 7 dupliquée: \"ARTICLES ANNEXES\""
+            ]
+          },
+          "hasIssues": true
+        },
+        {
+          "domain": "marketing-communication",
+          "file": "marketing-content-strategies.md",
+          "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/marketing-communication/marketing-content-strategies.md",
+          "issues": {
+            "structure": [],
+            "order": [
+              "Section 7 est mal placée dans l'ordre"
+            ],
+            "incomplete": [
+              "Section 1 semble vide ou très courte"
+            ],
+            "missing": [
+              "Section obligatoire manquante: 6. SOURCES ET RÉFÉRENCES"
+            ],
+            "duplicates": [
+              "Section 6 dupliquée: \"BONNES PRATIQUES\"",
+              "Section 7 dupliquée: \"ARTICLES ANNEXES\""
+            ]
+          },
+          "hasIssues": true
+        },
+        {
+          "domain": "marketing-communication",
+          "file": "marketing-digital-strategies.md",
+          "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/marketing-communication/marketing-digital-strategies.md",
+          "issues": {
+            "structure": [],
+            "order": [
+              "Section 7 est mal placée dans l'ordre"
+            ],
+            "incomplete": [
+              "Section 1 semble vide ou très courte"
+            ],
+            "missing": [
+              "Section obligatoire manquante: 1. FONDAMENTAUX DU SUJET",
+              "Section obligatoire manquante: 6. SOURCES ET RÉFÉRENCES"
+            ],
+            "duplicates": [
+              "Section 1 dupliquée: \"FONDAMENTAUX DU MARKETING DIGITAL MODERNE\"",
+              "Section 6 dupliquée: \"BONNES PRATIQUES ET RÈGLES D'OR\"",
+              "Section 7 dupliquée: \"ARTICLES ANNEXES\""
+            ]
+          },
+          "hasIssues": true
+        },
+        {
+          "domain": "marketing-communication",
+          "file": "strategies-marketing-digital-2025.md",
+          "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/marketing-communication/strategies-marketing-digital-2025.md",
+          "issues": {
+            "structure": [],
+            "order": [
+              "Section 7 est mal placée dans l'ordre"
+            ],
+            "incomplete": [
+              "Section 1 semble vide ou très courte"
+            ],
+            "missing": [
+              "Section obligatoire manquante: 6. SOURCES ET RÉFÉRENCES"
+            ],
+            "duplicates": [
+              "Section 6 dupliquée: \"BONNES PRATIQUES\"",
+              "Section 7 dupliquée: \"ARTICLES ANNEXES\""
+            ]
+          },
+          "hasIssues": true
+        },
+        {
+          "domain": "marketing-communication",
+          "file": "strategies-reseaux-sociaux-b2b.md",
+          "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/marketing-communication/strategies-reseaux-sociaux-b2b.md",
+          "issues": {
+            "structure": [],
+            "order": [
+              "Section 7 est mal placée dans l'ordre"
+            ],
+            "incomplete": [
+              "Section 1 semble vide ou très courte"
+            ],
+            "missing": [
+              "Section obligatoire manquante: 6. SOURCES ET RÉFÉRENCES"
+            ],
+            "duplicates": [
+              "Section 6 dupliquée: \"BONNES PRATIQUES\"",
+              "Section 7 dupliquée: \"ARTICLES ANNEXES\""
+            ]
+          },
+          "hasIssues": true
+        },
+        {
+          "domain": "marketing-communication",
+          "file": "strategies-reseaux-sociaux-entreprises.md",
+          "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/marketing-communication/strategies-reseaux-sociaux-entreprises.md",
+          "issues": {
+            "structure": [],
+            "order": [
+              "Section 7 est mal placée dans l'ordre"
+            ],
+            "incomplete": [
+              "Section 1 semble vide ou très courte"
+            ],
+            "missing": [
+              "Section obligatoire manquante: 6. SOURCES ET RÉFÉRENCES"
+            ],
+            "duplicates": [
+              "Section 6 dupliquée: \"BONNES PRATIQUES\"",
+              "Section 7 dupliquée: \"ARTICLES ANNEXES\""
+            ]
+          },
+          "hasIssues": true
+        }
+      ]
+    },
+    "outils-techniques": {
+      "total": 3,
+      "issues": {
+        "structure": 0,
+        "order": 2,
+        "incomplete": 8,
+        "missing": 9,
+        "duplicates": 18
+      },
+      "articles": [
+        {
+          "domain": "outils-techniques",
+          "file": "mermaid-example.md",
+          "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/outils-techniques/mermaid-example.md",
+          "issues": {
+            "structure": [],
+            "order": [],
+            "incomplete": [
+              "Section 1 semble vide ou très courte",
+              "Section 2 semble vide ou très courte"
+            ],
+            "missing": [
+              "Section obligatoire manquante: 1. FONDAMENTAUX DU SUJET",
+              "Section obligatoire manquante: 2. ANALYSE APPROFONDIE",
+              "Section obligatoire manquante: 6. SOURCES ET RÉFÉRENCES"
+            ],
+            "duplicates": [
+              "Section 1 dupliquée: \"FONDAMENTAUX DE MERMAID\"",
+              "Section 2 dupliquée: \"SYNTAXE ET EXEMPLES PRATIQUES\"",
+              "Section 4 dupliquée: \"OUTILS ET INTÉGRATIONS\"",
+              "Section 6 dupliquée: \"BONNES PRATIQUES ET RÈGLES D'OR\"",
+              "Section 6 dupliquée: \"CONCLUSION ET RECOMMANDATIONS\"",
+              "Section 7 dupliquée: \"RESSOURCES ET OUTILS\""
+            ]
+          },
+          "hasIssues": true
+        },
+        {
+          "domain": "outils-techniques",
+          "file": "pillcolor-guide.md",
+          "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/outils-techniques/pillcolor-guide.md",
+          "issues": {
+            "structure": [],
+            "order": [],
+            "incomplete": [
+              "Section 1 semble vide ou très courte",
+              "Section 2 semble vide ou très courte",
+              "Section 3 contient des placeholders"
+            ],
+            "missing": [
+              "Section obligatoire manquante: 1. FONDAMENTAUX DU SUJET",
+              "Section obligatoire manquante: 2. ANALYSE APPROFONDIE",
+              "Section obligatoire manquante: 6. SOURCES ET RÉFÉRENCES"
+            ],
+            "duplicates": [
+              "Section 1 dupliquée: \"FONDAMENTAUX DES PILLS\"",
+              "Section 2 dupliquée: \"PSYCHOLOGIE DES COULEURS ET CLASSIFICATION\"",
+              "Section 3 dupliquée: \"MÉTHODOLOGIE DE CONCEPTION\"",
+              "Section 6 dupliquée: \"ACCESSIBILITÉ ET BONNES PRATIQUES\"",
+              "Section 6 dupliquée: \"MÉTRIQUES ET OPTIMISATION\"",
+              "Section 7 dupliquée: \"CONCLUSION ET RECOMMANDATIONS\""
+            ]
+          },
+          "hasIssues": true
+        },
+        {
+          "domain": "outils-techniques",
+          "file": "visualisations-mermaid.md",
+          "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/outils-techniques/visualisations-mermaid.md",
+          "issues": {
+            "structure": [],
+            "order": [
+              "SOURCES ET RÉFÉRENCES doit être AVANT ARTICLES ANNEXES",
+              "Section 6 est mal placée dans l'ordre"
+            ],
+            "incomplete": [
+              "Section 1 semble vide ou très courte",
+              "Section 2 semble vide ou très courte",
+              "Section 3 contient des placeholders"
+            ],
+            "missing": [
+              "Section obligatoire manquante: 1. FONDAMENTAUX DU SUJET",
+              "Section obligatoire manquante: 2. ANALYSE APPROFONDIE",
+              "Section obligatoire manquante: 6. SOURCES ET RÉFÉRENCES"
+            ],
+            "duplicates": [
+              "Section 1 dupliquée: \"TECHNIQUES AVANCÉES DE VI\"",
+              "Section 2 dupliquée: \"PERSONNALISATION ET STYLING\"",
+              "Section 3 dupliquée: \"INTÉGRATION ET AUTOMATISATION\"",
+              "Section 4 dupliquée: \"DÉFIS MAJEURS ET SOLUTIONS INNOVANTES\"",
+              "Section 5 dupliquée: \"CAS D'USAGE AVANCÉS\"",
+              "Section 6 dupliquée: \"CONCLUSION ET RECOMMANDATIONS\""
+            ]
+          },
+          "hasIssues": true
+        }
+      ]
+    },
+    "productivite-methodes": {
+      "total": 11,
+      "issues": {
+        "structure": 0,
+        "order": 14,
+        "incomplete": 12,
+        "missing": 9,
+        "duplicates": 18
+      },
+      "articles": [
+        {
+          "domain": "productivite-methodes",
+          "file": "deep-work.md",
+          "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/productivite-methodes/deep-work.md",
+          "issues": {
+            "structure": [],
+            "order": [
+              "SOURCES ET RÉFÉRENCES doit être AVANT ARTICLES ANNEXES",
+              "Section 6 est mal placée dans l'ordre"
+            ],
+            "incomplete": [
+              "Section 1 semble vide ou très courte",
+              "Section 2 semble vide ou très courte"
+            ],
+            "missing": [],
+            "duplicates": []
+          },
+          "hasIssues": true
+        },
+        {
+          "domain": "productivite-methodes",
+          "file": "gestion-priorites-efficacite.md",
+          "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/productivite-methodes/gestion-priorites-efficacite.md",
+          "issues": {
+            "structure": [],
+            "order": [
+              "SOURCES ET RÉFÉRENCES doit être AVANT ARTICLES ANNEXES",
+              "Section 5 est mal placée dans l'ordre",
+              "Section 6 est mal placée dans l'ordre"
+            ],
+            "incomplete": [
+              "Section 4 contient des placeholders"
+            ],
+            "missing": [],
+            "duplicates": []
+          },
+          "hasIssues": true
+        },
+        {
+          "domain": "productivite-methodes",
+          "file": "gestion-stress-performance.md",
+          "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/productivite-methodes/gestion-stress-performance.md",
+          "issues": {
+            "structure": [],
+            "order": [
+              "Section 7 est mal placée dans l'ordre"
+            ],
+            "incomplete": [
+              "Section 1 semble vide ou très courte"
+            ],
+            "missing": [
+              "Section obligatoire manquante: 6. SOURCES ET RÉFÉRENCES"
+            ],
+            "duplicates": [
+              "Section 6 dupliquée: \"BONNES PRATIQUES\"",
+              "Section 7 dupliquée: \"ARTICLES ANNEXES\""
+            ]
+          },
+          "hasIssues": true
+        },
+        {
+          "domain": "productivite-methodes",
+          "file": "gestion-surcharge-informationnelle.md",
+          "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/productivite-methodes/gestion-surcharge-informationnelle.md",
+          "issues": {
+            "structure": [],
+            "order": [
+              "Section 7 est mal placée dans l'ordre"
+            ],
+            "incomplete": [
+              "Section 1 semble vide ou très courte"
+            ],
+            "missing": [
+              "Section obligatoire manquante: 6. SOURCES ET RÉFÉRENCES"
+            ],
+            "duplicates": [
+              "Section 6 dupliquée: \"BONNES PRATIQUES\"",
+              "Section 7 dupliquée: \"ARTICLES ANNEXES\""
+            ]
+          },
+          "hasIssues": true
+        },
+        {
+          "domain": "productivite-methodes",
+          "file": "gestion-temps-productivite.md",
+          "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/productivite-methodes/gestion-temps-productivite.md",
+          "issues": {
+            "structure": [],
+            "order": [
+              "Section 7 est mal placée dans l'ordre"
+            ],
+            "incomplete": [
+              "Section 1 semble vide ou très courte"
+            ],
+            "missing": [
+              "Section obligatoire manquante: 6. SOURCES ET RÉFÉRENCES"
+            ],
+            "duplicates": [
+              "Section 6 dupliquée: \"BONNES PRATIQUES\"",
+              "Section 7 dupliquée: \"ARTICLES ANNEXES\""
+            ]
+          },
+          "hasIssues": true
+        },
+        {
+          "domain": "productivite-methodes",
+          "file": "gestion-temps-professionnels.md",
+          "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/productivite-methodes/gestion-temps-professionnels.md",
+          "issues": {
+            "structure": [],
+            "order": [
+              "Section 7 est mal placée dans l'ordre"
+            ],
+            "incomplete": [
+              "Section 1 semble vide ou très courte"
+            ],
+            "missing": [
+              "Section obligatoire manquante: 6. SOURCES ET RÉFÉRENCES"
+            ],
+            "duplicates": [
+              "Section 6 dupliquée: \"BONNES PRATIQUES\"",
+              "Section 7 dupliquée: \"ARTICLES ANNEXES\""
+            ]
+          },
+          "hasIssues": true
+        },
+        {
+          "domain": "productivite-methodes",
+          "file": "gestion-temps.md",
+          "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/productivite-methodes/gestion-temps.md",
+          "issues": {
+            "structure": [],
+            "order": [
+              "Section 7 est mal placée dans l'ordre"
+            ],
+            "incomplete": [
+              "Section 1 semble vide ou très courte"
+            ],
+            "missing": [
+              "Section obligatoire manquante: 6. SOURCES ET RÉFÉRENCES"
+            ],
+            "duplicates": [
+              "Section 6 dupliquée: \"BONNES PRATIQUES\"",
+              "Section 7 dupliquée: \"ARTICLES ANNEXES\""
+            ]
+          },
+          "hasIssues": true
+        },
+        {
+          "domain": "productivite-methodes",
+          "file": "methode-gtd-expliquee.md",
+          "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/productivite-methodes/methode-gtd-expliquee.md",
+          "issues": {
+            "structure": [],
+            "order": [
+              "Section 7 est mal placée dans l'ordre"
+            ],
+            "incomplete": [
+              "Section 1 semble vide ou très courte"
+            ],
+            "missing": [
+              "Section obligatoire manquante: 6. SOURCES ET RÉFÉRENCES"
+            ],
+            "duplicates": [
+              "Section 6 dupliquée: \"BONNES PRATIQUES\"",
+              "Section 7 dupliquée: \"ARTICLES ANNEXES\""
+            ]
+          },
+          "hasIssues": true
+        },
+        {
+          "domain": "productivite-methodes",
+          "file": "methode-pomodoro.md",
+          "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/productivite-methodes/methode-pomodoro.md",
+          "issues": {
+            "structure": [],
+            "order": [
+              "Section 7 est mal placée dans l'ordre"
+            ],
+            "incomplete": [
+              "Section 1 semble vide ou très courte"
+            ],
+            "missing": [
+              "Section obligatoire manquante: 6. SOURCES ET RÉFÉRENCES"
+            ],
+            "duplicates": [
+              "Section 6 dupliquée: \"BONNES PRATIQUES\"",
+              "Section 7 dupliquée: \"ARTICLES ANNEXES\""
+            ]
+          },
+          "hasIssues": true
+        },
+        {
+          "domain": "productivite-methodes",
+          "file": "procrastination-solutions-efficaces.md",
+          "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/productivite-methodes/procrastination-solutions-efficaces.md",
+          "issues": {
+            "structure": [],
+            "order": [
+              "Section 7 est mal placée dans l'ordre"
+            ],
+            "incomplete": [
+              "Section 1 semble vide ou très courte"
+            ],
+            "missing": [
+              "Section obligatoire manquante: 6. SOURCES ET RÉFÉRENCES"
+            ],
+            "duplicates": [
+              "Section 6 dupliquée: \"BONNES PRATIQUES\"",
+              "Section 7 dupliquée: \"ARTICLES ANNEXES\""
+            ]
+          },
+          "hasIssues": true
+        },
+        {
+          "domain": "productivite-methodes",
+          "file": "productivite-professionnelle.md",
+          "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/productivite-methodes/productivite-professionnelle.md",
+          "issues": {
+            "structure": [],
+            "order": [
+              "Section 7 est mal placée dans l'ordre"
+            ],
+            "incomplete": [
+              "Section 1 semble vide ou très courte"
+            ],
+            "missing": [
+              "Section obligatoire manquante: 6. SOURCES ET RÉFÉRENCES"
+            ],
+            "duplicates": [
+              "Section 6 dupliquée: \"BONNES PRATIQUES\"",
+              "Section 7 dupliquée: \"ARTICLES ANNEXES\""
+            ]
+          },
+          "hasIssues": true
+        }
+      ]
+    },
+    "qualite-process": {
+      "total": 7,
+      "issues": {
+        "structure": 0,
+        "order": 8,
+        "incomplete": 8,
+        "missing": 8,
+        "duplicates": 16
+      },
+      "articles": [
+        {
+          "domain": "qualite-process",
+          "file": "gestion-qualite-amelioration.md",
+          "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/qualite-process/gestion-qualite-amelioration.md",
+          "issues": {
+            "structure": [],
+            "order": [
+              "SOURCES ET RÉFÉRENCES doit être AVANT ARTICLES ANNEXES",
+              "Section 5 est mal placée dans l'ordre",
+              "Section 6 est mal placée dans l'ordre"
+            ],
+            "incomplete": [],
+            "missing": [],
+            "duplicates": []
+          },
+          "hasIssues": true
+        },
+        {
+          "domain": "qualite-process",
+          "file": "gestion-qualite-certification.md",
+          "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/qualite-process/gestion-qualite-certification.md",
+          "issues": {
+            "structure": [],
+            "order": [],
+            "incomplete": [
+              "Section 1 semble vide ou très courte",
+              "Section 2 semble vide ou très courte",
+              "Section 3 contient des placeholders"
+            ],
+            "missing": [
+              "Section obligatoire manquante: 1. FONDAMENTAUX DU SUJET",
+              "Section obligatoire manquante: 2. ANALYSE APPROFONDIE",
+              "Section obligatoire manquante: 6. SOURCES ET RÉFÉRENCES"
+            ],
+            "duplicates": [
+              "Section 1 dupliquée: \"ÉCOSYSTÈME DES CERTIFICAT\"",
+              "Section 2 dupliquée: \"STANDARDS ISO PRINCIPAUX\"",
+              "Section 3 dupliquée: \"PROCESSUS DE CERTIFICATION\"",
+              "Section 4 dupliquée: \"BONNES PRATIQUES D'IMPLÉMENTATION\"",
+              "Section 6 dupliquée: \"RETOURS D'EXPÉRIENCE\"",
+              "Section 7 dupliquée: \"CONCLUSION ET RECOMMANDATIONS\""
+            ]
+          },
+          "hasIssues": true
+        },
+        {
+          "domain": "qualite-process",
+          "file": "gestion-qualite-entreprise.md",
+          "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/qualite-process/gestion-qualite-entreprise.md",
+          "issues": {
+            "structure": [],
+            "order": [
+              "Section 7 est mal placée dans l'ordre"
+            ],
+            "incomplete": [
+              "Section 1 semble vide ou très courte"
+            ],
+            "missing": [
+              "Section obligatoire manquante: 6. SOURCES ET RÉFÉRENCES"
+            ],
+            "duplicates": [
+              "Section 6 dupliquée: \"BONNES PRATIQUES\"",
+              "Section 7 dupliquée: \"ARTICLES ANNEXES\""
+            ]
+          },
+          "hasIssues": true
+        },
+        {
+          "domain": "qualite-process",
+          "file": "gestion-qualite-processus.md",
+          "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/qualite-process/gestion-qualite-processus.md",
+          "issues": {
+            "structure": [],
+            "order": [
+              "Section 7 est mal placée dans l'ordre"
+            ],
+            "incomplete": [
+              "Section 1 semble vide ou très courte"
+            ],
+            "missing": [
+              "Section obligatoire manquante: 6. SOURCES ET RÉFÉRENCES"
+            ],
+            "duplicates": [
+              "Section 6 dupliquée: \"BONNES PRATIQUES\"",
+              "Section 7 dupliquée: \"ARTICLES ANNEXES\""
+            ]
+          },
+          "hasIssues": true
+        },
+        {
+          "domain": "qualite-process",
+          "file": "gestion-qualite-strategie.md",
+          "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/qualite-process/gestion-qualite-strategie.md",
+          "issues": {
+            "structure": [],
+            "order": [
+              "Section 7 est mal placée dans l'ordre"
+            ],
+            "incomplete": [
+              "Section 1 semble vide ou très courte"
+            ],
+            "missing": [
+              "Section obligatoire manquante: 6. SOURCES ET RÉFÉRENCES"
+            ],
+            "duplicates": [
+              "Section 6 dupliquée: \"BONNES PRATIQUES\"",
+              "Section 7 dupliquée: \"ARTICLES ANNEXES\""
+            ]
+          },
+          "hasIssues": true
+        },
+        {
+          "domain": "qualite-process",
+          "file": "optimisation-processus-entreprise.md",
+          "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/qualite-process/optimisation-processus-entreprise.md",
+          "issues": {
+            "structure": [],
+            "order": [
+              "Section 7 est mal placée dans l'ordre"
+            ],
+            "incomplete": [
+              "Section 1 semble vide ou très courte"
+            ],
+            "missing": [
+              "Section obligatoire manquante: 6. SOURCES ET RÉFÉRENCES"
+            ],
+            "duplicates": [
+              "Section 6 dupliquée: \"BONNES PRATIQUES\"",
+              "Section 7 dupliquée: \"ARTICLES ANNEXES\""
+            ]
+          },
+          "hasIssues": true
+        },
+        {
+          "domain": "qualite-process",
+          "file": "qualite-processus-entreprise.md",
+          "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/qualite-process/qualite-processus-entreprise.md",
+          "issues": {
+            "structure": [],
+            "order": [
+              "Section 7 est mal placée dans l'ordre"
+            ],
+            "incomplete": [
+              "Section 1 semble vide ou très courte"
+            ],
+            "missing": [
+              "Section obligatoire manquante: 6. SOURCES ET RÉFÉRENCES"
+            ],
+            "duplicates": [
+              "Section 6 dupliquée: \"BONNES PRATIQUES\"",
+              "Section 7 dupliquée: \"ARTICLES ANNEXES\""
+            ]
+          },
+          "hasIssues": true
+        }
+      ]
+    },
+    "reconversion-carriere": {
+      "total": 1,
+      "issues": {
+        "structure": 0,
+        "order": 1,
+        "incomplete": 1,
+        "missing": 2,
+        "duplicates": 4
+      },
+      "articles": [
+        {
+          "domain": "reconversion-carriere",
+          "file": "reconversion-professionnelle-reussie.md",
+          "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/reconversion-carriere/reconversion-professionnelle-reussie.md",
+          "issues": {
+            "structure": [],
+            "order": [
+              "Section 7 est mal placée dans l'ordre"
+            ],
+            "incomplete": [
+              "Section 1 semble vide ou très courte"
+            ],
+            "missing": [
+              "Section obligatoire manquante: 1. FONDAMENTAUX DU SUJET",
+              "Section obligatoire manquante: 6. SOURCES ET RÉFÉRENCES"
+            ],
+            "duplicates": [
+              "Section 1 dupliquée: \"FONDAMENTAUX DE LA RECONVERSION PROFESSIONNELLE\"",
+              "Section 4 dupliquée: \"OUTILS ET RESSOURCES DE RECONVERSION\"",
+              "Section 6 dupliquée: \"BONNES PRATIQUES ET RÈGLES D'OR\"",
+              "Section 7 dupliquée: \"ARTICLES ANNEXES\""
+            ]
+          },
+          "hasIssues": true
+        }
+      ]
+    },
+    "service-client": {
+      "total": 2,
+      "issues": {
+        "structure": 0,
+        "order": 2,
+        "incomplete": 4,
+        "missing": 4,
+        "duplicates": 8
+      },
+      "articles": [
+        {
+          "domain": "service-client",
+          "file": "service-client-excellence.md",
+          "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/service-client/service-client-excellence.md",
+          "issues": {
+            "structure": [],
+            "order": [
+              "Section 7 est mal placée dans l'ordre"
+            ],
+            "incomplete": [
+              "Section 1 semble vide ou très courte"
+            ],
+            "missing": [
+              "Section obligatoire manquante: 1. FONDAMENTAUX DU SUJET",
+              "Section obligatoire manquante: 6. SOURCES ET RÉFÉRENCES"
+            ],
+            "duplicates": [
+              "Section 1 dupliquée: \"FONDAMENTAUX DE L'EXCELLENCE DU SERVICE CLIENT\"",
+              "Section 6 dupliquée: \"BONNES PRATIQUES ET RÈGLES D'OR\"",
+              "Section 7 dupliquée: \"ARTICLES ANNEXES\""
+            ]
+          },
+          "hasIssues": true
+        },
+        {
+          "domain": "service-client",
+          "file": "service-client-performance.md",
+          "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/service-client/service-client-performance.md",
+          "issues": {
+            "structure": [],
+            "order": [
+              "Section 7 est mal placée dans l'ordre"
+            ],
+            "incomplete": [
+              "Section 1 semble vide ou très courte",
+              "Section 2 semble vide ou très courte",
+              "Section 3 contient des placeholders"
+            ],
+            "missing": [
+              "Section obligatoire manquante: 1. FONDAMENTAUX DU SUJET",
+              "Section obligatoire manquante: 2. ANALYSE APPROFONDIE"
+            ],
+            "duplicates": [
+              "Section 1 dupliquée: \"COMPRENDRE LA PERFORMANCE DU SERVICE CLIENT\"",
+              "Section 2 dupliquée: \"LES PILIERS DE LA PERFORMANCE DU SERVICE CLIENT\"",
+              "Section 3 dupliquée: \"STRATÉGIES D'OPTIMISATION ÉPROUVÉES\"",
+              "Section 6 dupliquée: \"BONNES PRATIQUES : MES RECOMMANDATIONS EXPERTES\"",
+              "Section 7 dupliquée: \"ARTICLES ANNEXES\""
+            ]
+          },
+          "hasIssues": true
+        }
+      ]
+    },
+    "transformation-digitale": {
+      "total": 3,
+      "issues": {
+        "structure": 0,
+        "order": 3,
+        "incomplete": 3,
+        "missing": 4,
+        "duplicates": 7
+      },
+      "articles": [
+        {
+          "domain": "transformation-digitale",
+          "file": "transformation-digitale-telecom.md",
+          "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/transformation-digitale/transformation-digitale-telecom.md",
+          "issues": {
+            "structure": [],
+            "order": [
+              "Section 7 est mal placée dans l'ordre"
+            ],
+            "incomplete": [
+              "Section 1 semble vide ou très courte"
+            ],
+            "missing": [
+              "Section obligatoire manquante: 6. SOURCES ET RÉFÉRENCES"
+            ],
+            "duplicates": [
+              "Section 6 dupliquée: \"BONNES PRATIQUES\"",
+              "Section 7 dupliquée: \"ARTICLES ANNEXES\""
+            ]
+          },
+          "hasIssues": true
+        },
+        {
+          "domain": "transformation-digitale",
+          "file": "transformation-numerique-entreprise.md",
+          "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/transformation-digitale/transformation-numerique-entreprise.md",
+          "issues": {
+            "structure": [],
+            "order": [
+              "Section 7 est mal placée dans l'ordre"
+            ],
+            "incomplete": [
+              "Section 1 semble vide ou très courte"
+            ],
+            "missing": [
+              "Section obligatoire manquante: 1. FONDAMENTAUX DU SUJET",
+              "Section obligatoire manquante: 6. SOURCES ET RÉFÉRENCES"
+            ],
+            "duplicates": [
+              "Section 1 dupliquée: \"FONDAMENTAUX DE LA TRANSFORMATION NUMÉRIQUE\"",
+              "Section 6 dupliquée: \"BONNES PRATIQUES\"",
+              "Section 7 dupliquée: \"ARTICLES ANNEXES\""
+            ]
+          },
+          "hasIssues": true
+        },
+        {
+          "domain": "transformation-digitale",
+          "file": "transformation-numerique-talents.md",
+          "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/transformation-digitale/transformation-numerique-talents.md",
+          "issues": {
+            "structure": [],
+            "order": [
+              "Section 7 est mal placée dans l'ordre"
+            ],
+            "incomplete": [
+              "Section 1 semble vide ou très courte"
+            ],
+            "missing": [
+              "Section obligatoire manquante: 6. SOURCES ET RÉFÉRENCES"
+            ],
+            "duplicates": [
+              "Section 6 dupliquée: \"BONNES PRATIQUES\"",
+              "Section 7 dupliquée: \"ARTICLES ANNEXES\""
+            ]
+          },
+          "hasIssues": true
+        }
+      ]
+    }
+  },
+  "processed": 89,
+  "errors": 0
+}

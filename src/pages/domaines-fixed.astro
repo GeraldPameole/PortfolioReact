@@ -1,0 +1,337 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+// Récupérer tous les articles
+const allArticles = await getCollection('articles');
+
+// Fonction pour obtenir TOUS les articles d'un domaine (pas seulement les featured)
+function getAllArticlesForDomain(domain: string) {
+  return allArticles.filter(article => {
+    // Vérifier si l'article est dans le bon dossier
+    const articlePath = article.id;
+    return articlePath.includes(domain);
+  }).sort((a, b) => {
+    if (a.data.featured && !b.data.featured) return -1;
+    if (!a.data.featured && b.data.featured) return 1;
+    return new Date(b.data.publishDate).getTime() - new Date(a.data.publishDate).getTime();
+  });
+}
+
+// Configuration des domaines avec les mêmes couleurs que la page d'accueil
+const domainesConfig = {
+  'gestion-projet': {
+    name: 'Gestion de Projet Télécom',
+    description: 'Méthodologies, outils et bonnes pratiques pour la gestion de projet',
+    icon: 'fas fa-tasks',
+    color: 'green',
+    gradient: 'from-green-600 to-green-500',
+    bgColor: 'bg-green-600 dark:bg-green-500'
+  },
+  'developpement-web': {
+    name: 'Développement Web',
+    description: 'Tendances, technologies et bonnes pratiques du développement web moderne',
+    icon: 'fas fa-laptop-code',
+    color: 'blue',
+    gradient: 'from-blue-600 to-blue-500',
+    bgColor: 'bg-blue-600 dark:bg-blue-500'
+  },
+  'qualite-process': {
+    name: 'Qualité & Processus',
+    description: 'Amélioration continue, certification et optimisation des processus',
+    icon: 'fas fa-clipboard-check',
+    color: 'purple',
+    gradient: 'from-purple-600 to-purple-500',
+    bgColor: 'bg-purple-600 dark:bg-purple-500'
+  },
+  'formation': {
+    name: 'Formation & Pédagogie',
+    description: 'Articles sur la formation, le développement des compétences et l\'apprentissage continu',
+    icon: 'fas fa-graduation-cap',
+    color: 'red',
+    gradient: 'from-red-600 to-red-500',
+    bgColor: 'bg-red-600 dark:bg-red-500'
+  },
+  'developpement-commercial': {
+    name: 'Développement Commercial',
+    description: 'Stratégies commerciales, négociation et développement de partenariats',
+    icon: 'fas fa-handshake',
+    color: 'orange',
+    gradient: 'from-orange-600 to-orange-500',
+    bgColor: 'bg-orange-600 dark:bg-orange-500'
+  },
+  'gestion-talents': {
+    name: 'Gestion des Talents',
+    description: 'Stratégies et méthodes pour gérer, développer et fidéliser les talents',
+    icon: 'fas fa-users',
+    color: 'teal',
+    gradient: 'from-teal-500 to-cyan-600',
+    bgColor: 'bg-teal-600 dark:bg-teal-500'
+  },
+  'productivite-methodes': {
+    name: 'Productivité & Méthodes',
+    description: 'Techniques de productivité, gestion du temps et méthodes de travail',
+    icon: 'fas fa-clock',
+    color: 'indigo',
+    gradient: 'from-indigo-500 to-purple-600',
+    bgColor: 'bg-indigo-600 dark:bg-indigo-500'
+  },
+  'transformation-digitale': {
+    name: 'Transformation Digitale',
+    description: 'IA, transformation numérique et nouvelles technologies',
+    icon: 'fas fa-robot',
+    color: 'pink',
+    gradient: 'from-pink-500 to-rose-600',
+    bgColor: 'bg-pink-600 dark:bg-pink-500'
+  },
+  'marketing-communication': {
+    name: 'Marketing & Communication',
+    description: 'Stratégies marketing digital, réseaux sociaux et communication d\'entreprise',
+    icon: 'fas fa-bullhorn',
+    color: 'yellow',
+    gradient: 'from-yellow-500 to-orange-600',
+    bgColor: 'bg-yellow-600 dark:bg-yellow-500'
+  },
+  'leadership-management': {
+    name: 'Leadership & Management',
+    description: 'Leadership, management d\'équipe et développement des compétences managériales',
+    icon: 'fas fa-crown',
+    color: 'purple',
+    gradient: 'from-purple-500 to-violet-600',
+    bgColor: 'bg-purple-600 dark:bg-purple-500'
+  },
+  'innovation-technologies': {
+    name: 'Innovation & Technologies',
+    description: 'Innovation, nouvelles technologies et tendances émergentes',
+    icon: 'fas fa-lightbulb',
+    color: 'cyan',
+    gradient: 'from-cyan-500 to-blue-600',
+    bgColor: 'bg-cyan-600 dark:bg-cyan-500'
+  },
+  'service-client': {
+    name: 'Service Client',
+    description: 'Excellence du service client, satisfaction et fidélisation',
+    icon: 'fas fa-headset',
+    color: 'emerald',
+    gradient: 'from-emerald-500 to-green-600',
+    bgColor: 'bg-emerald-600 dark:bg-emerald-500'
+  },
+  'gestion-connaissances': {
+    name: 'Gestion des Connaissances',
+    description: 'Gestion et partage des connaissances organisationnelles',
+    icon: 'fas fa-brain',
+    color: 'violet',
+    gradient: 'from-violet-500 to-purple-600',
+    bgColor: 'bg-violet-600 dark:bg-violet-500'
+  },
+  'reconversion-carriere': {
+    name: 'Reconversion & Carrière',
+    description: 'Reconversion professionnelle, évolution de carrière et développement personnel',
+    icon: 'fas fa-route',
+    color: 'rose',
+    gradient: 'from-rose-500 to-pink-600',
+    bgColor: 'bg-rose-600 dark:bg-rose-500'
+  },
+  'outils-techniques': {
+    name: 'Outils & Techniques',
+    description: 'Outils, techniques et méthodes pratiques pour améliorer la productivité',
+    icon: 'fas fa-tools',
+    color: 'slate',
+    gradient: 'from-slate-500 to-gray-600',
+    bgColor: 'bg-slate-600 dark:bg-slate-500'
+  }
+};
+
+// Fonction pour formater la date
+function formatDate(date: Date | string): string {
+  const dateObj = typeof date === 'string' ? new Date(date) : date;
+  return dateObj.toLocaleDateString('fr-FR', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
+  });
+}
+
+// Statistiques
+const totalDomaines = Object.keys(domainesConfig).length;
+const totalArticles = allArticles.length;
+---
+
+<BaseLayout title="Domaines d'Expertise | Gérald Paméole" description="Explorez mes domaines d'expertise et découvrez tous mes articles organisés par thème.">
+	<div class="min-h-screen bg-gray-50 dark:bg-gray-900">
+		<!-- Hero Section -->
+		<section class="py-20 bg-gradient-to-r from-indigo-600 to-purple-700 text-white">
+			<div class="container mx-auto px-4 text-center">
+				<h1 class="text-4xl md:text-5xl font-bold mb-6">🎯 Domaines d'Expertise</h1>
+				<p class="text-xl max-w-3xl mx-auto mb-8">
+					Explorez mes <span class="text-yellow-300 font-bold">{totalDomaines} domaines d'expertise</span> et découvrez 
+					<span class="text-pink-300 font-bold">{totalArticles} articles</span> organisés par thème pour une 
+					<span class="text-cyan-300 font-bold">navigation intuitive</span>.
+				</p>
+				
+				<!-- Statistiques -->
+				<div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-2xl mx-auto">
+					<div class="bg-white/10 backdrop-blur-sm rounded-lg p-4">
+						<div class="text-3xl font-bold">{totalDomaines}</div>
+						<div class="text-sm opacity-90">Domaines</div>
+					</div>
+					<div class="bg-white/10 backdrop-blur-sm rounded-lg p-4">
+						<div class="text-3xl font-bold">{totalArticles}</div>
+						<div class="text-sm opacity-90">Articles</div>
+					</div>
+					<div class="bg-white/10 backdrop-blur-sm rounded-lg p-4">
+						<div class="text-3xl font-bold">100%</div>
+						<div class="text-sm opacity-90">Expertise</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Navigation rapide -->
+		<section class="py-8 bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700">
+			<div class="container mx-auto px-4">
+				<div class="flex flex-wrap gap-2 justify-center">
+					{Object.entries(domainesConfig).map(([domainKey, domain]) => (
+						<a 
+							href={`#${domainKey}`}
+							class={`px-4 py-2 ${domain.bgColor} text-white rounded-full text-sm hover:opacity-80 transition-opacity`}
+						>
+							<i class={`${domain.icon} mr-2`}></i>
+							{domain.name}
+						</a>
+					))}
+				</div>
+			</div>
+		</section>
+
+		<!-- Domaines avec Articles -->
+		<section class="py-16">
+			<div class="container mx-auto px-4">
+				<div class="text-center mb-12">
+					<h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+						📚 Articles par Thème
+					</h2>
+					<p class="text-lg text-gray-600 dark:text-gray-300">
+						Chaque domaine contient tous les articles <span class="text-indigo-600 dark:text-indigo-400 font-bold">spécialisés</span> sur le sujet.
+					</p>
+				</div>
+
+				<div class="space-y-16">
+					{Object.entries(domainesConfig).map(([domainKey, domain]) => {
+						const allDomainArticles = getAllArticlesForDomain(domainKey);
+						return (
+							<div id={domainKey} class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden">
+								<!-- Header du domaine -->
+								<div class={`bg-gradient-to-r ${domain.gradient} p-8 text-white`}>
+									<div class="flex items-center mb-4">
+										<div class="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center mr-4">
+											<i class={`${domain.icon} text-2xl`}></i>
+										</div>
+										<div>
+											<h3 class="text-3xl font-bold">{domain.name}</h3>
+											<p class="text-sm opacity-90">{allDomainArticles.length} article{allDomainArticles.length > 1 ? 's' : ''} dans ce domaine</p>
+										</div>
+									</div>
+									<p class="text-sm opacity-90 leading-relaxed">{domain.description}</p>
+								</div>
+
+								<!-- Articles du domaine -->
+								<div class="p-8">
+									{allDomainArticles.length > 0 ? (
+										<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+											{allDomainArticles.map((article) => (
+												<article class="bg-gray-50 dark:bg-gray-700 rounded-xl p-6 hover:shadow-lg transition-shadow">
+													<div class="flex items-start space-x-4">
+														<div class="flex-shrink-0">
+															<div class={`w-12 h-12 ${domain.bgColor} rounded-xl flex items-center justify-center`}>
+																<i class={`${domain.icon} text-white text-lg`}></i>
+															</div>
+														</div>
+														<div class="flex-1 min-w-0">
+															<h4 class="text-lg font-semibold text-gray-900 dark:text-white mb-2 line-clamp-2">
+																{article.data.title}
+															</h4>
+															<p class="text-gray-600 dark:text-gray-300 text-sm mb-3 line-clamp-2">
+																{article.data.description}
+															</p>
+															<div class="flex items-center justify-between">
+																<div class="flex items-center space-x-4 text-xs text-gray-500 dark:text-gray-400">
+																	<span>{formatDate(article.data.publishDate)}</span>
+																	<span>•</span>
+																	<span>{article.data.readingTime} min</span>
+																	{article.data.featured && (
+																		<>
+																			<span>•</span>
+																			<span class="text-yellow-600 dark:text-yellow-400">⭐ Mis en avant</span>
+																		</>
+																	)}
+																</div>
+																<a 
+																	href={`/articles/${article.slug}`}
+																	class="text-indigo-600 dark:text-indigo-400 hover:text-indigo-800 dark:hover:text-indigo-300 font-medium text-sm flex items-center"
+																>
+																	Lire
+																	<svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+																		<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+																	</svg>
+																</a>
+															</div>
+														</div>
+													</div>
+												</article>
+											))}
+										</div>
+									) : (
+										<div class="text-center py-12">
+											<div class="w-16 h-16 bg-gray-100 dark:bg-gray-700 rounded-full flex items-center justify-center mx-auto mb-4">
+												<i class={`${domain.icon} text-2xl text-gray-400`}></i>
+											</div>
+											<h3 class="text-lg font-medium text-gray-900 dark:text-white mb-2">Aucun article dans ce domaine</h3>
+											<p class="text-gray-600 dark:text-gray-400">Des articles seront bientôt ajoutés dans ce domaine.</p>
+										</div>
+									)}
+								</div>
+							</div>
+						);
+					})}
+				</div>
+			</div>
+		</section>
+
+		<!-- CTA Section -->
+		<section class="py-16 bg-gray-100 dark:bg-gray-800">
+			<div class="container mx-auto px-4 text-center">
+				<h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+					Besoin d'aide ?
+				</h2>
+				<p class="text-lg text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto">
+					Vous cherchez des conseils dans un <span class="text-indigo-600 dark:text-indigo-400 font-bold">domaine spécifique</span> ? 
+					N'hésitez pas à me <span class="text-purple-600 dark:text-purple-400 font-bold">contacter</span> !
+				</p>
+				<div class="flex flex-col sm:flex-row gap-4 justify-center">
+					<a 
+						href="/contact" 
+						class="inline-block px-8 py-3 bg-indigo-600 text-white font-medium rounded-lg hover:bg-indigo-700 transition-colors"
+					>
+						Me contacter
+					</a>
+					<a 
+						href="/blog" 
+						class="inline-block px-8 py-3 border border-indigo-600 text-indigo-600 dark:text-indigo-400 font-medium rounded-lg hover:bg-indigo-50 dark:hover:bg-indigo-900/20 transition-colors"
+					>
+						Voir le blog
+					</a>
+				</div>
+			</div>
+		</section>
+	</div>
+</BaseLayout>
+
+<style>
+	.line-clamp-2 {
+		display: -webkit-box;
+		-webkit-line-clamp: 2;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+	}
+</style>

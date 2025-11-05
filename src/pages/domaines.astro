@@ -1,15 +1,14 @@
 ---
 import { getCollection } from 'astro:content';
-import { getFeaturedArticlesForDomain } from '../config/featured-articles';
 import BaseLayout from '../layouts/BaseLayout.astro';
+import SearchBar from '../components/SearchBar.astro';
 
 // Récupérer tous les articles
 const allArticles = await getCollection('articles');
 
-// Fonction pour obtenir TOUS les articles d'un domaine (pas seulement les featured)
+// Fonction pour obtenir TOUS les articles d'un domaine
 function getAllArticlesForDomain(domain: string) {
   return allArticles.filter(article => {
-    // Vérifier si l'article est dans le bon dossier
     const articlePath = article.id;
     return articlePath.includes(domain);
   }).sort((a, b) => {
@@ -19,28 +18,28 @@ function getAllArticlesForDomain(domain: string) {
   });
 }
 
-// Configuration des domaines avec les mêmes couleurs que la page d'accueil
+// Configuration des domaines avec icônes spécialisées
 const domainesConfig = {
   'gestion-projet': {
     name: 'Gestion de Projet Télécom',
     description: 'Méthodologies, outils et bonnes pratiques pour la gestion de projet',
-    icon: 'fas fa-tasks',
-    color: 'green',
-    gradient: 'from-green-600 to-green-500',
-    bgColor: 'bg-green-600 dark:bg-green-500'
-  },
-  'developpement-web': {
-    name: 'Développement Web',
-    description: 'Tendances, technologies et bonnes pratiques du développement web moderne',
-    icon: 'fas fa-laptop-code',
+    icon: 'fas fa-project-diagram',
     color: 'blue',
     gradient: 'from-blue-600 to-blue-500',
     bgColor: 'bg-blue-600 dark:bg-blue-500'
   },
+  'developpement-web': {
+    name: 'Développement Web',
+    description: 'Tendances, technologies et bonnes pratiques du développement web moderne',
+    icon: 'fas fa-code-branch',
+    color: 'green',
+    gradient: 'from-green-600 to-green-500',
+    bgColor: 'bg-green-600 dark:bg-green-500'
+  },
   'qualite-process': {
     name: 'Qualité & Processus',
     description: 'Amélioration continue, certification et optimisation des processus',
-    icon: 'fas fa-clipboard-check',
+    icon: 'fas fa-award',
     color: 'purple',
     gradient: 'from-purple-600 to-purple-500',
     bgColor: 'bg-purple-600 dark:bg-purple-500'
@@ -48,7 +47,7 @@ const domainesConfig = {
   'formation': {
     name: 'Formation & Pédagogie',
     description: 'Articles sur la formation, le développement des compétences et l\'apprentissage continu',
-    icon: 'fas fa-graduation-cap',
+    icon: 'fas fa-book-open',
     color: 'red',
     gradient: 'from-red-600 to-red-500',
     bgColor: 'bg-red-600 dark:bg-red-500'
@@ -56,7 +55,7 @@ const domainesConfig = {
   'developpement-commercial': {
     name: 'Développement Commercial',
     description: 'Stratégies commerciales, négociation et développement de partenariats',
-    icon: 'fas fa-handshake',
+    icon: 'fas fa-chart-line',
     color: 'orange',
     gradient: 'from-orange-600 to-orange-500',
     bgColor: 'bg-orange-600 dark:bg-orange-500'
@@ -64,275 +63,1691 @@ const domainesConfig = {
   'gestion-talents': {
     name: 'Gestion des Talents',
     description: 'Stratégies et méthodes pour gérer, développer et fidéliser les talents',
-    icon: 'fas fa-users',
+    icon: 'fas fa-user-friends',
     color: 'teal',
-    gradient: 'from-teal-500 to-cyan-600',
+    gradient: 'from-teal-600 to-teal-500',
     bgColor: 'bg-teal-600 dark:bg-teal-500'
   },
   'productivite-methodes': {
     name: 'Productivité & Méthodes',
-    description: 'Techniques de productivité, gestion du temps et méthodes de travail',
-    icon: 'fas fa-clock',
+    description: 'Techniques et outils pour optimiser la productivité et l\'efficacité',
+    icon: 'fas fa-rocket',
     color: 'indigo',
-    gradient: 'from-indigo-500 to-purple-600',
+    gradient: 'from-indigo-600 to-indigo-500',
     bgColor: 'bg-indigo-600 dark:bg-indigo-500'
   },
   'transformation-digitale': {
     name: 'Transformation Digitale',
-    description: 'IA, transformation numérique et nouvelles technologies',
-    icon: 'fas fa-robot',
+    description: 'Stratégies et enjeux de la transformation numérique des entreprises',
+    icon: 'fas fa-microchip',
     color: 'pink',
-    gradient: 'from-pink-500 to-rose-600',
+    gradient: 'from-pink-600 to-pink-500',
     bgColor: 'bg-pink-600 dark:bg-pink-500'
   },
   'marketing-communication': {
     name: 'Marketing & Communication',
-    description: 'Stratégies marketing digital, réseaux sociaux et communication d\'entreprise',
+    description: 'Stratégies marketing, communication digitale et branding',
     icon: 'fas fa-bullhorn',
     color: 'yellow',
-    gradient: 'from-yellow-500 to-orange-600',
+    gradient: 'from-yellow-600 to-yellow-500',
     bgColor: 'bg-yellow-600 dark:bg-yellow-500'
   },
   'leadership-management': {
     name: 'Leadership & Management',
-    description: 'Leadership, management d\'équipe et développement des compétences managériales',
+    description: 'Techniques de leadership, management d\'équipe et développement personnel',
     icon: 'fas fa-crown',
     color: 'purple',
-    gradient: 'from-purple-500 to-violet-600',
+    gradient: 'from-purple-600 to-purple-500',
     bgColor: 'bg-purple-600 dark:bg-purple-500'
   },
   'innovation-technologies': {
     name: 'Innovation & Technologies',
-    description: 'Innovation, nouvelles technologies et tendances émergentes',
-    icon: 'fas fa-lightbulb',
+    description: 'Tendances technologiques, innovation et transformation digitale',
+    icon: 'fas fa-brain',
     color: 'cyan',
-    gradient: 'from-cyan-500 to-blue-600',
+    gradient: 'from-cyan-600 to-cyan-500',
     bgColor: 'bg-cyan-600 dark:bg-cyan-500'
   },
   'service-client': {
     name: 'Service Client',
     description: 'Excellence du service client, satisfaction et fidélisation',
-    icon: 'fas fa-headset',
+    icon: 'fas fa-concierge-bell',
     color: 'emerald',
-    gradient: 'from-emerald-500 to-green-600',
+    gradient: 'from-emerald-600 to-emerald-500',
     bgColor: 'bg-emerald-600 dark:bg-emerald-500'
   },
   'gestion-connaissances': {
     name: 'Gestion des Connaissances',
-    description: 'Gestion et partage des connaissances organisationnelles',
-    icon: 'fas fa-brain',
+    description: 'Capitalisation et partage des connaissances organisationnelles',
+    icon: 'fas fa-database',
     color: 'violet',
-    gradient: 'from-violet-500 to-purple-600',
+    gradient: 'from-violet-600 to-violet-500',
     bgColor: 'bg-violet-600 dark:bg-violet-500'
   },
   'reconversion-carriere': {
     name: 'Reconversion & Carrière',
-    description: 'Reconversion professionnelle, évolution de carrière et développement personnel',
+    description: 'Stratégies de reconversion professionnelle et évolution de carrière',
     icon: 'fas fa-route',
     color: 'rose',
-    gradient: 'from-rose-500 to-pink-600',
+    gradient: 'from-rose-600 to-rose-500',
     bgColor: 'bg-rose-600 dark:bg-rose-500'
   },
   'outils-techniques': {
-    name: 'Outils & Techniques',
-    description: 'Outils, techniques et méthodes pratiques pour améliorer la productivité',
-    icon: 'fas fa-tools',
+    name: 'Outils Techniques',
+    description: 'Outils et technologies pour optimiser les processus métier',
+    icon: 'fas fa-cogs',
     color: 'slate',
-    gradient: 'from-slate-500 to-gray-600',
+    gradient: 'from-slate-600 to-slate-500',
     bgColor: 'bg-slate-600 dark:bg-slate-500'
   }
 };
 
-// Fonction pour formater la date
-function formatDate(date: Date | string): string {
-  const dateObj = typeof date === 'string' ? new Date(date) : date;
-  return dateObj.toLocaleDateString('fr-FR', {
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric'
-  });
-}
-
-// Statistiques
-const totalDomaines = Object.keys(domainesConfig).length;
-const totalArticles = allArticles.length;
+// Obtenir les domaines avec des articles
+const domainesAvecArticles = Object.keys(domainesConfig).map(domainKey => {
+  const articles = getAllArticlesForDomain(domainKey);
+  return {
+    key: domainKey,
+    config: domainesConfig[domainKey as keyof typeof domainesConfig],
+    articles: articles,
+    totalArticles: articles.length
+  };
+}).filter(domaine => domaine.totalArticles > 0);
 ---
 
-<BaseLayout title="Domaines d'Expertise | Gérald Paméole" description="Explorez mes domaines d'expertise et découvrez tous mes articles organisés par thème.">
-	<div class="min-h-screen bg-gray-50 dark:bg-gray-900">
-		<!-- Hero Section -->
-		<section class="py-20 bg-gradient-to-r from-indigo-600 to-purple-700 text-white">
-			<div class="container mx-auto px-4 text-center">
-				<h1 class="text-4xl md:text-5xl font-bold mb-6">🎯 Domaines d'Expertise</h1>
-				<p class="text-xl max-w-3xl mx-auto mb-8">
-					Explorez mes <span class="text-yellow-300 font-bold">{totalDomaines} domaines d'expertise</span> et découvrez 
-					<span class="text-pink-300 font-bold">{totalArticles} articles</span> organisés par thème pour une 
-					<span class="text-cyan-300 font-bold">navigation intuitive</span>.
-				</p>
-				
-				<!-- Statistiques -->
-				<div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-2xl mx-auto">
-					<div class="bg-white/10 backdrop-blur-sm rounded-lg p-4">
-						<div class="text-3xl font-bold">{totalDomaines}</div>
-						<div class="text-sm opacity-90">Domaines</div>
-					</div>
-					<div class="bg-white/10 backdrop-blur-sm rounded-lg p-4">
-						<div class="text-3xl font-bold">{totalArticles}</div>
-						<div class="text-sm opacity-90">Articles</div>
-					</div>
-					<div class="bg-white/10 backdrop-blur-sm rounded-lg p-4">
-						<div class="text-3xl font-bold">100%</div>
-						<div class="text-sm opacity-90">Expertise</div>
-					</div>
-				</div>
-			</div>
-		</section>
+<BaseLayout title="Domaines d'Expertise" description="Explorez nos domaines d'expertise et découvrez nos articles spécialisés par thématique">
+  <div class="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
+    <!-- Hero Section -->
+    <div class="relative overflow-hidden bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600">
+      <div class="absolute inset-0 bg-black/20"></div>
+      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+        <div class="text-center">
+          <h1 class="text-4xl md:text-6xl font-bold text-white mb-6">
+            Domaines d'Expertise
+          </h1>
+          <p class="text-xl md:text-2xl text-indigo-100 mb-8 max-w-3xl mx-auto">
+            Explorez nos domaines d'expertise et découvrez nos articles spécialisés par thématique
+          </p>
+          <div class="flex flex-wrap justify-center gap-4 text-sm text-indigo-200 mb-8">
+            <span class="flex items-center">
+              <i class="fas fa-book mr-2"></i>
+              {allArticles.length} articles
+            </span>
+            <span class="flex items-center">
+              <i class="fas fa-layer-group mr-2"></i>
+              {domainesAvecArticles.length} domaines
+            </span>
+            <span class="flex items-center">
+              <i class="fas fa-star mr-2"></i>
+              Expertise confirmée
+            </span>
+          </div>
+          
+          <!-- Barre de recherche personnalisée -->
+          <div class="max-w-2xl mx-auto mb-8">
+            <div class="search-container mb-8">
+              <div class="relative">
+                <input
+                  type="text"
+                  id="searchInput"
+                  class="w-full px-4 py-3 pl-12 rounded-lg bg-white/90 dark:bg-gray-800/90 border border-white/20 dark:border-gray-700 shadow-sm focus:outline-none focus:ring-2 focus:ring-white/50 text-gray-800 dark:text-white backdrop-blur-sm"
+                  placeholder="Rechercher dans les domaines et articles..."
+                  aria-label="Rechercher"
+                />
+                <div class="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                  </svg>
+                </div>
+        <button
+          id="clearSearch"
+          class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600 dark:hover:text-gray-200"
+          aria-label="Effacer la recherche"
+          style="display: none;"
+        >
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
+              </div>
+              <div class="flex flex-wrap gap-2 mt-2" id="activeFilters"></div>
+            </div>
+          </div>
+          
 
-		<!-- Navigation rapide -->
-		<section class="py-8 bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700">
-			<div class="container mx-auto px-4">
-				<div class="flex flex-wrap gap-2 justify-center">
-					{Object.entries(domainesConfig).map(([domainKey, domain]) => (
-						<a 
-							href={`#${domainKey}`}
-							class={`px-4 py-2 ${domain.bgColor} text-white rounded-full text-sm hover:opacity-80 transition-opacity`}
-						>
-							<i class={`${domain.icon} mr-2`}></i>
-							{domain.name}
-						</a>
-					))}
-				</div>
-			</div>
-		</section>
+          <!-- Pills de navigation des domaines -->
+          <div class="mt-8">
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4 text-center">Filtrer par domaine d'expertise</h3>
+            <div class="flex flex-wrap justify-center gap-3 max-w-6xl mx-auto">
+            {domainesAvecArticles.map((domaine) => {
+              const colorClasses = {
+                'blue': 'bg-gradient-to-r from-blue-600 to-blue-500',
+                'green': 'bg-gradient-to-r from-green-600 to-green-500',
+                'purple': 'bg-gradient-to-r from-purple-600 to-purple-500',
+                'red': 'bg-gradient-to-r from-red-600 to-red-500',
+                'orange': 'bg-gradient-to-r from-orange-600 to-orange-500',
+                'teal': 'bg-gradient-to-r from-teal-600 to-teal-500',
+                'indigo': 'bg-gradient-to-r from-indigo-600 to-indigo-500',
+                'pink': 'bg-gradient-to-r from-pink-600 to-pink-500',
+                'yellow': 'bg-gradient-to-r from-yellow-600 to-yellow-500',
+                'cyan': 'bg-gradient-to-r from-cyan-600 to-cyan-500',
+                'emerald': 'bg-gradient-to-r from-emerald-600 to-emerald-500',
+                'violet': 'bg-gradient-to-r from-violet-600 to-violet-500',
+                'rose': 'bg-gradient-to-r from-rose-600 to-rose-500',
+                'slate': 'bg-gradient-to-r from-slate-600 to-slate-500'
+              };
+              
+              return (
+                <button 
+                    class={`domain-filter-pill px-4 py-2 rounded-full text-white font-medium text-sm transition-all duration-300 hover:scale-105 hover:shadow-lg transform-gpu ${colorClasses[domaine.config.color as keyof typeof colorClasses] || 'bg-gradient-to-r from-gray-600 to-gray-500'}`}
+                  data-domain={domaine.key}
+                    data-articles={JSON.stringify(domaine.articles)}
+                  >
+                    <i class={`${domaine.config.icon} mr-2`}></i>
+                    {domaine.config.name}
+                    <span class="ml-2 px-2 py-1 bg-white/30 rounded-full text-xs font-bold">
+                    {domaine.totalArticles}
+                  </span>
+                </button>
+              );
+            })}
+          </div>
 
-		<!-- Domaines avec Articles -->
-		<section class="py-16">
-			<div class="container mx-auto px-4">
-				<div class="text-center mb-12">
-					<h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">
-						📚 Articles par Thème
-					</h2>
-					<p class="text-lg text-gray-600 dark:text-gray-300">
-						Chaque domaine contient tous les articles <span class="text-indigo-600 dark:text-indigo-400 font-bold">spécialisés</span> sur le sujet.
-					</p>
-				</div>
+            <!-- Conteneur pour le filtre actif -->
+            <div id="activeDomainFilter" class="mt-4 text-center">
+              <!-- Le filtre actif sera affiché ici -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-				<div class="space-y-16">
-					{Object.entries(domainesConfig).map(([domainKey, domain]) => {
-						const allDomainArticles = getAllArticlesForDomain(domainKey);
-						return (
-							<div id={domainKey} class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden">
-								<!-- Header du domaine -->
-								<div class={`bg-gradient-to-r ${domain.gradient} p-8 text-white`}>
-									<div class="flex items-center mb-4">
-										<div class="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center mr-4">
-											<i class={`${domain.icon} text-2xl`}></i>
-										</div>
-										<div>
-											<h3 class="text-3xl font-bold">{domain.name}</h3>
-											<p class="text-sm opacity-90">{allDomainArticles.length} article{allDomainArticles.length > 1 ? 's' : ''} dans ce domaine</p>
-										</div>
-									</div>
-									<p class="text-sm opacity-90 leading-relaxed">{domain.description}</p>
-								</div>
+    <!-- Contenu des domaines - 3 par ligne -->
+    <div id="domainesContainer" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        {domainesAvecArticles.map((domaine, index) => (
+          <div class="domain-section-3d bg-white dark:bg-gray-800 rounded-2xl shadow-2xl border border-gray-200 dark:border-gray-700 overflow-hidden transform-gpu transition-all duration-700 hover:scale-105 hover:rotate-1 hover:shadow-3xl hover:-translate-y-2" data-domain={domaine.key} data-index={index} style="transform-style: preserve-3d; perspective: 1000px; display: block;">
+            <!-- En-tête du domaine -->
+            <div class={`p-6 text-white ${domaine.config.color === 'blue' ? 'bg-gradient-to-r from-blue-600 to-blue-500' : 
+              domaine.config.color === 'green' ? 'bg-gradient-to-r from-green-600 to-green-500' :
+              domaine.config.color === 'purple' ? 'bg-gradient-to-r from-purple-600 to-purple-500' :
+              domaine.config.color === 'red' ? 'bg-gradient-to-r from-red-600 to-red-500' :
+              domaine.config.color === 'orange' ? 'bg-gradient-to-r from-orange-600 to-orange-500' :
+              domaine.config.color === 'teal' ? 'bg-gradient-to-r from-teal-600 to-teal-500' :
+              domaine.config.color === 'indigo' ? 'bg-gradient-to-r from-indigo-600 to-indigo-500' :
+              domaine.config.color === 'pink' ? 'bg-gradient-to-r from-pink-600 to-pink-500' :
+              domaine.config.color === 'yellow' ? 'bg-gradient-to-r from-yellow-600 to-yellow-500' :
+              domaine.config.color === 'cyan' ? 'bg-gradient-to-r from-cyan-600 to-cyan-500' :
+              domaine.config.color === 'emerald' ? 'bg-gradient-to-r from-emerald-600 to-emerald-500' :
+              domaine.config.color === 'violet' ? 'bg-gradient-to-r from-violet-600 to-violet-500' :
+              domaine.config.color === 'rose' ? 'bg-gradient-to-r from-rose-600 to-rose-500' :
+              domaine.config.color === 'slate' ? 'bg-gradient-to-r from-slate-600 to-slate-500' :
+              'bg-gradient-to-r from-gray-600 to-gray-500'}`}>
+              <div class="flex items-center mb-4">
+                <i class={`${domaine.config.icon} text-3xl mr-4`}></i>
+                <div>
+                  <h2 class="text-xl font-bold mb-1">{domaine.config.name}</h2>
+                  <p class="text-sm opacity-90">{domaine.config.description}</p>
+                </div>
+              </div>
+              <div class="flex items-center text-sm opacity-80">
+                <i class="fas fa-file-alt mr-2"></i>
+                <span>{domaine.totalArticles} article{domaine.totalArticles > 1 ? 's' : ''}</span>
+              </div>
+            </div>
 
-								<!-- Articles du domaine -->
-								<div class="p-8">
-									{allDomainArticles.length > 0 ? (
-										<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-											{allDomainArticles.map((article) => (
-												<article class="bg-gray-50 dark:bg-gray-700 rounded-xl p-6 hover:shadow-lg transition-shadow">
-													<div class="flex items-start space-x-4">
-														<div class="flex-shrink-0">
-															<div class={`w-12 h-12 ${domain.bgColor} rounded-xl flex items-center justify-center`}>
-																<i class={`${domain.icon} text-white text-lg`}></i>
-															</div>
-														</div>
-														<div class="flex-1 min-w-0">
-															<h4 class="text-lg font-semibold text-gray-900 dark:text-white mb-2 line-clamp-2">
-																{article.data.title}
-															</h4>
-															<p class="text-gray-600 dark:text-gray-300 text-sm mb-3 line-clamp-2">
-																{article.data.description}
-															</p>
-															<div class="flex items-center justify-between">
-																<div class="flex items-center space-x-4 text-xs text-gray-500 dark:text-gray-400">
-																	<span>{formatDate(article.data.publishDate)}</span>
-																	<span>•</span>
-																	<span>{article.data.readingTime} min</span>
-																	{article.data.featured && (
-																		<>
-																			<span>•</span>
-																			<span class="text-yellow-600 dark:text-yellow-400">⭐ Mis en avant</span>
-																		</>
-																	)}
-																</div>
-																<a 
-																	href={`/articles/${article.slug}`}
-																	class="text-indigo-600 dark:text-indigo-400 hover:text-indigo-800 dark:hover:text-indigo-300 font-medium text-sm flex items-center"
-																>
-																	Lire
-																	<svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-																		<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-																	</svg>
-																</a>
-															</div>
-														</div>
-													</div>
-												</article>
-											))}
-										</div>
-									) : (
-										<div class="text-center py-12">
-											<div class="w-16 h-16 bg-gray-100 dark:bg-gray-700 rounded-full flex items-center justify-center mx-auto mb-4">
-												<i class={`${domain.icon} text-2xl text-gray-400`}></i>
-											</div>
-											<h3 class="text-lg font-medium text-gray-900 dark:text-white mb-2">Aucun article dans ce domaine</h3>
-											<p class="text-gray-600 dark:text-gray-400">Des articles seront bientôt ajoutés dans ce domaine.</p>
-										</div>
-									)}
-								</div>
-							</div>
-						);
-					})}
-				</div>
-			</div>
-		</section>
-
-		<!-- CTA Section -->
-		<section class="py-16 bg-gray-100 dark:bg-gray-800">
-			<div class="container mx-auto px-4 text-center">
-				<h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">
-					Besoin d'aide ?
-				</h2>
-				<p class="text-lg text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto">
-					Vous cherchez des conseils dans un <span class="text-indigo-600 dark:text-indigo-400 font-bold">domaine spécifique</span> ? 
-					N'hésitez pas à me <span class="text-purple-600 dark:text-purple-400 font-bold">contacter</span> !
-				</p>
-				<div class="flex flex-col sm:flex-row gap-4 justify-center">
-					<a 
-						href="/contact" 
-						class="inline-block px-8 py-3 bg-indigo-600 text-white font-medium rounded-lg hover:bg-indigo-700 transition-colors"
-					>
-						Me contacter
-					</a>
-					<a 
-						href="/blog" 
-						class="inline-block px-8 py-3 border border-indigo-600 text-indigo-600 dark:text-indigo-400 font-medium rounded-lg hover:bg-indigo-50 dark:hover:bg-indigo-900/20 transition-colors"
-					>
-						Voir le blog
-					</a>
-				</div>
-			</div>
-		</section>
-	</div>
+            <!-- Articles du domaine -->
+            <div class="p-6">
+              <div class="space-y-4">
+                <!-- Articles visibles (2 premiers) -->
+                <div class="articles-container">
+                  {domaine.articles.slice(0, 2).map((article, articleIndex) => (
+                    <article 
+                      class="article-card-3d group bg-gray-50 dark:bg-gray-700 rounded-xl p-4 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 hover:rotate-1 hover:scale-105 transform-gpu cursor-pointer" 
+                      style="transform-style: preserve-3d; pointer-events: auto !important;"
+                      data-article-slug={article.slug}
+                      data-article-href={`/blog/${article.slug}`}
+                    >
+                      <div class="flex items-start justify-between mb-3">
+                        <div class="flex items-center space-x-2">
+                          <span class={`px-2 py-1 text-xs font-medium rounded-full ${domaine.config.bgColor} text-white`}>
+                            {(article.data as any).pillColor || 'gray'}
+                          </span>
+                          {article.data.featured && (
+                            <span class="px-2 py-1 text-xs font-medium bg-yellow-100 text-yellow-800 rounded-full">
+                              Featured
+                            </span>
+                          )}
+                        </div>
+                        <span class="text-xs text-gray-500 dark:text-gray-400">
+                          {article.data.readingTime} min
+                        </span>
+                      </div>
+                      
+                      <h3 class="text-sm font-semibold text-gray-900 dark:text-white mb-2 line-clamp-2 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
+                        {article.data.title}
+                      </h3>
+                      
+                      <p class="text-gray-600 dark:text-gray-300 text-xs mb-3 line-clamp-2">
+                        {article.data.description}
+                      </p>
+                      
+                      <div class="flex items-center justify-between">
+                        <div class="flex items-center text-xs text-gray-500 dark:text-gray-400">
+                          <i class="fas fa-calendar mr-1"></i>
+                          <span>{new Date(article.data.publishDate).toLocaleDateString('fr-FR')}</span>
+                        </div>
+                        
+                        <a 
+                          href={`/blog/${article.slug}`}
+                          class="inline-flex items-center px-3 py-1 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-medium rounded-lg hover:from-indigo-700 hover:to-purple-700 transition-all duration-200 shadow-lg hover:shadow-xl text-xs"
+                          style="z-index: 10; position: relative; pointer-events: auto !important; cursor: pointer !important;"
+                          data-href={`/blog/${article.slug}`}
+                        >
+                          Lire
+                          <i class="fas fa-arrow-right ml-1 text-xs"></i>
+                        </a>
+                      </div>
+                    </article>
+                  ))}
+                </div>
+                
+                <!-- Boutons de contrôle si plus de 2 articles -->
+                {domaine.totalArticles > 2 && (
+                  <div class="text-center pt-4 space-y-2">
+                    <button 
+                      class="load-more-btn-3d load-more-btn inline-flex items-center px-4 py-2 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-medium rounded-lg hover:from-indigo-700 hover:to-purple-700 transition-all duration-500 shadow-lg hover:shadow-2xl hover:scale-110 hover:rotate-2 hover:-translate-y-1 text-sm transform-gpu"
+                      data-domain={domaine.key}
+                      data-loaded="2"
+                      data-articles={JSON.stringify(domaine.articles)}
+                    >
+                      <i class="fas fa-plus mr-2"></i>
+                      En voir plus ({domaine.totalArticles - 2} autres)
+                    </button>
+                    
+                    <button 
+                      class="reduce-btn inline-flex items-center px-4 py-2 bg-gradient-to-r from-gray-500 to-gray-600 text-white font-medium rounded-lg hover:from-gray-600 hover:to-gray-700 transition-all duration-200 shadow-lg hover:shadow-xl text-sm"
+                      style="display: none;"
+                      data-domain={domaine.key}
+                    >
+                      <i class="fas fa-minus mr-2"></i>
+                      Réduire
+                    </button>
+                  </div>
+                )}
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
 </BaseLayout>
 
+<script>
+    // Gestion des pills de navigation
+    document.addEventListener('DOMContentLoaded', function() {
+      console.log('DOM chargé, initialisation...');
+      
+      // Système de filtrage par domaines
+      let activeDomain: string | null = null;
+      
+      // Gestionnaire de clic pour les pills de domaines
+      document.addEventListener('click', function(e) {
+        const target = e.target as HTMLElement;
+        if (target.classList.contains('domain-filter-pill') || target.closest('.domain-filter-pill')) {
+          const pill = target.classList.contains('domain-filter-pill') ? target : target.closest('.domain-filter-pill') as HTMLElement;
+          if (!pill) return;
+          
+          const domain = pill.dataset.domain;
+          if (!domain) return;
+          const articles = JSON.parse(pill.dataset.articles || '[]');
+          
+          console.log('Domaine sélectionné:', domain, 'Articles:', articles.length);
+          
+          // Toggle du filtre
+          if (activeDomain === domain) {
+            // Désactiver le filtre
+            activeDomain = null;
+            pill.classList.remove('ring-4', 'ring-white', 'ring-opacity-50', 'scale-110');
+            showAllDomains();
+          } else {
+            // Activer le filtre
+            activeDomain = domain;
+            
+            // Retirer l'effet actif des autres pills
+            document.querySelectorAll('.domain-filter-pill').forEach(p => {
+              p.classList.remove('ring-4', 'ring-white', 'ring-opacity-50', 'scale-110');
+            });
+            
+            // Ajouter l'effet actif à la pill cliquée
+            pill.classList.add('ring-4', 'ring-white', 'ring-opacity-50', 'scale-110');
+            
+            // Filtrer par domaine
+            filterByDomain(domain, articles);
+          }
+        }
+      });
+      
+      // Fonction pour filtrer par domaine
+      function filterByDomain(domain: string, articles: any[]) {
+        const domainesContainer = document.getElementById('domainesContainer');
+        if (!domainesContainer) return;
+        
+        // Masquer toutes les sections
+        const allSections = domainesContainer.querySelectorAll('.domain-section-3d');
+        console.log('Masquage de', allSections.length, 'sections');
+        allSections.forEach(section => {
+          (section as HTMLElement).style.display = 'none';
+        });
+        
+        // Afficher seulement la section du domaine sélectionné
+        const targetSection = domainesContainer.querySelector(`[data-domain="${domain}"]`);
+        console.log('Section cible trouvée:', targetSection, 'pour le domaine:', domain);
+        if (targetSection) {
+          (targetSection as HTMLElement).style.display = 'block';
+          (targetSection as HTMLElement).style.visibility = 'visible';
+          (targetSection as HTMLElement).style.opacity = '1';
+          console.log('Section affichée pour le domaine:', domain);
+          
+          // Déplacer la section en haut du conteneur
+          domainesContainer.insertBefore(targetSection, domainesContainer.firstChild);
+          
+          // Mettre à jour les articles de cette section
+          const articlesContainer = targetSection.querySelector('.articles-container');
+          const loadMoreBtn = targetSection.querySelector('.load-more-btn');
+          
+          if (articlesContainer) {
+            console.log('Conteneur d\'articles trouvé:', articlesContainer);
+            
+            // Vérifier si le conteneur a déjà des articles (articles initiaux)
+            const existingArticles = articlesContainer.querySelectorAll('article');
+            console.log('Articles existants dans le conteneur:', existingArticles.length);
+            
+            if (existingArticles.length === 0 && articles.length > 0) {
+              // Si pas d'articles et qu'on a des articles à afficher, les créer
+              console.log('Création de', articles.length, 'articles');
+              const articlesToShow = articles.slice(0, 2); // Afficher les 2 premiers par défaut
+              articlesToShow.forEach((article: any) => {
+              const articleEl = createArticleElement(article, domain);
+                articlesContainer.appendChild(articleEl);
+              });
+            } else if (existingArticles.length > 0) {
+              // Si des articles existent déjà, s'assurer qu'ils sont visibles
+              console.log('Rendre', existingArticles.length, 'articles existants visibles');
+              existingArticles.forEach((article, idx) => {
+                (article as HTMLElement).style.display = 'block';
+                (article as HTMLElement).style.visibility = 'visible';
+                (article as HTMLElement).style.opacity = '1';
+                console.log(`Article ${idx} rendu visible`);
+              });
+            }
+            
+            // Mettre à jour le bouton "En voir plus" si nécessaire
+            if (loadMoreBtn) {
+              if (articles.length > 2) {
+          (loadMoreBtn as HTMLElement).style.display = 'block';
+          (loadMoreBtn as HTMLElement).dataset.articles = JSON.stringify(articles);
+                (loadMoreBtn as HTMLElement).dataset.loaded = existingArticles.length > 0 ? existingArticles.length.toString() : '2';
+          (loadMoreBtn as HTMLElement).dataset.expanded = 'false';
+                const remaining = articles.length - (existingArticles.length > 0 ? existingArticles.length : 2);
+                (loadMoreBtn as HTMLElement).innerHTML = `<i class="fas fa-plus mr-2"></i>En voir plus (${remaining} autres)`;
+          
+          // Ajouter un gestionnaire d'événements direct
+          (loadMoreBtn as HTMLElement).onclick = function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            console.log('Bouton "En voir plus" cliqué directement');
+            handleLoadMoreClick(loadMoreBtn as HTMLElement);
+          };
+              } else {
+                (loadMoreBtn as HTMLElement).style.display = 'none';
+              }
+          
+              // Réinitialiser les gestionnaires d'événements des articles
+          setTimeout(() => {
+                const allArticlesInContainer = articlesContainer.querySelectorAll('article');
+                console.log('Réinitialisation de', allArticlesInContainer.length, 'articles');
+                allArticlesInContainer.forEach((article, idx) => {
+                  // S'assurer que l'article est visible
+                  (article as HTMLElement).style.display = 'block';
+                  (article as HTMLElement).style.visibility = 'visible';
+                  (article as HTMLElement).style.opacity = '1';
+                  (article as HTMLElement).style.position = 'relative';
+                  
+                  // Récupérer le slug depuis l'attribut data
+                  const slug = article.getAttribute('data-article-slug');
+                  console.log(`Article ${idx} - Slug:`, slug);
+                  
+                  // Rendre toute la carte cliquable MAIS ne pas bloquer les liens
+                  (article as HTMLElement).style.cursor = 'pointer';
+                  (article as HTMLElement).onclick = function(e) {
+                    // Si on clique sur un lien, ne RIEN faire - laisser le comportement par défaut
+                    if ((e.target as HTMLElement).tagName === 'A' || (e.target as HTMLElement).closest('a')) {
+                      return true; // Laisser le lien fonctionner normalement
+                    }
+                    // Si on clique ailleurs sur la carte (pas sur un lien), naviguer
+                    if (slug) {
+                      console.log(`📦 Carte article ${idx} cliquée (pas sur lien), navigation vers:`, `/blog/${slug}`);
+                      window.location.href = `/blog/${slug}`;
+                      return false;
+                    }
+                    return true;
+                  };
+                  
+                  // Récupérer et forcer le bouton "Lire"
+                  const readButton = article.querySelector('a[href*="/blog/"]') as HTMLAnchorElement;
+                  if (readButton) {
+                    const href = readButton.getAttribute('href') || readButton.href || (slug ? `/blog/${slug}` : '');
+                    console.log(`Article ${idx} - Bouton Lire trouvé:`, href);
+                    
+                    // S'assurer que le href est correct
+                    readButton.href = href;
+                    readButton.setAttribute('href', href);
+                    
+                    // SUPPRIMER TOUS les gestionnaires qui bloquent
+                    readButton.onclick = null;
+                    readButton.removeAttribute('onclick');
+                    
+                    // Supprimer tous les anciens listeners en clonant
+                    const cleanButton = readButton.cloneNode(true) as HTMLAnchorElement;
+                    readButton.parentNode?.replaceChild(cleanButton, readButton);
+                    
+                    cleanButton.href = href;
+                    cleanButton.setAttribute('href', href);
+                    cleanButton.style.pointerEvents = 'auto';
+                    cleanButton.style.cursor = 'pointer';
+                    cleanButton.style.zIndex = '1000';
+                    cleanButton.style.position = 'relative';
+                    
+                    // Handler minimal qui NE BLOQUE PAS la navigation
+                    cleanButton.addEventListener('click', function(e) {
+                      console.log(`🔗 Bouton "Lire" de l'article ${idx} cliqué:`, href);
+                      // NE PAS appeler preventDefault - laisser le comportement par défaut
+                    }, false);
+                  } else {
+                    console.warn(`⚠️ Pas de bouton "Lire" trouvé pour l'article ${idx}`);
+                  }
+                });
+                
+                // Tester la visibilité des articles
+                console.log('📊 Test de visibilité des articles:');
+                allArticlesInContainer.forEach((article, idx) => {
+                  const rect = (article as HTMLElement).getBoundingClientRect();
+                  const styles = window.getComputedStyle(article as HTMLElement);
+                  console.log(`Article ${idx}:`, {
+                    visible: rect.width > 0 && rect.height > 0,
+                    display: styles.display,
+                    visibility: styles.visibility,
+                    opacity: styles.opacity,
+                    position: rect.top,
+                    width: rect.width,
+                    height: rect.height
+                  });
+                });
+                
+                // Forcer aussi avec la fonction forceAllArticleLinks
+                setTimeout(() => {
+                  const forceLinks = document.querySelectorAll('a[href*="/blog/"]');
+                  console.log('🔧 Forçage de', forceLinks.length, 'liens après réinitialisation');
+                  
+                  // Test direct : ajouter un clic de test sur le premier bouton
+                  if (forceLinks.length > 0) {
+                    const firstLink = forceLinks[0] as HTMLAnchorElement;
+                    console.log('🧪 Test du premier lien:', firstLink.href, firstLink);
+                    console.log('🧪 Premier lien onclick:', firstLink.onclick);
+                    console.log('🧪 Premier lien listeners:', firstLink.addEventListener);
+              }
+                }, 50);
+          }, 100);
+        }
+          }
+        }
+        
+        // Mettre à jour le filtre actif
+        updateActiveDomainFilter(domain);
+        
+        // Faire défiler vers la section
+        if (targetSection) {
+          targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }
+      
+      // Fonction pour afficher tous les domaines
+      function showAllDomains() {
+        const domainesContainer = document.getElementById('domainesContainer');
+        if (!domainesContainer) return;
+        
+        const allSections = domainesContainer.querySelectorAll('.domain-section-3d');
+        allSections.forEach(section => {
+          (section as HTMLElement).style.display = 'block';
+        });
+        
+        // Restaurer l'ordre original des sections
+        const sectionsArray = Array.from(allSections);
+        sectionsArray.sort((a, b) => {
+          const aIndex = parseInt((a as HTMLElement).dataset.index || '0');
+          const bIndex = parseInt((b as HTMLElement).dataset.index || '0');
+          return aIndex - bIndex;
+        });
+        
+        sectionsArray.forEach(section => {
+          domainesContainer.appendChild(section);
+        });
+        
+        // Effacer le filtre actif
+        updateActiveDomainFilter(null);
+      }
+      
+      // Fonction pour mettre à jour le filtre actif
+      function updateActiveDomainFilter(domain: string | null) {
+        const activeFilterContainer = document.getElementById('activeDomainFilter');
+        if (!activeFilterContainer) return;
+        
+        activeFilterContainer.innerHTML = '';
+        
+        if (domain) {
+          // Configuration des domaines (copie locale)
+          const domainConfigs: Record<string, { name: string; icon: string }> = {
+            'gestion-projet': { name: 'Gestion de Projet Télécom', icon: 'fas fa-project-diagram' },
+            'developpement-web': { name: 'Développement Web', icon: 'fas fa-code-branch' },
+            'qualite-process': { name: 'Qualité & Processus', icon: 'fas fa-award' },
+            'formation': { name: 'Formation & Pédagogie', icon: 'fas fa-book-open' },
+            'developpement-commercial': { name: 'Développement Commercial', icon: 'fas fa-chart-line' },
+            'gestion-talents': { name: 'Gestion des Talents', icon: 'fas fa-user-friends' },
+            'productivite-methodes': { name: 'Productivité & Méthodes', icon: 'fas fa-rocket' },
+            'transformation-digitale': { name: 'Transformation Digitale', icon: 'fas fa-microchip' },
+            'marketing-communication': { name: 'Marketing & Communication', icon: 'fas fa-bullhorn' },
+            'leadership-management': { name: 'Leadership & Management', icon: 'fas fa-crown' },
+            'innovation-technologies': { name: 'Innovation & Technologies', icon: 'fas fa-brain' },
+            'service-client': { name: 'Service Client', icon: 'fas fa-concierge-bell' },
+            'gestion-connaissances': { name: 'Gestion des Connaissances', icon: 'fas fa-database' },
+            'reconversion-carriere': { name: 'Reconversion & Carrière', icon: 'fas fa-route' },
+            'outils-techniques': { name: 'Outils Techniques', icon: 'fas fa-cogs' }
+          };
+          
+          const domainConfig = domainConfigs[domain];
+          if (domainConfig) {
+            const filterEl = document.createElement('div');
+            filterEl.className = 'inline-flex items-center px-4 py-2 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-full text-sm font-medium shadow-lg';
+            filterEl.innerHTML = `
+              <i class="${domainConfig.icon} mr-2"></i>
+              ${domainConfig.name}
+              <button class="ml-2 text-white hover:text-indigo-200 transition-colors" onclick="clearDomainFilter()">
+                <i class="fas fa-times"></i>
+              </button>
+            `;
+            activeFilterContainer.appendChild(filterEl);
+          }
+        }
+      }
+      
+      // Fonction globale pour effacer le filtre
+      (window as any).clearDomainFilter = function() {
+        activeDomain = null;
+        document.querySelectorAll('.domain-filter-pill').forEach(pill => {
+          pill.classList.remove('ring-4', 'ring-white', 'ring-opacity-50', 'scale-110');
+        });
+        showAllDomains();
+      };
+
+
+    // Initialisation des boutons "En voir plus"
+    function initializeLoadMoreButtons() {
+      const loadMoreBtns = document.querySelectorAll('.load-more-btn');
+      loadMoreBtns.forEach((btn: Element) => {
+        const btnElement = btn as HTMLElement;
+        if (!btnElement.dataset.expanded) {
+          btnElement.dataset.expanded = 'false';
+        }
+        if (!btnElement.dataset.loaded) {
+          btnElement.dataset.loaded = '2';
+        }
+        
+        // Ajouter un gestionnaire d'événements direct
+        btnElement.onclick = function(e) {
+          e.preventDefault();
+          e.stopPropagation();
+          console.log('Bouton "En voir plus" initialisé cliqué');
+          handleLoadMoreClick(btnElement);
+        };
+        
+        console.log('Bouton initialisé:', { 
+          domain: btnElement.dataset.domain, 
+          expanded: btnElement.dataset.expanded, 
+          loaded: btnElement.dataset.loaded 
+        });
+      });
+    }
+    
+    // Initialiser les boutons au chargement
+    initializeLoadMoreButtons();
+    
+    // Réinitialiser les boutons après un délai pour s'assurer que tous les éléments sont chargés
+    setTimeout(() => {
+      console.log('Réinitialisation des boutons après délai');
+      initializeLoadMoreButtons();
+    }, 1000);
+    
+    // Fonction de test pour vérifier l'accordéon
+    function testAccordion() {
+      const loadMoreBtns = document.querySelectorAll('.load-more-btn');
+      console.log('Test de l\'accordéon:', {
+        nombreBoutons: loadMoreBtns.length,
+        boutons: Array.from(loadMoreBtns).map(btn => ({
+          domain: (btn as HTMLElement).dataset.domain,
+          expanded: (btn as HTMLElement).dataset.expanded,
+          loaded: (btn as HTMLElement).dataset.loaded,
+          text: btn.textContent
+        }))
+      });
+    }
+    
+    // Tester l'accordéon après un délai
+    setTimeout(testAccordion, 1000);
+    
+    // Fonction de test pour vérifier les liens d'articles
+    function testArticleLinks() {
+      // Chercher les liens /blog/ ET /articles/
+      const blogLinks = document.querySelectorAll('a[href*="/blog/"]');
+      const articleLinks = document.querySelectorAll('a[href*="/articles/"]');
+      const allArticleLinks = document.querySelectorAll('a[href*="/blog/"], a[href*="/articles/"]');
+      
+      console.log('Test des liens d\'articles:', {
+        liensBlog: blogLinks.length,
+        liensArticles: articleLinks.length,
+        total: allArticleLinks.length,
+        liens: Array.from(allArticleLinks).slice(0, 5).map(link => ({
+          href: (link as HTMLAnchorElement).href,
+          text: link.textContent?.trim()?.substring(0, 30)
+        }))
+      });
+      
+      // Ajouter des gestionnaires de test sur TOUS les liens d'articles
+      allArticleLinks.forEach((link, index) => {
+        link.addEventListener('click', function(e) {
+          console.log(`🔗 Lien ${index} cliqué:`, (e.target as HTMLAnchorElement).href);
+          // Forcer la navigation si nécessaire
+          const href = this.getAttribute('href');
+          if (href && !href.startsWith('#')) {
+            setTimeout(() => {
+              if (window.location.pathname !== href) {
+                console.log('⚠️ Navigation forcée vers:', href);
+                window.location.href = href;
+              }
+            }, 100);
+          }
+        }, true);
+      });
+    }
+    
+    // Tester les liens après un délai
+    setTimeout(testArticleLinks, 1500);
+      
+      // Forcer la navigation sur TOUS les liens /blog/
+      function forceAllArticleLinks() {
+        const blogLinks = document.querySelectorAll('a[href*="/blog/"]');
+        console.log(`🔧 Initialisation de ${blogLinks.length} liens d'articles...`);
+        
+        blogLinks.forEach((link, index) => {
+          const href = (link as HTMLAnchorElement).getAttribute('href') || (link as HTMLAnchorElement).href;
+          if (href && href.includes('/blog/')) {
+            // Supprimer TOUS les anciens gestionnaires en clonant
+            const newLink = link.cloneNode(true) as HTMLAnchorElement;
+            link.parentNode?.replaceChild(newLink, link);
+            
+            // S'assurer que le href est correct
+            newLink.href = href;
+            newLink.setAttribute('href', href);
+            
+            // Style pour s'assurer qu'il est cliquable
+            newLink.style.pointerEvents = 'auto';
+            newLink.style.cursor = 'pointer';
+            newLink.style.zIndex = '1000';
+            newLink.style.position = 'relative';
+            
+            // SUPPRIMER tous les gestionnaires pour utiliser le comportement par défaut
+            newLink.removeAttribute('onclick');
+            newLink.onclick = null;
+            
+            // Handler minimal qui NE BLOQUE PAS - juste pour débogage
+            newLink.addEventListener('click', function(e) {
+              console.log(`🔗 Lien ${index} cliqué (comportement par défaut):`, href);
+              // NE PAS appeler preventDefault() - laisser le navigateur naviguer
+            }, false);
+            
+            // Aussi rendre l'article parent cliquable si présent
+            const article = newLink.closest('article.article-card-3d');
+            if (article) {
+              (article as HTMLElement).style.cursor = 'pointer';
+              (article as HTMLElement).style.pointerEvents = 'auto';
+              (article as HTMLElement).onclick = function(e) {
+                if ((e.target as HTMLElement).tagName === 'A' || (e.target as HTMLElement).closest('a')) {
+                  return; // Laisser le lien gérer son propre clic
+                }
+                const slug = article.getAttribute('data-article-slug');
+                const articleHref = slug ? `/blog/${slug}` : href;
+                console.log(`📦 Article parent du lien ${index} cliqué:`, articleHref);
+                e.preventDefault();
+                e.stopPropagation();
+                window.location.href = articleHref;
+                return false;
+              };
+            }
+          }
+        });
+        
+        console.log(`✅ ${blogLinks.length} liens d'articles initialisés`);
+      }
+      
+      // Initialiser immédiatement et après délais
+      setTimeout(forceAllArticleLinks, 500);
+      setTimeout(forceAllArticleLinks, 1500);
+      setTimeout(forceAllArticleLinks, 3000);
+      
+      // Fonction pour NETTOYER tous les gestionnaires qui bloquent
+      function cleanAllArticleLinks() {
+        const blogLinks = document.querySelectorAll('a[href*="/blog/"]');
+        console.log(`🧹 Nettoyage de ${blogLinks.length} liens d'articles...`);
+        
+        blogLinks.forEach((link, index) => {
+          const href = (link as HTMLAnchorElement).getAttribute('href') || (link as HTMLAnchorElement).href;
+          if (href && href.includes('/blog/')) {
+            // Cloner pour supprimer TOUS les gestionnaires
+            const cleanLink = link.cloneNode(true) as HTMLAnchorElement;
+            link.parentNode?.replaceChild(cleanLink, link);
+            
+            cleanLink.href = href;
+            cleanLink.setAttribute('href', href);
+            cleanLink.style.pointerEvents = 'auto';
+            cleanLink.style.cursor = 'pointer';
+            cleanLink.style.zIndex = '1000';
+            cleanLink.style.position = 'relative';
+            
+            // Pas d'onclick, pas de preventDefault - comportement par défaut uniquement
+            console.log(`✅ Lien ${index} nettoyé: ${href}`);
+          }
+        });
+        
+        console.log(`🧹 Nettoyage terminé pour ${blogLinks.length} liens`);
+      }
+      
+      // Nettoyer après que tous les autres scripts aient fini
+      setTimeout(cleanAllArticleLinks, 2000);
+      setTimeout(cleanAllArticleLinks, 4000);
+      setTimeout(cleanAllArticleLinks, 6000);
+      
+      // Test final : vérifier que les liens fonctionnent et TESTER DIRECTEMENT
+      setTimeout(() => {
+        const testLinks = document.querySelectorAll('a[href*="/blog/"]');
+        console.log('🧪 TEST FINAL - Vérification des liens:', testLinks.length);
+        testLinks.forEach((link, idx) => {
+          const linkEl = link as HTMLAnchorElement;
+          const href = linkEl.href;
+          const hasOnclick = !!linkEl.onclick;
+          
+          // Afficher les infos du lien
+          const displayHref = href.substring(href.indexOf('/blog/'));
+          console.log(`  Lien ${idx}: ${displayHref}`);
+          console.log(`    - onclick: ${hasOnclick ? 'OUI (PROBLÈME!)' : 'NON (OK)'}`);
+          console.log(`    - pointer-events: ${getComputedStyle(linkEl).pointerEvents}`);
+          console.log(`    - z-index: ${getComputedStyle(linkEl).zIndex}`);
+          console.log(`    - position: ${getComputedStyle(linkEl).position}`);
+          
+          // Si un onclick existe, le supprimer FORTEMENT
+          if (hasOnclick) {
+            console.log(`  ⚠️ Suppression FORCÉE de l'onclick du lien ${idx}`);
+            linkEl.onclick = null;
+            linkEl.removeAttribute('onclick');
+            
+            // Cloner pour supprimer tous les listeners
+            const cleanLink = linkEl.cloneNode(true) as HTMLAnchorElement;
+            linkEl.parentNode?.replaceChild(cleanLink, linkEl);
+            cleanLink.href = href;
+            cleanLink.style.pointerEvents = 'auto';
+            cleanLink.style.cursor = 'pointer';
+          }
+          
+          // Vérifier s'il y a un élément qui bloque les clics au-dessus
+          const rect = linkEl.getBoundingClientRect();
+          const centerX = rect.left + rect.width / 2;
+          const centerY = rect.top + rect.height / 2;
+          const elementAtPoint = document.elementFromPoint(centerX, centerY);
+          
+          console.log(`  - Élément au centre du lien:`, elementAtPoint?.tagName, elementAtPoint?.className);
+          if (elementAtPoint && elementAtPoint !== linkEl && !linkEl.contains(elementAtPoint)) {
+            const blockingStyle = getComputedStyle(elementAtPoint as HTMLElement);
+            console.log(`  ⚠️ ÉLÉMENT BLOQUANT DÉTECTÉ:`);
+            console.log(`    - Tag: ${elementAtPoint.tagName}`);
+            console.log(`    - Classe: ${(elementAtPoint as HTMLElement).className}`);
+            console.log(`    - pointer-events: ${blockingStyle.pointerEvents}`);
+            console.log(`    - z-index: ${blockingStyle.zIndex}`);
+            console.log(`    - position: ${blockingStyle.position}`);
+            
+            // Si l'élément bloque, essayer de le désactiver
+            if (blockingStyle.pointerEvents !== 'none' && elementAtPoint !== linkEl) {
+              console.log(`  🔧 Tentative de désactivation de l'élément bloquant...`);
+              (elementAtPoint as HTMLElement).style.pointerEvents = 'none';
+            }
+          } else {
+            console.log(`  ✅ Aucun élément bloquant détecté`);
+          }
+        });
+        console.log('✅ Test final terminé');
+        
+        // Test : essayer de cliquer programmatiquement sur le premier lien
+        if (testLinks.length > 0) {
+          const firstLink = testLinks[0] as HTMLAnchorElement;
+          console.log('🧪 Test de clic programmatique sur:', firstLink.href);
+          
+          // Ajouter des listeners sur TOUS les liens pour voir si les clics sont détectés
+          testLinks.forEach((link, idx) => {
+            const linkEl = link as HTMLAnchorElement;
+            
+            // Listener simple pour détecter les clics
+            linkEl.addEventListener('click', function(e) {
+              console.log(`🎯 CLIC DÉTECTÉ sur lien ${idx}:`, linkEl.href);
+              console.log(`  - Target:`, e.target);
+              console.log(`  - CurrentTarget:`, e.currentTarget);
+              
+              // Ne PAS prévenir le comportement par défaut - laisser naviguer
+              // e.preventDefault(); // NE PAS faire ça
+            }, false);
+            
+            // Aussi en capture pour voir si ça passe
+            linkEl.addEventListener('click', function(e) {
+              console.log(`🎯 [CAPTURE] CLIC DÉTECTÉ sur lien ${idx}:`, linkEl.href);
+            }, true);
+          });
+          
+          console.log('✅ Listeners de test ajoutés sur tous les liens');
+          console.log('👆 MAINTENANT, CLIQUE SUR UN LIEN et regarde la console !');
+        }
+      }, 7000);
+    
+    // Fonction de débogage globale
+    function debugNavigation() {
+      console.log('=== DÉBOGAGE NAVIGATION ===');
+      
+      // Vérifier les liens existants
+      const allLinks = document.querySelectorAll('a');
+      console.log('Tous les liens:', allLinks.length);
+      
+      const blogLinks = document.querySelectorAll('a[href*="/blog/"]');
+      const articleLinks = document.querySelectorAll('a[href*="/articles/"]');
+      console.log('Liens /blog/:', blogLinks.length);
+      console.log('Liens /articles/:', articleLinks.length);
+      
+      // Vérifier les articles
+      const articles = document.querySelectorAll('article');
+      console.log('Articles trouvés:', articles.length);
+      
+      // Tester un clic sur le premier lien
+      if (articleLinks.length > 0) {
+        const firstLink = articleLinks[0] as HTMLAnchorElement;
+        console.log('Premier lien:', firstLink.href);
+        
+        // Ajouter un test de clic
+        firstLink.addEventListener('click', function(e) {
+          console.log('TEST: Premier lien cliqué!', e.target);
+        });
+      }
+    }
+    
+    // Déboguer après 2 secondes
+    setTimeout(debugNavigation, 2000);
+
+    // Gestion du bouton "En voir +" / "Réduire"
+    document.addEventListener('click', function(e) {
+      const target = e.target as HTMLElement;
+      // Ne logger que les clics intéressants (pas les sections)
+      if (!target.classList.contains('domain-section-3d') && !target.closest('.domain-section-3d')) {
+        // console.log('Clic détecté sur:', target.tagName, target.className);
+      }
+      
+      if (target.classList.contains('load-more-btn') || target.closest('.load-more-btn')) {
+        const btn = target.classList.contains('load-more-btn') ? target : target.closest('.load-more-btn') as HTMLElement;
+        if (!btn) return;
+        
+        console.log('Bouton "En voir plus" cliqué:', btn);
+        
+        const domain = btn.dataset.domain;
+        const currentLoaded = parseInt(btn.dataset.loaded || '2');
+        const articlesContainer = btn.parentElement?.previousElementSibling as HTMLElement;
+        const allArticles = JSON.parse(btn.dataset.articles || '[]');
+        const isExpanded = btn.dataset.expanded === 'true';
+        
+        console.log('Bouton cliqué:', { 
+          domain, 
+          currentLoaded, 
+          allArticles: allArticles.length, 
+          isExpanded,
+          articlesContainer: !!articlesContainer,
+          btnText: btn.textContent
+        });
+        
+        if (isExpanded) {
+          // Réduire le domaine - afficher seulement les 2 premiers articles
+          const firstTwoArticles = allArticles.slice(0, 2);
+          if (articlesContainer) {
+            articlesContainer.innerHTML = '';
+            firstTwoArticles.forEach((article: any) => {
+                const articleEl = createArticleElement(article, domain || '');
+                articlesContainer.appendChild(articleEl);
+              });
+            }
+            
+          // Mettre à jour le bouton
+          btn.innerHTML = `<i class="fas fa-plus mr-2"></i>En voir plus (${allArticles.length - 2} autres)`;
+          btn.dataset.loaded = '2';
+          btn.dataset.expanded = 'false';
+          
+            } else {
+          // Charger 3 articles supplémentaires
+          const newArticles = allArticles.slice(currentLoaded, currentLoaded + 3);
+        
+          console.log('Chargement des articles:', { newArticles: newArticles.length, currentLoaded });
+          
+          // Ajouter les nouveaux articles
+          newArticles.forEach((article: any) => {
+            const articleEl = createArticleElement(article, domain || '');
+            articlesContainer?.appendChild(articleEl);
+          });
+        
+          // Mettre à jour le compteur
+          const newLoaded = currentLoaded + 3;
+          btn.dataset.loaded = newLoaded.toString();
+          
+          // Vérifier s'il reste des articles
+          const remaining = allArticles.length - newLoaded;
+          if (remaining > 0) {
+            btn.innerHTML = `<i class="fas fa-plus mr-2"></i>En voir plus (${remaining} autres)`;
+            } else {
+            // Tous les articles sont chargés, changer le bouton pour "Réduire"
+            btn.innerHTML = `<i class="fas fa-minus mr-2"></i>Réduire`;
+            btn.dataset.expanded = 'true';
+          }
+            }
+          }
+        });
+        
+    // Gestionnaire d'événement global pour tous les articles
+    // IMPORTANT: Ne JAMAIS bloquer les liens /blog/
+    document.addEventListener('click', function(e) {
+      const target = e.target as HTMLElement;
+      
+      // Si on clique directement sur un lien /blog/ ou à l'intérieur d'un lien /blog/
+      const clickedLink = target.tagName === 'A' ? target as HTMLAnchorElement : target.closest('a[href*="/blog/"]') as HTMLAnchorElement;
+      if (clickedLink) {
+        const href = clickedLink.getAttribute('href') || clickedLink.href;
+        if (href && (href.includes('/blog/') || href.startsWith('/blog/'))) {
+          console.log('🔗 [GLOBAL] Lien /blog/ détecté - COMPORTEMENT PAR DÉFAUT AUTORISÉ:', href);
+          // NE JAMAIS appeler preventDefault ou stopPropagation pour les liens /blog/
+          // Laisser le navigateur gérer la navigation
+          // Sortir immédiatement sans rien faire
+        return;
+      }
+      }
+      
+      // Ignorer les clics sur les boutons de filtre
+      if (target.classList.contains('domain-filter-pill') || target.closest('.domain-filter-pill')) {
+        return;
+      }
+      
+      // Ignorer les clics sur les sections de domaine elles-mêmes (pas sur les articles à l'intérieur)
+      if (target.classList.contains('domain-section-3d')) {
+        return; // Clic direct sur la section, ne rien faire
+      }
+      
+      // Ignorer les clics sur les boutons "En voir plus"
+      if (target.classList.contains('load-more-btn') || target.closest('.load-more-btn')) {
+        return;
+      }
+      
+      // Si on clique sur un article (mais pas sur un lien directement)
+      const article = target.closest('article.article-card-3d');
+      if (article) {
+        // IMPORTANT: Si on clique sur un lien ou à l'intérieur d'un lien, ne RIEN faire
+        // Les liens gèrent leurs propres clics
+        if (target.tagName === 'A' || target.closest('a')) {
+          return; // Laisser le lien fonctionner normalement
+        }
+        
+        // Vérifier qu'on ne clique pas sur la section de domaine
+        const section = target.closest('.domain-section-3d');
+        if (section && target === section) {
+          return; // Clic sur la section, pas sur l'article
+        }
+        
+        // Sinon, cliquer sur la carte = navigation vers l'article
+        const slug = article.getAttribute('data-article-slug');
+        const href = slug ? `/blog/${slug}` : null;
+        
+        if (href) {
+          console.log('📦 Carte article cliquée (pas sur lien), navigation vers:', href);
+          e.preventDefault();
+          e.stopPropagation();
+          window.location.href = href;
+          return false;
+        }
+        
+        // Fallback : chercher le lien dans l'article
+        const link = article.querySelector('a[href*="/blog/"]') as HTMLAnchorElement;
+        if (link) {
+          const linkHref = link.getAttribute('href') || link.href;
+          console.log('📦 Article cliqué (fallback), redirection vers:', linkHref);
+          e.preventDefault();
+          e.stopPropagation();
+          window.location.href = linkHref;
+          return false;
+        }
+      }
+    }, false); // Ne pas utiliser capture phase pour éviter les conflits - les liens doivent fonctionner normalement
+    
+    // Fonction pour gérer les clics sur "En voir plus"
+    function handleLoadMoreClick(btn: HTMLElement) {
+      console.log('handleLoadMoreClick appelé');
+      const domain = btn.dataset.domain;
+      const currentLoaded = parseInt(btn.dataset.loaded || '3');
+      const articlesContainer = btn.parentElement?.previousElementSibling as HTMLElement;
+      const allArticles = JSON.parse(btn.dataset.articles || '[]');
+      const isExpanded = btn.dataset.expanded === 'true';
+      
+      console.log('Données du bouton:', { domain, currentLoaded, allArticles: allArticles.length, isExpanded });
+      
+      if (!articlesContainer) {
+        console.error('Conteneur d\'articles non trouvé');
+        return;
+      }
+      
+      if (isExpanded) {
+        // Réduire : afficher seulement les 3 premiers articles
+        articlesContainer.innerHTML = '';
+        const firstThree = allArticles.slice(0, 3);
+        firstThree.forEach((article: any) => {
+          const articleEl = createArticleElement(article, domain || '');
+          articlesContainer.appendChild(articleEl);
+        });
+        
+        btn.dataset.loaded = '3';
+        btn.dataset.expanded = 'false';
+        btn.innerHTML = `<i class="fas fa-plus mr-2"></i>En voir plus (${allArticles.length - 3} autres)`;
+        console.log('Articles réduits à 3');
+      } else {
+        // Étendre : afficher tous les articles
+        articlesContainer.innerHTML = '';
+        allArticles.forEach((article: any) => {
+          const articleEl = createArticleElement(article, domain || '');
+          articlesContainer.appendChild(articleEl);
+        });
+        
+        btn.dataset.loaded = allArticles.length.toString();
+        btn.dataset.expanded = 'true';
+        btn.innerHTML = `<i class="fas fa-minus mr-2"></i>Réduire`;
+        console.log('Tous les articles affichés');
+      }
+      
+      // Réinitialiser les gestionnaires d'événements des nouveaux articles
+      setTimeout(() => {
+        const newArticles = articlesContainer.querySelectorAll('article');
+        newArticles.forEach(article => {
+          const readButton = article.querySelector('a[href*="/blog/"]') as HTMLAnchorElement;
+          if (readButton) {
+            // NE PAS ajouter d'onclick - laisser le comportement par défaut du navigateur
+            // S'assurer que le lien est cliquable
+            readButton.style.pointerEvents = 'auto';
+            readButton.style.cursor = 'pointer';
+          }
+        });
+      }, 100);
+    }
+
+    // Fonction pour créer un élément d'article avec navigation fonctionnelle
+    function createArticleElement(article: any, domain: string) {
+      const domainConfig: Record<string, { bgColor: string; color: string }> = {
+        'gestion-projet': { bgColor: 'bg-blue-600', color: 'blue' },
+        'developpement-web': { bgColor: 'bg-green-600', color: 'green' },
+        'qualite-process': { bgColor: 'bg-purple-600', color: 'purple' },
+        'formation': { bgColor: 'bg-red-600', color: 'red' },
+        'developpement-commercial': { bgColor: 'bg-orange-600', color: 'orange' },
+        'gestion-talents': { bgColor: 'bg-teal-600', color: 'teal' },
+        'productivite-methodes': { bgColor: 'bg-indigo-600', color: 'indigo' },
+        'transformation-digitale': { bgColor: 'bg-pink-600', color: 'pink' },
+        'marketing-communication': { bgColor: 'bg-yellow-600', color: 'yellow' },
+        'leadership-management': { bgColor: 'bg-purple-600', color: 'purple' },
+        'innovation-technologies': { bgColor: 'bg-cyan-600', color: 'cyan' },
+        'service-client': { bgColor: 'bg-emerald-600', color: 'emerald' },
+        'gestion-connaissances': { bgColor: 'bg-violet-600', color: 'violet' },
+        'reconversion-carriere': { bgColor: 'bg-rose-600', color: 'rose' },
+        'outils-techniques': { bgColor: 'bg-slate-600', color: 'slate' }
+      };
+      
+      const currentDomainConfig = domainConfig[domain || ''] || { bgColor: 'bg-gray-600', color: 'gray' };
+      
+      const articleElement = document.createElement('article');
+      articleElement.className = 'group bg-gray-50 dark:bg-gray-700 rounded-xl p-4 hover:shadow-lg hover:shadow-indigo-200 dark:hover:shadow-indigo-900 transition-all duration-300 hover:-translate-y-1 article-card-3d cursor-pointer border border-transparent hover:border-indigo-200 dark:hover:border-indigo-700';
+      
+      articleElement.innerHTML = `
+        <div class="flex items-start justify-between mb-3">
+          <div class="flex items-center space-x-2">
+            <span class="px-2 py-1 text-xs font-medium rounded-full ${currentDomainConfig.bgColor} text-white">
+              ${article.data.pillColor || 'gray'}
+            </span>
+            ${article.data.featured ? '<span class="px-2 py-1 text-xs font-medium bg-yellow-100 text-yellow-800 rounded-full">Featured</span>' : ''}
+          </div>
+          <span class="text-xs text-gray-500 dark:text-gray-400">
+            ${article.data.readingTime} min
+          </span>
+        </div>
+        
+        <h3 class="text-sm font-semibold text-gray-900 dark:text-white mb-2 line-clamp-2 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors cursor-pointer">
+          ${article.data.title}
+        </h3>
+        
+        <p class="text-gray-600 dark:text-gray-300 text-xs mb-3 line-clamp-2 leading-relaxed">
+          ${article.data.description}
+        </p>
+        
+        <div class="flex items-center justify-between">
+          <div class="flex items-center text-xs text-gray-500 dark:text-gray-400">
+            <i class="fas fa-calendar mr-1"></i>
+            <span>${new Date(article.data.publishDate).toLocaleDateString('fr-FR')}</span>
+          </div>
+          
+          <a href="/blog/${article.slug}" class="inline-flex items-center px-3 py-1 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-medium rounded-lg hover:from-indigo-700 hover:to-purple-700 transition-all duration-200 shadow-lg hover:shadow-xl text-xs group-hover:scale-105" onclick="console.log('Bouton Lire cliqué:', '/blog/${article.slug}'); window.location.href='/blog/${article.slug}'; return false;">
+            Lire
+            <i class="fas fa-arrow-right ml-1 text-xs group-hover:translate-x-1 transition-transform"></i>
+          </a>
+        </div>
+        
+        <!-- Tags et Skills pour la lisibilité -->
+        <div class="mt-3 flex flex-wrap gap-1">
+          ${(article.data.tags || []).slice(0, 3).map((tag: string) => 
+            `<span class="px-2 py-1 text-xs bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full">${tag}</span>`
+          ).join('')}
+          ${(article.data.skills || []).slice(0, 2).map((skill: string) => 
+            `<span class="px-2 py-1 text-xs bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full">${skill}</span>`
+          ).join('')}
+        </div>
+      `;
+      
+      // Ajouter un gestionnaire de clic pour rendre tout l'article cliquable
+      articleElement.addEventListener('click', function(e) {
+        // Éviter la propagation si on clique sur le bouton "Lire"
+        if ((e.target as HTMLElement).closest('a')) {
+          return;
+        }
+        
+        // Rediriger vers l'article
+        console.log('Article cliqué, redirection vers:', `/blog/${article.slug}`);
+        window.location.href = `/blog/${article.slug}`;
+      });
+      
+      // Ajouter un gestionnaire direct pour le bouton "Lire"
+      const readButton = articleElement.querySelector('a[href*="/blog/"]') as HTMLAnchorElement;
+      if (readButton) {
+        readButton.addEventListener('click', function(e) {
+          e.preventDefault();
+          e.stopPropagation();
+          console.log('Bouton "Lire" cliqué directement:', readButton.href);
+          window.location.href = readButton.href;
+        });
+      }
+      
+      return articleElement;
+    }
+
+    // Animation des sections au scroll
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-fade-in-up');
+        }
+      });
+    }, observerOptions);
+
+    const domainSections = document.querySelectorAll('.domain-section-3d');
+    domainSections.forEach((section: Element) => {
+      observer.observe(section);
+    });
+
+    // Navigation déléguée (sécurité) pour tous les liens d'articles
+    const domainesContainerEl = document.getElementById('domainesContainer');
+    if (domainesContainerEl) {
+      domainesContainerEl.addEventListener('click', (e) => {
+        const target = e.target as HTMLElement;
+        const link = target.closest('a[href^="/blog/"]') as HTMLAnchorElement | null;
+        if (link) {
+          e.preventDefault();
+          e.stopPropagation();
+          console.log('Navigation déléguée vers:', link.href);
+          window.location.href = link.getAttribute('href') || link.href;
+        }
+      }, { capture: true });
+    }
+
+    // Logique de recherche personnalisée pour les domaines
+    const searchInput = document.getElementById('searchInput') as HTMLInputElement;
+    const clearButton = document.getElementById('clearSearch') as HTMLButtonElement;
+    const activeFiltersContainer = document.getElementById('activeFilters');
+    const domainesContainer = document.getElementById('domainesContainer');
+    
+    if (searchInput && clearButton && domainesContainer) {
+      const domainSections = domainesContainer.querySelectorAll('.domain-section-3d, .domain-section');
+      const noResultsEl = document.createElement('div');
+      noResultsEl.className = 'col-span-full text-center py-12 text-gray-500 dark:text-gray-400';
+      noResultsEl.innerHTML = '<div class="text-6xl mb-4">🔍</div><p class="text-xl">Aucun domaine ou article trouvé</p><p class="text-sm mt-2">Essayez avec d\'autres mots-clés</p>';
+      noResultsEl.style.display = 'none';
+      domainesContainer.appendChild(noResultsEl);
+      
+      // Fonction pour effectuer la recherche
+      function performSearch() {
+        const query = searchInput.value.toLowerCase().trim();
+        console.log('Recherche effectuée:', query);
+        let hasResults = false;
+        
+        // Gérer l'affichage du bouton d'effacement
+        clearButton.style.display = query ? 'block' : 'none';
+        
+        // Filtrer les domaines
+        domainSections.forEach(section => {
+          const domainName = section.querySelector('h3, h2')?.textContent?.toLowerCase() || '';
+          const domainDescription = section.querySelector('p')?.textContent?.toLowerCase() || '';
+          const articles = section.querySelectorAll('article');
+          let domainHasMatches = false;
+          
+          // Vérifier si le nom ou la description du domaine correspond
+          const domainMatches = domainName.includes(query) || domainDescription.includes(query);
+          
+          // Vérifier les articles dans ce domaine
+          articles.forEach(article => {
+            const articleTitle = article.querySelector('h3, h4')?.textContent?.toLowerCase() || '';
+            const articleDescription = article.querySelector('p')?.textContent?.toLowerCase() || '';
+            const articleTags = Array.from(article.querySelectorAll('.tag, span, .px-2'))
+              .map(tag => tag.textContent?.toLowerCase() || '');
+            
+            // Recherche plus large dans le contenu de l'article
+            const articleContent = article.textContent?.toLowerCase() || '';
+            
+            const articleMatches = 
+              articleTitle.includes(query) || 
+              articleDescription.includes(query) || 
+              articleContent.includes(query) ||
+              articleTags.some(tag => tag.includes(query));
+            
+            if (articleMatches) {
+              (article as HTMLElement).style.display = '';
+              domainHasMatches = true;
+              console.log('Article affiché:', articleTitle);
+            } else {
+              (article as HTMLElement).style.display = query ? 'none' : '';
+              console.log('Article masqué:', articleTitle, 'query:', query);
+            }
+          });
+          
+          // Afficher ou masquer le domaine
+          if (domainMatches || domainHasMatches || !query) {
+            (section as HTMLElement).style.display = '';
+            hasResults = true;
+          } else {
+            (section as HTMLElement).style.display = 'none';
+          }
+        });
+        
+        // Afficher ou masquer le message "Aucun résultat"
+        noResultsEl.style.display = !hasResults && query ? 'block' : 'none';
+        
+        // Mise à jour des filtres actifs
+        updateActiveFilters(query);
+      }
+      
+      // Mettre à jour les filtres actifs
+      function updateActiveFilters(query: string) {
+        if (activeFiltersContainer) {
+          activeFiltersContainer.innerHTML = '';
+          if (query) {
+            const filterEl = document.createElement('span');
+            filterEl.className = 'inline-flex items-center px-3 py-1 rounded-full text-sm bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-200';
+            filterEl.innerHTML = `"${query}" <button class="ml-2 text-indigo-600 hover:text-indigo-800" onclick="clearSearch()">×</button>`;
+            activeFiltersContainer.appendChild(filterEl);
+          }
+        }
+      }
+      
+      // Fonction pour effacer la recherche
+      function clearSearch() {
+        searchInput.value = '';
+        performSearch();
+      }
+      
+      // Événements
+      searchInput.addEventListener('input', performSearch);
+      clearButton.addEventListener('click', clearSearch);
+      
+      // Exposer la fonction globalement pour les filtres actifs
+      (window as any).clearSearch = clearSearch;
+      
+      console.log('Script initialisé avec succès');
+      
+      // S'assurer que tous les domaines sont visibles au chargement
+      showAllDomains();
+    }
+  });
+</script>
+
 <style>
-	.line-clamp-2 {
-		display: -webkit-box;
-		-webkit-line-clamp: 2;
-		-webkit-box-orient: vertical;
-		overflow: hidden;
-	}
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+  .animate-fade-in-up {
+    animation: fadeInUp 0.6s ease-out forwards;
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .domain-pill-nav {
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .domain-pill-nav:hover {
+    backdrop-filter: blur(15px);
+    border-color: rgba(255, 255, 255, 0.3);
+  }
+
+
+  /* Effet 3D pour les sections de domaines */
+  .domain-section-3d {
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 
+      0 8px 16px rgba(0, 0, 0, 0.1),
+      0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .domain-section-3d::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+    border-radius: inherit;
+    transform: translateZ(-2px);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .domain-section-3d::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(255,255,255,0.15) 0%, transparent 50%);
+    border-radius: inherit;
+    transform: translateZ(2px);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .domain-section-3d:hover {
+    transform: translateZ(50px) scale(1.05) translateY(-10px);
+    box-shadow: 
+      0 30px 60px rgba(0, 0, 0, 0.25),
+      0 15px 30px rgba(0, 0, 0, 0.15),
+      0 5px 10px rgba(0, 0, 0, 0.1),
+      inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  }
+  
+  .domain-section-3d:hover::before {
+    opacity: 1;
+  }
+  
+  .domain-section-3d:hover::after {
+    opacity: 1;
+  }
+
+  /* Effet cube pour les cartes d'articles */
+  .article-card-3d {
+    transform-style: preserve-3d;
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 
+      0 4px 8px rgba(0, 0, 0, 0.1),
+      0 1px 2px rgba(0, 0, 0, 0.1);
+  }
+  
+  .article-card-3d::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.03) 100%);
+    border-radius: inherit;
+    transform: translateZ(-1px);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .article-card-3d::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(255,255,255,0.12) 0%, transparent 50%);
+    border-radius: inherit;
+    transform: translateZ(1px);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .article-card-3d:hover {
+    transform: translateZ(30px) scale(1.03) translateY(-5px);
+    box-shadow: 
+      0 20px 40px rgba(0, 0, 0, 0.15),
+      0 8px 16px rgba(0, 0, 0, 0.1),
+      0 2px 4px rgba(0, 0, 0, 0.05),
+      inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  }
+  
+  .article-card-3d:hover::before {
+    opacity: 1;
+  }
+  
+  .article-card-3d:hover::after {
+    opacity: 1;
+  }
+
+  /* Effet cube pour les boutons */
+  .load-more-btn-3d {
+    transform-style: preserve-3d;
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 
+      0 4px 12px rgba(99, 102, 241, 0.3),
+      0 2px 4px rgba(99, 102, 241, 0.2);
+  }
+  
+  .load-more-btn-3d::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.1) 100%);
+    border-radius: inherit;
+    transform: translateZ(-1px);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .load-more-btn-3d::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(255,255,255,0.25) 0%, transparent 50%);
+    border-radius: inherit;
+    transform: translateZ(1px);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .load-more-btn-3d:hover {
+    transform: translateZ(35px) scale(1.08) translateY(-3px);
+    box-shadow: 
+      0 20px 40px rgba(99, 102, 241, 0.4),
+      0 8px 16px rgba(99, 102, 241, 0.3),
+      0 2px 4px rgba(99, 102, 241, 0.2),
+      inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  }
+  
+  .load-more-btn-3d:hover::before {
+    opacity: 1;
+  }
+  
+  .load-more-btn-3d:hover::after {
+    opacity: 1;
+  }
+
+
+  .domain-section-3d {
+    animation: cube-entrance 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  }
+  
+  .domain-section-3d:nth-child(2n) {
+    animation-delay: 0.2s;
+  }
+  
+  .domain-section-3d:nth-child(3n) {
+    animation-delay: 0.4s;
+  }
+
+  /* Styles pour les pills de filtrage avec dégradés */
+  .filter-pill {
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .filter-pill::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s ease;
+  }
+  
+  .filter-pill:hover::before {
+    left: 100%;
+  }
+  
+  .filter-pill:active {
+    transform: scale(0.95);
+  }
+  
+  /* Effet de brillance pour les pills actives */
+  .filter-pill.ring-4 {
+    position: relative;
+  }
+  
+  .filter-pill.ring-4::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.3), transparent, rgba(255, 255, 255, 0.3));
+    border-radius: inherit;
+    z-index: -1;
+    animation: shimmer 2s infinite;
+  }
+  
+  @keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+  }
+
+  /* Styles pour les pills de filtrage par domaines */
+  .domain-filter-pill {
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 1;
+  }
+  
+  .domain-filter-pill::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s ease;
+  }
+  
+  .domain-filter-pill:hover::before {
+    left: 100%;
+  }
+  
+  .domain-filter-pill:hover {
+    transform: scale(1.25);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    z-index: 10;
+    border-color: rgba(255, 255, 255, 0.4);
+    animation: zoom-pulse 0.6s ease-in-out;
+  }
+  
+  .domain-filter-pill.ring-4 {
+    transform: scale(1.2);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    border-color: rgba(255, 255, 255, 0.6);
+    z-index: 20;
+  }
+  
+  .domain-filter-pill:active {
+    transform: scale(1.1);
+    transition: all 0.1s ease;
+  }
+  
+  @keyframes zoom-pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.3); }
+    100% { transform: scale(1.25); }
+  }
 </style>

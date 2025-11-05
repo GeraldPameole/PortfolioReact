@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 import BackButton from '../../components/BackButton.astro';
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import ArticleProgressBar from '../../components/ArticleProgressBar.astro';
 
 export async function getStaticPaths() {
 	const articles = await getCollection('articles');
@@ -65,7 +66,27 @@ function formatDate(date: string | Date) {
 	});
 }
 
-// Mapping des thèmes pour l'affichage
+// Mapping des domaines pour l'affichage
+const domainLabels: Record<string, string> = {
+	"developpement-web": "Développement Web",
+	"developpement-commercial": "Développement Commercial",
+	"formation": "Formation",
+	"gestion-projet": "Gestion de Projet",
+	"gestion-talents": "Gestion des Talents",
+	"productivite-methodes": "Productivité & Méthodes",
+	"qualite-process": "Qualité & Processus",
+	"leadership-management": "Leadership & Management",
+	"marketing-communication": "Marketing & Communication",
+	"innovation-technologies": "Innovation & Technologies",
+	"gestion-connaissances": "Gestion des Connaissances",
+	"reconversion-carriere": "Reconversion & Carrière",
+	"service-client": "Service Client",
+	"transformation-digitale": "Transformation Digitale",
+	"outils-techniques": "Outils Techniques",
+	"articles-generaux": "Articles Généraux"
+};
+
+// Mapping des thèmes pour l'affichage (conservé pour compatibilité)
 const themeLabels: Record<string, string> = {
 	"developpement-web": "Développement Web",
 	"management": "Management & Leadership",
@@ -160,27 +181,26 @@ const currentUrl = Astro.url.toString();
   
 	<article class="content-container article-content">
 		<header class="article-header">
-			<div class="article-theme">
-        {article.data.theme && (
-          <a href={`/themes/${article.data.theme}`} class="theme-link">
-            {themeLabels[article.data.theme] || article.data.theme}
-          </a>
-        )}
-      </div>
+			<!-- Domaine et Date de parution -->
+			<div class="article-domain-date">
+				<span class="article-domain-badge">
+					{article.data.domain ? domainLabels[article.data.domain] || article.data.domain.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase()) : 'Domaine non défini'}
+				</span>
+				<span class="mx-2">•</span>
+				<time datetime={article.data.publishDate.toString()} class="article-publish-date">
+					{formatDate(article.data.publishDate)}
+				</time>
+			</div>
       
 			<h1 class="article-title">{article.data.title}</h1>
 			
       <div class="article-meta">
-				<time datetime={article.data.publishDate.toString()}>
-					{formatDate(article.data.publishDate)}
-				</time>
 				{article.data.author && (
 					<>
-						<span class="mx-2">•</span>
 						<span>{article.data.author}</span>
+						<span class="mx-2">•</span>
 					</>
 				)}
-        <span class="mx-2">•</span>
         <span>{readingTime} min de lecture</span>
 			</div>
       
@@ -235,6 +255,7 @@ const currentUrl = Astro.url.toString();
 			)}
 		</header>
     
+		<ArticleProgressBar />
 		<div class="article-content-typography">
 			<Content />
 		</div>
@@ -268,7 +289,7 @@ const currentUrl = Astro.url.toString();
               
               <!-- Contenu -->
               <h3 class="text-lg font-bold text-[#111827] dark:text-white mb-2 line-clamp-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
-                <a href={`/articles/${relatedArticle.slug}`} class="hover:underline">
+                <a href={`/blog/${relatedArticle.slug}`} class="hover:underline">
                   {relatedArticle.data.title}
                 </a>
               </h3>
@@ -292,7 +313,7 @@ const currentUrl = Astro.url.toString();
                 <span class="text-xs text-gray-500 dark:text-gray-400">
                   {formatDate(relatedArticle.data.publishDate)}
                 </span>
-                <a href={`/articles/${relatedArticle.slug}`} 
+                <a href={`/blog/${relatedArticle.slug}`} 
                    class="inline-flex items-center gap-1 text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 font-medium text-sm transition-all duration-300 hover:gap-2">
                   Lire
                   <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
@@ -339,6 +360,27 @@ const currentUrl = Astro.url.toString();
 	/* Styles spécifiques à la page article */
 	.article-header {
 		margin-bottom: var(--content-spacing-xl);
+	}
+
+	.article-domain-date {
+		display: flex;
+		align-items: center;
+		margin-bottom: var(--content-spacing-md);
+		font-size: var(--text-sm);
+	}
+
+	.article-domain-badge {
+		padding: 0.5rem 1rem;
+		border-radius: 9999px;
+		font-weight: 600;
+		font-size: var(--text-sm);
+		background: var(--color-secondary-warm);
+		color: white;
+		text-transform: capitalize;
+	}
+
+	.article-publish-date {
+		color: var(--color-primary-dark);
 	}
 
 	.article-theme {
@@ -552,6 +594,314 @@ const currentUrl = Astro.url.toString();
 		.seo-keyword {
 			font-size: var(--text-xs);
 			padding: var(--content-spacing-xs) var(--content-spacing-sm);
+		}
+	}
+
+	/* Styles pour les tableaux - Amélioration de la visibilité */
+	.article-content-typography table {
+		width: 100%;
+		border-collapse: collapse;
+		margin: 2rem 0;
+		font-size: 0.875rem;
+		background: white;
+		border-radius: 0.5rem;
+		overflow: hidden;
+		box-shadow: 
+			0 4px 6px -1px rgb(0 0 0 / 0.1),
+			0 2px 4px -2px rgb(0 0 0 / 0.1);
+		border: 2px solid #e5e7eb;
+		display: table;
+		table-layout: auto;
+	}
+
+	.dark .article-content-typography table {
+		background: #1f2937;
+		border: 2px solid #374151;
+	}
+
+	/* En-têtes de tableau */
+	.article-content-typography thead {
+		background: #6b7280;
+		border-bottom: 2px solid #4b5563;
+	}
+
+	.dark .article-content-typography thead {
+		background: #4b5563;
+		border-bottom-color: #374151;
+	}
+
+	.article-content-typography th {
+		padding: 0.75rem 1rem;
+		text-align: left;
+		font-weight: 600;
+		color: #ffffff;
+		border-right: 1px solid #9ca3af;
+		font-size: 0.875rem;
+		line-height: 1.25rem;
+		text-transform: uppercase;
+		letter-spacing: 0.025em;
+		background: #6b7280;
+	}
+
+	.dark .article-content-typography th {
+		color: #ffffff;
+		border-right-color: #6b7280;
+		background: #4b5563;
+	}
+
+	.article-content-typography th:last-child {
+		border-right: none;
+	}
+
+	/* Cellules du tableau */
+	.article-content-typography td {
+		padding: 0.75rem 1rem;
+		border-bottom: 1px solid #e2e8f0;
+		border-right: 1px solid #e2e8f0;
+		color: #1e293b;
+		font-size: 0.875rem;
+		line-height: 1.25rem;
+		vertical-align: top;
+		background: white;
+	}
+
+	.dark .article-content-typography td {
+		color: #d1d5db;
+		border-bottom-color: #4b5563;
+		border-right-color: #4b5563;
+		background: #1f2937;
+	}
+
+	.article-content-typography td:last-child {
+		border-right: none;
+	}
+
+	/* Lignes alternées pour une meilleure lisibilité */
+	.article-content-typography tbody tr:nth-child(even) {
+		background: #f8fafc;
+	}
+
+	.article-content-typography tbody tr:nth-child(even) td {
+		background: #f8fafc;
+	}
+
+	.dark .article-content-typography tbody tr:nth-child(even) {
+		background: #374151;
+	}
+
+	.dark .article-content-typography tbody tr:nth-child(even) td {
+		background: #374151;
+	}
+
+	/* Effet hover sur les lignes */
+	.article-content-typography tbody tr:hover {
+		background: #f1f5f9;
+		transition: background-color 0.2s ease;
+	}
+
+	.dark .article-content-typography tbody tr:hover {
+		background: #4b5563;
+	}
+
+	/* Dernière ligne sans bordure */
+	.article-content-typography tbody tr:last-child td {
+		border-bottom: none;
+	}
+
+	/* Conteneur pour tableaux responsives */
+	.article-content-typography .table-container {
+		overflow-x: auto;
+		margin: 2rem 0;
+		border-radius: 0.5rem;
+		box-shadow: 
+			0 1px 3px 0 rgb(0 0 0 / 0.1),
+			0 1px 2px -1px rgb(0 0 0 / 0.1);
+	}
+
+	/* Responsive pour mobile */
+	@media (max-width: 768px) {
+		.article-content-typography table {
+			font-size: 0.75rem;
+		}
+
+		.article-content-typography th,
+		.article-content-typography td {
+			padding: 0.5rem 0.75rem;
+		}
+	}
+</style> 
+
+<script is:inline>
+  // Gestion des mots-clés SEO sur les pages d'articles
+  document.addEventListener('DOMContentLoaded', function() {
+    const seoKeywords = document.querySelectorAll('.seo-keyword');
+    
+    seoKeywords.forEach(keyword => {
+      // Animation d'apparition
+      keyword.style.opacity = '0';
+      keyword.style.transform = 'translateY(10px)';
+      
+      setTimeout(() => {
+        keyword.style.transition = 'all 0.3s ease';
+        keyword.style.opacity = '1';
+        keyword.style.transform = 'translateY(0)';
+      }, Math.random() * 500);
+      
+      // Gestion du clic
+      keyword.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        const keywordText = this.getAttribute('data-keyword');
+        
+        // Effet visuel de clic
+        this.style.transform = 'scale(1.1)';
+        this.style.background = 'linear-gradient(45deg, #3b82f6, #1d4ed8)';
+        this.style.color = 'white';
+        
+        setTimeout(() => {
+          this.style.transform = 'scale(1)';
+          this.style.background = '';
+          this.style.color = '';
+        }, 200);
+        
+        // Redirection vers la page blog optimisée avec filtre
+        const cleanKeyword = keywordText.replace('#', '').toLowerCase();
+        const blogUrl = `/blog/${cleanKeyword}`;
+        window.location.href = blogUrl;
+      });
+      
+      // Effet de survol
+      keyword.addEventListener('mouseenter', function() {
+        this.style.transform = 'translateY(-2px) scale(1.05)';
+        this.style.boxShadow = '0 4px 12px rgba(59, 130, 246, 0.3)';
+      });
+      
+      keyword.addEventListener('mouseleave', function() {
+        this.style.transform = 'translateY(0) scale(1)';
+        this.style.boxShadow = '';
+      });
+    });
+    
+    // Gestion des paramètres URL pour le filtrage
+    const urlParams = new URLSearchParams(window.location.search);
+    const keywordParam = urlParams.get('keyword');
+    
+    if (keywordParam) {
+      // Mettre en évidence le mot-clé correspondant
+      seoKeywords.forEach(keyword => {
+        if (keyword.getAttribute('data-keyword') === keywordParam) {
+          keyword.style.background = 'linear-gradient(45deg, #3b82f6, #1d4ed8)';
+          keyword.style.color = 'white';
+          keyword.style.boxShadow = '0 4px 12px rgba(59, 130, 246, 0.4)';
+        }
+      });
+    }
+  });
+</script> 
+	}
+
+	.dark .article-content-typography thead {
+		background: #4b5563;
+		border-bottom-color: #374151;
+	}
+
+	.article-content-typography th {
+		padding: 0.75rem 1rem;
+		text-align: left;
+		font-weight: 600;
+		color: #ffffff;
+		border-right: 1px solid #9ca3af;
+		font-size: 0.875rem;
+		line-height: 1.25rem;
+		text-transform: uppercase;
+		letter-spacing: 0.025em;
+		background: #6b7280;
+	}
+
+	.dark .article-content-typography th {
+		color: #ffffff;
+		border-right-color: #6b7280;
+		background: #4b5563;
+	}
+
+	.article-content-typography th:last-child {
+		border-right: none;
+	}
+
+	/* Cellules du tableau */
+	.article-content-typography td {
+		padding: 0.75rem 1rem;
+		border-bottom: 1px solid #e2e8f0;
+		border-right: 1px solid #e2e8f0;
+		color: #1e293b;
+		font-size: 0.875rem;
+		line-height: 1.25rem;
+		vertical-align: top;
+		background: white;
+	}
+
+	.dark .article-content-typography td {
+		color: #d1d5db;
+		border-bottom-color: #4b5563;
+		border-right-color: #4b5563;
+		background: #1f2937;
+	}
+
+	.article-content-typography td:last-child {
+		border-right: none;
+	}
+
+	/* Lignes alternées pour une meilleure lisibilité */
+	.article-content-typography tbody tr:nth-child(even) {
+		background: #f8fafc;
+	}
+
+	.article-content-typography tbody tr:nth-child(even) td {
+		background: #f8fafc;
+	}
+
+	.dark .article-content-typography tbody tr:nth-child(even) {
+		background: #374151;
+	}
+
+	.dark .article-content-typography tbody tr:nth-child(even) td {
+		background: #374151;
+	}
+
+	/* Effet hover sur les lignes */
+	.article-content-typography tbody tr:hover {
+		background: #f1f5f9;
+		transition: background-color 0.2s ease;
+	}
+
+	.dark .article-content-typography tbody tr:hover {
+		background: #4b5563;
+	}
+
+	/* Dernière ligne sans bordure */
+	.article-content-typography tbody tr:last-child td {
+		border-bottom: none;
+	}
+
+	/* Conteneur pour tableaux responsives */
+	.article-content-typography .table-container {
+		overflow-x: auto;
+		margin: 2rem 0;
+		border-radius: 0.5rem;
+		box-shadow: 
+			0 1px 3px 0 rgb(0 0 0 / 0.1),
+			0 1px 2px -1px rgb(0 0 0 / 0.1);
+	}
+
+	/* Responsive pour mobile */
+	@media (max-width: 768px) {
+		.article-content-typography table {
+			font-size: 0.75rem;
+		}
+
+		.article-content-typography th,
+		.article-content-typography td {
+			padding: 0.5rem 0.75rem;
 		}
 	}
 </style> 

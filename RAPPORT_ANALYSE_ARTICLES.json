@@ -1,0 +1,2195 @@
+{
+  "date": "2025-11-04T08:14:45.764Z",
+  "totalArticles": 96,
+  "articlesWithIssues": 96,
+  "byDomain": [
+    {
+      "domain": "articles-generaux",
+      "total": 1,
+      "withIssues": 1,
+      "articles": [
+        {
+          "file": "articles-generaux/comment-planifier-mon-travail.md",
+          "issues": {
+            "structure": [
+              "Section 1 dupliquée: FONDAMENTAUX DE LA PLANIFICATION DU TRAVAIL",
+              "Section 6 dupliquée: BONNES PRATIQUES ET RÈGLES D'OR",
+              "Section 5 dupliquée: ARTICLES ANNEXES"
+            ],
+            "incomplete": [
+              "Section vide ou presque vide: ## 1. FONDAMENTAUX DU SUJET",
+              "Section vide ou presque vide: ## 2. ANALYSE APPROFONDIE",
+              "Placeholder trouvé: [contexte spécifique dans ce domaine]",
+              "Placeholder trouvé: Todo",
+              "Placeholder trouvé: Todo",
+              "Placeholder trouvé: todo",
+              "Placeholder trouvé: Todo",
+              "Placeholder trouvé: Todo",
+              "Placeholder trouvé: todo"
+            ],
+            "sources": [
+              "Seulement 0 source(s) trouvée(s), minimum 4 requis"
+            ],
+            "annexes": [
+              "Seulement 0 article(s) annexe(s), minimum 3 recommandé"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "domain": "formation",
+      "total": 36,
+      "withIssues": 36,
+      "articles": [
+        {
+          "file": "articles-generaux/synthese-thematiques.md",
+          "issues": {
+            "structure": [
+              "Section 6 dupliquée: BONNES PRATIQUES",
+              "Section 5 dupliquée: ARTICLES ANNEXES"
+            ],
+            "incomplete": [
+              "Section vide ou presque vide: ## 1. FONDAMENTAUX DU SUJET",
+              "Section vide ou presque vide: ## 2. ANALYSE APPROFONDIE",
+              "Placeholder trouvé: [contexte spécifique dans ce domaine]"
+            ],
+            "sources": [
+              "Seulement 0 source(s) trouvée(s), minimum 4 requis"
+            ],
+            "annexes": [
+              "Seulement 0 article(s) annexe(s), minimum 3 recommandé"
+            ]
+          }
+        },
+        {
+          "file": "articles-generaux/template-article.md",
+          "issues": {
+            "structure": [
+              "Section 6 dupliquée: BONNES PRATIQUES",
+              "Section 5 dupliquée: ARTICLES ANNEXES"
+            ],
+            "incomplete": [
+              "Section vide ou presque vide: ## 1. FONDAMENTAUX DU SUJET",
+              "Section vide ou presque vide: ## 2. ANALYSE APPROFONDIE",
+              "Placeholder trouvé: [contexte spécifique dans ce domaine]"
+            ],
+            "sources": [
+              "Seulement 0 source(s) trouvée(s), minimum 4 requis"
+            ],
+            "annexes": [
+              "Seulement 0 article(s) annexe(s), minimum 3 recommandé"
+            ]
+          }
+        },
+        {
+          "file": "formation/apprentissage-continu-developpement-competences.md",
+          "issues": {
+            "structure": [
+              "Section 1 dupliquée: LE PARADOXE DE L'APPRENTISSAGE MODERNE",
+              "Section 2 dupliquée: MA MÉTHODOLOGIE \"A.P.P.R.E.N.D.R.E.\" - FRAMEWORK ÉPROUVÉ",
+              "Section 3 dupliquée: LES 3 ERREURS FATALES QUE J'AI COMMISES (ET CORRIGÉES)",
+              "Section 4 dupliquée: OUTILS CONCRETS QUE J'UTILISE AU QUOTIDIEN",
+              "Section 1 dupliquée: 0. CONCLUSION : VOTRE PLAN D'ACTION IMMÉDIAT",
+              "Section 5 dupliquée: ARTICLES ANNEXES",
+              "Section 6 dupliquée: SOURCES ET RÉFÉRENCES"
+            ],
+            "incomplete": [
+              "Section vide ou presque vide: ## 1. FONDAMENTAUX DU SUJET",
+              "Section vide ou presque vide: ## 2. ANALYSE APPROFONDIE"
+            ],
+            "sources": [
+              "Seulement 0 source(s) trouvée(s), minimum 4 requis"
+            ],
+            "annexes": [
+              "Seulement 0 article(s) annexe(s), minimum 3 recommandé"
+            ]
+          }
+        },
+        {
+          "file": "formation/formation-adaptation.md",
+          "issues": {
+            "structure": [
+              "Section 1 dupliquée: LE PARADOXE DE L'ADAPTATION MODERNE",
+              "Section 2 dupliquée: MA MÉTHODOLOGIE \"A.D.A.P.T.E.R.\" - FRAMEWORK ÉPROUVÉ",
+              "Section 3 dupliquée: LES 3 ERREURS FATALES QUE J'AI COMMISES (ET CORRIGÉES)",
+              "Section 4 dupliquée: OUTILS CONCRETS QUE J'UTILISE AU QUOTIDIEN",
+              "Section 1 dupliquée: 0. CONCLUSION : VOTRE PLAN D'ACTION IMMÉDIAT",
+              "Section 5 dupliquée: ARTICLES ANNEXES",
+              "Section 6 dupliquée: SOURCES ET RÉFÉRENCES"
+            ],
+            "incomplete": [
+              "Section vide ou presque vide: ## 1. FONDAMENTAUX DU SUJET",
+              "Section vide ou presque vide: ## 2. ANALYSE APPROFONDIE"
+            ],
+            "sources": [
+              "Seulement 0 source(s) trouvée(s), minimum 4 requis"
+            ],
+            "annexes": [
+              "Seulement 0 article(s) annexe(s), minimum 3 recommandé"
+            ]
+          }
+        },
+        {
+          "file": "formation/formation-collaboration.md",
+          "issues": {
+            "structure": [
+              "Section 1 dupliquée: LE PARADOXE DE LA COLLABORATION MODERNE",
+              "Section 2 dupliquée: MA MÉTHODOLOGIE \"C.O.L.L.A.B.O.R.E.R.\" - FRAMEWORK ÉPROUVÉ",
+              "Section 3 dupliquée: LES 3 ERREURS FATALES QUE J'AI COMMISES (ET CORRIGÉES)",
+              "Section 4 dupliquée: OUTILS CONCRETS QUE J'UTILISE AU QUOTIDIEN",
+              "Section 1 dupliquée: 0. CONCLUSION : VOTRE PLAN D'ACTION IMMÉDIAT",
+              "Section 5 dupliquée: ARTICLES ANNEXES",
+              "Section 6 dupliquée: SOURCES ET RÉFÉRENCES"
+            ],
+            "incomplete": [
+              "Section vide ou presque vide: ## 1. FONDAMENTAUX DU SUJET",
+              "Section vide ou presque vide: ## 2. ANALYSE APPROFONDIE"
+            ],
+            "sources": [
+              "Seulement 0 source(s) trouvée(s), minimum 4 requis"
+            ],
+            "annexes": [
+              "Seulement 0 article(s) annexe(s), minimum 3 recommandé"
+            ]
+          }
+        },
+        {
+          "file": "formation/formation-communication.md",
+          "issues": {
+            "structure": [
+              "Section 6 dupliquée: BONNES PRATIQUES",
+              "Section 5 dupliquée: ARTICLES ANNEXES"
+            ],
+            "incomplete": [
+              "Section vide ou presque vide: ## 1. FONDAMENTAUX DU SUJET",
+              "Section vide ou presque vide: ## 2. ANALYSE APPROFONDIE",
+              "Placeholder trouvé: [contexte spécifique dans ce domaine]"
+            ],
+            "sources": [
+              "Seulement 0 source(s) trouvée(s), minimum 4 requis"
+            ],
+            "annexes": [
+              "Seulement 0 article(s) annexe(s), minimum 3 recommandé"
+            ]
+          }
+        },
+        {
+          "file": "formation/formation-creativite.md",
+          "issues": {
+            "structure": [
+              "Section 6 dupliquée: BONNES PRATIQUES",
+              "Section 5 dupliquée: ARTICLES ANNEXES"
+            ],
+            "incomplete": [
+              "Section vide ou presque vide: ## 1. FONDAMENTAUX DU SUJET",
+              "Section vide ou presque vide: ## 2. ANALYSE APPROFONDIE",
+              "Placeholder trouvé: [contexte spécifique dans ce domaine]"
+            ],
+            "sources": [
+              "Seulement 0 source(s) trouvée(s), minimum 4 requis"
+            ],
+            "annexes": [
+              "Seulement 0 article(s) annexe(s), minimum 3 recommandé"
+            ]
+          }
+        },
+        {
+          "file": "formation/formation-elearning.md",
+          "issues": {
+            "structure": [
+              "Section 1 dupliquée: FONDAMENTAUX DE L'E-LEARNING",
+              "Section 6 dupliquée: BONNES PRATIQUES D'EXCELLENCE",
+              "Section 5 dupliquée: ARTICLES ANNEXES"
+            ],
+            "incomplete": [
+              "Section vide ou presque vide: ## 1. FONDAMENTAUX DU SUJET",
+              "Section vide ou presque vide: ## 2. ANALYSE APPROFONDIE",
+              "Placeholder trouvé: [contexte spécifique dans ce domaine]"
+            ],
+            "sources": [
+              "Seulement 0 source(s) trouvée(s), minimum 4 requis"
+            ],
+            "annexes": [
+              "Seulement 0 article(s) annexe(s), minimum 3 recommandé"
+            ]
+          }
+        },
+        {
+          "file": "formation/formation-innovation.md",
+          "issues": {
+            "structure": [
+              "Section 6 dupliquée: BONNES PRATIQUES",
+              "Section 5 dupliquée: ARTICLES ANNEXES"
+            ],
+            "incomplete": [
+              "Section vide ou presque vide: ## 1. FONDAMENTAUX DU SUJET",
+              "Section vide ou presque vide: ## 2. ANALYSE APPROFONDIE",
+              "Placeholder trouvé: [contexte spécifique dans ce domaine]"
+            ],
+            "sources": [
+              "Seulement 0 source(s) trouvée(s), minimum 4 requis"
+            ],
+            "annexes": [
+              "Seulement 0 article(s) annexe(s), minimum 3 recommandé"
+            ]
+          }
+        },
+        {
+          "file": "formation/formation-mentorat.md",
+          "issues": {
+            "structure": [
+              "Section 6 dupliquée: BONNES PRATIQUES",
+              "Section 5 dupliquée: ARTICLES ANNEXES"
+            ],
+            "incomplete": [
+              "Section vide ou presque vide: ## 1. FONDAMENTAUX DU SUJET",
+              "Section vide ou presque vide: ## 2. ANALYSE APPROFONDIE",
+              "Placeholder trouvé: [contexte spécifique dans ce domaine]"
+            ],
+            "sources": [
+              "Seulement 0 source(s) trouvée(s), minimum 4 requis"
+            ],
+            "annexes": [
+              "Seulement 0 article(s) annexe(s), minimum 3 recommandé"
+            ]
+          }
+        },
+        {
+          "file": "formation/formation-professionnelle-continue.md",
+          "issues": {
+            "structure": [
+              "Section 4 dupliquée: 1 Solutions Disponibles",
+              "Section 6 dupliquée: BONNES PRATIQUES",
+              "Section 5 dupliquée: ARTICLES ANNEXES"
+            ],
+            "incomplete": [
+              "Section vide ou presque vide: ## 1. FONDAMENTAUX DU SUJET",
+              "Section vide ou presque vide: ## 2. ANALYSE APPROFONDIE",
+              "Placeholder trouvé: [contexte spécifique dans ce domaine]"
+            ],
+            "sources": [
+              "Seulement 0 source(s) trouvée(s), minimum 4 requis"
+            ],
+            "annexes": [
+              "Seulement 0 article(s) annexe(s), minimum 3 recommandé"
+            ]
+          }
+        },
+        {
+          "file": "formation/formation-soft-skills.md",
+          "issues": {
+            "structure": [
+              "Section 6 dupliquée: BONNES PRATIQUES",
+              "Section 5 dupliquée: ARTICLES ANNEXES"
+            ],
+            "incomplete": [
+              "Section vide ou presque vide: ## 1. FONDAMENTAUX DU SUJET",
+              "Section vide ou presque vide: ## 2. ANALYSE APPROFONDIE",
+              "Placeholder trouvé: [contexte spécifique dans ce domaine]"
+            ],
+            "sources": [
+              "Seulement 0 source(s) trouvée(s), minimum 4 requis"
+            ],
+            "annexes": [
+              "Seulement 0 article(s) annexe(s), minimum 3 recommandé"
+            ]
+          }
+        },
+        {
+          "file": "formation/formation-talents-guide.md",
+          "issues": {
+            "structure": [
+              "Section 6 dupliquée: BONNES PRATIQUES",
+              "Section 5 dupliquée: ARTICLES ANNEXES"
+            ],
+            "incomplete": [
+              "Section vide ou presque vide: ## 1. FONDAMENTAUX DU SUJET",
+              "Section vide ou presque vide: ## 2. ANALYSE APPROFONDIE",
+              "Placeholder trouvé: [contexte spécifique dans ce domaine]"
+            ],
+            "sources": [
+              "Seulement 0 source(s) trouvée(s), minimum 4 requis"
+            ],
+            "annexes": [
+              "Seulement 0 article(s) annexe(s), minimum 3 recommandé"
+            ]
+          }
+        },
+        {
+          "file": "formation/formation-technique.md",
+          "issues": {
+            "structure": [
+              "Section 1 dupliquée: LE PARADOXE DE LA FORMATION TECHNIQUE MODERNE",
+              "Section 2 dupliquée: MA MÉTHODOLOGIE \"T.E.C.H.N.I.Q.U.E.\" - FRAMEWORK ÉPROUVÉ",
+              "Section 3 dupliquée: LES 3 ERREURS FATALES QUE J'AI COMMISES (ET CORRIGÉES)",
+              "Section 4 dupliquée: OUTILS CONCRETS QUE J'UTILISE AU QUOTIDIEN",
+              "Section 1 dupliquée: 0. CONCLUSION : VOTRE PLAN D'ACTION IMMÉDIAT",
+              "Section 5 dupliquée: ARTICLES ANNEXES",
+              "Section 6 dupliquée: SOURCES ET RÉFÉRENCES"
+            ],
+            "incomplete": [
+              "Section vide ou presque vide: ## 1. FONDAMENTAUX DU SUJET",
+              "Section vide ou presque vide: ## 2. ANALYSE APPROFONDIE"
+            ],
+            "sources": [
+              "Seulement 0 source(s) trouvée(s), minimum 4 requis"
+            ],
+            "annexes": [
+              "Seulement 0 article(s) annexe(s), minimum 3 recommandé"
+            ]
+          }
+        },
+        {
+          "file": "formation/impact-formation-continue-carriere.md",
+          "issues": {
+            "structure": [
+              "Section 6 dupliquée: BONNES PRATIQUES",
+              "Section 5 dupliquée: ARTICLES ANNEXES"
+            ],
+            "incomplete": [
+              "Section vide ou presque vide: ## 1. FONDAMENTAUX DU SUJET",
+              "Section vide ou presque vide: ## 2. ANALYSE APPROFONDIE",
+              "Placeholder trouvé: [contexte spécifique dans ce domaine]"
+            ],
+            "sources": [
+              "Seulement 0 source(s) trouvée(s), minimum 4 requis"
+            ],
+            "annexes": [
+              "Seulement 0 article(s) annexe(s), minimum 3 recommandé"
+            ]
+          }
+        },
+        {
+          "file": "formation/mentoring-developpement-professionnel.md",
+          "issues": {
+            "structure": [
+              "Section 6 dupliquée: BONNES PRATIQUES",
+              "Section 5 dupliquée: ARTICLES ANNEXES"
+            ],
+            "incomplete": [
+              "Section vide ou presque vide: ## 1. FONDAMENTAUX DU SUJET",
+              "Section vide ou presque vide: ## 2. ANALYSE APPROFONDIE",
+              "Placeholder trouvé: [contexte spécifique dans ce domaine]"
+            ],
+            "sources": [
+              "Seulement 0 source(s) trouvée(s), minimum 4 requis"
+            ],
+            "annexes": [
+              "Seulement 0 article(s) annexe(s), minimum 3 recommandé"
+            ]
+          }
+        },
+        {
+          "file": "gestion-talents/gestion-talents-whistleblowing.md",
+          "issues": {
+            "structure": [
+              "Section 6 dupliquée: BONNES PRATIQUES",
+              "Section 5 dupliquée: ARTICLES ANNEXES"
+            ],
+            "incomplete": [
+              "Section vide ou presque vide: ## 1. FONDAMENTAUX DU SUJET",
+              "Section vide ou presque vide: ## 2. ANALYSE APPROFONDIE",
+              "Placeholder trouvé: [contexte spécifique dans ce domaine]"
+            ],
+            "sources": [
+              "Seulement 0 source(s) trouvée(s), minimum 4 requis"
+            ],
+            "annexes": [
+              "Seulement 0 article(s) annexe(s), minimum 3 recommandé"
+            ]
+          }
+        },
+        {
+          "file": "gestion-talents/gestion-talents-xenophobia.md",
+          "issues": {
+            "structure": [
+              "Section 6 dupliquée: BONNES PRATIQUES",
+              "Section 5 dupliquée: ARTICLES ANNEXES"
+            ],
+            "incomplete": [
+              "Section vide ou presque vide: ## 1. FONDAMENTAUX DU SUJET",
+              "Section vide ou presque vide: ## 2. ANALYSE APPROFONDIE",
+              "Placeholder trouvé: [contexte spécifique dans ce domaine]"
+            ],
+            "sources": [
+              "Seulement 0 source(s) trouvée(s), minimum 4 requis"
+            ],
+            "annexes": [
+              "Seulement 0 article(s) annexe(s), minimum 3 recommandé"
+            ]
+          }
+        },
+        {
+          "file": "gestion-talents/gestion-talents-youth.md",
+          "issues": {
+            "structure": [
+              "Section 6 dupliquée: BONNES PRATIQUES",
+              "Section 5 dupliquée: ARTICLES ANNEXES"
+            ],
+            "incomplete": [
+              "Section vide ou presque vide: ## 1. FONDAMENTAUX DU SUJET",
+              "Section vide ou presque vide: ## 2. ANALYSE APPROFONDIE",
+              "Placeholder trouvé: [contexte spécifique dans ce domaine]"
+            ],
+            "sources": [
+              "Seulement 0 source(s) trouvée(s), minimum 4 requis"
+            ],
+            "annexes": [
+              "Seulement 0 article(s) annexe(s), minimum 3 recommandé"
+            ]
+          }
+        },
+        {
+          "file": "gestion-talents/gestion-talents-zen.md",
+          "issues": {
+            "structure": [
+              "Section 6 dupliquée: BONNES PRATIQUES",
+              "Section 5 dupliquée: ARTICLES ANNEXES"
+            ],
+            "incomplete": [
+              "Section vide ou presque vide: ## 1. FONDAMENTAUX DU SUJET",
+              "Section vide ou presque vide: ## 2. ANALYSE APPROFONDIE",
+              "Placeholder trouvé: [contexte spécifique dans ce domaine]"
+            ],
+            "sources": [
+              "Seulement 0 source(s) trouvée(s), minimum 4 requis"
+            ],
+            "annexes": [
+              "Seulement 0 article(s) annexe(s), minimum 3 recommandé"
+            ]
+          }
+        },
+        {
+          "file": "innovation-technologies/ia-transformation-societe-2024-analyse.md",
+          "issues": {
+            "structure": [
+              "Section 6 dupliquée: BONNES PRATIQUES",
+              "Section 5 dupliquée: ARTICLES ANNEXES"
+            ],
+            "incomplete": [
+              "Section vide ou presque vide: ## 1. FONDAMENTAUX DU SUJET",
+              "Section vide ou presque vide: ## 2. ANALYSE APPROFONDIE",
+              "Placeholder trouvé: [contexte spécifique dans ce domaine]"
+            ],
+            "sources": [
+              "Seulement 0 source(s) trouvée(s), minimum 4 requis"
+            ],
+            "annexes": [
+              "Seulement 0 article(s) annexe(s), minimum 3 recommandé"
+            ]
+          }
+        },
+        {
+          "file": "leadership-management/formation-leadership.md",
+          "issues": {
+            "structure": [
+              "Section 4 dupliquée: 1 Solutions Disponibles",
+              "Section 5 dupliquée: 1 Obstacles Courants",
+              "Section 6 dupliquée: BONNES PRATIQUES",
+              "Section 5 dupliquée: ARTICLES ANNEXES"
+            ],
+            "incomplete": [
+              "Section vide ou presque vide: ## 1. FONDAMENTAUX DU SUJET",
+              "Section vide ou presque vide: ## 2. ANALYSE APPROFONDIE",
+              "Placeholder trouvé: [contexte spécifique dans ce domaine]"
+            ],
+            "sources": [
+              "Seulement 0 source(s) trouvée(s), minimum 4 requis"
+            ],
+            "annexes": [
+              "Seulement 0 article(s) annexe(s), minimum 3 recommandé"
+            ]
+          }
+        },
+        {
+          "file": "leadership-management/management-hybride-defis-opportunites.md",
+          "issues": {
+            "structure": [
+              "Section 6 dupliquée: BONNES PRATIQUES",
+              "Section 5 dupliquée: ARTICLES ANNEXES"
+            ],
+            "incomplete": [
+              "Section vide ou presque vide: ## 1. FONDAMENTAUX DU SUJET",
+              "Section vide ou presque vide: ## 2. ANALYSE APPROFONDIE",
+              "Placeholder trouvé: [contexte spécifique dans ce domaine]"
+            ],
+            "sources": [
+              "Seulement 0 source(s) trouvée(s), minimum 4 requis"
+            ],
+            "annexes": [
+              "Seulement 0 article(s) annexe(s), minimum 3 recommandé"
+            ]
+          }
+        },
+        {
+          "file": "marketing-communication/strategies-reseaux-sociaux-b2b.md",
+          "issues": {
+            "structure": [
+              "Section 6 dupliquée: BONNES PRATIQUES",
+              "Section 5 dupliquée: ARTICLES ANNEXES"
+            ],
+            "incomplete": [
+              "Section vide ou presque vide: ## 1. FONDAMENTAUX DU SUJET",
+              "Section vide ou presque vide: ## 2. ANALYSE APPROFONDIE",
+              "Placeholder trouvé: [contexte spécifique dans ce domaine]"
+            ],
+            "sources": [
+              "Seulement 0 source(s) trouvée(s), minimum 4 requis"
+            ],
+            "annexes": [
+              "Seulement 0 article(s) annexe(s), minimum 3 recommandé"
+            ]
+          }
+        },
+        {
+          "file": "marketing-communication/strategies-reseaux-sociaux-entreprises.md",
+          "issues": {
+            "structure": [
+              "Section 6 dupliquée: BONNES PRATIQUES",
+              "Section 5 dupliquée: ARTICLES ANNEXES"
+            ],
+            "incomplete": [
+              "Section vide ou presque vide: ## 1. FONDAMENTAUX DU SUJET",
+              "Section vide ou presque vide: ## 2. ANALYSE APPROFONDIE",
+              "Placeholder trouvé: [contexte spécifique dans ce domaine]"
+            ],
+            "sources": [
+              "Seulement 0 source(s) trouvée(s), minimum 4 requis"
+            ],
+            "annexes": [
+              "Seulement 0 article(s) annexe(s), minimum 3 recommandé"
+            ]
+          }
+        },
+        {
+          "file": "productivite-methodes/gestion-stress-performance.md",
+          "issues": {
+            "structure": [
+              "Section 6 dupliquée: BONNES PRATIQUES",
+              "Section 5 dupliquée: ARTICLES ANNEXES"
+            ],
+            "incomplete": [
+              "Section vide ou presque vide: ## 1. FONDAMENTAUX DU SUJET",
+              "Section vide ou presque vide: ## 2. ANALYSE APPROFONDIE",
+              "Placeholder trouvé: [contexte spécifique dans ce domaine]"
+            ],
+            "sources": [
+              "Seulement 0 source(s) trouvée(s), minimum 4 requis"
+            ],
+            "annexes": [
+              "Seulement 0 article(s) annexe(s), minimum 3 recommandé"
+            ]
+          }
+        },
+        {
+          "file": "productivite-methodes/gestion-surcharge-informationnelle.md",
+          "issues": {
+            "structure": [
+              "Section 6 dupliquée: BONNES PRATIQUES",
+              "Section 5 dupliquée: ARTICLES ANNEXES"
+            ],
+            "incomplete": [
+              "Section vide ou presque vide: ## 1. FONDAMENTAUX DU SUJET",
+              "Section vide ou presque vide: ## 2. ANALYSE APPROFONDIE",
+              "Placeholder trouvé: [contexte spécifique dans ce domaine]"
+            ],
+            "sources": [
+              "Seulement 0 source(s) trouvée(s), minimum 4 requis"
+            ],
+            "annexes": [
+              "Seulement 0 article(s) annexe(s), minimum 3 recommandé"
+            ]
+          }
+        },
+        {
+          "file": "productivite-methodes/gestion-temps-productivite.md",
+          "issues": {
+            "structure": [
+              "Section 6 dupliquée: BONNES PRATIQUES",
+              "Section 5 dupliquée: ARTICLES ANNEXES"
+            ],
+            "incomplete": [
+              "Section vide ou presque vide: ## 1. FONDAMENTAUX DU SUJET",
+              "Section vide ou presque vide: ## 2. ANALYSE APPROFONDIE",
+              "Placeholder trouvé: [contexte spécifique dans ce domaine]"
+            ],
+            "sources": [
+              "Seulement 0 source(s) trouvée(s), minimum 4 requis"
+            ],
+            "annexes": [
+              "Seulement 0 article(s) annexe(s), minimum 3 recommandé"
+            ]
+          }
+        },
+        {
+          "file": "productivite-methodes/gestion-temps-professionnels.md",
+          "issues": {
+            "structure": [
+              "Section 6 dupliquée: BONNES PRATIQUES",
+              "Section 5 dupliquée: ARTICLES ANNEXES"
+            ],
+            "incomplete": [
+              "Section vide ou presque vide: ## 1. FONDAMENTAUX DU SUJET",
+              "Section vide ou presque vide: ## 2. ANALYSE APPROFONDIE",
+              "Placeholder trouvé: [contexte spécifique dans ce domaine]"
+            ],
+            "sources": [
+              "Seulement 0 source(s) trouvée(s), minimum 4 requis"
+            ],
+            "annexes": [
+              "Seulement 0 article(s) annexe(s), minimum 3 recommandé"
+            ]
+          }
+        },
+        {
+          "file": "productivite-methodes/gestion-temps.md",
+          "issues": {
+            "structure": [
+              "Section 6 dupliquée: BONNES PRATIQUES",
+              "Section 5 dupliquée: ARTICLES ANNEXES"
+            ],
+            "incomplete": [
+              "Section vide ou presque vide: ## 1. FONDAMENTAUX DU SUJET",
+              "Section vide ou presque vide: ## 2. ANALYSE APPROFONDIE",
+              "Placeholder trouvé: [contexte spécifique dans ce domaine]"
+            ],
+            "sources": [
+              "Seulement 0 source(s) trouvée(s), minimum 4 requis"
+            ],
+            "annexes": [
+              "Seulement 0 article(s) annexe(s), minimum 3 recommandé"
+            ]
+          }
+        },
+        {
+          "file": "productivite-methodes/methode-gtd-expliquee.md",
+          "issues": {
+            "structure": [
+              "Section 6 dupliquée: BONNES PRATIQUES",
+              "Section 5 dupliquée: ARTICLES ANNEXES"
+            ],
+            "incomplete": [
+              "Section vide ou presque vide: ## 1. FONDAMENTAUX DU SUJET",
+              "Section vide ou presque vide: ## 2. ANALYSE APPROFONDIE",
+              "Placeholder trouvé: [contexte spécifique dans ce domaine]"
+            ],
+            "sources": [
+              "Seulement 0 source(s) trouvée(s), minimum 4 requis"
+            ],
+            "annexes": [
+              "Seulement 0 article(s) annexe(s), minimum 3 recommandé"
+            ]
+          }
+        },
+        {
+          "file": "productivite-methodes/methode-pomodoro.md",
+          "issues": {
+            "structure": [
+              "Section 6 dupliquée: BONNES PRATIQUES",
+              "Section 5 dupliquée: ARTICLES ANNEXES"
+            ],
+            "incomplete": [
+              "Section vide ou presque vide: ## 1. FONDAMENTAUX DU SUJET",
+              "Section vide ou presque vide: ## 2. ANALYSE APPROFONDIE",
+              "Placeholder trouvé: [contexte spécifique dans ce domaine]"
+            ],
+            "sources": [
+              "Seulement 0 source(s) trouvée(s), minimum 4 requis"
+            ],
+            "annexes": [
+              "Seulement 0 article(s) annexe(s), minimum 3 recommandé"
+            ]
+          }
+        },
+        {
+          "file": "productivite-methodes/procrastination-solutions-efficaces.md",
+          "issues": {
+            "structure": [
+              "Section 6 dupliquée: BONNES PRATIQUES",
+              "Section 5 dupliquée: ARTICLES ANNEXES"
+            ],
+            "incomplete": [
+              "Section vide ou presque vide: ## 1. FONDAMENTAUX DU SUJET",
+              "Section vide ou presque vide: ## 2. ANALYSE APPROFONDIE",
+              "Placeholder trouvé: [contexte spécifique dans ce domaine]"
+            ],
+            "sources": [
+              "Seulement 0 source(s) trouvée(s), minimum 4 requis"
+            ],
+            "annexes": [
+              "Seulement 0 article(s) annexe(s), minimum 3 recommandé"
+            ]
+          }
+        },
+        {
+          "file": "productivite-methodes/productivite-professionnelle.md",
+          "issues": {
+            "structure": [
+              "Section 6 dupliquée: BONNES PRATIQUES",
+              "Section 5 dupliquée: ARTICLES ANNEXES"
+            ],
+            "incomplete": [
+              "Section vide ou presque vide: ## 1. FONDAMENTAUX DU SUJET",
+              "Section vide ou presque vide: ## 2. ANALYSE APPROFONDIE",
+              "Placeholder trouvé: [contexte spécifique dans ce domaine]"
+            ],
+            "sources": [
+              "Seulement 0 source(s) trouvée(s), minimum 4 requis"
+            ],
+            "annexes": [
+              "Seulement 0 article(s) annexe(s), minimum 3 recommandé"
+            ]
+          }
+        },
+        {
+          "file": "transformation-digitale/transformation-digitale-telecom.md",
+          "issues": {
+            "structure": [
+              "Section 6 dupliquée: BONNES PRATIQUES",
+              "Section 5 dupliquée: ARTICLES ANNEXES"
+            ],
+            "incomplete": [
+              "Section vide ou presque vide: ## 1. FONDAMENTAUX DU SUJET",
+              "Section vide ou presque vide: ## 2. ANALYSE APPROFONDIE",
+              "Placeholder trouvé: [contexte spécifique dans ce domaine]"
+            ],
+            "sources": [
+              "Seulement 0 source(s) trouvée(s), minimum 4 requis"
+            ],
+            "annexes": [
+              "Seulement 0 article(s) annexe(s), minimum 3 recommandé"
+            ]
+          }
+        },
+        {
+          "file": "transformation-digitale/transformation-numerique-talents.md",
+          "issues": {
+            "structure": [
+              "Section 6 dupliquée: BONNES PRATIQUES",
+              "Section 5 dupliquée: ARTICLES ANNEXES"
+            ],
+            "incomplete": [
+              "Section vide ou presque vide: ## 1. FONDAMENTAUX DU SUJET",
+              "Section vide ou presque vide: ## 2. ANALYSE APPROFONDIE",
+              "Placeholder trouvé: [contexte spécifique dans ce domaine]"
+            ],
+            "sources": [
+              "Seulement 0 source(s) trouvée(s), minimum 4 requis"
+            ],
+            "annexes": [
+              "Seulement 0 article(s) annexe(s), minimum 3 recommandé"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "domain": "developpement-commercial",
+      "total": 7,
+      "withIssues": 7,
+      "articles": [
+        {
+          "file": "developpement-commercial/negocier-salaire-techniques-avancees.md",
+          "issues": {
+            "structure": [
+              "Section 1 dupliquée: Psychologie de la Négocia",
+              "Section 2 dupliquée: Préparation Stratégique",
+              "Section 3 dupliquée: Techniques de Persuasion Avancées",
+              "Section 4 dupliquée: Gestion des Objections",
+              "Section 5 dupliquée: DÉFIS MAJEURS ET SOLUTIONS INNOVANTES",
+              "Section 5 dupliquée: ARTICLES ANNEXES",
+              "Section 6 dupliquée: SOURCES ET RÉFÉRENCES"
+            ],
+            "incomplete": [
+              "Section vide ou presque vide: ## 1. FONDAMENTAUX DU SUJET",
+              "Section vide ou presque vide: ## 2. ANALYSE APPROFONDIE",
+              "Placeholder trouvé: [contexte spécifique dans ce domaine]"
+            ],
+            "sources": [
+              "Seulement 0 source(s) trouvée(s), minimum 4 requis"
+            ],
+            "annexes": [
+              "Seulement 0 article(s) annexe(s), minimum 3 recommandé"
+            ]
+          }
+        },
+        {
+          "file": "developpement-commercial/recrutement-talents-digitaux.md",
+          "issues": {
+            "structure": [
+              "Section 1 dupliquée: Écosystème des Talents Di",
+              "Section 2 dupliquée: Stratégies d'Attraction des Talents",
+              "Section 3 dupliquée: Processus de Sélection Optimisé",
+              "Section 4 dupliquée: Techniques de Rétention",
+              "Section 5 dupliquée: ARTICLES ANNEXES",
+              "Section 6 dupliquée: SOURCES ET RÉFÉRENCES"
+            ],
+            "incomplete": [
+              "Section vide ou presque vide: ## 1. FONDAMENTAUX DU SUJET",
+              "Section vide ou presque vide: ## 2. ANALYSE APPROFONDIE",
+              "Placeholder trouvé: [contexte spécifique dans ce domaine]"
+            ],
+            "sources": [
+              "Seulement 0 source(s) trouvée(s), minimum 4 requis"
+            ],
+            "annexes": [
+              "Seulement 0 article(s) annexe(s), minimum 3 recommandé"
+            ]
+          }
+        },
+        {
+          "file": "formation/formation-equipes-commerciales.md",
+          "issues": {
+            "structure": [
+              "Section 6 dupliquée: BONNES PRATIQUES",
+              "Section 5 dupliquée: ARTICLES ANNEXES"
+            ],
+            "incomplete": [
+              "Section vide ou presque vide: ## 1. FONDAMENTAUX DU SUJET",
+              "Section vide ou presque vide: ## 2. ANALYSE APPROFONDIE",
+              "Placeholder trouvé: [contexte spécifique dans ce domaine]"
+            ],
+            "sources": [
+              "Seulement 0 source(s) trouvée(s), minimum 4 requis"
+            ],
+            "annexes": [
+              "Seulement 0 article(s) annexe(s), minimum 3 recommandé"
+            ]
+          }
+        },
+        {
+          "file": "innovation-technologies/intelligence-artificielle-transformation-marketing.md",
+          "issues": {
+            "structure": [
+              "Section 6 dupliquée: BONNES PRATIQUES",
+              "Section 5 dupliquée: ARTICLES ANNEXES"
+            ],
+            "incomplete": [
+              "Section vide ou presque vide: ## 1. FONDAMENTAUX DU SUJET",
+              "Section vide ou presque vide: ## 2. ANALYSE APPROFONDIE",
+              "Placeholder trouvé: [contexte spécifique dans ce domaine]"
+            ],
+            "sources": [
+              "Seulement 0 source(s) trouvée(s), minimum 4 requis"
+            ],
+            "annexes": [
+              "Seulement 0 article(s) annexe(s), minimum 3 recommandé"
+            ]
+          }
+        },
+        {
+          "file": "marketing-communication/email-marketing-personnalisation.md",
+          "issues": {
+            "structure": [
+              "Section 6 dupliquée: BONNES PRATIQUES",
+              "Section 5 dupliquée: ARTICLES ANNEXES"
+            ],
+            "incomplete": [
+              "Section vide ou presque vide: ## 1. FONDAMENTAUX DU SUJET",
+              "Section vide ou presque vide: ## 2. ANALYSE APPROFONDIE",
+              "Placeholder trouvé: [contexte spécifique dans ce domaine]"
+            ],
+            "sources": [
+              "Seulement 0 source(s) trouvée(s), minimum 4 requis"
+            ],
+            "annexes": [
+              "Seulement 0 article(s) annexe(s), minimum 3 recommandé"
+            ]
+          }
+        },
+        {
+          "file": "marketing-communication/marketing-content-strategies.md",
+          "issues": {
+            "structure": [
+              "Section 6 dupliquée: BONNES PRATIQUES",
+              "Section 5 dupliquée: ARTICLES ANNEXES"
+            ],
+            "incomplete": [
+              "Section vide ou presque vide: ## 1. FONDAMENTAUX DU SUJET",
+              "Section vide ou presque vide: ## 2. ANALYSE APPROFONDIE",
+              "Placeholder trouvé: [contexte spécifique dans ce domaine]"
+            ],
+            "sources": [
+              "Seulement 0 source(s) trouvée(s), minimum 4 requis"
+            ],
+            "annexes": [
+              "Seulement 0 article(s) annexe(s), minimum 3 recommandé"
+            ]
+          }
+        },
+        {
+          "file": "marketing-communication/strategies-marketing-digital-2025.md",
+          "issues": {
+            "structure": [
+              "Section 6 dupliquée: BONNES PRATIQUES",
+              "Section 5 dupliquée: ARTICLES ANNEXES"
+            ],
+            "incomplete": [
+              "Section vide ou presque vide: ## 1. FONDAMENTAUX DU SUJET",
+              "Section vide ou presque vide: ## 2. ANALYSE APPROFONDIE",
+              "Placeholder trouvé: [contexte spécifique dans ce domaine]"
+            ],
+            "sources": [
+              "Seulement 0 source(s) trouvée(s), minimum 4 requis"
+            ],
+            "annexes": [
+              "Seulement 0 article(s) annexe(s), minimum 3 recommandé"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "domain": "developpement-web",
+      "total": 3,
+      "withIssues": 3,
+      "articles": [
+        {
+          "file": "developpement-web/frameworks-javascript-analyse-2024.md",
+          "issues": {
+            "structure": [
+              "Section 1 dupliquée: LE PARADOXE DU CHOIX DE FRAMEWORK",
+              "Section 2 dupliquée: MA MÉTHODOLOGIE \"C.H.O.I.S.I.R.\" - FRAMEWORK ÉPROUVÉ",
+              "Section 3 dupliquée: LES 3 ERREURS FATALES QUE J'AI COMMISES (ET CORRIGÉES)",
+              "Section 4 dupliquée: OUTILS CONCRETS QUE J'UTILISE AU QUOTIDIEN",
+              "Section 1 dupliquée: 0. CONCLUSION : VOTRE PLAN D'ACTION IMMÉDIAT",
+              "Section 5 dupliquée: ARTICLES ANNEXES",
+              "Section 6 dupliquée: SOURCES ET RÉFÉRENCES"
+            ],
+            "incomplete": [
+              "Section vide ou presque vide: ## 1. FONDAMENTAUX DU SUJET",
+              "Section vide ou presque vide: ## 2. ANALYSE APPROFONDIE"
+            ],
+            "sources": [
+              "Seulement 0 source(s) trouvée(s), minimum 4 requis"
+            ],
+            "annexes": [
+              "Seulement 0 article(s) annexe(s), minimum 3 recommandé"
+            ]
+          }
+        },
+        {
+          "file": "developpement-web/frameworks-javascript-comparaison-2024.md",
+          "issues": {
+            "structure": [
+              "Section 1 dupliquée: Écosystème JavaScript 2024 : État des Lieux",
+              "Section 2 dupliquée: Analyse Comparative Détaillée",
+              "Section 3 dupliquée: Méthodologie de Sélection : C.H.O.I.S.I.R.",
+              "Section 4 dupliquée: Recommandations Pratiques par Contexte",
+              "Section 5 dupliquée: ARTICLES ANNEXES",
+              "Section 6 dupliquée: SOURCES ET RÉFÉRENCES"
+            ],
+            "incomplete": [
+              "Section vide ou presque vide: ## 1. FONDAMENTAUX DU SUJET",
+              "Section vide ou presque vide: ## 2. ANALYSE APPROFONDIE",
+              "Placeholder trouvé: [contexte spécifique dans ce domaine]"
+            ],
+            "sources": [
+              "Seulement 0 source(s) trouvée(s), minimum 4 requis"
+            ],
+            "annexes": [
+              "Seulement 0 article(s) annexe(s), minimum 3 recommandé"
+            ]
+          }
+        },
+        {
+          "file": "developpement-web/progressive-web-apps-2024.md",
+          "issues": {
+            "structure": [
+              "Section 1 dupliquée: Écosystème PWA 2024 : État des Lieux",
+              "Section 2 dupliquée: Architecture et Composants Techniques",
+              "Section 3 dupliquée: Stratégies d'Optimisation Performance",
+              "Section 4 dupliquée: Fonctionnalités Avancées",
+              "Section 5 dupliquée: ARTICLES ANNEXES",
+              "Section 6 dupliquée: SOURCES ET RÉFÉRENCES"
+            ],
+            "incomplete": [
+              "Section vide ou presque vide: ## 1. FONDAMENTAUX DU SUJET",
+              "Section vide ou presque vide: ## 2. ANALYSE APPROFONDIE",
+              "Placeholder trouvé: [contexte spécifique dans ce domaine]"
+            ],
+            "sources": [
+              "Seulement 0 source(s) trouvée(s), minimum 4 requis"
+            ],
+            "annexes": [
+              "Seulement 0 article(s) annexe(s), minimum 3 recommandé"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "domain": "web-developpement",
+      "total": 7,
+      "withIssues": 7,
+      "articles": [
+        {
+          "file": "developpement-web/react-performance-optimisation.md",
+          "issues": {
+            "structure": [
+              "Section 4 dupliquée: 1 Solutions Disponibles",
+              "Section 6 dupliquée: BONNES PRATIQUES",
+              "Section 5 dupliquée: ARTICLES ANNEXES"
+            ],
+            "incomplete": [
+              "Section vide ou presque vide: ## 1. FONDAMENTAUX DU SUJET",
+              "Section vide ou presque vide: ## 2. ANALYSE APPROFONDIE",
+              "Placeholder trouvé: [contexte spécifique dans ce domaine]"
+            ],
+            "sources": [
+              "Seulement 0 source(s) trouvée(s), minimum 4 requis"
+            ],
+            "annexes": [
+              "Seulement 0 article(s) annexe(s), minimum 3 recommandé"
+            ]
+          }
+        },
+        {
+          "file": "developpement-web/technologies-javascript-2024.md",
+          "issues": {
+            "structure": [
+              "Section 6 dupliquée: BONNES PRATIQUES",
+              "Section 5 dupliquée: ARTICLES ANNEXES"
+            ],
+            "incomplete": [
+              "Section vide ou presque vide: ## 1. FONDAMENTAUX DU SUJET",
+              "Section vide ou presque vide: ## 2. ANALYSE APPROFONDIE",
+              "Placeholder trouvé: [contexte spécifique dans ce domaine]"
+            ],
+            "sources": [
+              "Seulement 0 source(s) trouvée(s), minimum 4 requis"
+            ],
+            "annexes": [
+              "Seulement 0 article(s) annexe(s), minimum 3 recommandé"
+            ]
+          }
+        },
+        {
+          "file": "developpement-web/tendances-developpement-web-2025.md",
+          "issues": {
+            "structure": [
+              "Section 6 dupliquée: BONNES PRATIQUES",
+              "Section 5 dupliquée: ARTICLES ANNEXES"
+            ],
+            "incomplete": [
+              "Section vide ou presque vide: ## 1. FONDAMENTAUX DU SUJET",
+              "Section vide ou presque vide: ## 2. ANALYSE APPROFONDIE",
+              "Placeholder trouvé: [contexte spécifique dans ce domaine]"
+            ],
+            "sources": [
+              "Seulement 0 source(s) trouvée(s), minimum 4 requis"
+            ],
+            "annexes": [
+              "Seulement 0 article(s) annexe(s), minimum 3 recommandé"
+            ]
+          }
+        },
+        {
+          "file": "developpement-web/web-accessibilite-guide-pratique.md",
+          "issues": {
+            "structure": [
+              "Section 6 dupliquée: BONNES PRATIQUES",
+              "Section 5 dupliquée: ARTICLES ANNEXES"
+            ],
+            "incomplete": [
+              "Section vide ou presque vide: ## 1. FONDAMENTAUX DU SUJET",
+              "Section vide ou presque vide: ## 2. ANALYSE APPROFONDIE",
+              "Placeholder trouvé: [contexte spécifique dans ce domaine]"
+            ],
+            "sources": [
+              "Seulement 0 source(s) trouvée(s), minimum 4 requis"
+            ],
+            "annexes": [
+              "Seulement 0 article(s) annexe(s), minimum 3 recommandé"
+            ]
+          }
+        },
+        {
+          "file": "developpement-web/web-javascript-modern.md",
+          "issues": {
+            "structure": [
+              "Section 6 dupliquée: BONNES PRATIQUES",
+              "Section 5 dupliquée: ARTICLES ANNEXES"
+            ],
+            "incomplete": [
+              "Section vide ou presque vide: ## 1. FONDAMENTAUX DU SUJET",
+              "Section vide ou presque vide: ## 2. ANALYSE APPROFONDIE",
+              "Placeholder trouvé: [contexte spécifique dans ce domaine]"
+            ],
+            "sources": [
+              "Seulement 0 source(s) trouvée(s), minimum 4 requis"
+            ],
+            "annexes": [
+              "Seulement 0 article(s) annexe(s), minimum 3 recommandé"
+            ]
+          }
+        },
+        {
+          "file": "developpement-web/web-tendances-2024.md",
+          "issues": {
+            "structure": [
+              "Section 4 dupliquée: 1 Solutions Disponibles",
+              "Section 6 dupliquée: BONNES PRATIQUES",
+              "Section 5 dupliquée: ARTICLES ANNEXES"
+            ],
+            "incomplete": [
+              "Section vide ou presque vide: ## 1. FONDAMENTAUX DU SUJET",
+              "Section vide ou presque vide: ## 2. ANALYSE APPROFONDIE",
+              "Placeholder trouvé: [contexte spécifique dans ce domaine]"
+            ],
+            "sources": [
+              "Seulement 0 source(s) trouvée(s), minimum 4 requis"
+            ],
+            "annexes": [
+              "Seulement 0 article(s) annexe(s), minimum 3 recommandé"
+            ]
+          }
+        },
+        {
+          "file": "innovation-technologies/nouvelles-tendances-developpement-web.md",
+          "issues": {
+            "structure": [
+              "Section 6 dupliquée: BONNES PRATIQUES",
+              "Section 5 dupliquée: ARTICLES ANNEXES"
+            ],
+            "incomplete": [
+              "Section vide ou presque vide: ## 1. FONDAMENTAUX DU SUJET",
+              "Section vide ou presque vide: ## 2. ANALYSE APPROFONDIE",
+              "Placeholder trouvé: [contexte spécifique dans ce domaine]"
+            ],
+            "sources": [
+              "Seulement 0 source(s) trouvée(s), minimum 4 requis"
+            ],
+            "annexes": [
+              "Seulement 0 article(s) annexe(s), minimum 3 recommandé"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "domain": "gestion-connaissances",
+      "total": 1,
+      "withIssues": 1,
+      "articles": [
+        {
+          "file": "gestion-connaissances/gestion-connaissances-organisation.md",
+          "issues": {
+            "structure": [
+              "Section 1 dupliquée: FONDAMENTAUX DE LA GESTION DES CONNAISSANCES",
+              "Section 6 dupliquée: BONNES PRATIQUES ET RÈGLES D'OR",
+              "Section 5 dupliquée: ARTICLES ANNEXES"
+            ],
+            "incomplete": [
+              "Section vide ou presque vide: ## 1. FONDAMENTAUX DU SUJET",
+              "Section vide ou presque vide: ## 2. ANALYSE APPROFONDIE",
+              "Placeholder trouvé: [contexte spécifique dans ce domaine]"
+            ],
+            "sources": [
+              "Seulement 0 source(s) trouvée(s), minimum 4 requis"
+            ],
+            "annexes": [
+              "Seulement 0 article(s) annexe(s), minimum 3 recommandé"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "domain": "gestion-projet",
+      "total": 8,
+      "withIssues": 8,
+      "articles": [
+        {
+          "file": "gestion-projet/agile-scrum-methodologies.md",
+          "issues": {
+            "structure": [
+              "Section 1 dupliquée: LE PARADOXE DE L'AGILE MODERNE",
+              "Section 2 dupliquée: MA MÉTHODOLOGIE \"A.G.I.L.E. P.R.O.J.E.T.\" - FRAMEWORK ÉPROUVÉ",
+              "Section 3 dupliquée: LES 3 ERREURS FATALES QUE J'AI COMMISES (ET CORRIGÉES)",
+              "Section 4 dupliquée: OUTILS CONCRETS QUE J'UTILISE AU QUOTIDIEN",
+              "Section 1 dupliquée: 0. CONCLUSION : VOTRE PLAN D'ACTION IMMÉDIAT",
+              "Section 5 dupliquée: ARTICLES ANNEXES",
+              "Section 6 dupliquée: SOURCES ET RÉFÉRENCES"
+            ],
+            "incomplete": [
+              "Section vide ou presque vide: ## 1. FONDAMENTAUX DU SUJET",
+              "Section vide ou presque vide: ## 2. ANALYSE APPROFONDIE"
+            ],
+            "sources": [
+              "Seulement 0 source(s) trouvée(s), minimum 4 requis"
+            ],
+            "annexes": [
+              "Seulement 0 article(s) annexe(s), minimum 3 recommandé"
+            ]
+          }
+        },
+        {
+          "file": "gestion-projet/gestion-performance-equipe.md",
+          "issues": {
+            "structure": [
+              "Section 1 dupliquée: LE PARADOXE DE LA PERFORMANCE D'ÉQUIPE",
+              "Section 2 dupliquée: MA MÉTHODOLOGIE \"P.E.R.F.O.R.M.A.N.C.E.\" - FRAMEWORK ÉPROUVÉ",
+              "Section 3 dupliquée: LES 3 ERREURS FATALES QUE J'AI COMMISES (ET CORRIGÉES)",
+              "Section 4 dupliquée: OUTILS CONCRETS QUE J'UTILISE AU QUOTIDIEN",
+              "Section 1 dupliquée: 0. CONCLUSION : VOTRE PLAN D'ACTION IMMÉDIAT",
+              "Section 5 dupliquée: ARTICLES ANNEXES",
+              "Section 6 dupliquée: SOURCES ET RÉFÉRENCES"
+            ],
+            "incomplete": [
+              "Section vide ou presque vide: ## 1. FONDAMENTAUX DU SUJET",
+              "Section vide ou presque vide: ## 2. ANALYSE APPROFONDIE"
+            ],
+            "sources": [
+              "Seulement 0 source(s) trouvée(s), minimum 4 requis"
+            ],
+            "annexes": [
+              "Seulement 0 article(s) annexe(s), minimum 3 recommandé"
+            ]
+          }
+        },
+        {
+          "file": "gestion-projet/gestion-performance-evaluation.md",
+          "issues": {
+            "structure": [
+              "Section 1 dupliquée: LE PARADOXE DE L'ÉVALUATION MODERNE",
+              "Section 2 dupliquée: MA MÉTHODOLOGIE \"É.V.A.L.U.E.R.\" - FRAMEWORK ÉPROUVÉ",
+              "Section 3 dupliquée: LES 3 ERREURS FATALES QUE J'AI COMMISES (ET CORRIGÉES)",
+              "Section 4 dupliquée: OUTILS CONCRETS QUE J'UTILISE AU QUOTIDIEN",
+              "Section 1 dupliquée: 0. CONCLUSION : VOTRE PLAN D'ACTION IMMÉDIAT",
+              "Section 5 dupliquée: ARTICLES ANNEXES",
+              "Section 6 dupliquée: SOURCES ET RÉFÉRENCES"
+            ],
+            "incomplete": [
+              "Section vide ou presque vide: ## 1. FONDAMENTAUX DU SUJET",
+              "Section vide ou presque vide: ## 2. ANALYSE APPROFONDIE"
+            ],
+            "sources": [
+              "Seulement 0 source(s) trouvée(s), minimum 4 requis"
+            ],
+            "annexes": [
+              "Seulement 0 article(s) annexe(s), minimum 3 recommandé"
+            ]
+          }
+        },
+        {
+          "file": "gestion-projet/gestion-projet-agile-meilleures-pratiques.md",
+          "issues": {
+            "structure": [
+              "Section 6 dupliquée: BONNES PRATIQUES",
+              "Section 5 dupliquée: ARTICLES ANNEXES"
+            ],
+            "incomplete": [
+              "Section vide ou presque vide: ## 1. FONDAMENTAUX DU SUJET",
+              "Section vide ou presque vide: ## 2. ANALYSE APPROFONDIE",
+              "Placeholder trouvé: [contexte spécifique dans ce domaine]"
+            ],
+            "sources": [
+              "Seulement 0 source(s) trouvée(s), minimum 4 requis"
+            ],
+            "annexes": [
+              "Seulement 0 article(s) annexe(s), minimum 3 recommandé"
+            ]
+          }
+        },
+        {
+          "file": "gestion-projet/gestion-projet-agile.md",
+          "issues": {
+            "structure": [
+              "Section 1 dupliquée: FONDAMENTAUX DE L'AGILITÉ",
+              "Section 6 dupliquée: BONNES PRATIQUES D'EXCELLENCE",
+              "Section 5 dupliquée: ARTICLES ANNEXES"
+            ],
+            "incomplete": [
+              "Section vide ou presque vide: ## 1. FONDAMENTAUX DU SUJET",
+              "Section vide ou presque vide: ## 2. ANALYSE APPROFONDIE",
+              "Placeholder trouvé: [contexte spécifique dans ce domaine]"
+            ],
+            "sources": [
+              "Seulement 0 source(s) trouvée(s), minimum 4 requis"
+            ],
+            "annexes": [
+              "Seulement 0 article(s) annexe(s), minimum 3 recommandé"
+            ]
+          }
+        },
+        {
+          "file": "gestion-projet/gestion-projet-performance.md",
+          "issues": {
+            "structure": [
+              "Section 6 dupliquée: BONNES PRATIQUES",
+              "Section 5 dupliquée: ARTICLES ANNEXES"
+            ],
+            "incomplete": [
+              "Section vide ou presque vide: ## 1. FONDAMENTAUX DU SUJET",
+              "Section vide ou presque vide: ## 2. ANALYSE APPROFONDIE",
+              "Placeholder trouvé: [contexte spécifique dans ce domaine]"
+            ],
+            "sources": [
+              "Seulement 0 source(s) trouvée(s), minimum 4 requis"
+            ],
+            "annexes": [
+              "Seulement 0 article(s) annexe(s), minimum 3 recommandé"
+            ]
+          }
+        },
+        {
+          "file": "gestion-projet/gestion-projet-risques.md",
+          "issues": {
+            "structure": [
+              "Section 1 dupliquée: LE PARADOXE DE LA GESTION DES RISQUES MODERNE",
+              "Section 2 dupliquée: MA MÉTHODOLOGIE \"R.I.S.Q.U.E.S.\" - FRAMEWORK ÉPROUVÉ",
+              "Section 3 dupliquée: LES 3 ERREURS FATALES QUE J'AI COMMISES (ET CORRIGÉES)",
+              "Section 4 dupliquée: OUTILS CONCRETS QUE J'UTILISE AU QUOTIDIEN",
+              "Section 1 dupliquée: 0. CONCLUSION : VOTRE PLAN D'ACTION IMMÉDIAT",
+              "Section 5 dupliquée: ARTICLES ANNEXES",
+              "Section 6 dupliquée: SOURCES ET RÉFÉRENCES"
+            ],
+            "incomplete": [
+              "Section vide ou presque vide: ## 1. FONDAMENTAUX DU SUJET",
+              "Section vide ou presque vide: ## 2. ANALYSE APPROFONDIE"
+            ],
+            "sources": [
+              "Seulement 0 source(s) trouvée(s), minimum 4 requis"
+            ],
+            "annexes": [
+              "Seulement 0 article(s) annexe(s), minimum 3 recommandé"
+            ]
+          }
+        },
+        {
+          "file": "gestion-projet/gestion-risques-projet.md",
+          "issues": {
+            "structure": [
+              "Section 6 dupliquée: BONNES PRATIQUES",
+              "Section 5 dupliquée: ARTICLES ANNEXES"
+            ],
+            "incomplete": [
+              "Section vide ou presque vide: ## 1. FONDAMENTAUX DU SUJET",
+              "Section vide ou presque vide: ## 2. ANALYSE APPROFONDIE",
+              "Placeholder trouvé: [contexte spécifique dans ce domaine]"
+            ],
+            "sources": [
+              "Seulement 0 source(s) trouvée(s), minimum 4 requis"
+            ],
+            "annexes": [
+              "Seulement 0 article(s) annexe(s), minimum 3 recommandé"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "domain": "gestion-talents",
+      "total": 12,
+      "withIssues": 12,
+      "articles": [
+        {
+          "file": "gestion-talents/gestion-competences-developpement.md",
+          "issues": {
+            "structure": [
+              "Section 1 dupliquée: Écosystème du Développeme",
+              "Section 2 dupliquée: Stratégies d'Évaluation des Compétences",
+              "Section 3 dupliquée: Plans de Développement Personnalisés",
+              "Section 4 dupliquée: Stratégies de Rétention et Motivation",
+              "Section 5 dupliquée: ARTICLES ANNEXES",
+              "Section 6 dupliquée: SOURCES ET RÉFÉRENCES"
+            ],
+            "incomplete": [
+              "Section vide ou presque vide: ## 1. FONDAMENTAUX DU SUJET",
+              "Section vide ou presque vide: ## 2. ANALYSE APPROFONDIE",
+              "Placeholder trouvé: [contexte spécifique dans ce domaine]"
+            ],
+            "sources": [
+              "Seulement 0 source(s) trouvée(s), minimum 4 requis"
+            ],
+            "annexes": [
+              "Seulement 0 article(s) annexe(s), minimum 3 recommandé"
+            ]
+          }
+        },
+        {
+          "file": "gestion-talents/gestion-conflits-equipe.md",
+          "issues": {
+            "structure": [
+              "Section 1 dupliquée: Écosystème des Conflits d",
+              "Section 2 dupliquée: Typologie des Conflits",
+              "Section 3 dupliquée: Stratégies de Prévention",
+              "Section 4 dupliquée: Techniques de Résolution",
+              "Section 5 dupliquée: ARTICLES ANNEXES",
+              "Section 6 dupliquée: SOURCES ET RÉFÉRENCES"
+            ],
+            "incomplete": [
+              "Section vide ou presque vide: ## 1. FONDAMENTAUX DU SUJET",
+              "Section vide ou presque vide: ## 2. ANALYSE APPROFONDIE",
+              "Placeholder trouvé: [contexte spécifique dans ce domaine]"
+            ],
+            "sources": [
+              "Seulement 0 source(s) trouvée(s), minimum 4 requis"
+            ],
+            "annexes": [
+              "Seulement 0 article(s) annexe(s), minimum 3 recommandé"
+            ]
+          }
+        },
+        {
+          "file": "gestion-talents/gestion-talents-attraction.md",
+          "issues": {
+            "structure": [
+              "Section 1 dupliquée: FONDAMENTAUX DE L'ATTRACTION DES TALENTS",
+              "Section 6 dupliquée: BONNES PRATIQUES ET RÈGLES D'OR",
+              "Section 5 dupliquée: ARTICLES ANNEXES"
+            ],
+            "incomplete": [
+              "Section vide ou presque vide: ## 1. FONDAMENTAUX DU SUJET",
+              "Section vide ou presque vide: ## 2. ANALYSE APPROFONDIE",
+              "Placeholder trouvé: [contexte spécifique dans ce domaine]"
+            ],
+            "sources": [
+              "Seulement 0 source(s) trouvée(s), minimum 4 requis"
+            ],
+            "annexes": [
+              "Seulement 0 article(s) annexe(s), minimum 3 recommandé"
+            ]
+          }
+        },
+        {
+          "file": "gestion-talents/gestion-talents-developpement.md",
+          "issues": {
+            "structure": [
+              "Section 1 dupliquée: FONDAMENTAUX DU DÉVELOPPEMENT DES TALENTS",
+              "Section 6 dupliquée: BONNES PRATIQUES ET RÈGLES D'OR",
+              "Section 5 dupliquée: ARTICLES ANNEXES"
+            ],
+            "incomplete": [
+              "Section vide ou presque vide: ## 1. FONDAMENTAUX DU SUJET",
+              "Section vide ou presque vide: ## 2. ANALYSE APPROFONDIE",
+              "Placeholder trouvé: [contexte spécifique dans ce domaine]"
+            ],
+            "sources": [
+              "Seulement 0 source(s) trouvée(s), minimum 4 requis"
+            ],
+            "annexes": [
+              "Seulement 0 article(s) annexe(s), minimum 3 recommandé"
+            ]
+          }
+        },
+        {
+          "file": "gestion-talents/gestion-talents-fidelisation.md",
+          "issues": {
+            "structure": [
+              "Section 1 dupliquée: COMPRENDRE LA FIDÉLISATION DES TALENTS",
+              "Section 2 dupliquée: LES PILIERS DE LA FIDÉLISATION DES TALENTS",
+              "Section 3 dupliquée: STRATÉGIES D'EXCELLENCE POUR LA FIDÉLISATION",
+              "Section 6 dupliquée: BONNES PRATIQUES : MES RECOMMANDATIONS EXPERTES",
+              "Section 5 dupliquée: ARTICLES ANNEXES"
+            ],
+            "incomplete": [
+              "Section vide ou presque vide: ## 1. FONDAMENTAUX DU SUJET",
+              "Section vide ou presque vide: ## 2. ANALYSE APPROFONDIE",
+              "Placeholder trouvé: [contexte spécifique dans ce domaine]"
+            ],
+            "sources": [
+              "Seulement 0 source(s) trouvée(s), minimum 4 requis"
+            ],
+            "annexes": [
+              "Seulement 0 article(s) annexe(s), minimum 3 recommandé"
+            ]
+          }
+        },
+        {
+          "file": "gestion-talents/gestion-talents-formation.md",
+          "issues": {
+            "structure": [
+              "Section 1 dupliquée: LE PARADOXE DE LA FORMATION DES TALENTS MODERNE",
+              "Section 2 dupliquée: MA MÉTHODOLOGIE \"F.O.R.M.A.T.I.O.N.\" - FRAMEWORK ÉPROUVÉ",
+              "Section 3 dupliquée: LES 3 ERREURS FATALES QUE J'AI COMMISES (ET CORRIGÉES)",
+              "Section 4 dupliquée: OUTILS CONCRETS QUE J'UTILISE AU QUOTIDIEN",
+              "Section 1 dupliquée: 0. CONCLUSION : VOTRE PLAN D'ACTION IMMÉDIAT",
+              "Section 5 dupliquée: ARTICLES ANNEXES",
+              "Section 6 dupliquée: SOURCES ET RÉFÉRENCES"
+            ],
+            "incomplete": [
+              "Section vide ou presque vide: ## 1. FONDAMENTAUX DU SUJET",
+              "Section vide ou presque vide: ## 2. ANALYSE APPROFONDIE"
+            ],
+            "sources": [
+              "Seulement 0 source(s) trouvée(s), minimum 4 requis"
+            ],
+            "annexes": [
+              "Seulement 0 article(s) annexe(s), minimum 3 recommandé"
+            ]
+          }
+        },
+        {
+          "file": "gestion-talents/gestion-talents-performance.md",
+          "issues": {
+            "structure": [
+              "Section 1 dupliquée: LE PARADOXE DE LA PERFORMANCE DES TALENTS MODERNE",
+              "Section 2 dupliquée: MA MÉTHODOLOGIE \"P.E.R.F.O.R.M.A.N.C.E.\" - FRAMEWORK ÉPROUVÉ",
+              "Section 3 dupliquée: LES 3 ERREURS FATALES QUE J'AI COMMISES (ET CORRIGÉES)",
+              "Section 4 dupliquée: OUTILS CONCRETS QUE J'UTILISE AU QUOTIDIEN",
+              "Section 1 dupliquée: 0. CONCLUSION : VOTRE PLAN D'ACTION IMMÉDIAT",
+              "Section 5 dupliquée: ARTICLES ANNEXES",
+              "Section 6 dupliquée: SOURCES ET RÉFÉRENCES"
+            ],
+            "incomplete": [
+              "Section vide ou presque vide: ## 1. FONDAMENTAUX DU SUJET",
+              "Section vide ou presque vide: ## 2. ANALYSE APPROFONDIE"
+            ],
+            "sources": [
+              "Seulement 0 source(s) trouvée(s), minimum 4 requis"
+            ],
+            "annexes": [
+              "Seulement 0 article(s) annexe(s), minimum 3 recommandé"
+            ]
+          }
+        },
+        {
+          "file": "gestion-talents/gestion-talents-recrutement.md",
+          "issues": {
+            "structure": [
+              "Section 1 dupliquée: FONDAMENTAUX DU RECRUTEMENT MODERNE",
+              "Section 6 dupliquée: BONNES PRATIQUES ET RÈGLES D'OR DU RECRUTEMENT MODERNE",
+              "Section 5 dupliquée: ARTICLES ANNEXES"
+            ],
+            "incomplete": [
+              "Section vide ou presque vide: ## 1. FONDAMENTAUX DU SUJET",
+              "Section vide ou presque vide: ## 2. ANALYSE APPROFONDIE",
+              "Placeholder trouvé: [contexte spécifique dans ce domaine]"
+            ],
+            "sources": [
+              "Seulement 0 source(s) trouvée(s), minimum 4 requis"
+            ],
+            "annexes": [
+              "Seulement 0 article(s) annexe(s), minimum 3 recommandé"
+            ]
+          }
+        },
+        {
+          "file": "gestion-talents/gestion-talents-remuneration.md",
+          "issues": {
+            "structure": [
+              "Section 1 dupliquée: LE PARADOXE DE LA RÉMUNÉRATION DES TALENTS MODERNE",
+              "Section 2 dupliquée: ANALYSE APPROFONDIE",
+              "Section 6 dupliquée: BONNES PRATIQUES",
+              "Section 5 dupliquée: ARTICLES ANNEXES"
+            ],
+            "incomplete": [
+              "Section vide ou presque vide: ## 1. FONDAMENTAUX DU SUJET",
+              "Section vide ou presque vide: ## 2. ANALYSE APPROFONDIE"
+            ],
+            "sources": [
+              "Seulement 0 source(s) trouvée(s), minimum 4 requis"
+            ],
+            "annexes": [
+              "Seulement 0 article(s) annexe(s), minimum 3 recommandé"
+            ]
+          }
+        },
+        {
+          "file": "gestion-talents/gestion-talents-retention.md",
+          "issues": {
+            "structure": [
+              "Section 1 dupliquée: LE PARADOXE DE LA RÉTENTION DES TALENTS MODERNE",
+              "Section 2 dupliquée: MA MÉTHODOLOGIE \"R.É.T.E.N.T.I.O.N.\" - FRAMEWORK ÉPROUVÉ",
+              "Section 3 dupliquée: LES 3 ERREURS FATALES QUE J'AI COMMISES (ET CORRIGÉES)",
+              "Section 4 dupliquée: OUTILS CONCRETS QUE J'UTILISE AU QUOTIDIEN",
+              "Section 1 dupliquée: 0. CONCLUSION : VOTRE PLAN D'ACTION IMMÉDIAT",
+              "Section 5 dupliquée: ARTICLES ANNEXES",
+              "Section 6 dupliquée: SOURCES ET RÉFÉRENCES"
+            ],
+            "incomplete": [
+              "Section vide ou presque vide: ## 1. FONDAMENTAUX DU SUJET",
+              "Section vide ou presque vide: ## 2. ANALYSE APPROFONDIE"
+            ],
+            "sources": [
+              "Seulement 0 source(s) trouvée(s), minimum 4 requis"
+            ],
+            "annexes": [
+              "Seulement 0 article(s) annexe(s), minimum 3 recommandé"
+            ]
+          }
+        },
+        {
+          "file": "gestion-talents/gestion-talents-succession.md",
+          "issues": {
+            "structure": [
+              "Section 1 dupliquée: LE PARADOXE DE LA PLANIFICATION DE SUCCESSION MODERNE",
+              "Section 2 dupliquée: MA MÉTHODOLOGIE \"S.U.C.C.E.S.S.I.O.N.\" - FRAMEWORK ÉPROUVÉ",
+              "Section 6 dupliquée: MES 5 INDICATEURS DE SUCCESSION QUI COMPTENT VRAIMENT",
+              "Section 1 dupliquée: 0. CONCLUSION : VOTRE PLAN D'ACTION IMMÉDIAT",
+              "Section 3 dupliquée: STRATÉGIES ET MÉTHODOLOGIES",
+              "Section 4 dupliquée: OUTILS ET TECHNOLOGIES",
+              "Section 5 dupliquée: DÉFIS ET SOLUTIONS",
+              "Section 6 dupliquée: BONNES PRATIQUES",
+              "Section 7 dupliquée: CONCLUSION SYNTHÉTIQUE",
+              "Section 8 dupliquée: ÉLÉMENTS COMPLÉMENTAIRES",
+              "Section 5 dupliquée: ARTICLES ANNEXES"
+            ],
+            "incomplete": [
+              "Section vide ou presque vide: ## 1. FONDAMENTAUX DU SUJET",
+              "Section vide ou presque vide: ## 2. ANALYSE APPROFONDIE"
+            ],
+            "sources": [
+              "Seulement 0 source(s) trouvée(s), minimum 4 requis"
+            ],
+            "annexes": [
+              "Seulement 0 article(s) annexe(s), minimum 3 recommandé"
+            ]
+          }
+        },
+        {
+          "file": "gestion-talents/gestion-talents-valuation.md",
+          "issues": {
+            "structure": [
+              "Section 1 dupliquée: LE PARADOXE DE L'ÉVALUATION DES TALENTS MODERNE",
+              "Section 2 dupliquée: MA MÉTHODOLOGIE \"V.A.L.O.R.I.S.A.T.I.O.N.\" - FRAMEWORK ÉPROUVÉ",
+              "Section 6 dupliquée: MES 5 INDICATEURS DE VALORISATION QUI COMPTENT VRAIMENT",
+              "Section 1 dupliquée: 0. CONCLUSION : VOTRE PLAN D'ACTION IMMÉDIAT",
+              "Section 3 dupliquée: STRATÉGIES ET MÉTHODOLOGIES",
+              "Section 4 dupliquée: OUTILS ET TECHNOLOGIES",
+              "Section 5 dupliquée: DÉFIS ET SOLUTIONS",
+              "Section 6 dupliquée: BONNES PRATIQUES",
+              "Section 7 dupliquée: CONCLUSION SYNTHÉTIQUE",
+              "Section 8 dupliquée: ÉLÉMENTS COMPLÉMENTAIRES",
+              "Section 5 dupliquée: ARTICLES ANNEXES"
+            ],
+            "incomplete": [
+              "Section vide ou presque vide: ## 1. FONDAMENTAUX DU SUJET",
+              "Section vide ou presque vide: ## 2. ANALYSE APPROFONDIE"
+            ],
+            "sources": [
+              "Seulement 0 source(s) trouvée(s), minimum 4 requis"
+            ],
+            "annexes": [
+              "Seulement 0 article(s) annexe(s), minimum 3 recommandé"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "domain": "innovation-technologies",
+      "total": 1,
+      "withIssues": 1,
+      "articles": [
+        {
+          "file": "innovation-technologies/ia-transformation-societe-2024.md",
+          "issues": {
+            "structure": [
+              "Section 1 dupliquée: FONDAMENTAUX DE L'INTELLIGENCE ARTIFICIELLE ET DE SON IMPACT SOCIÉTAL",
+              "Section 4 dupliquée: ÉCOSYSTÈME TECHNOLOGIQUE ET OUTILS IA",
+              "Section 6 dupliquée: BONNES PRATIQUES ET RÈGLES D'OR",
+              "Section 5 dupliquée: ARTICLES ANNEXES"
+            ],
+            "incomplete": [
+              "Section vide ou presque vide: ## 1. FONDAMENTAUX DU SUJET",
+              "Section vide ou presque vide: ## 2. ANALYSE APPROFONDIE",
+              "Placeholder trouvé: [contexte spécifique dans ce domaine]"
+            ],
+            "sources": [
+              "Seulement 0 source(s) trouvée(s), minimum 4 requis"
+            ],
+            "annexes": [
+              "Seulement 0 article(s) annexe(s), minimum 3 recommandé"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "domain": "leadership-management",
+      "total": 3,
+      "withIssues": 3,
+      "articles": [
+        {
+          "file": "leadership-management/importance-leadership.md",
+          "issues": {
+            "structure": [
+              "Section 1 dupliquée: FONDAMENTAUX DU LEADERSHIP MODERNE",
+              "Section 6 dupliquée: BONNES PRATIQUES ET RÈGLES D'OR DU LEADERSHIP MODERNE",
+              "Section 5 dupliquée: ARTICLES ANNEXES"
+            ],
+            "incomplete": [
+              "Section vide ou presque vide: ## 1. FONDAMENTAUX DU SUJET",
+              "Section vide ou presque vide: ## 2. ANALYSE APPROFONDIE",
+              "Placeholder trouvé: [contexte spécifique dans ce domaine]"
+            ],
+            "sources": [
+              "Seulement 0 source(s) trouvée(s), minimum 4 requis"
+            ],
+            "annexes": [
+              "Seulement 0 article(s) annexe(s), minimum 3 recommandé"
+            ]
+          }
+        },
+        {
+          "file": "leadership-management/leadership-equipes-performance.md",
+          "issues": {
+            "structure": [
+              "Section 1 dupliquée: FONDAMENTAUX DU LEADERSHIP MODERNE",
+              "Section 4 dupliquée: OUTILS ET TECHNIQUES DE LEADERSHIP",
+              "Section 6 dupliquée: BONNES PRATIQUES ET RÈGLES D'OR",
+              "Section 5 dupliquée: ARTICLES ANNEXES"
+            ],
+            "incomplete": [
+              "Section vide ou presque vide: ## 1. FONDAMENTAUX DU SUJET",
+              "Section vide ou presque vide: ## 2. ANALYSE APPROFONDIE",
+              "Placeholder trouvé: [contexte spécifique dans ce domaine]"
+            ],
+            "sources": [
+              "Seulement 0 source(s) trouvée(s), minimum 4 requis"
+            ],
+            "annexes": [
+              "Seulement 0 article(s) annexe(s), minimum 3 recommandé"
+            ]
+          }
+        },
+        {
+          "file": "leadership-management/management-diversite-inclusion.md",
+          "issues": {
+            "structure": [
+              "Section 1 dupliquée: COMPRENDRE LA VRAIE DIVERSITÉ AU-DELÀ DES CLICHÉS",
+              "Section 2 dupliquée: MA MÉTHODOLOGIE ÉPROUVÉE : LE FRAMEWORK \"C.A.R.E.\"",
+              "Section 3 dupliquée: LES 3 ERREURS FATALES QUE J'AI COMMISES (ET CORRIGÉES)",
+              "Section 4 dupliquée: OUTILS CONCRETS QUE J'UTILISE AU QUOTIDIEN",
+              "Section 1 dupliquée: 0. CONCLUSION : VOTRE PLAN D'ACTION IMMÉDIAT",
+              "Section 5 dupliquée: ARTICLES ANNEXES",
+              "Section 6 dupliquée: SOURCES ET RÉFÉRENCES"
+            ],
+            "incomplete": [
+              "Section vide ou presque vide: ## 1. FONDAMENTAUX DU SUJET",
+              "Section vide ou presque vide: ## 2. ANALYSE APPROFONDIE"
+            ],
+            "sources": [
+              "Seulement 0 source(s) trouvée(s), minimum 4 requis"
+            ],
+            "annexes": [
+              "Seulement 0 article(s) annexe(s), minimum 3 recommandé"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "domain": "marketing-communication",
+      "total": 1,
+      "withIssues": 1,
+      "articles": [
+        {
+          "file": "marketing-communication/marketing-digital-strategies.md",
+          "issues": {
+            "structure": [
+              "Section 1 dupliquée: FONDAMENTAUX DU MARKETING DIGITAL MODERNE",
+              "Section 6 dupliquée: BONNES PRATIQUES ET RÈGLES D'OR",
+              "Section 5 dupliquée: ARTICLES ANNEXES"
+            ],
+            "incomplete": [
+              "Section vide ou presque vide: ## 1. FONDAMENTAUX DU SUJET",
+              "Section vide ou presque vide: ## 2. ANALYSE APPROFONDIE",
+              "Placeholder trouvé: [contexte spécifique dans ce domaine]"
+            ],
+            "sources": [
+              "Seulement 0 source(s) trouvée(s), minimum 4 requis"
+            ],
+            "annexes": [
+              "Seulement 0 article(s) annexe(s), minimum 3 recommandé"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "domain": "outils-techniques",
+      "total": 3,
+      "withIssues": 3,
+      "articles": [
+        {
+          "file": "outils-techniques/mermaid-example.md",
+          "issues": {
+            "structure": [
+              "Section 1 dupliquée: FONDAMENTAUX DE MERMAID",
+              "Section 2 dupliquée: SYNTAXE ET EXEMPLES PRATIQUES",
+              "Section 4 dupliquée: OUTILS ET INTÉGRATIONS",
+              "Section 6 dupliquée: CONCLUSION ET RECOMMANDATIONS",
+              "Section 5 dupliquée: ARTICLES ANNEXES",
+              "Section 6 dupliquée: SOURCES ET RÉFÉRENCES"
+            ],
+            "incomplete": [
+              "Section vide ou presque vide: ## 1. FONDAMENTAUX DU SUJET",
+              "Section vide ou presque vide: ## 2. ANALYSE APPROFONDIE",
+              "Placeholder trouvé: [contexte spécifique dans ce domaine]"
+            ],
+            "sources": [
+              "Seulement 0 source(s) trouvée(s), minimum 4 requis"
+            ],
+            "annexes": [
+              "Seulement 0 article(s) annexe(s), minimum 3 recommandé"
+            ]
+          }
+        },
+        {
+          "file": "outils-techniques/pillcolor-guide.md",
+          "issues": {
+            "structure": [
+              "Section 1 dupliquée: FONDAMENTAUX DES PILLS",
+              "Section 2 dupliquée: PSYCHOLOGIE DES COULEURS ET CLASSIFICATION",
+              "Section 3 dupliquée: MÉTHODOLOGIE DE CONCEPTION",
+              "Section 6 dupliquée: MÉTRIQUES ET OPTIMISATION",
+              "Section 5 dupliquée: ARTICLES ANNEXES",
+              "Section 6 dupliquée: SOURCES ET RÉFÉRENCES"
+            ],
+            "incomplete": [
+              "Section vide ou presque vide: ## 1. FONDAMENTAUX DU SUJET",
+              "Section vide ou presque vide: ## 2. ANALYSE APPROFONDIE",
+              "Placeholder trouvé: [contexte spécifique dans ce domaine]"
+            ],
+            "sources": [
+              "Seulement 0 source(s) trouvée(s), minimum 4 requis"
+            ],
+            "annexes": [
+              "Seulement 0 article(s) annexe(s), minimum 3 recommandé"
+            ]
+          }
+        },
+        {
+          "file": "outils-techniques/visualisations-mermaid.md",
+          "issues": {
+            "structure": [
+              "Section 1 dupliquée: TECHNIQUES AVANCÉES DE VI",
+              "Section 2 dupliquée: PERSONNALISATION ET STYLING",
+              "Section 3 dupliquée: INTÉGRATION ET AUTOMATISATION",
+              "Section 4 dupliquée: DÉFIS MAJEURS ET SOLUTIONS INNOVANTES",
+              "Section 5 dupliquée: CAS D'USAGE AVANCÉS",
+              "Section 5 dupliquée: ARTICLES ANNEXES",
+              "Section 6 dupliquée: SOURCES ET RÉFÉRENCES"
+            ],
+            "incomplete": [
+              "Section vide ou presque vide: ## 1. FONDAMENTAUX DU SUJET",
+              "Section vide ou presque vide: ## 2. ANALYSE APPROFONDIE",
+              "Placeholder trouvé: [contexte spécifique dans ce domaine]"
+            ],
+            "sources": [
+              "Seulement 0 source(s) trouvée(s), minimum 4 requis"
+            ],
+            "annexes": [
+              "Seulement 0 article(s) annexe(s), minimum 3 recommandé"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "domain": "productivite-methodes",
+      "total": 2,
+      "withIssues": 2,
+      "articles": [
+        {
+          "file": "productivite-methodes/deep-work.md",
+          "issues": {
+            "structure": null,
+            "incomplete": [
+              "Section vide ou presque vide: ## 1. FONDAMENTAUX DU SUJET",
+              "Section vide ou presque vide: ## 2. ANALYSE APPROFONDIE",
+              "Placeholder trouvé: [contexte spécifique dans ce domaine]"
+            ],
+            "sources": [
+              "Seulement 0 source(s) trouvée(s), minimum 4 requis"
+            ],
+            "annexes": [
+              "Seulement 0 article(s) annexe(s), minimum 3 recommandé"
+            ]
+          }
+        },
+        {
+          "file": "productivite-methodes/gestion-priorites-efficacite.md",
+          "issues": {
+            "structure": [
+              "Section 1 dupliquée: FONDAMENTAUX DE LA GESTION DES PRIORITÉS",
+              "Section 6 dupliquée: BONNES PRATIQUES ET RÈGLES D'OR",
+              "Section 5 dupliquée: ARTICLES ANNEXES"
+            ],
+            "incomplete": [
+              "Section vide ou presque vide: ## 1. FONDAMENTAUX DU SUJET",
+              "Section vide ou presque vide: ## 2. ANALYSE APPROFONDIE",
+              "Placeholder trouvé: [contexte spécifique dans ce domaine]",
+              "Placeholder trouvé: Todo"
+            ],
+            "sources": [
+              "Seulement 0 source(s) trouvée(s), minimum 4 requis"
+            ],
+            "annexes": [
+              "Seulement 0 article(s) annexe(s), minimum 3 recommandé"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "domain": "qualite-process",
+      "total": 2,
+      "withIssues": 2,
+      "articles": [
+        {
+          "file": "qualite-process/gestion-qualite-amelioration.md",
+          "issues": {
+            "structure": [
+              "Section 5 dupliquée: ARTICLES ANNEXES"
+            ],
+            "incomplete": [
+              "Section vide ou presque vide: ## 1. FONDAMENTAUX DU SUJET",
+              "Section vide ou presque vide: ## 2. ANALYSE APPROFONDIE"
+            ],
+            "sources": [
+              "Seulement 0 source(s) trouvée(s), minimum 4 requis"
+            ],
+            "annexes": [
+              "Seulement 0 article(s) annexe(s), minimum 3 recommandé"
+            ]
+          }
+        },
+        {
+          "file": "qualite-process/gestion-qualite-certification.md",
+          "issues": {
+            "structure": [
+              "Section 1 dupliquée: Écosystème des Certificat",
+              "Section 2 dupliquée: Standards ISO Principaux",
+              "Section 3 dupliquée: Processus de Certification",
+              "Section 4 dupliquée: Bonnes Pratiques d'Implémentation",
+              "Section 5 dupliquée: ARTICLES ANNEXES",
+              "Section 6 dupliquée: SOURCES ET RÉFÉRENCES"
+            ],
+            "incomplete": [
+              "Section vide ou presque vide: ## 1. FONDAMENTAUX DU SUJET",
+              "Section vide ou presque vide: ## 2. ANALYSE APPROFONDIE",
+              "Placeholder trouvé: [contexte spécifique dans ce domaine]"
+            ],
+            "sources": [
+              "Seulement 0 source(s) trouvée(s), minimum 4 requis"
+            ],
+            "annexes": [
+              "Seulement 0 article(s) annexe(s), minimum 3 recommandé"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "domain": "gestion-qualite",
+      "total": 5,
+      "withIssues": 5,
+      "articles": [
+        {
+          "file": "qualite-process/gestion-qualite-entreprise.md",
+          "issues": {
+            "structure": [
+              "Section 6 dupliquée: BONNES PRATIQUES",
+              "Section 5 dupliquée: ARTICLES ANNEXES"
+            ],
+            "incomplete": [
+              "Section vide ou presque vide: ## 1. FONDAMENTAUX DU SUJET",
+              "Section vide ou presque vide: ## 2. ANALYSE APPROFONDIE",
+              "Placeholder trouvé: [contexte spécifique dans ce domaine]"
+            ],
+            "sources": [
+              "Seulement 0 source(s) trouvée(s), minimum 4 requis"
+            ],
+            "annexes": [
+              "Seulement 0 article(s) annexe(s), minimum 3 recommandé"
+            ]
+          }
+        },
+        {
+          "file": "qualite-process/gestion-qualite-processus.md",
+          "issues": {
+            "structure": [
+              "Section 6 dupliquée: BONNES PRATIQUES",
+              "Section 5 dupliquée: ARTICLES ANNEXES"
+            ],
+            "incomplete": [
+              "Section vide ou presque vide: ## 1. FONDAMENTAUX DU SUJET",
+              "Section vide ou presque vide: ## 2. ANALYSE APPROFONDIE",
+              "Placeholder trouvé: [contexte spécifique dans ce domaine]"
+            ],
+            "sources": [
+              "Seulement 0 source(s) trouvée(s), minimum 4 requis"
+            ],
+            "annexes": [
+              "Seulement 0 article(s) annexe(s), minimum 3 recommandé"
+            ]
+          }
+        },
+        {
+          "file": "qualite-process/gestion-qualite-strategie.md",
+          "issues": {
+            "structure": [
+              "Section 6 dupliquée: BONNES PRATIQUES",
+              "Section 5 dupliquée: ARTICLES ANNEXES"
+            ],
+            "incomplete": [
+              "Section vide ou presque vide: ## 1. FONDAMENTAUX DU SUJET",
+              "Section vide ou presque vide: ## 2. ANALYSE APPROFONDIE",
+              "Placeholder trouvé: [contexte spécifique dans ce domaine]"
+            ],
+            "sources": [
+              "Seulement 0 source(s) trouvée(s), minimum 4 requis"
+            ],
+            "annexes": [
+              "Seulement 0 article(s) annexe(s), minimum 3 recommandé"
+            ]
+          }
+        },
+        {
+          "file": "qualite-process/optimisation-processus-entreprise.md",
+          "issues": {
+            "structure": [
+              "Section 6 dupliquée: BONNES PRATIQUES",
+              "Section 5 dupliquée: ARTICLES ANNEXES"
+            ],
+            "incomplete": [
+              "Section vide ou presque vide: ## 1. FONDAMENTAUX DU SUJET",
+              "Section vide ou presque vide: ## 2. ANALYSE APPROFONDIE",
+              "Placeholder trouvé: [contexte spécifique dans ce domaine]"
+            ],
+            "sources": [
+              "Seulement 0 source(s) trouvée(s), minimum 4 requis"
+            ],
+            "annexes": [
+              "Seulement 0 article(s) annexe(s), minimum 3 recommandé"
+            ]
+          }
+        },
+        {
+          "file": "qualite-process/qualite-processus-entreprise.md",
+          "issues": {
+            "structure": [
+              "Section 6 dupliquée: BONNES PRATIQUES",
+              "Section 5 dupliquée: ARTICLES ANNEXES"
+            ],
+            "incomplete": [
+              "Section vide ou presque vide: ## 1. FONDAMENTAUX DU SUJET",
+              "Section vide ou presque vide: ## 2. ANALYSE APPROFONDIE",
+              "Placeholder trouvé: [contexte spécifique dans ce domaine]"
+            ],
+            "sources": [
+              "Seulement 0 source(s) trouvée(s), minimum 4 requis"
+            ],
+            "annexes": [
+              "Seulement 0 article(s) annexe(s), minimum 3 recommandé"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "domain": "reconversion-carriere",
+      "total": 1,
+      "withIssues": 1,
+      "articles": [
+        {
+          "file": "reconversion-carriere/reconversion-professionnelle-reussie.md",
+          "issues": {
+            "structure": [
+              "Section 1 dupliquée: FONDAMENTAUX DE LA RECONVERSION PROFESSIONNELLE",
+              "Section 4 dupliquée: OUTILS ET RESSOURCES DE RECONVERSION",
+              "Section 6 dupliquée: BONNES PRATIQUES ET RÈGLES D'OR",
+              "Section 5 dupliquée: ARTICLES ANNEXES"
+            ],
+            "incomplete": [
+              "Section vide ou presque vide: ## 1. FONDAMENTAUX DU SUJET",
+              "Section vide ou presque vide: ## 2. ANALYSE APPROFONDIE",
+              "Placeholder trouvé: [contexte spécifique dans ce domaine]"
+            ],
+            "sources": [
+              "Seulement 0 source(s) trouvée(s), minimum 4 requis"
+            ],
+            "annexes": [
+              "Seulement 0 article(s) annexe(s), minimum 3 recommandé"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "domain": "service-client",
+      "total": 2,
+      "withIssues": 2,
+      "articles": [
+        {
+          "file": "service-client/service-client-excellence.md",
+          "issues": {
+            "structure": [
+              "Section 1 dupliquée: FONDAMENTAUX DE L'EXCELLENCE DU SERVICE CLIENT",
+              "Section 6 dupliquée: BONNES PRATIQUES ET RÈGLES D'OR",
+              "Section 5 dupliquée: ARTICLES ANNEXES"
+            ],
+            "incomplete": [
+              "Section vide ou presque vide: ## 1. FONDAMENTAUX DU SUJET",
+              "Section vide ou presque vide: ## 2. ANALYSE APPROFONDIE",
+              "Placeholder trouvé: [contexte spécifique dans ce domaine]"
+            ],
+            "sources": [
+              "Seulement 0 source(s) trouvée(s), minimum 4 requis"
+            ],
+            "annexes": [
+              "Seulement 0 article(s) annexe(s), minimum 3 recommandé"
+            ]
+          }
+        },
+        {
+          "file": "service-client/service-client-performance.md",
+          "issues": {
+            "structure": [
+              "Section 1 dupliquée: COMPRENDRE LA PERFORMANCE DU SERVICE CLIENT",
+              "Section 2 dupliquée: LES PILIERS DE LA PERFORMANCE DU SERVICE CLIENT",
+              "Section 3 dupliquée: STRATÉGIES D'OPTIMISATION ÉPROUVÉES",
+              "Section 6 dupliquée: BONNES PRATIQUES : MES RECOMMANDATIONS EXPERTES",
+              "Section 5 dupliquée: ARTICLES ANNEXES"
+            ],
+            "incomplete": [
+              "Section vide ou presque vide: ## 1. FONDAMENTAUX DU SUJET",
+              "Section vide ou presque vide: ## 2. ANALYSE APPROFONDIE",
+              "Placeholder trouvé: [contexte spécifique dans ce domaine]"
+            ],
+            "sources": [
+              "Seulement 0 source(s) trouvée(s), minimum 4 requis"
+            ],
+            "annexes": [
+              "Seulement 0 article(s) annexe(s), minimum 3 recommandé"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "domain": "transformation-digitale",
+      "total": 1,
+      "withIssues": 1,
+      "articles": [
+        {
+          "file": "transformation-digitale/transformation-numerique-entreprise.md",
+          "issues": {
+            "structure": [
+              "Section 1 dupliquée: FONDAMENTAUX DE LA TRANSFORMATION NUMÉRIQUE",
+              "Section 6 dupliquée: BONNES PRATIQUES",
+              "Section 5 dupliquée: ARTICLES ANNEXES"
+            ],
+            "incomplete": [
+              "Section vide ou presque vide: ## 1. FONDAMENTAUX DU SUJET",
+              "Section vide ou presque vide: ## 2. ANALYSE APPROFONDIE",
+              "Placeholder trouvé: [contexte spécifique dans ce domaine]"
+            ],
+            "sources": [
+              "Seulement 0 source(s) trouvée(s), minimum 4 requis"
+            ],
+            "annexes": [
+              "Seulement 0 article(s) annexe(s), minimum 3 recommandé"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

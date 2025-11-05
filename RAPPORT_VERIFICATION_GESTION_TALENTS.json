@@ -1,0 +1,306 @@
+[
+  {
+    "fileName": "gestion-competences-developpement.md",
+    "title": "Gestion des Compétences et Développement des Talents : Guide Expert 2024",
+    "hasIssues": true,
+    "hasWarnings": false,
+    "issues": [
+      "Section 1. FONDAMENTAUX DU SUJET incomplète",
+      "Section 2. ANALYSE APPROFONDIE incomplète"
+    ],
+    "warnings": [],
+    "stats": {
+      "placeholders": 0,
+      "sources": 12,
+      "sourceCitations": 80,
+      "section1Complete": false,
+      "section2Complete": false,
+      "orderCorrect": true
+    }
+  },
+  {
+    "fileName": "gestion-conflits-equipe.md",
+    "title": "Gestion des Conflits d'Équipe : Guide Expert 2024",
+    "hasIssues": true,
+    "hasWarnings": false,
+    "issues": [
+      "Section 1. FONDAMENTAUX DU SUJET incomplète",
+      "Section 2. ANALYSE APPROFONDIE incomplète"
+    ],
+    "warnings": [],
+    "stats": {
+      "placeholders": 0,
+      "sources": 12,
+      "sourceCitations": 8,
+      "section1Complete": false,
+      "section2Complete": false,
+      "orderCorrect": true
+    }
+  },
+  {
+    "fileName": "gestion-talents-attraction.md",
+    "title": "Attraction des Talents 2024 : Méthodologies d'Excellence pour les Entreprises Françaises",
+    "hasIssues": true,
+    "hasWarnings": false,
+    "issues": [
+      "Section 1. FONDAMENTAUX DU SUJET incomplète",
+      "Section 2. ANALYSE APPROFONDIE incomplète"
+    ],
+    "warnings": [],
+    "stats": {
+      "placeholders": 0,
+      "sources": 12,
+      "sourceCitations": 81,
+      "section1Complete": false,
+      "section2Complete": false,
+      "orderCorrect": true
+    }
+  },
+  {
+    "fileName": "gestion-talents-developpement.md",
+    "title": "Développement des Talents : Stratégies d'Excellence 2024",
+    "hasIssues": true,
+    "hasWarnings": false,
+    "issues": [
+      "Section 1. FONDAMENTAUX DU SUJET incomplète",
+      "Section 2. ANALYSE APPROFONDIE incomplète"
+    ],
+    "warnings": [],
+    "stats": {
+      "placeholders": 0,
+      "sources": 12,
+      "sourceCitations": 8,
+      "section1Complete": false,
+      "section2Complete": false,
+      "orderCorrect": true
+    }
+  },
+  {
+    "fileName": "gestion-talents-fidelisation.md",
+    "title": "Fidélisation des Talents : Stratégies d'Excellence 2024",
+    "hasIssues": true,
+    "hasWarnings": false,
+    "issues": [
+      "Section 1. FONDAMENTAUX DU SUJET incomplète",
+      "Section 2. ANALYSE APPROFONDIE incomplète"
+    ],
+    "warnings": [],
+    "stats": {
+      "placeholders": 0,
+      "sources": 12,
+      "sourceCitations": 7,
+      "section1Complete": false,
+      "section2Complete": false,
+      "orderCorrect": true
+    }
+  },
+  {
+    "fileName": "gestion-talents-formation.md",
+    "title": "Formation des Talents : Créer des Écosystèmes d'Apprentissage Performants",
+    "hasIssues": true,
+    "hasWarnings": false,
+    "issues": [
+      "Section 1. FONDAMENTAUX DU SUJET incomplète",
+      "Section 2. ANALYSE APPROFONDIE incomplète"
+    ],
+    "warnings": [],
+    "stats": {
+      "placeholders": 0,
+      "sources": 12,
+      "sourceCitations": 8,
+      "section1Complete": false,
+      "section2Complete": false,
+      "orderCorrect": true
+    }
+  },
+  {
+    "fileName": "gestion-talents-performance.md",
+    "title": "Performance des Talents : Développer l'Excellence Individuelle et Collective",
+    "hasIssues": true,
+    "hasWarnings": false,
+    "issues": [
+      "Section 1. FONDAMENTAUX DU SUJET incomplète",
+      "Section 2. ANALYSE APPROFONDIE incomplète"
+    ],
+    "warnings": [],
+    "stats": {
+      "placeholders": 0,
+      "sources": 12,
+      "sourceCitations": 7,
+      "section1Complete": false,
+      "section2Complete": false,
+      "orderCorrect": true
+    }
+  },
+  {
+    "fileName": "gestion-talents-recrutement.md",
+    "title": "Recrutement de Talents 2024 : L'Art d'Attirer et de Sélectionner les Meilleurs Profils",
+    "hasIssues": true,
+    "hasWarnings": false,
+    "issues": [
+      "Section 1. FONDAMENTAUX DU SUJET incomplète",
+      "Section 2. ANALYSE APPROFONDIE incomplète"
+    ],
+    "warnings": [],
+    "stats": {
+      "placeholders": 0,
+      "sources": 12,
+      "sourceCitations": 8,
+      "section1Complete": false,
+      "section2Complete": false,
+      "orderCorrect": true
+    }
+  },
+  {
+    "fileName": "gestion-talents-remuneration.md",
+    "title": "Rémunération des Talents : Créer un Système de Compensation Équitable et Motivant",
+    "hasIssues": true,
+    "hasWarnings": false,
+    "issues": [
+      "Section 1. FONDAMENTAUX DU SUJET incomplète",
+      "Section 2. ANALYSE APPROFONDIE incomplète"
+    ],
+    "warnings": [],
+    "stats": {
+      "placeholders": 0,
+      "sources": 12,
+      "sourceCitations": 7,
+      "section1Complete": false,
+      "section2Complete": false,
+      "orderCorrect": true
+    }
+  },
+  {
+    "fileName": "gestion-talents-retention.md",
+    "title": "Rétention des Talents : Créer un Écosystème de Fidélisation Durable",
+    "hasIssues": true,
+    "hasWarnings": false,
+    "issues": [
+      "Section 1. FONDAMENTAUX DU SUJET incomplète",
+      "Section 2. ANALYSE APPROFONDIE incomplète"
+    ],
+    "warnings": [],
+    "stats": {
+      "placeholders": 0,
+      "sources": 12,
+      "sourceCitations": 81,
+      "section1Complete": false,
+      "section2Complete": false,
+      "orderCorrect": true
+    }
+  },
+  {
+    "fileName": "gestion-talents-succession.md",
+    "title": "Planification de Succession : Développer les Leaders de Demain",
+    "hasIssues": true,
+    "hasWarnings": false,
+    "issues": [
+      "Section 1. FONDAMENTAUX DU SUJET incomplète",
+      "Section 2. ANALYSE APPROFONDIE incomplète"
+    ],
+    "warnings": [],
+    "stats": {
+      "placeholders": 0,
+      "sources": 12,
+      "sourceCitations": 8,
+      "section1Complete": false,
+      "section2Complete": false,
+      "orderCorrect": true
+    }
+  },
+  {
+    "fileName": "gestion-talents-valuation.md",
+    "title": "Évaluation des Talents : Mesurer et Valoriser le Potentiel Humain",
+    "hasIssues": true,
+    "hasWarnings": false,
+    "issues": [
+      "Section 1. FONDAMENTAUX DU SUJET incomplète",
+      "Section 2. ANALYSE APPROFONDIE incomplète"
+    ],
+    "warnings": [],
+    "stats": {
+      "placeholders": 0,
+      "sources": 12,
+      "sourceCitations": 72,
+      "section1Complete": false,
+      "section2Complete": false,
+      "orderCorrect": true
+    }
+  },
+  {
+    "fileName": "gestion-talents-whistleblowing.md",
+    "title": "Gestion Talents Whistleblowing",
+    "hasIssues": true,
+    "hasWarnings": false,
+    "issues": [
+      "Section 1. FONDAMENTAUX DU SUJET incomplète",
+      "Section 2. ANALYSE APPROFONDIE incomplète"
+    ],
+    "warnings": [],
+    "stats": {
+      "placeholders": 0,
+      "sources": 12,
+      "sourceCitations": 8,
+      "section1Complete": false,
+      "section2Complete": false,
+      "orderCorrect": true
+    }
+  },
+  {
+    "fileName": "gestion-talents-xenophobia.md",
+    "title": "Gestion Talents Xenophobia",
+    "hasIssues": true,
+    "hasWarnings": false,
+    "issues": [
+      "Section 1. FONDAMENTAUX DU SUJET incomplète",
+      "Section 2. ANALYSE APPROFONDIE incomplète"
+    ],
+    "warnings": [],
+    "stats": {
+      "placeholders": 0,
+      "sources": 12,
+      "sourceCitations": 8,
+      "section1Complete": false,
+      "section2Complete": false,
+      "orderCorrect": true
+    }
+  },
+  {
+    "fileName": "gestion-talents-youth.md",
+    "title": "Gestion Talents Youth",
+    "hasIssues": true,
+    "hasWarnings": false,
+    "issues": [
+      "Section 1. FONDAMENTAUX DU SUJET incomplète",
+      "Section 2. ANALYSE APPROFONDIE incomplète"
+    ],
+    "warnings": [],
+    "stats": {
+      "placeholders": 0,
+      "sources": 12,
+      "sourceCitations": 8,
+      "section1Complete": false,
+      "section2Complete": false,
+      "orderCorrect": true
+    }
+  },
+  {
+    "fileName": "gestion-talents-zen.md",
+    "title": "Gestion Talents Zen",
+    "hasIssues": true,
+    "hasWarnings": false,
+    "issues": [
+      "Section 1. FONDAMENTAUX DU SUJET incomplète",
+      "Section 2. ANALYSE APPROFONDIE incomplète"
+    ],
+    "warnings": [],
+    "stats": {
+      "placeholders": 0,
+      "sources": 12,
+      "sourceCitations": 8,
+      "section1Complete": false,
+      "section2Complete": false,
+      "orderCorrect": true
+    }
+  }
+]

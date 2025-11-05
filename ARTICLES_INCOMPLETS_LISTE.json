@@ -1,0 +1,1051 @@
+{
+  "total": 92,
+  "byDomain": {
+    "articles-generaux": [
+      {
+        "domain": "articles-generaux",
+        "file": "synthese-thematiques.md",
+        "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/articles-generaux/synthese-thematiques.md",
+        "title": "Synthese Thematiques"
+      }
+    ],
+    "developpement-commercial": [
+      {
+        "domain": "developpement-commercial",
+        "file": "negocier-salaire-techniques-avancees.md",
+        "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/developpement-commercial/negocier-salaire-techniques-avancees.md",
+        "title": "Négociation Salariale : Techniques Avancées pour 2024"
+      },
+      {
+        "domain": "developpement-commercial",
+        "file": "recrutement-talents-digitaux.md",
+        "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/developpement-commercial/recrutement-talents-digitaux.md",
+        "title": "Recrutement de Talents Digitaux : Guide Expert 2024"
+      }
+    ],
+    "developpement-web": [
+      {
+        "domain": "developpement-web",
+        "file": "frameworks-javascript-analyse-2024.md",
+        "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/developpement-web/frameworks-javascript-analyse-2024.md",
+        "title": "Frameworks JavaScript 2024 : Mon Guide Expert pour Choisir le Bon Framework"
+      },
+      {
+        "domain": "developpement-web",
+        "file": "frameworks-javascript-comparaison-2024.md",
+        "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/developpement-web/frameworks-javascript-comparaison-2024.md",
+        "title": "Frameworks JavaScript : Comparaison Complète 2024"
+      },
+      {
+        "domain": "developpement-web",
+        "file": "progressive-web-apps-2024.md",
+        "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/developpement-web/progressive-web-apps-2024.md",
+        "title": "Progressive Web Apps 2024 : Guide Complet d'Implémentation"
+      },
+      {
+        "domain": "developpement-web",
+        "file": "technologies-javascript-2024.md",
+        "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/developpement-web/technologies-javascript-2024.md",
+        "title": "Technologies JavaScript 2024 : Écosystème Moderne"
+      },
+      {
+        "domain": "developpement-web",
+        "file": "tendances-developpement-web-2025.md",
+        "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/developpement-web/tendances-developpement-web-2025.md",
+        "title": "Tendances Developpement Web 2025"
+      },
+      {
+        "domain": "developpement-web",
+        "file": "web-accessibilite-guide-pratique.md",
+        "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/developpement-web/web-accessibilite-guide-pratique.md",
+        "title": "Web Accessibilite Guide Pratique"
+      },
+      {
+        "domain": "developpement-web",
+        "file": "web-javascript-modern.md",
+        "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/developpement-web/web-javascript-modern.md",
+        "title": "Web Javascript Modern"
+      }
+    ],
+    "formation": [
+      {
+        "domain": "formation",
+        "file": "apprentissage-continu-developpement-competences.md",
+        "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/formation/apprentissage-continu-developpement-competences.md",
+        "title": "Apprentissage Continu : Comment Développer ses Compétences en Mode Expert"
+      },
+      {
+        "domain": "formation",
+        "file": "formation-adaptation.md",
+        "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/formation/formation-adaptation.md",
+        "title": "Formation à l'Adaptation : Comment Développer sa Résilience Professionnelle"
+      },
+      {
+        "domain": "formation",
+        "file": "formation-collaboration.md",
+        "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/formation/formation-collaboration.md",
+        "title": "Formation à la Collaboration : Comment Créer des Équipes Performantes"
+      },
+      {
+        "domain": "formation",
+        "file": "formation-communication.md",
+        "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/formation/formation-communication.md",
+        "title": "Formation Communication"
+      },
+      {
+        "domain": "formation",
+        "file": "formation-creativite.md",
+        "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/formation/formation-creativite.md",
+        "title": "Formation Creativite"
+      },
+      {
+        "domain": "formation",
+        "file": "formation-elearning.md",
+        "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/formation/formation-elearning.md",
+        "title": "E-Learning : Révolutionner la Formation Professionnelle à l'Ère Digitale"
+      },
+      {
+        "domain": "formation",
+        "file": "formation-equipes-commerciales.md",
+        "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/formation/formation-equipes-commerciales.md",
+        "title": "Formation d'Équipes Commerciales : Méthodes et Résultats"
+      },
+      {
+        "domain": "formation",
+        "file": "formation-innovation.md",
+        "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/formation/formation-innovation.md",
+        "title": "Formation Innovation"
+      },
+      {
+        "domain": "formation",
+        "file": "formation-mentorat.md",
+        "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/formation/formation-mentorat.md",
+        "title": "Formation Mentorat"
+      },
+      {
+        "domain": "formation",
+        "file": "formation-professionnelle-continue.md",
+        "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/formation/formation-professionnelle-continue.md",
+        "title": "Formation Professionnelle Continue 2024 : L'Art de l'Apprentissage Permanent"
+      },
+      {
+        "domain": "formation",
+        "file": "formation-soft-skills.md",
+        "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/formation/formation-soft-skills.md",
+        "title": "Formation Soft Skills"
+      },
+      {
+        "domain": "formation",
+        "file": "formation-talents-guide.md",
+        "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/formation/formation-talents-guide.md",
+        "title": "Formation Talents Guide"
+      },
+      {
+        "domain": "formation",
+        "file": "formation-technique.md",
+        "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/formation/formation-technique.md",
+        "title": "Formation Technique : Développer l'Excellence Opérationnelle 2024"
+      },
+      {
+        "domain": "formation",
+        "file": "impact-formation-continue-carriere.md",
+        "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/formation/impact-formation-continue-carriere.md",
+        "title": "Impact Formation Continue Carriere"
+      },
+      {
+        "domain": "formation",
+        "file": "mentoring-developpement-professionnel.md",
+        "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/formation/mentoring-developpement-professionnel.md",
+        "title": "Mentoring Developpement Professionnel"
+      }
+    ],
+    "gestion-connaissances": [
+      {
+        "domain": "gestion-connaissances",
+        "file": "gestion-connaissances-organisation.md",
+        "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/gestion-connaissances/gestion-connaissances-organisation.md",
+        "title": "Gestion des Connaissances Organisationnelles 2024 : Méthodologies d'Excellence pour les Entreprises Françaises"
+      }
+    ],
+    "gestion-projet": [
+      {
+        "domain": "gestion-projet",
+        "file": "agile-scrum-methodologies.md",
+        "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/gestion-projet/agile-scrum-methodologies.md",
+        "title": "Agile et Scrum : Ma Méthode Éprouvée pour des Projets qui Réussissent"
+      },
+      {
+        "domain": "gestion-projet",
+        "file": "gestion-performance-equipe.md",
+        "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/gestion-projet/gestion-performance-equipe.md",
+        "title": "Gestion de la Performance d'Équipe : Ma Méthode pour des Équipes Exceptionnelles"
+      },
+      {
+        "domain": "gestion-projet",
+        "file": "gestion-performance-evaluation.md",
+        "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/gestion-projet/gestion-performance-evaluation.md",
+        "title": "Évaluation de Performance : Ma Méthode pour Mesurer et Améliorer les Résultats"
+      },
+      {
+        "domain": "gestion-projet",
+        "file": "gestion-projet-agile-meilleures-pratiques.md",
+        "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/gestion-projet/gestion-projet-agile-meilleures-pratiques.md",
+        "title": "Gestion Projet Agile Meilleures Pratiques"
+      },
+      {
+        "domain": "gestion-projet",
+        "file": "gestion-projet-agile.md",
+        "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/gestion-projet/gestion-projet-agile.md",
+        "title": "Gestion de Projet Agile : Maîtriser les Méthodologies Modernes pour l'Excellence Opérationnelle"
+      },
+      {
+        "domain": "gestion-projet",
+        "file": "gestion-projet-performance.md",
+        "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/gestion-projet/gestion-projet-performance.md",
+        "title": "Performance en Gestion de Projet : Optimisation des Résultats"
+      },
+      {
+        "domain": "gestion-projet",
+        "file": "gestion-projet-risques.md",
+        "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/gestion-projet/gestion-projet-risques.md",
+        "title": "Gestion des Risques de Projet : Maîtriser l'Incertain pour Garantir le Succès"
+      },
+      {
+        "domain": "gestion-projet",
+        "file": "gestion-risques-projet.md",
+        "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/gestion-projet/gestion-risques-projet.md",
+        "title": "Gestion Risques Projet"
+      }
+    ],
+    "gestion-talents": [
+      {
+        "domain": "gestion-talents",
+        "file": "gestion-competences-developpement.md",
+        "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/gestion-talents/gestion-competences-developpement.md",
+        "title": "Gestion des Compétences et Développement des Talents : Guide Expert 2024"
+      },
+      {
+        "domain": "gestion-talents",
+        "file": "gestion-conflits-equipe.md",
+        "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/gestion-talents/gestion-conflits-equipe.md",
+        "title": "Gestion des Conflits d'Équipe : Guide Expert 2024"
+      },
+      {
+        "domain": "gestion-talents",
+        "file": "gestion-talents-attraction.md",
+        "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/gestion-talents/gestion-talents-attraction.md",
+        "title": "Attraction des Talents 2024 : Méthodologies d'Excellence pour les Entreprises Françaises"
+      },
+      {
+        "domain": "gestion-talents",
+        "file": "gestion-talents-developpement.md",
+        "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/gestion-talents/gestion-talents-developpement.md",
+        "title": "Développement des Talents : Stratégies d'Excellence 2024"
+      },
+      {
+        "domain": "gestion-talents",
+        "file": "gestion-talents-fidelisation.md",
+        "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/gestion-talents/gestion-talents-fidelisation.md",
+        "title": "Fidélisation des Talents : Stratégies d'Excellence 2024"
+      },
+      {
+        "domain": "gestion-talents",
+        "file": "gestion-talents-formation.md",
+        "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/gestion-talents/gestion-talents-formation.md",
+        "title": "Formation des Talents : Créer des Écosystèmes d'Apprentissage Performants"
+      },
+      {
+        "domain": "gestion-talents",
+        "file": "gestion-talents-performance.md",
+        "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/gestion-talents/gestion-talents-performance.md",
+        "title": "Performance des Talents : Développer l'Excellence Individuelle et Collective"
+      },
+      {
+        "domain": "gestion-talents",
+        "file": "gestion-talents-recrutement.md",
+        "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/gestion-talents/gestion-talents-recrutement.md",
+        "title": "Recrutement de Talents 2024 : L'Art d'Attirer et de Sélectionner les Meilleurs Profils"
+      },
+      {
+        "domain": "gestion-talents",
+        "file": "gestion-talents-remuneration.md",
+        "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/gestion-talents/gestion-talents-remuneration.md",
+        "title": "Rémunération des Talents : Créer un Système de Compensation Équitable et Motivant"
+      },
+      {
+        "domain": "gestion-talents",
+        "file": "gestion-talents-retention.md",
+        "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/gestion-talents/gestion-talents-retention.md",
+        "title": "Rétention des Talents : Créer un Écosystème de Fidélisation Durable"
+      },
+      {
+        "domain": "gestion-talents",
+        "file": "gestion-talents-succession.md",
+        "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/gestion-talents/gestion-talents-succession.md",
+        "title": "Planification de Succession : Développer les Leaders de Demain"
+      },
+      {
+        "domain": "gestion-talents",
+        "file": "gestion-talents-whistleblowing.md",
+        "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/gestion-talents/gestion-talents-whistleblowing.md",
+        "title": "Gestion Talents Whistleblowing"
+      },
+      {
+        "domain": "gestion-talents",
+        "file": "gestion-talents-xenophobia.md",
+        "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/gestion-talents/gestion-talents-xenophobia.md",
+        "title": "Gestion Talents Xenophobia"
+      },
+      {
+        "domain": "gestion-talents",
+        "file": "gestion-talents-youth.md",
+        "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/gestion-talents/gestion-talents-youth.md",
+        "title": "Gestion Talents Youth"
+      },
+      {
+        "domain": "gestion-talents",
+        "file": "gestion-talents-zen.md",
+        "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/gestion-talents/gestion-talents-zen.md",
+        "title": "Gestion Talents Zen"
+      }
+    ],
+    "innovation-technologies": [
+      {
+        "domain": "innovation-technologies",
+        "file": "ia-transformation-societe-2024-analyse.md",
+        "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/innovation-technologies/ia-transformation-societe-2024-analyse.md",
+        "title": "Ia Transformation Societe 2024 Analyse"
+      },
+      {
+        "domain": "innovation-technologies",
+        "file": "ia-transformation-societe-2024.md",
+        "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/innovation-technologies/ia-transformation-societe-2024.md",
+        "title": "IA et Transformation de la Société 2024 : Révolution Technologique et Impacts Sociétaux"
+      },
+      {
+        "domain": "innovation-technologies",
+        "file": "intelligence-artificielle-transformation-marketing.md",
+        "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/innovation-technologies/intelligence-artificielle-transformation-marketing.md",
+        "title": "IA et Transformation Marketing : Révolution en Cours"
+      },
+      {
+        "domain": "innovation-technologies",
+        "file": "nouvelles-tendances-developpement-web.md",
+        "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/innovation-technologies/nouvelles-tendances-developpement-web.md",
+        "title": "Nouvelles Tendances Developpement Web"
+      }
+    ],
+    "leadership-management": [
+      {
+        "domain": "leadership-management",
+        "file": "formation-leadership.md",
+        "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/leadership-management/formation-leadership.md",
+        "title": "Formation au Leadership : Développer l'Excellence Managériale"
+      },
+      {
+        "domain": "leadership-management",
+        "file": "importance-leadership.md",
+        "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/leadership-management/importance-leadership.md",
+        "title": "Leadership Moderne 2024 : L'Art de Diriger dans un Monde en Transformation"
+      },
+      {
+        "domain": "leadership-management",
+        "file": "leadership-equipes-performance.md",
+        "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/leadership-management/leadership-equipes-performance.md",
+        "title": "Leadership et Performance des Équipes : Méthodologies d'Excellence pour Diriger des Équipes Performantes"
+      },
+      {
+        "domain": "leadership-management",
+        "file": "management-diversite-inclusion.md",
+        "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/leadership-management/management-diversite-inclusion.md",
+        "title": "Management de la Diversité et Inclusion : Guide Pratique pour les Leaders"
+      },
+      {
+        "domain": "leadership-management",
+        "file": "management-hybride-defis-opportunites.md",
+        "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/leadership-management/management-hybride-defis-opportunites.md",
+        "title": "Management Hybride Defis Opportunites"
+      }
+    ],
+    "marketing-communication": [
+      {
+        "domain": "marketing-communication",
+        "file": "email-marketing-personnalisation.md",
+        "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/marketing-communication/email-marketing-personnalisation.md",
+        "title": "Email Marketing Personnalisation"
+      },
+      {
+        "domain": "marketing-communication",
+        "file": "marketing-content-strategies.md",
+        "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/marketing-communication/marketing-content-strategies.md",
+        "title": "Marketing Content Strategies"
+      },
+      {
+        "domain": "marketing-communication",
+        "file": "marketing-digital-strategies.md",
+        "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/marketing-communication/marketing-digital-strategies.md",
+        "title": "Stratégies Marketing Digital 2024 : Méthodologies d'Excellence pour les Entreprises Françaises"
+      },
+      {
+        "domain": "marketing-communication",
+        "file": "strategies-marketing-digital-2025.md",
+        "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/marketing-communication/strategies-marketing-digital-2025.md",
+        "title": "Stratégies Marketing Digital 2025 : Tendances et Innovations"
+      },
+      {
+        "domain": "marketing-communication",
+        "file": "strategies-reseaux-sociaux-b2b.md",
+        "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/marketing-communication/strategies-reseaux-sociaux-b2b.md",
+        "title": "Strategies Reseaux Sociaux B2b"
+      },
+      {
+        "domain": "marketing-communication",
+        "file": "strategies-reseaux-sociaux-entreprises.md",
+        "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/marketing-communication/strategies-reseaux-sociaux-entreprises.md",
+        "title": "Strategies Reseaux Sociaux Entreprises"
+      }
+    ],
+    "outils-techniques": [
+      {
+        "domain": "outils-techniques",
+        "file": "mermaid-example.md",
+        "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/outils-techniques/mermaid-example.md",
+        "title": "Mermaid : Guide Complet des Diagrammes Techniques 2024"
+      },
+      {
+        "domain": "outils-techniques",
+        "file": "pillcolor-guide.md",
+        "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/outils-techniques/pillcolor-guide.md",
+        "title": "Guide Complet des Pills : Système de Classification Visuelle 2024"
+      },
+      {
+        "domain": "outils-techniques",
+        "file": "visualisations-mermaid.md",
+        "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/outils-techniques/visualisations-mermaid.md",
+        "title": "Visualisations Mermaid Avancées : Techniques Expertes 2024"
+      }
+    ],
+    "productivite-methodes": [
+      {
+        "domain": "productivite-methodes",
+        "file": "comment-planifier-mon-travail.md",
+        "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/productivite-methodes/comment-planifier-mon-travail.md",
+        "title": "Comment Planifier Mon Travail 2024 : Méthodologies d'Excellence pour les Professionnels Français"
+      },
+      {
+        "domain": "productivite-methodes",
+        "file": "deep-work.md",
+        "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/productivite-methodes/deep-work.md",
+        "title": "Deep Work : Maîtriser la Concentration Profonde pour une Productivité Exceptionnelle"
+      },
+      {
+        "domain": "productivite-methodes",
+        "file": "gestion-priorites-efficacite.md",
+        "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/productivite-methodes/gestion-priorites-efficacite.md",
+        "title": "Gestion des Priorités et Efficacité 2024 : Méthodologies d'Excellence pour les Entreprises Françaises"
+      },
+      {
+        "domain": "productivite-methodes",
+        "file": "gestion-stress-performance.md",
+        "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/productivite-methodes/gestion-stress-performance.md",
+        "title": "Gestion Stress Performance"
+      },
+      {
+        "domain": "productivite-methodes",
+        "file": "gestion-surcharge-informationnelle.md",
+        "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/productivite-methodes/gestion-surcharge-informationnelle.md",
+        "title": "Gestion Surcharge Informationnelle"
+      },
+      {
+        "domain": "productivite-methodes",
+        "file": "gestion-temps-productivite.md",
+        "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/productivite-methodes/gestion-temps-productivite.md",
+        "title": "Gestion Temps Productivite"
+      },
+      {
+        "domain": "productivite-methodes",
+        "file": "gestion-temps-professionnels.md",
+        "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/productivite-methodes/gestion-temps-professionnels.md",
+        "title": "Gestion Temps Professionnels"
+      },
+      {
+        "domain": "productivite-methodes",
+        "file": "gestion-temps.md",
+        "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/productivite-methodes/gestion-temps.md",
+        "title": "Gestion Temps"
+      },
+      {
+        "domain": "productivite-methodes",
+        "file": "methode-gtd-expliquee.md",
+        "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/productivite-methodes/methode-gtd-expliquee.md",
+        "title": "Methode Gtd Expliquee"
+      },
+      {
+        "domain": "productivite-methodes",
+        "file": "methode-pomodoro.md",
+        "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/productivite-methodes/methode-pomodoro.md",
+        "title": "Methode Pomodoro"
+      },
+      {
+        "domain": "productivite-methodes",
+        "file": "procrastination-solutions-efficaces.md",
+        "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/productivite-methodes/procrastination-solutions-efficaces.md",
+        "title": "Procrastination Solutions Efficaces"
+      },
+      {
+        "domain": "productivite-methodes",
+        "file": "productivite-professionnelle.md",
+        "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/productivite-methodes/productivite-professionnelle.md",
+        "title": "Productivite Professionnelle"
+      }
+    ],
+    "qualite-process": [
+      {
+        "domain": "qualite-process",
+        "file": "gestion-qualite-amelioration.md",
+        "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/qualite-process/gestion-qualite-amelioration.md",
+        "title": "Gestion de la Qualité et Amélioration Continue : Guide Expert 2024"
+      },
+      {
+        "domain": "qualite-process",
+        "file": "gestion-qualite-certification.md",
+        "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/qualite-process/gestion-qualite-certification.md",
+        "title": "Certification Qualité : Guide Complet des Standards ISO 2024"
+      },
+      {
+        "domain": "qualite-process",
+        "file": "gestion-qualite-entreprise.md",
+        "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/qualite-process/gestion-qualite-entreprise.md",
+        "title": "Gestion Qualite Entreprise"
+      },
+      {
+        "domain": "qualite-process",
+        "file": "gestion-qualite-processus.md",
+        "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/qualite-process/gestion-qualite-processus.md",
+        "title": "Gestion de la Qualité : Optimisation des Processus"
+      },
+      {
+        "domain": "qualite-process",
+        "file": "gestion-qualite-strategie.md",
+        "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/qualite-process/gestion-qualite-strategie.md",
+        "title": "Gestion Qualite Strategie"
+      },
+      {
+        "domain": "qualite-process",
+        "file": "optimisation-processus-entreprise.md",
+        "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/qualite-process/optimisation-processus-entreprise.md",
+        "title": "Optimisation des Processus d'Entreprise : Méthodes Efficaces"
+      },
+      {
+        "domain": "qualite-process",
+        "file": "qualite-processus-entreprise.md",
+        "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/qualite-process/qualite-processus-entreprise.md",
+        "title": "Qualité des Processus d'Entreprise : Excellence Opérationnelle"
+      }
+    ],
+    "reconversion-carriere": [
+      {
+        "domain": "reconversion-carriere",
+        "file": "reconversion-professionnelle-reussie.md",
+        "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/reconversion-carriere/reconversion-professionnelle-reussie.md",
+        "title": "Reconversion Professionnelle Réussie 2024 : Méthodologies d'Excellence pour les Professionnels Français"
+      }
+    ],
+    "service-client": [
+      {
+        "domain": "service-client",
+        "file": "service-client-excellence.md",
+        "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/service-client/service-client-excellence.md",
+        "title": "Excellence du Service Client 2024 : Méthodologies d'Excellence pour les Entreprises Françaises"
+      },
+      {
+        "domain": "service-client",
+        "file": "service-client-performance.md",
+        "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/service-client/service-client-performance.md",
+        "title": "Optimiser la Performance du Service Client : Guide Expert 2024"
+      }
+    ],
+    "transformation-digitale": [
+      {
+        "domain": "transformation-digitale",
+        "file": "transformation-digitale-telecom.md",
+        "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/transformation-digitale/transformation-digitale-telecom.md",
+        "title": "Transformation Digitale Telecom"
+      },
+      {
+        "domain": "transformation-digitale",
+        "file": "transformation-numerique-entreprise.md",
+        "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/transformation-digitale/transformation-numerique-entreprise.md",
+        "title": "Transformation Numérique : Révolutionner l'Entreprise avec l'Excellence Digitale"
+      },
+      {
+        "domain": "transformation-digitale",
+        "file": "transformation-numerique-talents.md",
+        "path": "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles/transformation-digitale/transformation-numerique-talents.md",
+        "title": "Transformation Numerique Talents"
+      }
+    ]
+  },
+  "articles": [
+    {
+      "domain": "articles-generaux",
+      "file": "synthese-thematiques.md",
+      "title": "Synthese Thematiques"
+    },
+    {
+      "domain": "developpement-commercial",
+      "file": "negocier-salaire-techniques-avancees.md",
+      "title": "Négociation Salariale : Techniques Avancées pour 2024"
+    },
+    {
+      "domain": "developpement-commercial",
+      "file": "recrutement-talents-digitaux.md",
+      "title": "Recrutement de Talents Digitaux : Guide Expert 2024"
+    },
+    {
+      "domain": "developpement-web",
+      "file": "frameworks-javascript-analyse-2024.md",
+      "title": "Frameworks JavaScript 2024 : Mon Guide Expert pour Choisir le Bon Framework"
+    },
+    {
+      "domain": "developpement-web",
+      "file": "frameworks-javascript-comparaison-2024.md",
+      "title": "Frameworks JavaScript : Comparaison Complète 2024"
+    },
+    {
+      "domain": "developpement-web",
+      "file": "progressive-web-apps-2024.md",
+      "title": "Progressive Web Apps 2024 : Guide Complet d'Implémentation"
+    },
+    {
+      "domain": "developpement-web",
+      "file": "technologies-javascript-2024.md",
+      "title": "Technologies JavaScript 2024 : Écosystème Moderne"
+    },
+    {
+      "domain": "developpement-web",
+      "file": "tendances-developpement-web-2025.md",
+      "title": "Tendances Developpement Web 2025"
+    },
+    {
+      "domain": "developpement-web",
+      "file": "web-accessibilite-guide-pratique.md",
+      "title": "Web Accessibilite Guide Pratique"
+    },
+    {
+      "domain": "developpement-web",
+      "file": "web-javascript-modern.md",
+      "title": "Web Javascript Modern"
+    },
+    {
+      "domain": "formation",
+      "file": "apprentissage-continu-developpement-competences.md",
+      "title": "Apprentissage Continu : Comment Développer ses Compétences en Mode Expert"
+    },
+    {
+      "domain": "formation",
+      "file": "formation-adaptation.md",
+      "title": "Formation à l'Adaptation : Comment Développer sa Résilience Professionnelle"
+    },
+    {
+      "domain": "formation",
+      "file": "formation-collaboration.md",
+      "title": "Formation à la Collaboration : Comment Créer des Équipes Performantes"
+    },
+    {
+      "domain": "formation",
+      "file": "formation-communication.md",
+      "title": "Formation Communication"
+    },
+    {
+      "domain": "formation",
+      "file": "formation-creativite.md",
+      "title": "Formation Creativite"
+    },
+    {
+      "domain": "formation",
+      "file": "formation-elearning.md",
+      "title": "E-Learning : Révolutionner la Formation Professionnelle à l'Ère Digitale"
+    },
+    {
+      "domain": "formation",
+      "file": "formation-equipes-commerciales.md",
+      "title": "Formation d'Équipes Commerciales : Méthodes et Résultats"
+    },
+    {
+      "domain": "formation",
+      "file": "formation-innovation.md",
+      "title": "Formation Innovation"
+    },
+    {
+      "domain": "formation",
+      "file": "formation-mentorat.md",
+      "title": "Formation Mentorat"
+    },
+    {
+      "domain": "formation",
+      "file": "formation-professionnelle-continue.md",
+      "title": "Formation Professionnelle Continue 2024 : L'Art de l'Apprentissage Permanent"
+    },
+    {
+      "domain": "formation",
+      "file": "formation-soft-skills.md",
+      "title": "Formation Soft Skills"
+    },
+    {
+      "domain": "formation",
+      "file": "formation-talents-guide.md",
+      "title": "Formation Talents Guide"
+    },
+    {
+      "domain": "formation",
+      "file": "formation-technique.md",
+      "title": "Formation Technique : Développer l'Excellence Opérationnelle 2024"
+    },
+    {
+      "domain": "formation",
+      "file": "impact-formation-continue-carriere.md",
+      "title": "Impact Formation Continue Carriere"
+    },
+    {
+      "domain": "formation",
+      "file": "mentoring-developpement-professionnel.md",
+      "title": "Mentoring Developpement Professionnel"
+    },
+    {
+      "domain": "gestion-connaissances",
+      "file": "gestion-connaissances-organisation.md",
+      "title": "Gestion des Connaissances Organisationnelles 2024 : Méthodologies d'Excellence pour les Entreprises Françaises"
+    },
+    {
+      "domain": "gestion-projet",
+      "file": "agile-scrum-methodologies.md",
+      "title": "Agile et Scrum : Ma Méthode Éprouvée pour des Projets qui Réussissent"
+    },
+    {
+      "domain": "gestion-projet",
+      "file": "gestion-performance-equipe.md",
+      "title": "Gestion de la Performance d'Équipe : Ma Méthode pour des Équipes Exceptionnelles"
+    },
+    {
+      "domain": "gestion-projet",
+      "file": "gestion-performance-evaluation.md",
+      "title": "Évaluation de Performance : Ma Méthode pour Mesurer et Améliorer les Résultats"
+    },
+    {
+      "domain": "gestion-projet",
+      "file": "gestion-projet-agile-meilleures-pratiques.md",
+      "title": "Gestion Projet Agile Meilleures Pratiques"
+    },
+    {
+      "domain": "gestion-projet",
+      "file": "gestion-projet-agile.md",
+      "title": "Gestion de Projet Agile : Maîtriser les Méthodologies Modernes pour l'Excellence Opérationnelle"
+    },
+    {
+      "domain": "gestion-projet",
+      "file": "gestion-projet-performance.md",
+      "title": "Performance en Gestion de Projet : Optimisation des Résultats"
+    },
+    {
+      "domain": "gestion-projet",
+      "file": "gestion-projet-risques.md",
+      "title": "Gestion des Risques de Projet : Maîtriser l'Incertain pour Garantir le Succès"
+    },
+    {
+      "domain": "gestion-projet",
+      "file": "gestion-risques-projet.md",
+      "title": "Gestion Risques Projet"
+    },
+    {
+      "domain": "gestion-talents",
+      "file": "gestion-competences-developpement.md",
+      "title": "Gestion des Compétences et Développement des Talents : Guide Expert 2024"
+    },
+    {
+      "domain": "gestion-talents",
+      "file": "gestion-conflits-equipe.md",
+      "title": "Gestion des Conflits d'Équipe : Guide Expert 2024"
+    },
+    {
+      "domain": "gestion-talents",
+      "file": "gestion-talents-attraction.md",
+      "title": "Attraction des Talents 2024 : Méthodologies d'Excellence pour les Entreprises Françaises"
+    },
+    {
+      "domain": "gestion-talents",
+      "file": "gestion-talents-developpement.md",
+      "title": "Développement des Talents : Stratégies d'Excellence 2024"
+    },
+    {
+      "domain": "gestion-talents",
+      "file": "gestion-talents-fidelisation.md",
+      "title": "Fidélisation des Talents : Stratégies d'Excellence 2024"
+    },
+    {
+      "domain": "gestion-talents",
+      "file": "gestion-talents-formation.md",
+      "title": "Formation des Talents : Créer des Écosystèmes d'Apprentissage Performants"
+    },
+    {
+      "domain": "gestion-talents",
+      "file": "gestion-talents-performance.md",
+      "title": "Performance des Talents : Développer l'Excellence Individuelle et Collective"
+    },
+    {
+      "domain": "gestion-talents",
+      "file": "gestion-talents-recrutement.md",
+      "title": "Recrutement de Talents 2024 : L'Art d'Attirer et de Sélectionner les Meilleurs Profils"
+    },
+    {
+      "domain": "gestion-talents",
+      "file": "gestion-talents-remuneration.md",
+      "title": "Rémunération des Talents : Créer un Système de Compensation Équitable et Motivant"
+    },
+    {
+      "domain": "gestion-talents",
+      "file": "gestion-talents-retention.md",
+      "title": "Rétention des Talents : Créer un Écosystème de Fidélisation Durable"
+    },
+    {
+      "domain": "gestion-talents",
+      "file": "gestion-talents-succession.md",
+      "title": "Planification de Succession : Développer les Leaders de Demain"
+    },
+    {
+      "domain": "gestion-talents",
+      "file": "gestion-talents-whistleblowing.md",
+      "title": "Gestion Talents Whistleblowing"
+    },
+    {
+      "domain": "gestion-talents",
+      "file": "gestion-talents-xenophobia.md",
+      "title": "Gestion Talents Xenophobia"
+    },
+    {
+      "domain": "gestion-talents",
+      "file": "gestion-talents-youth.md",
+      "title": "Gestion Talents Youth"
+    },
+    {
+      "domain": "gestion-talents",
+      "file": "gestion-talents-zen.md",
+      "title": "Gestion Talents Zen"
+    },
+    {
+      "domain": "innovation-technologies",
+      "file": "ia-transformation-societe-2024-analyse.md",
+      "title": "Ia Transformation Societe 2024 Analyse"
+    },
+    {
+      "domain": "innovation-technologies",
+      "file": "ia-transformation-societe-2024.md",
+      "title": "IA et Transformation de la Société 2024 : Révolution Technologique et Impacts Sociétaux"
+    },
+    {
+      "domain": "innovation-technologies",
+      "file": "intelligence-artificielle-transformation-marketing.md",
+      "title": "IA et Transformation Marketing : Révolution en Cours"
+    },
+    {
+      "domain": "innovation-technologies",
+      "file": "nouvelles-tendances-developpement-web.md",
+      "title": "Nouvelles Tendances Developpement Web"
+    },
+    {
+      "domain": "leadership-management",
+      "file": "formation-leadership.md",
+      "title": "Formation au Leadership : Développer l'Excellence Managériale"
+    },
+    {
+      "domain": "leadership-management",
+      "file": "importance-leadership.md",
+      "title": "Leadership Moderne 2024 : L'Art de Diriger dans un Monde en Transformation"
+    },
+    {
+      "domain": "leadership-management",
+      "file": "leadership-equipes-performance.md",
+      "title": "Leadership et Performance des Équipes : Méthodologies d'Excellence pour Diriger des Équipes Performantes"
+    },
+    {
+      "domain": "leadership-management",
+      "file": "management-diversite-inclusion.md",
+      "title": "Management de la Diversité et Inclusion : Guide Pratique pour les Leaders"
+    },
+    {
+      "domain": "leadership-management",
+      "file": "management-hybride-defis-opportunites.md",
+      "title": "Management Hybride Defis Opportunites"
+    },
+    {
+      "domain": "marketing-communication",
+      "file": "email-marketing-personnalisation.md",
+      "title": "Email Marketing Personnalisation"
+    },
+    {
+      "domain": "marketing-communication",
+      "file": "marketing-content-strategies.md",
+      "title": "Marketing Content Strategies"
+    },
+    {
+      "domain": "marketing-communication",
+      "file": "marketing-digital-strategies.md",
+      "title": "Stratégies Marketing Digital 2024 : Méthodologies d'Excellence pour les Entreprises Françaises"
+    },
+    {
+      "domain": "marketing-communication",
+      "file": "strategies-marketing-digital-2025.md",
+      "title": "Stratégies Marketing Digital 2025 : Tendances et Innovations"
+    },
+    {
+      "domain": "marketing-communication",
+      "file": "strategies-reseaux-sociaux-b2b.md",
+      "title": "Strategies Reseaux Sociaux B2b"
+    },
+    {
+      "domain": "marketing-communication",
+      "file": "strategies-reseaux-sociaux-entreprises.md",
+      "title": "Strategies Reseaux Sociaux Entreprises"
+    },
+    {
+      "domain": "outils-techniques",
+      "file": "mermaid-example.md",
+      "title": "Mermaid : Guide Complet des Diagrammes Techniques 2024"
+    },
+    {
+      "domain": "outils-techniques",
+      "file": "pillcolor-guide.md",
+      "title": "Guide Complet des Pills : Système de Classification Visuelle 2024"
+    },
+    {
+      "domain": "outils-techniques",
+      "file": "visualisations-mermaid.md",
+      "title": "Visualisations Mermaid Avancées : Techniques Expertes 2024"
+    },
+    {
+      "domain": "productivite-methodes",
+      "file": "comment-planifier-mon-travail.md",
+      "title": "Comment Planifier Mon Travail 2024 : Méthodologies d'Excellence pour les Professionnels Français"
+    },
+    {
+      "domain": "productivite-methodes",
+      "file": "deep-work.md",
+      "title": "Deep Work : Maîtriser la Concentration Profonde pour une Productivité Exceptionnelle"
+    },
+    {
+      "domain": "productivite-methodes",
+      "file": "gestion-priorites-efficacite.md",
+      "title": "Gestion des Priorités et Efficacité 2024 : Méthodologies d'Excellence pour les Entreprises Françaises"
+    },
+    {
+      "domain": "productivite-methodes",
+      "file": "gestion-stress-performance.md",
+      "title": "Gestion Stress Performance"
+    },
+    {
+      "domain": "productivite-methodes",
+      "file": "gestion-surcharge-informationnelle.md",
+      "title": "Gestion Surcharge Informationnelle"
+    },
+    {
+      "domain": "productivite-methodes",
+      "file": "gestion-temps-productivite.md",
+      "title": "Gestion Temps Productivite"
+    },
+    {
+      "domain": "productivite-methodes",
+      "file": "gestion-temps-professionnels.md",
+      "title": "Gestion Temps Professionnels"
+    },
+    {
+      "domain": "productivite-methodes",
+      "file": "gestion-temps.md",
+      "title": "Gestion Temps"
+    },
+    {
+      "domain": "productivite-methodes",
+      "file": "methode-gtd-expliquee.md",
+      "title": "Methode Gtd Expliquee"
+    },
+    {
+      "domain": "productivite-methodes",
+      "file": "methode-pomodoro.md",
+      "title": "Methode Pomodoro"
+    },
+    {
+      "domain": "productivite-methodes",
+      "file": "procrastination-solutions-efficaces.md",
+      "title": "Procrastination Solutions Efficaces"
+    },
+    {
+      "domain": "productivite-methodes",
+      "file": "productivite-professionnelle.md",
+      "title": "Productivite Professionnelle"
+    },
+    {
+      "domain": "qualite-process",
+      "file": "gestion-qualite-amelioration.md",
+      "title": "Gestion de la Qualité et Amélioration Continue : Guide Expert 2024"
+    },
+    {
+      "domain": "qualite-process",
+      "file": "gestion-qualite-certification.md",
+      "title": "Certification Qualité : Guide Complet des Standards ISO 2024"
+    },
+    {
+      "domain": "qualite-process",
+      "file": "gestion-qualite-entreprise.md",
+      "title": "Gestion Qualite Entreprise"
+    },
+    {
+      "domain": "qualite-process",
+      "file": "gestion-qualite-processus.md",
+      "title": "Gestion de la Qualité : Optimisation des Processus"
+    },
+    {
+      "domain": "qualite-process",
+      "file": "gestion-qualite-strategie.md",
+      "title": "Gestion Qualite Strategie"
+    },
+    {
+      "domain": "qualite-process",
+      "file": "optimisation-processus-entreprise.md",
+      "title": "Optimisation des Processus d'Entreprise : Méthodes Efficaces"
+    },
+    {
+      "domain": "qualite-process",
+      "file": "qualite-processus-entreprise.md",
+      "title": "Qualité des Processus d'Entreprise : Excellence Opérationnelle"
+    },
+    {
+      "domain": "reconversion-carriere",
+      "file": "reconversion-professionnelle-reussie.md",
+      "title": "Reconversion Professionnelle Réussie 2024 : Méthodologies d'Excellence pour les Professionnels Français"
+    },
+    {
+      "domain": "service-client",
+      "file": "service-client-excellence.md",
+      "title": "Excellence du Service Client 2024 : Méthodologies d'Excellence pour les Entreprises Françaises"
+    },
+    {
+      "domain": "service-client",
+      "file": "service-client-performance.md",
+      "title": "Optimiser la Performance du Service Client : Guide Expert 2024"
+    },
+    {
+      "domain": "transformation-digitale",
+      "file": "transformation-digitale-telecom.md",
+      "title": "Transformation Digitale Telecom"
+    },
+    {
+      "domain": "transformation-digitale",
+      "file": "transformation-numerique-entreprise.md",
+      "title": "Transformation Numérique : Révolutionner l'Entreprise avec l'Excellence Digitale"
+    },
+    {
+      "domain": "transformation-digitale",
+      "file": "transformation-numerique-talents.md",
+      "title": "Transformation Numerique Talents"
+    }
+  ]
+}

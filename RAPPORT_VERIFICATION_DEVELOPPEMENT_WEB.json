@@ -1,0 +1,246 @@
+[
+  {
+    "fileName": "frameworks-javascript-analyse-2024.md",
+    "title": "Frameworks JavaScript 2024 : Mon Guide Expert pour Choisir le Bon Framework",
+    "hasIssues": true,
+    "hasWarnings": false,
+    "issues": [
+      "Section 1. FONDAMENTAUX DU SUJET incomplète",
+      "Section 2. ANALYSE APPROFONDIE incomplète"
+    ],
+    "warnings": [],
+    "stats": {
+      "sections": {
+        "present": 5,
+        "missing": 0,
+        "total": 5
+      },
+      "placeholders": 0,
+      "sources": 12,
+      "sourceCitations": 54,
+      "tables": 40.5,
+      "hasTableHeaders": true,
+      "section1Complete": false,
+      "section2Complete": false,
+      "orderCorrect": true
+    }
+  },
+  {
+    "fileName": "frameworks-javascript-comparaison-2024.md",
+    "title": "Frameworks JavaScript : Comparaison Complète 2024",
+    "hasIssues": true,
+    "hasWarnings": false,
+    "issues": [
+      "2 placeholders à compléter",
+      "Section 1. FONDAMENTAUX DU SUJET incomplète",
+      "Section 2. ANALYSE APPROFONDIE incomplète"
+    ],
+    "warnings": [],
+    "stats": {
+      "sections": {
+        "present": 5,
+        "missing": 0,
+        "total": 5
+      },
+      "placeholders": 2,
+      "sources": 12,
+      "sourceCitations": 49,
+      "tables": 40.5,
+      "hasTableHeaders": true,
+      "section1Complete": false,
+      "section2Complete": false,
+      "orderCorrect": true
+    }
+  },
+  {
+    "fileName": "progressive-web-apps-2024.md",
+    "title": "Progressive Web Apps 2024 : Guide Complet d'Implémentation",
+    "hasIssues": true,
+    "hasWarnings": false,
+    "issues": [
+      "Section 1. FONDAMENTAUX DU SUJET incomplète",
+      "Section 2. ANALYSE APPROFONDIE incomplète"
+    ],
+    "warnings": [],
+    "stats": {
+      "sections": {
+        "present": 5,
+        "missing": 0,
+        "total": 5
+      },
+      "placeholders": 0,
+      "sources": 12,
+      "sourceCitations": 58,
+      "tables": 41,
+      "hasTableHeaders": true,
+      "section1Complete": false,
+      "section2Complete": false,
+      "orderCorrect": true
+    }
+  },
+  {
+    "fileName": "react-performance-optimisation.md",
+    "title": "Optimisation des Performances React : Techniques Avancées",
+    "hasIssues": true,
+    "hasWarnings": false,
+    "issues": [
+      "Section 1. FONDAMENTAUX DU SUJET incomplète",
+      "Section 2. ANALYSE APPROFONDIE incomplète"
+    ],
+    "warnings": [],
+    "stats": {
+      "sections": {
+        "present": 5,
+        "missing": 0,
+        "total": 5
+      },
+      "placeholders": 0,
+      "sources": 9,
+      "sourceCitations": 31,
+      "tables": 51.5,
+      "hasTableHeaders": true,
+      "section1Complete": false,
+      "section2Complete": false,
+      "orderCorrect": true
+    }
+  },
+  {
+    "fileName": "technologies-javascript-2024.md",
+    "title": "Technologies JavaScript 2024 : Écosystème Moderne",
+    "hasIssues": true,
+    "hasWarnings": false,
+    "issues": [
+      "Section 1. FONDAMENTAUX DU SUJET incomplète",
+      "Section 2. ANALYSE APPROFONDIE incomplète"
+    ],
+    "warnings": [],
+    "stats": {
+      "sections": {
+        "present": 5,
+        "missing": 0,
+        "total": 5
+      },
+      "placeholders": 0,
+      "sources": 12,
+      "sourceCitations": 49,
+      "tables": 58.5,
+      "hasTableHeaders": true,
+      "section1Complete": false,
+      "section2Complete": false,
+      "orderCorrect": true
+    }
+  },
+  {
+    "fileName": "tendances-developpement-web-2025.md",
+    "title": "Tendances Developpement Web 2025",
+    "hasIssues": true,
+    "hasWarnings": true,
+    "issues": [
+      "Seulement 0 sources (minimum 4 requis)",
+      "Section 1. FONDAMENTAUX DU SUJET incomplète",
+      "Section 2. ANALYSE APPROFONDIE incomplète"
+    ],
+    "warnings": [
+      "Seulement 0 citations de sources dans le texte (recommandé: 4+)"
+    ],
+    "stats": {
+      "sections": {
+        "present": 5,
+        "missing": 0,
+        "total": 5
+      },
+      "placeholders": 0,
+      "sources": 0,
+      "sourceCitations": 0,
+      "tables": 0,
+      "hasTableHeaders": false,
+      "section1Complete": false,
+      "section2Complete": false,
+      "orderCorrect": true
+    }
+  },
+  {
+    "fileName": "web-accessibilite-guide-pratique.md",
+    "title": "Web Accessibilite Guide Pratique",
+    "hasIssues": true,
+    "hasWarnings": true,
+    "issues": [
+      "Seulement 0 sources (minimum 4 requis)",
+      "Section 1. FONDAMENTAUX DU SUJET incomplète",
+      "Section 2. ANALYSE APPROFONDIE incomplète"
+    ],
+    "warnings": [
+      "Seulement 0 citations de sources dans le texte (recommandé: 4+)"
+    ],
+    "stats": {
+      "sections": {
+        "present": 5,
+        "missing": 0,
+        "total": 5
+      },
+      "placeholders": 0,
+      "sources": 0,
+      "sourceCitations": 0,
+      "tables": 0,
+      "hasTableHeaders": false,
+      "section1Complete": false,
+      "section2Complete": false,
+      "orderCorrect": true
+    }
+  },
+  {
+    "fileName": "web-javascript-modern.md",
+    "title": "Web Javascript Modern",
+    "hasIssues": true,
+    "hasWarnings": true,
+    "issues": [
+      "Seulement 0 sources (minimum 4 requis)",
+      "Section 1. FONDAMENTAUX DU SUJET incomplète",
+      "Section 2. ANALYSE APPROFONDIE incomplète"
+    ],
+    "warnings": [
+      "Seulement 0 citations de sources dans le texte (recommandé: 4+)"
+    ],
+    "stats": {
+      "sections": {
+        "present": 5,
+        "missing": 0,
+        "total": 5
+      },
+      "placeholders": 0,
+      "sources": 0,
+      "sourceCitations": 0,
+      "tables": 0,
+      "hasTableHeaders": false,
+      "section1Complete": false,
+      "section2Complete": false,
+      "orderCorrect": true
+    }
+  },
+  {
+    "fileName": "web-tendances-2024.md",
+    "title": "Tendances Web 2024 : Technologies et Innovations",
+    "hasIssues": true,
+    "hasWarnings": false,
+    "issues": [
+      "Section 1. FONDAMENTAUX DU SUJET incomplète",
+      "Section 2. ANALYSE APPROFONDIE incomplète"
+    ],
+    "warnings": [],
+    "stats": {
+      "sections": {
+        "present": 5,
+        "missing": 0,
+        "total": 5
+      },
+      "placeholders": 0,
+      "sources": 10,
+      "sourceCitations": 45,
+      "tables": 56,
+      "hasTableHeaders": true,
+      "section1Complete": false,
+      "section2Complete": false,
+      "orderCorrect": true
+    }
+  }
+]

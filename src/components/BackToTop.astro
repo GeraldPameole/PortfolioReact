@@ -1,43 +1,156 @@
 ---
-// Composant pour revenir en haut de la page
+// Composant BackToTop avec design cohérent
 ---
 
-<button
-  id="backToTop"
-  class="fixed bottom-5 right-5 bg-primary text-white p-3 rounded-full shadow-lg z-50 opacity-0 transition-opacity duration-300 hover:bg-accent focus:outline-none focus:ring-2 focus:ring-primary"
-  aria-label="Retour en haut de page"
->
-  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
-  </svg>
-</button>
+<div id="back-to-top" class="fixed bottom-8 right-8 z-50 opacity-0 invisible transition-all duration-300 ease-in-out transform translate-y-4">
+  <button 
+    class="group relative bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white p-4 rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 ease-in-out transform hover:scale-110 hover:-translate-y-1 focus:outline-none focus:ring-4 focus:ring-indigo-300 dark:focus:ring-indigo-600"
+    aria-label="Retour en haut de page"
+    title="Retour en haut de page"
+  >
+    <!-- Icône flèche avec animation -->
+    <svg 
+      class="w-6 h-6 transition-transform duration-300 group-hover:-translate-y-1" 
+      fill="none" 
+      stroke="currentColor" 
+      viewBox="0 0 24 24"
+    >
+      <path 
+        stroke-linecap="round" 
+        stroke-linejoin="round" 
+        stroke-width="2" 
+        d="M5 10l7-7m0 0l7 7m-7-7v18"
+      />
+    </svg>
+    
+    <!-- Effet de pulsation au survol -->
+    <div class="absolute inset-0 rounded-full bg-white opacity-0 group-hover:opacity-20 group-hover:scale-150 transition-all duration-500 ease-out"></div>
+    
+    <!-- Effet de particules (optionnel) -->
+    <div class="absolute inset-0 rounded-full overflow-hidden pointer-events-none">
+      <div class="absolute top-1/2 left-1/2 w-2 h-2 bg-white rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-ping transform -translate-x-1/2 -translate-y-1/2"></div>
+    </div>
+  </button>
+</div>
 
 <script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const backToTopButton = document.getElementById('backToTop');
-    
-    if (!backToTopButton) return;
+  // Fonctionnalité de retour en haut avec détection du scroll
+  class BackToTop {
+    constructor() {
+      this.button = document.getElementById('back-to-top');
+      this.scrollThreshold = 300; // Seuil d'apparition du bouton
+      this.init();
+    }
 
-    // Afficher le bouton lorsque l'utilisateur défile à plus de 300px
-    const toggleBackToTopButton = () => {
-      if (window.scrollY > 300) {
-        backToTopButton.classList.add('opacity-100');
-        backToTopButton.classList.remove('opacity-0');
+    init() {
+      if (!this.button) return;
+
+      // Écouter le scroll
+      window.addEventListener('scroll', this.handleScroll.bind(this));
+      
+      // Écouter le clic
+      this.button.addEventListener('click', this.scrollToTop.bind(this));
+      
+      // Écouter les touches clavier
+      this.button.addEventListener('keydown', this.handleKeydown.bind(this));
+    }
+
+    handleScroll() {
+      const scrollY = window.scrollY;
+      
+      if (scrollY > this.scrollThreshold) {
+        this.showButton();
       } else {
-        backToTopButton.classList.add('opacity-0');
-        backToTopButton.classList.remove('opacity-100');
+        this.hideButton();
       }
-    };
+    }
 
-    // Événement de défilement pour afficher/masquer le bouton
-    window.addEventListener('scroll', toggleBackToTopButton);
+    showButton() {
+      this.button.classList.remove('opacity-0', 'invisible', 'translate-y-4');
+      this.button.classList.add('opacity-100', 'visible', 'translate-y-0');
+    }
 
-    // Action au clic sur le bouton
-    backToTopButton.addEventListener('click', () => {
+    hideButton() {
+      this.button.classList.add('opacity-0', 'invisible', 'translate-y-4');
+      this.button.classList.remove('opacity-100', 'visible', 'translate-y-0');
+    }
+
+    scrollToTop() {
+      // Animation fluide vers le haut
       window.scrollTo({
         top: 0,
         behavior: 'smooth'
       });
-    });
+      
+      // Feedback visuel
+      this.button.classList.add('animate-pulse');
+      setTimeout(() => {
+        this.button.classList.remove('animate-pulse');
+      }, 300);
+    }
+
+    handleKeydown(event) {
+      // Activation avec la touche Entrée ou Espace
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        this.scrollToTop();
+      }
+    }
+  }
+
+  // Initialiser quand le DOM est prêt
+  document.addEventListener('DOMContentLoaded', () => {
+    new BackToTop();
   });
-</script> 
+
+  // Réinitialiser si le contenu change (pour les SPA)
+  document.addEventListener('astro:page-load', () => {
+    new BackToTop();
+  });
+</script>
+
+<style>
+  /* Animations personnalisées */
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-5px); }
+  }
+
+  #back-to-top:hover {
+    animation: float 2s ease-in-out infinite;
+  }
+
+  /* Responsive design */
+  @media (max-width: 768px) {
+    #back-to-top {
+      bottom: 1rem;
+      right: 1rem;
+    }
+    
+    #back-to-top button {
+      padding: 0.75rem;
+    }
+    
+    #back-to-top svg {
+      width: 1.25rem;
+      height: 1.25rem;
+    }
+  }
+
+  /* Mode sombre */
+  @media (prefers-color-scheme: dark) {
+    #back-to-top button {
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    }
+  }
+
+  /* Animation d'apparition progressive */
+  #back-to-top {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Effet de rebond au clic */
+  #back-to-top:active {
+    transform: scale(0.95);
+  }
+</style>

@@ -1,0 +1,1465 @@
+{
+  "date": "2025-11-04T09:04:29.090Z",
+  "total": 95,
+  "withIssues": 95,
+  "complete": 0,
+  "byDomain": {
+    "articles-generaux": [
+      {
+        "file": "synthese-thematiques.md",
+        "issues": {
+          "empty": [
+            "Introduction",
+            "1. FONDAMENTAUX DU SUJET",
+            "2. ANALYSE APPROFONDIE",
+            "3. STRATÉGIES ET MÉTHODOLOGIES",
+            "6. SOURCES ET RÉFÉRENCES"
+          ],
+          "incomplete": [],
+          "placeholders": [],
+          "sources": []
+        }
+      }
+    ],
+    "developpement-commercial": [
+      {
+        "file": "negocier-salaire-techniques-avancees.md",
+        "issues": {
+          "empty": [
+            "Introduction",
+            "1. FONDAMENTAUX DU SUJET",
+            "2. ANALYSE APPROFONDIE",
+            "3. STRATÉGIES ET MÉTHODOLOGIES",
+            "6. SOURCES ET RÉFÉRENCES"
+          ],
+          "incomplete": [],
+          "placeholders": [],
+          "sources": []
+        }
+      },
+      {
+        "file": "recrutement-talents-digitaux.md",
+        "issues": {
+          "empty": [
+            "Introduction",
+            "1. FONDAMENTAUX DU SUJET",
+            "2. ANALYSE APPROFONDIE",
+            "3. STRATÉGIES ET MÉTHODOLOGIES",
+            "6. SOURCES ET RÉFÉRENCES"
+          ],
+          "incomplete": [],
+          "placeholders": [],
+          "sources": []
+        }
+      }
+    ],
+    "developpement-web": [
+      {
+        "file": "frameworks-javascript-analyse-2024.md",
+        "issues": {
+          "empty": [
+            "Introduction",
+            "1. FONDAMENTAUX DU SUJET",
+            "2. ANALYSE APPROFONDIE",
+            "3. STRATÉGIES ET MÉTHODOLOGIES",
+            "6. SOURCES ET RÉFÉRENCES"
+          ],
+          "incomplete": [],
+          "placeholders": [],
+          "sources": []
+        }
+      },
+      {
+        "file": "frameworks-javascript-comparaison-2024.md",
+        "issues": {
+          "empty": [
+            "Introduction",
+            "1. FONDAMENTAUX DU SUJET",
+            "2. ANALYSE APPROFONDIE",
+            "3. STRATÉGIES ET MÉTHODOLOGIES",
+            "6. SOURCES ET RÉFÉRENCES"
+          ],
+          "incomplete": [],
+          "placeholders": [],
+          "sources": []
+        }
+      },
+      {
+        "file": "progressive-web-apps-2024.md",
+        "issues": {
+          "empty": [
+            "Introduction",
+            "1. FONDAMENTAUX DU SUJET",
+            "2. ANALYSE APPROFONDIE",
+            "3. STRATÉGIES ET MÉTHODOLOGIES",
+            "6. SOURCES ET RÉFÉRENCES"
+          ],
+          "incomplete": [],
+          "placeholders": [],
+          "sources": []
+        }
+      },
+      {
+        "file": "react-performance-optimisation.md",
+        "issues": {
+          "empty": [
+            "Introduction",
+            "1. FONDAMENTAUX DU SUJET",
+            "2. ANALYSE APPROFONDIE",
+            "3. STRATÉGIES ET MÉTHODOLOGIES",
+            "6. SOURCES ET RÉFÉRENCES"
+          ],
+          "incomplete": [],
+          "placeholders": [],
+          "sources": []
+        }
+      },
+      {
+        "file": "technologies-javascript-2024.md",
+        "issues": {
+          "empty": [
+            "Introduction",
+            "1. FONDAMENTAUX DU SUJET",
+            "2. ANALYSE APPROFONDIE",
+            "3. STRATÉGIES ET MÉTHODOLOGIES",
+            "6. SOURCES ET RÉFÉRENCES"
+          ],
+          "incomplete": [],
+          "placeholders": [],
+          "sources": []
+        }
+      },
+      {
+        "file": "tendances-developpement-web-2025.md",
+        "issues": {
+          "empty": [
+            "Introduction",
+            "1. FONDAMENTAUX DU SUJET",
+            "2. ANALYSE APPROFONDIE",
+            "3. STRATÉGIES ET MÉTHODOLOGIES",
+            "6. SOURCES ET RÉFÉRENCES"
+          ],
+          "incomplete": [],
+          "placeholders": [],
+          "sources": []
+        }
+      },
+      {
+        "file": "web-accessibilite-guide-pratique.md",
+        "issues": {
+          "empty": [
+            "Introduction",
+            "1. FONDAMENTAUX DU SUJET",
+            "2. ANALYSE APPROFONDIE",
+            "3. STRATÉGIES ET MÉTHODOLOGIES",
+            "6. SOURCES ET RÉFÉRENCES"
+          ],
+          "incomplete": [],
+          "placeholders": [],
+          "sources": []
+        }
+      },
+      {
+        "file": "web-javascript-modern.md",
+        "issues": {
+          "empty": [
+            "Introduction",
+            "1. FONDAMENTAUX DU SUJET",
+            "2. ANALYSE APPROFONDIE",
+            "3. STRATÉGIES ET MÉTHODOLOGIES",
+            "6. SOURCES ET RÉFÉRENCES"
+          ],
+          "incomplete": [],
+          "placeholders": [],
+          "sources": []
+        }
+      },
+      {
+        "file": "web-tendances-2024.md",
+        "issues": {
+          "empty": [
+            "Introduction",
+            "1. FONDAMENTAUX DU SUJET",
+            "2. ANALYSE APPROFONDIE",
+            "3. STRATÉGIES ET MÉTHODOLOGIES",
+            "6. SOURCES ET RÉFÉRENCES"
+          ],
+          "incomplete": [],
+          "placeholders": [],
+          "sources": []
+        }
+      }
+    ],
+    "formation": [
+      {
+        "file": "apprentissage-continu-developpement-competences.md",
+        "issues": {
+          "empty": [
+            "Introduction",
+            "1. FONDAMENTAUX DU SUJET",
+            "2. ANALYSE APPROFONDIE",
+            "3. STRATÉGIES ET MÉTHODOLOGIES",
+            "6. SOURCES ET RÉFÉRENCES"
+          ],
+          "incomplete": [],
+          "placeholders": [],
+          "sources": []
+        }
+      },
+      {
+        "file": "formation-adaptation.md",
+        "issues": {
+          "empty": [
+            "Introduction",
+            "1. FONDAMENTAUX DU SUJET",
+            "2. ANALYSE APPROFONDIE",
+            "3. STRATÉGIES ET MÉTHODOLOGIES",
+            "6. SOURCES ET RÉFÉRENCES"
+          ],
+          "incomplete": [],
+          "placeholders": [],
+          "sources": []
+        }
+      },
+      {
+        "file": "formation-collaboration.md",
+        "issues": {
+          "empty": [
+            "Introduction",
+            "1. FONDAMENTAUX DU SUJET",
+            "2. ANALYSE APPROFONDIE",
+            "3. STRATÉGIES ET MÉTHODOLOGIES",
+            "6. SOURCES ET RÉFÉRENCES"
+          ],
+          "incomplete": [],
+          "placeholders": [],
+          "sources": []
+        }
+      },
+      {
+        "file": "formation-communication.md",
+        "issues": {
+          "empty": [
+            "Introduction",
+            "1. FONDAMENTAUX DU SUJET",
+            "2. ANALYSE APPROFONDIE",
+            "3. STRATÉGIES ET MÉTHODOLOGIES",
+            "6. SOURCES ET RÉFÉRENCES"
+          ],
+          "incomplete": [],
+          "placeholders": [],
+          "sources": []
+        }
+      },
+      {
+        "file": "formation-creativite.md",
+        "issues": {
+          "empty": [
+            "Introduction",
+            "1. FONDAMENTAUX DU SUJET",
+            "2. ANALYSE APPROFONDIE",
+            "3. STRATÉGIES ET MÉTHODOLOGIES",
+            "6. SOURCES ET RÉFÉRENCES"
+          ],
+          "incomplete": [],
+          "placeholders": [],
+          "sources": []
+        }
+      },
+      {
+        "file": "formation-elearning.md",
+        "issues": {
+          "empty": [
+            "Introduction",
+            "1. FONDAMENTAUX DU SUJET",
+            "2. ANALYSE APPROFONDIE",
+            "3. STRATÉGIES ET MÉTHODOLOGIES",
+            "6. SOURCES ET RÉFÉRENCES"
+          ],
+          "incomplete": [],
+          "placeholders": [],
+          "sources": []
+        }
+      },
+      {
+        "file": "formation-equipes-commerciales.md",
+        "issues": {
+          "empty": [
+            "Introduction",
+            "1. FONDAMENTAUX DU SUJET",
+            "2. ANALYSE APPROFONDIE",
+            "3. STRATÉGIES ET MÉTHODOLOGIES",
+            "6. SOURCES ET RÉFÉRENCES"
+          ],
+          "incomplete": [],
+          "placeholders": [],
+          "sources": []
+        }
+      },
+      {
+        "file": "formation-innovation.md",
+        "issues": {
+          "empty": [
+            "Introduction",
+            "1. FONDAMENTAUX DU SUJET",
+            "2. ANALYSE APPROFONDIE",
+            "3. STRATÉGIES ET MÉTHODOLOGIES",
+            "6. SOURCES ET RÉFÉRENCES"
+          ],
+          "incomplete": [],
+          "placeholders": [],
+          "sources": []
+        }
+      },
+      {
+        "file": "formation-mentorat.md",
+        "issues": {
+          "empty": [
+            "Introduction",
+            "1. FONDAMENTAUX DU SUJET",
+            "2. ANALYSE APPROFONDIE",
+            "3. STRATÉGIES ET MÉTHODOLOGIES",
+            "6. SOURCES ET RÉFÉRENCES"
+          ],
+          "incomplete": [],
+          "placeholders": [],
+          "sources": []
+        }
+      },
+      {
+        "file": "formation-professionnelle-continue.md",
+        "issues": {
+          "empty": [
+            "Introduction",
+            "1. FONDAMENTAUX DU SUJET",
+            "2. ANALYSE APPROFONDIE",
+            "3. STRATÉGIES ET MÉTHODOLOGIES",
+            "6. SOURCES ET RÉFÉRENCES"
+          ],
+          "incomplete": [],
+          "placeholders": [],
+          "sources": []
+        }
+      },
+      {
+        "file": "formation-soft-skills.md",
+        "issues": {
+          "empty": [
+            "Introduction",
+            "1. FONDAMENTAUX DU SUJET",
+            "2. ANALYSE APPROFONDIE",
+            "3. STRATÉGIES ET MÉTHODOLOGIES",
+            "6. SOURCES ET RÉFÉRENCES"
+          ],
+          "incomplete": [],
+          "placeholders": [],
+          "sources": []
+        }
+      },
+      {
+        "file": "formation-talents-guide.md",
+        "issues": {
+          "empty": [
+            "Introduction",
+            "1. FONDAMENTAUX DU SUJET",
+            "2. ANALYSE APPROFONDIE",
+            "3. STRATÉGIES ET MÉTHODOLOGIES",
+            "6. SOURCES ET RÉFÉRENCES"
+          ],
+          "incomplete": [],
+          "placeholders": [],
+          "sources": []
+        }
+      },
+      {
+        "file": "formation-technique.md",
+        "issues": {
+          "empty": [
+            "Introduction",
+            "1. FONDAMENTAUX DU SUJET",
+            "2. ANALYSE APPROFONDIE",
+            "3. STRATÉGIES ET MÉTHODOLOGIES",
+            "6. SOURCES ET RÉFÉRENCES"
+          ],
+          "incomplete": [],
+          "placeholders": [],
+          "sources": []
+        }
+      },
+      {
+        "file": "impact-formation-continue-carriere.md",
+        "issues": {
+          "empty": [
+            "Introduction",
+            "1. FONDAMENTAUX DU SUJET",
+            "2. ANALYSE APPROFONDIE",
+            "3. STRATÉGIES ET MÉTHODOLOGIES",
+            "6. SOURCES ET RÉFÉRENCES"
+          ],
+          "incomplete": [],
+          "placeholders": [],
+          "sources": []
+        }
+      },
+      {
+        "file": "mentoring-developpement-professionnel.md",
+        "issues": {
+          "empty": [
+            "Introduction",
+            "1. FONDAMENTAUX DU SUJET",
+            "2. ANALYSE APPROFONDIE",
+            "3. STRATÉGIES ET MÉTHODOLOGIES",
+            "6. SOURCES ET RÉFÉRENCES"
+          ],
+          "incomplete": [],
+          "placeholders": [],
+          "sources": []
+        }
+      }
+    ],
+    "gestion-connaissances": [
+      {
+        "file": "gestion-connaissances-organisation.md",
+        "issues": {
+          "empty": [
+            "Introduction",
+            "1. FONDAMENTAUX DU SUJET",
+            "2. ANALYSE APPROFONDIE",
+            "3. STRATÉGIES ET MÉTHODOLOGIES",
+            "6. SOURCES ET RÉFÉRENCES"
+          ],
+          "incomplete": [],
+          "placeholders": [],
+          "sources": []
+        }
+      }
+    ],
+    "gestion-projet": [
+      {
+        "file": "agile-scrum-methodologies.md",
+        "issues": {
+          "empty": [
+            "Introduction",
+            "1. FONDAMENTAUX DU SUJET",
+            "2. ANALYSE APPROFONDIE",
+            "3. STRATÉGIES ET MÉTHODOLOGIES",
+            "6. SOURCES ET RÉFÉRENCES"
+          ],
+          "incomplete": [],
+          "placeholders": [],
+          "sources": []
+        }
+      },
+      {
+        "file": "gestion-performance-equipe.md",
+        "issues": {
+          "empty": [
+            "Introduction",
+            "1. FONDAMENTAUX DU SUJET",
+            "2. ANALYSE APPROFONDIE",
+            "3. STRATÉGIES ET MÉTHODOLOGIES",
+            "6. SOURCES ET RÉFÉRENCES"
+          ],
+          "incomplete": [],
+          "placeholders": [],
+          "sources": []
+        }
+      },
+      {
+        "file": "gestion-performance-evaluation.md",
+        "issues": {
+          "empty": [
+            "Introduction",
+            "1. FONDAMENTAUX DU SUJET",
+            "2. ANALYSE APPROFONDIE",
+            "3. STRATÉGIES ET MÉTHODOLOGIES",
+            "6. SOURCES ET RÉFÉRENCES"
+          ],
+          "incomplete": [],
+          "placeholders": [],
+          "sources": []
+        }
+      },
+      {
+        "file": "gestion-projet-agile-meilleures-pratiques.md",
+        "issues": {
+          "empty": [
+            "Introduction",
+            "1. FONDAMENTAUX DU SUJET",
+            "2. ANALYSE APPROFONDIE",
+            "3. STRATÉGIES ET MÉTHODOLOGIES",
+            "6. SOURCES ET RÉFÉRENCES"
+          ],
+          "incomplete": [],
+          "placeholders": [],
+          "sources": []
+        }
+      },
+      {
+        "file": "gestion-projet-agile.md",
+        "issues": {
+          "empty": [
+            "Introduction",
+            "1. FONDAMENTAUX DU SUJET",
+            "2. ANALYSE APPROFONDIE",
+            "3. STRATÉGIES ET MÉTHODOLOGIES",
+            "6. SOURCES ET RÉFÉRENCES"
+          ],
+          "incomplete": [],
+          "placeholders": [],
+          "sources": []
+        }
+      },
+      {
+        "file": "gestion-projet-performance.md",
+        "issues": {
+          "empty": [
+            "Introduction",
+            "1. FONDAMENTAUX DU SUJET",
+            "2. ANALYSE APPROFONDIE",
+            "3. STRATÉGIES ET MÉTHODOLOGIES",
+            "6. SOURCES ET RÉFÉRENCES"
+          ],
+          "incomplete": [],
+          "placeholders": [],
+          "sources": []
+        }
+      },
+      {
+        "file": "gestion-projet-risques.md",
+        "issues": {
+          "empty": [
+            "Introduction",
+            "1. FONDAMENTAUX DU SUJET",
+            "2. ANALYSE APPROFONDIE",
+            "3. STRATÉGIES ET MÉTHODOLOGIES",
+            "6. SOURCES ET RÉFÉRENCES"
+          ],
+          "incomplete": [],
+          "placeholders": [],
+          "sources": []
+        }
+      },
+      {
+        "file": "gestion-risques-projet.md",
+        "issues": {
+          "empty": [
+            "Introduction",
+            "1. FONDAMENTAUX DU SUJET",
+            "2. ANALYSE APPROFONDIE",
+            "3. STRATÉGIES ET MÉTHODOLOGIES",
+            "6. SOURCES ET RÉFÉRENCES"
+          ],
+          "incomplete": [],
+          "placeholders": [],
+          "sources": []
+        }
+      }
+    ],
+    "gestion-talents": [
+      {
+        "file": "gestion-competences-developpement.md",
+        "issues": {
+          "empty": [
+            "Introduction",
+            "1. FONDAMENTAUX DU SUJET",
+            "2. ANALYSE APPROFONDIE",
+            "3. STRATÉGIES ET MÉTHODOLOGIES",
+            "6. SOURCES ET RÉFÉRENCES"
+          ],
+          "incomplete": [],
+          "placeholders": [],
+          "sources": []
+        }
+      },
+      {
+        "file": "gestion-conflits-equipe.md",
+        "issues": {
+          "empty": [
+            "Introduction",
+            "1. FONDAMENTAUX DU SUJET",
+            "2. ANALYSE APPROFONDIE",
+            "3. STRATÉGIES ET MÉTHODOLOGIES",
+            "6. SOURCES ET RÉFÉRENCES"
+          ],
+          "incomplete": [],
+          "placeholders": [],
+          "sources": []
+        }
+      },
+      {
+        "file": "gestion-talents-attraction.md",
+        "issues": {
+          "empty": [
+            "Introduction",
+            "1. FONDAMENTAUX DU SUJET",
+            "2. ANALYSE APPROFONDIE",
+            "3. STRATÉGIES ET MÉTHODOLOGIES",
+            "6. SOURCES ET RÉFÉRENCES"
+          ],
+          "incomplete": [],
+          "placeholders": [],
+          "sources": []
+        }
+      },
+      {
+        "file": "gestion-talents-developpement.md",
+        "issues": {
+          "empty": [
+            "Introduction",
+            "1. FONDAMENTAUX DU SUJET",
+            "2. ANALYSE APPROFONDIE",
+            "3. STRATÉGIES ET MÉTHODOLOGIES",
+            "6. SOURCES ET RÉFÉRENCES"
+          ],
+          "incomplete": [],
+          "placeholders": [],
+          "sources": []
+        }
+      },
+      {
+        "file": "gestion-talents-fidelisation.md",
+        "issues": {
+          "empty": [
+            "Introduction",
+            "1. FONDAMENTAUX DU SUJET",
+            "2. ANALYSE APPROFONDIE",
+            "3. STRATÉGIES ET MÉTHODOLOGIES",
+            "6. SOURCES ET RÉFÉRENCES"
+          ],
+          "incomplete": [],
+          "placeholders": [],
+          "sources": []
+        }
+      },
+      {
+        "file": "gestion-talents-formation.md",
+        "issues": {
+          "empty": [
+            "Introduction",
+            "1. FONDAMENTAUX DU SUJET",
+            "2. ANALYSE APPROFONDIE",
+            "3. STRATÉGIES ET MÉTHODOLOGIES",
+            "6. SOURCES ET RÉFÉRENCES"
+          ],
+          "incomplete": [],
+          "placeholders": [],
+          "sources": []
+        }
+      },
+      {
+        "file": "gestion-talents-performance.md",
+        "issues": {
+          "empty": [
+            "Introduction",
+            "1. FONDAMENTAUX DU SUJET",
+            "2. ANALYSE APPROFONDIE",
+            "3. STRATÉGIES ET MÉTHODOLOGIES",
+            "6. SOURCES ET RÉFÉRENCES"
+          ],
+          "incomplete": [],
+          "placeholders": [],
+          "sources": []
+        }
+      },
+      {
+        "file": "gestion-talents-recrutement.md",
+        "issues": {
+          "empty": [
+            "Introduction",
+            "1. FONDAMENTAUX DU SUJET",
+            "2. ANALYSE APPROFONDIE",
+            "3. STRATÉGIES ET MÉTHODOLOGIES",
+            "6. SOURCES ET RÉFÉRENCES"
+          ],
+          "incomplete": [],
+          "placeholders": [],
+          "sources": []
+        }
+      },
+      {
+        "file": "gestion-talents-remuneration.md",
+        "issues": {
+          "empty": [
+            "Introduction",
+            "1. FONDAMENTAUX DU SUJET",
+            "2. ANALYSE APPROFONDIE",
+            "3. STRATÉGIES ET MÉTHODOLOGIES",
+            "6. SOURCES ET RÉFÉRENCES"
+          ],
+          "incomplete": [],
+          "placeholders": [],
+          "sources": []
+        }
+      },
+      {
+        "file": "gestion-talents-retention.md",
+        "issues": {
+          "empty": [
+            "Introduction",
+            "1. FONDAMENTAUX DU SUJET",
+            "2. ANALYSE APPROFONDIE",
+            "3. STRATÉGIES ET MÉTHODOLOGIES",
+            "6. SOURCES ET RÉFÉRENCES"
+          ],
+          "incomplete": [],
+          "placeholders": [],
+          "sources": []
+        }
+      },
+      {
+        "file": "gestion-talents-succession.md",
+        "issues": {
+          "empty": [
+            "Introduction",
+            "1. FONDAMENTAUX DU SUJET",
+            "2. ANALYSE APPROFONDIE",
+            "3. STRATÉGIES ET MÉTHODOLOGIES",
+            "6. SOURCES ET RÉFÉRENCES"
+          ],
+          "incomplete": [],
+          "placeholders": [],
+          "sources": []
+        }
+      },
+      {
+        "file": "gestion-talents-valuation.md",
+        "issues": {
+          "empty": [
+            "Introduction",
+            "1. FONDAMENTAUX DU SUJET",
+            "2. ANALYSE APPROFONDIE",
+            "3. STRATÉGIES ET MÉTHODOLOGIES",
+            "6. SOURCES ET RÉFÉRENCES"
+          ],
+          "incomplete": [],
+          "placeholders": [],
+          "sources": []
+        }
+      },
+      {
+        "file": "gestion-talents-whistleblowing.md",
+        "issues": {
+          "empty": [
+            "Introduction",
+            "1. FONDAMENTAUX DU SUJET",
+            "2. ANALYSE APPROFONDIE",
+            "3. STRATÉGIES ET MÉTHODOLOGIES",
+            "6. SOURCES ET RÉFÉRENCES"
+          ],
+          "incomplete": [],
+          "placeholders": [],
+          "sources": []
+        }
+      },
+      {
+        "file": "gestion-talents-xenophobia.md",
+        "issues": {
+          "empty": [
+            "Introduction",
+            "1. FONDAMENTAUX DU SUJET",
+            "2. ANALYSE APPROFONDIE",
+            "3. STRATÉGIES ET MÉTHODOLOGIES",
+            "6. SOURCES ET RÉFÉRENCES"
+          ],
+          "incomplete": [],
+          "placeholders": [],
+          "sources": []
+        }
+      },
+      {
+        "file": "gestion-talents-youth.md",
+        "issues": {
+          "empty": [
+            "Introduction",
+            "1. FONDAMENTAUX DU SUJET",
+            "2. ANALYSE APPROFONDIE",
+            "3. STRATÉGIES ET MÉTHODOLOGIES",
+            "6. SOURCES ET RÉFÉRENCES"
+          ],
+          "incomplete": [],
+          "placeholders": [],
+          "sources": []
+        }
+      },
+      {
+        "file": "gestion-talents-zen.md",
+        "issues": {
+          "empty": [
+            "Introduction",
+            "1. FONDAMENTAUX DU SUJET",
+            "2. ANALYSE APPROFONDIE",
+            "3. STRATÉGIES ET MÉTHODOLOGIES",
+            "6. SOURCES ET RÉFÉRENCES"
+          ],
+          "incomplete": [],
+          "placeholders": [],
+          "sources": []
+        }
+      }
+    ],
+    "innovation-technologies": [
+      {
+        "file": "ia-transformation-societe-2024-analyse.md",
+        "issues": {
+          "empty": [
+            "Introduction",
+            "1. FONDAMENTAUX DU SUJET",
+            "2. ANALYSE APPROFONDIE",
+            "3. STRATÉGIES ET MÉTHODOLOGIES",
+            "6. SOURCES ET RÉFÉRENCES"
+          ],
+          "incomplete": [],
+          "placeholders": [],
+          "sources": []
+        }
+      },
+      {
+        "file": "ia-transformation-societe-2024.md",
+        "issues": {
+          "empty": [
+            "Introduction",
+            "1. FONDAMENTAUX DU SUJET",
+            "2. ANALYSE APPROFONDIE",
+            "3. STRATÉGIES ET MÉTHODOLOGIES",
+            "6. SOURCES ET RÉFÉRENCES"
+          ],
+          "incomplete": [],
+          "placeholders": [],
+          "sources": []
+        }
+      },
+      {
+        "file": "intelligence-artificielle-transformation-marketing.md",
+        "issues": {
+          "empty": [
+            "Introduction",
+            "1. FONDAMENTAUX DU SUJET",
+            "2. ANALYSE APPROFONDIE",
+            "3. STRATÉGIES ET MÉTHODOLOGIES",
+            "6. SOURCES ET RÉFÉRENCES"
+          ],
+          "incomplete": [],
+          "placeholders": [],
+          "sources": []
+        }
+      },
+      {
+        "file": "nouvelles-tendances-developpement-web.md",
+        "issues": {
+          "empty": [
+            "Introduction",
+            "1. FONDAMENTAUX DU SUJET",
+            "2. ANALYSE APPROFONDIE",
+            "3. STRATÉGIES ET MÉTHODOLOGIES",
+            "6. SOURCES ET RÉFÉRENCES"
+          ],
+          "incomplete": [],
+          "placeholders": [],
+          "sources": []
+        }
+      }
+    ],
+    "leadership-management": [
+      {
+        "file": "formation-leadership.md",
+        "issues": {
+          "empty": [
+            "Introduction",
+            "1. FONDAMENTAUX DU SUJET",
+            "2. ANALYSE APPROFONDIE",
+            "3. STRATÉGIES ET MÉTHODOLOGIES",
+            "6. SOURCES ET RÉFÉRENCES"
+          ],
+          "incomplete": [],
+          "placeholders": [],
+          "sources": []
+        }
+      },
+      {
+        "file": "importance-leadership.md",
+        "issues": {
+          "empty": [
+            "Introduction",
+            "1. FONDAMENTAUX DU SUJET",
+            "2. ANALYSE APPROFONDIE",
+            "3. STRATÉGIES ET MÉTHODOLOGIES",
+            "6. SOURCES ET RÉFÉRENCES"
+          ],
+          "incomplete": [],
+          "placeholders": [],
+          "sources": []
+        }
+      },
+      {
+        "file": "leadership-equipes-performance.md",
+        "issues": {
+          "empty": [
+            "Introduction",
+            "1. FONDAMENTAUX DU SUJET",
+            "2. ANALYSE APPROFONDIE",
+            "3. STRATÉGIES ET MÉTHODOLOGIES",
+            "6. SOURCES ET RÉFÉRENCES"
+          ],
+          "incomplete": [],
+          "placeholders": [],
+          "sources": []
+        }
+      },
+      {
+        "file": "management-diversite-inclusion.md",
+        "issues": {
+          "empty": [
+            "Introduction",
+            "1. FONDAMENTAUX DU SUJET",
+            "2. ANALYSE APPROFONDIE",
+            "3. STRATÉGIES ET MÉTHODOLOGIES",
+            "6. SOURCES ET RÉFÉRENCES"
+          ],
+          "incomplete": [],
+          "placeholders": [],
+          "sources": []
+        }
+      },
+      {
+        "file": "management-hybride-defis-opportunites.md",
+        "issues": {
+          "empty": [
+            "Introduction",
+            "1. FONDAMENTAUX DU SUJET",
+            "2. ANALYSE APPROFONDIE",
+            "3. STRATÉGIES ET MÉTHODOLOGIES",
+            "6. SOURCES ET RÉFÉRENCES"
+          ],
+          "incomplete": [],
+          "placeholders": [],
+          "sources": []
+        }
+      }
+    ],
+    "marketing-communication": [
+      {
+        "file": "email-marketing-personnalisation.md",
+        "issues": {
+          "empty": [
+            "Introduction",
+            "1. FONDAMENTAUX DU SUJET",
+            "2. ANALYSE APPROFONDIE",
+            "3. STRATÉGIES ET MÉTHODOLOGIES",
+            "6. SOURCES ET RÉFÉRENCES"
+          ],
+          "incomplete": [],
+          "placeholders": [],
+          "sources": []
+        }
+      },
+      {
+        "file": "marketing-content-strategies.md",
+        "issues": {
+          "empty": [
+            "Introduction",
+            "1. FONDAMENTAUX DU SUJET",
+            "2. ANALYSE APPROFONDIE",
+            "3. STRATÉGIES ET MÉTHODOLOGIES",
+            "6. SOURCES ET RÉFÉRENCES"
+          ],
+          "incomplete": [],
+          "placeholders": [],
+          "sources": []
+        }
+      },
+      {
+        "file": "marketing-digital-strategies.md",
+        "issues": {
+          "empty": [
+            "Introduction",
+            "1. FONDAMENTAUX DU SUJET",
+            "2. ANALYSE APPROFONDIE",
+            "3. STRATÉGIES ET MÉTHODOLOGIES",
+            "6. SOURCES ET RÉFÉRENCES"
+          ],
+          "incomplete": [],
+          "placeholders": [],
+          "sources": []
+        }
+      },
+      {
+        "file": "strategies-marketing-digital-2025.md",
+        "issues": {
+          "empty": [
+            "Introduction",
+            "1. FONDAMENTAUX DU SUJET",
+            "2. ANALYSE APPROFONDIE",
+            "3. STRATÉGIES ET MÉTHODOLOGIES",
+            "6. SOURCES ET RÉFÉRENCES"
+          ],
+          "incomplete": [],
+          "placeholders": [],
+          "sources": []
+        }
+      },
+      {
+        "file": "strategies-reseaux-sociaux-b2b.md",
+        "issues": {
+          "empty": [
+            "Introduction",
+            "1. FONDAMENTAUX DU SUJET",
+            "2. ANALYSE APPROFONDIE",
+            "3. STRATÉGIES ET MÉTHODOLOGIES",
+            "6. SOURCES ET RÉFÉRENCES"
+          ],
+          "incomplete": [],
+          "placeholders": [],
+          "sources": []
+        }
+      },
+      {
+        "file": "strategies-reseaux-sociaux-entreprises.md",
+        "issues": {
+          "empty": [
+            "Introduction",
+            "1. FONDAMENTAUX DU SUJET",
+            "2. ANALYSE APPROFONDIE",
+            "3. STRATÉGIES ET MÉTHODOLOGIES",
+            "6. SOURCES ET RÉFÉRENCES"
+          ],
+          "incomplete": [],
+          "placeholders": [],
+          "sources": []
+        }
+      }
+    ],
+    "outils-techniques": [
+      {
+        "file": "mermaid-example.md",
+        "issues": {
+          "empty": [
+            "Introduction",
+            "1. FONDAMENTAUX DU SUJET",
+            "2. ANALYSE APPROFONDIE",
+            "3. STRATÉGIES ET MÉTHODOLOGIES",
+            "6. SOURCES ET RÉFÉRENCES"
+          ],
+          "incomplete": [],
+          "placeholders": [],
+          "sources": []
+        }
+      },
+      {
+        "file": "pillcolor-guide.md",
+        "issues": {
+          "empty": [
+            "Introduction",
+            "1. FONDAMENTAUX DU SUJET",
+            "2. ANALYSE APPROFONDIE",
+            "3. STRATÉGIES ET MÉTHODOLOGIES",
+            "6. SOURCES ET RÉFÉRENCES"
+          ],
+          "incomplete": [],
+          "placeholders": [],
+          "sources": []
+        }
+      },
+      {
+        "file": "visualisations-mermaid.md",
+        "issues": {
+          "empty": [
+            "Introduction",
+            "1. FONDAMENTAUX DU SUJET",
+            "2. ANALYSE APPROFONDIE",
+            "3. STRATÉGIES ET MÉTHODOLOGIES",
+            "6. SOURCES ET RÉFÉRENCES"
+          ],
+          "incomplete": [],
+          "placeholders": [],
+          "sources": []
+        }
+      }
+    ],
+    "productivite-methodes": [
+      {
+        "file": "comment-planifier-mon-travail.md",
+        "issues": {
+          "empty": [
+            "Introduction",
+            "1. FONDAMENTAUX DU SUJET",
+            "2. ANALYSE APPROFONDIE",
+            "3. STRATÉGIES ET MÉTHODOLOGIES",
+            "6. SOURCES ET RÉFÉRENCES"
+          ],
+          "incomplete": [],
+          "placeholders": [],
+          "sources": []
+        }
+      },
+      {
+        "file": "deep-work.md",
+        "issues": {
+          "empty": [
+            "Introduction",
+            "1. FONDAMENTAUX DU SUJET",
+            "2. ANALYSE APPROFONDIE",
+            "3. STRATÉGIES ET MÉTHODOLOGIES",
+            "6. SOURCES ET RÉFÉRENCES"
+          ],
+          "incomplete": [],
+          "placeholders": [],
+          "sources": []
+        }
+      },
+      {
+        "file": "gestion-priorites-efficacite.md",
+        "issues": {
+          "empty": [
+            "Introduction",
+            "1. FONDAMENTAUX DU SUJET",
+            "2. ANALYSE APPROFONDIE",
+            "3. STRATÉGIES ET MÉTHODOLOGIES",
+            "6. SOURCES ET RÉFÉRENCES"
+          ],
+          "incomplete": [],
+          "placeholders": [],
+          "sources": []
+        }
+      },
+      {
+        "file": "gestion-stress-performance.md",
+        "issues": {
+          "empty": [
+            "Introduction",
+            "1. FONDAMENTAUX DU SUJET",
+            "2. ANALYSE APPROFONDIE",
+            "3. STRATÉGIES ET MÉTHODOLOGIES",
+            "6. SOURCES ET RÉFÉRENCES"
+          ],
+          "incomplete": [],
+          "placeholders": [],
+          "sources": []
+        }
+      },
+      {
+        "file": "gestion-surcharge-informationnelle.md",
+        "issues": {
+          "empty": [
+            "Introduction",
+            "1. FONDAMENTAUX DU SUJET",
+            "2. ANALYSE APPROFONDIE",
+            "3. STRATÉGIES ET MÉTHODOLOGIES",
+            "6. SOURCES ET RÉFÉRENCES"
+          ],
+          "incomplete": [],
+          "placeholders": [],
+          "sources": []
+        }
+      },
+      {
+        "file": "gestion-temps-productivite.md",
+        "issues": {
+          "empty": [
+            "Introduction",
+            "1. FONDAMENTAUX DU SUJET",
+            "2. ANALYSE APPROFONDIE",
+            "3. STRATÉGIES ET MÉTHODOLOGIES",
+            "6. SOURCES ET RÉFÉRENCES"
+          ],
+          "incomplete": [],
+          "placeholders": [],
+          "sources": []
+        }
+      },
+      {
+        "file": "gestion-temps-professionnels.md",
+        "issues": {
+          "empty": [
+            "Introduction",
+            "1. FONDAMENTAUX DU SUJET",
+            "2. ANALYSE APPROFONDIE",
+            "3. STRATÉGIES ET MÉTHODOLOGIES",
+            "6. SOURCES ET RÉFÉRENCES"
+          ],
+          "incomplete": [],
+          "placeholders": [],
+          "sources": []
+        }
+      },
+      {
+        "file": "gestion-temps.md",
+        "issues": {
+          "empty": [
+            "Introduction",
+            "1. FONDAMENTAUX DU SUJET",
+            "2. ANALYSE APPROFONDIE",
+            "3. STRATÉGIES ET MÉTHODOLOGIES",
+            "6. SOURCES ET RÉFÉRENCES"
+          ],
+          "incomplete": [],
+          "placeholders": [],
+          "sources": []
+        }
+      },
+      {
+        "file": "methode-gtd-expliquee.md",
+        "issues": {
+          "empty": [
+            "Introduction",
+            "1. FONDAMENTAUX DU SUJET",
+            "2. ANALYSE APPROFONDIE",
+            "3. STRATÉGIES ET MÉTHODOLOGIES",
+            "6. SOURCES ET RÉFÉRENCES"
+          ],
+          "incomplete": [],
+          "placeholders": [],
+          "sources": []
+        }
+      },
+      {
+        "file": "methode-pomodoro.md",
+        "issues": {
+          "empty": [
+            "Introduction",
+            "1. FONDAMENTAUX DU SUJET",
+            "2. ANALYSE APPROFONDIE",
+            "3. STRATÉGIES ET MÉTHODOLOGIES",
+            "6. SOURCES ET RÉFÉRENCES"
+          ],
+          "incomplete": [],
+          "placeholders": [],
+          "sources": []
+        }
+      },
+      {
+        "file": "procrastination-solutions-efficaces.md",
+        "issues": {
+          "empty": [
+            "Introduction",
+            "1. FONDAMENTAUX DU SUJET",
+            "2. ANALYSE APPROFONDIE",
+            "3. STRATÉGIES ET MÉTHODOLOGIES",
+            "6. SOURCES ET RÉFÉRENCES"
+          ],
+          "incomplete": [],
+          "placeholders": [],
+          "sources": []
+        }
+      },
+      {
+        "file": "productivite-professionnelle.md",
+        "issues": {
+          "empty": [
+            "Introduction",
+            "1. FONDAMENTAUX DU SUJET",
+            "2. ANALYSE APPROFONDIE",
+            "3. STRATÉGIES ET MÉTHODOLOGIES",
+            "6. SOURCES ET RÉFÉRENCES"
+          ],
+          "incomplete": [],
+          "placeholders": [],
+          "sources": []
+        }
+      }
+    ],
+    "qualite-process": [
+      {
+        "file": "gestion-qualite-amelioration.md",
+        "issues": {
+          "empty": [
+            "Introduction",
+            "1. FONDAMENTAUX DU SUJET",
+            "2. ANALYSE APPROFONDIE",
+            "3. STRATÉGIES ET MÉTHODOLOGIES",
+            "6. SOURCES ET RÉFÉRENCES"
+          ],
+          "incomplete": [],
+          "placeholders": [],
+          "sources": []
+        }
+      },
+      {
+        "file": "gestion-qualite-certification.md",
+        "issues": {
+          "empty": [
+            "Introduction",
+            "1. FONDAMENTAUX DU SUJET",
+            "2. ANALYSE APPROFONDIE",
+            "3. STRATÉGIES ET MÉTHODOLOGIES",
+            "6. SOURCES ET RÉFÉRENCES"
+          ],
+          "incomplete": [],
+          "placeholders": [],
+          "sources": []
+        }
+      },
+      {
+        "file": "gestion-qualite-entreprise.md",
+        "issues": {
+          "empty": [
+            "Introduction",
+            "1. FONDAMENTAUX DU SUJET",
+            "2. ANALYSE APPROFONDIE",
+            "3. STRATÉGIES ET MÉTHODOLOGIES",
+            "6. SOURCES ET RÉFÉRENCES"
+          ],
+          "incomplete": [],
+          "placeholders": [],
+          "sources": []
+        }
+      },
+      {
+        "file": "gestion-qualite-processus.md",
+        "issues": {
+          "empty": [
+            "Introduction",
+            "1. FONDAMENTAUX DU SUJET",
+            "2. ANALYSE APPROFONDIE",
+            "3. STRATÉGIES ET MÉTHODOLOGIES",
+            "6. SOURCES ET RÉFÉRENCES"
+          ],
+          "incomplete": [],
+          "placeholders": [],
+          "sources": []
+        }
+      },
+      {
+        "file": "gestion-qualite-strategie.md",
+        "issues": {
+          "empty": [
+            "Introduction",
+            "1. FONDAMENTAUX DU SUJET",
+            "2. ANALYSE APPROFONDIE",
+            "3. STRATÉGIES ET MÉTHODOLOGIES",
+            "6. SOURCES ET RÉFÉRENCES"
+          ],
+          "incomplete": [],
+          "placeholders": [],
+          "sources": []
+        }
+      },
+      {
+        "file": "optimisation-processus-entreprise.md",
+        "issues": {
+          "empty": [
+            "Introduction",
+            "1. FONDAMENTAUX DU SUJET",
+            "2. ANALYSE APPROFONDIE",
+            "3. STRATÉGIES ET MÉTHODOLOGIES",
+            "6. SOURCES ET RÉFÉRENCES"
+          ],
+          "incomplete": [],
+          "placeholders": [],
+          "sources": []
+        }
+      },
+      {
+        "file": "qualite-processus-entreprise.md",
+        "issues": {
+          "empty": [
+            "Introduction",
+            "1. FONDAMENTAUX DU SUJET",
+            "2. ANALYSE APPROFONDIE",
+            "3. STRATÉGIES ET MÉTHODOLOGIES",
+            "6. SOURCES ET RÉFÉRENCES"
+          ],
+          "incomplete": [],
+          "placeholders": [],
+          "sources": []
+        }
+      }
+    ],
+    "reconversion-carriere": [
+      {
+        "file": "reconversion-professionnelle-reussie.md",
+        "issues": {
+          "empty": [
+            "Introduction",
+            "1. FONDAMENTAUX DU SUJET",
+            "2. ANALYSE APPROFONDIE",
+            "3. STRATÉGIES ET MÉTHODOLOGIES",
+            "6. SOURCES ET RÉFÉRENCES"
+          ],
+          "incomplete": [],
+          "placeholders": [],
+          "sources": []
+        }
+      }
+    ],
+    "service-client": [
+      {
+        "file": "service-client-excellence.md",
+        "issues": {
+          "empty": [
+            "Introduction",
+            "1. FONDAMENTAUX DU SUJET",
+            "2. ANALYSE APPROFONDIE",
+            "3. STRATÉGIES ET MÉTHODOLOGIES",
+            "6. SOURCES ET RÉFÉRENCES"
+          ],
+          "incomplete": [],
+          "placeholders": [],
+          "sources": []
+        }
+      },
+      {
+        "file": "service-client-performance.md",
+        "issues": {
+          "empty": [
+            "Introduction",
+            "1. FONDAMENTAUX DU SUJET",
+            "2. ANALYSE APPROFONDIE",
+            "3. STRATÉGIES ET MÉTHODOLOGIES",
+            "6. SOURCES ET RÉFÉRENCES"
+          ],
+          "incomplete": [],
+          "placeholders": [],
+          "sources": []
+        }
+      }
+    ],
+    "transformation-digitale": [
+      {
+        "file": "transformation-digitale-telecom.md",
+        "issues": {
+          "empty": [
+            "Introduction",
+            "1. FONDAMENTAUX DU SUJET",
+            "2. ANALYSE APPROFONDIE",
+            "3. STRATÉGIES ET MÉTHODOLOGIES",
+            "6. SOURCES ET RÉFÉRENCES"
+          ],
+          "incomplete": [],
+          "placeholders": [],
+          "sources": []
+        }
+      },
+      {
+        "file": "transformation-numerique-entreprise.md",
+        "issues": {
+          "empty": [
+            "Introduction",
+            "1. FONDAMENTAUX DU SUJET",
+            "2. ANALYSE APPROFONDIE",
+            "3. STRATÉGIES ET MÉTHODOLOGIES",
+            "6. SOURCES ET RÉFÉRENCES"
+          ],
+          "incomplete": [],
+          "placeholders": [],
+          "sources": []
+        }
+      },
+      {
+        "file": "transformation-numerique-talents.md",
+        "issues": {
+          "empty": [
+            "Introduction",
+            "1. FONDAMENTAUX DU SUJET",
+            "2. ANALYSE APPROFONDIE",
+            "3. STRATÉGIES ET MÉTHODOLOGIES",
+            "6. SOURCES ET RÉFÉRENCES"
+          ],
+          "incomplete": [],
+          "placeholders": [],
+          "sources": []
+        }
+      }
+    ]
+  }
+}
