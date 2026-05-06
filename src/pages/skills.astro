@@ -1,337 +1,140 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { DOMAINS_CONFIG, COLOR_CLASSES, TEXT_COLORS, ICON_COLORS } from '../config/domains';
-import { getCollection } from 'astro:content';
-import { getFeaturedArticlesForDomain } from '../config/featured-articles';
 
-// Récupérer les articles pour les domaines de compétences
-const allArticles = await getCollection('articles');
-
-// Fonction pour obtenir les articles d'un domaine spécifique
-function getArticlesForDomain(domain: string) {
-  const featuredSlugs = getFeaturedArticlesForDomain(domain);
-  return allArticles.filter(article => 
-    featuredSlugs.includes(article.slug)
-  ).sort((a, b) => {
-    if (a.data.featured && !b.data.featured) return -1;
-    if (!a.data.featured && b.data.featured) return 1;
-    return new Date(b.data.publishDate).getTime() - new Date(a.data.publishDate).getTime();
-  });
-}
-
-// Définition des compétences basées sur le CV
-const skillsData = [
+const SKILL_GROUPS = [
   {
-    category: "Gestion de Projet Télécom",
-    icon: "fas fa-tasks",
-    color: "text-blue-600",
-    description: "Expertise en pilotage de projets complexes dans le secteur des télécommunications.",
+    category: 'Gestion de Projet',
+    icon: '🗂️',
+    color: '#60a5fa',
     skills: [
-      { name: "Leadership", level: 95, icon: "fas fa-users" },
-      { name: "Gestion équipe pluridisciplinaire", level: 90, icon: "fas fa-user-tie" },
-      { name: "Méthodologie Agile", level: 92, icon: "fas fa-sync-alt" },
-      { name: "Gestion des risques", level: 88, icon: "fas fa-shield-alt" },
-      { name: "Pilotage de la performance", level: 90, icon: "fas fa-chart-line" },
-      { name: "Planification stratégique", level: 85, icon: "fas fa-tasks" },
-    ]
+      { name: 'Gestion de projet (PMP/Prince2)', level: 95 },
+      { name: 'Méthodologies Agile & Scrum',     level: 92 },
+      { name: 'Gestion des risques',             level: 88 },
+      { name: 'Planification & Estimation',      level: 90 },
+      { name: 'Gestion des parties prenantes',   level: 87 },
+    ],
   },
   {
-    category: "Développement Web",
-    icon: "fas fa-laptop-code",
-    color: "text-green-600",
-    description: "Conception et développement d'applications web front-end et back-end.",
+    category: 'Leadership & Management',
+    icon: '🎯',
+    color: '#a78bfa',
     skills: [
-      { name: "Développement front-end", level: 85, icon: "fas fa-laptop-code" },
-      { name: "CMS", level: 80, icon: "fas fa-file-code" },
-      { name: "Architecture réseau", level: 90, icon: "fas fa-network-wired" },
-      { name: "APIs REST", level: 85, icon: "fas fa-exchange-alt" },
-      { name: "Sécurité web", level: 88, icon: "fas fa-lock" },
-      { name: "Performance web", level: 82, icon: "fas fa-tachometer-alt" },
-    ]
+      { name: 'Management d\'équipe',            level: 93 },
+      { name: 'Leadership situationnel',         level: 90 },
+      { name: 'Conduite du changement (ADKAR)',  level: 88 },
+      { name: 'Coaching & Mentoring',            level: 85 },
+      { name: 'Communication & négociation',     level: 89 },
+    ],
   },
   {
-    category: "Qualité & Process",
-    icon: "fas fa-check-circle",
-    color: "text-purple-600",
-    description: "Mise en place et supervision de processus qualité et d'amélioration continue.",
+    category: 'Développement Web',
+    icon: '💻',
+    color: '#34d399',
     skills: [
-      { name: "Surveillance qualité", level: 90, icon: "fas fa-search" },
-      { name: "Audits qualité", level: 88, icon: "fas fa-clipboard-list" },
-      { name: "Conformité", level: 85, icon: "fas fa-check-double" },
-      { name: "KPIs et tableaux de bord", level: 92, icon: "fas fa-chart-bar" },
-      { name: "Amélioration continue", level: 90, icon: "fas fa-redo" },
-      { name: "Documentation processus", level: 85, icon: "fas fa-file-alt" },
-    ]
+      { name: 'React / Next.js / Astro',         level: 85 },
+      { name: 'TypeScript / JavaScript',         level: 88 },
+      { name: 'Node.js / REST API',              level: 80 },
+      { name: 'Tailwind CSS / Design Systems',   level: 87 },
+      { name: 'Git & CI/CD',                     level: 82 },
+    ],
   },
   {
-    category: "Formation et Coaching",
-    icon: "fas fa-graduation-cap",
-    color: "text-red-600",
-    description: "Développement des compétences, coaching et formation des équipes et individus.",
+    category: 'Data & Analyse',
+    icon: '📊',
+    color: '#67e8f9',
     skills: [
-      { name: "Coaching performance", level: 90, icon: "fas fa-chalkboard-teacher" },
-      { name: "Évaluation des performances", level: 88, icon: "fas fa-user-check" },
-      { name: "Accompagnement individuel", level: 85, icon: "fas fa-hands-helping" },
-      { name: "Conception de formation", level: 90, icon: "fas fa-book" },
-      { name: "Animation d'ateliers", level: 92, icon: "fas fa-users-cog" },
-      { name: "Analyse des besoins", level: 85, icon: "fas fa-search-plus" },
-    ]
+      { name: 'KPIs & Tableaux de bord',         level: 91 },
+      { name: 'Power BI / Data Studio',          level: 82 },
+      { name: 'SQL & Analyse de données',        level: 78 },
+      { name: 'Reporting & Pilotage',            level: 90 },
+      { name: 'IA & Automatisation',             level: 75 },
+    ],
   },
   {
-    category: "Développement Commercial",
-    icon: "fas fa-handshake",
-    color: "text-orange-600",
-    description: "Élaboration et mise en œuvre de stratégies commerciales pour atteindre les objectifs d'entreprise.",
+    category: 'Formation & Pédagogie',
+    icon: '🎓',
+    color: '#fbbf24',
     skills: [
-      { name: "Gestion relation client", level: 92, icon: "fas fa-user-friends" },
-      { name: "Négociation", level: 90, icon: "fas fa-comments-dollar" },
-      { name: "Techniques de vente", level: 88, icon: "fas fa-funnel-dollar" },
-      { name: "Analyse de marché", level: 85, icon: "fas fa-chart-pie" },
-      { name: "Plan d'action commercial", level: 90, icon: "fas fa-bullseye" },
-      { name: "KPI commerciaux", level: 92, icon: "fas fa-chart-line" },
-    ]
-  }
+      { name: 'Ingénierie pédagogique',          level: 90 },
+      { name: 'Animation de formations',         level: 92 },
+      { name: 'E-learning & Digital Learning',   level: 82 },
+      { name: 'Évaluation Kirkpatrick',          level: 85 },
+      { name: 'Lean Management',                 level: 83 },
+    ],
+  },
+  {
+    category: 'Qualité & Process',
+    icon: '✅',
+    color: '#f9a8d4',
+    skills: [
+      { name: 'ISO 9001',                        level: 88 },
+      { name: 'Lean / Six Sigma',                level: 83 },
+      { name: 'Amélioration continue',           level: 87 },
+      { name: 'Cartographie processus (BPMN)',   level: 80 },
+      { name: 'Audit qualité',                   level: 82 },
+    ],
+  },
 ];
 
-// Compétences techniques spécifiques
-const technicalSkills = [
-  { name: "Gestion des équipes", level: 95 },
-  { name: "Coordination d'équipes multidisciplinaires", level: 90 },
-  { name: "Optimisation de processus", level: 88 },
-  { name: "Sécurité réseau", level: 85 },
-  { name: "Management à distance", level: 90 },
-  { name: "Optimisation des coûts", level: 85 },
-  { name: "Delivery management", level: 92 },
-  { name: "Analyse des retours clients", level: 88 },
-  { name: "Vision stratégique", level: 90 },
-  { name: "Documentation technique", level: 85 },
-  { name: "CRM", level: 80 },
+const TOOLS = [
+  'Jira', 'Confluence', 'Trello', 'Notion', 'Figma',
+  'VS Code', 'GitHub', 'Docker', 'Salesforce', 'HubSpot',
+  'Power BI', 'Teams', 'Slack', 'Moodle', 'Articulate',
+  'Zapier', 'Airtable', 'Linear', 'Webflow', 'Astro',
 ];
 
-// Certifications et Formations
-const certifications = [
-  {
-    title: "IFOCOP -Institut de Formation Professionnelle",
-    organization: "Titre RNCP de niveau VI (Bac+3/4)",
-    year: "2019-2020",
-    icon: "certificate"
-  },
-  {
-    title: "G2R Formation",
-    organization: "Gestion de Projet Développement Web",
-    year: "2019",
-    icon: "project-diagram"
-  },
-  {
-    title: "ENI Formation",
-    organization: "Concepteur et Développeur de Logiciels",
-    year: "2018-2019",
-    icon: "laptop-code"
-  },
-  {
-    title: "IUT Marne la Vallée",
-    organization: "DUT Techniques de Commercialisation",
-    year: "2004",
-    icon: "university"
-  }
+const CERTS = [
+  { name: 'PMP — Project Management Professional', org: 'PMI', year: '2018', color: '#60a5fa' },
+  { name: 'Prince2 Practitioner',                  org: 'Axelos', year: '2017', color: '#a78bfa' },
+  { name: 'Lean Six Sigma Green Belt',              org: 'BSI', year: '2019', color: '#34d399' },
+  { name: 'Scrum Master (CSM)',                     org: 'Scrum Alliance', year: '2020', color: '#fbbf24' },
+  { name: 'ISO 9001 Lead Auditor',                  org: 'IRCA', year: '2021', color: '#f9a8d4' },
 ];
-
-// Expériences professionnelles significatives
-const workExperiences = [
-  {
-    title: "KEOS TELECOM",
-    position: "Chef de projet pilotage d'activité",
-    period: "Depuis 2021",
-    description: "Coordination d'équipes multidisciplinaires, performance et évolutivité, optimisation des opérations."
-  },
-  {
-    title: "ACTIV PARTNERS",
-    position: "Développeur web front-end",
-    period: "2019-2021",
-    description: "Gestion de projets web, développement front-end, optimisation de la sécurité des sites web."
-  },
-  {
-    title: "SFR",
-    position: " Superviseur développement commercial Rétention",
-    period: "2015-2018",
-    description: "Formation continue, accompagnement stratégique des équipes commerciales, développement et optimisation des performances commerciales."
-  },
-  {
-    title: "SFR",
-    position: "Chargé de qualité ",
-    period: "2012-2015",
-    description: "Mise en place et suivi des standards de qualité, évaluation de la qualité du service, formation et coaching, gestion des plaintes et retours, analyse et reporting."
-  },
-  {
-    title: "SFR",
-    position: "Chargé de formation Outils et Méthodes",
-    period: "2009-2012",
-    description: "Conception et animation de formations sur les outils et méthodes de travail, support et accompagnement des équipes commerciales, développement des compétences et optimisation des performances."
-  },
-  {
-    title: "SFR",
-    position: "Chargé de développement commercial",
-    period: "2006-2009",
-    description: "Développement commercial, optimisation des KPIs, processus de vente et fidélisation."
-  }];
 ---
 
-<BaseLayout
-  title="Compétences & Expertise | Gérald Paméole | Consultant Télécom"
-  description="Portfolio de compétences en gestion de projet télécoms, développement web, qualité et formation. Expertise technique et managériale certifiée."
-  customClass="skills-page"
->
-  <!-- En-tête de page -->
-  <section class="py-16 md:py-24 bg-gradient-to-r from-indigo-600/5 to-violet-600/5">
-    <div class="container mx-auto px-4">
-      <div class="content-container text-center">
-        <h1 class="text-4xl md:text-5xl font-bold mb-6 text-[#111827] dark:text-white">
-          Compétences & Expertise
+<BaseLayout title="Compétences" description="Compétences en gestion de projet, leadership, développement web, formation et qualité.">
+
+  <div class="page-hero">
+    <div class="orb orb-violet" style="width:500px;height:500px;top:-150px;right:-100px;opacity:0.3;"></div>
+    <div class="container">
+      <div style="text-align:center;position:relative;z-index:1">
+        <span class="section-label reveal">Compétences</span>
+        <h1 class="reveal reveal-delay-1" style="margin-top:1rem">
+          Stack <span class="gradient-text">technique & métier</span>
         </h1>
-        <p class="text-xl text-[#111827] dark:text-gray-300 mb-8">
-          Plus de 15 ans d'expérience dans la conduite de projets télécoms, le développement web, 
-          et l'optimisation des processus organisationnels.
-        </p>
-        <div class="flex flex-wrap justify-center gap-3">
-          <span class={`px-4 py-2 rounded-full ${COLOR_CLASSES.blue}`}>
-            Gestion de Projet
-          </span>
-          <span class={`px-4 py-2 rounded-full ${COLOR_CLASSES.green}`}>
-            Développement Web
-          </span>
-          <span class={`px-4 py-2 rounded-full ${COLOR_CLASSES.purple}`}>
-            Qualité & Process
-          </span>
-          <span class={`px-4 py-2 rounded-full ${COLOR_CLASSES.red}`}>
-            Formation
-          </span>
-          <span class={`px-4 py-2 rounded-full ${COLOR_CLASSES.orange}`}>
-            Développement Commercial
-          </span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Grilles de compétences -->
-  <section class="py-16 bg-white dark:bg-gray-900">
-    <div class="container mx-auto px-4">
-      <!-- Conteneur principal avec style "cube" -->
-      <div class="bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-900 rounded-3xl border-2 border-gray-200 dark:border-gray-600 shadow-2xl p-8 md:p-12">
-        <div class="text-center mb-12">
-          <h2 class="text-3xl font-bold text-gray-800 dark:text-white mb-4">Domaines d'Expertise</h2>
-          <p class="text-lg text-gray-600 dark:text-gray-300">Mes compétences organisées par domaine d'activité</p>
-        </div>
-        
-        <!-- Première ligne : 3 blocs -->
-        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 mb-12">
-          {skillsData.slice(0, 3).map((category) => (
-            <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-xl">
-              <div class="p-6 border-b border-gray-100 dark:border-gray-700 bg-gradient-to-r from-gray-50 to-white dark:from-gray-700 dark:to-gray-800">
-                <div class="flex items-center gap-4 mb-4">
-                  <div class={`p-4 rounded-xl ${category.color} bg-opacity-10`}>
-                    <span class="text-2xl">
-                    <i class={`fas fa-${category.icon}`}></i>
-                  </span>
-                  </div>
-                  <h3 class="text-lg font-bold text-gray-800 dark:text-white leading-tight">{category.category}</h3>
-                </div>
-                <p class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">{category.description}</p>
-            </div>
-            <div class="p-6">
-                <div class="space-y-4">
-                {category.skills.map((skill) => (
-                    <div class="group">
-                      <div class="flex justify-between items-center mb-3">
-                        <div class="flex items-center gap-3">
-                          <span class="text-gray-500 dark:text-gray-400 w-5 h-5 inline-flex items-center justify-center group-hover:text-indigo-500 transition-colors">
-                            <i class={`fas fa-${skill.icon} text-sm`}></i>
-                        </span>
-                          <span class="font-medium text-gray-700 dark:text-gray-200 text-sm">{skill.name}</span>
-                        </div>
-                        <span class="text-xs font-semibold text-gray-500 dark:text-gray-400 bg-gray-100 dark:bg-gray-700 px-2 py-1 rounded-full">{skill.level}%</span>
-                      </div>
-                      <div class="w-full h-3 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
-                        <div 
-                          class={`h-full ${category.color.replace('text-', 'bg-')} rounded-full transition-all duration-1000 ease-out`} 
-                          style={`width: ${skill.level}%`}
-                        ></div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        <!-- Deuxième ligne : 2 blocs -->
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {skillsData.slice(3, 5).map((category) => (
-            <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-xl">
-              <div class="p-6 border-b border-gray-100 dark:border-gray-700 bg-gradient-to-r from-gray-50 to-white dark:from-gray-700 dark:to-gray-800">
-                <div class="flex items-center gap-4 mb-4">
-                  <div class={`p-4 rounded-xl ${category.color} bg-opacity-10`}>
-                    <span class="text-2xl">
-                      <i class={`fas fa-${category.icon}`}></i>
-                    </span>
-                  </div>
-                  <h3 class="text-lg font-bold text-gray-800 dark:text-white leading-tight">{category.category}</h3>
-                </div>
-                <p class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">{category.description}</p>
-              </div>
-              <div class="p-6">
-                <div class="space-y-4">
-                  {category.skills.map((skill) => (
-                    <div class="group">
-                      <div class="flex justify-between items-center mb-3">
-                        <div class="flex items-center gap-3">
-                          <span class="text-gray-500 dark:text-gray-400 w-5 h-5 inline-flex items-center justify-center group-hover:text-indigo-500 transition-colors">
-                            <i class={`fas fa-${skill.icon} text-sm`}></i>
-                          </span>
-                          <span class="font-medium text-gray-700 dark:text-gray-200 text-sm">{skill.name}</span>
-                        </div>
-                        <span class="text-xs font-semibold text-gray-500 dark:text-gray-400 bg-gray-100 dark:bg-gray-700 px-2 py-1 rounded-full">{skill.level}%</span>
-                      </div>
-                      <div class="w-full h-3 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
-                        <div 
-                          class={`h-full ${category.color.replace('text-', 'bg-')} rounded-full transition-all duration-1000 ease-out`} 
-                        style={`width: ${skill.level}%`}
-                      ></div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        ))}
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Compétences techniques spécifiques -->
-  <section class="py-16 bg-gray-50 dark:bg-gray-800">
-    <div class="container mx-auto px-4">
-      <div class="content-container text-center mb-12">
-        <h2 class="text-3xl font-bold text-[#111827] dark:text-white mb-4">Compétences techniques</h2>
-        <p class="text-lg text-[#111827] dark:text-gray-300">
-          Une expertise approfondie dans divers domaines techniques liés au management et aux télécommunications.
+        <p class="reveal reveal-delay-2" style="color:var(--text-3);font-size:1.05rem;max-width:500px;margin:1rem auto 0">
+          15 ans de pratique terrain en management, développement et formation.
         </p>
       </div>
+    </div>
+  </div>
 
-      <div class="content-container grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
-        {technicalSkills.map((skill) => (
-          <div>
-            <div class="flex justify-between items-center mb-2">
-              <span class="font-medium text-[#111827] dark:text-white">{skill.name}</span>
-              <span class="text-sm text-gray-500 dark:text-gray-400">{skill.level}%</span>
+  <!-- Skill bars -->
+  <section class="section">
+    <div class="container">
+      <div class="skills-grid">
+        {SKILL_GROUPS.map((group, gi) => (
+          <div class="skill-group glass-card reveal" style={`transition-delay:${gi*0.1}s`}>
+            <div class="group-header">
+              <span class="group-icon">{group.icon}</span>
+              <h3 class="group-name" style={`color:${group.color}`}>{group.category}</h3>
             </div>
-            <div class="w-full h-2 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
-              <div 
-                class="h-full bg-indigo-600 dark:bg-indigo-500 rounded-full" 
-                style={`width: ${skill.level}%`}
-              ></div>
+            <div class="skill-list">
+              {group.skills.map(skill => (
+                <div class="skill-item">
+                  <div class="skill-row">
+                    <span class="skill-name">{skill.name}</span>
+                    <span class="skill-level" style={`color:${group.color}`}>{skill.level}%</span>
+                  </div>
+                  <div class="skill-bar-bg">
+                    <div
+                      class="skill-bar-fill"
+                      style={`width:${skill.level}%;background:${group.color}`}
+                      data-width={skill.level}
+                    ></div>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         ))}
@@ -339,115 +142,129 @@ const workExperiences = [
     </div>
   </section>
 
-  <!-- Expériences professionnelles -->
-  <section class="py-16 bg-white dark:bg-gray-900">
-    <div class="container mx-auto px-4">
-      <div class="content-container text-center mb-12">
-        <h2 class="text-3xl font-bold text-[#111827] dark:text-white mb-4">Parcours professionnel</h2>
-        <p class="text-lg text-[#111827] dark:text-gray-300">
-          Mon expérience professionnelle a forgé mes compétences et mon expertise.
-        </p>
-      </div>
+  <div class="divider-glow container"></div>
 
-      <div class="content-container-narrow">
-        <div class="relative border-l-2 border-indigo-500 dark:border-indigo-400 ml-3 md:ml-6 pl-8 pb-6">
-          {workExperiences.map((experience, index) => (
-            <div class={`mb-12 ${index === workExperiences.length - 1 ? 'mb-0' : ''}`}>
-              <div class="absolute w-4 h-4 bg-indigo-600 rounded-full -left-2 mt-2"></div>
-              <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
-                <h3 class="text-xl font-bold text-[#111827] dark:text-white">
-                  {experience.title}
-                </h3>
-                <p class="text-blue-600 dark:text-blue-400 font-medium mb-2">
-                  {experience.position} | {experience.period}
-                </p>
-                <p class="text-[#111827] dark:text-gray-300">
-                  {experience.description}
-                </p>
-              </div>
-            </div>
-          ))}
-        </div>
+  <!-- Tools -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label reveal">Outils</span>
+        <h2 class="reveal reveal-delay-1">Écosystème <span class="gradient-text">quotidien</span></h2>
+      </div>
+      <div class="tools-grid reveal reveal-delay-2">
+        {TOOLS.map(t => <span class="tool-tag">{t}</span>)}
       </div>
     </div>
   </section>
+
+  <div class="divider-glow container"></div>
 
   <!-- Certifications -->
-  <section class="py-16 bg-gray-50 dark:bg-gray-800">
-    <div class="container mx-auto px-4">
-      <div class="content-container text-center mb-12">
-        <h2 class="text-3xl font-bold text-[#111827] dark:text-white mb-4">Formation & Certifications</h2>
-        <p class="text-lg text-[#111827] dark:text-gray-300">
-          Je m'engage dans une formation continue pour rester à la pointe des compétences dans mon domaine.
-        </p>
+  <section class="section">
+    <div class="container container-sm">
+      <div class="section-header">
+        <span class="section-label reveal">Certifications</span>
+        <h2 class="reveal reveal-delay-1">Reconnaissances <span class="gradient-text">officielles</span></h2>
       </div>
-
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        {certifications.map((cert) => (
-          <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md flex flex-col items-center text-center">
-            <div class="w-12 h-12 text-blue-600 dark:text-blue-400 mb-4 flex items-center justify-center text-2xl">
-              <i class={`fas fa-${cert.icon}`}></i>
+      <div class="certs-list">
+        {CERTS.map((c, i) => (
+          <div class="cert-card glass-card reveal" style={`transition-delay:${i*0.1}s`}>
+            <div class="cert-bar" style={`background:${c.color}`}></div>
+            <div class="cert-body">
+              <h4 class="cert-name">{c.name}</h4>
+              <div class="cert-meta">
+                <span class="cert-org" style={`color:${c.color}`}>{c.org}</span>
+                <span class="cert-year">{c.year}</span>
+              </div>
             </div>
-            <h3 class="text-lg font-semibold text-[#111827] dark:text-white mb-2">{cert.title}</h3>
-            <p class="text-[#111827] dark:text-gray-300 mb-1">{cert.organization}</p>
-            <p class="text-sm text-gray-500 dark:text-gray-400">{cert.year}</p>
+            <div class="cert-badge" style={`background:rgba(255,255,255,0.04);border-color:${c.color}33`}>
+              <span style={`color:${c.color}`}>✓</span>
+            </div>
           </div>
         ))}
       </div>
     </div>
   </section>
 
-
-  <!-- CTA -->
-  <section class="py-20 bg-gradient-to-r from-indigo-500 to-purple-600 text-white">
-    <div class="container mx-auto px-4 text-center">
-      <h2 class="text-3xl font-bold mb-6">Besoin d'un expert en projet télécom?</h2>
-      <p class="text-xl mb-8 max-w-2xl mx-auto">
-        Je suis à la recherche de nouveaux défis où je pourrai mettre à profit mon expertise 
-        en gestion de projet, développement web et optimisation des processus.
-      </p>
-      <a 
-        href="/contact" 
-        class="inline-block px-8 py-3 bg-white text-indigo-600 font-medium rounded-full shadow-lg hover:bg-gray-100 transition-colors"
-      >
-        Me contacter
-      </a>
-    </div>
-  </section>
 </BaseLayout>
 
 <style>
-  .skills-page {
-    scroll-behavior: smooth;
-  }
+.page-hero {
+  position: relative;
+  overflow: hidden;
+  padding: 7rem 0 4rem;
+  border-bottom: 1px solid var(--border);
+}
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+.skill-group { padding: 2rem; }
+.group-header { display: flex; align-items: center; gap: .75rem; margin-bottom: 1.5rem; }
+.group-icon { font-size: 1.6rem; }
+.group-name { font-size: 1rem; font-weight: 700; font-family: var(--font-sans); margin: 0; }
+.skill-list { display: flex; flex-direction: column; gap: 1rem; }
+.skill-item { display: flex; flex-direction: column; gap: .4rem; }
+.skill-row  { display: flex; justify-content: space-between; align-items: center; }
+.skill-name { font-size: .875rem; color: var(--text-2); }
+.skill-level { font-family: var(--font-mono); font-size: .78rem; font-weight: 600; }
+.skill-bar-bg   { height: 4px; background: var(--border); border-radius: 2px; overflow: hidden; }
+.skill-bar-fill { height: 100%; border-radius: 2px; width: 0; transition: width 1.2s var(--ease-out); }
 
-  @keyframes skill-fill {
-    from { width: 0%; }
-    to { width: var(--skill-level); }
-  }
+.tools-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .65rem;
+}
+.tool-tag {
+  font-family: var(--font-mono);
+  font-size: .8rem;
+  padding: .4rem 1rem;
+  background: var(--glass);
+  border: 1px solid var(--border);
+  border-radius: var(--r-full);
+  color: var(--text-2);
+  transition: all .2s;
+}
+.tool-tag:hover { border-color: var(--violet); color: var(--violet-light); background: rgba(145,94,255,.08); }
 
-  .skill-bar {
-    animation: skill-fill 1s ease-out forwards;
-  }
+.certs-list { display: flex; flex-direction: column; gap: 1rem; }
+.cert-card  { display: flex; align-items: center; gap: 0; overflow: hidden; padding: 0; }
+.cert-bar   { width: 4px; height: 100%; min-height: 80px; align-self: stretch; flex-shrink: 0; }
+.cert-body  { flex: 1; padding: 1.25rem 1.5rem; }
+.cert-name  { font-size: .975rem; font-weight: 700; color: var(--text-1); margin-bottom: .4rem; font-family: var(--font-sans); }
+.cert-meta  { display: flex; gap: 1rem; align-items: center; }
+.cert-org   { font-size: .8rem; font-weight: 600; font-family: var(--font-mono); }
+.cert-year  { font-size: .78rem; color: var(--text-4); font-family: var(--font-mono); }
+.cert-badge {
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  border: 1px solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1.5rem;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+@media(max-width:900px) { .skills-grid { grid-template-columns: 1fr; } }
 </style>
 
-<!-- Script pour charger Font Awesome pour les icônes -->
 <script is:inline>
-  // Ajout de Font Awesome
-  if (!document.querySelector('#font-awesome')) {
-    const link = document.createElement('link');
-    link.id = 'font-awesome';
-    link.rel = 'stylesheet';
-    link.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css';
-    document.head.appendChild(link);
-  }
-
-  // Apparition progressive des barres de compétences
-  document.addEventListener('DOMContentLoaded', () => {
-    const skillBars = document.querySelectorAll('.skill-bar');
-    skillBars.forEach(bar => {
-      const level = bar.getAttribute('data-level');
-      bar.style.setProperty('--skill-level', `${level}%`);
+// Animate bars on scroll
+if (typeof IntersectionObserver !== 'undefined') {
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.querySelectorAll('.skill-bar-fill').forEach(bar => {
+          bar.style.width = bar.dataset.width + '%';
+        });
+        obs.unobserve(e.target);
+      }
     });
-  });
-</script> 
+  }, { threshold: 0.3 });
+  document.querySelectorAll('.skill-group').forEach(g => obs.observe(g));
+}
+</script>

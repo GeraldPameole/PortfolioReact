@@ -185,20 +185,6 @@ declare module 'astro:content' {
 
 	type ContentEntryMap = {
 		"articles": {
-"articles-generaux/synthese-thematiques.md": {
-	id: "articles-generaux/synthese-thematiques.md";
-  slug: "articles-generaux/synthese-thematiques";
-  body: string;
-  collection: "articles";
-  data: InferEntrySchema<"articles">
-} & { render(): Render[".md"] };
-"articles-generaux/template-article.md": {
-	id: "articles-generaux/template-article.md";
-  slug: "articles-generaux/template-article";
-  body: string;
-  collection: "articles";
-  data: InferEntrySchema<"articles">
-} & { render(): Render[".md"] };
 "developpement-commercial/negocier-salaire-techniques-avancees.md": {
 	id: "developpement-commercial/negocier-salaire-techniques-avancees.md";
   slug: "developpement-commercial/negocier-salaire-techniques-avancees";
@@ -314,6 +300,13 @@ declare module 'astro:content' {
 "formation/formation-elearning.md": {
 	id: "formation/formation-elearning.md";
   slug: "formation/formation-elearning";
+  body: string;
+  collection: "articles";
+  data: InferEntrySchema<"articles">
+} & { render(): Render[".md"] };
+"formation/formation-equipes-commerciales-complete.md": {
+	id: "formation/formation-equipes-commerciales-complete.md";
+  slug: "formation/formation-equipes-commerciales-complete";
   body: string;
   collection: "articles";
   data: InferEntrySchema<"articles">

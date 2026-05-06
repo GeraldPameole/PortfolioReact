@@ -1,13 +1,11 @@
-// Configuration centralisée des domaines de compétences
+// Configuration centralisée de tous les domaines de compétences et d'articles
 export const DOMAINS_CONFIG = {
   "gestion-projet": {
-    name: "Gestion de Projet Télécom",
+    name: "Gestion de Projet",
     icon: "fas fa-tasks",
     color: "blue",
-    colorClass:
-      "bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-300",
-    description:
-      "Pilotage de projets stratégiques multi-millions d'euros dans les télécommunications. Coordination d'équipes internationales, optimisation des infrastructures critiques et transformation digitale.",
+    colorClass: "bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-300",
+    description: "Pilotage de projets stratégiques, coordination d'équipes, méthodologies Agile et Waterfall.",
     impact: "ROI +35% • 15+ projets • 40% réduction coûts",
     technologies: ["PMP", "Agile", "Scrum", "Prince2", "ITIL"],
   },
@@ -15,10 +13,8 @@ export const DOMAINS_CONFIG = {
     name: "Développement Web",
     icon: "fas fa-laptop-code",
     color: "green",
-    colorClass:
-      "bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-300",
-    description:
-      "Architecture d'applications web scalables et développement full-stack. Conception de solutions innovantes, optimisation des performances et sécurité renforcée.",
+    colorClass: "bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-300",
+    description: "Architecture web, développement full-stack, performance et sécurité applicative.",
     impact: "40% réduction temps • +60% satisfaction • 95% performance",
     technologies: ["React", "Node.js", "TypeScript", "AWS", "Docker"],
   },
@@ -26,20 +22,17 @@ export const DOMAINS_CONFIG = {
     name: "Qualité & Process",
     icon: "fas fa-check-circle",
     color: "purple",
-    colorClass:
-      "bg-purple-100 text-purple-800 dark:bg-purple-900/30 dark:text-purple-300",
-    description:
-      "Certification ISO 9001 et mise en place de processus qualité avancés. Audits, conformité et tableaux de bord KPIs en temps réel.",
+    colorClass: "bg-purple-100 text-purple-800 dark:bg-purple-900/30 dark:text-purple-300",
+    description: "Certification ISO 9001, optimisation des processus, audits qualité et KPIs.",
     impact: "50% efficacité • 30% non-conformités • ISO 9001",
     technologies: ["ISO 9001", "Six Sigma", "Lean", "Jira", "Confluence"],
   },
-  formation: {
+  "formation": {
     name: "Formation & Pédagogie",
     icon: "fas fa-graduation-cap",
-    color: "red",
-    colorClass: "bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-300",
-    description:
-      "Formation certifiante de 200+ professionnels et programmes sur mesure. Coaching d'équipes et évaluation des performances.",
+    color: "yellow",
+    colorClass: "bg-yellow-100 text-yellow-800 dark:bg-yellow-900/30 dark:text-yellow-300",
+    description: "Formation professionnelle, développement des compétences, e-learning et mentorat.",
     impact: "200+ formés • 95% réussite • +45% performance",
     technologies: ["Moodle", "Zoom", "Teams", "Kahoot", "Articulate"],
   },
@@ -47,51 +40,173 @@ export const DOMAINS_CONFIG = {
     name: "Développement Commercial",
     icon: "fas fa-handshake",
     color: "orange",
-    colorClass:
-      "bg-orange-100 text-orange-800 dark:bg-orange-900/30 dark:text-orange-300",
-    description:
-      "Stratégies commerciales B2B et développement de partenariats stratégiques. Techniques de vente consultative et relation client premium.",
+    colorClass: "bg-orange-100 text-orange-800 dark:bg-orange-900/30 dark:text-orange-300",
+    description: "Stratégies commerciales B2B, développement de partenariats, vente consultative.",
     impact: "+45% CA • 90% rétention • 25+ partenariats",
     technologies: ["CRM Salesforce", "HubSpot", "LinkedIn Sales", "Pipedrive"],
   },
+  "leadership-management": {
+    name: "Leadership & Management",
+    icon: "fas fa-users",
+    color: "indigo",
+    colorClass: "bg-indigo-100 text-indigo-800 dark:bg-indigo-900/30 dark:text-indigo-300",
+    description: "Leadership moderne, management d'équipe, diversité et inclusion, management hybride.",
+    impact: "+30% engagement • -20% turnover • Top performer teams",
+    technologies: ["OKR", "360° Feedback", "NPS", "Teams", "Slack"],
+  },
+  "productivite-methodes": {
+    name: "Productivité & Méthodes",
+    icon: "fas fa-bolt",
+    color: "cyan",
+    colorClass: "bg-cyan-100 text-cyan-800 dark:bg-cyan-900/30 dark:text-cyan-300",
+    description: "Gestion du temps, méthodes de productivité (Pomodoro, GTD, Deep Work), organisation.",
+    impact: "+40% productivité • -50% stress • Flow state maîtrisé",
+    technologies: ["Notion", "Todoist", "Toggl", "Obsidian", "Calendar"],
+  },
+  "marketing-communication": {
+    name: "Marketing & Communication",
+    icon: "fas fa-bullhorn",
+    color: "pink",
+    colorClass: "bg-pink-100 text-pink-800 dark:bg-pink-900/30 dark:text-pink-300",
+    description: "Marketing digital, content marketing, réseaux sociaux B2B, stratégie de communication.",
+    impact: "+120% trafic • ×3 leads • 65% engagement",
+    technologies: ["Google Analytics", "SEMrush", "HubSpot", "Hootsuite"],
+  },
+  "innovation-technologies": {
+    name: "Innovation & Technologies",
+    icon: "fas fa-rocket",
+    color: "violet",
+    colorClass: "bg-violet-100 text-violet-800 dark:bg-violet-900/30 dark:text-violet-300",
+    description: "Intelligence artificielle, transformation technologique, veille et prospective.",
+    impact: "3 brevets déposés • 5 startups accompagnées • 10× ROI IA",
+    technologies: ["ChatGPT", "Python", "TensorFlow", "Azure AI", "Copilot"],
+  },
+  "transformation-digitale": {
+    name: "Transformation Digitale",
+    icon: "fas fa-digital-tachograph",
+    color: "teal",
+    colorClass: "bg-teal-100 text-teal-800 dark:bg-teal-900/30 dark:text-teal-300",
+    description: "Accompagnement des organisations dans leur transformation numérique.",
+    impact: "+60% digitalisation • -30% coûts • 100% adoption",
+    technologies: ["ERP SAP", "Salesforce", "Power BI", "Azure", "ServiceNow"],
+  },
+  "gestion-talents": {
+    name: "Gestion des Talents",
+    icon: "fas fa-user-star",
+    color: "emerald",
+    colorClass: "bg-emerald-100 text-emerald-800 dark:bg-emerald-900/30 dark:text-emerald-300",
+    description: "Recrutement, fidélisation, développement des talents et gestion des performances.",
+    impact: "-40% turnover • +55% satisfaction • Top employer",
+    technologies: ["ATS", "LinkedIn Recruiter", "Workday", "BambooHR"],
+  },
+  "service-client": {
+    name: "Service Client",
+    icon: "fas fa-headset",
+    color: "sky",
+    colorClass: "bg-sky-100 text-sky-800 dark:bg-sky-900/30 dark:text-sky-300",
+    description: "Excellence du service client, gestion des réclamations, NPS et satisfaction client.",
+    impact: "NPS +45 • 98% satisfaction • -60% réclamations",
+    technologies: ["Zendesk", "Intercom", "Freshdesk", "Salesforce Service"],
+  },
+  "gestion-connaissances": {
+    name: "Gestion des Connaissances",
+    icon: "fas fa-brain",
+    color: "amber",
+    colorClass: "bg-amber-100 text-amber-800 dark:bg-amber-900/30 dark:text-amber-300",
+    description: "Knowledge management, capitalisation des savoirs, wikis et bases de connaissances.",
+    impact: "+35% réutilisation savoir • -25% temps de recherche",
+    technologies: ["Confluence", "Notion", "SharePoint", "Obsidian"],
+  },
+  "outils-techniques": {
+    name: "Outils & Techniques",
+    icon: "fas fa-tools",
+    color: "slate",
+    colorClass: "bg-slate-100 text-slate-800 dark:bg-slate-900/30 dark:text-slate-300",
+    description: "Outils de productivité, automatisation, scripting et solutions techniques.",
+    impact: "100+ outils maîtrisés • 80% automatisation",
+    technologies: ["Git", "Docker", "VS Code", "Figma", "Zapier"],
+  },
+  "reconversion-carriere": {
+    name: "Reconversion & Carrière",
+    icon: "fas fa-route",
+    color: "rose",
+    colorClass: "bg-rose-100 text-rose-800 dark:bg-rose-900/30 dark:text-rose-300",
+    description: "Reconversion professionnelle, bilan de compétences, transition de carrière.",
+    impact: "50+ reconversions accompagnées • 95% succès",
+    technologies: ["LinkedIn", "Indeed", "Portfolio", "Assessment"],
+  },
 } as const;
 
-// Couleurs unifiées
-export const COLOR_CLASSES = {
-  blue: "bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-300",
-  green: "bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-300",
-  purple:
-    "bg-purple-100 text-purple-800 dark:bg-purple-900/30 dark:text-purple-300",
-  red: "bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-300",
-  orange:
-    "bg-orange-100 text-orange-800 dark:bg-orange-900/30 dark:text-orange-300",
-} as const;
+export type DomainKey = keyof typeof DOMAINS_CONFIG;
 
-// Couleurs pour les textes et icônes
-export const TEXT_COLORS = {
-  blue: "text-blue-600 dark:text-blue-400",
-  green: "text-green-600 dark:text-green-400",
-  purple: "text-purple-600 dark:text-purple-400",
-  red: "text-red-600 dark:text-red-400",
-  orange: "text-orange-600 dark:text-orange-400",
-  indigo: "text-indigo-600 dark:text-indigo-400",
-} as const;
+// Couleurs unifiées avec toutes les variantes
+export const COLOR_CLASSES: Record<string, string> = {
+  blue:    "bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-300",
+  green:   "bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-300",
+  purple:  "bg-purple-100 text-purple-800 dark:bg-purple-900/30 dark:text-purple-300",
+  yellow:  "bg-yellow-100 text-yellow-800 dark:bg-yellow-900/30 dark:text-yellow-300",
+  orange:  "bg-orange-100 text-orange-800 dark:bg-orange-900/30 dark:text-orange-300",
+  indigo:  "bg-indigo-100 text-indigo-800 dark:bg-indigo-900/30 dark:text-indigo-300",
+  cyan:    "bg-cyan-100 text-cyan-800 dark:bg-cyan-900/30 dark:text-cyan-300",
+  pink:    "bg-pink-100 text-pink-800 dark:bg-pink-900/30 dark:text-pink-300",
+  violet:  "bg-violet-100 text-violet-800 dark:bg-violet-900/30 dark:text-violet-300",
+  teal:    "bg-teal-100 text-teal-800 dark:bg-teal-900/30 dark:text-teal-300",
+  emerald: "bg-emerald-100 text-emerald-800 dark:bg-emerald-900/30 dark:text-emerald-300",
+  sky:     "bg-sky-100 text-sky-800 dark:bg-sky-900/30 dark:text-sky-300",
+  amber:   "bg-amber-100 text-amber-800 dark:bg-amber-900/30 dark:text-amber-300",
+  slate:   "bg-slate-100 text-slate-800 dark:bg-slate-900/30 dark:text-slate-300",
+  rose:    "bg-rose-100 text-rose-800 dark:bg-rose-900/30 dark:text-rose-300",
+  red:     "bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-300",
+};
 
-// Couleurs pour les icônes
-export const ICON_COLORS = {
-  blue: "text-blue-600 dark:text-blue-400",
-  green: "text-green-600 dark:text-green-400",
-  purple: "text-purple-600 dark:text-purple-400",
-  red: "text-red-600 dark:text-red-400",
-  orange: "text-orange-600 dark:text-orange-400",
-  indigo: "text-indigo-600 dark:text-indigo-400",
-} as const;
+export const TEXT_COLORS: Record<string, string> = {
+  blue:    "text-blue-600 dark:text-blue-400",
+  green:   "text-green-600 dark:text-green-400",
+  purple:  "text-purple-600 dark:text-purple-400",
+  yellow:  "text-yellow-600 dark:text-yellow-400",
+  orange:  "text-orange-600 dark:text-orange-400",
+  indigo:  "text-indigo-600 dark:text-indigo-400",
+  cyan:    "text-cyan-600 dark:text-cyan-400",
+  pink:    "text-pink-600 dark:text-pink-400",
+  violet:  "text-violet-600 dark:text-violet-400",
+  teal:    "text-teal-600 dark:text-teal-400",
+  emerald: "text-emerald-600 dark:text-emerald-400",
+  sky:     "text-sky-600 dark:text-sky-400",
+  amber:   "text-amber-600 dark:text-amber-400",
+  slate:   "text-slate-600 dark:text-slate-400",
+  rose:    "text-rose-600 dark:text-rose-400",
+  red:     "text-red-600 dark:text-red-400",
+};
 
-// Icônes unifiées
-export const ICONS = {
-  "gestion-projet": "fas fa-tasks",
-  "developpement-web": "fas fa-laptop-code",
-  "qualite-process": "fas fa-check-circle",
-  formation: "fas fa-graduation-cap",
+export const ICON_COLORS = TEXT_COLORS;
+
+export const ICONS: Record<string, string> = {
+  "gestion-projet":           "fas fa-tasks",
+  "developpement-web":        "fas fa-laptop-code",
+  "qualite-process":          "fas fa-check-circle",
+  "formation":                "fas fa-graduation-cap",
   "developpement-commercial": "fas fa-handshake",
-} as const;
+  "leadership-management":    "fas fa-users",
+  "productivite-methodes":    "fas fa-bolt",
+  "marketing-communication":  "fas fa-bullhorn",
+  "innovation-technologies":  "fas fa-rocket",
+  "transformation-digitale":  "fas fa-digital-tachograph",
+  "gestion-talents":          "fas fa-user-star",
+  "service-client":           "fas fa-headset",
+  "gestion-connaissances":    "fas fa-brain",
+  "outils-techniques":        "fas fa-tools",
+  "reconversion-carriere":    "fas fa-route",
+};
+
+// Helper: retourne la config d'un domaine ou un défaut
+export function getDomainConfig(domain: string) {
+  return DOMAINS_CONFIG[domain as DomainKey] ?? {
+    name: domain.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase()),
+    icon: "fas fa-circle",
+    color: "slate",
+    colorClass: COLOR_CLASSES.slate,
+    description: "",
+    impact: "",
+    technologies: [],
+  };
+}

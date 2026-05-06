@@ -325,13 +325,15 @@ en moyenne, sans allonger leurs journées."
 
 ### B. MÉTHODOLOGIE DE VALIDATION DES SOURCES
 
-**Critères de Validation (Minimum 3 sources) :**
+**Critères de Validation (Minimum 4 sources récentes et fiables) :**
 
 1. **Source Primaire** : Étude ou rapport original (pas de reprise)
-2. **Source Récente** : Maximum 2 ans d'ancienneté
+2. **Source Récente** : Maximum 2 ans d'ancienneté (2024-2025)
 3. **Source Vérifiable** : URL accessible et contenu consultable
 4. **Source Crédible** : Institution reconnue ou expert validé
 5. **Source Contextuelle** : Pertinente pour le marché français
+6. **Recherche Internet Obligatoire** : Toujours rechercher des sources récentes sur Internet avant de compléter un article
+7. **Minimum 4 Sources** : Chaque article doit citer au moins 4 sources récentes et fiables différentes
 
 **Format de Citation Standardisé :**
 

@@ -8,13 +8,6 @@ import { defineConfig } from "astro/config";
 export default defineConfig({
   site: "https://geraldpameole.fr",
   integrations: [mdx(), tailwind(), react(), icon()],
-  i18n: {
-    defaultLocale: "fr",
-    locales: ["fr", "en", "es"],
-    routing: {
-      prefixDefaultLocale: false,
-    },
-  },
   server: {
     host: true,
     port: 3000,
@@ -27,6 +20,12 @@ export default defineConfig({
       watch: {
         usePolling: true,
         interval: 1000,
+      },
+    },
+    css: {
+      postcss: {
+        // Ignorer les fichiers Astro dans PostCSS
+        exclude: ['**/*.astro'],
       },
     },
   },

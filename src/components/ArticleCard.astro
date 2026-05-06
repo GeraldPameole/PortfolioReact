@@ -1,209 +1,141 @@
 ---
 import type { CollectionEntry } from 'astro:content';
-import { calculateReadingTime, mapToStandardTheme, standardThemes } from '../utils/themeUtils';
-import ThemeBadge from './ThemeBadge.astro';
-
-type Article = CollectionEntry<"articles">;
+import { mapToStandardTheme, standardThemes } from '../utils/themeUtils';
 
 interface Props {
-	article: Article;
-	variant?: 'compact' | 'full';
+  article: CollectionEntry<'articles'>;
 }
+const { article } = Astro.props;
+const { title, description, publishDate, tags, domain } = article.data as any;
 
-const { article, variant = 'full' } = Astro.props;
-const readingTime = calculateReadingTime(article.body);
+const themeKey  = mapToStandardTheme(domain || tags?.[0]);
+const theme     = standardThemes[themeKey];
+const slug      = article.slug;
+const date      = new Date(publishDate).toLocaleDateString('fr-FR', { day:'numeric', month:'short', year:'numeric' });
+const wordCount = article.body?.split(/\s+/).length ?? 0;
+const readTime  = Math.max(1, Math.ceil(wordCount / 200));
 
-// Fonction pour déterminer le domaine d'un article
-function determinerDomaine(article: Article): string {
-  const titre = article.data.title?.toLowerCase() || '';
-  const slug = article.slug.toLowerCase();
-  
-  if (titre.includes('formation') || slug.includes('formation') || titre.includes('apprentissage') || titre.includes('compétences')) {
-    return 'formation';
-  }
-  if (titre.includes('gestion') && (titre.includes('projet') || slug.includes('projet'))) {
-    return 'gestion-projet';
-  }
-  if (titre.includes('web') || titre.includes('javascript') || titre.includes('react') || titre.includes('développement')) {
-    return 'web-developpement';
-  }
-  if (titre.includes('qualité') || titre.includes('iso') || titre.includes('audit') || titre.includes('processus')) {
-    return 'gestion-qualite';
-  }
-  if (titre.includes('commercial') || titre.includes('marketing') || titre.includes('vente') || titre.includes('client')) {
-    return 'developpement-commercial';
-  }
-  
-  return 'formation'; // Domaine par défaut
-}
-
-// Configuration des domaines
-const domainesConfig = {
-  'formation': {
-    nom: 'Formation & Pédagogie',
-    couleur: 'red',
-    icone: 'fas fa-graduation-cap',
-    classes: 'bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-300'
-  },
-  'gestion-projet': {
-    nom: 'Gestion de Projet',
-    couleur: 'blue',
-    icone: 'fas fa-project-diagram',
-    classes: 'bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-300'
-  },
-  'web-developpement': {
-    nom: 'Développement Web',
-    couleur: 'green',
-    icone: 'fas fa-code',
-    classes: 'bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-300'
-  },
-  'gestion-qualite': {
-    nom: 'Gestion de la Qualité',
-    couleur: 'purple',
-    icone: 'fas fa-award',
-    classes: 'bg-purple-100 text-purple-800 dark:bg-purple-900/30 dark:text-purple-300'
-  },
-  'developpement-commercial': {
-    nom: 'Développement Commercial',
-    couleur: 'orange',
-    icone: 'fas fa-chart-line',
-    classes: 'bg-orange-100 text-orange-800 dark:bg-orange-900/30 dark:text-orange-300'
-  }
+// Domain → color accent
+const DOMAIN_COLOR: Record<string, string> = {
+  'gestion-projet':           'var(--cyan)',
+  'developpement-web':        'var(--green)',
+  'qualite-process':          '#c4b5fd',
+  'formation':                '#fbbf24',
+  'developpement-commercial': 'var(--orange)',
+  'leadership-management':    'var(--violet-light)',
+  'productivite-methodes':    'var(--cyan)',
+  'marketing-communication':  '#f9a8d4',
+  'innovation-technologies':  '#a78bfa',
+  'transformation-digitale':  'var(--cyan)',
+  'gestion-talents':          '#86efac',
+  'service-client':           '#67e8f9',
+  'gestion-connaissances':    '#fde68a',
+  'outils-techniques':        '#94a3b8',
+  'reconversion-carriere':    '#fca5a5',
 };
-
-// Déterminer le domaine de l'article
-const domaine = determinerDomaine(article);
-const domaineConfig = domainesConfig[domaine as keyof typeof domainesConfig] || domainesConfig['formation'];
-
-// Sécurisation de l'accès aux tags
-const firstTag = article.data.tags && article.data.tags.length > 0 ? article.data.tags[0] : null;
-const mainTheme = firstTag ? mapToStandardTheme(firstTag) : 'developpement';
-const themeConfig = standardThemes[mainTheme];
-
-// Sélectionner les tags supplémentaires (après le premier qui définit le thème principal)
-const secondaryTags = article.data.tags?.slice(1, 3) || [];
-
-// Vérifier et corriger l'URL de l'image
-function getValidImageUrl(url: string | undefined): string | undefined {
-  if (!url) return undefined;
-  
-  // Si l'URL est absolue et externe, la retourner telle quelle
-  if (/^(https?:)?\/\//.test(url)) return url;
-  
-  // Si l'URL commence par un slash, s'assurer qu'elle commence par un seul slash
-  if (url.startsWith('/')) return url.replace(/^\/+/, '/');
-  
-  // Sinon, ajouter un slash si nécessaire
-  return url.startsWith('/') ? url : `/${url}`;
-}
-
-const imageUrl = getValidImageUrl(article.data.image);
+const accent = DOMAIN_COLOR[domain] ?? 'var(--violet-light)';
 ---
 
-<a href={`/blog/${article.slug}`} class="group block cursor-pointer" style="text-decoration: none; color: inherit;">
-	<article class="h-full bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden transform transition-all duration-300 group-hover:shadow-lg group-hover:-translate-y-1 border border-gray-100 dark:border-gray-700">
-		<div class="relative h-52 overflow-hidden">
-			{imageUrl ? (
-            <img 
-                src={imageUrl} 
-                alt={article.data.title} 
-                loading="lazy" decoding="async" fetchpriority="low"
-                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                onerror="this.onerror=null; this.src='/placeholder-article.webp';"
-            />
-			) : (
-				<div class="w-full h-full bg-gradient-to-r from-indigo-500 to-blue-500 flex items-center justify-center">
-					<i class={`${themeConfig.icon || 'fas fa-newspaper'} text-white text-4xl`}></i>
-				</div>
-			)}
-			<div class="absolute top-4 left-4 z-10" style="pointer-events: none;">
-				<ThemeBadge tags={article.data.tags} size="medium" />
-			</div>
-			<div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/70 to-transparent" style="pointer-events: none;">
-				<div class="flex items-center text-white text-xs">
-					<span class="flex items-center">
-						<i class="fas fa-calendar-alt mr-1"></i>
-						{new Date(article.data.publishDate).toLocaleDateString('fr-FR', {
-							year: 'numeric',
-							month: 'long',
-							day: 'numeric'
-						})}
-					</span>
-					<span class="mx-2">•</span>
-					<span class="flex items-center">
-						<i class="fas fa-clock mr-1"></i>
-						{readingTime} min
-					</span>
-				</div>
-			</div>
-		</div>
-		<div class="p-5">
-			<!-- Pill de domaine -->
-			<div class="mb-3">
-				<span class={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium ${domaineConfig.classes}`}>
-					<i class={`${domaineConfig.icone} mr-1`}></i>
-					{domaineConfig.nom}
-				</span>
-			</div>
-			
-			<h3 class="text-lg font-bold mb-3 text-gray-800 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors line-clamp-2">
-				{article.data.title}
-			</h3>
-			<p class="text-gray-600 dark:text-gray-300 text-sm mb-4 line-clamp-3">
-				{article.data.description}
-			</p>
-			<div class="pt-3 border-t border-gray-100 dark:border-gray-700 flex justify-between">
-				<div class="flex flex-wrap gap-2">
-					{secondaryTags.map((tag: string) => (
-						<span class="px-2 py-1 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 rounded text-xs">
-							#{tag}
-						</span>
-					))}
-				</div>
-				<span class="text-indigo-600 dark:text-indigo-400 inline-flex items-center text-sm font-medium group-hover:translate-x-1 transition-transform duration-300">
-					Lire
-					<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-					</svg>
-				</span>
-			</div>
-		</div>
-	</article>
+<a href={`/blog/${slug}`} class="article-card">
+  <div class="card-accent" style={`background:${accent}`}></div>
+  <div class="card-body">
+    <div class="card-meta">
+      <span class="card-domain" style={`color:${accent}`}>
+        {(domain ?? 'article').replace(/-/g,' ').replace(/\b\w/g,c=>c.toUpperCase())}
+      </span>
+      <span class="card-sep">·</span>
+      <span class="card-time">{readTime} min</span>
+    </div>
+    <h3 class="card-title">{title}</h3>
+    <p class="card-desc">{description}</p>
+    <div class="card-footer">
+      <time class="card-date">{date}</time>
+      <span class="card-arrow" style={`color:${accent}`}>→</span>
+    </div>
+  </div>
 </a>
 
 <style>
-	/* Assurer que le lien couvre toute la carte */
-	a.group {
-		display: block;
-		width: 100%;
-		height: 100%;
-		text-decoration: none !important;
-		color: inherit;
-		cursor: pointer !important;
-	}
-	
-	/* S'assurer que les éléments enfants ne bloquent pas les clics */
-	a.group > article {
-		position: relative;
-		pointer-events: auto;
-	}
-	
-	/* Forcer le pointeur sur toute la carte */
-	a.group:hover {
-		cursor: pointer !important;
-	}
-	
-	.line-clamp-2 {
-		display: -webkit-box;
-		-webkit-line-clamp: 2;
-		-webkit-box-orient: vertical;
-		overflow: hidden;
-	}
-	
-	.line-clamp-3 {
-		display: -webkit-box;
-		-webkit-line-clamp: 3;
-		-webkit-box-orient: vertical;
-		overflow: hidden;
-	}
-</style> 
+.article-card {
+  display:flex;
+  flex-direction:column;
+  background:var(--bg-card);
+  border:1px solid var(--border);
+  border-radius:var(--r-lg);
+  text-decoration:none;
+  overflow:hidden;
+  transition:all .25s var(--ease-out);
+  height:100%;
+  position:relative;
+}
+.article-card:hover {
+  background:var(--bg-card-hover);
+  border-color:var(--border-bright);
+  transform:translateY(-4px);
+  box-shadow:0 12px 40px rgba(0,0,0,0.35);
+}
+.card-accent {
+  height:3px;
+  width:100%;
+  flex-shrink:0;
+  opacity:0.8;
+  transition:opacity .25s;
+}
+.article-card:hover .card-accent { opacity:1; }
+.card-body {
+  padding:1.5rem;
+  display:flex;
+  flex-direction:column;
+  gap:.75rem;
+  flex:1;
+}
+.card-meta {
+  display:flex;
+  align-items:center;
+  gap:.5rem;
+  font-size:.75rem;
+  font-family:var(--font-mono);
+  letter-spacing:.04em;
+}
+.card-domain {
+  font-weight:600;
+  text-transform:uppercase;
+  letter-spacing:.06em;
+  font-size:.7rem;
+}
+.card-sep   { color:var(--text-4); }
+.card-time  { color:var(--text-3); }
+.card-title {
+  font-family:var(--font-sans);
+  font-size:1rem;
+  font-weight:700;
+  color:var(--text-1);
+  line-height:1.4;
+  letter-spacing:-.01em;
+  display:-webkit-box;
+  -webkit-line-clamp:2;
+  -webkit-box-orient:vertical;
+  overflow:hidden;
+}
+.card-desc {
+  font-size:.855rem;
+  color:var(--text-3);
+  line-height:1.7;
+  display:-webkit-box;
+  -webkit-line-clamp:3;
+  -webkit-box-orient:vertical;
+  overflow:hidden;
+  flex:1;
+}
+.card-footer {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding-top:.75rem;
+  border-top:1px solid var(--border);
+  margin-top:auto;
+}
+.card-date  { font-size:.75rem; color:var(--text-4); font-family:var(--font-mono); }
+.card-arrow { font-size:1.05rem; transition:transform .2s; }
+.article-card:hover .card-arrow { transform:translateX(4px); }
+</style>

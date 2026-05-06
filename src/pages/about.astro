@@ -1,357 +1,238 @@
 ---
 import { getCollection } from 'astro:content';
-import { COLOR_CLASSES } from '../config/domains';
 import BaseLayout from '../layouts/BaseLayout.astro';
 
-// Récupération et tri des articles
 const articles = await getCollection('articles');
-const sortedArticles = articles.sort((a, b) => 
-	new Date(b.data.publishDate).getTime() - new Date(a.data.publishDate).getTime()
-);
+const books    = await getCollection('books');
+const works    = await getCollection('work');
 
-// Récupération et tri des ouvrages
-const books = await getCollection('books');
-const sortedBooks = books.sort((a, b) => 
-	(b.data.publishYear || 0) - (a.data.publishYear || 0)
-);
-
-// Calculer le nombre total d'articles et de livres
-const totalArticles = articles.length;
-const totalBooks = books.length;
-
-// Formater la date
-function formatDate(date: Date | string): string {
-  const dateObj = typeof date === 'string' ? new Date(date) : date;
-  return dateObj.toLocaleDateString('fr-FR', {
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric'
-  });
-}
-
-// Valeurs professionnelles
-const values = [
-  {
-    title: "Excellence Opérationnelle",
-    icon: "fas fa-award",
-    color: "text-blue-600",
-    bgColor: "bg-blue-100 dark:bg-blue-900/30",
-    description: "Je m'engage à transformer la complexité en performance mesurable. J'optimise les processus tout en maximisant les résultats en utilisant une approche méthodique et data-driven."
-  },
-  {
-    title: "Innovation Durable",
-    icon: "fas fa-lightbulb",
-    color: "text-green-600",
-    bgColor: "bg-green-100 dark:bg-green-900/30",
-    description: "Je crois en la création de solutions innovantes qui répondent aux besoins actuels tout en anticipant les évolutions futures. L'innovation n'a de sens que si elle apporte une valeur durable."
-  },
-  {
-    title: "Développement des Talents",
-    icon: "fas fa-users",
-    color: "text-purple-600",
-    bgColor: "bg-purple-100 dark:bg-purple-900/30",
-    description: "Je valorise la transmission des compétences et l'optimisation des performances. Je m'investis dans la création de programmes de formation personnalisés qui stimulent la montée en compétences."
-  }
+const TIMELINE = [
+  { period: '2021 – Présent', role: 'Chef de Projet Digital',       company: 'KEOS TELECOM',            color: '#60a5fa', icon: '🚀' },
+  { period: '2018 – 2021',   role: 'Manager Commercial & Formation', company: 'G2R Formation',           color: '#a78bfa', icon: '🎓' },
+  { period: '2015 – 2018',   role: 'Responsable Qualité & Process',  company: 'ENI Formation',           color: '#34d399', icon: '✅' },
+  { period: '2012 – 2015',   role: 'Chef de Projet Télécom',        company: 'IUT Marne-la-Vallée',     color: '#fbbf24', icon: '📡' },
+  { period: '2010 – 2012',   role: 'Développeur Web Full Stack',     company: 'Freelance',               color: '#f9a8d4', icon: '💻' },
 ];
 
-// Expériences professionnelles
-const experiences = [
-{
-    title: "KEOS TELECOM",
-    position: "Chef de projet pilotage d'activité",
-    period: "Depuis 2021",
-    description: "Coordination d'équipes multidisciplinaires, performance et évolutivité, optimisation des opérations."
-  },
-  {
-    title: "ACTIV PARTNERS",
-    position: "Développeur web front-end",
-    period: "2019-2021",
-    description: "Gestion de projets web, développement front-end, optimisation de la sécurité des sites web."
-  },
-  {
-    title: "SFR",
-    position: " Superviseur développement commercial Rétention",
-    period: "2015-2018",
-    description: "Formation continue, accompagnement stratégique des équipes commerciales, développement et optimisation des performances commerciales."
-  },
-  {
-    title: "SFR",
-    position: "Chargé de qualité ",
-    period: "2012-2015",
-    description: "Mise en place et suivi des standards de qualité, évaluation de la qualité du service, formation et coaching, gestion des plaintes et retours, analyse et reporting."
-  },
-  {
-    title: "SFR",
-    position: "Chargé de formation Outils et Méthodes",
-    period: "2009-2012",
-    description: "Conception et animation de formations sur les outils et méthodes de travail, support et accompagnement des équipes commerciales, développement des compétences et optimisation des performances."
-  },
-  {
-    title: "SFR",
-    position: "Chargé de développement commercial",
-    period: "2006-2009",
-    description: "Développement commercial, optimisation des KPIs, processus de vente et fidélisation."
-  }];;
-
-
-// Domaines d'expertise
-const expertiseDomains = [
-  "Gestion de Projet", "Leadership", "Développement Web", "Optimisation Processus", 
-  "Formation", "Sécurité Web", "Audit Qualité", "Gestion d'Équipe"
+const VALS = [
+  { icon: '🎯', title: 'Excellence opérationnelle', desc: 'Chaque projet mérite une exécution rigoureuse, des indicateurs clairs et une livraison dans les délais.' },
+  { icon: '🤝', title: 'Collaboration authentique',  desc: 'Les meilleurs résultats naissent de la confiance, de la transparence et de l\'intelligence collective.' },
+  { icon: '📈', title: 'Amélioration continue',      desc: 'Ne jamais se satisfaire du statu quo — chaque process peut être optimisé, chaque équipe peut progresser.' },
+  { icon: '💡', title: 'Curiosité permanente',       desc: 'La tech, le management et la pédagogie évoluent vite. Rester à la pointe est une responsabilité professionnelle.' },
 ];
 ---
 
-<BaseLayout
-  title="À Propos | Gérald Paméole | Consultant Transformation Digitale"
-  description="Découvrez mon parcours, mes compétences et ma vision en tant que consultant transformation digitale et chef de projet télécom"
-  customClass="bg-gradient-to-br from-gray-50 to-white dark:from-gray-900 dark:to-gray-800"
-  fullWidth={true}
->
-  <main class="content-container-wide py-12">
-    <!-- En-tête de page -->
-    <section class="py-16 md:py-24 bg-gradient-to-r from-indigo-600/5 to-violet-600/5 w-screen" style="margin-left: calc(50% - 50vw); margin-right: calc(50% - 50vw)">
-      <div class="content-container text-center">
-        <h1 class="text-4xl md:text-5xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-blue-500">
-          À Propos de Moi
-        </h1>
-        <p class="text-xl text-[#111827] dark:text-gray-200 mb-6">
-          Chef de projet télécom & Développeur Web avec plus de 15 ans d'expérience
-        </p>
-        <div class="flex flex-wrap justify-center gap-3 mb-8">
-          <span class={`px-4 py-2 rounded-full ${COLOR_CLASSES.blue}`}>Gestion de Projet</span>
-          <span class={`px-4 py-2 rounded-full ${COLOR_CLASSES.green}`}>Développement Web</span>
-          <span class={`px-4 py-2 rounded-full ${COLOR_CLASSES.purple}`}>Qualité & Process</span>
-          <span class={`px-4 py-2 rounded-full ${COLOR_CLASSES.red}`}>Formation</span>
-          <span class={`px-4 py-2 rounded-full ${COLOR_CLASSES.orange}`}>Développement Commercial</span>
-        </div>
-      </div>
-    </section>
-    
-    <!-- Section de présentation -->
-    <section class="bg-white dark:bg-gray-800 rounded-xl shadow-lg mb-16">
-      <div class="content-container p-8">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div>
-            <h2 class="text-3xl font-bold text-[#111827] dark:text-white mb-6">
-              Mon Parcours
-            </h2>
-            <p class="text-lg text-[#111827] dark:text-gray-300 mb-6">
-              Fort de plus de 15 ans d'expérience dans le secteur des télécommunications et du développement web, 
-              j'ai développé une expertise unique combinant gestion de projet, développement technique et formation.
-            </p>
-            <p class="text-lg text-[#111827] dark:text-gray-300 mb-6">
-              Mon approche se caractérise par une vision holistique des projets, où la performance technique 
-              s'allie à l'efficacité opérationnelle et au développement des compétences.
-            </p>
-            <p class="text-lg text-[#111827] dark:text-gray-300">
-              Je m'engage à créer des solutions durables qui transforment les défis en opportunités de croissance.
-              </p>
-            </div>
-            
-          <div class="text-center">
-            <div class="w-64 h-64 mx-auto mb-6 rounded-full bg-gradient-to-br from-indigo-600 to-violet-600 p-1">
-              <div class="w-full h-full rounded-full bg-white dark:bg-gray-800 flex items-center justify-center">
-                <i class="fas fa-user-tie text-6xl text-indigo-600"></i>
-              </div>
-            </div>
-            <h3 class="text-xl font-semibold text-[#111827] dark:text-white mb-2">
-              Gérald Paméole
-            </h3>
-            <p class="text-gray-600 dark:text-gray-400">
-              Chef de Projet Télécom & Développeur Web
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-    
-    <!-- Valeurs professionnelles -->
-    <section class="bg-white dark:bg-gray-800 rounded-xl shadow-lg mb-16">
-      <div class="content-container p-8">
-        <div class="text-center mb-12">
-          <h2 class="text-3xl font-bold text-[#111827] dark:text-white mb-4">
-            Mes Valeurs Professionnelles
-          </h2>
-          <p class="text-lg text-[#111827] dark:text-gray-300">
-            Les principes qui guident mon approche et mes décisions
-          </p>
-        </div>
-        
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {values.map((value) => (
-            <div class="text-center p-6 rounded-xl hover:shadow-lg transition-shadow duration-300">
-              <div class={`w-16 h-16 mx-auto mb-4 rounded-full ${value.bgColor} flex items-center justify-center`}>
-                <i class={`${value.icon} text-2xl ${value.color}`}></i>
-              </div>
-              <h3 class="text-xl font-bold text-[#111827] dark:text-white mb-3">{value.title}</h3>
-              <p class="text-[#111827] dark:text-gray-300">{value.description}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
+<BaseLayout title="À propos" description="Gérald Paméole — Chef de projet, expert en transformation digitale et développeur web avec 15 ans d'expérience.">
 
-    <!-- Expériences professionnelles -->
-    <section class="bg-white dark:bg-gray-800 rounded-xl shadow-lg mb-16">
-      <div class="content-container p-8">
-        <div class="text-center mb-12">
-          <h2 class="text-3xl font-bold text-[#111827] dark:text-white mb-4">
-            Expérience Professionnelle
-        </h2>
-          <p class="text-lg text-[#111827] dark:text-gray-300">
-            Un parcours riche en défis et en réussites
+  <!-- Hero -->
+  <div class="about-hero">
+    <div class="orb orb-violet" style="width:500px;height:500px;top:-150px;right:-100px;opacity:0.28;"></div>
+    <div class="orb orb-cyan"   style="width:300px;height:300px;bottom:-80px;left:-60px;opacity:0.2;"></div>
+    <div class="container">
+      <div class="hero-grid">
+        <!-- Text -->
+        <div class="hero-text">
+          <span class="section-label reveal">À propos</span>
+          <h1 class="reveal reveal-delay-1" style="margin-top:1rem">
+            Bonjour, je suis<br/><span class="gradient-text">Gérald Paméole</span>
+          </h1>
+          <p class="hero-tagline reveal reveal-delay-2">
+            Chef de projet digital · Expert en transformation · Développeur web · Formateur
           </p>
-        </div>
-        
-        <div class="space-y-6">
-          {experiences.map((exp, index) => (
-            <div class="flex items-start gap-6 p-6 bg-gray-50 dark:bg-gray-700 rounded-xl">
-              <div class="w-12 h-12 bg-indigo-600 text-white rounded-full flex items-center justify-center font-bold text-lg">
-                {index + 1}
-                </div>
-              <div class="flex-1">
-                <h3 class="text-xl font-bold text-[#111827] dark:text-white mb-2">{exp.title}</h3>
-                <p class="text-blue-600 dark:text-blue-400 font-medium mb-2">{exp.position}</p>
-                <p class="text-gray-600 dark:text-gray-400 mb-2">{exp.period}</p>
-                <p class="text-[#111827] dark:text-gray-300">{exp.description}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-    
-    <!-- Domaines d'expertise -->
-    <section class="bg-white dark:bg-gray-800 rounded-xl shadow-lg mb-16">
-      <div class="content-container p-8">
-        <div class="text-center mb-12">
-          <h2 class="text-3xl font-bold text-[#111827] dark:text-white mb-4">
-            Domaines d'Expertise
-        </h2>
-          <p class="text-lg text-[#111827] dark:text-gray-300">
-            Compétences techniques et managériales
+          <p class="reveal reveal-delay-3" style="color:var(--text-3);font-size:1.05rem;line-height:1.85;max-width:540px">
+            Depuis 15 ans, j'accompagne des organisations dans leurs projets les plus complexes —
+            de la refonte d'infrastructure télécom à la formation de managers,
+            en passant par le développement d'applications web modernes.
           </p>
-        </div>
-        
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-          {expertiseDomains.map((domain) => (
-            <div class="bg-indigo-100 dark:bg-indigo-900/30 text-indigo-800 dark:text-indigo-300 px-4 py-3 rounded-lg text-center font-medium">
-              {domain}
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-    
-    <!-- Derniers articles et livres -->
-    <section class="bg-white dark:bg-gray-800 rounded-xl shadow-lg mb-16">
-      <div class="content-container p-8">
-        <div class="text-center mb-12">
-          <h2 class="text-3xl font-bold text-[#111827] dark:text-white mb-4">
-            Mes Dernières Publications
-        </h2>
-          <p class="text-lg text-[#111827] dark:text-gray-300">
-            Articles récents et recommandations de livres
-          </p>
-        </div>
-        
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          <!-- Derniers articles -->
-          <div>
-            <h3 class="text-xl font-bold text-[#111827] dark:text-white mb-4">Articles Récents</h3>
-            <div class="space-y-4">
-              {sortedArticles.slice(0, 3).map((article) => (
-                <div class="p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
-                  <h4 class="font-semibold text-[#111827] dark:text-white mb-2">
-                    <a href={`/blog/${article.slug}`} class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
-                    {article.data.title}
-                    </a>
-                  </h4>
-                  <p class="text-sm text-gray-600 dark:text-gray-400 mb-2">
-                    {formatDate(article.data.publishDate)}
-                  </p>
-                  <p class="text-sm text-[#111827] dark:text-gray-300 line-clamp-2">
-                    {article.data.description}
-                  </p>
-                </div>
-              ))}
-            </div>
-            <div class="text-center mt-4">
-              <a href="/articles" class="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 font-medium">
-                Voir tous les articles →
-              </a>
-            </div>
+          <div class="hero-ctas reveal reveal-delay-4">
+            <a href="/contact" class="btn btn-primary">Me contacter</a>
+            <a href="/projets" class="btn btn-secondary">Voir mes projets</a>
           </div>
-          
-          <!-- Livres recommandés -->
-          <div>
-            <h3 class="text-xl font-bold text-[#111827] dark:text-white mb-4">Livres Recommandés</h3>
-            <div class="space-y-4">
-              {sortedBooks.slice(0, 3).map((book) => (
-                <div class="p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
-                  <h4 class="font-semibold text-[#111827] dark:text-white mb-2">
-                    <a href={`/books/${book.slug}`} class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
-                      {book.data.title}
-                    </a>
-                  </h4>
-                  <p class="text-sm text-gray-600 dark:text-gray-400 mb-2">
-                    {book.data.author} • {book.data.publishYear}
-                  </p>
-                  <p class="text-sm text-[#111827] dark:text-gray-300 line-clamp-2">
-                    {book.data.description}
-                  </p>
-                </div>
-          ))}
         </div>
-            <div class="text-center mt-4">
-              <a href="/books" class="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 font-medium">
-                Voir tous les livres →
-              </a>
-            </div>
+
+        <!-- Stats panel -->
+        <div class="hero-stats-panel reveal reveal-delay-2">
+          <div class="stat-item">
+            <span class="stat-num gradient-text">15+</span>
+            <span class="stat-txt">années d'expérience</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num gradient-text">{articles.length}</span>
+            <span class="stat-txt">articles publiés</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num gradient-text">200+</span>
+            <span class="stat-txt">professionnels formés</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num gradient-text">{works.length}</span>
+            <span class="stat-txt">expériences clés</span>
           </div>
         </div>
       </div>
-    </section>
-    
-    <!-- Call-to-action -->
-    <section class="bg-gradient-to-r from-indigo-600 to-violet-600 rounded-xl text-white text-center p-12">
-      <h2 class="text-3xl font-bold mb-4">Envie d'échanger ?</h2>
-      <p class="text-xl mb-8 opacity-90">
-        Discutons de vos projets, de vos défis ou simplement de nos expériences communes
-      </p>
-      <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="/contact" class="px-8 py-3 bg-white text-indigo-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-          Me contacter
-        </a>
-        <a href="/projets" class="px-8 py-3 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors">
-          Voir mes projets
-        </a>
+    </div>
+  </div>
+
+  <!-- Parcours -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label reveal">Parcours</span>
+        <h2 class="reveal reveal-delay-1">Mon <span class="gradient-text">parcours</span></h2>
       </div>
-    </section>
-  </main>
+      <div class="timeline">
+        {TIMELINE.map((t, i) => (
+          <div class="timeline-item reveal" style={`transition-delay:${i*0.1}s`}>
+            <div class="timeline-icon" style={`background:${t.color}18;border-color:${t.color}40`}>{t.icon}</div>
+            <div class="timeline-line" style={`background:${t.color}30`}></div>
+            <div class="timeline-content glass-card">
+              <span class="timeline-period" style={`color:${t.color}`}>{t.period}</span>
+              <h3 class="timeline-role">{t.role}</h3>
+              <p class="timeline-company">{t.company}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <div class="divider-glow container"></div>
+
+  <!-- Valeurs -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label reveal">Valeurs</span>
+        <h2 class="reveal reveal-delay-1">Ce qui guide <span class="gradient-text">mon travail</span></h2>
+      </div>
+      <div class="vals-grid">
+        {VALS.map((v, i) => (
+          <div class="val-card glass-card reveal" style={`transition-delay:${i*0.1}s`}>
+            <span class="val-icon">{v.icon}</span>
+            <h3 class="val-title">{v.title}</h3>
+            <p class="val-desc">{v.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <div class="divider-glow container"></div>
+
+  <!-- CTA contact -->
+  <section class="section" style="padding-bottom:7rem">
+    <div class="container container-sm">
+      <div class="contact-cta glass-card reveal" style="text-align:center;padding:4rem 3rem">
+        <span class="section-label" style="display:inline-block;margin-bottom:1.5rem">Contact</span>
+        <h2 style="font-size:clamp(1.6rem,3vw,2.4rem);margin-bottom:1rem">
+          Vous avez un projet ?<br/><span class="gradient-text">Parlons-en.</span>
+        </h2>
+        <p style="color:var(--text-3);max-width:420px;margin:0 auto 2rem;line-height:1.8">
+          Que ce soit pour un projet de transformation, de formation ou de développement,
+          je réponds sous 24h.
+        </p>
+        <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
+          <a href="/contact" class="btn btn-primary">Envoyer un message</a>
+          <a href="https://www.linkedin.com/in/gerald-pameole/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
 </BaseLayout>
 
 <style>
-  /* Styles cohérents avec le design system */
-  .line-clamp-2 {
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-  }
-  
-  /* Responsive */
-  @media (max-width: 768px) {
-    .content-container {
-      padding: 0 1rem;
-    }
-    
-    section {
-      padding: 1.5rem;
-    }
-    
-    .grid-cols-4 {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
+.about-hero {
+  position: relative;
+  overflow: hidden;
+  padding: 7rem 0 5rem;
+  border-bottom: 1px solid var(--border);
+}
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 4rem;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+.hero-tagline {
+  font-family: var(--font-mono);
+  font-size: .85rem;
+  color: var(--violet-light);
+  letter-spacing: .06em;
+  margin: .75rem 0 1.25rem;
+}
+.hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 2rem; }
+
+.hero-stats-panel {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  border-radius: var(--r-xl);
+  overflow: hidden;
+  min-width: 300px;
+}
+.stat-item {
+  background: var(--bg-1);
+  padding: 1.75rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: .4rem;
+}
+.stat-num { font-family: var(--font-sans); font-size: 2.2rem; font-weight: 800; line-height: 1; }
+.stat-txt  { font-size: .78rem; color: var(--text-3); letter-spacing: .04em; }
+
+/* Timeline */
+.timeline { display: flex; flex-direction: column; gap: 0; }
+.timeline-item {
+  display: grid;
+  grid-template-columns: 56px 24px 1fr;
+  gap: 0 1.25rem;
+  align-items: flex-start;
+}
+.timeline-icon {
+  width: 56px; height: 56px;
+  border-radius: var(--r-lg);
+  border: 1px solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  flex-shrink: 0;
+  margin-top: .25rem;
+}
+.timeline-line {
+  width: 2px;
+  align-self: stretch;
+  margin: 0 auto;
+  min-height: 60px;
+}
+.timeline-content {
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1rem;
+}
+.timeline-period  { font-family: var(--font-mono); font-size: .78rem; font-weight: 700; }
+.timeline-role    { font-size: 1rem; font-weight: 700; color: var(--text-1); font-family: var(--font-sans); margin: .35rem 0 .2rem; }
+.timeline-company { font-size: .855rem; color: var(--text-3); }
+
+/* Values */
+.vals-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem; }
+.val-card { padding: 2rem; display: flex; flex-direction: column; gap: .75rem; }
+.val-icon  { font-size: 1.8rem; }
+.val-title { font-size: 1rem; font-weight: 700; color: var(--text-1); font-family: var(--font-sans); }
+.val-desc  { font-size: .875rem; color: var(--text-3); line-height: 1.7; }
+
+@media(max-width:900px) {
+  .hero-grid { grid-template-columns: 1fr; }
+  .hero-stats-panel { max-width: 400px; }
+}
+@media(max-width:640px) {
+  .vals-grid { grid-template-columns: 1fr; }
+  .hero-stats-panel { grid-template-columns: repeat(2, 1fr); }
+  .timeline-item { grid-template-columns: 44px 16px 1fr; }
+}
 </style>

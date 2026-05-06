@@ -1,176 +1,314 @@
 ---
 import { getCollection } from 'astro:content';
-import BackButton from '../../components/BackButton.astro';
-import BackToTop from '../../components/BackToTop.astro';
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import BackToTop from '../../components/BackToTop.astro';
 
 export async function getStaticPaths() {
-	const workEntries = await getCollection('work');
-	return workEntries.map(entry => ({
-		params: { slug: entry.slug },
-		props: { entry },
-	}));
+  const entries = await getCollection('work');
+  return entries.map(entry => ({ params: { slug: entry.slug }, props: { entry } }));
 }
 
 const { entry } = Astro.props;
 const { Content } = await entry.render();
+const { title, description, img, img_alt, company, period, location, technologies, tags, publishDate } = entry.data;
 
-// Récupération de la date formatée
-function formatDate(dateString: string) {
-	return new Date(dateString).toLocaleDateString('fr-FR', {
-		year: 'numeric',
-		month: 'long',
-		day: 'numeric'
-	});
-}
+const date = publishDate
+  ? new Date(publishDate).toLocaleDateString('fr-FR', { year: 'numeric', month: 'long' })
+  : null;
 ---
 
-<BaseLayout title={entry.data.title} description={entry.data.description}>
-	<main class="content-container-narrow py-12">
-		<div class="mb-8">
-			<BackButton href="/projets" text="Retour aux projets" />
-		</div>
+<BaseLayout title={title} description={description ?? title}>
 
-		<article class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden project-content">
-			<!-- Image principale -->
-			{entry.data.img && (
-				<div class="relative h-80 overflow-hidden">
-					<img
-						src={entry.data.img}
-						alt={entry.data.img_alt || entry.data.title}
-						class="w-full h-full object-cover"
-					/>
-					<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
-						<div class="absolute bottom-0 left-0 p-6 text-white">
-							<h1 class="text-4xl font-bold mb-2">{entry.data.title}</h1>
-							{entry.data.publishDate && (
-								<p class="text-white/80 mb-2">{formatDate(entry.data.publishDate)}</p>
-							)}
-						</div>
-					</div>
-				</div>
-			)}
+  <!-- Hero -->
+  <div class="project-hero">
+    <div class="orb orb-violet" style="width:400px;height:400px;top:-100px;right:-80px;opacity:0.25;"></div>
 
-			<div class="p-8">
-				{!entry.data.img && (
-					<h1 class="text-4xl font-bold mb-4 text-[#111827] dark:text-white">{entry.data.title}</h1>
-				)}
-			
-				<p class="text-xl text-[#111827] dark:text-gray-300 mb-6">{entry.data.description}</p>
-				
-				<!-- Informations CV -->
-				{(entry.data.company || entry.data.period || entry.data.location) && (
-					<div class="bg-gray-100 dark:bg-gray-700 rounded-xl p-6 mb-8">
-						<h2 class="text-lg font-semibold mb-4 text-[#111827] dark:text-white flex items-center">
-							<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-indigo-600 dark:text-indigo-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-							</svg>
-							Détails professionnels
-						</h2>
-						<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-							{entry.data.company && (
-								<div class="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-sm">
-									<span class="text-sm text-indigo-600 dark:text-indigo-400 font-medium block mb-1">Entreprise</span>
-									<span class="font-medium text-[#111827] dark:text-white text-lg">{entry.data.company}</span>
-								</div>
-							)}
-							{entry.data.period && (
-								<div class="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-sm">
-									<span class="text-sm text-indigo-600 dark:text-indigo-400 font-medium block mb-1">Période</span>
-									<span class="font-medium text-[#111827] dark:text-white text-lg">{entry.data.period}</span>
-								</div>
-							)}
-							{entry.data.location && (
-								<div class="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-sm">
-									<span class="text-sm text-indigo-600 dark:text-indigo-400 font-medium block mb-1">Localisation</span>
-									<span class="font-medium text-[#111827] dark:text-white text-lg">{entry.data.location}</span>
-								</div>
-							)}
-						</div>
-					</div>
-				)}
-				
-				<!-- Technologies -->
-				{entry.data.technologies && entry.data.technologies.length > 0 && (
-					<div class="mb-8">
-						<h2 class="text-lg font-semibold mb-4 text-[#111827] dark:text-white flex items-center">
-							<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-indigo-600 dark:text-indigo-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
-								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-							</svg>
-							Technologies
-						</h2>
-						<div class="flex flex-wrap gap-2">
-							{entry.data.technologies.map((tech: string) => (
-								<span class="px-4 py-2 text-sm bg-indigo-100 dark:bg-indigo-900/30 text-indigo-800 dark:text-indigo-300 rounded-full font-medium transition hover:scale-105">
-									{tech}
-								</span>
-							))}
-						</div>
-					</div>
-				)}
-				
-				<!-- Tags -->
-				{entry.data.tags && entry.data.tags.length > 0 && (
-					<div class="mb-8">
-						<h2 class="text-lg font-semibold mb-4 text-[#111827] dark:text-white flex items-center">
-							<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-indigo-600 dark:text-indigo-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" />
-							</svg>
-							Compétences
-						</h2>
-						<div class="flex flex-wrap gap-2">
-							{entry.data.tags.map((tag: string) => (
-								<span class="px-3 py-1 text-sm bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-full">
-									{tag}
-								</span>
-							))}
-						</div>
-					</div>
-				)}
+    {img && (
+      <div class="hero-image-wrap">
+        <img src={img} alt={img_alt ?? title} class="hero-image" />
+        <div class="hero-image-overlay"></div>
+      </div>
+    )}
 
-				<!-- Contenu principal -->
-				<div class="content-typography">
-					<Content />
-				</div>
-			</div>
-		</article>
-		
-		<!-- Navigation entre projets -->
-		<div class="flex justify-between items-center mt-12">
-			<a href="/projets" class="inline-flex items-center px-4 py-2 bg-gray-100 dark:bg-gray-800 rounded-lg text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition">
-				<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 17l-5-5m0 0l5-5m-5 5h12" />
-				</svg>
-				Tous les projets
-			</a>
-			
-			<a href="/contact" class="inline-flex items-center px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition">
-				<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-				</svg>
-				Me contacter
-			</a>
-		</div>
-	</main>
-	
-	<BackToTop />
+    <div class="container hero-content">
+      <a href="/projets" class="back-link">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m15 18-6-6 6-6"/></svg>
+        Retour aux projets
+      </a>
+
+      <div class="hero-meta">
+        {company && <span class="hero-company">{company}</span>}
+        {date && <span class="hero-date">{date}</span>}
+      </div>
+      <h1 class="hero-title">{title}</h1>
+      {description && <p class="hero-desc">{description}</p>}
+
+      <div class="hero-badges">
+        {period   && <span class="hero-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>{period}</span>}
+        {location && <span class="hero-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>{location}</span>}
+      </div>
+    </div>
+  </div>
+
+  <!-- Content -->
+  <div class="project-body">
+    <div class="container">
+      <div class="project-layout">
+
+        <!-- Main content -->
+        <article class="project-article prose">
+          <Content />
+        </article>
+
+        <!-- Sidebar -->
+        <aside class="project-sidebar">
+
+          {technologies && technologies.length > 0 && (
+            <div class="sidebar-block">
+              <h3 class="sidebar-title">Technologies & méthodes</h3>
+              <div class="tech-grid">
+                {technologies.map((t: string) => <span class="tech-pill">{t}</span>)}
+              </div>
+            </div>
+          )}
+
+          {tags && tags.length > 0 && (
+            <div class="sidebar-block">
+              <h3 class="sidebar-title">Tags</h3>
+              <div class="tags-list">
+                {tags.map((tag: string) => <span class="tag-pill">{tag}</span>)}
+              </div>
+            </div>
+          )}
+
+          <div class="sidebar-block">
+            <h3 class="sidebar-title">Intéressé par ce type de projet ?</h3>
+            <p style="font-size:.875rem;color:var(--text-3);line-height:1.7;margin-bottom:1.25rem">
+              Vous avez un projet similaire ou souhaitez discuter de votre contexte ?
+            </p>
+            <a href="/contact" class="btn btn-primary" style="width:100%;justify-content:center">
+              Contactez-moi →
+            </a>
+          </div>
+
+          <a href="/projets" class="back-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m15 18-6-6 6-6"/></svg>
+            Tous les projets
+          </a>
+        </aside>
+      </div>
+    </div>
+  </div>
+
+  <BackToTop />
 </BaseLayout>
 
 <style>
-	/* Styles spécifiques à la page projet */
-	.project-content {
-		/* Utilise les styles unifiés de content.css */
-	}
-	
-	/* Ajustements spécifiques si nécessaire */
-	.project-content .bg-gray-100 {
-		background-color: var(--color-secondary-warm);
-		opacity: 0.1;
-	}
-	
-	.project-content .bg-indigo-100 {
-		background-color: var(--color-secondary-cool);
-		opacity: 0.1;
-	}
+/* Hero */
+.project-hero {
+  position: relative;
+  overflow: hidden;
+  min-height: 340px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  border-bottom: 1px solid var(--border);
+}
+.hero-image-wrap {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.25;
+  filter: saturate(0.6);
+}
+.hero-image-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, var(--bg-0) 30%, rgba(5,8,22,0.7) 100%);
+}
+.hero-content {
+  position: relative;
+  z-index: 1;
+  padding-top: 7rem;
+  padding-bottom: 3.5rem;
+}
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  color: var(--text-3);
+  font-size: .875rem;
+  text-decoration: none;
+  margin-bottom: 2rem;
+  transition: color .2s;
+  font-family: var(--font-mono);
+}
+.back-link:hover { color: var(--text-1); }
+.hero-meta { display: flex; align-items: center; gap: 1rem; margin-bottom: .75rem; flex-wrap: wrap; }
+.hero-company { font-family: var(--font-mono); font-size: .8rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--violet-light); }
+.hero-date    { font-family: var(--font-mono); font-size: .78rem; color: var(--text-3); }
+.hero-title   { font-size: clamp(1.8rem, 4vw, 3.2rem); color: var(--text-1); margin-bottom: 1rem; line-height: 1.15; }
+.hero-desc    { font-size: 1.05rem; color: var(--text-3); max-width: 640px; line-height: 1.8; margin-bottom: 1.5rem; }
+.hero-badges  { display: flex; flex-wrap: wrap; gap: .6rem; }
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  font-family: var(--font-mono);
+  font-size: .78rem;
+  color: var(--text-3);
+  background: var(--glass);
+  border: 1px solid var(--border);
+  border-radius: var(--r-full);
+  padding: .3rem .85rem;
+}
+
+/* Body layout */
+.project-body { padding: 3rem 0 6rem; }
+.project-layout {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 4rem;
+  align-items: flex-start;
+}
+
+/* Article prose */
+.project-article {
+  min-width: 0;
+}
+.project-article :global(h1) { display: none; } /* title already in hero */
+.project-article :global(h2) {
+  font-size: 1.4rem;
+  color: var(--text-1);
+  margin: 2.5rem 0 .75rem;
+  padding-bottom: .5rem;
+  border-bottom: 1px solid var(--border);
+  font-family: var(--font-sans);
+}
+.project-article :global(h3) {
+  font-size: 1.1rem;
+  color: var(--violet-light);
+  margin: 2rem 0 .6rem;
+  font-family: var(--font-sans);
+}
+.project-article :global(h4) { color: var(--text-2); margin: 1.5rem 0 .4rem; }
+.project-article :global(p)  { color: var(--text-2); line-height: 1.85; margin-bottom: 1.1rem; }
+.project-article :global(ul),
+.project-article :global(ol) { color: var(--text-2); margin-bottom: 1.1rem; padding-left: 1.5rem; }
+.project-article :global(li) { margin-bottom: .5rem; line-height: 1.7; }
+.project-article :global(strong) { color: var(--text-1); font-weight: 600; }
+.project-article :global(em) { color: var(--violet-light); }
+.project-article :global(blockquote) {
+  border-left: 3px solid var(--violet);
+  padding: .75rem 1.5rem;
+  margin: 1.5rem 0;
+  background: rgba(145,94,255,0.06);
+  border-radius: 0 var(--r-md) var(--r-md) 0;
+  color: var(--text-3);
+}
+.project-article :global(table) {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: .9rem;
+}
+.project-article :global(th) {
+  background: var(--bg-2);
+  color: var(--text-1);
+  padding: .75rem 1rem;
+  text-align: left;
+  font-family: var(--font-sans);
+  font-weight: 700;
+  border-bottom: 1px solid var(--border-bright);
+}
+.project-article :global(td) {
+  padding: .75rem 1rem;
+  border-bottom: 1px solid var(--border);
+  color: var(--text-2);
+}
+.project-article :global(tr:last-child td) { border-bottom: none; }
+.project-article :global(code) {
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  border-radius: var(--r-sm);
+  padding: .15em .5em;
+  font-size: .875em;
+  color: var(--cyan);
+}
+.project-article :global(.metric) {
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
+  background: rgba(145,94,255,0.1);
+  border: 1px solid rgba(145,94,255,0.25);
+  border-radius: var(--r-full);
+  padding: .25rem .85rem;
+  font-family: var(--font-mono);
+  font-size: .8rem;
+  color: var(--violet-light);
+  margin: .15rem;
+}
+
+/* Sidebar */
+.project-sidebar { position: sticky; top: 6rem; display: flex; flex-direction: column; gap: 1.5rem; }
+.sidebar-block {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  padding: 1.5rem;
+}
+.sidebar-title {
+  font-family: var(--font-sans);
+  font-size: .78rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--text-3);
+  margin-bottom: 1rem;
+}
+.tech-grid { display: flex; flex-wrap: wrap; gap: .4rem; }
+.tech-pill {
+  font-family: var(--font-mono);
+  font-size: .75rem;
+  padding: .3rem .75rem;
+  background: var(--glass);
+  border: 1px solid var(--border);
+  border-radius: var(--r-full);
+  color: var(--cyan-light);
+  transition: all .2s;
+}
+.tech-pill:hover { border-color: var(--cyan); }
+.tags-list { display: flex; flex-wrap: wrap; gap: .4rem; }
+.tag-pill {
+  font-size: .72rem;
+  padding: .22rem .65rem;
+  background: rgba(145,94,255,0.08);
+  border: 1px solid rgba(145,94,255,0.2);
+  border-radius: var(--r-full);
+  color: var(--violet-light);
+  font-family: var(--font-sans);
+  font-weight: 600;
+}
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  color: var(--text-3);
+  font-size: .875rem;
+  text-decoration: none;
+  transition: color .2s;
+  font-family: var(--font-mono);
+}
+.back-btn:hover { color: var(--text-1); }
+
+@media(max-width:900px) {
+  .project-layout { grid-template-columns: 1fr; }
+  .project-sidebar { position: static; order: -1; flex-direction: row; flex-wrap: wrap; }
+  .sidebar-block   { flex: 1; min-width: 250px; }
+}
 </style>

@@ -83,8 +83,9 @@ const themesWithCount = allThemes.map(theme => {
 	};
 }).sort((a, b) => b.totalCount - a.totalCount);
 
-function formatDate(date: Date) {
-	return date.toLocaleDateString('fr-FR', {
+function formatDate(date: Date | string): string {
+	const dateObj = typeof date === 'string' ? new Date(date) : date;
+	return dateObj.toLocaleDateString('fr-FR', {
 		year: 'numeric',
 		month: 'long',
 		day: 'numeric'

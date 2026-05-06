@@ -111,3 +111,9 @@ console.log(`\nDate de départ: ${formatDate(startDate)}`);
 console.log(`Date du dernier article: ${formatDate(addWeeks(startDate, allArticles.length - 1))}`);
 
 
+
+
+
+
+
+
