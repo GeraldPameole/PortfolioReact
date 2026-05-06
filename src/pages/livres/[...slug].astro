@@ -1,0 +1,301 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import BackToTop from '../../components/BackToTop.astro';
+
+export async function getStaticPaths() {
+  const books = await getCollection('books');
+  return books.map(book => ({ params: { slug: book.slug }, props: { book } }));
+}
+
+interface Props { book: CollectionEntry<'books'>; }
+const { book } = Astro.props;
+const { Content } = await book.render();
+
+const CAT_MAP: Record<string, string> = {
+  'developpement-web':        'Tech & Dev',
+  'developpement-personnel':  'Croissance personnelle',
+  'business':                 'Business & Stratégie',
+  'management':               'Leadership',
+};
+const ACCENT: Record<string, string> = {
+  'Tech & Dev':           '#67e8f9',
+  'Croissance personnelle':'#86efac',
+  'Business & Stratégie': '#fdba74',
+  'Leadership':           '#c4b5fd',
+  'Autre':                '#94a3b8',
+};
+const cat   = CAT_MAP[book.data.profession as string] ?? 'Autre';
+const color = ACCENT[cat] ?? '#94a3b8';
+const note  = book.data.note ?? 4;
+const full  = Math.floor(note);
+const half  = note % 1 >= 0.5;
+const empty = 5 - full - (half ? 1 : 0);
+---
+
+<BaseLayout title={book.data.title} description={book.data.description ?? book.data.title}>
+
+  <!-- Hero -->
+  <div class="book-hero">
+    <div class="orb orb-violet" style="width:400px;height:400px;top:-100px;right:-80px;opacity:0.25;"></div>
+    <div class="container hero-inner">
+      <a href="/livres" class="back-link">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m15 18-6-6 6-6"/></svg>
+        Bibliothèque
+      </a>
+      <div class="hero-grid">
+        <!-- Cover -->
+        <div class="cover-wrap" style={`border-color:${color}35`}>
+          {book.data.coverImage ? (
+            <img src={book.data.coverImage} alt={`Couverture — ${book.data.title}`} class="cover-img" />
+          ) : (
+            <div class="cover-placeholder" style={`background:linear-gradient(135deg,${color}20,${color}08)`}>
+              <span class="cover-letter" style={`color:${color}`}>{book.data.title[0]}</span>
+            </div>
+          )}
+        </div>
+
+        <!-- Meta -->
+        <div class="hero-meta">
+          <span class="cat-badge" style={`color:${color};background:${color}15;border-color:${color}30`}>{cat}</span>
+          <h1 class="book-title">{book.data.title}</h1>
+          <p class="book-author">par {book.data.author}</p>
+
+          <div class="stars" aria-label={`Note : ${note}/5`}>
+            {Array.from({ length: full  }).map(() => <span class="star full"  style={`color:${color}`}>★</span>)}
+            {half                              &&     <span class="star half"  style={`color:${color}`}>★</span>}
+            {Array.from({ length: empty }).map(() => <span class="star empty">☆</span>)}
+            <span class="note" style={`color:${color}`}>{note}/5</span>
+          </div>
+
+          {book.data.description && <p class="book-desc">{book.data.description}</p>}
+
+          <div class="hero-badges">
+            {book.data.publishYear && (
+              <span class="badge">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                {book.data.publishYear}
+              </span>
+            )}
+            {book.data.amazonLink && (
+              <a href={book.data.amazonLink} target="_blank" rel="noopener noreferrer" class="amazon-btn">
+                Voir sur Amazon →
+              </a>
+            )}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Content -->
+  <div class="book-body">
+    <div class="container book-layout">
+      <article class="book-article prose">
+        <Content />
+      </article>
+
+      <aside class="book-sidebar">
+        <div class="sidebar-block">
+          <p class="sidebar-label">Catégorie</p>
+          <span class="cat-pill" style={`color:${color};background:${color}12;border-color:${color}30`}>{cat}</span>
+        </div>
+
+        {book.data.relatedContent && book.data.relatedContent.length > 0 && (
+          <div class="sidebar-block">
+            <p class="sidebar-label">Articles liés</p>
+            <div class="related-list">
+              {book.data.relatedContent.map((r: any) => (
+                <a href={r.url} class="related-link">
+                  <span class="related-type">{r.type ?? 'article'}</span>
+                  {r.title}
+                </a>
+              ))}
+            </div>
+          </div>
+        )}
+
+        <div class="sidebar-block">
+          <p class="sidebar-label">Vous avez lu ce livre ?</p>
+          <p style="font-size:.875rem;color:var(--text-3);line-height:1.7;margin-bottom:1.25rem">
+            Échangeons sur vos impressions et ce que vous en avez retenu.
+          </p>
+          <a href="/contact" class="btn btn-primary" style="width:100%;justify-content:center">Discutons-en →</a>
+        </div>
+
+        <a href="/livres" class="back-btn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m15 18-6-6 6-6"/></svg>
+          Toute la bibliothèque
+        </a>
+      </aside>
+    </div>
+  </div>
+
+  <BackToTop />
+</BaseLayout>
+
+<style>
+.book-hero {
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid var(--border);
+}
+.hero-inner {
+  position: relative;
+  z-index: 1;
+  padding-top: 7rem;
+  padding-bottom: 4rem;
+}
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  color: var(--text-3);
+  font-family: var(--font-mono);
+  font-size: .875rem;
+  text-decoration: none;
+  margin-bottom: 2.5rem;
+  transition: color .2s;
+}
+.back-link:hover { color: var(--text-1); }
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 3rem;
+  align-items: flex-start;
+}
+
+.cover-wrap {
+  width: 180px;
+  height: 250px;
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  border: 1px solid;
+  flex-shrink: 0;
+  position: relative;
+}
+.cover-img { width: 100%; height: 100%; object-fit: cover; }
+.cover-placeholder {
+  width: 100%; height: 100%;
+  display: flex; align-items: center; justify-content: center;
+}
+.cover-letter { font-family: var(--font-sans); font-size: 4rem; font-weight: 800; }
+
+.cat-badge {
+  display: inline-block;
+  font-size: .7rem;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  padding: .22rem .75rem;
+  border-radius: var(--r-full);
+  border: 1px solid;
+  font-family: var(--font-sans);
+  margin-bottom: 1rem;
+}
+.book-title  { font-size: clamp(1.6rem, 3vw, 2.8rem); color: var(--text-1); line-height: 1.2; margin: 0 0 .5rem; }
+.book-author { font-size: 1rem; color: var(--text-3); font-style: italic; margin: 0 0 1rem; }
+
+.stars { display: flex; align-items: center; gap: .18rem; margin-bottom: 1rem; }
+.star { font-size: 1.1rem; }
+.star.empty { color: var(--text-4); }
+.star.half  { opacity: .6; }
+.note { font-family: var(--font-mono); font-size: .78rem; font-weight: 700; margin-left: .4rem; }
+
+.book-desc { font-size: 1rem; color: var(--text-3); line-height: 1.8; max-width: 560px; margin: 0 0 1.5rem; }
+
+.hero-badges { display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; }
+.badge {
+  display: inline-flex; align-items: center; gap: .4rem;
+  font-family: var(--font-mono); font-size: .78rem; color: var(--text-3);
+  background: var(--glass); border: 1px solid var(--border);
+  border-radius: var(--r-full); padding: .28rem .85rem;
+}
+.amazon-btn {
+  display: inline-flex; align-items: center;
+  background: #ff9900; color: #000;
+  font-size: .8rem; font-weight: 700;
+  padding: .4rem 1rem; border-radius: var(--r-full);
+  text-decoration: none; transition: opacity .2s;
+}
+.amazon-btn:hover { opacity: .85; }
+
+/* Body */
+.book-body { padding: 3.5rem 0 6rem; }
+.book-layout {
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 4rem;
+  align-items: flex-start;
+}
+
+/* Article prose */
+.book-article :global(h1) { display: none; }
+.book-article :global(h2) {
+  font-size: 1.35rem; color: var(--text-1);
+  margin: 2.5rem 0 .75rem; padding-bottom: .5rem;
+  border-bottom: 1px solid var(--border);
+  font-family: var(--font-sans);
+}
+.book-article :global(h3) { font-size: 1.1rem; color: var(--violet-light); margin: 2rem 0 .6rem; }
+.book-article :global(p)  { color: var(--text-2); line-height: 1.85; margin-bottom: 1rem; }
+.book-article :global(ul),
+.book-article :global(ol) { color: var(--text-2); margin-bottom: 1rem; padding-left: 1.5rem; }
+.book-article :global(li) { margin-bottom: .45rem; line-height: 1.7; }
+.book-article :global(strong) { color: var(--text-1); font-weight: 600; }
+.book-article :global(blockquote) {
+  border-left: 3px solid var(--violet);
+  padding: .75rem 1.5rem;
+  margin: 1.5rem 0;
+  background: rgba(145,94,255,0.06);
+  border-radius: 0 var(--r-md) var(--r-md) 0;
+  color: var(--text-3);
+}
+
+/* Sidebar */
+.book-sidebar { position: sticky; top: 6rem; display: flex; flex-direction: column; gap: 1.5rem; }
+.sidebar-block {
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: var(--r-lg); padding: 1.5rem;
+}
+.sidebar-label {
+  font-family: var(--font-sans); font-size: .75rem; font-weight: 700;
+  letter-spacing: .08em; text-transform: uppercase; color: var(--text-3); margin-bottom: .75rem;
+}
+.cat-pill {
+  display: inline-block; font-size: .72rem; font-weight: 700;
+  letter-spacing: .05em; text-transform: uppercase;
+  padding: .22rem .75rem; border-radius: var(--r-full); border: 1px solid;
+}
+.related-list { display: flex; flex-direction: column; gap: .5rem; }
+.related-link {
+  display: block; font-size: .83rem; color: var(--text-2); text-decoration: none;
+  padding: .5rem .75rem; border-radius: var(--r-md); background: var(--glass);
+  border: 1px solid var(--border); transition: all .2s;
+}
+.related-link:hover { border-color: var(--violet); color: var(--text-1); }
+.related-type {
+  display: inline-block; font-size: .65rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: .05em; color: var(--violet-light); margin-bottom: .15rem;
+  font-family: var(--font-mono);
+}
+.back-btn {
+  display: inline-flex; align-items: center; gap: .5rem;
+  color: var(--text-3); font-size: .875rem; text-decoration: none;
+  font-family: var(--font-mono); transition: color .2s;
+}
+.back-btn:hover { color: var(--text-1); }
+
+@media(max-width:900px) {
+  .hero-grid   { grid-template-columns: 1fr; }
+  .cover-wrap  { width: 130px; height: 180px; }
+  .book-layout { grid-template-columns: 1fr; }
+  .book-sidebar { position: static; flex-direction: row; flex-wrap: wrap; }
+  .sidebar-block { flex: 1; min-width: 220px; }
+}
+@media(max-width:600px) {
+  .hero-grid { gap: 1.5rem; }
+}
+</style>

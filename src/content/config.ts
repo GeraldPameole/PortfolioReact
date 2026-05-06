@@ -17,9 +17,12 @@ const articleSchema = z.object({
   ...baseSchema,
   type: z.literal("article"),
   publishDate: z.string(),
+  domain: z.string().optional(),
   readingTime: z.number().optional(),
   featured: z.boolean().optional().default(false),
   keywords: z.array(z.string()).optional().default([]),
+  pillColor: z.string().optional(),
+  relatedArticles: z.array(z.any()).optional(),
 });
 
 // Schéma pour les livres
