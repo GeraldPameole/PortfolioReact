@@ -166,8 +166,6 @@ La rémunération a évolué significativement au cours des dernières décennie
 
 1. **Manque de compétitivité** : Les rémunérations non compétitives échouent dans 70% des cas selon McKinsey Global Institute (2025).
 
-2. **Inéquité** : Les inéquités salariales ont une efficacité de 50% inférieure selon Gartner (2025).
-
 3. **Manque de transparence** : Les rémunérations opaques échouent dans 65% des cas selon Deloitte Insights (2025).
 
 4. **Désalignement** : Les rémunérations non alignées avec la performance ont une efficacité de 60% inférieure selon Harvard Business Review (2025).

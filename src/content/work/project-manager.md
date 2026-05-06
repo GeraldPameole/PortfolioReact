@@ -1,82 +1,66 @@
 ---
-title: "Chef de Projet Digital"
-publishDate: "2024-01-02"
-description: "Gestion et coordination de projets digitaux innovants."
+title: "Chef de Projet — Maintenance Réseaux"
+publishDate: "2021-02-01"
+description: "Pilotage de projets d'infrastructure télécom (DSL/FTTB), coordination d'équipes techniques et amélioration continue des performances réseaux."
 author: "Gérald Paméole"
 img: "/assets/projectmanagersuit.jpg"
-img_alt: "Chef de projet en action"
+img_alt: "Chef de projet télécoms en action"
 company: "KEOS TELECOM"
-period: "2021 - Présent"
+period: "Fév. 2021 — Présent"
 location: "Paris, France"
 technologies:
-- Méthodologies Agiles
-- Gestion de projet
-- Télécommunications
-- Transformation digitale
+  - Méthodologies Agiles (Scrum / Kanban)
+  - Gestion de projet (Jira, MS Project)
+  - Réseaux DSL / FTTB
+  - Outils de monitoring réseau
+  - Coordination multi-équipes
+  - Reporting & KPIs
 projectType: "professional"
 tags:
-- Gestion de projet
-- Agilité
-- Leadership
-- Innovation
+  - Gestion de projet
+  - Télécommunications
+  - Leadership
+  - Agile
+  - Réseaux
 ---
 
-# Chef de Projet
+## Mission
 
-## 🎯 Mission
+Chef de Projet Maintenance Réseaux chez KEOS TELECOM depuis février 2021. Je pilote les projets d'optimisation et de maintenance des infrastructures télécoms (DSL, FTTB), coordonne des équipes techniques pluridisciplinaires et supervise la qualité de service pour les opérations réseau.
 
-En tant que Chef de Projet chez KEOS TELECOM, je pilote des projets complexes d'optimisation d'infrastructures réseau et coordonne des équipes techniques pour garantir une performance optimale des services télécoms, en mettant l'accent sur l'innovation et l'efficacité opérationnelle.
+### Responsabilités principales
 
-### Responsabilités Clés
+- Pilotage bout-en-bout des projets de maintenance et d'optimisation d'infrastructures DSL/FTTB
+- Coordination d'équipes techniques de 5 à 15 ingénieurs et techniciens terrain
+- Suivi des indicateurs de performance réseau et mise en œuvre des plans d'amélioration
+- Gestion de la relation client et reporting régulier auprès des parties prenantes
+- Animation des rituels Agile (daily, sprint planning, rétrospectives)
 
-- Pilotage de projets télécoms stratégiques et d'optimisation d'infrastructures réseau
-- Coordination d'équipes multidisciplinaires pour optimiser la performance et l'évolutivité des réseaux
-- Gestion de la relation client et des parties prenantes dans un environnement complexe
-- Mise en œuvre de processus optimisés pour accroître la performance
-- Gestion proactive de l'expérience utilisateur et leadership dans le contrôle de projets complexes
+## Réalisations clés
 
-## 💡 Réalisations Principales
+### Performance opérationnelle
 
-### Transformation Digitale
+- **+30 % d'efficacité opérationnelle** sur les projets d'infrastructure grâce à l'introduction de méthodologies Agile adaptées au secteur télécom
+- **95 % de satisfaction client** maintenu sur l'ensemble des projets, mesurée via des enquêtes post-livraison
+- Réduction des délais de résolution d'incidents de 40 % grâce à un processus d'escalade optimisé
 
-- Mise en place de solutions collaboratives pour optimiser la communication entre les équipes techniques
-- Déploiement d'outils de gestion de projet agiles adaptés au secteur des télécommunications
-- Digitalisation des processus métier clés pour améliorer l'efficacité opérationnelle
-- Optimisation des infrastructures réseau pour garantir une qualité de service optimale
+### Coordination technique
 
-### Gestion d'Équipe
+- Déploiement d'un tableau de bord de suivi des KPIs réseau en temps réel (disponibilité, MTTR, taux de pannes)
+- Mise en place de procédures de gestion des incidents critiques sur les équipements DSL/FTTB
+- Harmonisation des méthodes de travail entre les équipes terrain et les équipes support
 
-- Management et coordination d'équipes de 5 à 15 experts techniques
-- Mise en place de rituels agiles efficaces pour suivre l'avancement des projets
-- Développement des compétences techniques et accompagnement des collaborateurs
-- Animation d'ateliers collaboratifs pour résoudre des problèmes techniques complexes
+### Innovation & amélioration continue
 
-### Innovation & Performance
+- Introduction d'outils collaboratifs (Jira, Confluence) dans une organisation peu digitalisée
+- Création de reportings automatisés réduisant le temps de préparation des comptes rendus de 60 %
+- Formation des équipes aux pratiques Agile, résultant en +25 % de livraisons dans les délais
 
-- Réduction de 30% des délais de livraison des projets d'infrastructure
-- Amélioration de la satisfaction client de 25% grâce à une meilleure qualité de service
-- Introduction de nouvelles méthodologies de travail adaptées aux contraintes du secteur
-- Mise en œuvre de solutions innovantes pour améliorer la fiabilité des réseaux
+## Compétences mobilisées
 
-## 🛠 Compétences Développées
-
-### Techniques
-
-- Maîtrise des méthodologies Agiles (Scrum, Kanban) appliquées aux projets télécoms
-- Expertise en outils de gestion de projet (Jira, MS Project, Trello)
-- Connaissance approfondie des infrastructures de télécommunication
-- Maîtrise des solutions collaboratives (Confluence, Teams) pour coordonner les équipes distantes
-
-### Management
-
-- Leadership d'équipes techniques pluridisciplinaires
-- Gestion efficace des parties prenantes et des attentes client
-- Communication stratégique dans un environnement technique complexe
-- Coaching et développement des talents techniques
-
-### Métier
-
-- Analyse approfondie des besoins clients dans le secteur des télécommunications
-- Gestion budgétaire et optimisation des coûts de projets d'infrastructure
-- Planification stratégique de déploiements complexes
-- Expertise en optimisation de performance réseau et qualité de service
+| Domaine | Compétences |
+|---------|-------------|
+| Gestion de projet | Planification, suivi budgétaire, gestion des risques, reporting |
+| Technique | Réseaux DSL/FTTB, monitoring, protocoles télécoms |
+| Management | Leadership d'équipes, coaching, gestion du changement |
+| Méthodes | Scrum, Kanban, amélioration continue, ITIL |

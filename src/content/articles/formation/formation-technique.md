@@ -38,7 +38,6 @@ Dans cet article, je partage ma méthodologie "T.E.C.H.N.I.Q.U.E." - un framewor
 
 #### Concepts clés
 
-- **Concept 1** : Ce domaine évolue rapidement avec l'intégration de nouvelles technologies et méthodologies. Selon les études récentes (2025), l'adoption de bonnes pratiques améliore les performances de 28-38% en moyenne.
 
 **Contexte historique :** Évolution depuis les années 2000, avec accélération majeure en 2020-2025. Selon McKinsey Global Institute (2025), l'adoption a augmenté de 250% depuis 2020.
 
@@ -219,8 +218,6 @@ _Retour d'expérience global sur 80+ implémentations :_ Les plateformes qui fon
 
 
 - **Manque de motivation** : 40% des apprenants techniques manquent de motivation selon Gallup (2025)
-
-- **Manque de temps** : 65% des professionnels manquent de temps pour la formation technique selon LinkedIn Learning (2025)
 
 - **Manque de confiance** : 50% des apprenants techniques manquent de confiance selon Deloitte Insights (2025)
 

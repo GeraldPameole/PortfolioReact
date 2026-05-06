@@ -59,7 +59,6 @@ Cette transformation concerne tous les professionnels et offre des opportunités
 
 **Sur mes projets, j'ai constaté que** _les développeurs qui maîtrisent les frameworks modernes (React, Next.js, Vue 3) sont 2 fois plus productifs que ceux utilisant des technologies legacy. Sur 60 projets web accompagnés, j'ai constaté que l'adoption de frameworks modernes réduit le temps de développement de 40% et améliore les performances de 50%._.
 
-**Mon expérience m'a appris que la théorie et la pratique divergent souvent sur** Ce domaine évolue rapidement avec l'intégration de nouvelles technologies et méthodologies. Selon les études récentes (2025), l'adoption de bonnes pratiques améliore les performances de 28-38% en moyenne..
 
 #### Concepts clés
 
@@ -97,7 +96,6 @@ Cette transformation concerne tous les professionnels et offre des opportunités
 
 #### Éléments constitutifs
 
-1. **Composant 1** : Ce domaine évolue rapidement avec l'intégration de nouvelles technologies et méthodologies. Selon les études récentes (2025), l'adoption de bonnes pratiques améliore les performances de 28-38% en moyenne.
 
 2. **Composant 2** : _**Modèles d'IA générative** : GPT-4, Claude, DALL-E. Selon MIT Sloan (2025), 55% des entreprises utilisent l'IA générative, transformant la productivité de 40%._
 

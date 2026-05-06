@@ -172,8 +172,6 @@ La gestion des jeunes talents a évolué significativement au cours des dernièr
 
 3. **Manque de développement** : Les programmes sans développement précoce échouent dans 65% des cas selon Deloitte Insights (2025).
 
-4. **Innovation non valorisée** : Les organisations qui ne valorisent pas l'innovation ont une efficacité de 60% inférieure selon Harvard Business Review (2025).
-
 5. **Manque de flexibilité** : Les organisations sans flexibilité échouent dans 65% des cas selon SHRM (2025).
 
 

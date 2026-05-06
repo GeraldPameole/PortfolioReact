@@ -93,8 +93,6 @@ La lutte contre la xénophobie a évolué significativement au cours des derniè
 
 - **Satisfaction** : Les employés qui bénéficient d'un environnement inclusif ont une satisfaction de 65% supérieure selon Culture Amp (2025).
 
-- **Performance** : Les équipes inclusives améliorent la performance de 50% selon McKinsey Global Institute (2025).
-
 - **ROI** : Le retour sur investissement moyen de la lutte contre la xénophobie est de 300% selon Deloitte Insights (2025).
 
 

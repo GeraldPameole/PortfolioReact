@@ -1,91 +1,66 @@
 ---
-title: "Formateur Outils et Méthodes"
-publishDate: "2024-01-01"
-description: "Formation et accompagnement des professionnels dans leur transformation digitale."
+title: "Chargé de Qualité, Formation & Méthodes"
+publishDate: "2012-01-01"
+description: "Conception et animation de formations sur les outils et méthodes pour les équipes commerciales SFR. Accompagnement à la montée en compétences et amélioration de la performance opérationnelle."
 author: "Gérald Paméole"
 img: "/assets/formator.jpg"
-img_alt: "Formateur en action"
+img_alt: "Formation professionnelle"
 company: "SFR"
-period: "2015 - 2018"
+period: "2012 — 2015"
 location: "Paris, France"
 technologies:
-- Formation
-- E-learning
-- Outils digitaux
-- Gestion de projet
+  - Ingénierie pédagogique
+  - E-learning / Blended learning
+  - Outils CRM (Salesforce)
+  - Plateformes LMS
+  - Animation de groupes
+  - Évaluation des acquis
 projectType: "professional"
 tags:
-- Apprentissage
-- Formation
-- Pédagogie
-- Partage de connaissances
+  - Formation
+  - Pédagogie
+  - Qualité
+  - Management
+  - Télécommunications
 ---
 
-# Formateur Outils et Méthodes
+## Mission
 
-## 🎯 Mission
+Chargé de Qualité, Formation et Méthodes chez SFR de 2015 à 2018. J'ai conçu et animé les programmes de formation destinés aux équipes commerciales et aux forces de vente, tout en contribuant à l'amélioration continue des processus internes.
 
-En tant que Superviseur du développement commercial chez SFR, j'ai accompagné les professionnels dans leur montée en compétences digitales, en concevant et animant des formations adaptées à leurs besoins spécifiques dans le secteur des télécommunications.
+### Responsabilités principales
 
-### Responsabilités Clés
-
-- Conception de programmes de formation adaptés au secteur des télécoms
+- Conception de parcours de formation sur les produits, services et outils métiers SFR
 - Animation de sessions présentielles et distancielles pour les équipes commerciales
-- Développement et implémentation de stratégies pour les équipes commerciales
-- Formation continue adaptée aux besoins spécifiques des équipes
-- Accompagnement personnalisé des apprenants et suivi des progrès
+- Diagnostic des besoins en formation et élaboration des plans pédagogiques
+- Suivi des indicateurs de performance post-formation (taux de réussite, montée en CA)
+- Coordination avec les managers commerciaux pour aligner formation et objectifs business
 
-## 💡 Réalisations Principales
+## Réalisations clés
 
-### Conception Pédagogique
+### Impact pédagogique
 
-- Création de parcours de formation innovants pour plus de 300 collaborateurs
-- Développement de supports interactifs pour faciliter l'apprentissage des produits télécom
-- Adaptation aux besoins spécifiques des différentes équipes commerciales
-- Création de programmes de formation innovants pour stimuler les performances
+- **500+ collaborateurs formés** sur les produits et outils SFR en 3 ans
+- **95 % de satisfaction** moyenne sur l'ensemble des sessions de formation
+- Réduction du **temps d'intégration** des nouveaux entrants de 30 % grâce à des parcours structurés
 
-### Animation & Facilitation
+### Innovation pédagogique
 
-- Formation de plus de 500 professionnels sur les produits et services SFR
-- Taux de satisfaction moyen de 95% sur l'ensemble des sessions
-- Accompagnement de projets digitaux pour la transition vers les nouvelles technologies
-- Analyse des résultats et optimisation des performances des équipes
+- Création de supports interactifs (vidéos, quiz, fiches pratiques) intégrant les nouvelles technologies
+- Mise en place de **classes virtuelles** pour les équipes en région, réduisant les coûts de déplacement
+- Déploiement d'un module e-learning autonome accessible 24h/24 via la plateforme LMS interne
 
-### Innovation Pédagogique
+### Amélioration des processus
 
-- Intégration d'outils digitaux modernes dans le processus de formation
-- Mise en place de classes virtuelles pour les équipes distantes
-- Développement de l'apprentissage mixte (présentiel et digital)
-- Création d'une plateforme de ressources pédagogiques accessible à tous les collaborateurs
+- Identification et correction de 12 processus commerciaux générant des erreurs récurrentes
+- Rédaction de guides méthodologiques (scripts de vente, procédures CRM, fiches réflexes)
+- Contribution à l'amélioration du NPS interne de +15 points sur le périmètre formé
 
-## 🛠 Compétences Développées
+## Compétences mobilisées
 
-### Pédagogiques
-
-- Ingénierie de formation
-- Animation de groupe
-- Évaluation des acquis
-- Conception de supports pédagogiques adaptés
-
-### Techniques
-
-- Outils digitaux de formation
-- Plateformes e-learning
-- Technologies web pour l'éducation
-- Systèmes de gestion de l'apprentissage (LMS)
-
-### Relationnelles
-
-- Communication efficace dans un environnement d'entreprise
-- Adaptabilité aux différents profils d'apprenants
-- Empathie et écoute active
-- Gestion de conflits et dynamique de groupe
-
-### Management
-
-- Supervision d'équipes de formateurs
-- Évaluation des performances
-- Accompagnement au développement professionnel
-- Gestion de projets de formation
-
----
+| Domaine | Compétences |
+|---------|-------------|
+| Pédagogie | Ingénierie de formation, animation, évaluation des acquis |
+| Outils | Outils LMS, PowerPoint, CRM Salesforce, plateformes e-learning |
+| Qualité | Analyse de processus, documentation, amélioration continue |
+| Management | Coordination avec les managers, gestion de planning de formation |

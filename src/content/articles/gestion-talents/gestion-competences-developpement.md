@@ -282,8 +282,6 @@ Dans ma pratique, j'observe que les entreprises évaluant et optimisant ont une 
 3. **Organiser des événements** : Organiser des événements d'apprentissage.
 4. **Valoriser** : Valoriser les contributions et partages.
 
-Sur mes projets, j'ai constaté que les entreprises créant des communautés ont une productivité de 45% supérieure.
-
 ---
 
 

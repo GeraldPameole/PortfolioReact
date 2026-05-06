@@ -155,11 +155,6 @@ Le leadership moderne n'est plus une compétence optionnelle mais une nécessit�
 | Rétention  | 60%                          | 50%                       | 70%                  |
 
 
-#### Facteurs de succès identifiés
-
-1. **Facteur 1** : Ce domaine évolue rapidement avec l'intégration de nouvelles technologies et méthodologies. Selon les études récentes (2025), l'adoption de bonnes pratiques améliore les performances de 28-38% en moyenne.
-
-
 ### 3.1 Ma Méthodologie Éprouvée : Le Framework L.E.A.D.E.R.S
 
 Après 8 années d'accompagnement de leaders, j'ai développé une approche structurée qui a permis d'augmenter les taux de succès de 30% à 85% dans mes programmes :

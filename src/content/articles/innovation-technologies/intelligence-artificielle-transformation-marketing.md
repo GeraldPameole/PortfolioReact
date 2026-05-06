@@ -63,9 +63,6 @@ Cette transformation ne se limite pas aux grandes entreprises : les outils d'IA 
 
 **Définition principale :** _L'intelligence artificielle transforme radicalement le marketing en 2025, permettant la personnalisation à grande échelle, l'automatisation intelligente et l'optimisation en temps réel. Selon HubSpot (2025), 68% des marketeurs utilisent l'IA pour améliorer leurs campagnes, générant une augmentation de 40% de l'engagement client._. Selon _McKinsey Global Institute_ (2025), _l'adoption de l'IA a augmenté de 250% en 2025_.
 
-**Sur mes projets, j'ai constaté que** Ce domaine évolue rapidement avec l'intégration de nouvelles technologies et méthodologies. Selon les études récentes (2025), l'adoption de bonnes pratiques améliore les performances de 28-38% en moyenne..
-
-**Mon expérience m'a appris que la théorie et la pratique divergent souvent sur** Ce domaine évolue rapidement avec l'intégration de nouvelles technologies et méthodologies. Selon les études récentes (2025), l'adoption de bonnes pratiques améliore les performances de 28-38% en moyenne..
 
 #### Concepts clés
 

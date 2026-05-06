@@ -44,21 +44,15 @@ La gestion des connaissances d'excellence n'est plus un outil de documentation m
 
 ### 1.1 Définition et Concepts Clés
 
-**Définition principale :** Ce domaine évolue rapidement avec l'intégration de nouvelles technologies et méthodologies. Selon les études récentes (2025), l'adoption de bonnes pratiques améliore les performances de 28-38% en moyenne.. Selon _McKinsey Global Institute_ (2025), Ce domaine évolue rapidement avec l'intégration de nouvelles technologies et méthodologies. Selon les études récentes (2025), l'adoption de bonnes pratiques améliore les performances de 28-38% en moyenne..
 
 **Sur mes projets, j'ai constaté que** Sur mes projets d'accompagnement, j'ai observé que les organisations qui mettent en place des systèmes de capitalisation des connaissances réduisent le temps de résolution des problèmes de 45% et augmentent la réutilisation des solutions de 55%. L'implémentation de wikis internes et de bases de connaissances structurées améliore également la productivité de 30%..
 
-**Mon expérience m'a appris que la théorie et la pratique divergent souvent sur** Ce domaine évolue rapidement avec l'intégration de nouvelles technologies et méthodologies. Selon les études récentes (2025), l'adoption de bonnes pratiques améliore les performances de 28-38% en moyenne..
 
 #### Concepts clés
 
 - **Concept 1** : La gestion des connaissances organisationnelles consiste à capturer, partager et valoriser l'expertise collective. Selon APQC (American Productivity & Quality Center, 2025), les organisations matures en knowledge management améliorent leur innovation de 60% et réduisent leurs coûts de formation de 40%.
 
 **Contexte historique :** Évolution depuis les années 2000, avec accélération majeure en 2020-2025. Selon McKinsey Global Institute (2025), l'adoption a augmenté de 250% depuis 2020.
-
-#### Exemples concrets
-
-1. **Exemple 1** : Ce domaine évolue rapidement avec l'intégration de nouvelles technologies et méthodologies. Selon les études récentes (2025), l'adoption de bonnes pratiques améliore les performances de 28-38% en moyenne.
 
 
 #### Bénéfices mesurables
@@ -78,9 +72,6 @@ La gestion des connaissances d'excellence n'est plus un outil de documentation m
 
 | Catégorie | Description | Critères | Exemples |
 |-----------|-------------|----------|----------|
-| Type 1 | Ce domaine évolue rapidement avec l'intégration de nouvelles technologies et méthodologies. Selon les études récentes (2025), l'adoption de bonnes pratiques améliore les performances de 28-38% en moyenne. | Ce domaine évolue rapidement avec l'intégration de nouvelles technologies et méthodologies. Selon les études récentes (2025), l'adoption de bonnes pratiques améliore les performances de 28-38% en moyenne. | Ce domaine évolue rapidement avec l'intégration de nouvelles technologies et méthodologies. Selon les études récentes (2025), l'adoption de bonnes pratiques améliore les performances de 28-38% en moyenne. |
-| Type 2 | Ce domaine évolue rapidement avec l'intégration de nouvelles technologies et méthodologies. Selon les études récentes (2025), l'adoption de bonnes pratiques améliore les performances de 28-38% en moyenne. | Ce domaine évolue rapidement avec l'intégration de nouvelles technologies et méthodologies. Selon les études récentes (2025), l'adoption de bonnes pratiques améliore les performances de 28-38% en moyenne. | Ce domaine évolue rapidement avec l'intégration de nouvelles technologies et méthodologies. Selon les études récentes (2025), l'adoption de bonnes pratiques améliore les performances de 28-38% en moyenne. |
-| Type 3 | Ce domaine évolue rapidement avec l'intégration de nouvelles technologies et méthodologies. Selon les études récentes (2025), l'adoption de bonnes pratiques améliore les performances de 28-38% en moyenne. | Ce domaine évolue rapidement avec l'intégration de nouvelles technologies et méthodologies. Selon les études récentes (2025), l'adoption de bonnes pratiques améliore les performances de 28-38% en moyenne. | Ce domaine évolue rapidement avec l'intégration de nouvelles technologies et méthodologies. Selon les études récentes (2025), l'adoption de bonnes pratiques améliore les performances de 28-38% en moyenne. |
 
 
 #### Comparaisons objectives

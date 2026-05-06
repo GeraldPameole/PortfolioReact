@@ -93,8 +93,6 @@ Le whistleblowing a évolué significativement au cours des dernières décennie
 
 - **Confiance** : Les employés qui bénéficient de systèmes de signalement ont une confiance de 65% supérieure selon Ethics & Compliance Initiative (2025).
 
-- **Détection précoce** : Les systèmes de signalement améliorent la détection précoce de 55% selon McKinsey Global Institute (2025).
-
 - **ROI** : Le retour sur investissement moyen du whistleblowing est de 300% selon Deloitte Insights (2025).
 
 

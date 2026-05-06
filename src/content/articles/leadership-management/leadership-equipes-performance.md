@@ -44,21 +44,15 @@ Le leadership d'excellence n'est pas un don inné mais une compétence qui se d�
 
 ### 1.1 Définition et Concepts Clés
 
-**Définition principale :** Ce domaine évolue rapidement avec l'intégration de nouvelles technologies et méthodologies. Selon les études récentes (2025), l'adoption de bonnes pratiques améliore les performances de 28-38% en moyenne.. Selon _McKinsey Global Institute_ (2025), Ce domaine évolue rapidement avec l'intégration de nouvelles technologies et méthodologies. Selon les études récentes (2025), l'adoption de bonnes pratiques améliore les performances de 28-38% en moyenne..
 
 **Sur mes projets, j'ai constaté que** Sur mes projets d'accompagnement en leadership, j'ai observé que les managers qui adoptent une approche basée sur l'écoute active et la délégation efficace voient la productivité de leurs équipes augmenter de 40% en moyenne. L'intégration de feedback régulier et de sessions de coaching individuel améliore également la rétention des talents de 35%..
 
-**Mon expérience m'a appris que la théorie et la pratique divergent souvent sur** Ce domaine évolue rapidement avec l'intégration de nouvelles technologies et méthodologies. Selon les études récentes (2025), l'adoption de bonnes pratiques améliore les performances de 28-38% en moyenne..
 
 #### Concepts clés
 
 - **Concept 1** : Le leadership moderne se caractérise par l'intégration de méthodes basées sur l'intelligence émotionnelle, la communication non-violente et l'adaptabilité. Selon Harvard Business Review (2025), les organisations avec des programmes de formation au leadership structurés observent une amélioration de 35% de l'engagement des équipes et de 28% de la performance organisationnelle.
 
 **Contexte historique :** Évolution depuis les années 2000, avec accélération majeure en 2020-2025. Selon McKinsey Global Institute (2025), l'adoption a augmenté de 250% depuis 2020.
-
-#### Exemples concrets
-
-1. **Exemple 1** : Ce domaine évolue rapidement avec l'intégration de nouvelles technologies et méthodologies. Selon les études récentes (2025), l'adoption de bonnes pratiques améliore les performances de 28-38% en moyenne.
 
 
 #### Bénéfices mesurables
@@ -78,9 +72,6 @@ Le leadership d'excellence n'est pas un don inné mais une compétence qui se d�
 
 | Catégorie | Description | Critères | Exemples |
 |-----------|-------------|----------|----------|
-| Type 1 | Ce domaine évolue rapidement avec l'intégration de nouvelles technologies et méthodologies. Selon les études récentes (2025), l'adoption de bonnes pratiques améliore les performances de 28-38% en moyenne. | Ce domaine évolue rapidement avec l'intégration de nouvelles technologies et méthodologies. Selon les études récentes (2025), l'adoption de bonnes pratiques améliore les performances de 28-38% en moyenne. | Ce domaine évolue rapidement avec l'intégration de nouvelles technologies et méthodologies. Selon les études récentes (2025), l'adoption de bonnes pratiques améliore les performances de 28-38% en moyenne. |
-| Type 2 | Ce domaine évolue rapidement avec l'intégration de nouvelles technologies et méthodologies. Selon les études récentes (2025), l'adoption de bonnes pratiques améliore les performances de 28-38% en moyenne. | Ce domaine évolue rapidement avec l'intégration de nouvelles technologies et méthodologies. Selon les études récentes (2025), l'adoption de bonnes pratiques améliore les performances de 28-38% en moyenne. | Ce domaine évolue rapidement avec l'intégration de nouvelles technologies et méthodologies. Selon les études récentes (2025), l'adoption de bonnes pratiques améliore les performances de 28-38% en moyenne. |
-| Type 3 | Ce domaine évolue rapidement avec l'intégration de nouvelles technologies et méthodologies. Selon les études récentes (2025), l'adoption de bonnes pratiques améliore les performances de 28-38% en moyenne. | Ce domaine évolue rapidement avec l'intégration de nouvelles technologies et méthodologies. Selon les études récentes (2025), l'adoption de bonnes pratiques améliore les performances de 28-38% en moyenne. | Ce domaine évolue rapidement avec l'intégration de nouvelles technologies et méthodologies. Selon les études récentes (2025), l'adoption de bonnes pratiques améliore les performances de 28-38% en moyenne. |
 
 
 #### Comparaisons objectives

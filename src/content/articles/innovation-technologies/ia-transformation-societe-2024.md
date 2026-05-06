@@ -44,7 +44,6 @@ Cette révolution technologique ne se contente pas de transformer les processus 
 
 ### 1.1 Définition et Concepts Clés
 
-**Définition principale :** Ce domaine évolue rapidement avec l'intégration de nouvelles technologies et méthodologies. Selon les études récentes (2025), l'adoption de bonnes pratiques améliore les performances de 28-38% en moyenne.. Selon _McKinsey Global Institute_ (2025), _l'adoption de l'IA a augmenté de 250% en 2025_.
 
 **Sur mes projets, j'ai constaté que** _les organisations qui anticipent et s'adaptent à l'IA obtiennent un avantage concurrentiel durable. Sur 50 projets de transformation IA accompagnés, j'ai observé que les entreprises proactives génèrent 2,5 fois plus de valeur que celles qui réagissent passivement. La clé réside dans une vision stratégique claire et une adoption progressive._.
 
@@ -86,7 +85,6 @@ Cette révolution technologique ne se contente pas de transformer les processus 
 
 #### Éléments constitutifs
 
-1. **Composant 1** : Ce domaine évolue rapidement avec l'intégration de nouvelles technologies et méthodologies. Selon les études récentes (2025), l'adoption de bonnes pratiques améliore les performances de 28-38% en moyenne.
 
 2. **Composant 2** : _**Modèles d'IA générative** : GPT-4, Claude, DALL-E. Selon MIT Sloan (2025), 55% des entreprises utilisent l'IA générative, transformant la productivité de 40%._
 

@@ -918,76 +918,13 @@ declare module 'astro:content' {
   data: any
 } & { render(): Render[".md"] };
 };
-"work": {
-"business-development-manager.md": {
-	id: "business-development-manager.md";
-  slug: "business-development-manager";
-  body: string;
-  collection: "work";
-  data: any
-} & { render(): Render[".md"] };
-"former.md": {
-	id: "former.md";
-  slug: "former";
-  body: string;
-  collection: "work";
-  data: any
-} & { render(): Render[".md"] };
-"nested/web-developer.md": {
-	id: "nested/web-developer.md";
-  slug: "nested/web-developer";
-  body: string;
-  collection: "work";
-  data: any
-} & { render(): Render[".md"] };
-"plateforme-ecommerce-sfr.md": {
-	id: "plateforme-ecommerce-sfr.md";
-  slug: "plateforme-ecommerce-sfr";
-  body: string;
-  collection: "work";
-  data: any
-} & { render(): Render[".md"] };
-"project-manager.md": {
-	id: "project-manager.md";
-  slug: "project-manager";
-  body: string;
-  collection: "work";
-  data: any
-} & { render(): Render[".md"] };
-"quality-process-manager.md": {
-	id: "quality-process-manager.md";
-  slug: "quality-process-manager";
-  body: string;
-  collection: "work";
-  data: any
-} & { render(): Render[".md"] };
-"sales-team-manager.md": {
-	id: "sales-team-manager.md";
-  slug: "sales-team-manager";
-  body: string;
-  collection: "work";
-  data: any
-} & { render(): Render[".md"] };
-"transformation-orange-business.md": {
-	id: "transformation-orange-business.md";
-  slug: "transformation-orange-business";
-  body: string;
-  collection: "work";
-  data: any
-} & { render(): Render[".md"] };
-"web-developer.md": {
-	id: "web-developer.md";
-  slug: "web-developer";
-  body: string;
-  collection: "work";
-  data: any
-} & { render(): Render[".md"] };
-};
 
 	};
 
 	type DataEntryMap = {
-		
+		"work": {
+};
+
 	};
 
 	type AnyEntryMap = ContentEntryMap & DataEntryMap;

@@ -170,8 +170,6 @@ Le bien-être au travail a évolué significativement au cours des dernières d�
 
 1. **Manque d'engagement** : Les programmes sans engagement des dirigeants échouent dans 70% des cas selon McKinsey Global Institute (2025).
 
-2. **Programmes irréguliers** : Les programmes irréguliers ont une efficacité de 50% inférieure selon Gartner (2025).
-
 3. **Approche fragmentée** : Les approches fragmentées échouent dans 65% des cas selon Deloitte Insights (2025).
 
 4. **Culture stressante** : Les cultures stressantes ont une efficacité de 60% inférieure selon Harvard Business Review (2025).
