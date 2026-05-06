@@ -100,8 +100,6 @@ Cette transformation concerne tous les professionnels et offre des opportunités
 - **Secteur tech** : Amélioration continue et innovation. Selon Harvard Business Review (2025), l'amélioration continue améliore l'innovation de 70%. L'agilité est essentielle selon McKinsey (2025).
 
 
-#### Éléments constitutifs
-
 #### Classification détaillée
 
 | Catégorie | Description | Critères | Exemples |
@@ -111,8 +109,6 @@ Cette transformation concerne tous les professionnels et offre des opportunités
 | Type 3 | Agile/Scrum | Itératif, amélioration continue | Sprints, rétrospectives, backlog |
 
 
-#### Différents types/approches
-
 #### Comparaisons objectives
 
 | Critère | Approche 1 | Approche 2 | Approche 3 |
@@ -120,9 +116,6 @@ Cette transformation concerne tous les professionnels et offre des opportunités
 | Efficacité | 75% | 65% | 85% |
 | Coût | Modéré | Modéré | Modéré |
 | Complexité | Modéré | Modéré | Modéré |
-
-
-#### Facteurs de succès identifiés
 
 
 #### Frameworks reconnus

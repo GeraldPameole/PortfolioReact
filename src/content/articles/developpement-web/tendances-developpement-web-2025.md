@@ -297,8 +297,6 @@ L'exploration approfondie de multiples outils d'IA générative révèle une div
 
 #### Défi 4 : Sécurité
 
-**Problème :** 55% des applications rencontrent des problèmes de sécurité avec les nouvelles technologies selon OWASP (2025). La sécurité nécessite une attention constante.
-
 **Solution concrète :** Intégrer la sécurité dès la conception, utiliser des outils de sécurité automatisés, former l'équipe aux pratiques de sécurité, auditer régulièrement la sécurité.
 
 **Résultat observé :** Réduction de 60% des vulnérabilités et amélioration de 50% de la confiance utilisateur.

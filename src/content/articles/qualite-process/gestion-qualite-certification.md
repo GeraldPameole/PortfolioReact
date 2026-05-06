@@ -78,8 +78,6 @@ Cette réalité transforme notre approche de la certification et impose une stra
 - **Secteur tech** : Amélioration continue et innovation. Selon Harvard Business Review (2025), l'amélioration continue améliore l'innovation de 70%. L'agilité est essentielle selon McKinsey (2025).
 
 
-#### Éléments constitutifs
-
 #### Classification détaillée
 
 | Catégorie | Description | Critères | Exemples |
@@ -89,8 +87,6 @@ Cette réalité transforme notre approche de la certification et impose une stra
 | Type 3 | Agile/Scrum | Itératif, amélioration continue | Sprints, rétrospectives, backlog |
 
 
-#### Différents types/approches
-
 #### Comparaisons objectives
 
 | Critère | Approche 1 | Approche 2 | Approche 3 |
@@ -98,9 +94,6 @@ Cette réalité transforme notre approche de la certification et impose une stra
 | Efficacité | 75% | 65% | 85% |
 | Coût | Modéré | Modéré | Modéré |
 | Complexité | Modéré | Modéré | Modéré |
-
-
-#### Facteurs de succès identifiés
 
 
 #### Contenu enrichi selon ARTICLES avec expérience personnelle et sources fiables.

@@ -275,8 +275,6 @@ L'exploration approfondie de multiples outils de test d'accessibilité révèle 
 
 #### Défi 1 : Manque de Sensibilisation
 
-**Problème :** 65% des développeurs ne sont pas sensibilisés à l'accessibilité selon WebAIM (2025). Le manque de sensibilisation réduit l'adoption des pratiques d'accessibilité de 50%.
-
 **Solution concrète :** Organiser des sessions de formation régulières, créer une documentation interne, partager des exemples de code accessible, sensibiliser l'équipe aux enjeux d'accessibilité.
 
 **Résultat observé :** Amélioration de 50% de l'adoption des pratiques d'accessibilité et réduction de 40% du temps d'apprentissage.

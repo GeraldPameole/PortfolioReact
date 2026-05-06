@@ -115,10 +115,6 @@ Cette transformation concerne tous les professionnels et offre des opportunités
 - **SaaS** : 80% des applications SaaS adoptent le Web durable selon Web Sustainability Guidelines (2025). La consommation énergétique diminue de 50%.
 
 
-#### Éléments constitutifs
-
-1. **IA générative et assistants de code** : GitHub Copilot, ChatGPT, Codeium utilisés par 92% des développeurs selon Stack Overflow (2025). L'IA augmente la productivité de 55% et réduit le temps de développement de 40%. Les développeurs utilisant l'IA génèrent 30% plus de code fonctionnel par jour selon GitHub (2025).
-
 #### Classification détaillée
 
 | Catégorie               | Description                                | Critères                               | Exemples                         | Adoption 2025 |
