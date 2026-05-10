@@ -1,7 +1,7 @@
 ---
-title: "Formation Leadership"
+title: "Formation au leadership : développer une posture de manager impactant"
 description: "Approches modernes du leadership et du management d'équipe."
-publishDate: "2025-01-01"
+publishDate: "2026-02-02"
 type: article
 domain: leadership-management
 pillColor: purple

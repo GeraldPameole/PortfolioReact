@@ -1,7 +1,7 @@
 ---
 title: "Marketing Content Strategies"
 description: "Stratégies marketing et communication digitale pour les professionnels."
-publishDate: "2025-01-01"
+publishDate: "2026-03-16"
 type: article
 domain: marketing-communication
 pillColor: yellow

@@ -1,7 +1,7 @@
 ---
-title: "Gestion Projet Risques"
+title: "Gestion des risques projet : anticiper pour ne pas subir"
 description: "Méthodes et outils pour une gestion de projet efficace et performante."
-publishDate: "2025-01-01"
+publishDate: "2025-09-01"
 type: article
 domain: gestion-projet
 pillColor: blue
@@ -11,7 +11,8 @@ theme: gestion
 
 ## Introduction
 
-Après avoir sauvé plus de 50 projets en difficulté et accompagné 300+ projets dans la gestion de leurs risques, j'ai découvert un secret : **les 15% qui maîtrisent la gestion des risques réussissent 85% de leurs projets, les 85% restants subissent les aléas et échouent**. Mais voici ce que personne ne vous dit : la gestion des risques n'est pas une question de chance, c'est une compétence qui se développe.
+Selon le PMI Pulse of the Profession 2024, seulement 47 % des projets atteignent leurs objectifs dans les délais et budgets initiaux. La gestion de projet reste l'une des disciplines les plus sous-estimées de l'entreprise moderne : trop souvent réduite à de la planification, elle est en réalité un exercice permanent d'arbitrage et de décision.
+
 
 #### Ce que révèle mon expérience
 

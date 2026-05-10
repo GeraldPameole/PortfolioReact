@@ -1,7 +1,7 @@
 ---
 title: "Deep Work"
 description: "Méthodes et outils pour améliorer la productivité et l'efficacité professionnelle."
-publishDate: "2025-01-01"
+publishDate: "2026-05-18"
 type: article
 domain: productivite-methodes
 pillColor: indigo

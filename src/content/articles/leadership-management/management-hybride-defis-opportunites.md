@@ -1,7 +1,7 @@
 ---
-title: "Management Hybride Defis Opportunites"
+title: "Management hybride : dépasser les défis et saisir les opportunités"
 description: "Approches modernes du leadership et du management d'équipe."
-publishDate: "2025-01-01"
+publishDate: "2026-03-02"
 type: article
 domain: leadership-management
 pillColor: purple

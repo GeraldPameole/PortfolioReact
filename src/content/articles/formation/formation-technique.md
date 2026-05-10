@@ -1,7 +1,7 @@
 ---
 title: "Formation Technique"
 description: "Formation professionnelle et développement des compétences."
-publishDate: "2025-01-01"
+publishDate: "2025-06-23"
 type: article
 domain: formation
 pillColor: red

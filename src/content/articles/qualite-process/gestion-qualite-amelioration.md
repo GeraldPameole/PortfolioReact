@@ -1,7 +1,7 @@
 ---
-title: "Gestion Qualite Amelioration"
+title: "Amélioration continue : déployer un programme qualité qui dure"
 description: "Démarches qualité et optimisation des processus en entreprise."
-publishDate: "2025-01-01"
+publishDate: "2026-08-03"
 type: article
 domain: qualite-process
 pillColor: purple
@@ -11,7 +11,8 @@ theme: gestion
 
 ## Introduction
 
-Après avoir accompagné plus de 40 entreprises dans leur démarche qualité et analysé les résultats de 200+ projets d'amélioration continue, j'ai constaté que les organisations qui maîtrisent ces méthodologies réduisent leurs coûts de non-qualité de 60% et améliorent leur satisfaction client de 45%.
+La non-qualité représente entre 5 et 20 % du chiffre d'affaires des entreprises industrielles et de services — un coût largement sous-estimé parce qu'il reste invisible dans les tableaux de bord. Structurer une démarche qualité n'est pas une contrainte administrative : c'est un levier direct de performance et de différenciation.
+
 
 En 2025, la gestion de la qualité n'est plus un simple processus de contrôle - elle est devenue un levier stratégique d'excellence opérationnelle. Cette analyse s'appuie sur des données réelles de projets en production et des standards internationaux.
 

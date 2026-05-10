@@ -1,7 +1,7 @@
 ---
 title: "Reconversion Professionnelle Reussie"
 description: "Accompagnement et conseils pour une reconversion professionnelle réussie."
-publishDate: "2025-01-01"
+publishDate: "2026-09-21"
 type: article
 domain: reconversion-carriere
 pillColor: rose

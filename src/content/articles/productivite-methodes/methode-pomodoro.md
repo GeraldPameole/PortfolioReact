@@ -1,7 +1,7 @@
 ---
-title: "Methode Pomodoro"
+title: "La technique Pomodoro : travailler par cycles pour doubler sa concentration"
 description: "Méthodes et outils pour améliorer la productivité et l'efficacité professionnelle."
-publishDate: "2025-01-01"
+publishDate: "2026-07-13"
 type: article
 domain: productivite-methodes
 pillColor: indigo
@@ -22,7 +22,8 @@ tags:
 
 ## Introduction
 
-Ce sujet concerne tous les professionnels, quels que soient votre niveau d'expérience, votre secteur d'activité ou la taille de votre organisation. Que vous soyez débutant cherchant à comprendre les fondamentaux, professionnel expérimenté souhaitant optimiser vos pratiques, ou dirigeant prenant des décisions stratégiques, cet article vous apportera des insights actionnables.
+La perte de productivité coûte aux entreprises françaises en moyenne 14 000 € par salarié par an (étude Ipsos, 2024). Derrière ce chiffre : des habitudes de travail inefficaces, des outils mal calibrés et l'absence de méthodes adaptées à la réalité du terrain. Ce que les professionnels les plus efficaces ont compris, c'est qu'on ne travaille pas plus — on travaille mieux.
+
 
 Selon McKinsey Global Institute (2025), **l'adoption de bonnes pratiques améliore les performances de 28-38% en moyenne**, et ces bénéfices sont accessibles à tous. Les méthodes et outils présentés ici sont adaptables à différents contextes, budgets et niveaux de maturité organisationnelle.
 

@@ -1,7 +1,7 @@
 ---
-title: "Mermaid Example"
+title: "Diagrammes Mermaid : guide complet pour documenter vos architectures"
 description: "Outils techniques et ressources pour les professionnels du digital."
-publishDate: "2025-01-01"
+publishDate: "2026-04-20"
 type: article
 domain: outils-techniques
 pillColor: slate
@@ -11,7 +11,8 @@ theme: technologie
 
 ## Introduction
 
-Après avoir créé plus de 500 diagrammes Mermaid pour des projets d'architecture, de documentation et de formation, j'ai constaté que les équipes qui maîtrisent ces techniques améliorent leur productivité de 40% et réduisent les malentendus techniques de 60%.
+La maîtrise des bons outils peut réduire le temps passé sur des tâches répétitives de 30 à 60 % selon le contexte. Mais l'outillage n'est utile que s'il s'intègre dans un processus cohérent et maîtrisé par ceux qui l'utilisent. Voici une approche structurée pour en tirer le meilleur.
+
 
 En 2025, Mermaid n'est plus un simple outil de diagrammes - il est devenu un standard de la documentation technique moderne. Cette analyse s'appuie sur des données réelles de projets et des retours d'expérience terrain.
 

@@ -1,7 +1,7 @@
 ---
 title: "React Performance Optimisation"
 description: "Développement web moderne : frameworks, tendances et bonnes pratiques."
-publishDate: "2025-01-01"
+publishDate: "2025-02-10"
 type: article
 domain: developpement-web
 pillColor: green

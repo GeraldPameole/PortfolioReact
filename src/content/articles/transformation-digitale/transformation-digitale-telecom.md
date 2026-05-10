@@ -1,7 +1,7 @@
 ---
-title: "Transformation Digitale Telecom"
+title: "Transformation digitale dans les télécoms : enjeux et leviers concrets"
 description: "Accompagner et réussir la transformation digitale de l'entreprise."
-publishDate: "2025-01-01"
+publishDate: "2026-10-12"
 type: article
 domain: transformation-digitale
 pillColor: pink
@@ -21,7 +21,8 @@ tags:
 
 ## Introduction
 
-La formation professionnelle est un investissement accessible à tous, quels que soient votre niveau, votre secteur ou votre budget. Que vous soyez apprenant souhaitant développer vos compétences, formateur débutant, ou responsable formation dans une organisation, cet article vous apportera des stratégies concrètes et efficaces.
+McKinsey estime que 70 % des programmes de transformation digitale échouent — non par manque de budget ou de technologies, mais par déficit de méthode, de vision partagée et d'adoption humaine. Comprendre pourquoi ces initiatives déraillent est la première étape pour en faire une réussite durable.
+
 
 Selon LinkedIn Learning (2025), **l'investissement en formation génère un ROI de 250%**, et ces bénéfices sont accessibles à tous les types d'organisations et d'individus. La formation moderne s'adapte à tous les contextes : formation en ligne, présentielle, ou hybride, pour tous les budgets et tous les niveaux.
 

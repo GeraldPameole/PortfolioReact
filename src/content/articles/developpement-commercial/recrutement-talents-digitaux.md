@@ -1,7 +1,7 @@
 ---
 title: "Recrutement Talents Digitaux"
 description: "Stratégies et techniques pour le développement commercial."
-publishDate: "2025-01-01"
+publishDate: "2025-01-13"
 type: article
 domain: developpement-commercial
 pillColor: orange

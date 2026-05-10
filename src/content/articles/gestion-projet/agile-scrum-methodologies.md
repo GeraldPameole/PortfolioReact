@@ -1,7 +1,7 @@
 ---
-title: "Agile Scrum Methodologies"
+title: "Scrum et méthodes Agile : comment en tirer le meilleur en équipe"
 description: "Méthodes et outils pour une gestion de projet efficace et performante."
-publishDate: "2025-01-01"
+publishDate: "2025-07-21"
 type: article
 domain: gestion-projet
 pillColor: blue
@@ -11,7 +11,8 @@ theme: gestion
 
 ## Introduction
 
-Après avoir piloté plus de 150 projets avec des budgets allant de 50K€ à 5M€ et accompagné 300+ équipes dans leur transformation Agile, j'ai découvert un secret : **les projets qui appliquent correctement Agile et Scrum réussissent 3x plus souvent que les projets traditionnels**. Mais voici ce que personne ne vous dit : 70% des équipes qui se disent "Agile" ne le sont pas vraiment.
+Selon le PMI Pulse of the Profession 2024, seulement 47 % des projets atteignent leurs objectifs dans les délais et budgets initiaux. La gestion de projet reste l'une des disciplines les plus sous-estimées de l'entreprise moderne : trop souvent réduite à de la planification, elle est en réalité un exercice permanent d'arbitrage et de décision.
+
 
 #### Ce que révèle mon expérience
 

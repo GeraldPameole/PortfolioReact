@@ -1,7 +1,7 @@
 ---
-title: "Comment Planifier Mon Travail"
+title: "Planifier son travail : de l'intention à l'organisation concrète"
 description: "Méthodes et outils pour améliorer la productivité et l'efficacité professionnelle."
-publishDate: "2025-01-01"
+publishDate: "2026-05-11"
 type: article
 domain: productivite-methodes
 pillColor: indigo

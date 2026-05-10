@@ -24,7 +24,7 @@ keywords:
   - direction
   - moderne
   - "2025"
-publishDate: "2025-01-20"
+publishDate: "2026-02-09"
 lastUpdated: "2025-11-14"
 relatedArticles: []
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Tendances Developpement Web 2025"
 description: "Développement web moderne : frameworks, tendances et bonnes pratiques."
-publishDate: "2025-01-01"
+publishDate: "2025-02-24"
 type: article
 domain: developpement-web
 pillColor: green

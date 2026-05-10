@@ -1,7 +1,7 @@
 ---
-title: "Qualite Processus Entreprise"
+title: "Processus et qualité : les fondamentaux pour une organisation efficace"
 description: "Démarches qualité et optimisation des processus en entreprise."
-publishDate: "2025-01-01"
+publishDate: "2026-09-14"
 type: article
 domain: qualite-process
 pillColor: purple
@@ -21,7 +21,8 @@ tags:
 
 ## Introduction
 
-Ce sujet concerne tous les professionnels, quels que soient votre niveau d'expérience, votre secteur d'activité ou la taille de votre organisation. Que vous soyez débutant cherchant à comprendre les fondamentaux, professionnel expérimenté souhaitant optimiser vos pratiques, ou dirigeant prenant des décisions stratégiques, cet article vous apportera des insights actionnables.
+La non-qualité représente entre 5 et 20 % du chiffre d'affaires des entreprises industrielles et de services — un coût largement sous-estimé parce qu'il reste invisible dans les tableaux de bord. Structurer une démarche qualité n'est pas une contrainte administrative : c'est un levier direct de performance et de différenciation.
+
 
 Selon McKinsey Global Institute (2025), **l'adoption de bonnes pratiques améliore les performances de 28-38% en moyenne**, et ces bénéfices sont accessibles à tous. Les méthodes et outils présentés ici sont adaptables à différents contextes, budgets et niveaux de maturité organisationnelle.
 

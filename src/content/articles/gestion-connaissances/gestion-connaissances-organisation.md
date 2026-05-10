@@ -1,7 +1,7 @@
 ---
 title: "Gestion Connaissances Organisation"
 description: "Gestion et partage des connaissances pour l'organisation apprenante."
-publishDate: "2025-01-01"
+publishDate: "2025-07-14"
 type: article
 domain: gestion-connaissances
 pillColor: violet

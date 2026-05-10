@@ -1,7 +1,7 @@
 ---
-title: "Transformation Numerique Entreprise"
+title: "Transformation numérique : pourquoi 70 % échouent — et comment réussir"
 description: "Accompagner et réussir la transformation digitale de l'entreprise."
-publishDate: "2025-01-01"
+publishDate: "2026-10-19"
 type: article
 domain: transformation-digitale
 pillColor: pink
@@ -11,7 +11,8 @@ theme: technologie
 
 ## Introduction
 
-Après avoir accompagné plus de 80 entreprises dans leur transformation numérique et analysé les résultats de 300+ projets de digitalisation, j'ai constaté que les organisations qui maîtrisent cette discipline améliorent leur productivité de 45% et génèrent un ROI de 280% sur 24 mois.
+McKinsey estime que 70 % des programmes de transformation digitale échouent — non par manque de budget ou de technologies, mais par déficit de méthode, de vision partagée et d'adoption humaine. Comprendre pourquoi ces initiatives déraillent est la première étape pour en faire une réussite durable.
+
 
 Dans l'écosystème professionnel contemporain, la transformation numérique n'est plus une option mais une nécessité stratégique. Les recherches récentes du MIT et de McKinsey démontrent que les entreprises digitalement matures enregistrent des gains mesurables : **+45% de productivité, +35% de satisfaction client, et un ROI de 280% sur 24 mois**.
 

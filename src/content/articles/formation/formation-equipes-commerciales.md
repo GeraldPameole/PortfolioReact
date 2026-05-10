@@ -1,7 +1,7 @@
 ---
 title: "Formation Equipes Commerciales"
 description: "Formation professionnelle et développement des compétences."
-publishDate: "2025-01-01"
+publishDate: "2025-05-12"
 type: article
 domain: formation
 tags:

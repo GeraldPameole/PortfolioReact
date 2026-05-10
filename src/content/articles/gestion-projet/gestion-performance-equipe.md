@@ -1,7 +1,7 @@
 ---
-title: "Gestion Performance Equipe"
+title: "Performance d'équipe : piloter sans micro-manager"
 description: "Méthodes et outils pour une gestion de projet efficace et performante."
-publishDate: "2025-01-01"
+publishDate: "2025-07-28"
 type: article
 domain: gestion-projet
 pillColor: blue
@@ -11,7 +11,8 @@ theme: gestion
 
 ## Introduction
 
-Après avoir managé plus de 200 équipes dans 15 pays différents et accompagné 500+ managers dans l'amélioration de la performance, j'ai découvert un secret : **les équipes performantes ne sont pas nées performantes, elles le deviennent grâce à un management intentionnel**. Mais voici ce que personne ne vous dit : 80% des managers confondent "performance individuelle" avec "performance d'équipe".
+Selon le PMI Pulse of the Profession 2024, seulement 47 % des projets atteignent leurs objectifs dans les délais et budgets initiaux. La gestion de projet reste l'une des disciplines les plus sous-estimées de l'entreprise moderne : trop souvent réduite à de la planification, elle est en réalité un exercice permanent d'arbitrage et de décision.
+
 
 #### Ce que révèle mon expérience
 

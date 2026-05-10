@@ -1,7 +1,7 @@
 ---
 title: "Mentoring Developpement Professionnel"
 description: "Formation professionnelle et développement des compétences."
-publishDate: "2025-01-01"
+publishDate: "2025-07-07"
 type: article
 domain: formation
 tags:

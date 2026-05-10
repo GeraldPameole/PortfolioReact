@@ -1,7 +1,7 @@
 ---
-title: "Service Client Performance"
+title: "Excellence du service client : mesurer, piloter et progresser"
 description: "Techniques et stratégies pour exceller dans la relation et le service client."
-publishDate: "2025-01-01"
+publishDate: "2026-10-05"
 type: article
 domain: service-client
 pillColor: emerald
@@ -21,7 +21,8 @@ tags:
 
 ## Introduction
 
-Après avoir accompagné plus de 200 entreprises dans l'optimisation de leur service client, j'ai observé un pattern récurrent : **80% des organisations sous-estiment l'impact stratégique de leur service client sur la croissance**.
+Un client insatisfait en parle en moyenne à 11 personnes dans son entourage ; un client satisfait, à 3. L'excellence du service client n'est pas une question de budget — c'est une question de culture, de processus et de posture. Voici ce qui fait concrètement la différence entre un service acceptable et un service mémorable.
+
 
 Les chiffres parlent d'eux-mêmes : selon Salesforce, les entreprises avec un service client performant enregistrent **3,5 fois plus de croissance** que leurs concurrents. Pourtant, la majorité se contentent de réagir aux problèmes plutôt que de les anticiper.
 

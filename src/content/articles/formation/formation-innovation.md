@@ -1,7 +1,7 @@
 ---
 title: "Formation Innovation"
 description: "Formation professionnelle et développement des compétences."
-publishDate: "2025-01-01"
+publishDate: "2025-05-19"
 type: article
 domain: formation
 tags:

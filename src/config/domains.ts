@@ -2,7 +2,7 @@
 export const DOMAINS_CONFIG = {
   "gestion-projet": {
     name: "Gestion de Projet",
-    icon: "fas fa-tasks",
+    icon: "🗂️",
     color: "blue",
     colorClass: "bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-300",
     description: "Pilotage de projets stratégiques, coordination d'équipes, méthodologies Agile et Waterfall.",
@@ -11,7 +11,7 @@ export const DOMAINS_CONFIG = {
   },
   "developpement-web": {
     name: "Développement Web",
-    icon: "fas fa-laptop-code",
+    icon: "💻",
     color: "green",
     colorClass: "bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-300",
     description: "Architecture web, développement full-stack, performance et sécurité applicative.",
@@ -20,7 +20,7 @@ export const DOMAINS_CONFIG = {
   },
   "qualite-process": {
     name: "Qualité & Process",
-    icon: "fas fa-check-circle",
+    icon: "✅",
     color: "purple",
     colorClass: "bg-purple-100 text-purple-800 dark:bg-purple-900/30 dark:text-purple-300",
     description: "Certification ISO 9001, optimisation des processus, audits qualité et KPIs.",
@@ -29,7 +29,7 @@ export const DOMAINS_CONFIG = {
   },
   "formation": {
     name: "Formation & Pédagogie",
-    icon: "fas fa-graduation-cap",
+    icon: "🎓",
     color: "yellow",
     colorClass: "bg-yellow-100 text-yellow-800 dark:bg-yellow-900/30 dark:text-yellow-300",
     description: "Formation professionnelle, développement des compétences, e-learning et mentorat.",
@@ -38,7 +38,7 @@ export const DOMAINS_CONFIG = {
   },
   "developpement-commercial": {
     name: "Développement Commercial",
-    icon: "fas fa-handshake",
+    icon: "🤝",
     color: "orange",
     colorClass: "bg-orange-100 text-orange-800 dark:bg-orange-900/30 dark:text-orange-300",
     description: "Stratégies commerciales B2B, développement de partenariats, vente consultative.",
@@ -47,7 +47,7 @@ export const DOMAINS_CONFIG = {
   },
   "leadership-management": {
     name: "Leadership & Management",
-    icon: "fas fa-users",
+    icon: "👥",
     color: "indigo",
     colorClass: "bg-indigo-100 text-indigo-800 dark:bg-indigo-900/30 dark:text-indigo-300",
     description: "Leadership moderne, management d'équipe, diversité et inclusion, management hybride.",
@@ -56,7 +56,7 @@ export const DOMAINS_CONFIG = {
   },
   "productivite-methodes": {
     name: "Productivité & Méthodes",
-    icon: "fas fa-bolt",
+    icon: "⚡",
     color: "cyan",
     colorClass: "bg-cyan-100 text-cyan-800 dark:bg-cyan-900/30 dark:text-cyan-300",
     description: "Gestion du temps, méthodes de productivité (Pomodoro, GTD, Deep Work), organisation.",
@@ -65,7 +65,7 @@ export const DOMAINS_CONFIG = {
   },
   "marketing-communication": {
     name: "Marketing & Communication",
-    icon: "fas fa-bullhorn",
+    icon: "📣",
     color: "pink",
     colorClass: "bg-pink-100 text-pink-800 dark:bg-pink-900/30 dark:text-pink-300",
     description: "Marketing digital, content marketing, réseaux sociaux B2B, stratégie de communication.",
@@ -74,7 +74,7 @@ export const DOMAINS_CONFIG = {
   },
   "innovation-technologies": {
     name: "Innovation & Technologies",
-    icon: "fas fa-rocket",
+    icon: "🚀",
     color: "violet",
     colorClass: "bg-violet-100 text-violet-800 dark:bg-violet-900/30 dark:text-violet-300",
     description: "Intelligence artificielle, transformation technologique, veille et prospective.",
@@ -83,7 +83,7 @@ export const DOMAINS_CONFIG = {
   },
   "transformation-digitale": {
     name: "Transformation Digitale",
-    icon: "fas fa-digital-tachograph",
+    icon: "🔄",
     color: "teal",
     colorClass: "bg-teal-100 text-teal-800 dark:bg-teal-900/30 dark:text-teal-300",
     description: "Accompagnement des organisations dans leur transformation numérique.",
@@ -92,7 +92,7 @@ export const DOMAINS_CONFIG = {
   },
   "gestion-talents": {
     name: "Gestion des Talents",
-    icon: "fas fa-user-star",
+    icon: "⭐",
     color: "emerald",
     colorClass: "bg-emerald-100 text-emerald-800 dark:bg-emerald-900/30 dark:text-emerald-300",
     description: "Recrutement, fidélisation, développement des talents et gestion des performances.",
@@ -101,7 +101,7 @@ export const DOMAINS_CONFIG = {
   },
   "service-client": {
     name: "Service Client",
-    icon: "fas fa-headset",
+    icon: "🎧",
     color: "sky",
     colorClass: "bg-sky-100 text-sky-800 dark:bg-sky-900/30 dark:text-sky-300",
     description: "Excellence du service client, gestion des réclamations, NPS et satisfaction client.",
@@ -110,7 +110,7 @@ export const DOMAINS_CONFIG = {
   },
   "gestion-connaissances": {
     name: "Gestion des Connaissances",
-    icon: "fas fa-brain",
+    icon: "🧠",
     color: "amber",
     colorClass: "bg-amber-100 text-amber-800 dark:bg-amber-900/30 dark:text-amber-300",
     description: "Knowledge management, capitalisation des savoirs, wikis et bases de connaissances.",
@@ -119,7 +119,7 @@ export const DOMAINS_CONFIG = {
   },
   "outils-techniques": {
     name: "Outils & Techniques",
-    icon: "fas fa-tools",
+    icon: "🛠️",
     color: "slate",
     colorClass: "bg-slate-100 text-slate-800 dark:bg-slate-900/30 dark:text-slate-300",
     description: "Outils de productivité, automatisation, scripting et solutions techniques.",
@@ -128,7 +128,7 @@ export const DOMAINS_CONFIG = {
   },
   "reconversion-carriere": {
     name: "Reconversion & Carrière",
-    icon: "fas fa-route",
+    icon: "🔀",
     color: "rose",
     colorClass: "bg-rose-100 text-rose-800 dark:bg-rose-900/30 dark:text-rose-300",
     description: "Reconversion professionnelle, bilan de compétences, transition de carrière.",

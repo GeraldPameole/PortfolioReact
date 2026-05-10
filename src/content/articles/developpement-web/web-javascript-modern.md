@@ -1,7 +1,7 @@
 ---
 title: "Web Javascript Modern"
 description: "Développement web moderne : frameworks, tendances et bonnes pratiques."
-publishDate: "2025-01-01"
+publishDate: "2025-03-10"
 type: article
 domain: developpement-web
 pillColor: green

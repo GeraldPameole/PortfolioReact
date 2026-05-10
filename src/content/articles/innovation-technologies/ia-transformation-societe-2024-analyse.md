@@ -1,7 +1,7 @@
 ---
 title: "Ia Transformation Societe 2024 Analyse"
 description: "Innovation, intelligence artificielle et nouvelles technologies."
-publishDate: "2025-01-01"
+publishDate: "2026-01-05"
 type: article
 domain: innovation-technologies
 pillColor: cyan

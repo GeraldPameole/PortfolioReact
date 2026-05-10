@@ -1,7 +1,7 @@
 ---
-title: "Gestion Qualite Certification"
+title: "Certification qualité : ce que ça change vraiment pour une organisation"
 description: "Démarches qualité et optimisation des processus en entreprise."
-publishDate: "2025-01-01"
+publishDate: "2026-08-10"
 type: article
 domain: qualite-process
 pillColor: purple
@@ -11,7 +11,8 @@ theme: gestion
 
 ## Introduction
 
-Après avoir accompagné plus de 60 entreprises dans leur processus de certification ISO et audité plus de 200 organisations, j'ai constaté que les entreprises certifiées améliorent leur performance opérationnelle de 35% et réduisent leurs coûts de non-conformité de 50%.
+La non-qualité représente entre 5 et 20 % du chiffre d'affaires des entreprises industrielles et de services — un coût largement sous-estimé parce qu'il reste invisible dans les tableaux de bord. Structurer une démarche qualité n'est pas une contrainte administrative : c'est un levier direct de performance et de différenciation.
+
 
 En 2025, les certifications ISO ne sont plus un simple label - elles sont devenues un levier stratégique de compétitivité et de confiance client. Cette analyse s'appuie sur des données réelles d'audits et des standards internationaux.
 

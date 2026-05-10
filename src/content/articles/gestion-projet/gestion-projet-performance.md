@@ -1,7 +1,7 @@
 ---
-title: "Gestion Projet Performance"
+title: "Performance projet : les leviers pour tenir délais, budget et qualité"
 description: "Méthodes et outils pour une gestion de projet efficace et performante."
-publishDate: "2025-01-01"
+publishDate: "2025-08-25"
 type: article
 domain: gestion-projet
 pillColor: blue
@@ -22,7 +22,8 @@ tags:
 
 ## Introduction
 
-Après avoir piloté plus de 50 projets et accompagné 30+ équipes dans l'optimisation de leurs performances, j'ai découvert un pattern récurrent : **les projets qui atteignent leurs objectifs suivent systématiquement 5 principes fondamentaux**. Mais voici ce que personne ne vous dit : la performance en gestion de projet n'est pas une question d'outils, c'est une question de méthode et de discipline.
+Selon le PMI Pulse of the Profession 2024, seulement 47 % des projets atteignent leurs objectifs dans les délais et budgets initiaux. La gestion de projet reste l'une des disciplines les plus sous-estimées de l'entreprise moderne : trop souvent réduite à de la planification, elle est en réalité un exercice permanent d'arbitrage et de décision.
+
 
 #### Ce que révèle mon expérience
 

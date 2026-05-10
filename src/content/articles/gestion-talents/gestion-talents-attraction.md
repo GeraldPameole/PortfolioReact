@@ -1,7 +1,7 @@
 ---
-title: "Gestion Talents Attraction"
+title: "Attirer les talents : ce qui fait la différence dans un marché tendu"
 description: "Stratégies et bonnes pratiques pour la gestion des talents en entreprise."
-publishDate: "2025-01-01"
+publishDate: "2025-09-29"
 type: article
 domain: gestion-talents
 pillColor: teal
@@ -11,7 +11,8 @@ theme: gestion
 
 ## Introduction
 
-Après avoir accompagné plus de 80 entreprises françaises dans leur stratégie d'attraction des talents et analysé plus de 5000 candidatures, 
+Attirer et fidéliser les bons profils est devenu l'un des défis majeurs des organisations : le coût de remplacement d'un salarié représente en moyenne 50 à 200 % de son salaire annuel. Pourtant, les leviers d'action sont connus — ils sont simplement sous-exploités.
+
 
 En 2025, l'attraction des talents n'est plus un simple processus de recrutement - elle est devenue un enjeu stratégique de compétitivité. j'ai constaté que les organisations qui maîtrisent ces techniques augmentent leur taux de candidatures de 60% et améliorent la qualité des recrutements de 70%.Cette analyse s'appuie sur des données réelles de recrutements et des études de marché des entreprises françaises.
 

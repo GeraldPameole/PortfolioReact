@@ -1,7 +1,7 @@
 ---
 title: "Gestion Talents Developpement"
 description: "Stratégies et bonnes pratiques pour la gestion des talents en entreprise."
-publishDate: "2025-01-01"
+publishDate: "2025-10-06"
 type: article
 domain: gestion-talents
 pillColor: teal

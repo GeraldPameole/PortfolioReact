@@ -1,7 +1,7 @@
 ---
-title: "Gestion Talents Valuation"
+title: "Valoriser ses collaborateurs : reconnaissance, progression et engagement"
 description: "Stratégies et bonnes pratiques pour la gestion des talents en entreprise."
-publishDate: "2025-01-01"
+publishDate: "2025-12-01"
 type: article
 domain: gestion-talents
 pillColor: teal
@@ -11,7 +11,8 @@ theme: gestion
 
 ## Introduction
 
-Après avoir accompagné plus de 150 organisations dans leurs stratégies d'évaluation et analysé plus de 2000 évaluations de talents, j'ai constaté que les organisations qui maîtrisent ces techniques découvrent 40% de talents cachés et améliorent leur productivité de 50%.
+Attirer et fidéliser les bons profils est devenu l'un des défis majeurs des organisations : le coût de remplacement d'un salarié représente en moyenne 50 à 200 % de son salaire annuel. Pourtant, les leviers d'action sont connus — ils sont simplement sous-exploités.
+
 
 En 2025, l'évaluation des talents n'est plus un simple processus RH - elle est devenue un enjeu stratégique de valorisation et de développement. Cette analyse s'appuie sur des données réelles d'évaluations et des études de marché.
 

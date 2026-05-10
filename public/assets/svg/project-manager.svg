@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="800" y2="500" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#050816"/>
+      <stop offset="100%" stop-color="#0d1b3e"/>
+    </linearGradient>
+    <linearGradient id="gv" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#915EFF"/>
+      <stop offset="100%" stop-color="#00cffd"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="500" fill="url(#bg)"/>
+
+  <!-- Grid lines -->
+  <g stroke="#ffffff08" stroke-width="1">
+    <line x1="0" y1="100" x2="800" y2="100"/>
+    <line x1="0" y1="200" x2="800" y2="200"/>
+    <line x1="0" y1="300" x2="800" y2="300"/>
+    <line x1="0" y1="400" x2="800" y2="400"/>
+    <line x1="160" y1="0" x2="160" y2="500"/>
+    <line x1="320" y1="0" x2="320" y2="500"/>
+    <line x1="480" y1="0" x2="480" y2="500"/>
+    <line x1="640" y1="0" x2="640" y2="500"/>
+  </g>
+
+  <!-- Gantt chart base -->
+  <rect x="80" y="100" width="640" height="300" rx="12" fill="#0a0f2e" stroke="#915EFF22" stroke-width="1"/>
+
+  <!-- Column headers -->
+  <rect x="80" y="100" width="640" height="36" rx="12" fill="#915EFF18"/>
+  <rect x="80" y="124" width="640" height="12" fill="#915EFF18"/>
+  <text x="108" y="124" font-family="monospace" font-size="11" fill="#915EFF" font-weight="700">TÂCHE</text>
+  <text x="300" y="124" font-family="monospace" font-size="11" fill="#00cffd" font-weight="700">MAI</text>
+  <text x="430" y="124" font-family="monospace" font-size="11" fill="#00cffd" font-weight="700">JUIN</text>
+  <text x="570" y="124" font-family="monospace" font-size="11" fill="#00cffd" font-weight="700">JUIL</text>
+
+  <!-- Separator -->
+  <line x1="245" y1="136" x2="245" y2="400" stroke="#ffffff10" stroke-width="1"/>
+
+  <!-- Row 1 -->
+  <text x="92" y="168" font-family="monospace" font-size="10" fill="#c8c8d0">Cadrage projet</text>
+  <rect x="255" y="154" width="120" height="20" rx="4" fill="#915EFF" opacity="0.85" filter="url(#glow)"/>
+  <text x="260" y="168" font-family="monospace" font-size="9" fill="#fff" font-weight="600">✓ Terminé</text>
+
+  <!-- Row 2 -->
+  <text x="92" y="208" font-family="monospace" font-size="10" fill="#c8c8d0">Infrastructure réseau</text>
+  <rect x="355" y="194" width="160" height="20" rx="4" fill="#00cffd" opacity="0.75" filter="url(#glow)"/>
+  <text x="360" y="208" font-family="monospace" font-size="9" fill="#050816" font-weight="700">En cours — 68%</text>
+
+  <!-- Row 3 -->
+  <text x="92" y="248" font-family="monospace" font-size="10" fill="#c8c8d0">Tests & validation</text>
+  <rect x="515" y="234" width="100" height="20" rx="4" fill="#ffffff18" stroke="#915EFF40" stroke-width="1"/>
+  <text x="520" y="248" font-family="monospace" font-size="9" fill="#c8c8d0">Planifié</text>
+
+  <!-- Row 4 -->
+  <text x="92" y="288" font-family="monospace" font-size="10" fill="#c8c8d0">Déploiement DSL/FTTB</text>
+  <rect x="555" y="274" width="120" height="20" rx="4" fill="#ffffff12" stroke="#00cffd30" stroke-width="1"/>
+  <text x="560" y="288" font-family="monospace" font-size="9" fill="#94a3b8">À venir</text>
+
+  <!-- Row 5 -->
+  <text x="92" y="328" font-family="monospace" font-size="10" fill="#c8c8d0">Bilan & reporting</text>
+  <rect x="610" y="314" width="80" height="20" rx="4" fill="#ffffff08" stroke="#ffffff15" stroke-width="1"/>
+  <text x="615" y="328" font-family="monospace" font-size="9" fill="#64748b">Q3 2025</text>
+
+  <!-- Progress today line -->
+  <line x1="455" y1="136" x2="455" y2="400" stroke="#ff6b6b" stroke-width="1.5" stroke-dasharray="4,3" opacity="0.7"/>
+  <text x="448" y="148" font-family="monospace" font-size="9" fill="#ff6b6b">Aujourd'hui</text>
+
+  <!-- KPI cards -->
+  <rect x="80" y="420" width="180" height="56" rx="8" fill="#915EFF15" stroke="#915EFF35" stroke-width="1"/>
+  <text x="100" y="444" font-family="monospace" font-size="10" fill="#94a3b8">EFFICACITÉ</text>
+  <text x="100" y="464" font-family="monospace" font-size="20" fill="#915EFF" font-weight="800">+30%</text>
+
+  <rect x="280" y="420" width="180" height="56" rx="8" fill="#00cffd15" stroke="#00cffd35" stroke-width="1"/>
+  <text x="300" y="444" font-family="monospace" font-size="10" fill="#94a3b8">SATISFACTION</text>
+  <text x="300" y="464" font-family="monospace" font-size="20" fill="#00cffd" font-weight="800">95%</text>
+
+  <rect x="480" y="420" width="240" height="56" rx="8" fill="#ffffff08" stroke="#ffffff15" stroke-width="1"/>
+  <text x="500" y="444" font-family="monospace" font-size="10" fill="#94a3b8">ÉQUIPE</text>
+  <text x="500" y="464" font-family="monospace" font-size="20" fill="#e2e8f0" font-weight="800">12 experts</text>
+
+  <!-- Title -->
+  <text x="400" y="72" font-family="monospace" font-size="13" fill="#c8c8d0" text-anchor="middle" font-weight="600" letter-spacing="2">CHEF DE PROJET — MAINTENANCE RÉSEAUX</text>
+  <text x="400" y="90" font-family="monospace" font-size="10" fill="#60a5fa" text-anchor="middle" letter-spacing="1">KEOS TELECOM · 2021 – PRÉSENT</text>
+</svg>

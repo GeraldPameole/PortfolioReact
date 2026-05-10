@@ -1,7 +1,7 @@
 ---
 title: "Gestion Talents Zen"
 description: "Stratégies et bonnes pratiques pour la gestion des talents en entreprise."
-publishDate: "2025-01-01"
+publishDate: "2025-12-29"
 type: article
 domain: gestion-talents
 pillColor: teal

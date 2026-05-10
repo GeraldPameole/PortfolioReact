@@ -1,7 +1,7 @@
 ---
 title: "Gestion Projet Agile Meilleures Pratiques"
 description: "Méthodes et outils pour une gestion de projet efficace et performante."
-publishDate: "2025-01-01"
+publishDate: "2025-08-11"
 type: article
 domain: gestion-projet
 pillColor: blue

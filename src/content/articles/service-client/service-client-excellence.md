@@ -1,7 +1,7 @@
 ---
 title: "Service Client Excellence"
 description: "Techniques et stratégies pour exceller dans la relation et le service client."
-publishDate: "2025-01-01"
+publishDate: "2026-09-28"
 type: article
 domain: service-client
 pillColor: emerald

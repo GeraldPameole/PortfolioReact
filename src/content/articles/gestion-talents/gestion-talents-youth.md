@@ -1,7 +1,7 @@
 ---
 title: "Gestion Talents Youth"
 description: "Stratégies et bonnes pratiques pour la gestion des talents en entreprise."
-publishDate: "2025-01-01"
+publishDate: "2025-12-22"
 type: article
 domain: gestion-talents
 pillColor: teal

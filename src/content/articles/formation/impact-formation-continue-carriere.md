@@ -1,7 +1,7 @@
 ---
 title: "Impact Formation Continue Carriere"
 description: "Formation professionnelle et développement des compétences."
-publishDate: "2025-01-01"
+publishDate: "2025-06-30"
 type: article
 domain: formation
 tags:

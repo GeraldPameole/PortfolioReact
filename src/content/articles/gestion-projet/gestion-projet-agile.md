@@ -1,7 +1,7 @@
 ---
-title: "Gestion Projet Agile"
+title: "Gestion de projet Agile : principes, pièges et bonnes pratiques"
 description: "Méthodes et outils pour une gestion de projet efficace et performante."
-publishDate: "2025-01-01"
+publishDate: "2025-08-18"
 type: article
 domain: gestion-projet
 pillColor: blue
@@ -11,7 +11,8 @@ theme: gestion
 
 ## Introduction
 
-Après avoir piloté plus de 200 projets agiles dans des entreprises de 50 à 10 000 salariés, j'ai observé que 73% des transformations agiles échouent dans les 18 premiers mois. Cette statistique révèle un défi majeur : **comment transformer l'agilité d'une méthodologie en une véritable culture d'excellence opérationnelle ?**
+Selon le PMI Pulse of the Profession 2024, seulement 47 % des projets atteignent leurs objectifs dans les délais et budgets initiaux. La gestion de projet reste l'une des disciplines les plus sous-estimées de l'entreprise moderne : trop souvent réduite à de la planification, elle est en réalité un exercice permanent d'arbitrage et de décision.
+
 
 Dans l'écosystème professionnel contemporain, l'agilité représente désormais 71% des méthodologies de gestion de projet utilisées par les entreprises françaises, soit un marché de 3,2 milliards d'euros en 2025. Les recherches récentes du Project Management Institute (PMI) démontrent que les organisations qui maîtrisent l'art de l'agilité efficace enregistrent des gains mesurables : **+68% de taux de succès projet, +37% de rapidité de livraison, et un ROI de 280% sur 24 mois**.
 

@@ -1,7 +1,7 @@
 ---
 title: "Gestion Talents Formation"
 description: "Stratégies et bonnes pratiques pour la gestion des talents en entreprise."
-publishDate: "2025-01-01"
+publishDate: "2025-10-20"
 type: article
 domain: gestion-talents
 pillColor: teal

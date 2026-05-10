@@ -1,7 +1,7 @@
 ---
 title: "Strategies Reseaux Sociaux B2b"
 description: "Stratégies marketing et communication digitale pour les professionnels."
-publishDate: "2025-01-01"
+publishDate: "2026-04-06"
 type: article
 domain: marketing-communication
 pillColor: yellow

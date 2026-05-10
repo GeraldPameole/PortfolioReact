@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" fill="none">
+  <defs>
+    <linearGradient id="bg4" x1="0" y1="0" x2="800" y2="500" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#050816"/>
+      <stop offset="100%" stop-color="#1a0d05"/>
+    </linearGradient>
+    <filter id="glow4">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="800" height="500" fill="url(#bg4)"/>
+
+  <!-- Grid -->
+  <g stroke="#ffffff06" stroke-width="1">
+    <line x1="0" y1="125" x2="800" y2="125"/>
+    <line x1="0" y1="250" x2="800" y2="250"/>
+    <line x1="0" y1="375" x2="800" y2="375"/>
+    <line x1="200" y1="0" x2="200" y2="500"/>
+    <line x1="400" y1="0" x2="400" y2="500"/>
+    <line x1="600" y1="0" x2="600" y2="500"/>
+  </g>
+
+  <!-- Sales funnel -->
+  <rect x="60" y="88" width="340" height="324" rx="10" fill="#0d0f17" stroke="#fb923c25" stroke-width="1"/>
+  <text x="230" y="114" font-family="monospace" font-size="10" fill="#94a3b8" text-anchor="middle" letter-spacing="1">PIPELINE COMMERCIAL</text>
+
+  <!-- Funnel levels -->
+  <!-- L1: Prospects -->
+  <rect x="80" y="128" width="300" height="44" rx="6" fill="#fb923c" opacity="0.85" filter="url(#glow4)"/>
+  <text x="230" y="148" font-family="sans-serif" font-size="12" fill="#fff" text-anchor="middle" font-weight="700">Prospects qualifiés</text>
+  <text x="230" y="163" font-family="monospace" font-size="10" fill="#fff" text-anchor="middle" opacity="0.8">240 contacts</text>
+
+  <!-- L2: Qualified -->
+  <rect x="100" y="182" width="260" height="44" rx="6" fill="#fb923c" opacity="0.72" filter="url(#glow4)"/>
+  <text x="230" y="202" font-family="sans-serif" font-size="12" fill="#fff" text-anchor="middle" font-weight="700">RDV confirmés</text>
+  <text x="230" y="217" font-family="monospace" font-size="10" fill="#fff" text-anchor="middle" opacity="0.8">98 rendez-vous</text>
+
+  <!-- L3: Proposal -->
+  <rect x="120" y="236" width="220" height="44" rx="6" fill="#fb923c" opacity="0.6" filter="url(#glow4)"/>
+  <text x="230" y="256" font-family="sans-serif" font-size="12" fill="#fff" text-anchor="middle" font-weight="700">Propositions envoyées</text>
+  <text x="230" y="271" font-family="monospace" font-size="10" fill="#fff" text-anchor="middle" opacity="0.8">54 devis</text>
+
+  <!-- L4: Negotiation -->
+  <rect x="140" y="290" width="180" height="44" rx="6" fill="#fb923c" opacity="0.5"/>
+  <text x="230" y="310" font-family="sans-serif" font-size="12" fill="#fff" text-anchor="middle" font-weight="700">Négociation</text>
+  <text x="230" y="325" font-family="monospace" font-size="10" fill="#fff" text-anchor="middle" opacity="0.8">31 en cours</text>
+
+  <!-- L5: Closed -->
+  <rect x="160" y="344" width="140" height="48" rx="6" fill="#fb923c" opacity="0.9" filter="url(#glow4)"/>
+  <text x="230" y="366" font-family="sans-serif" font-size="13" fill="#fff" text-anchor="middle" font-weight="800">✓ Signés</text>
+  <text x="230" y="383" font-family="monospace" font-size="10" fill="#fff" text-anchor="middle">24 contrats</text>
+
+  <!-- Right panel: KPIs -->
+  <rect x="430" y="88" width="330" height="148" rx="10" fill="#0d0f17" stroke="#fb923c25" stroke-width="1"/>
+  <text x="595" y="114" font-family="monospace" font-size="10" fill="#94a3b8" text-anchor="middle" letter-spacing="1">PERFORMANCE ÉQUIPE (12 commerciaux)</text>
+
+  <!-- CA growth -->
+  <text x="450" y="145" font-family="monospace" font-size="10" fill="#94a3b8">Croissance CA</text>
+  <rect x="580" y="134" width="160" height="10" rx="5" fill="#ffffff08"/>
+  <rect x="580" y="134" width="160" height="10" rx="5" fill="#fb923c" filter="url(#glow4)" opacity="0.9"/>
+  <text x="750" y="145" font-family="monospace" font-size="11" fill="#fb923c" text-anchor="end">+40%</text>
+
+  <!-- Retention -->
+  <text x="450" y="175" font-family="monospace" font-size="10" fill="#94a3b8">Rétention clients</text>
+  <rect x="580" y="164" width="160" height="10" rx="5" fill="#ffffff08"/>
+  <rect x="580" y="164" width="137" height="10" rx="5" fill="#fb923c" opacity="0.8"/>
+  <text x="750" y="175" font-family="monospace" font-size="11" fill="#fb923c" text-anchor="end">86%</text>
+
+  <!-- Turnover -->
+  <text x="450" y="205" font-family="monospace" font-size="10" fill="#94a3b8">Réduction turnover</text>
+  <rect x="580" y="194" width="160" height="10" rx="5" fill="#ffffff08"/>
+  <rect x="580" y="194" width="112" height="10" rx="5" fill="#fb923c" opacity="0.65"/>
+  <text x="750" y="205" font-family="monospace" font-size="11" fill="#fb923c" text-anchor="end">-35%</text>
+
+  <!-- Coaching agenda -->
+  <rect x="430" y="254" width="330" height="158" rx="10" fill="#0d0f17" stroke="#fb923c25" stroke-width="1"/>
+  <text x="595" y="278" font-family="monospace" font-size="10" fill="#94a3b8" text-anchor="middle" letter-spacing="1">AGENDA COACHING</text>
+
+  <rect x="450" y="292" width="100" height="32" rx="6" fill="#fb923c18" stroke="#fb923c40" stroke-width="1"/>
+  <text x="500" y="308" font-family="monospace" font-size="9" fill="#fb923c" text-anchor="middle">Lun — Brief</text>
+  <text x="500" y="320" font-family="monospace" font-size="9" fill="#94a3b8" text-anchor="middle">équipe 08h30</text>
+
+  <rect x="562" y="292" width="100" height="32" rx="6" fill="#fb923c18" stroke="#fb923c40" stroke-width="1"/>
+  <text x="612" y="308" font-family="monospace" font-size="9" fill="#fb923c" text-anchor="middle">Mer — 1:1</text>
+  <text x="612" y="320" font-family="monospace" font-size="9" fill="#94a3b8" text-anchor="middle">coaching indiv.</text>
+
+  <rect x="674" y="292" width="68" height="32" rx="6" fill="#fb923c18" stroke="#fb923c40" stroke-width="1"/>
+  <text x="708" y="308" font-family="monospace" font-size="9" fill="#fb923c" text-anchor="middle">Ven — Rev</text>
+  <text x="708" y="320" font-family="monospace" font-size="9" fill="#94a3b8" text-anchor="middle">KPIs</text>
+
+  <rect x="450" y="336" width="292" height="60" rx="6" fill="#fb923c08" stroke="#fb923c18" stroke-width="1"/>
+  <text x="596" y="360" font-family="monospace" font-size="10" fill="#94a3b8" text-anchor="middle">CRM Salesforce — Pipeline actif</text>
+  <text x="596" y="380" font-family="monospace" font-size="20" fill="#fb923c" text-anchor="middle" font-weight="800" filter="url(#glow4)">240 K€</text>
+
+  <!-- Title -->
+  <text x="400" y="46" font-family="monospace" font-size="13" fill="#c8c8d0" text-anchor="middle" font-weight="600" letter-spacing="2">MANAGER DÉVELOPPEMENT COMMERCIAL</text>
+  <text x="400" y="64" font-family="monospace" font-size="10" fill="#fb923c" text-anchor="middle" letter-spacing="1">SFR · 2015 – 2018</text>
+</svg>

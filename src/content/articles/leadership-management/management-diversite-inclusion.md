@@ -1,7 +1,7 @@
 ---
-title: "Management Diversite Inclusion"
+title: "Diversité et inclusion : du discours aux pratiques managériales concrètes"
 description: "Approches modernes du leadership et du management d'équipe."
-publishDate: "2025-01-01"
+publishDate: "2026-02-23"
 type: article
 domain: leadership-management
 pillColor: purple
@@ -11,7 +11,8 @@ theme: gestion
 
 ## Introduction
 
-Après avoir managé des équipes multiculturelles dans 8 pays différents et accompagné plus de 200 managers dans leur transformation inclusive, j'ai observé un pattern récurrent : **les organisations qui maîtrisent la diversité et l'inclusion surpassent leurs concurrents de 35% en performance et de 50% en innovation**.
+Selon Gallup (2025), 70 % des salariés quittent leur manager, pas leur entreprise. Le leadership reste le facteur le plus déterminant de performance collective, et pourtant c'est aussi le moins formalisé dans la plupart des organisations. Ce qui distingue les managers qui fédèrent de ceux qui subissent mérite d'être mis en lumière.
+
 
 Mais voici ce que les manuels ne vous disent pas : créer un environnement vraiment inclusif ne se résume pas à des quotas ou des formations obligatoires. C'est un art subtil qui demande de comprendre les mécanismes humains profonds.
 
