@@ -1,5 +1,5 @@
 ---
-title: "IA et workflows professionnels en 2025 : ce qui est réel, ce qui est du bruit"
+title: "IA et workflows professionnels en 2025-2026 : ce qui est réel, ce qui est du bruit"
 description: "Analyse critique de l'impact de l'intelligence artificielle sur les métiers de manager et de développeur — ce que j'utilise concrètement, ce qui ne tient pas ses promesses."
 publishDate: "2026-01-05"
 type: article

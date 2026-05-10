@@ -1,5 +1,5 @@
 ---
-title: "Frameworks Javascript Comparaison 2024"
+title: "Comparaison des frameworks JavaScript : performances, écosystème et choix en 2025"
 description: "Développement web moderne : frameworks, tendances et bonnes pratiques."
 publishDate: "2025-01-27"
 type: article

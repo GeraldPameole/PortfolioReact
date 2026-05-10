@@ -1,5 +1,5 @@
 ---
-title: "Strategies Marketing Digital 2025"
+title: "Stratégies de marketing digital : les leviers qui font la différence en 2025-2026"
 description: "Stratégies marketing et communication digitale pour les professionnels."
 publishDate: "2026-03-30"
 type: article

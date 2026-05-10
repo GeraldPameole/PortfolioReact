@@ -1,5 +1,5 @@
 ---
-title: "Frameworks Javascript Analyse 2024"
+title: "Analyse des frameworks JavaScript : React, Vue, Angular — lequel choisir en 2025"
 description: "Développement web moderne : frameworks, tendances et bonnes pratiques."
 publishDate: "2025-01-20"
 type: article

@@ -1,5 +1,5 @@
 ---
-title: "Progressive Web Apps 2024"
+title: "Progressive Web Apps : pourquoi et comment adopter les PWA en 2025"
 description: "Développement web moderne : frameworks, tendances et bonnes pratiques."
 publishDate: "2025-02-03"
 type: article

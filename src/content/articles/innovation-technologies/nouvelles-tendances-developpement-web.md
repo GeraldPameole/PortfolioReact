@@ -1,5 +1,5 @@
 ---
-title: "Tendances du développement web : ce qui compte vraiment en 2025"
+title: "Tendances du développement web : ce qui compte vraiment en 2025-2026"
 description: "Innovation, intelligence artificielle et nouvelles technologies."
 publishDate: "2026-01-26"
 type: article

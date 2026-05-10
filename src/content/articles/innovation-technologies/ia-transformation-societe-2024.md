@@ -1,5 +1,5 @@
 ---
-title: "Ia Transformation Societe 2024"
+title: "L'IA en 2025 : comment l'intelligence artificielle transforme concrètement les organisations"
 description: "Innovation, intelligence artificielle et nouvelles technologies."
 publishDate: "2026-01-12"
 type: article

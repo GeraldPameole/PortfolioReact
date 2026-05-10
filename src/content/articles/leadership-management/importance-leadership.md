@@ -1,6 +1,6 @@
 ---
 draft: false
-title: "Leadership Moderne 2025 : L'Art de Diriger dans un Monde en Transformation"
+title: "Leadership moderne : l'art de diriger dans un monde en transformation'Art de Diriger dans un Monde en Transformation"
 description: >-
   Découvrez les stratégies de leadership moderne pour 2025. Méthodes éprouvées,
   compétences clés et retours d'expérience pour exceller dans un environnement
