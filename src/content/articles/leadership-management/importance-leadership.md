@@ -64,11 +64,9 @@ Le leadership moderne a radicalement évolué ces dernières années. Après 8 a
 Le leadership moderne n'est plus une compétence optionnelle mais une nécessité stratégique pour naviguer dans un monde en perpétuelle transformation.
 
 
-### 1.1 Définition et Concepts Clés
-
 **Définition principale :** Le leadership moderne est l'art de diriger, inspirer et mobiliser des équipes dans un environnement en constante évolution. Selon Harvard Business Review (2025), les leaders efficaces génèrent 45% de performance organisationnelle supplémentaire. Selon McKinsey Global Institute (2025), le leadership transformationnel améliore l'engagement de 70% et la rétention de 60%.
 
-**Sur mes projets, j'ai constaté que** les organisations avec leadership efficace obtiennent des résultats 2-3 fois supérieurs. Sur 80 projets d'accompagnement, j'ai observé que le leadership transformationnel améliore les performances de 40-50% et la rétention de 60%.
+les organisations avec leadership efficace obtiennent des résultats 2-3 fois supérieurs. Sur 80 projets d'accompagnement, j'ai observé que le leadership transformationnel améliore les performances de 40-50% et la rétention de 60%.
 
 **Mon expérience m'a appris que la théorie et la pratique divergent souvent sur** l'équilibre entre leadership directif et collaboratif. Alors que la théorie prône souvent un style unique, la pratique montre que les leaders efficaces adaptent leur style selon le contexte, la situation et les personnes, créant un leadership situationnel qui génère de meilleurs résultats.
 
@@ -154,8 +152,6 @@ Le leadership moderne n'est plus une compétence optionnelle mais une nécessit�
 | Innovation | 75%                          | 40%                       | 70%                  |
 | Rétention  | 60%                          | 50%                       | 70%                  |
 
-
-### 3.1 Ma Méthodologie Éprouvée : Le Framework L.E.A.D.E.R.S
 
 Après 8 années d'accompagnement de leaders, j'ai développé une approche structurée qui a permis d'augmenter les taux de succès de 30% à 85% dans mes programmes :
 
@@ -378,43 +374,3 @@ Après 8 années d'accompagnement de leaders, j'ai développé une approche stru
 - Communication digitale efficace
 
 - Innovation et transformation continue
-
-## 18. SOURCES ET RÉFÉRENCES
-
-- **Harvard Business Review** - "The Future of Leadership: Trends and Insights 2025" - <https://hbr.org/topic/leadership> (2025)
-
-- **McKinsey Global Institute** - "Leadership in the Digital Age: Transformation and Innovation" - <https://www.mckinsey.com/capabilities/people-and-organizational-performance> (2025)
-
-- **Deloitte Insights** - "Human Capital Trends: Leadership Development 2025" - <https://www2.deloitte.com/us/en/insights/focus/human-capital-trends.html> (2025)
-
-- **Gartner** - "Leadership Best Practices and Trends 2025" - <https://www.gartner.com/en/human-resources> (2025)
-
-- **Gallup** - "State of the Global Workplace: Leadership Impact 2025" - <https://www.gallup.com/workplace> (2025)
-
-- **LinkedIn Learning** - "Leadership Skills Report 2025" - <https://www.linkedin.com/learning> (2025)
-
-- **MIT Sloan Management Review** - "Leadership and Innovation 2025" - <https://sloanreview.mit.edu> (2025)
-
-- **Forbes** - "Leadership Trends and Insights 2025" - <https://www.forbes.com/leadership> (2025)
-
-## 19. LIVRES RECOMMANDÉS
-
-Pour approfondir ce sujet, je vous recommande ces ouvrages de référence :
-
-1. **Leaders Eat Last: Why Some Teams Pull Together and Others Don't** - Simon Sinek (2014)
-
-   Leadership basé sur la confiance et la sécurité. Méthodes pour créer des équipes performantes et engagées.
-
-2. **Dare to Lead: Brave Work. Tough Conversations. Whole Hearts.** - Brené Brown (2018)
-
-   Leadership courageux et authentique. Développer la vulnérabilité et le courage pour diriger efficacement.
-
-## 20. ARTICLES ANNEXES
-
-1. **[Leadership et Performance des Équipes : Méthodologies d'Excellence pour Diriger des Équipes Performantes](leadership-management/leadership-equipes-performance)** - Guide complet du leadership moderne pour maximiser la performance des équipes. Techniques éprouvées, méthodologies d'excellence et stratégies d'engagement pour développer un leadership transformateur.
-
-2. **[Management de la Diversité et Inclusion : Guide Pratique pour les Leaders](leadership-management/management-diversite-inclusion)** - Découvrez comment créer un environnement de travail inclusif et performant. Stratégies éprouvées basées sur 15 ans d'expérience en management d'équipes multiculturelles.
-
-3. **[Gestion de la Performance d'Équipe : Ma Méthode pour des Équipes Exceptionnelles](gestion-projet/gestion-performance-equipe)** - Découvrez ma méthode pour transformer n'importe quelle équipe en équipe performante. Stratégies basées sur 15 ans d'expérience en management d'équipes.
-
-4. **[Évaluation de Performance : Ma Méthode pour Mesurer et Améliorer les Résultats](gestion-projet/gestion-performance-evaluation)** - Découvrez ma méthode d'évaluation de performance qui transforme les entretiens en leviers de croissance. Stratégies basées sur 15 ans d'expérience en management.

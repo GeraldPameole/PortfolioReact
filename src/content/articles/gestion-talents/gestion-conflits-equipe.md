@@ -189,8 +189,6 @@ La gestion des conflits d'équipe a évolué significativement au cours des dern
    - **Objectif** : Amélioration de 40% de la productivité après résolution.
 
 
-### 3.1 Ma Méthodologie Éprouvée : Le Framework R.É.S.O.U.D.R.E
-
 Après avoir accompagné plus de 100 entreprises et analysé 2000+ situations, j'ai développé une méthodologie structurée qui garantit l'efficacité.
 
 #### R - Phase 1 (Semaines 1-2)
@@ -341,76 +339,28 @@ Dans ma pratique quotidienne, j'observe que cette phase est souvent négligée. 
 
 **Ce que disent les manuels :** Les conflits interpersonnels doivent être résolus rapidement avant qu'ils ne s'aggravent.
 
-**Ce que révèle mon expérience :** Sur 100 entreprises accompagnées, 70% ont des conflits interpersonnels non résolus. La solution est de créer un processus de résolution rapide et efficace.
+Sur 100 entreprises accompagnées, 70% ont des conflits interpersonnels non résolus. La solution est de créer un processus de résolution rapide et efficace.
 
 **Solution concrète :** Créer des canaux de signalement, former des médiateurs internes, organiser des séances de résolution, suivre les accords.
 
-**Résultat observé :** Réduction de 65% des conflits et amélioration de 50% de la collaboration.
+Réduction de 65% des conflits et amélioration de 50% de la collaboration.
 
 #### 5.1.2 Le "Conflit de Groupe" - 60% des cas
 
 **Ce que disent les manuels :** Les conflits entre équipes nécessitent une approche structurée de médiation.
 
-**Ce que révèle mon expérience :** Sur 100 entreprises accompagnées, 60% ont des conflits de groupe. La solution est de faciliter le dialogue et de créer des objectifs communs.
+Sur 100 entreprises accompagnées, 60% ont des conflits de groupe. La solution est de faciliter le dialogue et de créer des objectifs communs.
 
 **Solution concrète :** Organiser des sessions de dialogue, créer des objectifs communs, mettre en place des processus collaboratifs, célébrer les succès partagés.
 
-**Résultat observé :** Amélioration de 55% de la collaboration inter-équipes et réduction de 50% des tensions.
+Amélioration de 55% de la collaboration inter-équipes et réduction de 50% des tensions.
 
 #### 5.1.3 Le "Manque de Communication" - 55% des cas
 
 **Ce que disent les manuels :** La communication transparente prévient la plupart des conflits.
 
-**Ce que révèle mon expérience :** Sur 100 entreprises accompagnées, 55% manquent de communication efficace. La solution est de créer des processus de communication réguliers et transparents.
+Sur 100 entreprises accompagnées, 55% manquent de communication efficace. La solution est de créer des processus de communication réguliers et transparents.
 
 **Solution concrète :** Créer des réunions régulières, mettre en place des canaux de communication, former à la communication non-violente, encourager le feedback.
 
-**Résultat observé :** Réduction de 60% des malentendus et amélioration de 45% de la confiance.
-
-## 21. SOURCES ET RÉFÉRENCES
-
-- **SHRM** : [SHRM Workplace Conflict Report 2025](https://www.shrm.org/resourcesandtools/hr-topics/employee-relations/pages/managing-workplace-conflict.aspx) - 2025
-
-- **Harvard Business Review** : [Managing Conflict in Teams - HBR 2025](https://hbr.org/topic/subject/conflict-management) - 2025
-
-- **McKinsey Global Institute** : [The Future of Work: Team Collaboration 2025](https://www.mckinsey.com/capabilities/people-and-organizational-performance/our-insights) - 2025
-
-- **Deloitte Insights** : [Workplace Conflict Resolution Strategies 2025](https://www2.deloitte.com/us/en/insights/focus/human-capital-trends.html) - 2025
-
-- **Gartner** : [Conflict Management in Teams - Gartner 2025](https://www.gartner.com/en/human-resources) - 2025
-
-- **LinkedIn Learning** : [Team Conflict Resolution Best Practices 2025](https://www.linkedin.com/learning/topics/conflict-resolution) - 2025
-
-- **Gallup** : [State of the American Workplace: Conflict Management 2025](https://www.gallup.com/workplace/238085/state-american-workplace-report-2017.aspx) - 2025
-
-- **Forrester** : [Workplace Collaboration and Conflict 2025](https://www.forrester.com/research/) - 2025
-
-- **ISO** : [ISO 56000 - Innovation Management - Team Dynamics](https://www.iso.org/standard/72593.html) - 2025
-
-- **Culture Amp** : [Employee Engagement and Conflict Resolution 2025](https://www.cultureamp.com/resources/blog) - 2025
-
-- **Thomas-Kilmann** : [Conflict Mode Instrument - TKI Assessment](https://kilmanndiagnostics.com/) - 2025
-
-- **Harvard Negotiation Project** : [Getting to Yes - Negotiation Principles](https://www.pon.harvard.edu/daily/negotiation-skills-daily/) - 2025
-
-## 22. LIVRES RECOMMANDÉS
-
-Pour approfondir ce sujet, je vous recommande ces ouvrages de référence :
-
-1. **The Talent Code: Greatness Isn't Born. It's Grown.** - Daniel Coyle (2009)
-
-   Science du développement du talent. Comment créer des environnements qui développent l'excellence.
-
-2. **First, Break All the Rules: What the World's Greatest Managers Do Differently** - Marcus Buckingham, Curt Coffman (1999)
-
-   Pratiques des meilleurs managers. Basé sur des recherches Gallup sur des millions d'employés.
-
-## 23. ARTICLES ANNEXES
-
-1. **[Gestion des Compétences et Développement des Talents : Guide Expert 2025](/blog/gestion-talents/gestion-competences-developpement)** - Article complémentaire sur competences developpement.
-
-2. **[Attraction des Talents 2025 : Méthodologies d'Excellence pour les Entreprises Françaises](/blog/gestion-talents/gestion-talents-attraction)** - Article complémentaire sur attraction.
-
-3. **[Développement des Talents : Stratégies d'Excellence 2025](/blog/gestion-talents/gestion-talents-developpement)** - Article complémentaire sur developpement.
-
-4. **[Performance des Talents : Développer l'Excellence Individuelle et Collective](/blog/gestion-talents/gestion-talents-performance)** - Article complémentaire sur performance.
+Réduction de 60% des malentendus et amélioration de 45% de la confiance.

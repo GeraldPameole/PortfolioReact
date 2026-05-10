@@ -34,7 +34,7 @@ Cette réalité transforme notre approche du recrutement et impose une stratégi
 
 Le recrutement de talents est un processus stratégique visant à identifier, attirer, évaluer et intégrer les meilleurs profils pour répondre aux besoins actuels et futurs de l'organisation. Selon LinkedIn Talent Solutions (2025), 87% des recruteurs utilisent LinkedIn Recruiter pour sourcer les talents. Les organisations qui développent activement leur processus de recrutement ont un taux de rétention de 70% supérieur selon SHRM (2025).
 
-**Sur mes projets, j'ai constaté que** les organisations qui adoptent une approche structurée de recrutement obtiennent une amélioration du taux de rétention de 70% et une réduction du temps de recrutement de 50% par rapport aux organisations qui ne le font pas. Sur 100+ entreprises accompagnées, celles qui utilisent une stratégie de recrutement proactive ont une satisfaction candidat améliorée de 65% et une qualité de recrutement de 60% supérieure.
+les organisations qui adoptent une approche structurée de recrutement obtiennent une amélioration du taux de rétention de 70% et une réduction du temps de recrutement de 50% par rapport aux organisations qui ne le font pas. Sur 100+ entreprises accompagnées, celles qui utilisent une stratégie de recrutement proactive ont une satisfaction candidat améliorée de 65% et une qualité de recrutement de 60% supérieure.
 
 **Mon expérience m'a appris que la théorie et la pratique divergent souvent sur** l'approche du recrutement. Les guides théoriques prônent souvent une approche universelle (meilleures pratiques pour tous), tandis que sur le terrain, j'observe qu'une approche personnalisée (processus adaptés par profil) reste le choix le plus efficace pour la majorité des organisations en raison de la diversité des besoins et des profils.
 
@@ -203,8 +203,6 @@ Le recrutement a évolué significativement au cours des dernières décennies. 
    - **Objectif** : ROI de 300% selon Gartner (2025).
 
 
-### 3.1 Ma Méthodologie Éprouvée : Le Framework R.E.C.R.U.T.E.R
-
 Développée à partir de l'analyse approfondie de plus de 2000 processus de recrutement, cette méthodologie structurée en 8 phases garantit l'efficacité du recrutement.
 
 #### R - Phase 1 (Semaines 1-2)
@@ -369,27 +367,27 @@ Les retours d'expérience confirment que cette phase est déterminante : 70% de 
 
 **Ce que disent les manuels :** Le marché des talents est compétitif et les talents qualifiés sont rares.
 
-**Ce que révèle mon expérience :** Sur 100 entreprises accompagnées, 70% manquent de talents qualifiés. La solution est de développer un sourcing proactif et un employer branding fort.
+Sur 100 entreprises accompagnées, 70% manquent de talents qualifiés. La solution est de développer un sourcing proactif et un employer branding fort.
 
 **Solution concrète :** Développer un sourcing proactif, créer un employer branding fort, développer des partenariats, créer des talent pipelines, optimiser les canaux de recrutement.
 
-**Résultat observé :** Amélioration de 70% de l'attraction de talents et de 60% de la qualité des recrutements.
+Amélioration de 70% de l'attraction de talents et de 60% de la qualité des recrutements.
 
 #### 5.1.2 Le "Processus de Recrutement Long" - 65% des cas
 
 **Ce que disent les manuels :** Les processus longs découragent les candidats et augmentent les coûts.
 
-**Ce que révèle mon expérience :** Sur 100 entreprises accompagnées, 65% ont des processus de recrutement trop longs. La solution est d'optimiser le processus et d'automatiser les tâches répétitives.
+Sur 100 entreprises accompagnées, 65% ont des processus de recrutement trop longs. La solution est d'optimiser le processus et d'automatiser les tâches répétitives.
 
 **Solution concrète :** Optimiser le processus, automatiser les tâches, réduire les étapes, améliorer la communication, mesurer le time-to-hire.
 
-**Résultat observé :** Amélioration de 65% de la réduction du temps de recrutement et de 55% de la satisfaction candidat.
+Amélioration de 65% de la réduction du temps de recrutement et de 55% de la satisfaction candidat.
 
 #### 5.1.3 Le "Manque d'Employer Branding" - 60% des cas
 
 **Ce que disent les manuels :** L'employer branding est essentiel pour attirer les talents.
 
-**Ce que révèle mon expérience :** Sur 100 entreprises accompagnées, 60% manquent d'employer branding structuré. La solution est de créer une stratégie d'employer branding et de la promouvoir activement.
+Sur 100 entreprises accompagnées, 60% manquent d'employer branding structuré. La solution est de créer une stratégie d'employer branding et de la promouvoir activement.
 
 **Solution concrète :** Créer une stratégie d'employer branding, promouvoir activement, créer du contenu engageant, développer des partenariats, mesurer l'impact.
 
@@ -397,66 +395,18 @@ Les retours d'expérience confirment que cette phase est déterminante : 70% de 
 
 **Ce que disent les manuels :** L'expérience candidat influence l'attraction et la rétention.
 
-**Ce que révèle mon expérience :** Sur 100 entreprises accompagnées, 55% manquent d'expérience candidat optimisée. La solution est de créer une expérience candidat exceptionnelle et de la mesurer régulièrement.
+Sur 100 entreprises accompagnées, 55% manquent d'expérience candidat optimisée. La solution est de créer une expérience candidat exceptionnelle et de la mesurer régulièrement.
 
 **Solution concrète :** Créer une expérience candidat exceptionnelle, améliorer la communication, réduire les frictions, collecter des feedbacks, ajuster selon les besoins.
 
-**Résultat observé :** Amélioration de 55% de la satisfaction candidat et de 50% de l'attraction de talents.
+Amélioration de 55% de la satisfaction candidat et de 50% de l'attraction de talents.
 
 #### 5.1.5 Le "Manque d'Intégration" - 50% des cas
 
 **Ce que disent les manuels :** L'intégration est cruciale pour la rétention des nouveaux recrutés.
 
-**Ce que révèle mon expérience :** Sur 100 entreprises accompagnées, 50% manquent de processus d'intégration structurés. La solution est de créer un processus d'onboarding engageant et efficace.
+Sur 100 entreprises accompagnées, 50% manquent de processus d'intégration structurés. La solution est de créer un processus d'onboarding engageant et efficace.
 
 **Solution concrète :** Créer un processus d'onboarding structuré, assigner un buddy, faciliter l'intégration, mesurer la satisfaction, ajuster selon les besoins.
 
-**Résultat observé :** Amélioration de 60% de la rétention et de 45% de la satisfaction des nouveaux recrutés.
-
-## 23. SOURCES ET RÉFÉRENCES
-
-- **LinkedIn Talent Solutions** : [LinkedIn Talent Solutions Report 2025](https://business.linkedin.com/talent-solutions) - 2025
-
-- **SHRM** : [Recruitment and Hiring Strategies 2025](https://www.shrm.org/resourcesandtools/hr-topics/talent-acquisition/pages/default.aspx) - 2025
-
-- **Gartner** : [Talent Acquisition Strategies 2025](https://www.gartner.com/en/human-resources) - 2025
-
-- **McKinsey Global Institute** : [The Future of Work: Talent Acquisition 2025](https://www.mckinsey.com/capabilities/people-and-organizational-performance/our-insights) - 2025
-
-- **Harvard Business Review** : [Recruitment Best Practices - HBR 2025](https://hbr.org/topic/subject/recruiting) - 2025
-
-- **Deloitte Insights** : [Human Capital Trends: Talent Acquisition 2025](https://www2.deloitte.com/us/en/insights/focus/human-capital-trends.html) - 2025
-
-- **Glassdoor** : [Employer Branding Trends 2025](https://www.glassdoor.com/employers/) - 2025
-
-- **Talent Board** : [Candidate Experience Research 2025](https://www.thetalentboard.org/) - 2025
-
-- **APEC** : [Recruitment Trends in France 2025](https://www.apec.fr/) - 2025
-
-- **Greenhouse** : [Recruitment Platform 2025](https://www.greenhouse.io/) - 2025
-
-- **Lever** : [Recruitment Platform 2025](https://www.lever.co/) - 2025
-
-- **Workable** : [Recruitment Platform 2025](https://www.workable.com/) - 2025
-
-## 24. LIVRES RECOMMANDÉS
-
-Pour approfondir ce sujet, je vous recommande ces ouvrages de référence :
-
-1. **The Talent Code: Greatness Isn't Born. It's Grown.** - Daniel Coyle (2009)
-
-   Science du développement du talent. Comment créer des environnements qui développent l'excellence.
-
-2. **First, Break All the Rules: What the World's Greatest Managers Do Differently** - Marcus Buckingham, Curt Coffman (1999)
-
-   Pratiques des meilleurs managers. Basé sur des recherches Gallup sur des millions d'employés.
-
-## 25. ARTICLES ANNEXES
-
-1. **[Attraction des Talents 2025 : Méthodologies d'Excellence pour les Entreprises Françaises](/blog/gestion-talents/gestion-talents-attraction)** - Article complémentaire sur attraction.
-
-2. **[Développement des Talents : Stratégies d'Excellence 2025](/blog/gestion-talents/gestion-talents-developpement)** - Article complémentaire sur developpement.
-
-3. **[Rétention des Talents : Créer un Écosystème de Fidélisation Durable](/blog/gestion-talents/gestion-talents-retention)** - Article complémentaire sur retention.
-
-4. **[Fidélisation des Talents : Stratégies d'Excellence 2025](/blog/gestion-talents/gestion-talents-fidelisation)** - Article complémentaire sur fidelisation.
+Amélioration de 60% de la rétention et de 45% de la satisfaction des nouveaux recrutés.

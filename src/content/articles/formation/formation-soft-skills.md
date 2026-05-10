@@ -37,8 +37,6 @@ Dans l'écosystème professionnel contemporain, cette discipline constitue un en
 Cette réalité transforme radicalement notre approche et impose une réinvention continue de nos méthodes.
 
 
-### 1.1 Définition et Concepts Clés
-
 **Définition principale :** Formation Soft Skills représente un domaine d'expertise essentiel pour l'excellence professionnelle et organisationnelle.
 
 #### Concepts clés
@@ -211,15 +209,3 @@ Cette réalité transforme radicalement notre approche et impose une réinventio
 2. **Accompagnement personnalisé** : Coaching individuel
 
 3. **Reconnaissance et valorisation** : Mise en avant des progrès
-
-## 17. LIVRES RECOMMANDÉS
-
-Pour approfondir ce sujet, je vous recommande ces ouvrages de référence :
-
-1. **Make It Stick: The Science of Successful Learning** - Peter C. Brown, Henry L. Roediger III, Mark A. McDaniel (2014)
-
-   Science de l'apprentissage efficace. Méthodes basées sur la recherche cognitive pour améliorer la rétention.
-
-2. **The Adult Learner: The Definitive Classic in Adult Education and Human Resource Development** - Malcolm S. Knowles, Elwood F. Holton III, Richard A. Swanson (2020)
-
-   Référence classique sur l'apprentissage adulte. Principes andragogiques pour la formation professionnelle.

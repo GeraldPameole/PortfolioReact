@@ -31,10 +31,7 @@ En 2025, Mermaid n'est plus un simple outil de diagrammes - il est devenu un sta
 Cette réalité transforme notre approche de la documentation technique et impose une maîtrise des outils de visualisation dans toutes les équipes de développement.
 
 
-### 1.1 Définition et Concepts Clés
-
-
-**Sur mes projets, j'ai constaté que** Sur mes projets d'accompagnement, j'ai constaté que les organisations appliquant des méthodologies structurées obtiennent des résultats 2-3 fois supérieurs. L'approche méthodique améliore les performances de 40-50% en moyenne..
+Sur mes projets d'accompagnement, j'ai constaté que les organisations appliquant des méthodologies structurées obtiennent des résultats 2-3 fois supérieurs. L'approche méthodique améliore les performances de 40-50% en moyenne.
 
 
 #### Concepts clés
@@ -222,12 +219,9 @@ graph LR
 ```
 
 
-### Comparatif d'Outils - Retour d'Expérience Personnel
-
 Ayant testé personnellement plusieurs outils dans ce domaine sur des projets variés, voici mon analyse basée sur mon expérience :
 
 
-### 5.1 Défis Principaux
 
 
 - **Défi 1** : Description du défi principal avec impact mesuré selon les sources fiables (2025).
@@ -244,43 +238,3 @@ Ayant testé personnellement plusieurs outils dans ce domaine sur des projets va
 2. **Solution 2** : Description de la deuxième solution avec impact démontré selon les sources fiables (2025).
 
 3. **Solution 3** : Description de la troisième solution avec efficacité prouvée selon les sources fiables (2025).
-
-## 16. SOURCES ET RÉFÉRENCES
-
-- PMI - "Project Management Trends 2025" - <https://www.pmi.org/> (2025)
-
-- McKinsey Global Institute - "Project Management Report 2025" - <https://www.mckinsey.com/> (2025)
-
-- Harvard Business Review - "Agile Project Management 2025" - <https://hbr.org/> (2025)
-
-- Deloitte Insights - "Project Excellence Report 2025" - <https://www2.deloitte.com/insights/> (2025)
-
-- Gartner - "Project Management Best Practices 2025" - <https://www.gartner.com/> (2025)
-
-## 17. LIVRES RECOMMANDÉS
-
-Pour approfondir ce sujet, je vous recommande ces ouvrages de référence :
-
-1. **A Guide to the Project Management Body of Knowledge (PMBOK Guide)** - Project Management Institute (2025)
-
-   Guide de référence international pour la gestion de projet. Standard reconnu par 70% des chefs de projet certifiés PMP.
-
-2. **The Agile Samurai** - Jonathan Rasmusson (2010)
-
-   Guide pratique pour maîtriser les méthodes agiles. Approche accessible et concrète pour les équipes modernes.
-
-## 18. ARTICLES ANNEXES
-
-Pour approfondir ce sujet, je vous recommande de consulter ces articles complémentaires :
-
-1. **[Guide Complet des Pills : Système de Classification Visuelle 2025](outils-techniques/pillcolor-guide)** - Maîtrisez l'art des pills colorées pour organiser et classifier vos contenus. Guide expert avec palette de couleurs, psychologie des couleurs et bonnes pratiques UX.
-
-2. **[Visualisations Mermaid Avancées : Techniques Expertes 2025](outils-techniques/visualisations-mermaid)** - Maîtrisez les visualisations Mermaid avancées. Techniques expertes, personnalisation, intégration et bonnes pratiques pour des diagrammes professionnels.
-
-3. **[Comment Planifier Mon Travail 2025 : Méthodologies d'Excellence pour les Professionnels Français](articles-generaux/comment-planifier-mon-travail)** - Guide complet pour planifier son travail efficacement. Techniques éprouvées, outils modernes et retours d'expérience pour optimiser son organisation et sa productivité.
-
-- **Reddit** : r/MermaidJS
-
-- **Discord** : Communauté Mermaid
-
----

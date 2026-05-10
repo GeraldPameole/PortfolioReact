@@ -30,7 +30,7 @@ Cette réalité transforme notre approche de la gestion des talents et impose un
 
 **Définition principale :** La gestion des compétences consiste à identifier, évaluer, développer et valoriser les compétences des employés pour améliorer leur performance et celle de l'organisation. Selon LinkedIn Learning (2025), 94% des employés resteraient plus longtemps dans une organisation qui investit dans leur développement. Le marché de la formation représente 15 milliards d'euros en France selon France Stratégie (2025), avec une croissance de 8% par an.
 
-**Sur mes projets, j'ai constaté que** les organisations qui adoptent une approche structurée de gestion des compétences obtiennent une amélioration de la productivité de 45% et une augmentation de la rétention de 60% par rapport aux organisations qui ne le font pas. Sur 120+ entreprises accompagnées, celles qui utilisent une stratégie de développement intégrée ont une satisfaction employé améliorée de 55% et une performance de 50% supérieure.
+les organisations qui adoptent une approche structurée de gestion des compétences obtiennent une amélioration de la productivité de 45% et une augmentation de la rétention de 60% par rapport aux organisations qui ne le font pas. Sur 120+ entreprises accompagnées, celles qui utilisent une stratégie de développement intégrée ont une satisfaction employé améliorée de 55% et une performance de 50% supérieure.
 
 **Mon expérience m'a appris que la théorie et la pratique divergent souvent sur** l'approche de la gestion des compétences. Les guides théoriques prônent souvent une approche uniforme (même formation pour tous), tandis que sur le terrain, j'observe qu'une approche personnalisée (plans de développement adaptés par profil) reste le choix le plus efficace pour la majorité des organisations en raison de la diversité des besoins et des aspirations.
 
@@ -310,41 +310,41 @@ Dans ma pratique, j'observe que les entreprises évaluant et optimisant ont une 
 
 **Ce que disent les manuels :** Les plans de développement doivent être personnalisés.
 
-**Ce que révèle mon expérience :** Sur 120 entreprises accompagnées, 70% ont des plans génériques. La solution est de créer des PDI personnalisés basés sur les besoins individuels.
+Sur 120 entreprises accompagnées, 70% ont des plans génériques. La solution est de créer des PDI personnalisés basés sur les besoins individuels.
 
 **Solution concrète :** Analyser les besoins individuels, créer des PDI personnalisés, allouer les ressources, valider avec les managers.
 
-**Résultat observé :** Amélioration de 50% de l'efficacité.
+Amélioration de 50% de l'efficacité.
 
 #### Le "Manque d'Évaluation" - 60% des cas
 
 **Ce que disent les manuels :** L'évaluation des compétences doit être régulière.
 
-**Ce que révèle mon expérience :** Sur 120 entreprises accompagnées, 60% n'évaluent pas régulièrement. La solution est de mettre en place des évaluations régulières et systématiques.
+Sur 120 entreprises accompagnées, 60% n'évaluent pas régulièrement. La solution est de mettre en place des évaluations régulières et systématiques.
 
 **Solution concrète :** Créer des processus d'évaluation, utiliser des outils d'évaluation, former les managers, automatiser les évaluations.
 
-**Résultat observé :** Amélioration de 45% de la précision des plans.
+Amélioration de 45% de la précision des plans.
 
 #### Le "Manque d'Investissement" - 55% des cas
 
 **Ce que disent les manuels :** L'investissement dans la formation est essentiel.
 
-**Ce que révèle mon expérience :** Sur 120 entreprises accompagnées, 55% investissent insuffisamment. La solution est de démontrer le ROI et d'allouer les budgets nécessaires.
+Sur 120 entreprises accompagnées, 55% investissent insuffisamment. La solution est de démontrer le ROI et d'allouer les budgets nécessaires.
 
 **Solution concrète :** Démontrer le ROI, allouer les budgets, créer des programmes de formation, mesurer l'impact.
 
-**Résultat observé :** Amélioration de 40% de la productivité.
+Amélioration de 40% de la productivité.
 
 #### Le "Manque de Support Managérial" - 50% des cas
 
 **Ce que disent les manuels :** Le support managérial est crucial pour le développement.
 
-**Ce que révèle mon expérience :** Sur 120 entreprises accompagnées, 50% manquent de support managérial. La solution est de former les managers et de créer une culture de développement.
+Sur 120 entreprises accompagnées, 50% manquent de support managérial. La solution est de former les managers et de créer une culture de développement.
 
 **Solution concrète :** Former les managers, créer une culture de développement, reconnaître les managers qui développent, mesurer le support managérial.
 
-**Résultat observé :** Amélioration de 45% de l'adoption.
+Amélioration de 45% de l'adoption.
 
 ---
 

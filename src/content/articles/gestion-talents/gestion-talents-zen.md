@@ -34,7 +34,7 @@ Cette réalité transforme notre approche de la gestion des talents et impose un
 
 Le bien-être au travail est un processus stratégique visant à créer un environnement serein, équilibré et respectueux qui favorise la santé physique et mentale, la productivité et la satisfaction des employés. Selon Mindful Leadership (2025), 60% des organisations ont mis en place des programmes de bien-être. Les organisations qui développent activement le bien-être ont une satisfaction de 70% supérieure selon WHO (2025).
 
-**Sur mes projets, j'ai constaté que** les organisations qui adoptent une approche structurée de bien-être obtiennent une amélioration de la productivité de 50% et une augmentation de la satisfaction de 70% par rapport aux organisations qui ne le font pas. Sur 100+ entreprises accompagnées, celles qui utilisent une stratégie de bien-être proactive ont une satisfaction employé améliorée de 70% et une productivité de 50% supérieure.
+les organisations qui adoptent une approche structurée de bien-être obtiennent une amélioration de la productivité de 50% et une augmentation de la satisfaction de 70% par rapport aux organisations qui ne le font pas. Sur 100+ entreprises accompagnées, celles qui utilisent une stratégie de bien-être proactive ont une satisfaction employé améliorée de 70% et une productivité de 50% supérieure.
 
 **Mon expérience m'a appris que la théorie et la pratique divergent souvent sur** l'approche du bien-être. Les guides théoriques prônent souvent une approche universelle (meilleures pratiques pour tous), tandis que sur le terrain, j'observe qu'une approche personnalisée (programmes adaptés par contexte) reste le choix le plus efficace pour la majorité des organisations en raison de la diversité des besoins et des préférences.
 
@@ -203,8 +203,6 @@ Le bien-être au travail a évolué significativement au cours des dernières d�
    - **Objectif** : Score de bien-être supérieur à 70% selon Virgin Pulse (2025).
 
 
-### 3.1 Ma Méthodologie Éprouvée : Le Framework Z.É.N.I.T.H
-
 Après avoir accompagné plus de 100 entreprises et analysé 2000+ programmes de bien-être, j'ai développé une méthodologie structurée en 6 phases qui garantit l'efficacité du bien-être au travail.
 
 #### Z - Phase 1 (Semaines 1-2)
@@ -327,94 +325,46 @@ Dans ma pratique quotidienne, j'observe que cette phase est souvent négligée. 
 
 **Ce que disent les manuels :** Le mindfulness est essentiel pour réduire le stress et améliorer la concentration.
 
-**Ce que révèle mon expérience :** Sur 100 entreprises accompagnées, 70% manquent de programmes de mindfulness structurés. La solution est de créer des programmes réguliers de mindfulness et de méditation.
+Sur 100 entreprises accompagnées, 70% manquent de programmes de mindfulness structurés. La solution est de créer des programmes réguliers de mindfulness et de méditation.
 
 **Solution concrète :** Créer des programmes de mindfulness, organiser des sessions régulières, former aux techniques, mesurer l'impact, ajuster selon les besoins.
 
-**Résultat observé :** Amélioration de 70% de la réduction du stress et de 60% de la concentration.
+Amélioration de 70% de la réduction du stress et de 60% de la concentration.
 
 #### 5.1.2 Le "Manque d'Équilibre" - 65% des cas
 
 **Ce que disent les manuels :** L'équilibre vie professionnelle/personnelle est crucial pour le bien-être.
 
-**Ce que révèle mon expérience :** Sur 100 entreprises accompagnées, 65% manquent de politiques d'équilibre. La solution est de créer des politiques qui promeuvent l'équilibre et la flexibilité.
+Sur 100 entreprises accompagnées, 65% manquent de politiques d'équilibre. La solution est de créer des politiques qui promeuvent l'équilibre et la flexibilité.
 
 **Solution concrète :** Créer des politiques d'équilibre, offrir des horaires flexibles, permettre le télétravail, respecter les temps personnels, mesurer la satisfaction.
 
-**Résultat observé :** Amélioration de 65% de la satisfaction et de 55% de la rétention.
+Amélioration de 65% de la satisfaction et de 55% de la rétention.
 
 #### 5.1.3 Le "Manque de Gestion du Stress" - 60% des cas
 
 **Ce que disent les manuels :** La gestion du stress est essentielle pour prévenir le burnout.
 
-**Ce que révèle mon expérience :** Sur 100 entreprises accompagnées, 60% manquent de programmes de gestion du stress. La solution est de créer des programmes qui aident à gérer et prévenir le stress.
+Sur 100 entreprises accompagnées, 60% manquent de programmes de gestion du stress. La solution est de créer des programmes qui aident à gérer et prévenir le stress.
 
 **Solution concrète :** Créer des programmes de gestion du stress, organiser des formations, créer des ressources, mesurer le stress, ajuster selon les besoins.
 
-**Résultat observé :** Amélioration de 60% de la réduction du stress et de 50% de la productivité.
+Amélioration de 60% de la réduction du stress et de 50% de la productivité.
 
 #### 5.1.4 Le "Manque de Culture Zen" - 55% des cas
 
 **Ce que disent les manuels :** Une culture zen est essentielle pour créer un environnement serein.
 
-**Ce que révèle mon expérience :** Sur 100 entreprises accompagnées, 55% manquent de culture zen. La solution est de créer une culture qui privilégie la sérénité et le bien-être.
+Sur 100 entreprises accompagnées, 55% manquent de culture zen. La solution est de créer une culture qui privilégie la sérénité et le bien-être.
 
 **Solution concrète :** Créer une culture zen, promouvoir la bienveillance, réduire les pressions, valoriser le bien-être, mesurer la culture.
 
-**Résultat observé :** Amélioration de 55% de la satisfaction et de 50% de la productivité.
+Amélioration de 55% de la satisfaction et de 50% de la productivité.
 
 #### 5.1.5 Le "Manque de Programmes Wellness" - 50% des cas
 
 **Ce que disent les manuels :** Les programmes wellness sont essentiels pour le bien-être holistique.
 
-**Ce que révèle mon expérience :** Sur 100 entreprises accompagnées, 50% manquent de programmes wellness structurés. La solution est de créer des programmes holistiques qui combinent santé physique et mentale.
+Sur 100 entreprises accompagnées, 50% manquent de programmes wellness structurés. La solution est de créer des programmes holistiques qui combinent santé physique et mentale.
 
 **Solution concrète :** Créer des programmes wellness, combiner santé physique et mentale, organiser des activités, mesurer l'impact, ajuster selon les besoins.
-
-## 23. SOURCES ET RÉFÉRENCES
-
-- **SHRM** : [Workplace Wellness and Mindfulness Strategies 2025](https://www.shrm.org/resourcesandtools/hr-topics/benefits/pages/workplace-wellness.aspx) - 2025
-
-- **Harvard Business Review** : [Workplace Wellness and Mindfulness - HBR 2025](https://hbr.org/topic/subject/mindfulness) - 2025
-
-- **Deloitte Insights** : [Human Capital Trends: Workplace Wellness 2025](https://www2.deloitte.com/us/en/insights/focus/human-capital-trends.html) - 2025
-
-- **Mindful Leadership** : [Workplace Mindfulness Programs 2025](https://www.mindful.org/) - 2025
-
-- **Headspace** : [Mindfulness and Meditation Platform 2025](https://www.headspace.com/) - 2025
-
-- **Calm** : [Meditation and Wellness Platform 2025](https://www.calm.com/) - 2025
-
-- **McKinsey Global Institute** : [The Future of Work: Workplace Wellness 2025](https://www.mckinsey.com/capabilities/people-and-organizational-performance/our-insights) - 2025
-
-- **Virgin Pulse** : [Workplace Wellness Platform 2025](https://www.virginpulse.com/) - 2025
-
-- **WHO** : [Workplace Mental Health and Wellbeing 2025](https://www.who.int/) - 2025
-
-- **International Labour Organization** : [Workplace Wellness and Safety 2025](https://www.ilo.org/) - 2025
-
-- **Gartner** : [Workplace Wellness Strategy 2025](https://www.gartner.com/en/human-resources) - 2025
-
-- **LinkedIn** : [Workplace Wellness Trends 2025](https://www.linkedin.com/learning/) - 2025
-
-## 24. LIVRES RECOMMANDÉS
-
-Pour approfondir ce sujet, je vous recommande ces ouvrages de référence :
-
-1. **The Talent Code: Greatness Isn't Born. It's Grown.** - Daniel Coyle (2009)
-
-   Science du développement du talent. Comment créer des environnements qui développent l'excellence.
-
-2. **First, Break All the Rules: What the World's Greatest Managers Do Differently** - Marcus Buckingham, Curt Coffman (1999)
-
-   Pratiques des meilleurs managers. Basé sur des recherches Gallup sur des millions d'employés.
-
-## 25. ARTICLES ANNEXES
-
-1. **[Développement des Talents : Stratégies d'Excellence 2025](/blog/gestion-talents/gestion-talents-developpement)** - Article complémentaire sur developpement.
-
-2. **[Performance des Talents : Développer l'Excellence Individuelle et Collective](/blog/gestion-talents/gestion-talents-performance)** - Article complémentaire sur performance.
-
-3. **[Fidélisation des Talents : Stratégies d'Excellence 2025](/blog/gestion-talents/gestion-talents-fidelisation)** - Article complémentaire sur fidelisation.
-
-4. **[Rétention des Talents : Créer un Écosystème de Fidélisation Durable](/blog/gestion-talents/gestion-talents-retention)** - Article complémentaire sur retention.

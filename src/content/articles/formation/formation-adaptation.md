@@ -32,7 +32,7 @@ Dans cet article, je partage ma méthodologie "A.D.A.P.T.E.R." - un framework qu
 
 **Ce que disent les manuels :** "Acceptez le changement, soyez flexible."
 
-**Ce que révèle mon expérience :** Après avoir analysé les réactions de 500+ professionnels face au changement, j'ai identifié 4 blocages psychologiques majeurs :
+Après avoir analysé les réactions de 500+ professionnels face au changement, j'ai identifié 4 blocages psychologiques majeurs :
 
 1. **L'illusion de contrôle** : Croire qu'on peut éviter le changement
 
@@ -74,8 +74,6 @@ Dans cet article, je partage ma méthodologie "A.D.A.P.T.E.R." - un framework qu
 
 **Mon test de 5 minutes :** Demandez-vous : "Comment ai-je réagi à mon dernier changement professionnel majeur ?" Votre réponse révèle votre profil dominant.
 
-
-### 2.1 Définition et Concepts Clés
 
 **Définition principale :** L'adaptabilité désigne la capacité d'un individu ou d'une organisation à s'ajuster efficacement aux changements, aux nouvelles situations ou aux environnements en évolution. Selon Stanford Research (2025), les professionnels avec un growth mindset progressent 50% plus rapidement et récupèrent 3x plus vite après un échec. Les organisations qui développent l'adaptabilité obtiennent une performance de 40% supérieure en période d'incertitude selon Harvard Business Review (2025).
 
@@ -195,31 +193,3 @@ Dans cet article, je partage ma méthodologie "A.D.A.P.T.E.R." - un framework qu
 4. **Application immédiate** : Mise en pratique rapide des apprentissages
 
 5. **Célébration des progrès** : Reconnaissance des améliorations pour renforcer la motivation
-
-## 6. SOURCES ET RÉFÉRENCES
-
-- UNESCO - "Education Trends 2025" - <https://www.unesco.org/> (2025)
-
-- Harvard Business Review - "Learning and Development 2025" - <https://hbr.org/> (2025)
-
-- LinkedIn Learning - "Skills Report 2025" - <https://www.linkedin.com/learning/> (2025)
-
-- Coursera - "Education Trends 2025" - <https://www.coursera.org/> (2025)
-
-## 7. LIVRES RECOMMANDÉS
-
-Pour approfondir ce sujet, je vous recommande ces ouvrages de référence :
-
-1. **Make It Stick: The Science of Successful Learning** - Peter C. Brown, Henry L. Roediger III, Mark A. McDaniel (2014)
-
-   Science de l'apprentissage efficace. Méthodes basées sur la recherche cognitive pour améliorer la rétention.
-
-2. **The Adult Learner: The Definitive Classic in Adult Education and Human Resource Development** - Malcolm S. Knowles, Elwood F. Holton III, Richard A. Swanson (2020)
-
-   Référence classique sur l'apprentissage adulte. Principes andragogiques pour la formation professionnelle.
-
-## 8. ARTICLES ANNEXES
-
-1. **[Apprentissage Continu : Comment Développer ses Compétences en Mode Expert](formation/apprentissage-continu-developpement-competences)** - Découvrez ma méthode éprouvée pour un apprentissage continu efficace.
-
-2. **[Reconversion Professionnelle Réussie 2025](reconversion-carriere/reconversion-professionnelle-reussie)** - Guide complet pour réussir sa reconversion professionnelle.

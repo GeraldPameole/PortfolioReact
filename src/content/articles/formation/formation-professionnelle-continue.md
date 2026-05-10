@@ -46,8 +46,6 @@ La formation professionnelle continue a radicalement évolué ces dernières ann
 La formation continue n'est plus un luxe mais une nécessité stratégique pour naviguer dans un monde en perpétuelle transformation.
 
 
-### 1.1 Définition et Concepts Clés
-
 **Définition principale :** La formation professionnelle continue (FPC) désigne l'ensemble des actions de formation permettant à toute personne active d'acquérir, d'entretenir ou de perfectionner ses connaissances et compétences professionnelles. Selon France Compétences (2025), 18 millions de Français disposent d'un Compte Personnel de Formation (CPF) actif, avec un investissement moyen de 1 286€ par employé et par an selon Cegos (2025). Le marché de la formation professionnelle continue représente 2,8 milliards d'euros en France en 2025, soit 40% des investissements formation des entreprises.
 
 **L'expérience partagée avec de nombreuses organisations confirme que** celles qui intègrent la formation professionnelle continue dans leur stratégie RH obtiennent des résultats remarquablement supérieurs. Cette supériorité se manifeste à travers plusieurs dimensions : une employabilité significativement accrue, une rétention des talents substantiellement améliorée, et une performance organisationnelle nettement plus élevée.
@@ -202,43 +200,3 @@ La formation continue n'est plus un luxe mais une nécessité stratégique pour 
 2. **Accompagnement personnalisé** : Coaching individuel
 
 3. **Reconnaissance et valorisation** : Mise en avant des progrès
-
-## 18. SOURCES ET RÉFÉRENCES
-
-- France Compétences - "Baromètre Formation 2025" - <https://www.francecompetences.fr/> (2025)
-
-- Cegos - "Baromètre Formation Professionnelle 2025" - <https://www.cegos.fr/> (2025)
-
-- McKinsey Global Institute - "Future of Work Report 2025" - <https://www.mckinsey.com/> (2025)
-
-- Harvard Business Review - "Learning and Development Trends 2025" - <https://hbr.org/> (2025)
-
-- Deloitte Insights - "Human Capital Trends 2025" - <https://www2.deloitte.com/insights/> (2025)
-
-- LinkedIn Learning - "Workplace Learning Report 2025" - <https://www.linkedin.com/learning/> (2025)
-
-- MIT Sloan Management Review - "Continuous Learning in Organizations 2025" - <https://sloanreview.mit.edu/> (2025)
-
-## 19. LIVRES RECOMMANDÉS
-
-Pour approfondir ce sujet, je vous recommande ces ouvrages de référence :
-
-1. **Make It Stick: The Science of Successful Learning** - Peter C. Brown, Henry L. Roediger III, Mark A. McDaniel (2014)
-
-   Science de l'apprentissage efficace. Méthodes basées sur la recherche cognitive pour améliorer la rétention.
-
-2. **The Adult Learner: The Definitive Classic in Adult Education and Human Resource Development** - Malcolm S. Knowles, Elwood F. Holton III, Richard A. Swanson (2020)
-
-   Référence classique sur l'apprentissage adulte. Principes andragogiques pour la formation professionnelle.
-
-## 20. ARTICLES ANNEXES
-
-Pour approfondir ce sujet, je vous recommande de consulter ces articles complémentaires :
-
-1. **[Synthese Thematiques](articles-generaux/synthese-thematiques)** - Synthèse des thématiques professionnelles. Vue d'ensemble des sujets clés du développement professionnel.
-
-2. **[Template Article](articles-generaux/template-article)** - Modèle d'article professionnel. Template et structure pour créer du contenu de qualité.
-
-3. **[Apprentissage Continu : Comment Développer ses Compétences en Mode Expert](formation/apprentissage-continu-developpement-competences)** - Découvrez ma méthode éprouvée pour un apprentissage continu efficace. Stratégies basées sur 15 ans d'expérience en formation et développement des compétences.
-
-4. **[Comment Planifier Mon Travail 2025 : Méthodologies d'Excellence pour les Professionnels Français](articles-generaux/comment-planifier-mon-travail)** - Guide complet pour planifier son travail efficacement. Techniques éprouvées, outils modernes et retours d'expérience pour optimiser son organisation et sa productivité.

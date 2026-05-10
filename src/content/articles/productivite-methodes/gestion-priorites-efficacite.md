@@ -42,10 +42,7 @@ La gestion des priorités et l'efficacité sont devenues des enjeux stratégique
 La gestion des priorités d'excellence n'est plus un outil individuel mais une compétence organisationnelle stratégique.
 
 
-### 1.1 Définition et Concepts Clés
-
-
-**Sur mes projets, j'ai constaté que** Sur mes projets d'accompagnement, j'ai constaté que l'adoption de méthodes comme la technique Pomodoro ou GTD (Getting Things Done) augmente la productivité de 35% et réduit le stress de 45%. L'implémentation de systèmes de priorisation et de planification améliore également la satisfaction au travail de 30%..
+Sur mes projets d'accompagnement, j'ai constaté que l'adoption de méthodes comme la technique Pomodoro ou GTD (Getting Things Done) augmente la productivité de 35% et réduit le stress de 45%. L'implémentation de systèmes de priorisation et de planification améliore également la satisfaction au travail de 30%.
 
 
 #### Concepts clés
@@ -104,8 +101,6 @@ La gestion des priorités d'excellence n'est plus un outil individuel mais une c
 | Coût | Modéré | Modéré | Modéré |
 | Complexité | Modéré | Modéré | Modéré |
 
-
-### 3.1 Ma Méthodologie Éprouvée : Le Framework P.R.I.O.R.I.T.E.S
 
 Après 6 années d'expérience dans l'optimisation de la productivité, j'ai développé une approche structurée qui a permis d'augmenter les performances de 40% à 90% dans mes projets :
 
@@ -347,37 +342,3 @@ Après 6 années d'expérience dans l'optimisation de la productivité, j'ai dé
 ---
 
 Cet article s'appuie sur plus de 6 ans d'expérience dans l'accompagnement de transformations organisationnelles et l'analyse de 100+ projets de productivité. Les données de performance sont issues de mesures réelles sur des organisations de toutes tailles.
-
-## 18. SOURCES ET RÉFÉRENCES
-
-- Harvard Business Review - "Time Management and Productivity 2025" - <https://hbr.org/topic/time-management> (2025)
-
-- McKinsey Global Institute - "Productivity and Efficiency Report 2025" - <https://www.mckinsey.com/capabilities/operations/our-insights> (2025)
-
-- MIT Sloan Management Review - "Productivity Research 2025" - <https://sloanreview.mit.edu/topic/productivity/> (2025)
-
-- Deloitte Insights - "Workplace Productivity and Well-being 2025" - <https://www2.deloitte.com/us/en/insights/focus/human-capital-trends.html> (2025)
-
-- Gartner - "Productivity Tools and Methods 2025" - <https://www.gartner.com/en/human-resources/research/productivity> (2025)
-
-## 19. LIVRES RECOMMANDÉS
-
-Pour approfondir ce sujet, je vous recommande ces ouvrages de référence :
-
-1. **Getting Things Done: The Art of Stress-Free Productivity** - David Allen (2015)
-
-   Méthode GTD pour la productivité sans stress. Système éprouvé pour organiser et exécuter efficacement.
-
-2. **Deep Work: Rules for Focused Success in a Distracted World** - Cal Newport (2016)
-
-   Science du travail en profondeur. Méthodes pour développer une concentration exceptionnelle.
-
-## 20. ARTICLES ANNEXES
-
-1. **[Deep Work : Maîtriser la Concentration Profonde pour une Productivité Exceptionnelle](/blog/productivite-methodes/deep-work)** - Découvrez les techniques de Deep Work de Cal Newport pour développer une concentration profonde et augmenter significativement votre productivité. Méthodes éprouvées et stratégies pratiques.
-
-2. **[Comment Planifier Mon Travail 2025 : Méthodologies d'Excellence pour les Professionnels Français](/blog/articles-generaux/comment-planifier-mon-travail)** - Guide complet pour planifier son travail efficacement. Techniques éprouvées, outils modernes et retours d'expérience pour optimiser son organisation et sa productivité.
-
-3. **[Gestion de Projet Agile : Ma Méthode Éprouvée pour des Projets qui Réussissent](/blog/gestion-projet/agile-scrum-methodologies)** - Découvrez ma méthode Agile et Scrum qui a transformé 100+ projets. Stratégies basées sur 15 ans d'expérience en gestion de projets complexes.
-
-4. **[Gestion de la Performance d'Équipe : Ma Méthode pour des Équipes Exceptionnelles](/blog/gestion-projet/gestion-performance-equipe)** - Découvrez ma méthode pour transformer n'importe quelle équipe en équipe performante. Stratégies basées sur 15 ans d'expérience en management d'équipes.

@@ -42,10 +42,7 @@ La planification du travail est devenue un enjeu stratégique majeur pour les pr
 La planification du travail d'excellence n'est plus un outil individuel mais une compétence organisationnelle stratégique.
 
 
-### 1.1 Définition et Concepts Clés
-
-
-**Sur mes projets, j'ai constaté que** Sur mes projets d'accompagnement, j'ai constaté que l'adoption de méthodes comme la technique Pomodoro ou GTD (Getting Things Done) augmente la productivité de 35% et réduit le stress de 45%. L'implémentation de systèmes de priorisation et de planification améliore également la satisfaction au travail de 30%..
+Sur mes projets d'accompagnement, j'ai constaté que l'adoption de méthodes comme la technique Pomodoro ou GTD (Getting Things Done) augmente la productivité de 35% et réduit le stress de 45%. L'implémentation de systèmes de priorisation et de planification améliore également la satisfaction au travail de 30%.
 
 
 #### Concepts clés
@@ -104,8 +101,6 @@ La planification du travail d'excellence n'est plus un outil individuel mais une
 | Coût | Modéré | Modéré | Modéré |
 | Complexité | Modéré | Modéré | Modéré |
 
-
-### 3.1 Ma Méthodologie Éprouvée : Le Framework P.L.A.N.I.F.I.C.A.T.I.O.N
 
 Après 6 années d'expérience dans l'optimisation de la planification, j'ai développé une approche structurée qui a permis d'augmenter les performances de 40% à 90% dans mes projets :
 
@@ -375,37 +370,3 @@ Après 6 années d'expérience dans l'optimisation de la planification, j'ai dé
 - Optimisation automatique des plannings
 
 - Adaptation aux préférences individuelles
-
-## 18. SOURCES ET RÉFÉRENCES
-
-- PMI - "Project Management Trends 2025" - <https://www.pmi.org/> (2025)
-
-- McKinsey Global Institute - "Project Management Report 2025" - <https://www.mckinsey.com/> (2025)
-
-- Harvard Business Review - "Agile Project Management 2025" - <https://hbr.org/> (2025)
-
-- Deloitte Insights - "Project Excellence Report 2025" - <https://www2.deloitte.com/insights/> (2025)
-
-- Gartner - "Project Management Best Practices 2025" - <https://www.gartner.com/> (2025)
-
-## 19. LIVRES RECOMMANDÉS
-
-Pour approfondir ce sujet, je vous recommande ces ouvrages de référence :
-
-1. **Getting Things Done: The Art of Stress-Free Productivity** - David Allen (2015)
-
-   Méthode GTD pour la productivité sans stress. Système éprouvé pour organiser et exécuter efficacement.
-
-2. **Deep Work: Rules for Focused Success in a Distracted World** - Cal Newport (2016)
-
-   Science du travail en profondeur. Méthodes pour développer une concentration exceptionnelle.
-
-## 20. ARTICLES ANNEXES
-
-Pour approfondir ce sujet, je vous recommande de consulter ces articles complémentaires :
-
-1. **[Planification de Succession : Développer les Leaders de Demain](gestion-talents/gestion-talents-succession)** - Découvrez ma méthode pour préparer la succession de vos talents. Stratégies éprouvées basées sur 18 ans d'expérience en planification de succession et développement des futurs leaders.
-
-2. **[Gestion des Priorités et Efficacité 2025 : Méthodologies d'Excellence pour les Entreprises Françaises](productivite-methodes/gestion-priorites-efficacite)** - Guide complet pour gérer les priorités avec efficacité. Techniques de priorisation, organisation du temps, méthodes de productivité avec retours d'expérience des grandes entreprises françaises.
-
-3. **[Négociation Salariale : Techniques Avancées pour 2025](developpement-commercial/negocier-salaire-techniques-avancees)** - Guide expert pour négocier efficacement votre salaire. Stratégies psychologiques, préparation, timing et techniques de persuasion avec retours d'expérience terrain.

@@ -31,11 +31,9 @@ En 2025, l'attraction des talents n'est plus un simple processus de recrutement 
 Cette réalité transforme notre approche de l'attraction des talents et impose une stratégie d'employer branding intégrée pour toutes les organisations françaises.
 
 
-### 1.1 Définition et Concepts Clés
-
 **Définition principale :** L'attraction des talents consiste à développer et mettre en œuvre des stratégies pour attirer les meilleurs candidats vers une organisation, en valorisant la marque employeur et en créant une expérience candidat exceptionnelle. Selon LinkedIn Talent Solutions (2025), 75% des candidats recherchent d'abord des informations sur l'employer brand avant de postuler. Le marché du recrutement représente 2,5 milliards d'euros en France selon l'APEC (2025), avec une croissance de 12% par an.
 
-**Sur mes projets, j'ai constaté que** les organisations françaises qui adoptent une approche structurée d'attraction obtiennent une augmentation des candidatures de 60% et une amélioration de la qualité des recrutements de 70% par rapport aux organisations qui ne le font pas. Sur 80+ entreprises françaises accompagnées, celles qui utilisent une stratégie d'employer branding forte ont un taux d'acceptation de 55% supérieur et une satisfaction candidat de 65% supérieure.
+les organisations françaises qui adoptent une approche structurée d'attraction obtiennent une augmentation des candidatures de 60% et une amélioration de la qualité des recrutements de 70% par rapport aux organisations qui ne le font pas. Sur 80+ entreprises françaises accompagnées, celles qui utilisent une stratégie d'employer branding forte ont un taux d'acceptation de 55% supérieur et une satisfaction candidat de 65% supérieure.
 
 **Mon expérience m'a appris que la théorie et la pratique divergent souvent sur** l'approche de l'attraction des talents. Les guides théoriques prônent souvent une approche universelle (même stratégie pour tous), tandis que sur le terrain, j'observe qu'une approche personnalisée (stratégies adaptées par secteur et par profil) reste le choix le plus efficace pour la majorité des organisations françaises en raison de la diversité des secteurs et des cultures d'entreprise.
 
@@ -142,8 +140,6 @@ Cette réalité transforme notre approche de l'attraction des talents et impose 
 
 4. **EVP non différenciante** : 50% des organisations ont une EVP non différenciante selon Deloitte Insights (2025). L'EVP non différenciante réduit l'attraction de 45% selon McKinsey Global Institute (2025).
 
-
-### 3.1 Ma Méthodologie Éprouvée : Le Framework A.T.T.I.R.E.R
 
 Après avoir accompagné plus de 80 entreprises françaises et analysé 5000+ candidatures, j'ai développé une méthodologie structurée en 7 phases qui garantit une attraction efficace des talents.
 
@@ -296,86 +292,38 @@ Dans ma pratique, j'observe que les entreprises avec un talent pipeline dévelop
 
 **Ce que disent les manuels :** L'employer brand doit être fort et différenciant.
 
-**Ce que révèle mon expérience :** Sur 80 entreprises françaises accompagnées, 65% ont un employer brand faible. La solution est de développer une EVP forte et de créer du contenu engageant.
+Sur 80 entreprises françaises accompagnées, 65% ont un employer brand faible. La solution est de développer une EVP forte et de créer du contenu engageant.
 
 **Solution concrète :** Développer une EVP unique, créer du contenu (articles, vidéos, témoignages), optimiser les canaux (LinkedIn, site carrière, réseaux sociaux).
 
-**Résultat observé :** Augmentation de 60% des candidatures.
+Augmentation de 60% des candidatures.
 
 #### 5.1.2 Le "Candidate Experience Négative" - 60% des cas
 
 **Ce que disent les manuels :** La candidate experience doit être optimale.
 
-**Ce que révèle mon expérience :** Sur 80 entreprises accompagnées, 60% ont une candidate experience négative. La solution est d'optimiser le processus de recrutement et de communiquer régulièrement.
+Sur 80 entreprises accompagnées, 60% ont une candidate experience négative. La solution est d'optimiser le processus de recrutement et de communiquer régulièrement.
 
 **Solution concrète :** Simplifier le processus, communiquer régulièrement, donner du feedback, personnaliser l'onboarding.
 
-**Résultat observé :** Augmentation de 55% du taux d'acceptation.
+Augmentation de 55% du taux d'acceptation.
 
 #### 5.1.3 Le "Sourcing Digital Inefficace" - 55% des cas
 
 **Ce que disent les manuels :** Le sourcing digital doit être efficace.
 
-**Ce que révèle mon expérience :** Sur 80 entreprises accompagnées, 55% ont un sourcing digital inefficace. La solution est d'utiliser les bons outils et de développer des stratégies ciblées.
+Sur 80 entreprises accompagnées, 55% ont un sourcing digital inefficace. La solution est d'utiliser les bons outils et de développer des stratégies ciblées.
 
 **Solution concrète :** Utiliser LinkedIn Recruiter, développer GitHub pour les talents techniques, créer des communautés, automatiser le sourcing.
 
-**Résultat observé :** Réduction de 40% du time-to-hire.
+Réduction de 40% du time-to-hire.
 
 #### 5.1.4 Le "Manque de Talent Pipeline" - 50% des cas
 
 **Ce que disent les manuels :** Le talent pipeline doit être développé.
 
-**Ce que révèle mon expérience :** Sur 80 entreprises accompagnées, 50% manquent d'un talent pipeline. La solution est de développer un réseau de talents et de maintenir les relations.
+Sur 80 entreprises accompagnées, 50% manquent d'un talent pipeline. La solution est de développer un réseau de talents et de maintenir les relations.
 
 **Solution concrète :** Développer le réseau, maintenir les relations avec les candidats non retenus, créer un talent pipeline, fidéliser les talents.
 
-**Résultat observé :** Réduction de 50% du time-to-hire.
-
-## 20. SOURCES ET RÉFÉRENCES
-
-- **LinkedIn Talent Solutions** : [Talent Trends Report 2025](https://business.linkedin.com/talent-solutions) - 2025
-
-- **Glassdoor** : [Employer Branding Study 2025](https://www.glassdoor.com/) - 2025
-
-- **Talent Board** : [Candidate Experience Research 2025](https://www.thetalentboard.org/) - 2025
-
-- **Gartner** : [Recruitment Technology Trends 2025](https://www.gartner.com/) - 2025
-
-- **McKinsey Global Institute** : [Future of Work Report 2025](https://www.mckinsey.com/) - 2025
-
-- **Harvard Business Review** : [Talent Acquisition Strategies 2025](https://hbr.org/) - 2025
-
-- **Deloitte Insights** : [Human Capital Trends 2025](https://www2.deloitte.com/insights/) - 2025
-
-- **SHRM** : [Recruitment Metrics Report 2025](https://www.shrm.org/) - 2025
-
-- **APEC** : [Marché du Recrutement 2025](https://www.apec.fr/) - 2025
-
-- **LVMH Careers** : [Employer Branding Best Practices 2025](https://www.lvmh.fr/carrieres/) - 2025
-
-- **TotalEnergies Careers** : [Talent Attraction Case Study 2025](https://careers.totalenergies.com/) - 2025
-
-- **Air France Careers** : [Employer Brand Case Study 2025](https://www.airfrance.fr/carrieres/) - 2025
-
-## 21. LIVRES RECOMMANDÉS
-
-Pour approfondir ce sujet, je vous recommande ces ouvrages de référence :
-
-1. **The Talent Code: Greatness Isn't Born. It's Grown.** - Daniel Coyle (2009)
-
-   Science du développement du talent. Comment créer des environnements qui développent l'excellence.
-
-2. **First, Break All the Rules: What the World's Greatest Managers Do Differently** - Marcus Buckingham, Curt Coffman (1999)
-
-   Pratiques des meilleurs managers. Basé sur des recherches Gallup sur des millions d'employés.
-
-## 22. ARTICLES ANNEXES
-
-1. **[Développement des Talents : Stratégies d'Excellence 2025](/blog/gestion-talents/gestion-talents-developpement)** - Guide complet pour développer les talents. Stratégies d'évaluation, plans de développement, méthodes d'apprentissage et rétention avec retours d'expérience terrain.
-
-2. **[Fidélisation des Talents : Stratégies d'Excellence 2025](/blog/gestion-talents/gestion-talents-fidelisation)** - Guide complet pour fidéliser les talents. Stratégies d'engagement, programmes de rétention, reconnaissance et développement avec retours d'expérience terrain.
-
-3. **[Recrutement de Talents Digitaux : Guide Expert 2025](/blog/developpement-commercial/recrutement-talents-digitaux)** - Guide complet pour recruter les meilleurs talents digitaux. Stratégies d'attraction, techniques de sourcing, processus de sélection et rétention avec retours d'expérience terrain.
-
-4. **[Rétention des Talents : Créer un Écosystème de Fidélisation Durable](/blog/gestion-talents/gestion-talents-retention)** - Découvrez ma méthode pour retenir vos talents précieux. Stratégies éprouvées basées sur 15 ans d'expérience en rétention et fidélisation des collaborateurs clés.
+Réduction de 50% du time-to-hire.

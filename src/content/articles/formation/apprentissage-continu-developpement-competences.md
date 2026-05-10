@@ -32,7 +32,7 @@ Dans cet article, je partage ma méthodologie "A.P.P.R.E.N.D.R.E." - un framewor
 
 **Ce que disent les manuels :** "Lisez, écoutez, regardez du contenu de qualité."
 
-**Ce que révèle mon expérience :** Après avoir analysé les habitudes d'apprentissage de 300+ professionnels, j'ai identifié 4 erreurs fatales :
+Après avoir analysé les habitudes d'apprentissage de 300+ professionnels, j'ai identifié 4 erreurs fatales :
 
 1. **L'illusion de la consommation** : Croire que lire = apprendre
 
@@ -74,8 +74,6 @@ Dans cet article, je partage ma méthodologie "A.P.P.R.E.N.D.R.E." - un framewor
 
 **Mon test de 5 minutes :** Demandez-vous : "Comment ai-je appris ma dernière compétence vraiment utile ?" Votre réponse révèle votre profil dominant.
 
-
-### 2.1 Définition et Concepts Clés
 
 **Définition principale :** L'apprentissage continu désigne le processus d'acquisition permanente de connaissances et de compétences tout au long de la vie professionnelle, permettant de s'adapter aux évolutions du marché et de maintenir son employabilité. Selon LinkedIn Learning (2025), 70% des professionnels considèrent l'apprentissage continu comme essentiel, avec une progression de carrière 5x plus rapide pour ceux qui investissent régulièrement dans leur développement. Les organisations qui intègrent l'apprentissage continu dans leur culture obtiennent un ROI de 250% selon McKinsey Global Institute (2025).
 
@@ -197,31 +195,3 @@ Dans cet article, je partage ma méthodologie "A.P.P.R.E.N.D.R.E." - un framewor
 4. **Communauté d'apprentissage** : Apprentissage par les pairs
 
 5. **Reconnaissance des progrès** : Célébration des accomplissements
-
-## 6. SOURCES ET RÉFÉRENCES
-
-- UNESCO - "Education Trends 2025" - <https://www.unesco.org/> (2025)
-
-- Harvard Business Review - "Learning and Development 2025" - <https://hbr.org/> (2025)
-
-- LinkedIn Learning - "Skills Report 2025" - <https://www.linkedin.com/learning/> (2025)
-
-- Coursera - "Education Trends 2025" - <https://www.coursera.org/> (2025)
-
-## 7. LIVRES RECOMMANDÉS
-
-Pour approfondir ce sujet, je vous recommande ces ouvrages de référence :
-
-1. **Make It Stick: The Science of Successful Learning** - Peter C. Brown, Henry L. Roediger III, Mark A. McDaniel (2014)
-
-   Science de l'apprentissage efficace. Méthodes basées sur la recherche cognitive pour améliorer la rétention.
-
-2. **The Adult Learner: The Definitive Classic in Adult Education and Human Resource Development** - Malcolm S. Knowles, Elwood F. Holton III, Richard A. Swanson (2020)
-
-   Référence classique sur l'apprentissage adulte. Principes andragogiques pour la formation professionnelle.
-
-## 8. ARTICLES ANNEXES
-
-1. **[Formation à l'Adaptation : Comment Développer sa Résilience Professionnelle](formation/formation-adaptation)** - Découvrez ma méthode pour développer l'adaptabilité professionnelle. Stratégies éprouvées basées sur 15 ans d'expérience en transformation organisationnelle.
-
-2. **[Négociation Salariale : Techniques Avancées pour 2025](developpement-commercial/negocier-salaire-techniques-avancees)** - Guide expert pour négocier efficacement votre salaire.

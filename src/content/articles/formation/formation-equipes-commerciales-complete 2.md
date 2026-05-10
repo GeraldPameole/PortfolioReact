@@ -14,8 +14,6 @@ theme: formation
 ---
 
 
-### 3.1 Ma Méthodologie Éprouvée : Le Framework V.E.N.D.R.E
-
 Après 15 ans d'expérience dans l'accompagnement d'équipes commerciales et d'organisations, j'ai développé une approche structurée qui a permis d'augmenter les taux de succès de 40% à 90% dans mes projets :
 
 #### V - Valoriser les Besoins (Semaine 1)
@@ -34,7 +32,7 @@ Après 15 ans d'expérience dans l'accompagnement d'équipes commerciales et d'o
 
 3. **"Diagnostic structuré"** : Analyser les besoins de manière systématique
 
-**Résultat observé :** 80% des commerciaux découvrent qu'ils ne comprennent pas vraiment les besoins clients.
+80% des commerciaux découvrent qu'ils ne comprennent pas vraiment les besoins clients.
 
 
 #### Ma stratégie
@@ -59,7 +57,7 @@ Après 15 ans d'expérience dans l'accompagnement d'équipes commerciales et d'o
 
 - **"Gestion des objections"** : Transformer les objections en opportunités
 
-**Impact mesuré :** +200% de marge vs négociation classique.
++200% de marge vs négociation classique.
 
 
 #### Frameworks reconnus
@@ -166,43 +164,3 @@ Ayant testé personnellement plusieurs outils dans ce domaine sur des projets va
 2. **Solution 2** : Description de la deuxième solution avec impact démontré selon les sources fiables (2025).
 
 3. **Solution 3** : Description de la troisième solution avec efficacité prouvée selon les sources fiables (2025).
-
-## 11. SOURCES ET RÉFÉRENCES
-
-- **Harvard Business Review** - "Sales Training and Performance 2025" - <https://hbr.org/> (2025)
-
-- **McKinsey Global Institute** - "Future of Sales and Commercial Teams Report 2025" - <https://www.mckinsey.com/> (2025)
-
-- **MIT Sloan Management Review** - "Consultative Selling and Sales Performance 2025" - <https://sloanreview.mit.edu/> (2025)
-
-- **Deloitte Insights** - "Human Capital Trends: Sales Training 2025" - <https://www2.deloitte.com/insights/> (2025)
-
-- **LinkedIn Learning** - "Workplace Sales Training Report 2025" - <https://www.linkedin.com/learning/> (2025)
-
-- **Gallup** - "Employee Engagement and Sales Performance 2025" - <https://www.gallup.com/> (2025)
-
-- **Gartner** - "Sales Technology Trends 2025" - <https://www.gartner.com/> (2025)
-
-- **International Coaching Federation** - "Coaching for Sales Performance 2025" - <https://coachingfederation.org/> (2025)
-
-## 12. LIVRES RECOMMANDÉS
-
-Pour approfondir ce sujet, je vous recommande ces ouvrages de référence :
-
-1. **Make It Stick: The Science of Successful Learning** - Peter C. Brown, Henry L. Roediger III, Mark A. McDaniel (2014)
-
-   Science de l'apprentissage efficace. Méthodes basées sur la recherche cognitive pour améliorer la rétention.
-
-2. **The Adult Learner: The Definitive Classic in Adult Education and Human Resource Development** - Malcolm S. Knowles, Elwood F. Holton III, Richard A. Swanson (2020)
-
-   Référence classique sur l'apprentissage adulte. Principes andragogiques pour la formation professionnelle.
-
-## 13. ARTICLES ANNEXES
-
-1. **[Apprentissage Continu : Comment Développer ses Compétences en Mode Expert](/blog/formation/apprentissage-continu-developpement-competences)** - Découvrez ma méthode éprouvée pour un apprentissage continu efficace. Stratégies basées sur 15 ans d'expérience en formation et développement des compétences.
-
-2. **[Formation à l'Adaptation : Comment Développer sa Résilience Professionnelle](/blog/formation/formation-adaptation)** - Découvrez ma méthode pour développer l'adaptabilité professionnelle. Stratégies éprouvées basées sur 15 ans d'expérience en transformation organisationnelle.
-
-3. **[Formation et Collaboration : Méthodes d'Excellence pour les Équipes Performantes](/blog/formation/formation-collaboration)** - Guide complet pour développer la collaboration au sein des équipes. Techniques éprouvées, outils modernes et retours d'expérience pour optimiser la performance collective.
-
-4. **[Formation Communication : Techniques pour Communiquer avec Impact et Clarté](/blog/formation/formation-communication)** - Découvrez les meilleures pratiques pour la communication professionnelle. Techniques éprouvées, outils modernes et retours d'expérience pour optimiser la communication.

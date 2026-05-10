@@ -1,13 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500" fill="none">
   <defs>
     <linearGradient id="bg4" x1="0" y1="0" x2="800" y2="500" gradientUnits="userSpaceOnUse">
       <stop offset="0%" stop-color="#050816"/>
       <stop offset="100%" stop-color="#1a0d05"/>
     </linearGradient>
-    <filter id="glow4">
-      <feGaussianBlur stdDeviation="3" result="blur"/>
-      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
   </defs>
 
   <rect width="800" height="500" fill="url(#bg4)"/>
@@ -28,17 +24,17 @@
 
   <!-- Funnel levels -->
   <!-- L1: Prospects -->
-  <rect x="80" y="128" width="300" height="44" rx="6" fill="#fb923c" opacity="0.85" filter="url(#glow4)"/>
+  <rect x="80" y="128" width="300" height="44" rx="6" fill="#fb923c" opacity="0.85"/>
   <text x="230" y="148" font-family="sans-serif" font-size="12" fill="#fff" text-anchor="middle" font-weight="700">Prospects qualifiés</text>
   <text x="230" y="163" font-family="monospace" font-size="10" fill="#fff" text-anchor="middle" opacity="0.8">240 contacts</text>
 
   <!-- L2: Qualified -->
-  <rect x="100" y="182" width="260" height="44" rx="6" fill="#fb923c" opacity="0.72" filter="url(#glow4)"/>
+  <rect x="100" y="182" width="260" height="44" rx="6" fill="#fb923c" opacity="0.72"/>
   <text x="230" y="202" font-family="sans-serif" font-size="12" fill="#fff" text-anchor="middle" font-weight="700">RDV confirmés</text>
   <text x="230" y="217" font-family="monospace" font-size="10" fill="#fff" text-anchor="middle" opacity="0.8">98 rendez-vous</text>
 
   <!-- L3: Proposal -->
-  <rect x="120" y="236" width="220" height="44" rx="6" fill="#fb923c" opacity="0.6" filter="url(#glow4)"/>
+  <rect x="120" y="236" width="220" height="44" rx="6" fill="#fb923c" opacity="0.6"/>
   <text x="230" y="256" font-family="sans-serif" font-size="12" fill="#fff" text-anchor="middle" font-weight="700">Propositions envoyées</text>
   <text x="230" y="271" font-family="monospace" font-size="10" fill="#fff" text-anchor="middle" opacity="0.8">54 devis</text>
 
@@ -48,7 +44,7 @@
   <text x="230" y="325" font-family="monospace" font-size="10" fill="#fff" text-anchor="middle" opacity="0.8">31 en cours</text>
 
   <!-- L5: Closed -->
-  <rect x="160" y="344" width="140" height="48" rx="6" fill="#fb923c" opacity="0.9" filter="url(#glow4)"/>
+  <rect x="160" y="344" width="140" height="48" rx="6" fill="#fb923c" opacity="0.9"/>
   <text x="230" y="366" font-family="sans-serif" font-size="13" fill="#fff" text-anchor="middle" font-weight="800">✓ Signés</text>
   <text x="230" y="383" font-family="monospace" font-size="10" fill="#fff" text-anchor="middle">24 contrats</text>
 
@@ -59,7 +55,7 @@
   <!-- CA growth -->
   <text x="450" y="145" font-family="monospace" font-size="10" fill="#94a3b8">Croissance CA</text>
   <rect x="580" y="134" width="160" height="10" rx="5" fill="#ffffff08"/>
-  <rect x="580" y="134" width="160" height="10" rx="5" fill="#fb923c" filter="url(#glow4)" opacity="0.9"/>
+  <rect x="580" y="134" width="160" height="10" rx="5" fill="#fb923c" opacity="0.9"/>
   <text x="750" y="145" font-family="monospace" font-size="11" fill="#fb923c" text-anchor="end">+40%</text>
 
   <!-- Retention -->
@@ -92,7 +88,7 @@
 
   <rect x="450" y="336" width="292" height="60" rx="6" fill="#fb923c08" stroke="#fb923c18" stroke-width="1"/>
   <text x="596" y="360" font-family="monospace" font-size="10" fill="#94a3b8" text-anchor="middle">CRM Salesforce — Pipeline actif</text>
-  <text x="596" y="380" font-family="monospace" font-size="20" fill="#fb923c" text-anchor="middle" font-weight="800" filter="url(#glow4)">240 K€</text>
+  <text x="596" y="380" font-family="monospace" font-size="20" fill="#fb923c" text-anchor="middle" font-weight="800">240 K€</text>
 
   <!-- Title -->
   <text x="400" y="46" font-family="monospace" font-size="13" fill="#c8c8d0" text-anchor="middle" font-weight="600" letter-spacing="2">MANAGER DÉVELOPPEMENT COMMERCIAL</text>
