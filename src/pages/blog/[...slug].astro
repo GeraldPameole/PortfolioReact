@@ -1,293 +1,563 @@
 ---
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import BackButton from '../../components/BackButton.astro';
 import ArticleProgressBar from '../../components/ArticleProgressBar.astro';
-import { calculateReadingTime, mapToStandardTheme, standardThemes } from '../../utils/themeUtils';
+import BackToTop from '../../components/BackToTop.astro';
+import { calculateReadingTime, mapToStandardTheme } from '../../utils/themeUtils';
 
 export async function getStaticPaths() {
-	const articles = await getCollection('articles');
-	return articles.map(article => ({
-		params: { slug: article.slug },
-		props: { article },
-	}));
+  const all = await getCollection('articles');
+  const sorted = all.sort(
+    (a, b) => new Date(b.data.publishDate).getTime() - new Date(a.data.publishDate).getTime()
+  );
+  return sorted.map((article, idx) => ({
+    params: { slug: article.slug },
+    props: {
+      article,
+      prev: idx < sorted.length - 1 ? sorted[idx + 1] : null,
+      next: idx > 0                  ? sorted[idx - 1] : null,
+    },
+  }));
 }
 
-const { article } = Astro.props;
+const { article, prev, next } = Astro.props;
 const { Content } = await article.render();
-const theme = article.data.theme || (article.data.tags && article.data.tags.length > 0 ? article.data.tags[0] : "autre");
-const standardTheme = mapToStandardTheme(theme);
-const themeConfig = standardThemes[standardTheme];
 
-// Métadonnées pour SEO
-const pageTitle = `${article.data.title} | Blog`;
-const pageDescription = article.data.description;
+const domain     = (article.data as any).domain ?? '';
+const tags       = article.data.tags ?? [];
+const readTime   = calculateReadingTime(article.body ?? '');
+const date       = new Date(article.data.publishDate).toLocaleDateString('fr-FR', {
+  year: 'numeric', month: 'long', day: 'numeric',
+});
+const themeKey   = mapToStandardTheme(domain || tags[0]);
+
+// Related: same domain, exclude current, max 3
+const allArticles   = await getCollection('articles');
+const related = allArticles
+  .filter(a => a.slug !== article.slug && (a.data as any).domain === domain)
+  .sort((a, b) => new Date(b.data.publishDate).getTime() - new Date(a.data.publishDate).getTime())
+  .slice(0, 3);
+
+// Domain accent color
+const DOMAIN_COLOR: Record<string, string> = {
+  'gestion-projet':           'var(--cyan)',
+  'developpement-web':        '#34d399',
+  'qualite-process':          '#c4b5fd',
+  'formation':                '#fbbf24',
+  'developpement-commercial': '#fb923c',
+  'leadership-management':    'var(--violet-light)',
+  'productivite-methodes':    'var(--cyan)',
+  'marketing-communication':  '#f9a8d4',
+  'innovation-technologies':  '#a78bfa',
+  'transformation-digitale':  '#22d3ee',
+  'gestion-talents':          '#86efac',
+  'service-client':           '#67e8f9',
+  'gestion-connaissances':    '#fde68a',
+  'outils-techniques':        '#94a3b8',
+  'reconversion-carriere':    '#fca5a5',
+};
+const accent   = DOMAIN_COLOR[domain] ?? 'var(--violet-light)';
+const domLabel = domain.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+
+// Article image for og:image
+const ogImage = (article.data as any).image
+  ?? `/assets/articles/${article.slug.split('/').pop()}.jpg`
+  ?? '/placeholder-article.webp';
 ---
 
-<BaseLayout 
-	title={pageTitle} 
-	description={pageDescription}
-	customClass="bg-gradient-to-br from-gray-50 to-white dark:from-gray-900 dark:to-gray-800"
-	fullWidth={true}
+<BaseLayout
+  title={article.data.title}
+  description={article.data.description}
+  image={ogImage}
+  type="article"
+  keywords={(tags as string[]).join(', ')}
 >
-	<main class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-12 relative">
-		<BackButton href="/blog" text="Retour aux articles" />
-		<ArticleProgressBar />
-		
-		<article class="content-typography prose-lg dark:prose-invert max-w-none">
-			<header class="mb-12">
-				<!-- Domaine et Date de parution -->
-				<div class="flex items-center gap-4 mb-6">
-					<span class="px-4 py-2 rounded-full text-sm font-medium bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200">
-						{article.data.domain ? article.data.domain.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase()) : 'Domaine non défini'}
-					</span>
-					<span class="mx-2 text-gray-400">•</span>
-					<time class="text-[#111827] dark:text-gray-400">
-						{new Date(article.data.publishDate).toLocaleDateString('fr-FR', {
-							year: 'numeric',
-							month: 'long',
-							day: 'numeric'
-						})}
-					</time>
-					<span class="text-[#111827] dark:text-gray-400 flex items-center">
-						<i class="fas fa-clock mr-1"></i>
-						{calculateReadingTime(article.body)} min de lecture
-					</span>
-				</div>
-				
-				<h1 class="text-4xl font-bold mb-6">{article.data.title}</h1>
-				
-				{article.data.image && (
-					<div class="relative h-96 rounded-xl overflow-hidden mb-8">
-						<img 
-							src={article.data.image} 
-							alt={article.data.title} 
-							class="w-full h-full object-cover"
-						/>
-					</div>
-				)}
-				
-				<p class="text-xl text-[#111827] dark:text-gray-300 mb-8">{article.data.description}</p>
-				
-				{article.data.tags && article.data.tags.length > 0 && (
-					<div class="flex flex-wrap gap-2">
-						{article.data.tags.map((tag) => (
-							<span class="px-3 py-1 bg-gray-100 dark:bg-gray-800 text-[#111827] dark:text-gray-300 rounded-full text-sm">
-								#{tag}
-							</span>
-						))}
-					</div>
-				)}
-			</header>
-			
-			<div class="content">
-				<Content />
-			</div>
-		</article>
-	</main>
+  <ArticleProgressBar />
+
+  <!-- Hero -->
+  <div class="article-hero">
+    <div class="orb orb-violet" style="width:350px;height:350px;top:-100px;right:-80px;opacity:0.2;"></div>
+    <div class="container hero-inner">
+      <a href="/blog" class="back-link">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m15 18-6-6 6-6"/></svg>
+        Tous les articles
+      </a>
+
+      <div class="hero-badges">
+        {domain && (
+          <span class="domain-badge" style={`color:${accent};background:${accent}12;border-color:${accent}30`}>
+            {domLabel}
+          </span>
+        )}
+        <span class="meta-item">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          {readTime} min de lecture
+        </span>
+        <time class="meta-item">{date}</time>
+      </div>
+
+      <h1 class="hero-title">{article.data.title}</h1>
+      {article.data.description && (
+        <p class="hero-desc">{article.data.description}</p>
+      )}
+
+      {tags.length > 0 && (
+        <div class="tag-list">
+          {(tags as string[]).map(t => (
+            <span class="tag" style={`border-color:${accent}30;color:${accent}`}>#{t}</span>
+          ))}
+        </div>
+      )}
+    </div>
+  </div>
+
+  <!-- Article layout -->
+  <div class="article-body">
+    <div class="container article-layout">
+
+      <!-- Main content -->
+      <article class="prose-article">
+        <Content />
+      </article>
+
+      <!-- Sticky sidebar -->
+      <aside class="article-sidebar">
+
+        <!-- Quick meta -->
+        <div class="sidebar-card">
+          <p class="sidebar-label">À propos de cet article</p>
+          <div class="sidebar-meta-row">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <span>{readTime} min de lecture</span>
+          </div>
+          <div class="sidebar-meta-row">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            <span>{date}</span>
+          </div>
+          {domain && (
+            <div class="sidebar-meta-row">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+              <span style={`color:${accent}`}>{domLabel}</span>
+            </div>
+          )}
+        </div>
+
+        <!-- Tags -->
+        {tags.length > 0 && (
+          <div class="sidebar-card">
+            <p class="sidebar-label">Tags</p>
+            <div class="tag-list" style="gap:.35rem">
+              {(tags as string[]).map(t => (
+                <span class="tag" style={`border-color:${accent}30;color:${accent}`}>#{t}</span>
+              ))}
+            </div>
+          </div>
+        )}
+
+        <!-- CTA -->
+        <div class="sidebar-card" style={`border-color:${accent}25`}>
+          <p class="sidebar-label">Un projet similaire ?</p>
+          <p style="font-size:.85rem;color:var(--text-3);line-height:1.7;margin-bottom:1.25rem">
+            Discutons de vos enjeux — je réponds sous 24h.
+          </p>
+          <a href="/contact" class="btn btn-primary" style="width:100%;justify-content:center;font-size:.875rem">
+            Me contacter →
+          </a>
+        </div>
+
+      </aside>
+    </div>
+  </div>
+
+  <!-- ── Related articles ────────────────────────────────────────────────── -->
+  {related.length > 0 && (
+    <section class="section" style="padding-top:0;border-top:1px solid var(--border)">
+      <div class="container">
+        <div class="section-header" style="margin-bottom:2rem">
+          <span class="section-label">Sur le même domaine</span>
+          <h2 style="font-size:1.5rem;margin:.5rem 0 0">
+            Articles <span class="gradient-text">liés</span>
+          </h2>
+        </div>
+        <div class="related-grid">
+          {related.map(r => {
+            const rDomain  = (r.data as any).domain ?? '';
+            const rAccent  = DOMAIN_COLOR[rDomain] ?? 'var(--violet-light)';
+            const rDate    = new Date(r.data.publishDate).toLocaleDateString('fr-FR', { month: 'short', year: 'numeric' });
+            const rRead    = Math.max(1, Math.ceil((r.body ?? '').split(/\s+/).length / 200));
+            return (
+              <a href={`/blog/${r.slug}`} class="related-card reveal">
+                <div class="rc-accent" style={`background:${rAccent}`}></div>
+                <div class="rc-body">
+                  <div class="rc-meta">
+                    <span style={`color:${rAccent};font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;font-family:var(--font-mono)`}>
+                      {rDomain.replace(/-/g,' ').replace(/\b\w/g,(c:string)=>c.toUpperCase())}
+                    </span>
+                    <span style="color:var(--text-4);font-size:.72rem;font-family:var(--font-mono)">{rRead} min · {rDate}</span>
+                  </div>
+                  <h3 class="rc-title">{r.data.title}</h3>
+                  <p class="rc-desc">{r.data.description}</p>
+                  <span class="rc-cta" style={`color:${rAccent}`}>Lire l'article →</span>
+                </div>
+              </a>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- ── Prev / Next navigation ─────────────────────────────────────────── -->
+  <nav class="article-nav" aria-label="Navigation entre articles">
+    <div class="container nav-inner">
+      {prev ? (
+        <a href={`/blog/${prev.slug}`} class="nav-card nav-prev">
+          <span class="nav-dir">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m15 18-6-6 6-6"/></svg>
+            Article précédent
+          </span>
+          <span class="nav-title">{prev.data.title}</span>
+          <span class="nav-domain">{((prev.data as any).domain ?? '').replace(/-/g,' ').replace(/\b\w/g,(c:string)=>c.toUpperCase())}</span>
+        </a>
+      ) : <div/>}
+
+      {next ? (
+        <a href={`/blog/${next.slug}`} class="nav-card nav-next">
+          <span class="nav-dir">
+            Article suivant
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m9 18 6-6-6-6"/></svg>
+          </span>
+          <span class="nav-title">{next.data.title}</span>
+          <span class="nav-domain">{((next.data as any).domain ?? '').replace(/-/g,' ').replace(/\b\w/g,(c:string)=>c.toUpperCase())}</span>
+        </a>
+      ) : <div/>}
+    </div>
+  </nav>
+
+  <BackToTop />
 </BaseLayout>
 
 <style>
-	/* Styles unifiés gérés par content.css */
-	
-	.prose h2 {
-		@apply text-3xl font-bold mt-12 mb-6;
-	}
-	
-	.prose h3 {
-		@apply text-2xl font-bold mt-8 mb-4;
-	}
-	
-	.prose p {
-		@apply mb-6 leading-relaxed;
-	}
-	
-	.prose ul, .prose ol {
-		@apply mb-6 pl-6;
-	}
-	
-	.prose li {
-		@apply mb-2;
-	}
-	
-	.prose code {
-		@apply bg-gray-100 dark:bg-gray-800 px-2 py-1 rounded text-sm;
-	}
-	
-	.prose pre {
-		@apply bg-gray-100 dark:bg-gray-800 p-4 rounded-lg overflow-x-auto mb-6;
-	}
-	
-	.prose blockquote {
-		@apply border-l-4 border-indigo-500 pl-4 italic my-6;
-	}
-	
-	.prose img {
-		@apply rounded-lg my-6;
-	}
+/* ── Hero ──────────────────────────────────────────────────────────────── */
+.article-hero {
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 3.5rem;
+}
+.hero-inner {
+  position: relative;
+  z-index: 1;
+  padding-top: 6.5rem;
+  max-width: 820px;
+}
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: .45rem;
+  color: var(--text-3);
+  font-family: var(--font-mono);
+  font-size: .82rem;
+  text-decoration: none;
+  margin-bottom: 2rem;
+  transition: color .2s;
+}
+.back-link:hover { color: var(--text-1); }
 
-	/* Styles pour les tableaux - Amélioration de la visibilité */
-	.content-typography table,
-	.prose table {
-		width: 100%;
-		border-collapse: collapse;
-		margin: 2rem 0;
-		font-size: 0.875rem;
-		background: white;
-		border-radius: 0.5rem;
-		overflow: hidden;
-		box-shadow: 
-			0 4px 6px -1px rgb(0 0 0 / 0.1),
-			0 2px 4px -2px rgb(0 0 0 / 0.1);
-		border: 2px solid #e5e7eb;
-		display: table;
-		table-layout: auto;
-	}
+.hero-badges {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: .6rem;
+  margin-bottom: 1.25rem;
+}
+.domain-badge {
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  padding: .25rem .85rem;
+  border-radius: var(--r-full);
+  border: 1px solid;
+  font-family: var(--font-sans);
+}
+.meta-item {
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
+  font-family: var(--font-mono);
+  font-size: .78rem;
+  color: var(--text-3);
+}
+.hero-title {
+  font-size: clamp(1.7rem, 4vw, 3rem);
+  color: var(--text-1);
+  line-height: 1.2;
+  margin: 0 0 1.1rem;
+  letter-spacing: -.02em;
+}
+.hero-desc {
+  font-size: 1.08rem;
+  color: var(--text-3);
+  line-height: 1.8;
+  max-width: 680px;
+  margin: 0 0 1.5rem;
+}
+.tag-list { display: flex; flex-wrap: wrap; gap: .4rem; }
+.tag {
+  font-size: .72rem;
+  font-family: var(--font-mono);
+  font-weight: 500;
+  padding: .22rem .65rem;
+  border-radius: var(--r-full);
+  border: 1px solid;
+}
 
-	.dark .content-typography table,
-	.dark .prose table {
-		background: #1f2937;
-		border: 2px solid #374151;
-	}
+/* ── Layout ────────────────────────────────────────────────────────────── */
+.article-body { padding: 3.5rem 0 5rem; }
+.article-layout {
+  display: grid;
+  grid-template-columns: 1fr 260px;
+  gap: 4rem;
+  align-items: flex-start;
+}
 
-	/* En-têtes de tableau */
-	.content-typography thead,
-	.prose thead {
-		background: #6b7280;
-		border-bottom: 2px solid #4b5563;
-	}
+/* ── Prose ─────────────────────────────────────────────────────────────── */
+.prose-article { min-width: 0; }
+.prose-article :global(h1) { display: none; }
+.prose-article :global(h2) {
+  font-size: 1.45rem;
+  color: var(--text-1);
+  font-family: var(--font-sans);
+  font-weight: 700;
+  margin: 3rem 0 .85rem;
+  padding-bottom: .6rem;
+  border-bottom: 1px solid var(--border);
+}
+.prose-article :global(h3) {
+  font-size: 1.15rem;
+  color: var(--violet-light);
+  font-family: var(--font-sans);
+  font-weight: 700;
+  margin: 2.2rem 0 .6rem;
+}
+.prose-article :global(h4) { color: var(--text-2); font-size: 1rem; margin: 1.5rem 0 .4rem; }
+.prose-article :global(p)  { color: var(--text-2); line-height: 1.9; margin-bottom: 1.2rem; font-size: .975rem; }
+.prose-article :global(ul),
+.prose-article :global(ol) { color: var(--text-2); margin-bottom: 1.2rem; padding-left: 1.6rem; }
+.prose-article :global(li) { margin-bottom: .5rem; line-height: 1.75; }
+.prose-article :global(strong) { color: var(--text-1); font-weight: 600; }
+.prose-article :global(em)     { color: var(--cyan-light); font-style: italic; }
+.prose-article :global(a)      { color: var(--violet-light); text-decoration: underline; text-underline-offset: 3px; }
+.prose-article :global(a:hover){ color: var(--violet); }
+.prose-article :global(blockquote) {
+  border-left: 3px solid var(--violet);
+  padding: .85rem 1.5rem;
+  margin: 1.75rem 0;
+  background: rgba(145,94,255,0.06);
+  border-radius: 0 var(--r-md) var(--r-md) 0;
+  color: var(--text-3);
+  font-style: italic;
+}
+.prose-article :global(code) {
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  border-radius: var(--r-sm);
+  padding: .15em .5em;
+  font-size: .88em;
+  color: var(--cyan);
+  font-family: var(--font-mono);
+}
+.prose-article :global(pre) {
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  padding: 1.25rem 1.5rem;
+  overflow-x: auto;
+  margin: 1.5rem 0;
+}
+.prose-article :global(pre code) {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: .875rem;
+  color: var(--text-2);
+}
+.prose-article :global(table) {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.75rem 0;
+  font-size: .88rem;
+}
+.prose-article :global(th) {
+  background: var(--bg-2);
+  color: var(--text-1);
+  padding: .7rem 1rem;
+  text-align: left;
+  font-weight: 700;
+  border-bottom: 1px solid var(--border-bright);
+  font-family: var(--font-sans);
+}
+.prose-article :global(td) {
+  padding: .7rem 1rem;
+  border-bottom: 1px solid var(--border);
+  color: var(--text-2);
+}
+.prose-article :global(tr:last-child td) { border-bottom: none; }
+.prose-article :global(img) {
+  width: 100%;
+  border-radius: var(--r-lg);
+  margin: 1.5rem 0;
+  border: 1px solid var(--border);
+}
+.prose-article :global(hr) {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 2.5rem 0;
+}
 
-	.dark .content-typography thead,
-	.dark .prose thead {
-		background: #4b5563;
-		border-bottom-color: #374151;
-	}
+/* ── Sidebar ────────────────────────────────────────────────────────────── */
+.article-sidebar { position: sticky; top: 6rem; display: flex; flex-direction: column; gap: 1.25rem; }
+.sidebar-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  padding: 1.35rem;
+}
+.sidebar-label {
+  font-family: var(--font-sans);
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--text-3);
+  margin-bottom: .85rem;
+}
+.sidebar-meta-row {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  font-size: .83rem;
+  color: var(--text-3);
+  margin-bottom: .6rem;
+  font-family: var(--font-mono);
+}
+.sidebar-meta-row svg { color: var(--text-4); flex-shrink: 0; }
 
-	.content-typography th,
-	.prose th {
-		padding: 0.75rem 1rem;
-		text-align: left;
-		font-weight: 600;
-		color: #ffffff;
-		border-right: 1px solid #9ca3af;
-		font-size: 0.875rem;
-		line-height: 1.25rem;
-		text-transform: uppercase;
-		letter-spacing: 0.025em;
-		background: #6b7280;
-	}
+/* ── Related articles ───────────────────────────────────────────────────── */
+.related-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+.related-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  text-decoration: none;
+  transition: all .25s var(--ease-out);
+}
+.related-card:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--border-bright);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+.rc-accent { height: 3px; flex-shrink: 0; opacity: .85; }
+.rc-body   { padding: 1.1rem 1.25rem; display: flex; flex-direction: column; gap: .55rem; flex: 1; }
+.rc-meta   { display: flex; align-items: center; justify-content: space-between; gap: .5rem; }
+.rc-title  {
+  font-family: var(--font-sans);
+  font-size: .95rem;
+  font-weight: 700;
+  color: var(--text-1);
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.rc-desc {
+  font-size: .82rem;
+  color: var(--text-3);
+  line-height: 1.65;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  flex: 1;
+}
+.rc-cta { font-family: var(--font-mono); font-size: .78rem; font-weight: 600; margin-top: auto; transition: transform .2s; }
+.related-card:hover .rc-cta { transform: translateX(3px); }
 
-	.dark .content-typography th,
-	.dark .prose th {
-		color: #ffffff;
-		border-right-color: #6b7280;
-		background: #4b5563;
-	}
+/* ── Prev / Next ────────────────────────────────────────────────────────── */
+.article-nav {
+  border-top: 1px solid var(--border);
+  padding: 3rem 0 5rem;
+  background: var(--bg-1);
+}
+.nav-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+.nav-card {
+  display: flex;
+  flex-direction: column;
+  gap: .45rem;
+  padding: 1.5rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  text-decoration: none;
+  transition: all .25s var(--ease-out);
+}
+.nav-card:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--border-bright);
+  transform: translateY(-2px);
+}
+.nav-next { text-align: right; }
+.nav-dir {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  font-family: var(--font-mono);
+  font-size: .75rem;
+  color: var(--text-3);
+  text-transform: uppercase;
+  letter-spacing: .06em;
+}
+.nav-title {
+  font-family: var(--font-sans);
+  font-size: .95rem;
+  font-weight: 700;
+  color: var(--text-1);
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.nav-domain {
+  font-family: var(--font-mono);
+  font-size: .72rem;
+  color: var(--violet-light);
+  text-transform: uppercase;
+  letter-spacing: .05em;
+}
 
-	.content-typography th:last-child,
-	.prose th:last-child {
-		border-right: none;
-	}
-
-	/* Cellules du tableau */
-	.content-typography td,
-	.prose td {
-		padding: 0.75rem 1rem;
-		border-bottom: 1px solid #e2e8f0;
-		border-right: 1px solid #e2e8f0;
-		color: #1e293b;
-		font-size: 0.875rem;
-		line-height: 1.25rem;
-		vertical-align: top;
-		background: white;
-	}
-
-	.dark .content-typography td,
-	.dark .prose td {
-		color: #d1d5db;
-		border-bottom-color: #4b5563;
-		border-right-color: #4b5563;
-		background: #1f2937;
-	}
-
-	.content-typography td:last-child,
-	.prose td:last-child {
-		border-right: none;
-	}
-
-	/* Lignes alternées pour une meilleure lisibilité */
-	.content-typography tbody tr:nth-child(even),
-	.prose tbody tr:nth-child(even) {
-		background: #f8fafc;
-	}
-
-	.content-typography tbody tr:nth-child(even) td,
-	.prose tbody tr:nth-child(even) td {
-		background: #f8fafc;
-	}
-
-	.dark .content-typography tbody tr:nth-child(even),
-	.dark .prose tbody tr:nth-child(even) {
-		background: #374151;
-	}
-
-	.dark .content-typography tbody tr:nth-child(even) td,
-	.dark .prose tbody tr:nth-child(even) td {
-		background: #374151;
-	}
-
-	/* Effet hover sur les lignes */
-	.content-typography tbody tr:hover,
-	.prose tbody tr:hover {
-		background: #f1f5f9;
-		transition: background-color 0.2s ease;
-	}
-
-	.dark .content-typography tbody tr:hover,
-	.dark .prose tbody tr:hover {
-		background: #4b5563;
-	}
-
-	/* Dernière ligne sans bordure */
-	.content-typography tbody tr:last-child td,
-	.prose tbody tr:last-child td {
-		border-bottom: none;
-	}
-
-	/* Conteneur pour tableaux responsives */
-	.content-typography .table-container,
-	.prose .table-container {
-		overflow-x: auto;
-		margin: 2rem 0;
-		border-radius: 0.5rem;
-		box-shadow: 
-			0 1px 3px 0 rgb(0 0 0 / 0.1),
-			0 1px 2px -1px rgb(0 0 0 / 0.1);
-	}
-
-	/* Responsive pour mobile */
-	@media (max-width: 768px) {
-		.content-typography table,
-		.prose table {
-			font-size: 0.75rem;
-		}
-
-		.content-typography th,
-		.content-typography td,
-		.prose th,
-		.prose td {
-			padding: 0.5rem 0.75rem;
-		}
-	}
+/* ── Responsive ─────────────────────────────────────────────────────────── */
+@media(max-width:1000px) {
+  .article-layout { grid-template-columns: 1fr; gap: 2rem; }
+  .article-sidebar { position: static; flex-direction: row; flex-wrap: wrap; }
+  .sidebar-card   { flex: 1; min-width: 220px; }
+}
+@media(max-width:768px)  {
+  .related-grid { grid-template-columns: 1fr; }
+  .nav-inner    { grid-template-columns: 1fr; }
+}
 </style>
-
-<script defer is:inline>
-  // Ajout de Font Awesome
-  if (!document.querySelector('#font-awesome')) {
-    const link = document.createElement('link');
-    link.id = 'font-awesome';
-    link.rel = 'stylesheet';
-    link.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css';
-    document.head.appendChild(link);
-  }
-</script> 
