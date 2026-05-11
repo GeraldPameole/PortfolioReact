@@ -72,6 +72,67 @@ Les indicateurs utiles sont plus inconfortables parce qu'ils montrent la réalit
 
 **La vélocité ajustée** n'est pas le nombre de points livrés — c'est la stabilité de ce nombre. Une équipe qui livre 40 points un sprint, 15 le suivant, puis 60 n'est pas performante : elle est imprévisible. L'objectif n'est pas d'accélérer la vélocité brute mais de la rendre prévisible, ce qui rend le planning honnête.
 
+<div style="overflow-x:auto;margin:2rem 0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 320" style="max-width:100%;height:auto">
+  <rect width="620" height="320" fill="#0a0f2e" rx="12"/>
+  <text x="310" y="28" font-family="sans-serif" font-size="13" font-weight="bold" fill="#c8c8d0" text-anchor="middle">Vélocité par sprint — Instable vs Stable</text>
+  <!-- Y axis label -->
+  <text x="18" y="180" font-family="sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle" transform="rotate(-90,18,170)">Story points</text>
+  <!-- Y axis ticks -->
+  <text x="38" y="260" font-family="sans-serif" font-size="9" fill="#6b7280" text-anchor="end">0</text>
+  <text x="38" y="220" font-family="sans-serif" font-size="9" fill="#6b7280" text-anchor="end">20</text>
+  <text x="38" y="180" font-family="sans-serif" font-size="9" fill="#6b7280" text-anchor="end">40</text>
+  <text x="38" y="140" font-family="sans-serif" font-size="9" fill="#6b7280" text-anchor="end">60</text>
+  <text x="38" y="100" font-family="sans-serif" font-size="9" fill="#6b7280" text-anchor="end">80</text>
+  <text x="38" y="60" font-family="sans-serif" font-size="9" fill="#6b7280" text-anchor="end">100</text>
+  <!-- Grid lines -->
+  <line x1="44" y1="258" x2="606" y2="258" stroke="#1e2a4a" stroke-width="1"/>
+  <line x1="44" y1="218" x2="606" y2="218" stroke="#1e2a4a" stroke-width="1"/>
+  <line x1="44" y1="178" x2="606" y2="178" stroke="#1e2a4a" stroke-width="1"/>
+  <line x1="44" y1="138" x2="606" y2="138" stroke="#1e2a4a" stroke-width="1"/>
+  <line x1="44" y1="98" x2="606" y2="98" stroke="#1e2a4a" stroke-width="1"/>
+  <line x1="44" y1="58" x2="606" y2="58" stroke="#1e2a4a" stroke-width="1"/>
+  <!-- Instability warning line at 30pts (30pts = y218-(30/100*200)=158) -->
+  <line x1="44" y1="158" x2="606" y2="158" stroke="#fbbf24" stroke-width="1.5" stroke-dasharray="6,4"/>
+  <text x="610" y="162" font-family="sans-serif" font-size="8" fill="#fbbf24">seuil</text>
+  <!-- Sprint labels -->
+  <text x="81" y="278" font-family="sans-serif" font-size="9" fill="#94a3b8" text-anchor="middle">S1</text>
+  <text x="149" y="278" font-family="sans-serif" font-size="9" fill="#94a3b8" text-anchor="middle">S2</text>
+  <text x="217" y="278" font-family="sans-serif" font-size="9" fill="#94a3b8" text-anchor="middle">S3</text>
+  <text x="285" y="278" font-family="sans-serif" font-size="9" fill="#94a3b8" text-anchor="middle">S4</text>
+  <text x="353" y="278" font-family="sans-serif" font-size="9" fill="#94a3b8" text-anchor="middle">S5</text>
+  <text x="421" y="278" font-family="sans-serif" font-size="9" fill="#94a3b8" text-anchor="middle">S6</text>
+  <text x="489" y="278" font-family="sans-serif" font-size="9" fill="#94a3b8" text-anchor="middle">S7</text>
+  <text x="557" y="278" font-family="sans-serif" font-size="9" fill="#94a3b8" text-anchor="middle">S8</text>
+  <!-- Instable bars (alternating high/low): S1=70,S2=20,S3=80,S4=15,S5=75,S6=25,S7=85,S8=18 -->
+  <!-- bar height = pts * 2, y = 258 - height -->
+  <rect x="56" y="118" width="24" height="140" rx="3" fill="#00cffd" opacity="0.6"/>
+  <text x="68" y="114" font-family="sans-serif" font-size="8" fill="#00cffd" text-anchor="middle">70</text>
+  <rect x="124" y="218" width="24" height="40" rx="3" fill="#00cffd" opacity="0.6"/>
+  <text x="136" y="214" font-family="sans-serif" font-size="8" fill="#00cffd" text-anchor="middle">20</text>
+  <rect x="192" y="98" width="24" height="160" rx="3" fill="#00cffd" opacity="0.6"/>
+  <text x="204" y="94" font-family="sans-serif" font-size="8" fill="#00cffd" text-anchor="middle">80</text>
+  <rect x="260" y="228" width="24" height="30" rx="3" fill="#00cffd" opacity="0.6"/>
+  <text x="272" y="224" font-family="sans-serif" font-size="8" fill="#00cffd" text-anchor="middle">15</text>
+  <rect x="328" y="108" width="24" height="150" rx="3" fill="#00cffd" opacity="0.6"/>
+  <text x="340" y="104" font-family="sans-serif" font-size="8" fill="#00cffd" text-anchor="middle">75</text>
+  <rect x="396" y="208" width="24" height="50" rx="3" fill="#00cffd" opacity="0.6"/>
+  <text x="408" y="204" font-family="sans-serif" font-size="8" fill="#00cffd" text-anchor="middle">25</text>
+  <rect x="464" y="88" width="24" height="170" rx="3" fill="#00cffd" opacity="0.6"/>
+  <text x="476" y="84" font-family="sans-serif" font-size="8" fill="#00cffd" text-anchor="middle">85</text>
+  <rect x="532" y="222" width="24" height="36" rx="3" fill="#00cffd" opacity="0.6"/>
+  <text x="544" y="218" font-family="sans-serif" font-size="8" fill="#00cffd" text-anchor="middle">18</text>
+  <!-- Stable trend line overlay (target ~50pts stable = y258-100=158) -->
+  <polyline points="68,158 136,158 204,158 272,158 340,158 408,158 476,158 544,158" stroke="#86efac" stroke-width="2" fill="none" stroke-dasharray="5,3"/>
+  <!-- Legend -->
+  <rect x="50" y="292" width="12" height="10" rx="2" fill="#00cffd" opacity="0.7"/>
+  <text x="66" y="301" font-family="sans-serif" font-size="9" fill="#94a3b8">Vélocité réelle (instable)</text>
+  <rect x="234" y="292" width="20" height="2" fill="#86efac"/>
+  <text x="258" y="301" font-family="sans-serif" font-size="9" fill="#94a3b8">Cible stable (50 pts)</text>
+  <rect x="400" y="292" width="20" height="2" fill="#fbbf24" stroke-dasharray="4,3"/>
+  <line x1="400" y1="297" x2="420" y2="297" stroke="#fbbf24" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="424" y="301" font-family="sans-serif" font-size="9" fill="#94a3b8">Seuil instabilité</text>
+</svg></div>
+
 ## Comment faire vivre ces indicateurs sans en faire une bureaucratie
 
 Le piège classique : créer un tableau de bord de dix métriques qu'on remplit le vendredi soir sans jamais en parler. J'ai testé cette approche — elle ne sert à rien.
