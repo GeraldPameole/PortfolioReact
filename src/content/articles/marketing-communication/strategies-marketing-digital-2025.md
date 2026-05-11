@@ -44,7 +44,6 @@ Selon HubSpot (2025), **68% des marketeurs utilisent déjà l'IA** dans leurs ca
 
 #### Les statistiques du marché 2025 sont éloquentes
 
-- Données du marché selon les sources fiables
 
 #### Impact mesuré sur mes projets
 

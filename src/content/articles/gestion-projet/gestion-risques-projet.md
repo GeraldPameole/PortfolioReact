@@ -44,7 +44,6 @@ Selon PMI (2025), **les projets bien gérés ont 2,5 fois plus de chances de ré
 
 #### Les statistiques du marché 2025 sont éloquentes
 
-- Données du marché selon les sources fiables
 
 #### Impact mesuré sur mes projets
 

@@ -45,7 +45,6 @@ Selon McKinsey Global Institute (2025), **l'adoption de bonnes pratiques amélio
 
 #### Les statistiques du marché 2025 sont éloquentes
 
-- Données du marché selon les sources fiables
 
 #### Impact mesuré sur mes projets
 
