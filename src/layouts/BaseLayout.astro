@@ -75,6 +75,9 @@ const pageTitle = `${title} | Gérald Paméole`;
   <!-- JSON-LD structured data -->
   <script type="application/ld+json" set:html={JSON.stringify(jsonLd ?? personSchema)} />
 
+  <!-- Plausible Analytics (privacy-first, no cookie consent needed) -->
+  <script defer data-domain="geraldpameole.fr" src="https://plausible.io/js/script.js"></script>
+
   <slot name="head" />
   <ViewTransitions fallback="swap" />
 </head>

@@ -141,6 +141,16 @@ const shareEmail    = `mailto:?subject=${encodedTitle}&body=${encodedUrl}`;
   <div class="article-body">
     <div class="container article-layout">
 
+      <!-- Mobile ToC (details/summary, hidden on desktop) -->
+      <details class="mobile-toc" id="mobile-toc-details">
+        <summary class="mobile-toc-summary">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="15" y2="12"/><line x1="3" y1="18" x2="18" y2="18"/></svg>
+          Dans cet article
+          <svg class="chevron" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg>
+        </summary>
+        <nav id="mobile-toc-nav" class="mobile-toc-nav"></nav>
+      </details>
+
       <!-- Main content -->
       <article class="prose-article">
         <Content />
@@ -638,6 +648,43 @@ const shareEmail    = `mailto:?subject=${encodedTitle}&body=${encodedUrl}`;
   .nav-inner    { grid-template-columns: 1fr; }
 }
 
+/* ── Mobile ToC ────────────────────────────────────────────────────────── */
+.mobile-toc {
+  display: none;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  margin-bottom: 2rem;
+  overflow: hidden;
+}
+.mobile-toc-summary {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  padding: .9rem 1.25rem;
+  font-family: var(--font-sans);
+  font-size: .85rem;
+  font-weight: 700;
+  color: var(--text-1);
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+}
+.mobile-toc-summary::-webkit-details-marker { display: none; }
+.mobile-toc-summary svg:first-child { color: var(--violet-light); flex-shrink: 0; }
+.mobile-toc-summary span, .mobile-toc-summary { flex: 1; }
+.chevron { color: var(--text-3); margin-left: auto; transition: transform .25s; }
+details[open] .chevron { transform: rotate(180deg); }
+.mobile-toc-nav {
+  padding: .5rem 1.25rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: .15rem;
+  border-top: 1px solid var(--border);
+}
+.mobile-toc-nav .toc-link { border-left: none; padding-left: .25rem; }
+@media(max-width:1000px) { .mobile-toc { display: block; } }
+
 /* ── Table of contents ──────────────────────────────────────────────────── */
 .toc-card { padding: 1.1rem 1.35rem; }
 #toc-nav { display: flex; flex-direction: column; gap: .15rem; }
@@ -663,58 +710,69 @@ const shareEmail    = `mailto:?subject=${encodedTitle}&body=${encodedUrl}`;
 </style>
 
 <script>
-// Table of contents — built from H2/H3 in article
+// Table of contents — desktop sidebar + mobile <details>
 (function buildToc() {
-  const card = document.getElementById('toc-card');
-  const nav  = document.getElementById('toc-nav');
-  if (!card || !nav) return;
-
-  const article = document.querySelector('.prose-article');
+  const card      = document.getElementById('toc-card');
+  const nav       = document.getElementById('toc-nav');
+  const mobileNav = document.getElementById('mobile-toc-nav');
+  const mobileDet = document.getElementById('mobile-toc-details');
+  const article   = document.querySelector('.prose-article');
   if (!article) return;
 
   const headings = Array.from(article.querySelectorAll('h2, h3'))
-    .filter(h => h.id || h.textContent?.trim());
+    .filter(h => h.textContent?.trim());
 
   if (headings.length < 2) return;
 
-  // Ensure each heading has an id
+  // Ensure IDs
   headings.forEach(h => {
     if (!h.id) {
       h.id = (h.textContent ?? '')
         .trim()
         .toLowerCase()
-        .replace(/[^a-z0-9À-ɏ]+/g, '-')
+        .normalize('NFD').replace(/[̀-ͯ]/g, '')
+        .replace(/[^a-z0-9]+/g, '-')
         .replace(/^-|-$/g, '');
     }
   });
 
-  // Build links
-  headings.forEach(h => {
+  function makeLink(h: Element, container: Element) {
     const a = document.createElement('a');
-    a.href = '#' + h.id;
+    a.href = '#' + (h as HTMLElement).id;
     a.textContent = h.textContent?.trim() ?? '';
     a.className = 'toc-link' + (h.tagName === 'H3' ? ' h3' : '');
     a.addEventListener('click', e => {
       e.preventDefault();
-      h.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      (h as HTMLElement).scrollIntoView({ behavior: 'smooth', block: 'start' });
+      if (mobileDet) (mobileDet as HTMLDetailsElement).open = false;
     });
-    nav.appendChild(a);
-  });
+    container.appendChild(a);
+  }
 
-  card.hidden = false;
+  // Desktop
+  if (nav && card) {
+    headings.forEach(h => makeLink(h, nav));
+    card.hidden = false;
+  }
 
-  // Active link on scroll
-  const links = Array.from(nav.querySelectorAll('.toc-link'));
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        links.forEach(l => l.classList.remove('active'));
-        const active = links.find(l => l.getAttribute('href') === '#' + entry.target.id);
-        if (active) active.classList.add('active');
-      }
-    });
-  }, { rootMargin: '-20% 0px -70% 0px' });
+  // Mobile
+  if (mobileNav) {
+    headings.forEach(h => makeLink(h, mobileNav));
+  }
 
-  headings.forEach(h => observer.observe(h));
+  // Active highlight on scroll (desktop only)
+  if (nav) {
+    const links = Array.from(nav.querySelectorAll('.toc-link'));
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          links.forEach(l => l.classList.remove('active'));
+          const active = links.find(l => l.getAttribute('href') === '#' + (entry.target as HTMLElement).id);
+          if (active) active.classList.add('active');
+        }
+      });
+    }, { rootMargin: '-20% 0px -70% 0px' });
+    headings.forEach(h => observer.observe(h));
+  }
 })();
 </script>

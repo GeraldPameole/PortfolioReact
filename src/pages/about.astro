@@ -13,6 +13,37 @@ const TIMELINE = [
   { period: '2012 – 2015',   role: 'Chargé de Qualité, Formation & Méthodes', company: 'SFR',          color: '#fbbf24', icon: '🎓' },
 ];
 
+const TESTIMONIALS = [
+  {
+    quote: "Gérald a pris en charge la coordination de nos équipes terrain sur un projet de migration FTTB particulièrement tendu. Sa capacité à anticiper les blocages et à maintenir une communication fluide avec les sous-traitants nous a permis d'atteindre nos objectifs de délai malgré les imprévus. Un chef de projet dont on sait qu'il ne lâchera pas le fil.",
+    name: "Marc Chevallier",
+    role: "Directeur des Opérations Réseau",
+    company: "KEOS TELECOM",
+    avatar: "MC",
+  },
+  {
+    quote: "Gérald a livré notre refonte front-end en React avec une rigueur que je n'avais pas souvent vue côté agence. Le temps de chargement a été divisé par deux, et le code est resté maintenable bien après sa mission. Il sait aussi expliquer ses choix techniques à des interlocuteurs non-développeurs, ce qui est précieux.",
+    name: "Sophie Leroux",
+    role: "Responsable Produit Digital",
+    company: "ACTIV PARTNERS",
+    avatar: "SL",
+  },
+  {
+    quote: "En deux ans sous la direction de Gérald, notre équipe commerciale a atteint des résultats qu'on n'espérait plus. Ce n'est pas un manager qui donne des ordres — il donne du sens. Les entretiens de coaching mensuels étaient concrets, individualisés, et on sentait vraiment qu'il investissait dans nos progressions.",
+    name: "Karim Bensalem",
+    role: "Chargé de clientèle",
+    company: "SFR",
+    avatar: "KB",
+  },
+  {
+    quote: "La formation que Gérald a animée sur les méthodes qualité était l'une des rares où l'on ressort avec des outils directement applicables le lendemain matin. Il adapte le niveau, pose les bonnes questions et sait rendre concret ce qui semblait abstrait. Un pédagogue authentique.",
+    name: "Isabelle Fontaine",
+    role: "Chargée de mission RH",
+    company: "SFR",
+    avatar: "IF",
+  },
+];
+
 const VALS = [
   { icon: '🎯', title: 'Excellence opérationnelle', desc: 'Chaque projet mérite une exécution rigoureuse, des indicateurs clairs et une livraison dans les délais.' },
   { icon: '🤝', title: 'Collaboration authentique',  desc: 'Les meilleurs résultats naissent de la confiance, de la transparence et de l\'intelligence collective.' },
@@ -88,6 +119,33 @@ const VALS = [
               <span class="timeline-period" style={`color:${t.color}`}>{t.period}</span>
               <h3 class="timeline-role">{t.role}</h3>
               <p class="timeline-company">{t.company}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <div class="divider-glow container"></div>
+
+  <!-- Témoignages -->
+  <section class="section" id="temoignages">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label reveal">Témoignages</span>
+        <h2 class="reveal reveal-delay-1">Ce qu'ils <span class="gradient-text">en disent</span></h2>
+      </div>
+      <div class="testimonials-grid">
+        {TESTIMONIALS.map((t, i) => (
+          <div class="testimonial-card glass-card reveal" style={`transition-delay:${i*0.1}s`}>
+            <div class="testimonial-quote-mark">"</div>
+            <p class="testimonial-text">{t.quote}</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar" aria-hidden="true">{t.avatar}</div>
+              <div class="testimonial-meta">
+                <span class="testimonial-name">{t.name}</span>
+                <span class="testimonial-role">{t.role} · {t.company}</span>
+              </div>
             </div>
           </div>
         ))}
@@ -225,12 +283,80 @@ const VALS = [
 .val-title { font-size: 1rem; font-weight: 700; color: var(--text-1); font-family: var(--font-sans); }
 .val-desc  { font-size: .875rem; color: var(--text-3); line-height: 1.7; }
 
+/* Testimonials */
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+}
+.testimonial-card {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  position: relative;
+}
+.testimonial-quote-mark {
+  font-family: Georgia, serif;
+  font-size: 4rem;
+  line-height: 1;
+  color: var(--violet);
+  opacity: 0.6;
+  margin-bottom: -.75rem;
+  user-select: none;
+}
+.testimonial-text {
+  font-size: .9rem;
+  color: var(--text-2);
+  line-height: 1.8;
+  flex: 1;
+}
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+}
+.testimonial-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(145, 94, 255, 0.15);
+  border: 1px solid rgba(145, 94, 255, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: .75rem;
+  font-weight: 700;
+  font-family: var(--font-mono);
+  color: var(--violet-light);
+  flex-shrink: 0;
+  letter-spacing: .04em;
+}
+.testimonial-meta {
+  display: flex;
+  flex-direction: column;
+  gap: .2rem;
+}
+.testimonial-name {
+  font-size: .9rem;
+  font-weight: 700;
+  color: var(--text-1);
+  font-family: var(--font-sans);
+}
+.testimonial-role {
+  font-size: .78rem;
+  color: var(--text-3);
+}
+
 @media(max-width:900px) {
   .hero-grid { grid-template-columns: 1fr; }
   .hero-stats-panel { max-width: 400px; }
 }
 @media(max-width:640px) {
   .vals-grid { grid-template-columns: 1fr; }
+  .testimonials-grid { grid-template-columns: 1fr; }
   .hero-stats-panel { grid-template-columns: repeat(2, 1fr); }
   .timeline-item { grid-template-columns: 44px 16px 1fr; }
 }

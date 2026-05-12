@@ -89,6 +89,42 @@ const colorMap: Record<string, { bg: string; border: string; text: string }> = {
 
   <div class="divider-glow container"></div>
 
+  <!-- TESTIMONIALS TEASER -->
+  <section class="section section-testimonials-teaser">
+    <div class="container">
+      <div class="teaser-header reveal">
+        <p class="teaser-label">Ils m'ont fait confiance</p>
+        <a href="/about#temoignages" class="teaser-link">Voir tous les témoignages →</a>
+      </div>
+      <div class="teaser-grid">
+        <div class="teaser-card reveal" style="transition-delay:0.05s">
+          <span class="teaser-quote-mark">"</span>
+          <p class="teaser-text">Sa capacité à anticiper les blocages et à maintenir une communication fluide nous a permis d'atteindre nos objectifs de délai malgré les imprévus. Un chef de projet dont on sait qu'il ne lâchera pas le fil.</p>
+          <div class="teaser-author">
+            <div class="teaser-avatar">MC</div>
+            <div>
+              <span class="teaser-name">Marc Chevallier</span>
+              <span class="teaser-role">Directeur Opérations · KEOS TELECOM</span>
+            </div>
+          </div>
+        </div>
+        <div class="teaser-card reveal" style="transition-delay:0.12s">
+          <span class="teaser-quote-mark">"</span>
+          <p class="teaser-text">Le temps de chargement a été divisé par deux, et le code est resté maintenable bien après sa mission. Il sait aussi expliquer ses choix techniques à des interlocuteurs non-développeurs, ce qui est précieux.</p>
+          <div class="teaser-author">
+            <div class="teaser-avatar">SL</div>
+            <div>
+              <span class="teaser-name">Sophie Leroux</span>
+              <span class="teaser-role">Responsable Produit · ACTIV PARTNERS</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider-glow container"></div>
+
   <!-- ARTICLES -->
   <section class="section">
     <div class="container">
@@ -184,6 +220,99 @@ const colorMap: Record<string, { bg: string; border: string; text: string }> = {
   box-shadow:0 0 0 1px rgba(145,94,255,.1), 0 20px 80px rgba(145,94,255,.1);
 }
 
+/* Testimonials teaser */
+.section-testimonials-teaser { padding-top: 0; }
+.teaser-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+.teaser-label {
+  font-family: var(--font-mono);
+  font-size: .78rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--text-3);
+  margin: 0;
+}
+.teaser-link {
+  font-size: .85rem;
+  color: var(--violet-light);
+  text-decoration: none;
+  transition: opacity .2s;
+}
+.teaser-link:hover { opacity: .75; }
+.teaser-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+}
+.teaser-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.teaser-quote-mark {
+  font-family: Georgia, serif;
+  font-size: 2.5rem;
+  line-height: 1;
+  color: var(--violet);
+  opacity: 0.5;
+  display: block;
+  margin-bottom: -.5rem;
+  user-select: none;
+}
+.teaser-text {
+  font-size: .875rem;
+  color: var(--text-2);
+  line-height: 1.75;
+  flex: 1;
+  margin: 0;
+}
+.teaser-author {
+  display: flex;
+  align-items: center;
+  gap: .875rem;
+  padding-top: .875rem;
+  border-top: 1px solid var(--border);
+}
+.teaser-avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(145, 94, 255, 0.15);
+  border: 1px solid rgba(145, 94, 255, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: .7rem;
+  font-weight: 700;
+  font-family: var(--font-mono);
+  color: var(--violet-light);
+  flex-shrink: 0;
+  letter-spacing: .04em;
+}
+.teaser-author > div {
+  display: flex;
+  flex-direction: column;
+  gap: .15rem;
+}
+.teaser-name {
+  font-size: .85rem;
+  font-weight: 700;
+  color: var(--text-1);
+  font-family: var(--font-sans);
+}
+.teaser-role {
+  font-size: .75rem;
+  color: var(--text-3);
+}
+
 @media(max-width:1024px) {
   .domains-grid { grid-template-columns:repeat(2,1fr); }
   .articles-grid { grid-template-columns:repeat(2,1fr); }
@@ -192,6 +321,7 @@ const colorMap: Record<string, { bg: string; border: string; text: string }> = {
 @media(max-width:640px) {
   .domains-grid { grid-template-columns:1fr; }
   .articles-grid { grid-template-columns:1fr; }
+  .teaser-grid { grid-template-columns:1fr; }
   .cta-card { padding:3rem 1.5rem; }
 }
 </style>
