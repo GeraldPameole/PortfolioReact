@@ -37,10 +37,29 @@ const DOMAINS = [...new Set(articles.map((a: any) => a.data.domain).filter(Boole
       ))}
     </div>
 
+    <!-- Search -->
+    <div class="search-wrap reveal">
+      <input
+        type="search"
+        id="blog-search"
+        class="search-input"
+        placeholder="Rechercher un article…"
+        autocomplete="off"
+        spellcheck="false"
+      />
+      <span id="result-count" class="result-count" aria-live="polite"></span>
+    </div>
+
     <!-- Grid -->
     <div class="articles-grid" id="articles-grid">
       {sorted.map((a, i) => (
-        <div class="article-wrap reveal" style={`transition-delay:${Math.min(i,8)*0.05}s`} data-domain={(a.data as any).domain ?? ''}>
+        <div
+          class="article-wrap reveal"
+          style={`transition-delay:${Math.min(i,8)*0.05}s`}
+          data-domain={(a.data as any).domain ?? ''}
+          data-title={((a.data as any).title ?? '').toLowerCase()}
+          data-desc={((a.data as any).description ?? '').toLowerCase()}
+        >
           <ArticleCard article={a} />
         </div>
       ))}
@@ -48,9 +67,12 @@ const DOMAINS = [...new Set(articles.map((a: any) => a.data.domain).filter(Boole
 
     <!-- Empty state -->
     <div id="no-results" class="no-results" hidden>
-      <span>Aucun article dans cette catégorie.</span>
+      <span>Aucun article trouvé.</span>
       <button class="btn btn-ghost" id="reset-filter" style="margin-top:1rem">Voir tous les articles</button>
     </div>
+
+    <!-- Pagination -->
+    <nav id="pagination" class="pagination" aria-label="Pagination des articles"></nav>
   </div>
 </BaseLayout>
 
@@ -94,6 +116,38 @@ const DOMAINS = [...new Set(articles.map((a: any) => a.data.domain).filter(Boole
 }
 .article-wrap.hidden { display: none; }
 
+/* ── Search ── */
+.search-wrap {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+.search-input {
+  flex: 1;
+  max-width: 480px;
+  font-family: var(--font-sans);
+  font-size: .95rem;
+  padding: .55rem 1.1rem;
+  border-radius: var(--r-full);
+  border: 1px solid var(--border);
+  background: var(--glass);
+  color: var(--text-1);
+  outline: none;
+  transition: border-color .2s, box-shadow .2s;
+}
+.search-input::placeholder { color: var(--text-3); }
+.search-input:focus {
+  border-color: rgba(145,94,255,.45);
+  box-shadow: 0 0 0 3px rgba(145,94,255,.1);
+}
+.result-count {
+  font-size: .82rem;
+  color: var(--text-3);
+  white-space: nowrap;
+}
+
+/* ── No results ── */
 .no-results {
   text-align: center;
   padding: 4rem;
@@ -101,38 +155,206 @@ const DOMAINS = [...new Set(articles.map((a: any) => a.data.domain).filter(Boole
   font-size: 1rem;
 }
 
+/* ── Pagination ── */
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: .4rem;
+  margin-top: 3rem;
+  padding-bottom: 1rem;
+}
+.page-btn {
+  font-family: var(--font-sans);
+  font-size: .82rem;
+  font-weight: 600;
+  min-width: 2.2rem;
+  padding: .38rem .7rem;
+  border-radius: var(--r-full);
+  border: 1px solid var(--border);
+  background: var(--glass);
+  color: var(--text-3);
+  cursor: pointer;
+  transition: all .18s;
+  line-height: 1;
+}
+.page-btn:hover:not(:disabled) { color: var(--text-1); border-color: var(--border-bright); }
+.page-btn.active { background: rgba(145,94,255,.15); border-color: rgba(145,94,255,.4); color: var(--violet-light); }
+.page-btn:disabled { opacity: .35; cursor: default; }
+.page-btn.prev-next { padding: .38rem 1rem; }
+.page-ellipsis {
+  font-size: .82rem;
+  color: var(--text-3);
+  padding: .38rem .2rem;
+  line-height: 1;
+}
+
 @media(max-width:1024px) { .articles-grid { grid-template-columns: repeat(2, 1fr); } }
-@media(max-width:640px)  { .articles-grid { grid-template-columns: 1fr; } }
+@media(max-width:640px)  { .articles-grid { grid-template-columns: 1fr; } .search-input { max-width: 100%; } }
 </style>
 
 <script is:inline>
-(function() {
-  const btns  = document.querySelectorAll('.filter-btn');
-  const cards = document.querySelectorAll('.article-wrap');
-  const noRes = document.getElementById('no-results');
-  const reset = document.getElementById('reset-filter');
+(function () {
+  var PER_PAGE = 20;
 
-  function filter(domain) {
-    let visible = 0;
-    cards.forEach(c => {
-      const show = domain === 'all' || c.dataset.domain === domain;
-      c.classList.toggle('hidden', !show);
-      if (show) visible++;
+  var btns       = Array.from(document.querySelectorAll('.filter-btn'));
+  var allCards   = Array.from(document.querySelectorAll('.article-wrap'));
+  var noRes      = document.getElementById('no-results');
+  var resetBtn   = document.getElementById('reset-filter');
+  var searchEl   = document.getElementById('blog-search');
+  var countEl    = document.getElementById('result-count');
+  var paginationEl = document.getElementById('pagination');
+
+  var currentDomain = 'all';
+  var currentQuery  = '';
+  var currentPage   = 1;
+
+  /* ── helpers ── */
+  function getFiltered() {
+    return allCards.filter(function (c) {
+      var domainOk = currentDomain === 'all' || c.dataset.domain === currentDomain;
+      if (!domainOk) return false;
+      if (!currentQuery) return true;
+      var q = currentQuery;
+      return (c.dataset.title || '').indexOf(q) !== -1 ||
+             (c.dataset.desc  || '').indexOf(q) !== -1;
     });
-    if (noRes) noRes.hidden = visible > 0;
   }
 
-  btns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      btns.forEach(b => b.classList.remove('active'));
+  function clamp(val, min, max) {
+    return Math.max(min, Math.min(max, val));
+  }
+
+  /* ── main render ── */
+  function render() {
+    var filtered  = getFiltered();
+    var total     = filtered.length;
+    var totalPages = Math.max(1, Math.ceil(total / PER_PAGE));
+    currentPage = clamp(currentPage, 1, totalPages);
+
+    var start = (currentPage - 1) * PER_PAGE;
+    var end   = start + PER_PAGE;
+
+    // show / hide cards
+    allCards.forEach(function (c) { c.classList.add('hidden'); });
+    filtered.forEach(function (c, idx) {
+      if (idx >= start && idx < end) c.classList.remove('hidden');
+    });
+
+    // no-results state
+    if (noRes) noRes.hidden = total > 0;
+
+    // result count
+    if (countEl) {
+      if (currentQuery || currentDomain !== 'all') {
+        countEl.textContent = total + ' résultat' + (total !== 1 ? 's' : '');
+      } else {
+        countEl.textContent = '';
+      }
+    }
+
+    // pagination
+    renderPagination(totalPages);
+  }
+
+  /* ── pagination UI ── */
+  function renderPagination(totalPages) {
+    if (!paginationEl) return;
+    paginationEl.innerHTML = '';
+    if (totalPages <= 1) return;
+
+    function makeBtn(label, page, extraClass, disabled, active) {
+      var btn = document.createElement('button');
+      btn.className = 'page-btn' + (extraClass ? ' ' + extraClass : '') + (active ? ' active' : '');
+      btn.textContent = label;
+      btn.disabled = !!disabled;
+      btn.setAttribute('aria-label', 'Page ' + page);
+      if (!disabled) {
+        btn.addEventListener('click', function () {
+          currentPage = page;
+          render();
+          // scroll to grid top
+          var grid = document.getElementById('articles-grid');
+          if (grid) grid.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+      }
+      return btn;
+    }
+
+    function makeEllipsis() {
+      var s = document.createElement('span');
+      s.className = 'page-ellipsis';
+      s.textContent = '…';
+      return s;
+    }
+
+    // Prev
+    paginationEl.appendChild(
+      makeBtn('← Précédent', currentPage - 1, 'prev-next', currentPage === 1, false)
+    );
+
+    // Page numbers — show up to 5 around current
+    var pages = [];
+    if (totalPages <= 7) {
+      for (var i = 1; i <= totalPages; i++) pages.push(i);
+    } else {
+      pages.push(1);
+      var left  = Math.max(2, currentPage - 1);
+      var right = Math.min(totalPages - 1, currentPage + 1);
+      if (left > 2)             pages.push('…');
+      for (var i = left; i <= right; i++) pages.push(i);
+      if (right < totalPages - 1) pages.push('…');
+      pages.push(totalPages);
+    }
+
+    pages.forEach(function (p) {
+      if (p === '…') {
+        paginationEl.appendChild(makeEllipsis());
+      } else {
+        paginationEl.appendChild(makeBtn(p, p, '', false, p === currentPage));
+      }
+    });
+
+    // Next
+    paginationEl.appendChild(
+      makeBtn('Suivant →', currentPage + 1, 'prev-next', currentPage === totalPages, false)
+    );
+  }
+
+  /* ── event listeners ── */
+  btns.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      btns.forEach(function (b) { b.classList.remove('active'); });
       btn.classList.add('active');
-      filter(btn.dataset.filter || 'all');
+      currentDomain = btn.dataset.filter || 'all';
+      currentPage   = 1;
+      render();
     });
   });
 
-  reset?.addEventListener('click', () => {
-    btns.forEach(b => b.classList.toggle('active', b.dataset.filter === 'all'));
-    filter('all');
-  });
+  if (resetBtn) {
+    resetBtn.addEventListener('click', function () {
+      btns.forEach(function (b) {
+        b.classList.toggle('active', b.dataset.filter === 'all');
+      });
+      currentDomain = 'all';
+      currentPage   = 1;
+      if (searchEl) searchEl.value = '';
+      currentQuery  = '';
+      render();
+    });
+  }
+
+  if (searchEl) {
+    searchEl.addEventListener('input', function () {
+      currentQuery = searchEl.value.trim().toLowerCase();
+      currentPage  = 1;
+      render();
+    });
+  }
+
+  /* ── initial render ── */
+  render();
 })();
 </script>
