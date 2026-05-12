@@ -4,7 +4,7 @@ description: "Où trouver les bons développeurs, comment les évaluer sans lire
 publishDate: "2025-01-13"
 type: article
 domain: developpement-commercial
-image: "/images/themes/management.jpg"
+image: "/images/themes/management.webp"
 pillColor: orange
 theme: carriere
 ---

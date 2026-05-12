@@ -4,7 +4,7 @@ description: "Les KPIs qui comptent vraiment (FCR, AHT, NPS, CSAT, taux d'abando
 publishDate: "2026-10-05"
 type: article
 domain: service-client
-image: "/images/themes/management.jpg"
+image: "/images/themes/management.webp"
 pillColor: emerald
 relatedArticles:
   - domain: service-client

@@ -4,7 +4,7 @@ description: "La communication, la gestion des conflits, l'adaptabilité ne sont
 publishDate: "2025-06-09"
 type: article
 domain: formation
-image: "/images/themes/formation-carriere.jpg"
+image: "/images/themes/formation-carriere.webp"
 tags:
   - formation
   - competences

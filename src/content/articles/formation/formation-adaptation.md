@@ -4,7 +4,7 @@ description: "Résistance, doute, puis engagement : voici les étapes réelles d
 publishDate: "2025-03-31"
 type: article
 domain: formation
-image: "/images/themes/formation-carriere.jpg"
+image: "/images/themes/formation-carriere.webp"
 pillColor: red
 theme: formation
 ---

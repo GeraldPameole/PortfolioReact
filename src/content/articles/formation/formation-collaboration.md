@@ -4,7 +4,7 @@ description: "Coûts de coordination, free-riding, réunions efficaces et travai
 publishDate: "2025-04-07"
 type: article
 domain: formation
-image: "/images/themes/formation-carriere.jpg"
+image: "/images/themes/formation-carriere.webp"
 pillColor: red
 theme: formation
 ---

@@ -4,7 +4,7 @@ description: "IA générative dans le contenu, zero-click searches, privacy-firs
 publishDate: "2026-03-30"
 type: article
 domain: marketing-communication
-image: "/images/themes/marketing.jpg"
+image: "/images/themes/marketing.webp"
 pillColor: yellow
 theme: carriere
 tags:

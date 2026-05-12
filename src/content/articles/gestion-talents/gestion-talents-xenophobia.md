@@ -4,7 +4,7 @@ description: "Les vrais obstacles à la collaboration interculturelle au-delà d
 publishDate: "2025-12-15"
 type: article
 domain: gestion-talents
-image: "/images/themes/management.jpg"
+image: "/images/themes/management.webp"
 pillColor: teal
 theme: gestion
 ---

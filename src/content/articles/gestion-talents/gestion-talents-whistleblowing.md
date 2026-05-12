@@ -4,7 +4,7 @@ description: "Ce qu'est vraiment le whistleblowing au-delà de la conformité, c
 publishDate: "2025-12-08"
 type: article
 domain: gestion-talents
-image: "/images/themes/management.jpg"
+image: "/images/themes/management.webp"
 pillColor: teal
 theme: gestion
 ---

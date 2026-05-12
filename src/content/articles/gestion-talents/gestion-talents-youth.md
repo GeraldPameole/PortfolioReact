@@ -4,7 +4,7 @@ description: "Comment adapter son management aux Gen Z et Millennials sans abdiq
 publishDate: "2025-12-22"
 type: article
 domain: gestion-talents
-image: "/images/themes/management.jpg"
+image: "/images/themes/management.webp"
 pillColor: teal
 theme: gestion
 ---

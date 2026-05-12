@@ -4,7 +4,7 @@ description: "Ce qui sépare une reconversion réussie d'un échec coûteux : di
 publishDate: "2026-09-21"
 type: article
 domain: reconversion-carriere
-image: "/images/themes/formation-carriere.jpg"
+image: "/images/themes/formation-carriere.webp"
 pillColor: rose
 theme: carriere
 ---

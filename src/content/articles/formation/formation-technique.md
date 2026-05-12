@@ -4,7 +4,7 @@ description: "Comment comprendre ce que fait son équipe tech, quelles formation
 publishDate: "2025-06-23"
 type: article
 domain: formation
-image: "/images/themes/formation-carriere.jpg"
+image: "/images/themes/formation-carriere.webp"
 pillColor: red
 theme: formation
 ---

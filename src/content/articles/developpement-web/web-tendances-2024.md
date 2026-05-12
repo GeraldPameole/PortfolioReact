@@ -4,7 +4,7 @@ description: "INP remplace FID dans les Core Web Vitals, View Transitions API, C
 publishDate: "2025-03-17"
 type: article
 domain: developpement-web
-image: "/images/themes/dev-web.jpg"
+image: "/images/themes/dev-web.webp"
 pillColor: green
 relatedArticles:
   - domain: developpement-web

@@ -4,7 +4,7 @@ description: "Comment documenter sans bureaucratie, partager sans friction et pr
 publishDate: "2025-07-14"
 type: article
 domain: gestion-connaissances
-image: "/images/themes/management.jpg"
+image: "/images/themes/management.webp"
 pillColor: violet
 theme: gestion
 ---

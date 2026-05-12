@@ -4,7 +4,7 @@ description: "Comprendre jusqu'où la rémunération motive vraiment, construire
 publishDate: "2025-11-10"
 type: article
 domain: gestion-talents
-image: "/images/themes/management.jpg"
+image: "/images/themes/management.webp"
 pillColor: teal
 theme: gestion
 ---

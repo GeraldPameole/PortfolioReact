@@ -4,7 +4,7 @@ description: "Optional chaining, nullish coalescing, structuredClone, Array.at()
 publishDate: "2025-03-10"
 type: article
 domain: developpement-web
-image: "/images/themes/dev-web.jpg"
+image: "/images/themes/dev-web.webp"
 pillColor: green
 theme: technologie
 ---

@@ -4,7 +4,7 @@ description: "Comment construire un plan de formation qui produit des résultats
 publishDate: "2025-10-20"
 type: article
 domain: gestion-talents
-image: "/images/themes/management.jpg"
+image: "/images/themes/management.webp"
 pillColor: teal
 theme: gestion
 ---

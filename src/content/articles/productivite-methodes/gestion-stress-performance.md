@@ -4,7 +4,7 @@ description: "Gérer stress et performance — techniques concrètes pour mainte
 publishDate: "2026-06-01"
 type: article
 domain: productivite-methodes
-image: "/images/themes/productivite.jpg"
+image: "/images/themes/productivite.webp"
 pillColor: indigo
 relatedArticles:
   - domain: productivite-methodes

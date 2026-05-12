@@ -4,7 +4,7 @@ description: "Comment identifier les compétences critiques concentrées sur une
 publishDate: "2025-09-15"
 type: article
 domain: gestion-talents
-image: "/images/themes/management.jpg"
+image: "/images/themes/management.webp"
 pillColor: teal
 theme: gestion
 ---

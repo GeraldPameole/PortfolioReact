@@ -4,7 +4,7 @@ description: "Bien-être structurel contre bien-être cosmétique, indicateurs r
 publishDate: "2025-12-29"
 type: article
 domain: gestion-talents
-image: "/images/themes/management.jpg"
+image: "/images/themes/management.webp"
 pillColor: teal
 theme: gestion
 ---

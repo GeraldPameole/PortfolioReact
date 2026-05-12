@@ -4,7 +4,7 @@ description: "Comment diagnostiquer le niveau réel d'une équipe et adapter son
 publishDate: "2025-07-28"
 type: article
 domain: gestion-projet
-image: "/images/themes/management.jpg"
+image: "/images/themes/management.webp"
 pillColor: blue
 theme: gestion
 ---

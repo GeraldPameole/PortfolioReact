@@ -4,7 +4,7 @@ description: "Les 4 types de conflits d'équipe, le moment où il faut interveni
 publishDate: "2025-09-22"
 type: article
 domain: gestion-talents
-image: "/images/themes/management.jpg"
+image: "/images/themes/management.webp"
 pillColor: teal
 theme: gestion
 ---

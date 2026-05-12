@@ -4,7 +4,7 @@ description: "Les MOOC affichent des taux d'abandon proches de 95%. Ce n'est pas
 publishDate: "2025-04-28"
 type: article
 domain: formation
-image: "/images/themes/formation-carriere.jpg"
+image: "/images/themes/formation-carriere.webp"
 pillColor: red
 theme: formation
 ---

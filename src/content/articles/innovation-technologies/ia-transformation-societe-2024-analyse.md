@@ -4,7 +4,7 @@ description: "Analyse critique de l'impact de l'intelligence artificielle sur le
 publishDate: "2026-01-05"
 type: article
 domain: innovation-technologies
-image: "/images/themes/ia.jpg"
+image: "/images/themes/ia.webp"
 pillColor: cyan
 relatedArticles:
   - domain: innovation-technologies

@@ -4,7 +4,7 @@ description: "Identifier les potentiels, construire un plan de développement in
 publishDate: "2025-06-16"
 type: article
 domain: formation
-image: "/images/themes/formation-carriere.jpg"
+image: "/images/themes/formation-carriere.webp"
 pillColor: red
 relatedArticles:
   - domain: formation

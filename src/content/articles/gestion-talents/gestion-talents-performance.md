@@ -4,7 +4,7 @@ description: "La notation annuelle ne prédit pas la performance future. Comment
 publishDate: "2025-10-27"
 type: article
 domain: gestion-talents
-image: "/images/themes/management.jpg"
+image: "/images/themes/management.webp"
 pillColor: teal
 theme: gestion
 ---

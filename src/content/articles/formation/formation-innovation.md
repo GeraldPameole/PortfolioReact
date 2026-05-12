@@ -4,7 +4,7 @@ description: "Créativité et innovation ne sont pas la même chose. Ce que le d
 publishDate: "2025-05-19"
 type: article
 domain: formation
-image: "/images/themes/formation-carriere.jpg"
+image: "/images/themes/formation-carriere.webp"
 tags:
   - formation
   - competences

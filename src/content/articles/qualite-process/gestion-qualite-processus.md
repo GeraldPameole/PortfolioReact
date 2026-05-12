@@ -4,7 +4,7 @@ description: "Les cinq défaillances de processus les plus courantes dans les PM
 publishDate: "2026-08-24"
 type: article
 domain: qualite-process
-image: "/images/themes/management.jpg"
+image: "/images/themes/management.webp"
 pillColor: purple
 relatedArticles:
   - domain: qualite-process

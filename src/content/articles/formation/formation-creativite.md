@@ -4,7 +4,7 @@ description: "La créativité en contexte professionnel n'est pas réservée aux
 publishDate: "2025-04-21"
 type: article
 domain: formation
-image: "/images/themes/formation-carriere.jpg"
+image: "/images/themes/formation-carriere.webp"
 tags:
   - formation
   - competences

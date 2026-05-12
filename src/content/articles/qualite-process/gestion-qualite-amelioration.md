@@ -4,7 +4,7 @@ description: "Appliquer l'amélioration continue — la méthode Kaizen mise en 
 publishDate: "2026-08-03"
 type: article
 domain: qualite-process
-image: "/images/themes/management.jpg"
+image: "/images/themes/management.webp"
 pillColor: purple
 theme: gestion
 ---

@@ -4,7 +4,7 @@ description: "Construire une stratégie qualité — aligner exigence opération
 publishDate: "2026-08-31"
 type: article
 domain: qualite-process
-image: "/images/themes/management.jpg"
+image: "/images/themes/management.webp"
 pillColor: purple
 relatedArticles:
   - domain: qualite-process

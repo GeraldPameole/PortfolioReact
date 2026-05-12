@@ -4,7 +4,7 @@ description: "Segmentation comportementale, automation utile et les trois métri
 publishDate: "2026-03-09"
 type: article
 domain: marketing-communication
-image: "/images/themes/marketing.jpg"
+image: "/images/themes/marketing.webp"
 pillColor: yellow
 relatedArticles:
   - domain: marketing-communication

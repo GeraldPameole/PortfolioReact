@@ -4,7 +4,7 @@ description: "LinkedIn, Instagram, TikTok, YouTube — quelle plateforme pour qu
 publishDate: "2026-04-13"
 type: article
 domain: marketing-communication
-image: "/images/themes/marketing.jpg"
+image: "/images/themes/marketing.webp"
 pillColor: yellow
 theme: carriere
 tags:

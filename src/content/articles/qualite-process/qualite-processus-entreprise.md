@@ -4,7 +4,7 @@ description: "Comment piloter la qualité des processus avec des KPIs utiles (cy
 publishDate: "2026-09-14"
 type: article
 domain: qualite-process
-image: "/images/themes/management.jpg"
+image: "/images/themes/management.webp"
 pillColor: purple
 relatedArticles:
   - domain: qualite-process

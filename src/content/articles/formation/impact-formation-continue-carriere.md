@@ -4,7 +4,7 @@ description: "Choisir une formation sans stratégie, c'est dépenser du temps et
 publishDate: "2025-06-30"
 type: article
 domain: formation
-image: "/images/themes/formation-carriere.jpg"
+image: "/images/themes/formation-carriere.webp"
 tags:
   - formation
   - competences

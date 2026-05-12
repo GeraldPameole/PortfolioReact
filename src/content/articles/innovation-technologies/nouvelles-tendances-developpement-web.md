@@ -4,7 +4,7 @@ description: "Edge computing, AI-assisted coding, Server Components — un regar
 publishDate: "2026-01-26"
 type: article
 domain: innovation-technologies
-image: "/images/themes/ia.jpg"
+image: "/images/themes/ia.webp"
 pillColor: cyan
 relatedArticles:
   - domain: innovation-technologies

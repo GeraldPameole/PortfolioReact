@@ -4,7 +4,7 @@ description: "Comprendre la loi de Parkinson pour arrêter de dilater ses tâche
 publishDate: "2026-06-15"
 type: article
 domain: productivite-methodes
-image: "/images/themes/productivite.jpg"
+image: "/images/themes/productivite.webp"
 pillColor: indigo
 relatedArticles:
   - domain: productivite-methodes

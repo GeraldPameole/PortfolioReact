@@ -4,7 +4,7 @@ description: "Quand une partie de l'équipe est à distance, les signaux de mana
 publishDate: "2026-03-02"
 type: article
 domain: leadership-management
-image: "/images/themes/management.jpg"
+image: "/images/themes/management.webp"
 pillColor: purple
 relatedArticles:
   - domain: leadership-management

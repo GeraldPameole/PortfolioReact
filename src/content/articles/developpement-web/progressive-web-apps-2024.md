@@ -4,7 +4,7 @@ description: "Progressive Web Apps vs app native vs site responsive — les 3 co
 publishDate: "2025-02-03"
 type: article
 domain: developpement-web
-image: "/images/themes/dev-web.jpg"
+image: "/images/themes/dev-web.webp"
 pillColor: green
 theme: technologie
 ---

@@ -4,7 +4,7 @@ description: "React domine, Vue et Angular restent pertinents. Analyse objective
 publishDate: "2025-01-20"
 type: article
 domain: developpement-web
-image: "/images/themes/dev-web.jpg"
+image: "/images/themes/dev-web.webp"
 pillColor: green
 theme: technologie
 ---

@@ -4,7 +4,7 @@ description: "Jeux de rôles structurés, double appel, feedback immédiat aprè
 publishDate: "2025-05-12"
 type: article
 domain: formation
-image: "/images/themes/formation-carriere.jpg"
+image: "/images/themes/formation-carriere.webp"
 tags:
   - formation
   - competences

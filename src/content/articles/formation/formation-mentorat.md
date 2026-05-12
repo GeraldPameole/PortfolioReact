@@ -4,7 +4,7 @@ description: "Le mentorat n'est pas du coaching, et ce n'est pas du management. 
 publishDate: "2025-05-26"
 type: article
 domain: formation
-image: "/images/themes/formation-carriere.jpg"
+image: "/images/themes/formation-carriere.webp"
 tags:
   - formation
   - competences

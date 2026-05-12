@@ -4,7 +4,7 @@ description: "SEO, SEM, social, email, referral — quand investir dans chaque c
 publishDate: "2026-03-23"
 type: article
 domain: marketing-communication
-image: "/images/themes/marketing.jpg"
+image: "/images/themes/marketing.webp"
 pillColor: yellow
 theme: carriere
 tags:

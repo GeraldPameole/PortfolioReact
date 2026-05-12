@@ -4,7 +4,7 @@ description: "Assertif, passif, agressif ou manipulateur — comprendre ses prop
 publishDate: "2025-04-14"
 type: article
 domain: formation
-image: "/images/themes/formation-carriere.jpg"
+image: "/images/themes/formation-carriere.webp"
 tags:
   - formation
   - competences

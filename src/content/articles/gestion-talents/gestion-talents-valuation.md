@@ -4,7 +4,7 @@ description: "La reconnaissance non-monétaire qui retient vraiment les talents,
 publishDate: "2025-12-01"
 type: article
 domain: gestion-talents
-image: "/images/themes/management.jpg"
+image: "/images/themes/management.webp"
 pillColor: teal
 theme: gestion
 ---

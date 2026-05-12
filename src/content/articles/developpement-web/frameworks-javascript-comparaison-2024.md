@@ -4,7 +4,7 @@ description: "Comment comparer React, Vue, Angular et Svelte sans se laisser pi√
 publishDate: "2025-01-27"
 type: article
 domain: developpement-web
-image: "/images/themes/dev-web.jpg"
+image: "/images/themes/dev-web.webp"
 pillColor: green
 theme: technologie
 ---

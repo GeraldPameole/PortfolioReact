@@ -4,7 +4,7 @@ description: "La formation professionnelle continue n'est pas seulement une obli
 publishDate: "2025-06-02"
 type: article
 domain: formation
-image: "/images/themes/formation-carriere.jpg"
+image: "/images/themes/formation-carriere.webp"
 pillColor: red
 theme: formation
 ---

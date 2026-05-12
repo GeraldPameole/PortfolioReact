@@ -4,7 +4,7 @@ description: "Les vraies raisons de départ ne sont pas salariales. Comment iden
 publishDate: "2025-11-17"
 type: article
 domain: gestion-talents
-image: "/images/themes/management.jpg"
+image: "/images/themes/management.webp"
 pillColor: teal
 theme: gestion
 ---

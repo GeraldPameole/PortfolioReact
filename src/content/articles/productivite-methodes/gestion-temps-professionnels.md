@@ -4,7 +4,7 @@ description: "Faire un audit honnête de son temps, identifier les trois voleurs
 publishDate: "2026-06-22"
 type: article
 domain: productivite-methodes
-image: "/images/themes/productivite.jpg"
+image: "/images/themes/productivite.webp"
 pillColor: indigo
 relatedArticles:
   - domain: productivite-methodes

@@ -4,7 +4,7 @@ description: "Comment piloter un projet avec des KPIs utiles — lead time, taux
 publishDate: "2025-08-25"
 type: article
 domain: gestion-projet
-image: "/images/themes/management.jpg"
+image: "/images/themes/management.webp"
 pillColor: blue
 relatedArticles:
   - domain: gestion-projet

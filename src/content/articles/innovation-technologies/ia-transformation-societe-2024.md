@@ -4,7 +4,7 @@ description: "Au-delà du battage médiatique, ce que l'intelligence artificiell
 publishDate: "2026-01-12"
 type: article
 domain: innovation-technologies
-image: "/images/themes/ia.jpg"
+image: "/images/themes/ia.webp"
 pillColor: cyan
 theme: technologie
 ---

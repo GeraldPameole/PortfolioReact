@@ -4,7 +4,7 @@ description: "Comment identifier les postes réellement critiques, évaluer les 
 publishDate: "2025-11-24"
 type: article
 domain: gestion-talents
-image: "/images/themes/management.jpg"
+image: "/images/themes/management.webp"
 pillColor: teal
 theme: gestion
 ---

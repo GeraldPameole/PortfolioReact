@@ -4,7 +4,7 @@ description: "Comment mener des rétrospectives qui servent vraiment, conduire d
 publishDate: "2025-08-04"
 type: article
 domain: gestion-projet
-image: "/images/themes/management.jpg"
+image: "/images/themes/management.webp"
 pillColor: blue
 theme: gestion
 ---

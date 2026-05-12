@@ -4,7 +4,7 @@ description: "ESM natif, top-level await, TypeScript 5+, Web Components — bila
 publishDate: "2025-02-17"
 type: article
 domain: developpement-web
-image: "/images/themes/dev-web.jpg"
+image: "/images/themes/dev-web.webp"
 pillColor: green
 theme: technologie
 tags:

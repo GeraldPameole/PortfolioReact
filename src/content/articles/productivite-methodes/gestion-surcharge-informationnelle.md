@@ -4,7 +4,7 @@ description: "Maîtriser la surcharge informationnelle — méthodes de filtrage
 publishDate: "2026-06-08"
 type: article
 domain: productivite-methodes
-image: "/images/themes/productivite.jpg"
+image: "/images/themes/productivite.webp"
 pillColor: indigo
 relatedArticles:
   - domain: productivite-methodes

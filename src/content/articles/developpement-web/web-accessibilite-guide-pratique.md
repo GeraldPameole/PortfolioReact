@@ -4,7 +4,7 @@ description: "Comprendre les niveaux WCAG simplement, identifier les quatre prob
 publishDate: "2025-03-03"
 type: article
 domain: developpement-web
-image: "/images/themes/dev-web.jpg"
+image: "/images/themes/dev-web.webp"
 pillColor: green
 theme: technologie
 ---

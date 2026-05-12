@@ -4,7 +4,7 @@ description: "Comment identifier les vrais risques projet, tenir un registre op√
 publishDate: "2025-09-08"
 type: article
 domain: gestion-projet
-image: "/images/themes/management.jpg"
+image: "/images/themes/management.webp"
 pillColor: blue
 relatedArticles:
   - domain: gestion-projet

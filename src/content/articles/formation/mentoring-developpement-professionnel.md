@@ -4,7 +4,7 @@ description: "Fréquence, format, durée des séances, erreurs classiques du men
 publishDate: "2025-07-07"
 type: article
 domain: formation
-image: "/images/themes/formation-carriere.jpg"
+image: "/images/themes/formation-carriere.webp"
 tags:
   - formation
   - competences

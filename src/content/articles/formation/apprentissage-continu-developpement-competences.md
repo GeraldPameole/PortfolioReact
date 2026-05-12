@@ -4,7 +4,7 @@ description: "L'apprentissage continu en entreprise ne se décrète pas par une 
 publishDate: "2025-03-24"
 type: article
 domain: formation
-image: "/images/themes/formation-carriere.jpg"
+image: "/images/themes/formation-carriere.webp"
 pillColor: red
 theme: formation
 ---
