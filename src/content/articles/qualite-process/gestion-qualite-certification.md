@@ -4,6 +4,7 @@ description: "Démystifier ISO 9001, préparer un audit de certification efficac
 publishDate: "2026-08-10"
 type: article
 domain: qualite-process
+image: "/images/themes/management.jpg"
 pillColor: purple
 theme: gestion
 ---

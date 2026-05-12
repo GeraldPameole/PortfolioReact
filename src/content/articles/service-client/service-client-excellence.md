@@ -4,6 +4,7 @@ description: "Satisfaire un client ne suffit pas à le fidéliser. Les moments d
 publishDate: "2026-09-28"
 type: article
 domain: service-client
+image: "/images/themes/management.jpg"
 pillColor: emerald
 theme: carriere
 ---

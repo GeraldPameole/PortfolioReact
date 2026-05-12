@@ -149,6 +149,12 @@ const shareEmail    = `mailto:?subject=${encodedTitle}&body=${encodedUrl}`;
       <!-- Sticky sidebar -->
       <aside class="article-sidebar">
 
+        <!-- Table of contents (built client-side from H2s) -->
+        <div class="sidebar-card toc-card" id="toc-card" hidden>
+          <p class="sidebar-label">Dans cet article</p>
+          <nav id="toc-nav" aria-label="Table des matières"></nav>
+        </div>
+
         <!-- Share buttons -->
         <div class="sidebar-card share-card">
           <p class="sidebar-label">Partager</p>
@@ -631,4 +637,84 @@ const shareEmail    = `mailto:?subject=${encodedTitle}&body=${encodedUrl}`;
   .related-grid { grid-template-columns: 1fr; }
   .nav-inner    { grid-template-columns: 1fr; }
 }
+
+/* ── Table of contents ──────────────────────────────────────────────────── */
+.toc-card { padding: 1.1rem 1.35rem; }
+#toc-nav { display: flex; flex-direction: column; gap: .15rem; }
+.toc-link {
+  display: block;
+  font-size: .8rem;
+  color: var(--text-3);
+  text-decoration: none;
+  padding: .28rem .5rem;
+  border-radius: var(--r-sm);
+  border-left: 2px solid transparent;
+  transition: all .18s;
+  line-height: 1.4;
+  font-family: var(--font-sans);
+}
+.toc-link:hover { color: var(--text-1); background: var(--glass); }
+.toc-link.active {
+  color: var(--violet-light);
+  border-left-color: var(--violet);
+  background: rgba(145,94,255,.06);
+}
+.toc-link.h3 { padding-left: 1.1rem; font-size: .76rem; }
 </style>
+
+<script>
+// Table of contents — built from H2/H3 in article
+(function buildToc() {
+  const card = document.getElementById('toc-card');
+  const nav  = document.getElementById('toc-nav');
+  if (!card || !nav) return;
+
+  const article = document.querySelector('.prose-article');
+  if (!article) return;
+
+  const headings = Array.from(article.querySelectorAll('h2, h3'))
+    .filter(h => h.id || h.textContent?.trim());
+
+  if (headings.length < 2) return;
+
+  // Ensure each heading has an id
+  headings.forEach(h => {
+    if (!h.id) {
+      h.id = (h.textContent ?? '')
+        .trim()
+        .toLowerCase()
+        .replace(/[^a-z0-9À-ɏ]+/g, '-')
+        .replace(/^-|-$/g, '');
+    }
+  });
+
+  // Build links
+  headings.forEach(h => {
+    const a = document.createElement('a');
+    a.href = '#' + h.id;
+    a.textContent = h.textContent?.trim() ?? '';
+    a.className = 'toc-link' + (h.tagName === 'H3' ? ' h3' : '');
+    a.addEventListener('click', e => {
+      e.preventDefault();
+      h.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+    nav.appendChild(a);
+  });
+
+  card.hidden = false;
+
+  // Active link on scroll
+  const links = Array.from(nav.querySelectorAll('.toc-link'));
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        links.forEach(l => l.classList.remove('active'));
+        const active = links.find(l => l.getAttribute('href') === '#' + entry.target.id);
+        if (active) active.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-20% 0px -70% 0px' });
+
+  headings.forEach(h => observer.observe(h));
+})();
+</script>

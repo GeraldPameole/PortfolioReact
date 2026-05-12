@@ -4,6 +4,7 @@ description: "Comment utiliser le Pomodoro correctement en contexte professionne
 publishDate: "2026-07-13"
 type: article
 domain: productivite-methodes
+image: "/images/themes/productivite.jpg"
 pillColor: indigo
 relatedArticles:
   - domain: productivite-methodes

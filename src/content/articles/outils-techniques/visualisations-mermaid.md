@@ -4,6 +4,7 @@ description: "Architecture système, parcours utilisateur, workflow d'approbatio
 publishDate: "2026-05-04"
 type: article
 domain: outils-techniques
+image: "/images/themes/dev-web.jpg"
 pillColor: slate
 theme: technologie
 ---

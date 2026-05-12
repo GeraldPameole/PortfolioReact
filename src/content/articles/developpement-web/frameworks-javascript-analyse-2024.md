@@ -1,227 +1,144 @@
 ---
-title: "Analyse des frameworks JavaScript : React, Vue, Angular — lequel choisir en 2025"
-description: "Développement web moderne : frameworks, tendances et bonnes pratiques."
+title: "Frameworks JavaScript en 2025 : ce que l'adoption réelle dit vraiment"
+description: "React domine, Vue et Angular restent pertinents. Analyse objective des métriques — bundle size, courbe d'apprentissage, écosystème — et guide honnête sur quand éviter React."
 publishDate: "2025-01-20"
 type: article
 domain: developpement-web
+image: "/images/themes/dev-web.jpg"
 pillColor: green
 theme: technologie
 ---
 
-
-## Introduction
-
-L'analyse approfondie de plus de 200 applications web développées avec tous les frameworks majeurs révèle une réalité saisissante : **le choix du framework JavaScript peut déterminer la réussite ou l'échec d'un projet**. Les données collectées auprès de nombreuses organisations montrent que les échecs de projets web proviennent souvent d'un mauvais choix de framework plutôt que d'un développement de qualité insuffisante.
-
-#### Ce que révèle mon expérience
-
-- 85% des développeurs choisissent leur framework par habitude, pas par analyse
-
-- Les "bons choix de framework" réduisent le temps de développement de 40% et les bugs de 60%
-
-- Un framework adapté = +50% de productivité équipe et +35% de satisfaction client
-
-**Le piège que j'ai observé chez 80% de mes clients :** Ils confondent "framework populaire" avec "framework adapté". Résultat : ils utilisent React pour tout, même quand Vue.js serait 3x plus efficace.
-
-Dans cet article, je partage ma méthodologie "C.H.O.I.S.I.R." - un framework que j'ai affiné sur 15 ans et qui garantit le choix optimal de framework JavaScript.
-
-
-**Définition principale :** Le choix d'un framework JavaScript est une décision stratégique qui détermine la structure, la performance, et la maintenabilité d'une application web moderne. Selon State of JS (2025), 78% des développeurs utilisent au moins un framework JavaScript, avec React dominant à 40%, suivi de Vue.js à 18% et Angular à 12%. Cette décision impacte directement la productivité de l'équipe, les performances de l'application, et les coûts de développement.
-
-**Les observations collectées auprès de nombreuses organisations révèlent que** celles qui appliquent une méthodologie structurée pour choisir leur framework obtiennent des résultats remarquablement supérieurs. Cette supériorité se manifeste à travers plusieurs dimensions : une productivité significativement accrue, une satisfaction développeur nettement améliorée, et un taux de succès de projet substantiellement plus élevé que les choix basés uniquement sur la popularité.
-
-**Mon expérience m'a appris que la théorie et la pratique divergent souvent sur** les critères de sélection. Les benchmarks théoriques prônent souvent les frameworks compilés (Svelte, Solid.js) pour leurs performances, tandis que sur le terrain, j'observe qu'React et Vue.js restent les choix les plus pragmatiques pour la majorité des projets en raison de leur écosystème mature, de la facilité de recrutement, et de la disponibilité des ressources.
-
-#### Concepts clés
-
-- **Framework JavaScript** : Bibliothèque ou ensemble d'outils qui fournit une structure pour développer des applications web, avec des fonctionnalités prêtes à l'emploi et des conventions de développement. Selon MDN Web Docs (2025), les frameworks modernes permettent une réduction de 50% du temps de développement par rapport au JavaScript vanilla. Les applications utilisant des frameworks ont une maintenabilité de 60% supérieure selon GitHub (2025).
-
-- **Virtual DOM** : Système de rendu optimisé qui crée une représentation en mémoire du DOM réel, permettant des mises à jour efficaces. React utilise un Virtual DOM qui optimise les manipulations DOM, améliorant les performances de 40% selon Web.dev (2025). Vue.js utilise également un Virtual DOM optimisé qui réduit les re-renders de 60% selon Vue.js documentation (2025).
-
-- **Composants réutilisables** : Architecture modulaire basée sur des composants encapsulant logique et interface. Les frameworks modernes permettent la création de composants réutilisables, réduisant la duplication de code de 50% selon Stack Overflow (2025). Les applications utilisant des composants ont une maintenabilité de 60% supérieure selon GitHub (2025).
-
-- **State Management** : Gestion centralisée de l'état de l'application. Redux (React), Pinia (Vue), et NgRx (Angular) permettent une gestion d'état prévisible, réduisant les bugs liés à l'état de 45% selon State of JS (2025). Les applications avec un state management bien structuré ont une complexité cognitive réduite de 55% selon MDN (2025).
-
-- **Build Tools et Optimisation** : Outils de compilation et d'optimisation pour la production. Vite, Webpack, et Parcel permettent une compilation optimisée, réduisant les temps de build de 70% selon Vite documentation (2025). Les applications utilisant des build tools modernes ont des temps de chargement initiaux réduits de 50% selon Google Lighthouse (2025).
-
-**Contexte historique :** L'évolution du choix de framework JavaScript a commencé avec jQuery (2006) pour simplifier les manipulations DOM, puis AngularJS (2010) pour les applications complexes, React (2013) pour les interfaces réactives, Vue.js (2014) pour une approche progressive, et Angular 2+ (2016) pour les applications enterprise. Les années 2020 ont introduit les frameworks compilés (Svelte 2019, Solid.js 2021) et les métaframeworks (Next.js, Nuxt.js, SvelteKit). En 2025, React domine avec 40% d'adoption selon State of JS (2025), suivi de Vue.js à 18% et Angular à 12%.
-
-#### Exemples concrets
-
-1. **Facebook (React)** : Facebook utilise React pour ses applications web, améliorant la productivité de développement de 50% et réduisant les temps de chargement de 40% selon Meta Engineering (2025). Plus de 1000 développeurs utilisent React quotidiennement chez Meta, démontrant l'efficacité du framework pour les grandes équipes.
-
-2. **GitHub (React)** : GitHub utilise React pour son interface web, améliorant la maintenabilité de 60% et réduisant les bugs de 45% selon GitHub Engineering (2025). L'application supporte plus de 100 millions d'utilisateurs, prouvant la scalabilité du framework.
-
-3. **Alibaba (Vue.js)** : Alibaba utilise Vue.js pour ses applications e-commerce, améliorant les performances de 35% et réduisant la courbe d'apprentissage de 70% selon Alibaba Engineering (2025). Plus de 500 développeurs utilisent Vue.js dans l'organisation, montrant l'efficacité pour les équipes variées.
-
-
-#### Bénéfices mesurables
-
-- **Amélioration de la productivité** : L'utilisation d'une méthodologie structurée pour choisir le framework améliore la productivité de développement de 35% selon Stack Overflow (2025). Les développeurs utilisant le bon framework génèrent 40% plus de fonctionnalités par mois selon GitHub (2025).
-
-- **Optimisation des performances** : Les frameworks modernes améliorent les performances de 40% selon Web.dev (2025). Les applications utilisant le framework adapté avec optimisations ont des Core Web Vitals dans le vert pour 85% des sites selon Google Lighthouse (2025).
-
-- **Réduction des coûts** : L'adoption d'une méthodologie de choix réduit les coûts de développement de 30% selon State of JS (2025). Les projets bien structurés nécessitent 40% moins de maintenance selon GitHub (2025).
-
-- **Amélioration de la satisfaction développeur** : Les développeurs travaillant avec le framework adapté ont une satisfaction de 70% supérieure selon Stack Overflow (2025). Les équipes formées aux frameworks modernes ont une rétention de 60% supérieure selon GitHub (2025).
-
-#### Défis identifiés
-
-- **Courbe d'apprentissage** : 65% des développeurs trouvent les frameworks difficiles à maîtriser initialement selon Stack Overflow (2025). L'apprentissage de React nécessite en moyenne 2-3 mois selon State of JS (2025), tandis que Vue.js nécessite 2-3 semaines.
-
-- **Choix inadapté** : 70% des échecs de projets web viennent d'un mauvais choix de framework selon GitHub (2025). Le choix sans analyse du contexte augmente les risques de bugs de 50%.
-
-- **Manque de formation** : 60% des équipes manquent de formation sur les frameworks selon Stack Overflow (2025). Le manque de formation réduit la productivité de 40%.
-
-- **Complexité technique** : 60% des organisations résistent à l'adoption de nouveaux frameworks selon State of JS (2025). Seulement 25% des entreprises adoptent des frameworks compilés comme Svelte.
-
-#### Secteurs d'impact
-
-- **E-commerce** : 85% des sites e-commerce utilisent des frameworks modernes selon Web.dev (2025). Les conversions augmentent de 35% avec des frameworks optimisés et un choix adapté.
-
-- **FinTech** : 90% des applications FinTech utilisent React ou Angular selon Stack Overflow (2025). Les performances sont critiques pour la sécurité et la conformité, nécessitant un choix rigoureux.
-
-- **SaaS** : 80% des applications SaaS utilisent React ou Vue.js selon State of JS (2025). Les performances s'améliorent de 60% avec les frameworks modernes et un choix adapté.
-
-- **Médias** : 75% des sites médias utilisent des frameworks pour leurs interfaces interactives selon MDN (2025). Les temps de chargement s'améliorent de 50% avec les optimisations et un choix adapté.
-
-
-#### Éléments constitutifs
-
-1. **Analyse des besoins** : Processus structuré pour identifier les exigences fonctionnelles et non-fonctionnelles. Selon State of JS (2025), 90% des projets découvrent des besoins cachés lors de cette phase. Les organisations qui analysent leurs besoins avant de choisir un framework ont une productivité de 35% supérieure selon Stack Overflow (2025).
-
-2. **Évaluation des frameworks** : Comparaison objective des frameworks candidats selon des critères pondérés. Les organisations qui utilisent une grille de comparaison pondérée ont une précision de choix de 200% supérieure selon GitHub (2025). Les POCs comparatifs améliorent la confiance dans le choix de 250% selon State of JS (2025).
-
-3. **Tests pratiques (POCs)** : Implémentation de versions simplifiées avec chaque framework pour évaluer les performances réelles. Les projets qui testent avant de décider ont un taux de succès de 90% contre 60% pour les choix basés uniquement sur la théorie selon Web.dev (2025).
-
-4. **Intégration équipe** : Évaluation des compétences de l'équipe et planification de la formation nécessaire. Les équipes formées aux frameworks ont une productivité de 60% supérieure selon GitHub (2025). La formation continue améliore la rétention des compétences de 70% selon MDN (2025).
-
-#### Classification détaillée
-
-| Catégorie                        | Description                                | Critères                            | Exemples                         | Adoption 2025 |
-| -------------------------------- | ------------------------------------------ | ----------------------------------- | -------------------------------- | ------------- |
-| **Méthodologie structurée**      | Approche systématique avec étapes définies | Analyse, évaluation, test, décision | C.H.O.I.S.I.R., Framework Canvas | 25%           |
-| **Choix basé sur la popularité** | Choix du framework le plus populaire       | Popularité, communauté, écosystème  | React pour tout                  | 60%           |
-| **Choix basé sur l'habitude**    | Choix du framework connu                   | Familiarité, expérience passée      | Framework utilisé précédemment   | 15%           |
-| **Choix basé sur l'analyse**     | Choix après analyse approfondie            | Besoins, contraintes, équipe        | Analyse complète avant décision  | 30%           |
-
-
-#### Différents types/approches
-
-- **Approche structurée (C.H.O.I.S.I.R.)** : Méthodologie en 8 étapes avec analyse approfondie, tests comparatifs, et décision documentée. Selon State of JS (2025), cette approche a un taux de succès de 90% contre 60% pour les approches non structurées. Cette approche a une efficacité de 85% selon GitHub (2025), avec une productivité améliorée de 35%.
-
-- **Approche basée sur la popularité** : Choix du framework le plus populaire sans analyse approfondie. Selon Stack Overflow (2025), 60% des développeurs choisissent leur framework par popularité. Cette approche a une efficacité de 60% selon State of JS (2025), avec un taux d'échec de 40%.
-
-- **Approche basée sur l'habitude** : Choix du framework connu par habitude ou expérience passée. Selon GitHub (2025), 15% des développeurs choisissent leur framework par habitude. Cette approche a une efficacité de 55% selon State of JS (2025), avec un risque de sous-optimisation.
-
-#### Comparaisons objectives
-
-| Critère             | Approche structurée | Approche popularité | Approche habitude |
-| ------------------- | ------------------- | ------------------- | ----------------- |
-| Efficacité          | 85%                 | 60%                 | 55%               |
-| Coût                | Élevé               | Modéré              | Faible            |
-| Complexité          | Élevée              | Modérée             | Faible            |
-| Taux de succès      | 90%                 | 60%                 | 55%               |
-| Productivité        | +35%                | +15%                | +10%              |
-| Temps de décision   | 6-8 semaines        | 1-2 semaines        | 1 jour            |
-| Satisfaction équipe | 70%                 | 40%                 | 35%               |
-
-
-#### Facteurs de succès identifiés
-
-1. **Analyse approfondie des besoins** : Les organisations qui analysent leurs besoins avant de choisir un framework ont une productivité de 35% supérieure selon State of JS (2025). L'analyse des besoins fonctionnels et non-fonctionnels améliore la précision du choix de 300% selon GitHub (2025).
-
-2. **Tests pratiques (POCs)** : Les projets qui testent avant de décider ont un taux de succès de 90% contre 60% pour les choix basés uniquement sur la théorie selon Web.dev (2025). Les POCs comparatifs améliorent la confiance dans le choix de 250% selon State of JS (2025).
-
-3. **Intégration de l'équipe** : Les équipes formées aux frameworks ont une productivité de 60% supérieure selon GitHub (2025). La formation continue améliore la rétention des compétences de 70% selon MDN (2025). L'équipe fait 70% du succès d'un choix de framework selon Stack Overflow (2025).
-
-4. **Documentation de la décision** : Les projets qui documentent leur choix de framework ont une maintenabilité de 60% supérieure selon GitHub (2025). La documentation améliore la compréhension future de 80% selon State of JS (2025).
-
-#### Facteurs d'échec observés
-
-1. **Choix basé uniquement sur la popularité** : 70% des échecs de projets web viennent d'un mauvais choix de framework selon GitHub (2025). Le choix sans analyse du contexte augmente les risques de bugs de 50% selon Stack Overflow (2025).
-
-2. **Manque de tests pratiques** : Les projets qui décident sans tester ont un taux d'échec de 40% selon Web.dev (2025). L'absence de POCs comparatifs réduit la précision du choix de 250% selon State of JS (2025).
-
-3. **Ignorer les compétences de l'équipe** : Les projets qui ignorent les compétences de l'équipe ont une productivité réduite de 40% selon Stack Overflow (2025). Le manque de formation réduit la satisfaction développeur de 50% selon GitHub (2025).
-
-4. **Absence d'analyse des risques** : Les projets qui n'analysent pas les risques échouent 3x plus selon State of JS (2025). L'absence d'analyse des risques augmente les coûts de 30% selon Web.dev (2025).
-
-
-### 3.1 Méthodologie C.H.O.I.S.I.R.
-
-Élaborée à partir de l'analyse approfondie de plus de 30 cas d'entreprises, cette méthodologie structurée permet de réduire significativement les erreurs de sélection de framework.
-
-
-Ayant testé personnellement plusieurs outils dans ce domaine sur des projets variés, voici mon analyse basée sur mon expérience :
-
-
-#### 5.1.1 Le "Framework Obsolète" - 20% des cas
-
-**Symptômes :** Framework non maintenu, bugs non corrigés, communauté inactive.
-
-#### Ma stratégie
-
-1. **"Audit de maintenance"** : Vérifier la fréquence des mises à jour
-
-2. **"Plan de migration"** : Migration vers un framework maintenu
-
-3. **"Support temporaire"** : Maintenir le framework en attendant la migration
-
-**Exemple :** Un projet avec jQuery a migré vers Vue.js en 3 mois, +200% de performance.
-
-#### 5.1.2 Le "Framework Surdimensionné" - 25% des cas
-
-**Symptômes :** Complexité excessive, temps de développement long, équipe frustrée.
-
-#### Ma stratégie
-
-1. **"Audit de complexité"** : Identifier les fonctionnalités inutilisées
-
-2. **"Migration vers plus simple"** : Changer vers un framework plus adapté
-
-3. **"Optimisation"** : Simplifier l'utilisation du framework actuel
-
-**Cas réussi :** Un projet React surdimensionné a migré vers Vue.js, -60% de temps de développement.
-
-#### 5.1.3 Le "Framework Sous-dimensionné" - 15% des cas
-
-**Symptômes :** Limitations techniques, difficultés d'évolution, performance dégradée.
-
-#### Ma stratégie
-
-1. **"Audit de limitations"** : Identifier les blocages techniques
-
-2. **"Migration vers plus robuste"** : Changer vers un framework plus puissant
-
-3. **"Architecture hybride"** : Combiner plusieurs technologies
-
-**Exemple :** Un projet Vue.js a migré vers React pour gérer la complexité, +300% de fonctionnalités.
-
-#### 5.1.4 Le "Manque de Compétences" - 30% des cas
-
-**Symptômes :** Équipe qui ne maîtrise pas le framework, développement lent, bugs récurrents.
-
-#### Ma stratégie
-
-1. **"Formation intensive"** : Formation de l'équipe au framework
-
-2. **"Mentoring"** : Accompagnement par un expert
-
-3. **"Migration vers connu"** : Changer vers un framework maîtrisé
-
-**Exemple :** Une équipe junior a été formée à Vue.js en 1 mois, +150% de productivité.
-
-#### 5.1.5 Le "Changement de Besoins" - 10% des cas
-
-**Symptômes :** Projet qui évolue, framework qui ne suit plus, refactoring nécessaire.
-
-#### Ma stratégie
-
-1. **"Audit d'évolution"** : Analyser les nouveaux besoins
-
-2. **"Migration progressive"** : Changer le framework par étapes
-
-3. **"Architecture modulaire"** : Faciliter les changements futurs
-
-**Exemple :** Un projet qui a évolué de simple vers complexe a migré de Vue.js vers React, +200% de fonctionnalités.
+Chez ACTIV PARTNERS, j'ai démarré plusieurs projets sous React parce que c'était la norme implicite dans l'équipe. Rétrospectivement, deux de ces projets auraient été plus simples et plus rapides à livrer avec Vue. Pas parce que React est mauvais — il est excellent — mais parce qu'on avait choisi l'outil par réflexe, pas par analyse.
+
+En 2025, l'écosystème JavaScript a mûri au point où aucun framework n'est objectivement supérieur pour tous les contextes. React domine les offres d'emploi et les projets existants, Vue conserve une communauté fidèle et une entrée en matière plus douce, Angular s'impose dans les grosses organisations qui ont besoin de structure forte dès le départ. Ce qui différencie les équipes efficaces, c'est leur capacité à choisir selon le projet, pas selon la mode.
+
+## Ce que les métriques objectives montrent
+
+Le bundle size de base (sans optimisation) illustre des écarts réels. React + ReactDOM pèse autour de 45 Ko gzippé. Vue 3 tourne à 33 Ko. Angular, framework complet avec tout ce qui va avec, démarre à 75 Ko mais n'a généralement pas besoin d'autant de librairies tierces. Svelte, qui compile le composant plutôt que d'embarquer un runtime, produit des bundles ultra-légers mais ce gain se compresse dès que l'application grandit en volume de composants.
+
+La courbe d'apprentissage est souvent mal évaluée. On compare la rapidité à "écrire son premier composant" — ce qui ne dit rien. Ce qui compte, c'est le temps pour être autonome sur un projet de taille réelle avec state management, routing et tests. Sur cet axe, Vue reste le plus accessible, React exige de comprendre la mécanique des hooks pour écrire du code sain, Angular demande une compréhension du système de modules et de la DI avant d'être confortable.
+
+L'écosystème React est sans concurrence en volume : plus de librairies, plus de ressources, plus de développeurs disponibles sur le marché. Ce dernier point est décisif pour les équipes en croissance ou les projets open-source. Vue a un écosystème plus petit mais cohérent et bien maintenu. Angular embarque nativement beaucoup de ce que React exige de chercher à l'extérieur (router, HTTP client, formulaires).
+
+<div style="overflow-x:auto;margin:2rem 0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 360" style="max-width:100%;height:auto">
+  <rect width="700" height="360" fill="#0a0f2e"/>
+  <text x="350" y="30" fill="#fff" font-family="sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Radar comparatif — React / Vue / Angular</text>
+  <!-- Axes labels -->
+  <text x="350" y="58" fill="#94a3b8" font-family="sans-serif" font-size="11" text-anchor="middle">Performance</text>
+  <text x="598" y="198" fill="#94a3b8" font-family="sans-serif" font-size="11" text-anchor="middle">Écosystème</text>
+  <text x="510" y="330" fill="#94a3b8" font-family="sans-serif" font-size="11" text-anchor="middle">Support entreprise</text>
+  <text x="190" y="330" fill="#94a3b8" font-family="sans-serif" font-size="11" text-anchor="middle">Flexibilité</text>
+  <text x="100" y="198" fill="#94a3b8" font-family="sans-serif" font-size="11" text-anchor="middle">Apprentissage</text>
+  <!-- Grid circles -->
+  <polygon points="350,80 574,210 490,310 210,310 126,210" fill="none" stroke="#1e2a4a" stroke-width="1"/>
+  <polygon points="350,110 518,212 454,292 246,292 182,212" fill="none" stroke="#1e2a4a" stroke-width="1"/>
+  <polygon points="350,140 462,214 418,274 282,274 238,214" fill="none" stroke="#1e2a4a" stroke-width="1"/>
+  <polygon points="350,170 406,216 382,256 318,256 294,216" fill="none" stroke="#1e2a4a" stroke-width="1"/>
+  <!-- Axis lines -->
+  <line x1="350" y1="80" x2="350" y2="310" stroke="#1e2a4a" stroke-width="1"/>
+  <line x1="350" y1="195" x2="574" y2="210" stroke="#1e2a4a" stroke-width="1"/>
+  <line x1="350" y1="195" x2="490" y2="310" stroke="#1e2a4a" stroke-width="1"/>
+  <line x1="350" y1="195" x2="210" y2="310" stroke="#1e2a4a" stroke-width="1"/>
+  <line x1="350" y1="195" x2="126" y2="210" stroke="#1e2a4a" stroke-width="1"/>
+  <!-- React polygon — Performance:78, Écosystème:95, SupportE:80, Flexibilité:85, Apprentissage:55 -->
+  <polygon points="350,107 554,208 472,295 228,295 156,208" fill="#915EFF" fill-opacity="0.25" stroke="#915EFF" stroke-width="2"/>
+  <!-- Vue polygon — Performance:72, Écosystème:68, SupportE:58, Flexibilité:80, Apprentissage:90 -->
+  <polygon points="350,118 440,213 426,272 270,272 222,216" fill="#00cffd" fill-opacity="0.2" stroke="#00cffd" stroke-width="2"/>
+  <!-- Angular polygon — Performance:68, Écosystème:76, SupportE:92, Flexibilité:50, Apprentissage:40 -->
+  <polygon points="350,125 464,211 484,299 318,282 300,214" fill="#86efac" fill-opacity="0.2" stroke="#86efac" stroke-width="2"/>
+  <!-- Legend -->
+  <rect x="60" y="335" width="12" height="12" fill="#915EFF"/>
+  <text x="78" y="346" fill="#fff" font-family="sans-serif" font-size="11">React</text>
+  <rect x="140" y="335" width="12" height="12" fill="#00cffd"/>
+  <text x="158" y="346" fill="#fff" font-family="sans-serif" font-size="11">Vue 3</text>
+  <rect x="220" y="335" width="12" height="12" fill="#86efac"/>
+  <text x="238" y="346" fill="#fff" font-family="sans-serif" font-size="11">Angular</text>
+  <text x="400" y="346" fill="#64748b" font-family="sans-serif" font-size="10">Scores relatifs — pas de données absolues</text>
+</svg></div>
+
+## Quand ne pas utiliser React
+
+C'est la question que peu de ressources posent honnêtement. React n'est pas le bon choix pour un site vitrine ou une landing page de quelques pages. Le coût d'installation — bundler, JSX, hydratation — est disproportionné par rapport au résultat. Un site WordPress bien optimisé ou un rendu serveur simple livrera la même expérience utilisateur avec moins de complexité.
+
+Pour un prototype rapide qui doit être montré dans deux jours, Vue ou même du HTML + Alpine.js suffit amplement. La richesse de l'écosystème React devient un obstacle quand on n'a pas le temps de faire les bons choix de librairies.
+
+Pour une application enterprise avec des dizaines de développeurs et des contraintes fortes sur les tests, l'architecture et la cohérence du code, Angular a une longueur d'avance. Son opinionisme — souvent perçu comme un défaut — devient un atout quand l'équipe est grande : tout le monde écrit le code de la même façon.
+
+## Méthode de décision pratique
+
+Avant de choisir un framework, je pose trois questions : quelle est la durée de vie attendue du projet (moins de 6 mois = minimalisme), quelle est la taille de l'équipe (plus de 5 devs = Angular ou React avec conventions strictes), et qui va maintenir le code (si les développeurs connaissent déjà Vue, ne pas introduire React pour "suivre la tendance").
+
+La quatrième question, souvent oubliée : est-ce que le projet a besoin d'un framework du tout ? Pour une application CRUD basique sans interactions complexes, un rendu serveur (Laravel Blade, Django Templates, Rails ERB) avec un peu de JavaScript vanilla reste parfaitement défendable.
+
+<div style="overflow-x:auto;margin:2rem 0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 360" style="max-width:100%;height:auto">
+  <rect width="700" height="360" fill="#0a0f2e"/>
+  <text x="350" y="28" fill="#fff" font-family="sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Tableau de décision — quel framework selon le scénario</text>
+  <!-- Header row -->
+  <rect x="20" y="45" width="180" height="36" fill="#1e2a4a" rx="3"/>
+  <rect x="205" y="45" width="145" height="36" fill="#1e2a4a" rx="3"/>
+  <rect x="355" y="45" width="145" height="36" fill="#1e2a4a" rx="3"/>
+  <rect x="505" y="45" width="175" height="36" fill="#1e2a4a" rx="3"/>
+  <text x="110" y="68" fill="#94a3b8" font-family="sans-serif" font-size="11" font-weight="bold" text-anchor="middle">Scénario</text>
+  <text x="277" y="68" fill="#94a3b8" font-family="sans-serif" font-size="11" font-weight="bold" text-anchor="middle">Framework</text>
+  <text x="427" y="68" fill="#94a3b8" font-family="sans-serif" font-size="11" font-weight="bold" text-anchor="middle">Alternative</text>
+  <text x="592" y="68" fill="#94a3b8" font-family="sans-serif" font-size="11" font-weight="bold" text-anchor="middle">Raison principale</text>
+  <!-- Row 1 — SPA complexe -->
+  <rect x="20" y="86" width="180" height="58" fill="#0f1635" rx="3"/>
+  <rect x="205" y="86" width="145" height="58" fill="#1a0a3a" rx="3"/>
+  <rect x="355" y="86" width="145" height="58" fill="#0f1635" rx="3"/>
+  <rect x="505" y="86" width="175" height="58" fill="#0f1635" rx="3"/>
+  <text x="110" y="108" fill="#fff" font-family="sans-serif" font-size="11" text-anchor="middle">SPA complexe</text>
+  <text x="110" y="124" fill="#64748b" font-family="sans-serif" font-size="10" text-anchor="middle">dashboard, app métier</text>
+  <text x="277" y="112" fill="#915EFF" font-family="sans-serif" font-size="13" font-weight="bold" text-anchor="middle">React</text>
+  <text x="277" y="130" fill="#64748b" font-family="sans-serif" font-size="10" text-anchor="middle">+ Next.js si SSR</text>
+  <text x="427" y="115" fill="#00cffd" font-family="sans-serif" font-size="11" text-anchor="middle">Vue + Nuxt</text>
+  <text x="592" y="108" fill="#94a3b8" font-family="sans-serif" font-size="10" text-anchor="middle">Écosystème, recrutement,</text>
+  <text x="592" y="122" fill="#94a3b8" font-family="sans-serif" font-size="10" text-anchor="middle">maturité de l'outil</text>
+  <!-- Row 2 — Site marketing -->
+  <rect x="20" y="149" width="180" height="58" fill="#121a38" rx="3"/>
+  <rect x="205" y="149" width="145" height="58" fill="#0a1f1a" rx="3"/>
+  <rect x="355" y="149" width="145" height="58" fill="#121a38" rx="3"/>
+  <rect x="505" y="149" width="175" height="58" fill="#121a38" rx="3"/>
+  <text x="110" y="171" fill="#fff" font-family="sans-serif" font-size="11" text-anchor="middle">Site marketing</text>
+  <text x="110" y="187" fill="#64748b" font-family="sans-serif" font-size="10" text-anchor="middle">landing, vitrine</text>
+  <text x="277" y="175" fill="#86efac" font-family="sans-serif" font-size="13" font-weight="bold" text-anchor="middle">Astro / WP</text>
+  <text x="277" y="193" fill="#64748b" font-family="sans-serif" font-size="10" text-anchor="middle">ou HTML statique</text>
+  <text x="427" y="175" fill="#64748b" font-family="sans-serif" font-size="11" text-anchor="middle">Vue si interactif</text>
+  <text x="592" y="171" fill="#94a3b8" font-family="sans-serif" font-size="10" text-anchor="middle">Performance, SEO,</text>
+  <text x="592" y="185" fill="#94a3b8" font-family="sans-serif" font-size="10" text-anchor="middle">zéro bundle inutile</text>
+  <!-- Row 3 — App enterprise -->
+  <rect x="20" y="212" width="180" height="58" fill="#0f1635" rx="3"/>
+  <rect x="205" y="212" width="145" height="58" fill="#0a1f2a" rx="3"/>
+  <rect x="355" y="212" width="145" height="58" fill="#0f1635" rx="3"/>
+  <rect x="505" y="212" width="175" height="58" fill="#0f1635" rx="3"/>
+  <text x="110" y="234" fill="#fff" font-family="sans-serif" font-size="11" text-anchor="middle">App enterprise</text>
+  <text x="110" y="250" fill="#64748b" font-family="sans-serif" font-size="10" text-anchor="middle">grande équipe, long terme</text>
+  <text x="277" y="238" fill="#00cffd" font-family="sans-serif" font-size="13" font-weight="bold" text-anchor="middle">Angular</text>
+  <text x="277" y="256" fill="#64748b" font-family="sans-serif" font-size="10" text-anchor="middle">opiné, structuré</text>
+  <text x="427" y="241" fill="#915EFF" font-family="sans-serif" font-size="11" text-anchor="middle">React + conventions</text>
+  <text x="592" y="234" fill="#94a3b8" font-family="sans-serif" font-size="10" text-anchor="middle">Cohérence d'équipe,</text>
+  <text x="592" y="248" fill="#94a3b8" font-family="sans-serif" font-size="10" text-anchor="middle">TypeScript natif, DI</text>
+  <!-- Row 4 — Prototype -->
+  <rect x="20" y="275" width="180" height="58" fill="#121a38" rx="3"/>
+  <rect x="205" y="275" width="145" height="58" fill="#1a1a0a" rx="3"/>
+  <rect x="355" y="275" width="145" height="58" fill="#121a38" rx="3"/>
+  <rect x="505" y="275" width="175" height="58" fill="#121a38" rx="3"/>
+  <text x="110" y="297" fill="#fff" font-family="sans-serif" font-size="11" text-anchor="middle">Prototype rapide</text>
+  <text x="110" y="313" fill="#64748b" font-family="sans-serif" font-size="10" text-anchor="middle">MVP, démo client</text>
+  <text x="277" y="301" fill="#fbbf24" font-family="sans-serif" font-size="13" font-weight="bold" text-anchor="middle">Vue 3</text>
+  <text x="277" y="319" fill="#64748b" font-family="sans-serif" font-size="10" text-anchor="middle">ou Alpine.js</text>
+  <text x="427" y="301" fill="#86efac" font-family="sans-serif" font-size="11" text-anchor="middle">Svelte</text>
+  <text x="592" y="297" fill="#94a3b8" font-family="sans-serif" font-size="10" text-anchor="middle">Courbe courte,</text>
+  <text x="592" y="311" fill="#94a3b8" font-family="sans-serif" font-size="10" text-anchor="middle">livraison rapide</text>
+</svg></div>
+
+## Ce que je fais concrètement sur mes projets
+
+Sur les projets WordPress + WooCommerce chez ACTIV PARTNERS, l'usage de React se limitait aux composants réellement interactifs — configurateurs de produit, filtres complexes — le reste restait du PHP templating standard. Cette approche hybride est souvent la plus pragmatique : ne pas tout récrire dans le framework du moment, identifier les zones où le gain est réel.
+
+Pour les projets React full, TypeScript est non-négociable dès que l'équipe dépasse deux personnes. Pas parce que c'est à la mode, mais parce que la complétion automatique et les erreurs au moment de l'écriture économisent des heures de débogage sur la durée.
+
+Le vrai critère que j'applique en 2025 : quel est le coût de maintenance dans 18 mois ? Un framework avec peu de conventions impose plus de discipline à l'équipe. Si cette discipline n'est pas naturelle dans l'équipe, il vaut mieux un framework opinionné même si la courbe est plus raide au départ.
+
+> **En résumé** — React domine mais n'est pas universel : Vue est plus accessible pour les équipes réduites, Angular s'impose dans les grandes structures. Le vrai arbitrage n'est pas "quel est le meilleur framework" mais "quel est celui qui correspond à notre équipe, notre contexte et notre durée de projet". Choisir par habitude ou par popularité, c'est la source numéro un de complexité inutile.

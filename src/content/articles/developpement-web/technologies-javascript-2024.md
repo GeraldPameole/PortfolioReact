@@ -1,263 +1,183 @@
 ---
-title: "JavaScript en 2025 : les technologies et patterns qui dominent le marché"
-description: "Développement web moderne : frameworks, tendances et bonnes pratiques."
+title: "JavaScript en 2025 : ce qui a vraiment percé et ce qu'on survend"
+description: "ESM natif, top-level await, TypeScript 5+, Web Components — bilan honnête des patterns modernes qui ont changé le quotidien et des tendances sur-vendues comme le SSR universel."
 publishDate: "2025-02-17"
 type: article
 domain: developpement-web
+image: "/images/themes/dev-web.jpg"
 pillColor: green
-relatedArticles:
-  - domain: developpement-web
-  - pillColor: green
-  - theme: technologie
-  - keywords:
 theme: technologie
 tags:
   - developpement-web
   - javascript
   - frontend
   - web
-
 ---
 
-
-## Introduction
-
-Le développement web évolue à un rythme qui rend obsolètes les bonnes pratiques d'hier en moins de deux ans. Ce qui compte aujourd'hui n'est pas de maîtriser toutes les technologies, mais de savoir lesquelles choisir — et pourquoi — pour construire des applications pérennes et maintenables.
-
-
-Selon McKinsey Global Institute (2025), **l'adoption de bonnes pratiques améliore les performances de 28-38% en moyenne**, et ces bénéfices sont accessibles à tous. Les méthodes et outils présentés ici sont adaptables à différents contextes, budgets et niveaux de maturité organisationnelle.
-
-#### Pourquoi cet article vous concerne, quel que soit votre contexte :
-
-- **Si vous débutez dans ce domaine** : Vous découvrirez des principes fondamentaux et des méthodes accessibles, sans nécessiter une expertise préalable.
-
-- **Si vous êtes professionnel expérimenté** : Vous trouverez des perspectives nouvelles et des approches modernes pour renforcer votre pratique.
-
-- **Si vous prenez des décisions stratégiques** : Vous comprendrez les enjeux et opportunités pour mieux orienter vos choix organisationnels.
-
-#### Ce que révèle mon expérience
-
-- 75% des professionnels appliquent des méthodes inefficaces
-
-- Les meilleurs résultats proviennent d'une approche structurée et éprouvée
-
-- Une méthode bien appliquée peut améliorer les performances de 40-50%
-
-#### Les statistiques du marché 2025 sont éloquentes
-
-
-#### Impact mesuré sur mes projets
-
-- Résultats mesurables sur les projets accompagnés
-
-Cette transformation concerne tous les professionnels et offre des opportunités accessibles à tous les niveaux.
-
-
-**Définition principale :** L'écosystème JavaScript moderne en 2025 englobe l'ensemble des technologies, frameworks, outils et pratiques utilisés pour développer des applications web performantes, maintenables et évolutives. Selon Stack Overflow Developer Survey (2025), JavaScript reste le langage le plus utilisé (67,8% des développeurs), avec un écosystème de 2,1 millions de packages npm selon npm (2025).
-
-**L'expérience partagée avec de nombreuses organisations confirme que** celles qui adoptent les technologies JavaScript modernes obtiennent des résultats significativement supérieurs. Cette supériorité se traduit par une productivité substantiellement accrue, une satisfaction développeur nettement améliorée, un temps de développement considérablement réduit, et une réduction significative des bugs par rapport aux solutions JavaScript vanilla.
-
-**Mon expérience m'a appris que la théorie et la pratique divergent souvent sur** l'adoption des nouvelles technologies. Les benchmarks théoriques prônent souvent les technologies les plus récentes (WebAssembly, Svelte), tandis que sur le terrain, j'observe qu'React avec TypeScript reste le choix le plus pragmatique pour la majorité des projets en raison de son écosystème mature et de la facilité de recrutement.
-
-#### Concepts clés
-
-- **ES2025 (ECMAScript 2025)** : Dernière version du standard JavaScript avec nouvelles fonctionnalités (pattern matching, pipeline operator). L'adoption d'ES2025 augmente la productivité de 25% selon MDN Web Docs (2025). Les nouvelles fonctionnalités ES2025 sont supportées par 95% des navigateurs modernes selon Can I Use (2025).
-
-- **TypeScript** : Superset de JavaScript avec typage statique. Utilisé par 78% des développeurs JavaScript selon State of JS (2025), réduisant les bugs de 40% et améliorant la maintenabilité de 50%. Les projets TypeScript ont une complexité cognitive réduite de 55% selon GitHub (2025).
-
-- **Build Tools modernes** : Vite, esbuild, Turbopack remplacent Webpack pour des builds plus rapides. Vite, adopté par 45% des projets en 2025, réduit le temps de build de 80% selon GitHub (2025). Les applications utilisant Vite ont des temps de chargement initiaux réduits de 50% selon Web.dev (2025).
-
-- **Micro-frontends** : Architecture découpant une application frontend en applications plus petites. Adoption croissante de 35% depuis 2022 selon ThoughtWorks (2025), améliorant la maintenabilité de 40%. Les applications micro-frontends permettent un déploiement indépendant et une scalabilité améliorée selon MDN (2025).
-
-- **Node.js et Runtime JavaScript** : Environnement d'exécution JavaScript côté serveur. Node.js est utilisé par 50% des développeurs selon Stack Overflow (2025), permettant le développement full-stack avec un seul langage. Les applications Node.js ont une performance de 40% supérieure selon Node.js Foundation (2025).
-
-**Contexte historique :** JavaScript a évolué depuis sa création en 1995 jusqu'à devenir le langage dominant du web. Les années 2010 ont vu l'émergence des frameworks (React 2013, Vue.js 2014, Angular 2016), les années 2020 introduisent TypeScript massivement (78% adoption) et les build tools ultra-rapides (Vite 2020, Turbopack 2022). En 2025, l'écosystème JavaScript compte 2,1M de packages npm selon npm (2025), avec une croissance de 35% depuis 2022.
-
-#### Exemples concrets
-
-1. **Netflix (React + TypeScript)** : Netflix utilise React avec TypeScript pour son interface web, gérant 231 millions d'abonnés avec des performances optimales selon Netflix Engineering (2025). L'utilisation de TypeScript a réduit les bugs de production de 45% et amélioré la maintenabilité de 60%.
-
-2. **GitHub (Vue.js + TypeScript)** : GitHub utilise Vue.js avec TypeScript pour son interface, réduisant le time-to-market de 35% grâce à la rapidité de développement selon GitHub Engineering (2025). L'application supporte plus de 100 millions d'utilisateurs avec des temps de chargement inférieurs à 1,5 secondes.
-
-3. **Microsoft (TypeScript)** : Microsoft utilise TypeScript massivement (projet open-source), réduisant les bugs de production de 40% selon Microsoft Research (2025). Plus de 1000 développeurs utilisent TypeScript quotidiennement chez Microsoft, démontrant l'efficacité du langage pour les grandes équipes.
-
-
-#### Bénéfices mesurables
-
-- **Amélioration de la productivité** : L'utilisation des technologies JavaScript modernes améliore la productivité de développement de 35% selon Stack Overflow (2025). Les développeurs utilisant TypeScript génèrent 40% plus de fonctionnalités par mois selon GitHub (2025).
-
-- **Optimisation des performances** : Les build tools modernes (Vite, esbuild) améliorent les performances de 40% selon Web.dev (2025). Les applications utilisant Vite ont des temps de build réduits de 80% et des temps de chargement initiaux réduits de 50% selon GitHub (2025).
-
-- **Réduction des coûts** : L'adoption des technologies JavaScript modernes réduit les coûts de développement de 30% selon State of JS (2025). Les projets utilisant TypeScript nécessitent 40% moins de maintenance selon GitHub (2025).
-
-- **Amélioration de la maintenabilité** : Les technologies JavaScript modernes améliorent la maintenabilité de 60% selon MDN (2025). Les applications avec TypeScript ont une réduction de bugs de 50% selon Stack Overflow (2025).
-
-#### Défis identifiés
-
-- **Courbe d'apprentissage** : 65% des développeurs trouvent les technologies JavaScript modernes difficiles à maîtriser initialement selon Stack Overflow (2025). L'apprentissage de TypeScript nécessite en moyenne 2-3 semaines selon State of JS (2025).
-
-- **Complexité technique** : 60% des organisations résistent à l'adoption de nouvelles technologies selon State of JS (2025). Seulement 25% des entreprises adoptent des technologies émergentes comme WebAssembly.
-
-- **Écosystème en évolution** : Les technologies JavaScript évoluent rapidement, nécessitant une veille constante. 55% des applications nécessitent des mises à jour fréquentes selon GitHub (2025).
-
-- **Compatibilité navigateurs** : Les nouvelles fonctionnalités ES2025 nécessitent un support navigateur moderne. 85% des navigateurs supportent ES2025 selon Can I Use (2025).
-
-#### Secteurs d'impact
-
-- **E-commerce** : 85% des sites e-commerce utilisent des technologies JavaScript modernes selon Web.dev (2025). Les conversions augmentent de 35% avec des technologies optimisées.
-
-- **FinTech** : 90% des applications FinTech utilisent TypeScript selon Stack Overflow (2025). Les performances sont critiques pour la sécurité et la conformité.
-
-- **SaaS** : 80% des applications SaaS utilisent React ou Vue.js avec TypeScript selon State of JS (2025). Les performances s'améliorent de 60% avec les technologies modernes.
-
-- **Médias** : 75% des sites médias utilisent des technologies JavaScript modernes pour leurs interfaces interactives selon MDN (2025). Les temps de chargement s'améliorent de 50% avec les optimisations.
-
-
-#### Éléments constitutifs
-
-1. **Frameworks JavaScript** : React, Vue.js, Angular, Svelte fournissent une structure pour développer des applications web. Selon State of JS (2025), React domine avec 40% d'adoption, suivi de Vue.js à 18% et Angular à 12%. Les frameworks modernes améliorent la productivité de développement de 35% selon Stack Overflow (2025).
-
-3. **Build Tools modernes** : Vite, esbuild, Turbopack permettent une compilation optimisée. Vite, adopté par 45% des projets en 2025, réduit le temps de build de 80% selon GitHub (2025). Les applications utilisant Vite ont des temps de chargement initiaux réduits de 50% selon Web.dev (2025).
-
-#### Classification détaillée
-
-| Catégorie                | Description                            | Critères                                 | Exemples                      | Adoption 2025 |
-| ------------------------ | -------------------------------------- | ---------------------------------------- | ----------------------------- | ------------- |
-| **Frameworks frontend**  | Frameworks pour interfaces utilisateur | Performance, écosystème, communauté      | React, Vue.js, Angular        | 78%           |
-| **Supersets JavaScript** | Langages basés sur JavaScript          | Typage, maintenabilité, productivité     | TypeScript, CoffeeScript      | 78%           |
-| **Build Tools**          | Outils de compilation et optimisation  | Vitesse, taille bundle, DX               | Vite, Webpack, esbuild        | 85%           |
-| **Runtime JavaScript**   | Environnements d'exécution             | Performance, écosystème, compatibilité   | Node.js, Deno, Bun            | 50%           |
-| **Micro-frontends**      | Architecture modulaire                 | Maintenabilité, scalabilité, déploiement | Module Federation, Single-SPA | 35%           |
-
-
-#### Différents types/approches
-
-- **Approche framework complet** : React, Vue.js, Angular avec architecture complète. Selon State of JS (2025), 78% des développeurs utilisent des frameworks complets. Cette approche a une efficacité de 85% selon Web.dev (2025), avec une productivité améliorée de 35%.
-
-- **Approche framework compilé** : Svelte, Solid.js compilent à la build pour éliminer le runtime. Selon State of JS (2025), 45% des développeurs adoptent les frameworks compilés. Cette approche a une efficacité de 95% selon Svelte documentation (2025), avec des bundles réduits de 70%.
-
-- **Approche TypeScript** : TypeScript avec typage statique pour améliorer la maintenabilité. Selon State of JS (2025), 78% des développeurs utilisent TypeScript. Cette approche a une efficacité de 80% selon GitHub (2025), avec une réduction de bugs de 40%.
-
-#### Comparaisons objectives
-
-| Critère                | Frameworks complets | Frameworks compilés | TypeScript   |
-| ---------------------- | ------------------- | ------------------- | ------------ |
-| Efficacité             | 85%                 | 95%                 | 80%          |
-| Coût                   | Modéré              | Élevé               | Modéré       |
-| Complexité             | Modérée             | Élevée              | Modérée      |
-| Performance            | +35%                | +70%                | +25%         |
-| Productivité           | +35%                | +25%                | +30%         |
-| Courbe d'apprentissage | 2-3 mois            | 3-4 mois            | 2-3 semaines |
-| Maintenabilité         | Bonne               | Excellente          | Excellente   |
-
-
-#### Facteurs de succès identifiés
-
-1. **Adoption progressive des technologies** : Les organisations qui adoptent progressivement les technologies JavaScript modernes ont une amélioration de la productivité de 35% selon State of JS (2025). L'adoption progressive permet une meilleure compréhension et intégration.
-
-2. **Formation continue des équipes** : Les équipes formées aux technologies JavaScript modernes ont une productivité de 60% supérieure selon Stack Overflow (2025). La formation continue améliore la rétention des compétences de 70% selon MDN (2025).
-
-3. **Utilisation de TypeScript** : Les organisations utilisant TypeScript ont une réduction de bugs de 40% selon GitHub (2025). TypeScript améliore la maintenabilité de 50% et la complexité cognitive réduite de 55% selon State of JS (2025).
-
-4. **Optimisation continue** : Les organisations qui optimisent leurs applications ont une amélioration des performances de 50% selon Web.dev (2025). L'optimisation réduit les temps de chargement de 40% selon Google Lighthouse (2025).
-
-#### Facteurs d'échec observés
-
-1. **Adoption trop rapide** : 65% des organisations échouent à cause d'une adoption trop rapide selon State of JS (2025). L'adoption trop rapide augmente les risques de bugs de 50%.
-
-2. **Manque de formation** : 60% des équipes manquent de formation sur les technologies JavaScript modernes selon Stack Overflow (2025). Le manque de formation réduit la productivité de 40%.
-
-3. **Ignorer TypeScript** : 55% des applications ignorent TypeScript selon State of JS (2025). L'absence de TypeScript augmente les bugs de 40%.
-
-4. **Resistance au changement** : 70% des organisations résistent à l'adoption de nouvelles technologies selon GitHub (2025). La résistance au changement limite l'innovation de 50%.
-
-
-#### Frameworks reconnus
-
-- **Modèle systémique** : Approche structurée
-
-- **Théorie de l'excellence** : Amélioration continue
-
-#### Modèles académiques
-
-1. **Approche expérientielle** : Apprentissage par la pratique
-
-2. **Constructivisme** : Interaction et collaboration
-
-
-#### Méthodes concrètes
-
-1. **Apprentissage par l'expérience** : 70% de rétention
-
-2. **Approche collaborative** : 85% d'amélioration
-
-3. **Coaching individuel** : ROI de 500%
-
-#### Étapes d'implémentation
-
-1. **Phase 1 - Diagnostic** : Analyse des besoins
-
-2. **Phase 2 - Conception** : Développement des approches
-
-3. **Phase 3 - Déploiement** : Mise en œuvre progressive
-
-
-Ayant testé personnellement plusieurs outils dans ce domaine sur des projets variés, voici mon analyse basée sur mon expérience :
-
-
-#### Outils spécialisés
-
-- **Plateformes modernes** : Solutions intégrées
-
-- **Outils de collaboration** : Travail en équipe
-
-- **Technologies émergentes** : Innovation et performance
-
-#### Comparatif objectif
-
-| Outil                   | Avantages                  | Inconvénients          | Coût   | Complexité |
-| ----------------------- | -------------------------- | ---------------------- | ------ | ---------- |
-| Solution traditionnelle | Fonctionnalités complètes  | Interface complexe     | Élevé  | Élevée     |
-| Solution cloud          | Accessibilité, scalabilité | Dépendance internet    | Modéré | Faible     |
-| Outils collaboratifs    | Interaction sociale        | Limites fonctionnelles | Faible | Faible     |
-
-
-#### Processus d'implémentation
-
-1. **Analyse des besoins** : Identification des outils
-
-2. **Sélection des solutions** : Évaluation comparative
-
-3. **Planification** : Définition du calendrier
-
-4. **Déploiement** : Mise en place progressive
-
-5. **Formation** : Accompagnement des utilisateurs
-
-6. **Suivi et optimisation** : Amélioration continue
-
-
-#### Difficultés identifiées
-
-- **Résistance au changement** : Réticence aux nouvelles méthodes
-
-- **Manque de temps** : Contraintes opérationnelles
-
-- **Coûts élevés** : Investissement important
-
-#### Facteurs de résistance
-
-- Habitudes établies
-
-- Crainte de l'échec
-
-- Manque de reconnaissance
-
-
-#### Solutions éprouvées
-
-1. **Communication et sensibilisation** : Expliquer les bénéfices
-
-2. **Accompagnement personnalisé** : Coaching individuel
-
-3. **Reconnaissance et valorisation** : Mise en avant des progrès
+En 2019, quand j'ai commencé à travailler sérieusement avec React et TypeScript chez ACTIV PARTNERS, l'écosystème JavaScript était déjà riche mais bruyant. Il y avait une nouvelle librairie "révolutionnaire" chaque semaine. Six ans plus tard, le bruit n'a pas baissé, mais j'ai développé un filtre : ce qui change réellement le quotidien d'un développeur vs ce qui fait du bruit sur les fils de veille technologique.
+
+Cette distinction est utile. Elle évite de passer du temps à apprendre des patterns qui ne sortiront jamais du mode expérimental, et elle aide à identifier ce qui vaut l'investissement d'apprentissage.
+
+## Ce qui a vraiment changé l'écriture du code
+
+**Les modules ES natifs** (ESM) sont maintenant supportés par tous les navigateurs modernes sans transpilation. Pendant des années, on a empilé des systèmes de modules — CommonJS, AMD, UMD — parce que les navigateurs ne géraient pas l'import natif. En 2025, utiliser `import` directement dans un script de navigateur fonctionne. Pour les projets sans framework complexe, c'est une simplification significative de la configuration.
+
+**Le top-level await** permet d'écrire `await fetch(...)` directement à la racine d'un module sans envelopper dans une fonction async. C'est une petite syntaxe mais elle clarifie l'initialisation des modules qui dépendent de données asynchrones — connexion base de données, chargement de configuration — sans le boilerplate d'une IIFE async.
+
+**TypeScript 5+** a apporté des améliorations concrètes : la nouvelle syntaxe de décorateurs (standardisée TC39), les `const type parameters` pour les génériques, et les performances de compilation significativement améliorées. Sur nos projets React à ACTIV PARTNERS, TypeScript n'était pas une option — les bugs interceptés à la compilation économisaient des heures de débogage. En 2025, TypeScript est la norme par défaut dans les équipes qui maintiennent du code sur la durée.
+
+**Vite comme outil de build** a rendu Webpack anecdotique sur les nouveaux projets. La différence de vitesse en développement est réelle et mesurable : un projet React moyen qui démarrait en 8-12 secondes avec Create React App démarre en moins de 1 seconde avec Vite. C'est un changement qui améliore le quotidien concrètement.
+
+<div style="overflow-x:auto;margin:2rem 0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 360" style="max-width:100%;height:auto">
+  <rect width="700" height="360" fill="#0a0f2e"/>
+  <text x="350" y="26" fill="#fff" font-family="sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Évolution du stack JavaScript — 2015–2025</text>
+  <!-- Timeline base line -->
+  <line x1="60" y1="180" x2="660" y2="180" stroke="#1e2a4a" stroke-width="2"/>
+  <!-- Year markers -->
+  <line x1="60" y1="174" x2="60" y2="186" stroke="#64748b" stroke-width="1"/>
+  <text x="60" y="200" fill="#64748b" font-family="sans-serif" font-size="10" text-anchor="middle">2015</text>
+  <line x1="120" y1="174" x2="120" y2="186" stroke="#64748b" stroke-width="1"/>
+  <text x="120" y="200" fill="#64748b" font-family="sans-serif" font-size="10" text-anchor="middle">2016</text>
+  <line x1="180" y1="174" x2="180" y2="186" stroke="#64748b" stroke-width="1"/>
+  <text x="180" y="200" fill="#64748b" font-family="sans-serif" font-size="10" text-anchor="middle">2017</text>
+  <line x1="240" y1="174" x2="240" y2="186" stroke="#64748b" stroke-width="1"/>
+  <text x="240" y="200" fill="#64748b" font-family="sans-serif" font-size="10" text-anchor="middle">2018</text>
+  <line x1="300" y1="174" x2="300" y2="186" stroke="#64748b" stroke-width="1"/>
+  <text x="300" y="200" fill="#64748b" font-family="sans-serif" font-size="10" text-anchor="middle">2019</text>
+  <line x1="360" y1="174" x2="360" y2="186" stroke="#64748b" stroke-width="1"/>
+  <text x="360" y="200" fill="#64748b" font-family="sans-serif" font-size="10" text-anchor="middle">2020</text>
+  <line x1="420" y1="174" x2="420" y2="186" stroke="#64748b" stroke-width="1"/>
+  <text x="420" y="200" fill="#64748b" font-family="sans-serif" font-size="10" text-anchor="middle">2021</text>
+  <line x1="480" y1="174" x2="480" y2="186" stroke="#64748b" stroke-width="1"/>
+  <text x="480" y="200" fill="#64748b" font-family="sans-serif" font-size="10" text-anchor="middle">2022</text>
+  <line x1="540" y1="174" x2="540" y2="186" stroke="#64748b" stroke-width="1"/>
+  <text x="540" y="200" fill="#64748b" font-family="sans-serif" font-size="10" text-anchor="middle">2023</text>
+  <line x1="600" y1="174" x2="600" y2="186" stroke="#64748b" stroke-width="1"/>
+  <text x="600" y="200" fill="#64748b" font-family="sans-serif" font-size="10" text-anchor="middle">2024</text>
+  <line x1="660" y1="174" x2="660" y2="186" stroke="#64748b" stroke-width="1"/>
+  <text x="660" y="200" fill="#64748b" font-family="sans-serif" font-size="10" text-anchor="middle">2025</text>
+  <!-- Frameworks events — above line -->
+  <circle cx="60" cy="180" r="5" fill="#915EFF"/>
+  <line x1="60" y1="174" x2="60" y2="130" stroke="#915EFF" stroke-width="1" stroke-dasharray="3,3"/>
+  <text x="60" y="122" fill="#915EFF" font-family="sans-serif" font-size="10" text-anchor="middle">ES6</text>
+  <circle cx="120" cy="180" r="5" fill="#915EFF"/>
+  <line x1="120" y1="174" x2="120" y2="100" stroke="#915EFF" stroke-width="1" stroke-dasharray="3,3"/>
+  <text x="120" y="92" fill="#915EFF" font-family="sans-serif" font-size="10" text-anchor="middle">Angular 2</text>
+  <circle cx="180" cy="180" r="5" fill="#00cffd"/>
+  <line x1="180" y1="174" x2="180" y2="130" stroke="#00cffd" stroke-width="1" stroke-dasharray="3,3"/>
+  <text x="180" y="122" fill="#00cffd" font-family="sans-serif" font-size="10" text-anchor="middle">Webpack 3</text>
+  <circle cx="240" cy="180" r="5" fill="#86efac"/>
+  <line x1="240" y1="174" x2="240" y2="100" stroke="#86efac" stroke-width="1" stroke-dasharray="3,3"/>
+  <text x="240" y="92" fill="#86efac" font-family="sans-serif" font-size="10" text-anchor="middle">TS adoption</text>
+  <circle cx="300" cy="180" r="5" fill="#00cffd"/>
+  <line x1="300" y1="174" x2="300" y2="130" stroke="#00cffd" stroke-width="1" stroke-dasharray="3,3"/>
+  <text x="300" y="122" fill="#00cffd" font-family="sans-serif" font-size="10" text-anchor="middle">React Hooks</text>
+  <circle cx="360" cy="180" r="5" fill="#fbbf24"/>
+  <line x1="360" y1="174" x2="360" y2="100" stroke="#fbbf24" stroke-width="1" stroke-dasharray="3,3"/>
+  <text x="360" y="92" fill="#fbbf24" font-family="sans-serif" font-size="10" text-anchor="middle">Vite / ESM</text>
+  <circle cx="420" cy="180" r="5" fill="#86efac"/>
+  <line x1="420" y1="174" x2="420" y2="130" stroke="#86efac" stroke-width="1" stroke-dasharray="3,3"/>
+  <text x="420" y="122" fill="#86efac" font-family="sans-serif" font-size="10" text-anchor="middle">Top-level await</text>
+  <circle cx="480" cy="180" r="5" fill="#915EFF"/>
+  <line x1="480" y1="174" x2="480" y2="100" stroke="#915EFF" stroke-width="1" stroke-dasharray="3,3"/>
+  <text x="480" y="92" fill="#915EFF" font-family="sans-serif" font-size="10" text-anchor="middle">TS 5 / Turbo</text>
+  <circle cx="540" cy="180" r="5" fill="#00cffd"/>
+  <line x1="540" y1="174" x2="540" y2="130" stroke="#00cffd" stroke-width="1" stroke-dasharray="3,3"/>
+  <text x="540" y="122" fill="#00cffd" font-family="sans-serif" font-size="10" text-anchor="middle">Bun runtime</text>
+  <!-- Below line — disparus -->
+  <circle cx="120" cy="180" r="4" fill="#ef4444"/>
+  <line x1="120" y1="186" x2="120" y2="234" stroke="#ef4444" stroke-width="1" stroke-dasharray="3,3"/>
+  <text x="120" y="250" fill="#ef4444" font-family="sans-serif" font-size="10" text-anchor="middle">Bower ✗</text>
+  <circle cx="180" cy="180" r="4" fill="#ef4444"/>
+  <line x1="180" y1="186" x2="180" y2="234" stroke="#ef4444" stroke-width="1" stroke-dasharray="3,3"/>
+  <text x="180" y="250" fill="#ef4444" font-family="sans-serif" font-size="10" text-anchor="middle">Grunt ✗</text>
+  <circle cx="240" cy="180" r="4" fill="#ef4444"/>
+  <line x1="240" y1="186" x2="240" y2="234" stroke="#ef4444" stroke-width="1" stroke-dasharray="3,3"/>
+  <text x="240" y="250" fill="#ef4444" font-family="sans-serif" font-size="10" text-anchor="middle">Flow ✗</text>
+  <circle cx="360" cy="180" r="4" fill="#ef4444"/>
+  <line x1="360" y1="186" x2="360" y2="234" stroke="#ef4444" stroke-width="1" stroke-dasharray="3,3"/>
+  <text x="360" y="250" fill="#ef4444" font-family="sans-serif" font-size="10" text-anchor="middle">CRA ✗</text>
+  <!-- Legend -->
+  <circle cx="74" cy="330" r="5" fill="#915EFF"/>
+  <text x="86" y="334" fill="#fff" font-family="sans-serif" font-size="11">Frameworks / Runtimes</text>
+  <circle cx="260" cy="330" r="5" fill="#00cffd"/>
+  <text x="272" y="334" fill="#fff" font-family="sans-serif" font-size="11">Tooling</text>
+  <circle cx="340" cy="330" r="5" fill="#86efac"/>
+  <text x="352" y="334" fill="#fff" font-family="sans-serif" font-size="11">Langage / Specs</text>
+  <circle cx="460" cy="330" r="5" fill="#ef4444"/>
+  <text x="472" y="334" fill="#fff" font-family="sans-serif" font-size="11">Disparus</text>
+</svg></div>
+
+## Ce qu'on survend : le SSR universel pour tout
+
+Le rendu côté serveur est une technique valide pour des cas précis : sites à fort trafic organique, pages dont le contenu doit être indexé rapidement, applications où la performance perçue au premier chargement est critique. Next.js et Nuxt ont démocratisé son accessibilité — ce qui est positif.
+
+Le problème est l'extrapolation : l'idée que tout projet devrait utiliser le SSR par défaut. Sur un dashboard d'administration interne avec authentification, le SSR n'apporte rien. Sur une application SPA derrière un login, personne ne cherche le contenu sur Google. Le surcoût de configuration, de débogage des comportements différents entre serveur et client, et d'infrastructure (le serveur Node.js qui tourne en permanence) est réel.
+
+Les Web Components ont aussi bénéficié d'une hype disproportionnée. La promesse — des composants natifs interopérables entre tous les frameworks — est séduisante. La réalité est que le DX est encore inférieur à React ou Vue, le SSR reste complexe, et les cas d'usage justifiant ce choix restent rares. Ils ont leur place dans des design systems à partager entre projets de frameworks différents, mais c'est un cas spécifique.
+
+## Stack recommandée selon le contexte en 2025
+
+Pour un projet React de taille moyenne avec équipe de 2-4 développeurs : Vite + React 18 + TypeScript 5 + React Router ou TanStack Router. Pas de state management global si les données peuvent vivre en local ou dans des hooks de composants. Zustand si on en a besoin, pas Redux sauf legacy.
+
+Pour un site à contenu SEO-critique : Next.js ou Astro. Astro mérite d'être mentionné : son approche "zéro JavaScript par défaut, interactivité opt-in" est une des rares innovations récentes qui résout un vrai problème sans en créer d'autres.
+
+Pour une équipe qui part de zéro et veut aller vite : Vue 3 + Vite + TypeScript. La courbe est plus douce, le résultat est professionnel, et Nuxt est là si le SSR devient nécessaire.
+
+<div style="overflow-x:auto;margin:2rem 0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 360" style="max-width:100%;height:auto">
+  <rect width="700" height="360" fill="#0a0f2e"/>
+  <text x="350" y="26" fill="#fff" font-family="sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Arbre de décision TypeScript vs JavaScript vanilla</text>
+  <!-- Start -->
+  <rect x="270" y="46" width="160" height="38" fill="#915EFF" rx="4"/>
+  <text x="350" y="70" fill="#fff" font-family="sans-serif" font-size="12" font-weight="bold" text-anchor="middle">Nouveau projet JS</text>
+  <!-- Q1 — Durée > 3 mois ? -->
+  <line x1="350" y1="84" x2="350" y2="108" stroke="#64748b" stroke-width="1.5"/>
+  <rect x="248" y="108" width="204" height="36" fill="#1e2a4a" rx="4"/>
+  <text x="350" y="131" fill="#fff" font-family="sans-serif" font-size="11" text-anchor="middle">Durée prévue &gt; 3 mois ?</text>
+  <!-- Non branch -->
+  <line x1="248" y1="126" x2="130" y2="126" stroke="#64748b" stroke-width="1.5"/>
+  <text x="188" y="120" fill="#64748b" font-family="sans-serif" font-size="10" text-anchor="middle">Non</text>
+  <rect x="60" y="108" width="120" height="36" fill="#0a1f0a" rx="4"/>
+  <text x="120" y="131" fill="#86efac" font-family="sans-serif" font-size="11" text-anchor="middle">JS vanilla OK</text>
+  <!-- Oui branch Q2 -->
+  <line x1="350" y1="144" x2="350" y2="170" stroke="#64748b" stroke-width="1.5"/>
+  <text x="365" y="160" fill="#64748b" font-family="sans-serif" font-size="10">Oui</text>
+  <rect x="248" y="170" width="204" height="36" fill="#1e2a4a" rx="4"/>
+  <text x="350" y="193" fill="#fff" font-family="sans-serif" font-size="11" text-anchor="middle">Équipe &gt; 2 développeurs ?</text>
+  <!-- Non branch -->
+  <line x1="248" y1="188" x2="130" y2="188" stroke="#64748b" stroke-width="1.5"/>
+  <text x="188" y="182" fill="#64748b" font-family="sans-serif" font-size="10" text-anchor="middle">Non</text>
+  <rect x="60" y="170" width="120" height="36" fill="#1a1a0a" rx="4"/>
+  <text x="120" y="193" fill="#fbbf24" font-family="sans-serif" font-size="11" text-anchor="middle">TS recommandé</text>
+  <!-- Oui branch Q3 -->
+  <line x1="350" y1="206" x2="350" y2="232" stroke="#64748b" stroke-width="1.5"/>
+  <text x="365" y="222" fill="#64748b" font-family="sans-serif" font-size="10">Oui</text>
+  <rect x="248" y="232" width="204" height="36" fill="#1e2a4a" rx="4"/>
+  <text x="350" y="255" fill="#fff" font-family="sans-serif" font-size="11" text-anchor="middle">Code partagé / librairie ?</text>
+  <!-- Non branch -->
+  <line x1="248" y1="250" x2="130" y2="250" stroke="#64748b" stroke-width="1.5"/>
+  <text x="188" y="244" fill="#64748b" font-family="sans-serif" font-size="10" text-anchor="middle">Non</text>
+  <rect x="60" y="232" width="120" height="36" fill="#1a1a0a" rx="4"/>
+  <text x="120" y="255" fill="#fbbf24" font-family="sans-serif" font-size="11" text-anchor="middle">TS fortement conseillé</text>
+  <!-- Oui branch — TS obligatoire -->
+  <line x1="452" y1="250" x2="550" y2="250" stroke="#64748b" stroke-width="1.5"/>
+  <text x="500" y="244" fill="#64748b" font-family="sans-serif" font-size="10" text-anchor="middle">Oui</text>
+  <rect x="550" y="232" width="130" height="36" fill="#0a1f2a" rx="4"/>
+  <text x="615" y="255" fill="#00cffd" font-family="sans-serif" font-size="11" text-anchor="middle">TypeScript obligatoire</text>
+  <!-- Final recommendation -->
+  <rect x="270" y="296" width="160" height="46" fill="#1e3a5a" rx="4"/>
+  <text x="350" y="316" fill="#fff" font-family="sans-serif" font-size="11" text-anchor="middle">Conclusion :</text>
+  <text x="350" y="332" fill="#00cffd" font-family="sans-serif" font-size="11" font-weight="bold" text-anchor="middle">TypeScript par défaut</text>
+  <line x1="120" y1="268" x2="120" y2="319" stroke="#64748b" stroke-width="1" stroke-dasharray="3,3"/>
+  <line x1="120" y1="319" x2="270" y2="319" stroke="#64748b" stroke-width="1" stroke-dasharray="3,3"/>
+  <line x1="615" y1="268" x2="615" y2="319" stroke="#64748b" stroke-width="1" stroke-dasharray="3,3"/>
+  <line x1="615" y1="319" x2="430" y2="319" stroke="#64748b" stroke-width="1" stroke-dasharray="3,3"/>
+</svg></div>
+
+## Ce que je retiens de six ans de projets JavaScript
+
+La tendance de fond est positive : JavaScript en 2025 est un langage plus sûr, plus lisible et plus rapide à utiliser qu'il ne l'était en 2019. TypeScript a mûri au point d'être la configuration par défaut plutôt qu'une option avancée. Vite a résolu le problème du build lent. ESM natif simplifie la configuration pour les projets simples.
+
+Ce qui n'a pas changé : la nécessité de choisir ses outils selon le projet et non selon ce qui fait du bruit sur les réseaux. Le SSR n'est pas universel. Les Web Components ne remplacent pas les frameworks. Et écrire du JavaScript vanilla reste la meilleure façon de comprendre ce que les frameworks font réellement sous le capot.
+
+> **En résumé** — ESM natif, top-level await et TypeScript 5+ ont changé concrètement la façon d'écrire du JavaScript en 2025. Vite a remplacé Webpack sur les nouveaux projets. Le SSR universel reste sur-vendu pour les applications derrière authentification. La bonne stack dépend du contexte, pas de la tendance du moment.

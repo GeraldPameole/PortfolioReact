@@ -4,6 +4,7 @@ description: "Benchmarks marché, timing optimal, ancrage et contre-proposition 
 publishDate: "2025-01-06"
 type: article
 domain: developpement-commercial
+image: "/images/themes/management.jpg"
 pillColor: orange
 theme: carriere
 ---

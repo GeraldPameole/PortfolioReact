@@ -1,9 +1,10 @@
 ---
 title: "Stratégie qualité : aligner exigence opérationnelle et objectifs business"
-description: "Démarches qualité et optimisation des processus en entreprise."
+description: "Construire une stratégie qualité — aligner exigence opérationnelle et objectifs business"
 publishDate: "2026-08-31"
 type: article
 domain: qualite-process
+image: "/images/themes/management.jpg"
 pillColor: purple
 relatedArticles:
   - domain: qualite-process

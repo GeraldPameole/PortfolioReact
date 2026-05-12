@@ -4,6 +4,7 @@ description: "Les vraies raisons de départ ne sont pas toujours le salaire. Lev
 publishDate: "2025-10-13"
 type: article
 domain: gestion-talents
+image: "/images/themes/management.jpg"
 pillColor: teal
 theme: gestion
 ---

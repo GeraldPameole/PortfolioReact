@@ -4,6 +4,7 @@ description: "GTD adapté aux managers et chefs de projet — les 5 étapes, pou
 publishDate: "2026-07-06"
 type: article
 domain: productivite-methodes
+image: "/images/themes/productivite.jpg"
 pillColor: indigo
 relatedArticles:
   - domain: productivite-methodes

@@ -4,6 +4,7 @@ description: "Comparaison pratique de Scrum, Kanban et SAFe — quand utiliser c
 publishDate: "2025-07-21"
 type: article
 domain: gestion-projet
+image: "/images/themes/management.jpg"
 pillColor: blue
 theme: gestion
 ---

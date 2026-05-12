@@ -4,6 +4,7 @@ description: "IA générative, TypeScript, edge computing — ce que ces tendanc
 publishDate: "2025-02-24"
 type: article
 domain: developpement-web
+image: "/images/themes/dev-web.jpg"
 pillColor: green
 theme: technologie
 ---

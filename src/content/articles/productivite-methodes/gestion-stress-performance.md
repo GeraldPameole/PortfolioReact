@@ -1,9 +1,10 @@
 ---
 title: "Stress et performance : maintenir l'efficacité sous pression"
-description: "Méthodes et outils pour améliorer la productivité et l'efficacité professionnelle."
+description: "Gérer stress et performance — techniques concrètes pour maintenir l'efficacité sous pression"
 publishDate: "2026-06-01"
 type: article
 domain: productivite-methodes
+image: "/images/themes/productivite.jpg"
 pillColor: indigo
 relatedArticles:
   - domain: productivite-methodes

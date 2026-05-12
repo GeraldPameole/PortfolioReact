@@ -4,6 +4,7 @@ description: "Comment construire un plan de formation commerciale annuel efficac
 publishDate: "2025-05-05"
 type: article
 domain: formation
+image: "/images/themes/formation-carriere.jpg"
 tags:
   - formation
   - competences

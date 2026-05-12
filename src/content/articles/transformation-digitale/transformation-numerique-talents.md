@@ -4,6 +4,7 @@ description: "Comment les organisations en transformation digitale perdent leurs
 publishDate: "2026-10-26"
 type: article
 domain: transformation-digitale
+image: "/images/themes/ia.jpg"
 pillColor: pink
 relatedArticles:
   - domain: transformation-digitale

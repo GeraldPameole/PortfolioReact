@@ -9,6 +9,7 @@ readingTime: 25
 hasMermaid: true
 targetAudience: "Dirigeants, Managers, Leaders, Professionnels du Management"
 domain: leadership-management
+image: "/images/themes/management.jpg"
 tags:
   - leadership-moderne
   - management

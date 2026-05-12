@@ -4,6 +4,7 @@ description: "Comment passer d'une liste chaotique à un plan d'action hebdomada
 publishDate: "2026-05-11"
 type: article
 domain: productivite-methodes
+image: "/images/themes/productivite.jpg"
 pillColor: indigo
 theme: carriere
 ---

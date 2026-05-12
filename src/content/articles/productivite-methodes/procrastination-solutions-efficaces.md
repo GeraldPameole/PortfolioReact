@@ -4,6 +4,7 @@ description: "Pourquoi on reporte les tâches importantes et quatre techniques c
 publishDate: "2026-07-20"
 type: article
 domain: productivite-methodes
+image: "/images/themes/productivite.jpg"
 pillColor: indigo
 relatedArticles:
   - domain: productivite-methodes

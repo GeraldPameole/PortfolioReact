@@ -4,6 +4,7 @@ description: "Les erreurs qui sabotent un recrutement — recruter trop vite, cl
 publishDate: "2025-11-03"
 type: article
 domain: gestion-talents
+image: "/images/themes/management.jpg"
 pillColor: teal
 theme: gestion
 ---

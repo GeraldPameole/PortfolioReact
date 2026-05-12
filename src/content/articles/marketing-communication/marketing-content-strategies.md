@@ -4,6 +4,7 @@ description: "En B2B, publier régulièrement ne suffit pas. Ce qui convertit, c
 publishDate: "2026-03-16"
 type: article
 domain: marketing-communication
+image: "/images/themes/marketing.jpg"
 pillColor: yellow
 relatedArticles:
   - domain: marketing-communication

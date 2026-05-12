@@ -4,6 +4,7 @@ description: "Comment construire une palette de couleurs professionnelle pour le
 publishDate: "2026-04-27"
 type: article
 domain: outils-techniques
+image: "/images/themes/dev-web.jpg"
 pillColor: slate
 theme: technologie
 ---

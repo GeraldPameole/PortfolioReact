@@ -1,156 +1,177 @@
 ---
-title: "Comparaison des frameworks JavaScript : performances, écosystème et choix en 2025"
-description: "Développement web moderne : frameworks, tendances et bonnes pratiques."
+title: "Comparer les frameworks JavaScript objectivement : méthode et critères réels"
+description: "Comment comparer React, Vue, Angular et Svelte sans se laisser piéger par les benchmarks de laboratoire ou l'effet de mode — méthode rigoureuse et critères qui comptent vraiment."
 publishDate: "2025-01-27"
 type: article
 domain: developpement-web
+image: "/images/themes/dev-web.jpg"
 pillColor: green
 theme: technologie
 ---
 
-
-## Introduction
-
-L'analyse approfondie de plus de 50 applications web développées avec différents frameworks JavaScript et l'étude des performances sur des projets allant de 10K à 2M d'utilisateurs révèlent que le choix du framework peut transformer significativement la productivité de l'équipe et les performances de l'application.
-
-En 2025, l'écosystème JavaScript continue d'évoluer rapidement, avec de nouveaux défis liés à la performance, à l'accessibilité et à l'expérience développeur. Cette analyse comparative s'appuie sur des données réelles de projets en production et des benchmarks officiels.
-
-#### Impact observé sur mes projets
-
-- **Productivité équipe** : +35% avec le bon choix de framework
-
-- **Temps de développement** : -40% grâce aux outils modernes
-
-- **Performance runtime** : +60% d'amélioration des Core Web Vitals
-
-- **Maintenabilité** : -50% de bugs en production avec les bonnes pratiques
-
-- **Satisfaction développeur** : +70% avec les frameworks bien choisis
-
-Cette réalité transforme notre approche du développement frontend et impose une sélection stratégique basée sur des critères objectifs.
-
-
-**Définition principale :** Les frameworks JavaScript sont des ensembles d'outils et de bibliothèques qui fournissent une structure pour développer des applications web modernes, avec des fonctionnalités prêtes à l'emploi et des conventions de développement. Selon State of JS (2025), 78% des développeurs utilisent au moins un framework JavaScript, avec React dominant à 40%, suivi de Vue.js à 18% et Angular à 12%.
-
-**Les données collectées auprès de nombreuses organisations révèlent que** celles qui choisissent le bon framework selon leur contexte spécifique obtiennent des résultats remarquablement supérieurs. Cette supériorité se manifeste à travers plusieurs dimensions : une productivité significativement accrue, une satisfaction développeur nettement améliorée, et un temps de développement considérablement réduit par rapport aux solutions natives.
-
-**Mon expérience m'a appris que la théorie et la pratique divergent souvent sur** le choix du framework. Les benchmarks théoriques prônent souvent les frameworks compilés (Svelte, Solid.js), tandis que sur le terrain, j'observe qu'React et Vue.js restent les choix les plus pragmatiques pour la majorité des projets en raison de leur écosystème mature et de la facilité de recrutement.
-
-#### Concepts clés
-
-- **Virtual DOM** : Système de rendu optimisé pour les performances. React utilise un Virtual DOM pour minimiser les manipulations DOM directes, améliorant les performances de 40% selon Web.dev (2025). Vue.js utilise également un Virtual DOM optimisé qui réduit les re-renders de 60% selon Vue.js documentation (2025).
-
-- **Composants réutilisables** : Architecture modulaire et maintenable. Les frameworks modernes permettent la création de composants réutilisables, réduisant la duplication de code de 50% selon Stack Overflow (2025). Les applications utilisant des composants ont une maintenabilité de 60% supérieure selon GitHub (2025).
-
-- **State Management** : Gestion centralisée de l'état de l'application. Redux (React), Vuex/Pinia (Vue), et NgRx (Angular) permettent une gestion d'état prévisible, réduisant les bugs liés à l'état de 45% selon State of JS (2025). Les applications avec un state management bien structuré ont une complexité cognitive réduite de 55% selon MDN (2025).
-
-- **Build Tools et Optimisation** : Outils de compilation et d'optimisation. Vite, Webpack, et Parcel permettent une compilation optimisée, réduisant les temps de build de 70% selon Vite documentation (2025). Les applications utilisant des build tools modernes ont des temps de chargement initiaux réduits de 50% selon Google Lighthouse (2025).
-
-- **Developer Experience (DX)** : Qualité de l'expérience développeur. Les frameworks modernes améliorent la DX avec des outils de développement, du hot reload, et une documentation de qualité, augmentant la productivité de 40% selon Stack Overflow Developer Survey (2025).
-
-**Contexte historique :** L'évolution des frameworks JavaScript a commencé avec jQuery (2006) pour simplifier les manipulations DOM, puis AngularJS (2010) pour les applications complexes, React (2013) pour les interfaces réactives, Vue.js (2014) pour une approche progressive, et Angular 2+ (2016) pour les applications enterprise. Les années 2020 ont introduit les frameworks compilés (Svelte 2019, Solid.js 2021) et les métaframeworks (Next.js, Nuxt.js, SvelteKit). En 2025, React domine avec 40% d'adoption selon State of JS (2025), suivi de Vue.js à 18% et Angular à 12%.
-
-#### Exemples concrets
-
-1. **Facebook (React)** : Facebook utilise React pour ses applications web, améliorant la productivité de développement de 50% et réduisant les temps de chargement de 40% selon Meta Engineering (2025). Plus de 1000 développeurs utilisent React quotidiennement chez Meta.
-
-2. **GitHub (React)** : GitHub utilise React pour son interface web, améliorant la maintenabilité de 60% et réduisant les bugs de 45% selon GitHub Engineering (2025). L'application supporte plus de 100 millions d'utilisateurs.
-
-3. **Alibaba (Vue.js)** : Alibaba utilise Vue.js pour ses applications e-commerce, améliorant les performances de 35% et réduisant la courbe d'apprentissage de 70% selon Alibaba Engineering (2025). Plus de 500 développeurs utilisent Vue.js dans l'organisation.
-
-
-#### Bénéfices mesurables
-
-- **Amélioration de la productivité** : L'utilisation des frameworks JavaScript améliore la productivité de développement de 35% selon Stack Overflow (2025). Les développeurs utilisant React génèrent 40% plus de fonctionnalités par mois selon GitHub (2025).
-
-- **Optimisation des performances** : Les frameworks modernes améliorent les performances de 40% selon Web.dev (2025). Les applications utilisant React avec optimisations ont des Core Web Vitals dans le vert pour 85% des sites selon Google Lighthouse (2025).
-
-- **Réduction des coûts** : L'adoption des frameworks réduit les coûts de développement de 30% selon State of JS (2025). Les projets bien structurés nécessitent 40% moins de maintenance selon GitHub (2025).
-
-- **Amélioration de la maintenabilité** : Les frameworks modernes améliorent la maintenabilité de 60% selon MDN (2025). Les applications avec une architecture modulaire ont une réduction de bugs de 50% selon Stack Overflow (2025).
-
-#### Défis identifiés
-
-- **Courbe d'apprentissage** : 65% des développeurs trouvent les frameworks difficiles à maîtriser initialement selon Stack Overflow (2025). L'apprentissage de React nécessite en moyenne 2-3 mois selon State of JS (2025), tandis que Vue.js nécessite 2-3 semaines.
-
-- **Bundle size** : Les frameworks peuvent augmenter la taille du bundle de 40% si mal optimisés selon Bundlephobia (2025). Les applications non optimisées ont des temps de chargement initiaux de 3-5 secondes selon Google Lighthouse (2025).
-
-- **Complexité technique** : 60% des organisations résistent à l'adoption de nouveaux frameworks selon State of JS (2025). Seulement 25% des entreprises adoptent des frameworks compilés comme Svelte.
-
-- **Écosystème et dépendances** : Les frameworks dépendent de communautés actives et de mises à jour régulières. 55% des applications nécessitent des mises à jour fréquentes selon GitHub (2025).
-
-#### Secteurs d'impact
-
-- **E-commerce** : 85% des sites e-commerce utilisent des frameworks modernes selon Web.dev (2025). Les conversions augmentent de 35% avec des frameworks optimisés.
-
-- **FinTech** : 90% des applications FinTech utilisent React ou Angular selon Stack Overflow (2025). Les performances sont critiques pour la sécurité et la conformité.
-
-- **SaaS** : 80% des applications SaaS utilisent React ou Vue.js selon State of JS (2025). Les performances s'améliorent de 60% avec les frameworks modernes.
-
-- **Médias** : 75% des sites médias utilisent des frameworks pour leurs interfaces interactives selon MDN (2025). Les temps de chargement s'améliorent de 50% avec les optimisations.
-
-
-#### Éléments constitutifs
-
-1. **Système de rendu** : Les frameworks utilisent différents systèmes de rendu (Virtual DOM, compilation, réactivité fine). React utilise un Virtual DOM qui optimise les mises à jour, améliorant les performances de 40% selon Web.dev (2025). Vue.js utilise également un Virtual DOM optimisé avec une réactivité fine, réduisant les re-renders de 60% selon Vue.js documentation (2025). Svelte compile les composants en JavaScript vanilla, éliminant le Virtual DOM et réduisant le bundle de 70% selon Svelte documentation (2025).
-
-2. **Système de composants** : Architecture modulaire basée sur des composants réutilisables. Les frameworks modernes permettent la création de composants encapsulant logique et interface, réduisant la duplication de code de 50% selon Stack Overflow (2025). Les applications utilisant des composants ont une maintenabilité de 60% supérieure selon GitHub (2025).
-
-#### Classification détaillée
-
-| Catégorie                 | Description                            | Critères                               | Exemples                    | Adoption 2025 |
-| ------------------------- | -------------------------------------- | -------------------------------------- | --------------------------- | ------------- |
-| **Frameworks compilés**   | Frameworks avec compilation à la build | Performance, bundle size, vitesse      | Svelte, Solid.js, Qwik      | 45%           |
-| **Frameworks runtime**    | Frameworks avec Virtual DOM            | Flexibilité, écosystème, communauté    | React, Vue.js               | 78%           |
-| **Frameworks enterprise** | Frameworks avec architecture complète  | Structure, TypeScript, outils intégrés | Angular, Ember.js           | 12%           |
-| **Métaframeworks**        | Frameworks basés sur un framework      | SSR, routing, optimisations            | Next.js, Nuxt.js, SvelteKit | 35%           |
-
-
-#### Différents types/approches
-
-- **Approche Virtual DOM** : React et Vue.js utilisent un Virtual DOM pour optimiser les mises à jour. Selon State of JS (2025), 78% des développeurs utilisent des frameworks avec Virtual DOM. Cette approche a une efficacité de 85% selon Web.dev (2025), avec des performances améliorées de 40% par rapport au DOM direct.
-
-- **Approche compilation** : Svelte et Solid.js compilent les composants à la build pour éliminer le runtime. Selon State of JS (2025), 45% des développeurs adoptent les frameworks compilés. Cette approche a une efficacité de 95% selon Svelte documentation (2025), avec des bundles réduits de 70%.
-
-- **Approche réactivité fine** : Vue.js et Solid.js utilisent une réactivité fine pour mettre à jour uniquement les parties nécessaires. Selon Vue.js documentation (2025), cette approche réduit les re-renders de 60% et améliore les performances de 50% selon Stack Overflow (2025).
-
-#### Comparaisons objectives
-
-| Critère                | Frameworks Virtual DOM | Frameworks compilés | Frameworks enterprise |
-| ---------------------- | ---------------------- | ------------------- | --------------------- |
-| Efficacité             | 85%                    | 95%                 | 80%                   |
-| Coût                   | Modéré                 | Élevé               | Élevé                 |
-| Complexité             | Modérée                | Élevée              | Élevée                |
-| Performance            | +40%                   | +70%                | +30%                  |
-| Productivité           | +35%                   | +25%                | +20%                  |
-| Courbe d'apprentissage | 2-3 mois               | 3-4 mois            | 3-6 mois              |
-| Écosystème             | Excellent              | Modéré              | Excellent             |
-
-
-#### Facteurs de succès identifiés
-
-1. **Choix adapté au contexte** : Les organisations qui choisissent le framework selon leur contexte spécifique ont une productivité de 35% supérieure selon State of JS (2025). L'analyse des besoins (équipe, projet, contraintes) avant le choix améliore la satisfaction développeur de 70% selon Stack Overflow (2025).
-
-2. **Formation et support** : Les équipes formées aux frameworks ont une productivité de 60% supérieure selon GitHub (2025). La formation continue améliore la rétention des compétences de 70% selon MDN (2025).
-
-3. **Optimisation continue** : Les organisations qui optimisent leurs applications ont une amélioration des performances de 50% selon Web.dev (2025). L'optimisation réduit les temps de chargement de 40% selon Google Lighthouse (2025).
-
-4. **Architecture modulaire** : Les applications avec une architecture modulaire ont une maintenabilité de 60% supérieure selon GitHub (2025). Les composants réutilisables réduisent la duplication de code de 50% selon Stack Overflow (2025).
-
-#### Facteurs d'échec observés
-
-1. **Choix inadapté** : 65% des organisations échouent à cause d'un choix de framework inadapté selon State of JS (2025). Le choix sans analyse du contexte augmente les risques de bugs de 50%.
-
-2. **Manque de formation** : 60% des équipes manquent de formation sur les frameworks selon Stack Overflow (2025). Le manque de formation réduit la productivité de 40%.
-
-3. **Ignorer les optimisations** : 55% des applications ignorent les optimisations de performance selon Web.dev (2025). L'absence d'optimisation augmente les temps de chargement de 70%.
-
-4. **Architecture non-scalable** : 70% des applications échouent à cause d'une architecture non-scalable selon GitHub (2025). L'architecture non-modulaire limite l'évolution de 50%.
-
-
-Élaborée à partir de l'analyse approfondie de plus de 30 cas d'entreprises, cette méthodologie structurée permet de réduire significativement les erreurs de sélection de framework.
-
-
-Ayant testé personnellement plusieurs outils dans ce domaine sur des projets variés, voici mon analyse basée sur mon expérience :
-
-
+Le débat frameworks JavaScript ressemble souvent à une dispute religieuse : les défenseurs de React accusent Vue d'être trop simple, les fans de Svelte moquent le bundle size de React, les développeurs Angular regardent tout ça de loin avec leur architecture en béton armé. Aucune de ces postures n'aide à prendre une décision dans un contexte réel.
+
+Quand j'ai démarré chez ACTIV PARTNERS en 2019, le projet utilisait React. Personne ne m'a expliqué pourquoi React plutôt que Vue — c'était "ce que tout le monde utilisait". Ce n'est pas une raison. Une comparaison sérieuse exige des critères définis avant de regarder les frameworks, pas après.
+
+## Pourquoi les benchmarks populaires trompent
+
+La plupart des benchmarks comparent le rendu d'une liste de 10 000 éléments, la performance de firstContentfulPaint sur un hello world, ou le temps de build à froid. Ces métriques sont réelles mais ne reflètent pas les contraintes d'un projet en production avec des développeurs de niveaux hétérogènes, des dépendances tierces et une dette technique qui s'accumule.
+
+Le "JS framework benchmark" de krausest est souvent cité. Il montre Solid.js et Svelte en tête sur des benchmarks de manipulation DOM. Ce qui est omis : ces gains s'amortissent rapidement quand l'application intègre des appels réseau, du state management complexe et des transitions animées. Sur la majorité des applications métier, la différence de performance à l'exécution entre React, Vue et Angular est imperceptible pour l'utilisateur.
+
+Ce qui compte davantage : le temps de build en mode développement (Vite a rendu tous les frameworks rapides ici), la taille du bundle initial (Svelte gagne nettement), et la lisibilité du code six mois après l'avoir écrit.
+
+<div style="overflow-x:auto;margin:2rem 0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 360" style="max-width:100%;height:auto">
+  <rect width="700" height="360" fill="#0a0f2e"/>
+  <text x="350" y="28" fill="#fff" font-family="sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Évolution des parts de marché — State of JS 2018–2025</text>
+  <!-- Axes -->
+  <line x1="60" y1="290" x2="660" y2="290" stroke="#1e2a4a" stroke-width="2"/>
+  <line x1="60" y1="70" x2="60" y2="290" stroke="#1e2a4a" stroke-width="2"/>
+  <!-- Y labels -->
+  <text x="50" y="294" fill="#64748b" font-family="sans-serif" font-size="10" text-anchor="end">0%</text>
+  <text x="50" y="240" fill="#64748b" font-family="sans-serif" font-size="10" text-anchor="end">20%</text>
+  <text x="50" y="186" fill="#64748b" font-family="sans-serif" font-size="10" text-anchor="end">40%</text>
+  <text x="50" y="132" fill="#64748b" font-family="sans-serif" font-size="10" text-anchor="end">60%</text>
+  <text x="50" y="78" fill="#64748b" font-family="sans-serif" font-size="10" text-anchor="end">80%</text>
+  <!-- Grid lines -->
+  <line x1="60" y1="240" x2="660" y2="240" stroke="#1e2a4a" stroke-width="1" stroke-dasharray="4,4"/>
+  <line x1="60" y1="186" x2="660" y2="186" stroke="#1e2a4a" stroke-width="1" stroke-dasharray="4,4"/>
+  <line x1="60" y1="132" x2="660" y2="132" stroke="#1e2a4a" stroke-width="1" stroke-dasharray="4,4"/>
+  <line x1="60" y1="78" x2="660" y2="78" stroke="#1e2a4a" stroke-width="1" stroke-dasharray="4,4"/>
+  <!-- X labels — 2018 to 2025 — 8 points, spacing ~85.7 -->
+  <text x="60" y="308" fill="#64748b" font-family="sans-serif" font-size="10" text-anchor="middle">2018</text>
+  <text x="146" y="308" fill="#64748b" font-family="sans-serif" font-size="10" text-anchor="middle">2019</text>
+  <text x="232" y="308" fill="#64748b" font-family="sans-serif" font-size="10" text-anchor="middle">2020</text>
+  <text x="318" y="308" fill="#64748b" font-family="sans-serif" font-size="10" text-anchor="middle">2021</text>
+  <text x="404" y="308" fill="#64748b" font-family="sans-serif" font-size="10" text-anchor="middle">2022</text>
+  <text x="490" y="308" fill="#64748b" font-family="sans-serif" font-size="10" text-anchor="middle">2023</text>
+  <text x="576" y="308" fill="#64748b" font-family="sans-serif" font-size="10" text-anchor="middle">2024</text>
+  <text x="660" y="308" fill="#64748b" font-family="sans-serif" font-size="10" text-anchor="middle">2025</text>
+  <!-- React line — ~48,50,52,55,57,58,59,60 % usage -->
+  <polyline points="60,154 146,150 232,146 318,140 404,136 490,132 576,130 660,127" fill="none" stroke="#915EFF" stroke-width="2.5"/>
+  <circle cx="60" cy="154" r="4" fill="#915EFF"/>
+  <circle cx="660" cy="127" r="4" fill="#915EFF"/>
+  <!-- Vue line — ~28,30,30,28,26,25,24,23 % -->
+  <polyline points="60,212 146,206 232,206 318,212 404,218 490,221 576,224 660,226" fill="none" stroke="#00cffd" stroke-width="2.5"/>
+  <circle cx="60" cy="212" r="4" fill="#00cffd"/>
+  <circle cx="660" cy="226" r="4" fill="#00cffd"/>
+  <!-- Angular line — ~22,21,20,18,17,16,15,14 % -->
+  <polyline points="60,223 146,225 232,228 318,234 404,237 490,240 576,243 660,246" fill="none" stroke="#86efac" stroke-width="2.5"/>
+  <circle cx="60" cy="223" r="4" fill="#86efac"/>
+  <circle cx="660" cy="246" r="4" fill="#86efac"/>
+  <!-- Svelte line — ~2,3,5,8,10,13,15,17 % -->
+  <polyline points="60,286 146,284 232,280 318,274 404,270 490,264 576,260 660,256" fill="none" stroke="#fbbf24" stroke-width="2"/>
+  <circle cx="60" cy="286" r="4" fill="#fbbf24"/>
+  <circle cx="660" cy="256" r="4" fill="#fbbf24"/>
+  <!-- Legend -->
+  <line x1="70" y1="330" x2="92" y2="330" stroke="#915EFF" stroke-width="2.5"/>
+  <text x="98" y="334" fill="#fff" font-family="sans-serif" font-size="11">React</text>
+  <line x1="160" y1="330" x2="182" y2="330" stroke="#00cffd" stroke-width="2.5"/>
+  <text x="188" y="334" fill="#fff" font-family="sans-serif" font-size="11">Vue</text>
+  <line x1="240" y1="330" x2="262" y2="330" stroke="#86efac" stroke-width="2.5"/>
+  <text x="268" y="334" fill="#fff" font-family="sans-serif" font-size="11">Angular</text>
+  <line x1="340" y1="330" x2="362" y2="330" stroke="#fbbf24" stroke-width="2"/>
+  <text x="368" y="334" fill="#fff" font-family="sans-serif" font-size="11">Svelte</text>
+  <text x="500" y="334" fill="#64748b" font-family="sans-serif" font-size="10">Source : State of JS — usage déclaré</text>
+</svg></div>
+
+## Les critères qui changent selon le projet
+
+Une comparaison honnête commence par définir le projet avant de regarder les frameworks. Voici les axes que j'utilise :
+
+**Taille du projet** : Pour moins de 10 écrans sans état complexe, Vue ou Svelte évitent la surcharge de configuration. Pour une application avec 50+ composants et des flux de données entre modules distants, React avec une architecture claire ou Angular avec ses modules natifs ont l'avantage.
+
+**Composition de l'équipe** : Un développeur seul qui connaît Vue n'a aucune raison d'apprendre React pour un projet solo. Une équipe qui doit grandir et recruter a intérêt à choisir React pour maximiser le vivier de candidats disponibles.
+
+**Exigences de performance** : Si le score Lighthouse est critique (e-commerce, médias), Svelte ou Astro méritent d'être sérieusement considérés. Sinon, les optimisations disponibles pour React ou Vue suffisent amplement.
+
+**Maintenance à long terme** : Angular avec ses conventions strictes est plus prévisible sur 3 ans. React sans conventions d'équipe peut devenir ingérable. Vue est un bon compromis, surtout depuis la Composition API de Vue 3 qui rend le code plus lisible.
+
+**SEO et rendu serveur** : React avec Next.js et Vue avec Nuxt offrent tous deux de bonnes solutions. Angular Universal existe mais son usage est moins courant. Svelte avec SvelteKit est une option solide et légère.
+
+<div style="overflow-x:auto;margin:2rem 0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 360" style="max-width:100%;height:auto">
+  <rect width="700" height="360" fill="#0a0f2e"/>
+  <text x="350" y="28" fill="#fff" font-family="sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Matrice critères — React / Vue / Svelte</text>
+  <!-- Header -->
+  <rect x="20" y="45" width="200" height="32" fill="#1e2a4a" rx="2"/>
+  <rect x="225" y="45" width="145" height="32" fill="#1e2a4a" rx="2"/>
+  <rect x="375" y="45" width="145" height="32" fill="#1e2a4a" rx="2"/>
+  <rect x="525" y="45" width="155" height="32" fill="#1e2a4a" rx="2"/>
+  <text x="120" y="65" fill="#94a3b8" font-family="sans-serif" font-size="11" font-weight="bold" text-anchor="middle">Critère</text>
+  <text x="297" y="65" fill="#915EFF" font-family="sans-serif" font-size="12" font-weight="bold" text-anchor="middle">React</text>
+  <text x="447" y="65" fill="#00cffd" font-family="sans-serif" font-size="12" font-weight="bold" text-anchor="middle">Vue 3</text>
+  <text x="602" y="65" fill="#fbbf24" font-family="sans-serif" font-size="12" font-weight="bold" text-anchor="middle">Svelte</text>
+  <!-- Rows -->
+  <!-- Taille projet -->
+  <rect x="20" y="82" width="200" height="38" fill="#0f1635" rx="2"/>
+  <rect x="225" y="82" width="145" height="38" fill="#1a0a3a" rx="2"/>
+  <rect x="375" y="82" width="145" height="38" fill="#0f1635" rx="2"/>
+  <rect x="525" y="82" width="155" height="38" fill="#0f1635" rx="2"/>
+  <text x="120" y="100" fill="#fff" font-family="sans-serif" font-size="11" text-anchor="middle">Taille projet</text>
+  <text x="120" y="113" fill="#64748b" font-family="sans-serif" font-size="10" text-anchor="middle">petite → grande</text>
+  <text x="297" y="103" fill="#86efac" font-family="sans-serif" font-size="11" text-anchor="middle">Tout contexte</text>
+  <text x="447" y="103" fill="#86efac" font-family="sans-serif" font-size="11" text-anchor="middle">Petit–Moyen</text>
+  <text x="602" y="103" fill="#fbbf24" font-family="sans-serif" font-size="11" text-anchor="middle">Petit–Moyen</text>
+  <!-- Équipe -->
+  <rect x="20" y="125" width="200" height="38" fill="#121a38" rx="2"/>
+  <rect x="225" y="125" width="145" height="38" fill="#1a1030" rx="2"/>
+  <rect x="375" y="125" width="145" height="38" fill="#121a38" rx="2"/>
+  <rect x="525" y="125" width="155" height="38" fill="#121a38" rx="2"/>
+  <text x="120" y="143" fill="#fff" font-family="sans-serif" font-size="11" text-anchor="middle">Équipe</text>
+  <text x="120" y="156" fill="#64748b" font-family="sans-serif" font-size="10" text-anchor="middle">recrutement / taille</text>
+  <text x="297" y="147" fill="#86efac" font-family="sans-serif" font-size="11" text-anchor="middle">Excellent vivier</text>
+  <text x="447" y="147" fill="#fbbf24" font-family="sans-serif" font-size="11" text-anchor="middle">Vivier moyen</text>
+  <text x="602" y="147" fill="#94a3b8" font-family="sans-serif" font-size="11" text-anchor="middle">Vivier limité</text>
+  <!-- Performance -->
+  <rect x="20" y="168" width="200" height="38" fill="#0f1635" rx="2"/>
+  <rect x="225" y="168" width="145" height="38" fill="#0a1020" rx="2"/>
+  <rect x="375" y="168" width="145" height="38" fill="#0f1635" rx="2"/>
+  <rect x="525" y="168" width="155" height="38" fill="#0a1f0a" rx="2"/>
+  <text x="120" y="186" fill="#fff" font-family="sans-serif" font-size="11" text-anchor="middle">Performance</text>
+  <text x="120" y="199" fill="#64748b" font-family="sans-serif" font-size="10" text-anchor="middle">runtime + bundle</text>
+  <text x="297" y="190" fill="#fbbf24" font-family="sans-serif" font-size="11" text-anchor="middle">Bon (optimisable)</text>
+  <text x="447" y="190" fill="#fbbf24" font-family="sans-serif" font-size="11" text-anchor="middle">Bon (optimisable)</text>
+  <text x="602" y="190" fill="#86efac" font-family="sans-serif" font-size="11" text-anchor="middle">Excellent natif</text>
+  <!-- SEO -->
+  <rect x="20" y="211" width="200" height="38" fill="#121a38" rx="2"/>
+  <rect x="225" y="211" width="145" height="38" fill="#1a1030" rx="2"/>
+  <rect x="375" y="211" width="145" height="38" fill="#0a1a20" rx="2"/>
+  <rect x="525" y="211" width="155" height="38" fill="#0a1f0a" rx="2"/>
+  <text x="120" y="229" fill="#fff" font-family="sans-serif" font-size="11" text-anchor="middle">SEO / SSR</text>
+  <text x="120" y="242" fill="#64748b" font-family="sans-serif" font-size="10" text-anchor="middle">rendu serveur</text>
+  <text x="297" y="233" fill="#86efac" font-family="sans-serif" font-size="11" text-anchor="middle">Next.js mature</text>
+  <text x="447" y="233" fill="#86efac" font-family="sans-serif" font-size="11" text-anchor="middle">Nuxt mature</text>
+  <text x="602" y="233" fill="#fbbf24" font-family="sans-serif" font-size="11" text-anchor="middle">SvelteKit bon</text>
+  <!-- Courbe apprentissage -->
+  <rect x="20" y="254" width="200" height="38" fill="#0f1635" rx="2"/>
+  <rect x="225" y="254" width="145" height="38" fill="#0a1020" rx="2"/>
+  <rect x="375" y="254" width="145" height="38" fill="#0a1a20" rx="2"/>
+  <rect x="525" y="254" width="155" height="38" fill="#0a1f0a" rx="2"/>
+  <text x="120" y="272" fill="#fff" font-family="sans-serif" font-size="11" text-anchor="middle">Courbe apprentissage</text>
+  <text x="297" y="275" fill="#fbbf24" font-family="sans-serif" font-size="11" text-anchor="middle">Modérée (hooks)</text>
+  <text x="447" y="275" fill="#86efac" font-family="sans-serif" font-size="11" text-anchor="middle">Douce</text>
+  <text x="602" y="275" fill="#86efac" font-family="sans-serif" font-size="11" text-anchor="middle">Douce</text>
+  <!-- Maintenance -->
+  <rect x="20" y="297" width="200" height="38" fill="#121a38" rx="2"/>
+  <rect x="225" y="297" width="145" height="38" fill="#1a1030" rx="2"/>
+  <rect x="375" y="297" width="145" height="38" fill="#0a1a20" rx="2"/>
+  <rect x="525" y="297" width="155" height="38" fill="#121a38" rx="2"/>
+  <text x="120" y="315" fill="#fff" font-family="sans-serif" font-size="11" text-anchor="middle">Maintenance long terme</text>
+  <text x="297" y="318" fill="#fbbf24" font-family="sans-serif" font-size="11" text-anchor="middle">Dépend des conventions</text>
+  <text x="447" y="318" fill="#86efac" font-family="sans-serif" font-size="11" text-anchor="middle">Bonne lisibilité</text>
+  <text x="602" y="318" fill="#fbbf24" font-family="sans-serif" font-size="11" text-anchor="middle">Bonne</text>
+</svg></div>
+
+## Comment éviter l'effet de mode
+
+L'effet de mode en JavaScript fonctionne en cycles de trois à cinq ans. AngularJS était incontournable en 2013, React a pris le dessus à partir de 2016, Svelte fait une montée visible depuis 2021. Le pattern se répète : un outil nouveau arrive, des early adopters enthousiastes en font la promotion, puis la réalité du terrain tempère les attentes.
+
+La règle que j'applique : si le framework n'a pas deux ans de production derrière lui dans des entreprises de taille comparable à la mienne, je ne l'utilise pas comme base principale d'un projet client. J'explore, je prototype, j'attends que les pièges soient documentés par la communauté. React, Vue et Angular ont payé cette dette — leurs pièges sont connus et les solutions existent.
+
+## Ce que je regarde en dernier lieu
+
+La documentation est souvent un signal révélateur. La documentation officielle de Vue est remarquable de clarté pour les nouveaux arrivants. React a une documentation correcte mais suppose une compréhension du paradigme fonctionnel. Angular a une documentation complète mais dense. Ce seul critère m'indique la maturité pédagogique de l'écosystème et la difficulté probable d'onboarding des nouveaux développeurs.
+
+Enfin, le critère décisif que j'utilise pour clore le débat : quelle est la probabilité de trouver un développeur compétent sur ce framework dans six mois si j'ai besoin d'agrandir l'équipe ? Sur ce critère pragmatique, React domine sans ambiguïté.
+
+> **En résumé** — Comparer des frameworks JavaScript sérieusement exige de définir les critères avant de regarder les outils. Les benchmarks de laboratoire mesurent rarement ce qui compte en production. Les vrais arbitrages sont : taille du projet, composition de l'équipe, contraintes de recrutement, et exigences de maintenance. Choisir par mode ou par benchmark synthétique, c'est optimiser pour la mauvaise variable.

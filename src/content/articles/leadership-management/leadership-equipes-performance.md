@@ -4,6 +4,7 @@ description: "Retour d'expérience direct sur le management d'une équipe commer
 publishDate: "2026-02-16"
 type: article
 domain: leadership-management
+image: "/images/themes/management.jpg"
 pillColor: purple
 theme: gestion
 ---

@@ -4,6 +4,7 @@ description: "Comment optimiser les processus avec le Value Stream Mapping simpl
 publishDate: "2026-09-07"
 type: article
 domain: qualite-process
+image: "/images/themes/management.jpg"
 pillColor: purple
 relatedArticles:
   - domain: qualite-process

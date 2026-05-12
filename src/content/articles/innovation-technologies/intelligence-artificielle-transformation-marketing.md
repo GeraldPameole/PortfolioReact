@@ -4,6 +4,7 @@ description: "Personnalisation, scoring leads, génération de contenu — comme
 publishDate: "2026-01-19"
 type: article
 domain: innovation-technologies
+image: "/images/themes/ia.jpg"
 pillColor: cyan
 relatedArticles:
   - domain: innovation-technologies

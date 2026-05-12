@@ -4,6 +4,7 @@ description: "Intégration dans GitHub, Notion et Confluence, types de diagramme
 publishDate: "2026-04-20"
 type: article
 domain: outils-techniques
+image: "/images/themes/dev-web.jpg"
 pillColor: slate
 theme: technologie
 ---

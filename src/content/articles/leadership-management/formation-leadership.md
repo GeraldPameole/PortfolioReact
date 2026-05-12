@@ -4,6 +4,7 @@ description: "Les formations th√©oriques en leadership n'ont qu'un impact limit√
 publishDate: "2026-02-02"
 type: article
 domain: leadership-management
+image: "/images/themes/management.jpg"
 pillColor: purple
 relatedArticles:
   - domain: leadership-management

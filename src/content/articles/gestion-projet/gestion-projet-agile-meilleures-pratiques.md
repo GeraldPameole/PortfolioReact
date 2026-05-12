@@ -4,6 +4,7 @@ description: "Les meilleures pratiques Agile terrain — sprint planning efficac
 publishDate: "2025-08-11"
 type: article
 domain: gestion-projet
+image: "/images/themes/management.jpg"
 pillColor: blue
 relatedArticles:
   - domain: gestion-projet

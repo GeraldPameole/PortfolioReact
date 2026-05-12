@@ -4,6 +4,7 @@ description: "Comprendre les 5 niveaux de maturité digitale d'une organisation,
 publishDate: "2026-10-19"
 type: article
 domain: transformation-digitale
+image: "/images/themes/ia.jpg"
 pillColor: pink
 theme: technologie
 ---

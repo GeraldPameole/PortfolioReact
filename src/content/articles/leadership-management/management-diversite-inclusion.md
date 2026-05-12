@@ -4,6 +4,7 @@ description: "Entre quotas symboliques et vraie transformation, la différence t
 publishDate: "2026-02-23"
 type: article
 domain: leadership-management
+image: "/images/themes/management.jpg"
 pillColor: purple
 theme: gestion
 ---

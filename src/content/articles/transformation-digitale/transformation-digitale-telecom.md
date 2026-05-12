@@ -4,6 +4,7 @@ description: "Comment j'ai piloté la digitalisation des processus et l'adoption
 publishDate: "2026-10-12"
 type: article
 domain: transformation-digitale
+image: "/images/themes/ia.jpg"
 pillColor: pink
 relatedArticles:
   - domain: transformation-digitale

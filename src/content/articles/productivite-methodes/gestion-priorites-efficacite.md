@@ -4,6 +4,7 @@ description: "Comprendre pourquoi tout-est-prioritaire est un poison pour la pro
 publishDate: "2026-05-25"
 type: article
 domain: productivite-methodes
+image: "/images/themes/productivite.jpg"
 pillColor: indigo
 theme: carriere
 ---

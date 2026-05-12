@@ -4,6 +4,7 @@ description: "Comment instaurer une vraie démarche qualité dans une organisati
 publishDate: "2026-08-17"
 type: article
 domain: qualite-process
+image: "/images/themes/management.jpg"
 pillColor: purple
 relatedArticles:
   - domain: qualite-process

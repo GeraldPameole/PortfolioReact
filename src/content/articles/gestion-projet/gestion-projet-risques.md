@@ -4,6 +4,7 @@ description: "Comment construire une gestion des risques qui fonctionne sur le t
 publishDate: "2025-09-01"
 type: article
 domain: gestion-projet
+image: "/images/themes/management.jpg"
 pillColor: blue
 theme: gestion
 ---
