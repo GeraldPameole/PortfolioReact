@@ -11,6 +11,7 @@ interface Props {
   image?: string;
   keywords?: string;
   type?: string;
+  jsonLd?: Record<string, unknown>;
 }
 
 const {
@@ -19,7 +20,22 @@ const {
   image = "/images/profile.jpg",
   keywords = "chef de projet, transformation digitale, management, formation, télécom, portfolio",
   type = "website",
+  jsonLd,
 } = Astro.props;
+
+// JSON-LD Person schema (always present)
+const personSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Gérald Paméole",
+  "url": "https://geraldpameole.fr",
+  "jobTitle": "Chef de Projet & Expert Transformation Digitale",
+  "worksFor": { "@type": "Organization", "name": "KEOS TELECOM" },
+  "sameAs": [
+    "https://www.linkedin.com/in/gerald-pameole/",
+    "https://github.com/GeraldPameole"
+  ]
+};
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://geraldpameole.fr');
 const pageTitle = `${title} | Gérald Paméole`;
@@ -50,10 +66,14 @@ const pageTitle = `${title} | Gérald Paméole`;
 
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="canonical" href={canonicalURL} />
+  <link rel="alternate" type="application/rss+xml" title="Gérald Paméole — Blog" href="/rss.xml" />
   <meta name="generator" content={Astro.generator} />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- JSON-LD structured data -->
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd ?? personSchema)} />
 
   <slot name="head" />
   <ViewTransitions fallback="swap" />

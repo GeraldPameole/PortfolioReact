@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://geraldpameole.fr/sitemap-index.xml
