@@ -89,4 +89,4 @@ Dans les faits, un standard bien construit libère de la bande passante mentale.
 
 Un standard Kaizen doit être court (une page maximum), rédigé par ceux qui font le travail, et révisable. La révision, c'est la condition pour qu'il reste pertinent. Si le standard n'a pas été touché depuis 18 mois dans un contexte qui a évolué, c'est qu'il est mort.
 
-> **En résumé** — Le Kaizen n'est pas une méthode spectaculaire. C'est une discipline de petits ajustements réguliers, menés avec les équipes terrain, mesurés sur des indicateurs simples, et consolidés dans des standards vivants. C'est exactement pour ça que ça tient dans le temps quand les grands projets de transformation s'effondrent.
+> **Ce que ça change en pratique** — Le Kaizen n'est pas une méthode spectaculaire. C'est une discipline de petits ajustements réguliers, menés avec les équipes terrain, mesurés sur des indicateurs simples, et consolidés dans des standards vivants. C'est exactement pour ça que ça tient dans le temps quand les grands projets de transformation s'effondrent.

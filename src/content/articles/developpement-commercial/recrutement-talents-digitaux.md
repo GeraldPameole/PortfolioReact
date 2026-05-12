@@ -145,4 +145,4 @@ Ce que j'ai observé fonctionne : désigner un référent technique dès le prem
 
 Le turnover dans le secteur tech n'est pas une fatalité. Il est souvent le symptôme d'un recrutement mal ciblé ou d'un onboarding bâclé. Corriger l'un ou l'autre change significativement la rétention.
 
-> **En résumé** — Recruter des profils digitaux demande de changer les canaux de sourcing (cooptation et GitHub avant LinkedIn et job boards), d'évaluer des comportements observables plutôt que des compétences techniques directes, et d'investir sérieusement dans les 30 premiers jours. La pénurie de talents est réelle, mais une bonne partie des difficultés viennent d'approches de recrutement conçues pour d'autres types de profils.
+> **Ce que j'en retiens** — Recruter des profils digitaux demande de changer les canaux de sourcing (cooptation et GitHub avant LinkedIn et job boards), d'évaluer des comportements observables plutôt que des compétences techniques directes, et d'investir sérieusement dans les 30 premiers jours. La pénurie de talents est réelle, mais une bonne partie des difficultés viennent d'approches de recrutement conçues pour d'autres types de profils.

@@ -135,4 +135,4 @@ Les questions à poser avant de choisir un outil sont simples : est-ce que les a
 
 Si la réponse à ces trois questions est oui, l'outil est suffisant. Ce n'est pas plus compliqué que ça.
 
-> **En résumé** — Les formations en ligne échouent rarement par manque de contenu. Elles échouent par manque de structure, d'ancrage pratique et de lien humain. Le blended learning en trois couches — auto-apprentissage, pratique guidée, application terrain — est la réponse concrète à ces lacunes. Et la qualité de la pédagogie précède toujours le choix de l'outil.
+> **Ce que j'en retiens** — Les formations en ligne échouent rarement par manque de contenu. Elles échouent par manque de structure, d'ancrage pratique et de lien humain. Le blended learning en trois couches — auto-apprentissage, pratique guidée, application terrain — est la réponse concrète à ces lacunes. Et la qualité de la pédagogie précède toujours le choix de l'outil.

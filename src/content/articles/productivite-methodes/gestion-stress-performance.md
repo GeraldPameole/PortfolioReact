@@ -97,4 +97,4 @@ Le cloisonnement des fins de journée enfin. Un rituel court (même 5 minutes) q
 
 Pour les managers, l'enjeu est d'intégrer ces logiques de récupération dans la culture d'équipe. Pas en les rendant obligatoires — ça ne fonctionne pas — mais en les rendant visibles et légitimes. Quand le manager lui-même part à l'heure et ne répond pas aux messages le soir, l'équipe comprend que c'est acceptable.
 
-> **En résumé** — Le stress n'est pas l'ennemi : c'est le niveau et la durée qui déterminent si on est dans une zone de haute performance ou sur la pente du burn-out. Savoir lire les signaux d'alarme — en soi et chez les autres — et construire des routines de récupération réelles, c'est le socle d'une performance durable sous pression.
+> **À retenir** — Le stress n'est pas l'ennemi : c'est le niveau et la durée qui déterminent si on est dans une zone de haute performance ou sur la pente du burn-out. Savoir lire les signaux d'alarme — en soi et chez les autres — et construire des routines de récupération réelles, c'est le socle d'une performance durable sous pression.

@@ -154,4 +154,4 @@ Je procède en trois étapes sur les projets que j'accompagne :
 
 L'erreur la plus fréquente que j'observe : automatiser des points de contact parce que c'est possible techniquement, sans vérifier si c'est souhaitable pour le client.
 
-> **En résumé** — L'IA marketing est efficace sur la génération de contenu, le scoring de leads, l'email personnalisé et les recommandations. Elle reste fragile sur l'analyse de sentiment et le pricing dynamique. La stratégie, la relation client et la création éditoriale de fond restent des domaines où l'humain est irremplaçable. Intégrer l'IA sans déshumaniser, c'est commencer par les tâches à volume avant de toucher aux points de contact critiques.
+> **En pratique** — L'IA marketing est efficace sur la génération de contenu, le scoring de leads, l'email personnalisé et les recommandations. Elle reste fragile sur l'analyse de sentiment et le pricing dynamique. La stratégie, la relation client et la création éditoriale de fond restent des domaines où l'humain est irremplaçable. Intégrer l'IA sans déshumaniser, c'est commencer par les tâches à volume avant de toucher aux points de contact critiques.

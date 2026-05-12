@@ -119,4 +119,4 @@ Ce travail de clarification se fait une fois, au lancement. Il ne dure pas éter
 
 La collaboration efficace est donc moins une question de cohésion que de structure. La cohésion aide. La structure, elle, est indispensable.
 
-> **En résumé** — La collaboration a un coût de coordination qui croît exponentiellement avec la taille : au-delà de sept ou huit personnes, les gains collectifs sont grignotés. Distinguer les types de réunions (brainstorming, décision, alignement, résolution), développer un asynchrone structuré, et clarifier les rôles de décision sont les trois leviers qui transforment une équipe active en équipe efficace.
+> **Pour conclure sans platitude** — La collaboration a un coût de coordination qui croît exponentiellement avec la taille : au-delà de sept ou huit personnes, les gains collectifs sont grignotés. Distinguer les types de réunions (brainstorming, décision, alignement, résolution), développer un asynchrone structuré, et clarifier les rôles de décision sont les trois leviers qui transforment une équipe active en équipe efficace.

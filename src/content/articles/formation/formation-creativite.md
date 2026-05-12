@@ -125,4 +125,4 @@ Cette structure ne garantit pas le génie. Elle garantit la régularité. Une é
 
 La créativité professionnelle ne demande pas d'inspiration. Elle demande de la méthode, un cadre clair, et un environnement où proposer quelque chose de différent ne coûte rien.
 
-> **En résumé** — La créativité suit un processus en quatre phases (préparation, incubation, illumination, vérification) que l'on peut structurer sans l'étouffer. Les contraintes créatives stimulent plutôt qu'elles ne bloquent. Le facteur déterminant reste la sécurité psychologique : là où les idées sont jugées avant d'être entendues, la créativité disparaît. Là où la méthode remplace l'inspiration, elle devient reproductible.
+> **Pour conclure sans platitude** — La créativité suit un processus en quatre phases (préparation, incubation, illumination, vérification) que l'on peut structurer sans l'étouffer. Les contraintes créatives stimulent plutôt qu'elles ne bloquent. Le facteur déterminant reste la sécurité psychologique : là où les idées sont jugées avant d'être entendues, la créativité disparaît. Là où la méthode remplace l'inspiration, elle devient reproductible.

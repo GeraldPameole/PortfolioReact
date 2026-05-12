@@ -164,4 +164,4 @@ La vélocité seule ne dit rien. Un sprint à 40 points peut cacher une équipe 
 
 **Satisfaction équipe** : un indicateur subjectif, mesuré par un score rapide en début de rétro. Corrélé avec la qualité du code et la rétention sur le long terme.
 
-> **En résumé** — Agile terrain, ça se résume à quatre disciplines : un sprint planning préparé en amont (backlog raffiné, critères écrits), un backlog entretenu chaque semaine sans qu'il devienne un fourre-tout, une rétrospective qui produit exactement une action par sprint, et des indicateurs qui regardent la qualité autant que la vitesse. Tout le reste est accessoire.
+> **Ce que ça change en pratique** — Agile terrain, ça se résume à quatre disciplines : un sprint planning préparé en amont (backlog raffiné, critères écrits), un backlog entretenu chaque semaine sans qu'il devienne un fourre-tout, une rétrospective qui produit exactement une action par sprint, et des indicateurs qui regardent la qualité autant que la vitesse. Tout le reste est accessoire.

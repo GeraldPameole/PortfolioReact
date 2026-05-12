@@ -133,4 +133,4 @@ Ensuite : écouter. Il y a souvent une explication — un problème personnel, u
 
 Si les jalons ne sont pas atteints, on acte. Ignorer une sous-performance prolongée, c'est rendre un mauvais service à tout le monde, y compris à la personne concernée.
 
-> **En résumé** — L'entretien annuel commente le passé trop tard pour changer quoi que ce soit. Un dialogue structuré en trois niveaux — hebdomadaire, mensuel, trimestriel — permet d'agir au bon moment. Les objectifs collectifs équilibrent la compétition individuelle. Et un sous-performant doit être identifié et accompagné tôt, avec des faits et un plan clair — pas ignoré jusqu'à ce que la situation devienne ingérable.
+> **Pour conclure sans platitude** — L'entretien annuel commente le passé trop tard pour changer quoi que ce soit. Un dialogue structuré en trois niveaux — hebdomadaire, mensuel, trimestriel — permet d'agir au bon moment. Les objectifs collectifs équilibrent la compétition individuelle. Et un sous-performant doit être identifié et accompagné tôt, avec des faits et un plan clair — pas ignoré jusqu'à ce que la situation devienne ingérable.

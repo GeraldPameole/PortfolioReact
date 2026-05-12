@@ -94,4 +94,4 @@ Recruter prend du temps et il faut l'accepter. Les raccourcis coûtent plus cher
 
 Un poste mal pourvu, c'est six à douze mois d'énergie gâchée pour tout le monde — le manager, l'équipe, et la personne elle-même. C'est une raison suffisante pour prendre le temps de faire les choses bien.
 
-> **En résumé** — Recruter vite, cloner ses équipes ou se fier à ses impressions sont les trois erreurs les plus fréquentes. Les entretiens structurés permettent de comparer des faits plutôt que des ressenti, et un onboarding rigoureux sur trois mois transforme un bon recrutement en véritable rétention.
+> **Ce que j'en retiens** — Recruter vite, cloner ses équipes ou se fier à ses impressions sont les trois erreurs les plus fréquentes. Les entretiens structurés permettent de comparer des faits plutôt que des ressenti, et un onboarding rigoureux sur trois mois transforme un bon recrutement en véritable rétention.

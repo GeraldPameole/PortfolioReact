@@ -113,6 +113,6 @@ Ce travail ne peut pas être délégué à un programme corporate. Il appartient
 
 La diversité sans travail managérial structuré reste une intention. Avec des pratiques concrètes, elle devient un avantage réel.
 
-> **En résumé** — Les biais inconscients opèrent sous la surface et ne disparaissent pas avec les formations. Ce qui change les résultats, ce sont des pratiques structurées : critères définis avant les évaluations, rotation des rôles visibles, traçabilité des opportunités. Un manager n'a pas besoin d'attendre la politique RH pour agir — il a besoin d'organiser son propre périmètre de façon à rendre les inégalités visibles et corrigeables.
+> **Le fond de l'affaire** — Les biais inconscients opèrent sous la surface et ne disparaissent pas avec les formations. Ce qui change les résultats, ce sont des pratiques structurées : critères définis avant les évaluations, rotation des rôles visibles, traçabilité des opportunités. Un manager n'a pas besoin d'attendre la politique RH pour agir — il a besoin d'organiser son propre périmètre de façon à rendre les inégalités visibles et corrigeables.
 
 

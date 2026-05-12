@@ -128,4 +128,4 @@ La gestion d'une équipe multiculturelle m'a appris à distinguer ce qui est cul
 
 La diversité culturelle ne s'efface pas. Elle se comprend, et on apprend à en tirer parti.
 
-> **En résumé** — Les vrais obstacles dans les équipes multiculturelles ne sont pas linguistiques mais relationnels : styles de communication, rapport à l'autorité, manière de signaler un désaccord. Un manager efficace dans ce contexte explicite ses attentes, multiplie les canaux d'expression, adapte son feedback, et évalue la performance sur des résultats plutôt que sur des comportements culturellement biaisés.
+> **Ce que j'en retiens** — Les vrais obstacles dans les équipes multiculturelles ne sont pas linguistiques mais relationnels : styles de communication, rapport à l'autorité, manière de signaler un désaccord. Un manager efficace dans ce contexte explicite ses attentes, multiplie les canaux d'expression, adapte son feedback, et évalue la performance sur des résultats plutôt que sur des comportements culturellement biaisés.

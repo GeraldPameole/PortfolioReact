@@ -110,4 +110,4 @@ Personnellement, j'ai arrêté de me battre contre la procrastination et j'ai co
 
 Ce n'est pas de la discipline — c'est de la conception.
 
-> **En résumé** — La procrastination n'est pas un défaut de caractère mais une réponse à un inconfort : tâche floue, peur d'échouer, perfectionnisme. Les quatre leviers les plus efficaces sont la règle des deux minutes, les intentions d'implémentation, le couplage de tâches et la réduction de friction. En management, chercher la cause systémique avant de juger le comportement produit de meilleurs résultats.
+> **L'essentiel** — La procrastination n'est pas un défaut de caractère mais une réponse à un inconfort : tâche floue, peur d'échouer, perfectionnisme. Les quatre leviers les plus efficaces sont la règle des deux minutes, les intentions d'implémentation, le couplage de tâches et la réduction de friction. En management, chercher la cause systémique avant de juger le comportement produit de meilleurs résultats.

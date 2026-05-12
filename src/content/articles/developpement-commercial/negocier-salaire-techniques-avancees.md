@@ -170,4 +170,4 @@ Ce qui change tout, c'est d'avoir préparé sa logique avant la conversation. Je
 
 Si l'entreprise ne peut vraiment pas monter, il reste le terrain des avantages non salariaux : télétravail, jours de congé supplémentaires, date de révision accélérée à 6 mois plutôt que 12. Ces éléments ont une valeur concrète et sont souvent plus faciles à obtenir que du fixe supplémentaire.
 
-> **En résumé** — Négocier son salaire n'est pas une confrontation mais une conversation commerciale où vous êtes le produit. La préparation fait 80 % du travail : benchmark sérieux, fourchette calculée, timing choisi, formulations préparées. L'ancrage et le silence font le reste. Celui qui parle en premier après le chiffre annoncé perd du terrain — c'est vrai en vente, c'est vrai ici.
+> **À retenir** — Négocier son salaire n'est pas une confrontation mais une conversation commerciale où vous êtes le produit. La préparation fait 80 % du travail : benchmark sérieux, fourchette calculée, timing choisi, formulations préparées. L'ancrage et le silence font le reste. Celui qui parle en premier après le chiffre annoncé perd du terrain — c'est vrai en vente, c'est vrai ici.
