@@ -5,7 +5,7 @@ author: "Robert C. Martin"
 description: "Manuel de développement logiciel agile pour créer du code propre et maintenable"
 profession: "developpement-web"
 publishYear: 2008
-coverImage: "/assets/livres/clean-code.jpg"
+coverImage: "/assets/books/clean-code.jpg"
 amazonLink: "https://www.amazon.fr/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882"
 keywords: "développement logiciel, code propre, pratiques agiles, refactoring, principes SOLID, dette technique, Uncle Bob, qualité du code, maintenabilité"
 note: 4.9

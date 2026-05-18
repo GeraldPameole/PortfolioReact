@@ -5,7 +5,7 @@ author: "Jim Collins"
 description: "Pourquoi certaines entreprises réussissent à passer de bonnes à excellentes, et comment appliquer ces principes à votre organisation"
 profession: "management"
 publishYear: 2001
-coverImage: "/assets/livres/good-to-great.jpg"
+coverImage: "/assets/books/good-to-great.jpg"
 amazonLink: "https://www.amazon.fr/Good-Great-Some-Companies-Others/dp/0066620996/"
 keywords: "management, leadership, excellence organisationnelle, performance durable, culture d'entreprise, stratégie d'entreprise, changement organisationnel, succès commercial"
 note: 4.7

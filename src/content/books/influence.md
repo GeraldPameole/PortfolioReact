@@ -5,7 +5,7 @@ author: "Robert B. Cialdini"
 description: "Analyse scientifique des six principes psychologiques fondamentaux qui guident notre comportement et influencent nos décisions"
 profession: "psychologie-marketing"
 publishYear: 2006
-coverImage: "/assets/livres/influence.jpg"
+coverImage: "/assets/books/influence.jpg"
 amazonLink: "https://www.amazon.fr/Influence-Psychology-Persuasion-Robert-Cialdini/dp/006124189X/"
 keywords: "psychologie sociale, persuasion, influence, marketing, comportement humain, prise de décision, négociation, communication persuasive"
 note: 4.8

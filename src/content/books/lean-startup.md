@@ -5,7 +5,7 @@ author: "Eric Ries"
 description: "Comment les entrepreneurs d'aujourd'hui utilisent l'innovation continue pour créer des entreprises à succès"
 profession: "entreprise-management"
 publishYear: 2011
-coverImage: "/assets/livres/lean-startup.jpg"
+coverImage: "/assets/books/lean-startup.jpg"
 amazonLink: "https://www.amazon.fr/Lean-Startup-Entrepreneurs-Continuous-Innovation/dp/0307887898/"
 keywords: "entrepreneuriat, startup, innovation, MVP, lean, développement de produit, agilité, expérimentation, modèle d'affaires"
 note: 4.7

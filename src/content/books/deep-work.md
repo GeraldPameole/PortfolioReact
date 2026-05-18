@@ -5,7 +5,7 @@ author: "Cal Newport"
 description: "Règles pour réussir dans un monde distrait et connecté"
 profession: "productivite"
 publishYear: 2016
-coverImage: "/assets/livres/deep-work.jpg"
+coverImage: "/assets/books/deep-work.jpg"
 amazonLink: "https://www.amazon.fr/Deep-Work-Focused-Success-Distracted/dp/1455586692"
 keywords: "productivité, concentration, travail profond, distraction, focus, attention, performance cognitive, épanouissement professionnel"
 note: 4.8

@@ -5,7 +5,7 @@ author: "Marijn Haverbeke"
 description: "Une introduction moderne et approfondie à la programmation JavaScript, couvrant les fondamentaux et les concepts avancés"
 profession: "developpement-web"
 publishYear: 2018
-coverImage: "/assets/livres/eloquent-javascript.jpg"
+coverImage: "/assets/books/eloquent-javascript.jpg"
 amazonLink: "https://www.amazon.fr/Eloquent-JavaScript-3rd-Introduction-Programming/dp/1593279507/"
 keywords: "JavaScript, programmation web, développement frontend, asynchrone, ES6, structures de données, DOM, Node.js, apprentissage, bonnes pratiques"
 note: 4.8

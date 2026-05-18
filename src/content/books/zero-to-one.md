@@ -5,7 +5,7 @@ author: "Peter Thiel"
 description: "Notes sur les startups ou comment construire le futur en créant quelque chose de véritablement nouveau"
 profession: "entrepreneuriat"
 publishYear: 2014
-coverImage: "/assets/livres/zero-to-one.jpg"
+coverImage: "/assets/books/zero-to-one.jpg"
 amazonLink: "https://www.amazon.fr/Zero-One-Notes-Startups-Future/dp/0804139296/"
 keywords: "innovation, startup, entrepreneuriat, technologie, monopole, concurrence, disruption, futur, création de valeur, venture capital"
 note: 4.7

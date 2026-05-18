@@ -5,7 +5,7 @@ author: "James Clear"
 description: "Un moyen facile et prouvé de développer de bonnes habitudes et de se débarrasser des mauvaises"
 profession: "developpement-personnel"
 publishYear: 2018
-coverImage: "/assets/livres/atomic-habits.jpg"
+coverImage: "/assets/books/atomic-habits.jpg"
 amazonLink: "https://www.amazon.fr/Atomic-Habits-Proven-Build-Break/dp/0735211299/"
 keywords: "habitudes, développement personnel, productivité, changement comportemental, auto-amélioration, psychologie, performance, discipline"
 note: 4.9
