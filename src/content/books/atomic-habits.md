@@ -5,19 +5,19 @@ author: "James Clear"
 description: "Un moyen facile et prouvé de développer de bonnes habitudes et de se débarrasser des mauvaises"
 profession: "developpement-personnel"
 publishYear: 2018
-coverImage: "/assets/books/atomic-habits.jpg"
+coverImage: "/assets/livres/atomic-habits.jpg"
 amazonLink: "https://www.amazon.fr/Atomic-Habits-Proven-Build-Break/dp/0735211299/"
 keywords: "habitudes, développement personnel, productivité, changement comportemental, auto-amélioration, psychologie, performance, discipline"
 note: 4.9
 relatedContent:
   - title: "L'Apprentissage Continu: Stratégie Clé pour l'Évolution Professionnelle"
-    url: "/articles/apprentissage-continu-developpement-competences"
+    url: "/blog/formation/apprentissage-continu-developpement-competences"
     type: "article"
   - title: "Réussir sa Reconversion Professionnelle en 2024"
-    url: "/articles/reconversion-professionnelle-reussie"
+    url: "/blog/reconversion-carriere/reconversion-professionnelle-reussie"
     type: "article"
   - title: "Deep Work"
-    url: "/books/deep-work"
+    url: "/livres/deep-work"
     type: "book"
 ---
 
@@ -36,8 +36,8 @@ Ce livre est essentiel pour quiconque cherche à améliorer sa vie professionnel
 
 Si vous avez apprécié "Atomic Habits", ces ressources pourraient vous intéresser :
 
-- [L'Apprentissage Continu: Stratégie Clé pour l'Évolution Professionnelle](/articles/apprentissage-continu-developpement-competences) - Comment appliquer les principes des habitudes atomiques à l'acquisition de compétences
-- [Réussir sa Reconversion Professionnelle en 2024](/articles/reconversion-professionnelle-reussie) - Utiliser les micro-habitudes pour faciliter une transition de carrière
-- [Deep Work](/books/deep-work) - Combiner concentration profonde et habitudes atomiques pour une productivité maximale
+- [L'Apprentissage Continu: Stratégie Clé pour l'Évolution Professionnelle](/blog/formation/apprentissage-continu-developpement-competences) - Comment appliquer les principes des habitudes atomiques à l'acquisition de compétences
+- [Réussir sa Reconversion Professionnelle en 2024](/blog/reconversion-carriere/reconversion-professionnelle-reussie) - Utiliser les micro-habitudes pour faciliter une transition de carrière
+- [Deep Work](/livres/deep-work) - Combiner concentration profonde et habitudes atomiques pour une productivité maximale
 
 **Note des lecteurs : 4.9/5** - Un livre qui a transformé la vision du développement personnel pour des millions de lecteurs

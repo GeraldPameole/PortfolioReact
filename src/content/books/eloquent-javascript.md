@@ -5,19 +5,19 @@ author: "Marijn Haverbeke"
 description: "Une introduction moderne et approfondie à la programmation JavaScript, couvrant les fondamentaux et les concepts avancés"
 profession: "developpement-web"
 publishYear: 2018
-coverImage: "/assets/books/eloquent-javascript.jpg"
+coverImage: "/assets/livres/eloquent-javascript.jpg"
 amazonLink: "https://www.amazon.fr/Eloquent-JavaScript-3rd-Introduction-Programming/dp/1593279507/"
 keywords: "JavaScript, programmation web, développement frontend, asynchrone, ES6, structures de données, DOM, Node.js, apprentissage, bonnes pratiques"
 note: 4.8
 relatedContent:
   - title: "Frameworks JavaScript en 2024 : Analyse Comparative pour Bien Choisir"
-    url: "/articles/frameworks-javascript-comparaison-2024"
+    url: "/blog/developpement-web/frameworks-javascript-comparaison-2024"
     type: "article"
   - title: "Progressive Web Apps en 2024 : L'Avenir du Web Mobile"
-    url: "/articles/progressive-web-apps-2024"
+    url: "/blog/developpement-web/progressive-web-apps-2024"
     type: "article"
   - title: "Clean Code"
-    url: "/books/clean-code"
+    url: "/livres/clean-code"
     type: "book"
 ---
 
@@ -37,8 +37,8 @@ La troisième édition mise à jour intègre les évolutions récentes du langag
 
 Si vous avez apprécié "Eloquent JavaScript", ces ressources pourraient vous intéresser :
 
-- [Frameworks JavaScript en 2024 : Analyse Comparative pour Bien Choisir](/articles/frameworks-javascript-comparaison-2024) - Pour appliquer vos connaissances JavaScript dans un framework moderne
-- [Progressive Web Apps en 2024 : L'Avenir du Web Mobile](/articles/progressive-web-apps-2024) - Pour créer des applications web avancées avec JavaScript
-- [Clean Code](/books/clean-code) - Pour perfectionner vos compétences d'écriture de code de qualité
+- [Frameworks JavaScript en 2024 : Analyse Comparative pour Bien Choisir](/blog/developpement-web/frameworks-javascript-comparaison-2024) - Pour appliquer vos connaissances JavaScript dans un framework moderne
+- [Progressive Web Apps en 2024 : L'Avenir du Web Mobile](/blog/developpement-web/progressive-web-apps-2024) - Pour créer des applications web avancées avec JavaScript
+- [Clean Code](/livres/clean-code) - Pour perfectionner vos compétences d'écriture de code de qualité
 
 **Note des lecteurs : 4.8/5** - Un ouvrage qui transforme la façon dont vous concevez la programmation JavaScript

@@ -5,7 +5,7 @@ author: "Robert B. Cialdini"
 description: "Analyse scientifique des six principes psychologiques fondamentaux qui guident notre comportement et influencent nos décisions"
 profession: "psychologie-marketing"
 publishYear: 2006
-coverImage: "/assets/books/influence.jpg"
+coverImage: "/assets/livres/influence.jpg"
 amazonLink: "https://www.amazon.fr/Influence-Psychology-Persuasion-Robert-Cialdini/dp/006124189X/"
 keywords: "psychologie sociale, persuasion, influence, marketing, comportement humain, prise de décision, négociation, communication persuasive"
 note: 4.8
@@ -14,10 +14,10 @@ relatedContent:
     url: "/articles/email-marketing-personnalisation"
     type: "article"
   - title: "Négocier son Salaire : Techniques Avancées qui Fonctionnent"
-    url: "/articles/negocier-salaire-techniques-avancees"
+    url: "/blog/developpement-commercial/negocier-salaire-techniques-avancees"
     type: "article"
   - title: "Zero to One"
-    url: "/books/zero-to-one"
+    url: "/livres/zero-to-one"
     type: "book"
 ---
 
@@ -38,8 +38,8 @@ Ce livre est indispensable pour les marketeurs, vendeurs, négociateurs, mais au
 
 Si vous avez apprécié "Influence", ces ressources pourraient vous intéresser :
 
-- [Négocier son Salaire: Techniques Avancées et Psychologie de la Persuasion](/articles/negocier-salaire-techniques-avancees) - Application concrète des principes d'influence dans un contexte professionnel
-- [Le Mentorat: Catalyseur Méconnu du Développement Professionnel](/articles/mentoring-developpement-professionnel) - Comment l'influence positive peut transformer votre carrière
-- [Atomic Habits](/books/atomic-habits) - Comprendre les mécanismes psychologiques derrière la formation des habitudes
+- [Négocier son Salaire: Techniques Avancées et Psychologie de la Persuasion](/blog/developpement-commercial/negocier-salaire-techniques-avancees) - Application concrète des principes d'influence dans un contexte professionnel
+- [Le Mentorat: Catalyseur Méconnu du Développement Professionnel](/blog/formation/mentoring-developpement-professionnel) - Comment l'influence positive peut transformer votre carrière
+- [Atomic Habits](/livres/atomic-habits) - Comprendre les mécanismes psychologiques derrière la formation des habitudes
 
 **Note des lecteurs : 4.9/5** - Un classique intemporel de la psychologie comportementale
