@@ -68,6 +68,26 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             </div>
           </div>
 
+          <!-- Calendly RDV -->
+          <div class="rdv-block">
+            <div class="rdv-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            </div>
+            <div>
+              <p class="rdv-title">Consultation gratuite — 30 min</p>
+              <p class="rdv-sub">Réservez directement un créneau sans attendre ma réponse.</p>
+              <a
+                href="https://calendly.com/gerald-pameole/30min"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-secondary rdv-btn"
+              >
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                Choisir un créneau →
+              </a>
+            </div>
+          </div>
+
           <div class="socials">
             <a href="https://www.linkedin.com/in/gerald-pameole/" target="_blank" rel="noopener noreferrer" class="social-pill">
               <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
@@ -370,6 +390,26 @@ a.info-val:hover { color: var(--violet-light); }
   font-size: .95rem;
   margin-top: .5rem;
 }
+
+.rdv-block {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  padding: 1.25rem;
+  background: rgba(0,207,253,0.05);
+  border: 1px solid rgba(0,207,253,0.2);
+  border-radius: var(--r-lg);
+  margin-bottom: 1.25rem;
+}
+.rdv-icon {
+  width: 36px; height: 36px; min-width: 36px;
+  display: flex; align-items: center; justify-content: center;
+  background: rgba(0,207,253,0.1); border: 1px solid rgba(0,207,253,0.25);
+  border-radius: var(--r-md);
+}
+.rdv-title { font-size: .88rem; font-weight: 700; color: var(--text-1); margin-bottom: .2rem; }
+.rdv-sub   { font-size: .8rem; color: var(--text-3); line-height: 1.55; margin-bottom: .75rem; }
+.rdv-btn   { display: inline-flex; align-items: center; gap: .4rem; font-size: .82rem; padding: .45rem 1rem; }
 
 .success-msg {
   display: flex;

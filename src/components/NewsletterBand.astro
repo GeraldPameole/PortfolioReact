@@ -1,0 +1,199 @@
+---
+// NewsletterBand — bande d'abonnement email, à insérer dans blog.astro et footer
+// Formspree form ID : remplacer FORMSPREE_NEWSLETTER_ID par votre ID dédié newsletter
+const FORM_ACTION = "https://formspree.io/f/FORMSPREE_NEWSLETTER_ID";
+---
+
+<section class="newsletter-band">
+  <div class="container">
+    <div class="nl-inner">
+      <div class="nl-text">
+        <span class="nl-label">Newsletter</span>
+        <h2 class="nl-title">Un article par semaine, <span class="gradient-text">sans bruit</span></h2>
+        <p class="nl-desc">Management, transformation digitale, développement web — les meilleurs articles directement dans votre boîte mail. Aucun spam, désabonnement en un clic.</p>
+      </div>
+
+      <form id="nl-form" action={FORM_ACTION} method="POST" class="nl-form" novalidate>
+        <input type="hidden" name="_subject" value="Nouvelle inscription newsletter — geraldpameole.fr" />
+        <input type="hidden" name="source" value="newsletter-band" />
+        <div class="nl-fields">
+          <input
+            type="email"
+            name="email"
+            required
+            placeholder="votre@email.com"
+            class="nl-input"
+            autocomplete="email"
+          />
+          <button type="submit" class="btn btn-primary nl-btn">
+            S'abonner
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m9 18 6-6-6-6"/></svg>
+          </button>
+        </div>
+        <p class="nl-note">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          Conforme RGPD · Aucun cookie · Désabonnement immédiat
+        </p>
+      </form>
+
+      <div id="nl-success" class="nl-success" hidden>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#86efac" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+        <div>
+          <strong>Vous êtes inscrit !</strong>
+          <p>Le prochain article vous sera envoyé dès sa publication.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+.newsletter-band {
+  background: linear-gradient(135deg, rgba(145,94,255,0.06) 0%, rgba(0,207,253,0.04) 100%);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 4rem 0;
+  position: relative;
+  overflow: hidden;
+}
+.newsletter-band::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 20% 50%, rgba(145,94,255,0.08) 0%, transparent 60%),
+              radial-gradient(ellipse at 80% 50%, rgba(0,207,253,0.06) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.nl-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.nl-label {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--violet-light);
+  border: 1px solid rgba(145,94,255,0.3);
+  border-radius: var(--r-full);
+  padding: 0.2rem 0.75rem;
+  background: rgba(145,94,255,0.08);
+  margin-bottom: 1rem;
+}
+
+.nl-title {
+  font-size: clamp(1.3rem, 2.5vw, 1.7rem);
+  font-weight: 800;
+  color: var(--text-1);
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+}
+
+.nl-desc {
+  color: var(--text-3);
+  font-size: 0.9rem;
+  line-height: 1.8;
+}
+
+.nl-form { display: flex; flex-direction: column; gap: 0.75rem; }
+
+.nl-fields {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.nl-input {
+  flex: 1;
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  padding: 0.75rem 1rem;
+  font-size: 0.9rem;
+  color: var(--text-1);
+  font-family: var(--font-sans);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.nl-input::placeholder { color: var(--text-4); }
+.nl-input:focus {
+  outline: none;
+  border-color: var(--violet);
+  box-shadow: 0 0 0 3px rgba(145,94,255,0.12);
+}
+
+.nl-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  white-space: nowrap;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.9rem;
+}
+
+.nl-note {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.75rem;
+  color: var(--text-4);
+  margin: 0;
+}
+
+.nl-success {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.25rem 1.5rem;
+  background: rgba(134,239,172,0.07);
+  border: 1px solid rgba(134,239,172,0.25);
+  border-radius: var(--r-lg);
+}
+.nl-success strong { display: block; color: #86efac; font-size: 0.95rem; margin-bottom: 0.2rem; }
+.nl-success p { font-size: 0.85rem; color: var(--text-3); margin: 0; }
+
+@media (max-width: 768px) {
+  .nl-inner { grid-template-columns: 1fr; gap: 2rem; }
+  .nl-fields { flex-direction: column; }
+  .nl-btn { justify-content: center; }
+}
+</style>
+
+<script>
+document.addEventListener('astro:page-load', () => {
+  const form = document.getElementById('nl-form') as HTMLFormElement | null;
+  const success = document.getElementById('nl-success');
+  if (!form) return;
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const btn = form.querySelector('button[type="submit"]') as HTMLButtonElement;
+    btn.disabled = true;
+    btn.textContent = '…';
+
+    try {
+      const res = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { Accept: 'application/json' },
+      });
+      if (res.ok) {
+        form.hidden = true;
+        if (success) success.hidden = false;
+      } else {
+        btn.disabled = false;
+        btn.innerHTML = 'S\'abonner <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m9 18 6-6-6-6"/></svg>';
+        alert('Une erreur s\'est produite. Réessayez ou écrivez-moi directement.');
+      }
+    } catch {
+      btn.disabled = false;
+    }
+  });
+});
+</script>

@@ -3,7 +3,6 @@ const LINKS = [
   { label: 'Accueil',     href: '/' },
   { label: 'Projets',     href: '/projets' },
   { label: 'Articles',    href: '/blog' },
-  { label: 'Domaines',    href: '/domaines' },
   { label: 'Compétences', href: '/skills' },
   { label: 'Livres',      href: '/livres' },
   { label: 'À propos',    href: '/about' },
@@ -51,7 +50,7 @@ const year = new Date().getFullYear();
     </div>
 
     <div class="footer-bottom">
-      <p class="footer-copy">© {year} Gérald Paméole — Tous droits réservés</p>
+      <p class="footer-copy">© {year} Gérald Paméole — <a href="/mentions-legales" style="color:inherit;text-decoration:underline;text-underline-offset:2px;opacity:0.7">Mentions légales</a></p>
       <div class="footer-tech">
         Construit avec&nbsp;
         <span class="tech-tag">Astro</span>
