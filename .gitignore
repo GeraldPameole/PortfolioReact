@@ -10,6 +10,9 @@ coverage/
 dist/
 build/
 
+# Astro (caches & generated types)
+.astro/
+
 # Misc
 .DS_Store
 .env
