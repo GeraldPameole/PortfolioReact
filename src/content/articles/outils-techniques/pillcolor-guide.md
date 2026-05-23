@@ -4,7 +4,7 @@ description: "Comment construire une palette de couleurs professionnelle pour le
 publishDate: "2026-04-27"
 type: article
 domain: outils-techniques
-image: "/images/themes/dev-web.webp"
+image: "/images/themes/dev-web.jpg"
 pillColor: slate
 theme: technologie
 ---
@@ -201,4 +201,4 @@ Quand je démarre un nouveau projet d'interface, je travaille dans cet ordre :
 
 Le point 4 est le plus important sur le long terme : si demain vous changez la teinte de votre rouge, vous n'avez à modifier qu'une variable, pas 47 occurrences dans le code.
 
-> **Ce que ça veut dire concrètement** — Un système de classification par couleur efficace repose sur 8 rôles sémantiques fixes, pas sur une palette infinie. Le rouge reste pour l'erreur, le vert pour le succès, l'amber pour l'attention — cette cohérence construit des habitudes chez l'utilisateur. L'accessibilité WCAG (4.5:1 minimum en AA) n'est pas négociable sur les interfaces professionnelles. La couleur ne doit jamais être le seul vecteur d'information. Nommez vos tokens par rôle, pas par couleur, pour garantir la maintenabilité.
+> **En résumé** — Un système de classification par couleur efficace repose sur 8 rôles sémantiques fixes, pas sur une palette infinie. Le rouge reste pour l'erreur, le vert pour le succès, l'amber pour l'attention — cette cohérence construit des habitudes chez l'utilisateur. L'accessibilité WCAG (4.5:1 minimum en AA) n'est pas négociable sur les interfaces professionnelles. La couleur ne doit jamais être le seul vecteur d'information. Nommez vos tokens par rôle, pas par couleur, pour garantir la maintenabilité.

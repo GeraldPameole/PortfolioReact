@@ -4,7 +4,7 @@ description: "Comprendre les niveaux WCAG simplement, identifier les quatre prob
 publishDate: "2025-03-03"
 type: article
 domain: developpement-web
-image: "/images/themes/dev-web.webp"
+image: "/images/themes/dev-web.jpg"
 pillColor: green
 theme: technologie
 ---
@@ -79,4 +79,4 @@ Ces trois tests prennent une heure sur un site de taille moyenne. Ils révèlent
 
 L'accessibilité n'est pas un projet à part entière — c'est une série de décisions de conception et de développement, prises au bon moment. Le bon moment, c'est pendant qu'on construit, pas après.
 
-> **Ce que ça veut dire concrètement** — Les WCAG définissent trois niveaux : A (minimum absolu), AA (standard réglementaire), AAA (optimal rarement atteint globalement). Les quatre corrections à fort impact sont le contraste de couleurs suffisant, le focus clavier visible, les textes alternatifs pertinents sur les images, et les labels associés aux champs de formulaire. Un premier audit réaliste se fait sans outil : test clavier, zoom à 200%, et lecteur d'écran natif.
+> **En résumé** — Les WCAG définissent trois niveaux : A (minimum absolu), AA (standard réglementaire), AAA (optimal rarement atteint globalement). Les quatre corrections à fort impact sont le contraste de couleurs suffisant, le focus clavier visible, les textes alternatifs pertinents sur les images, et les labels associés aux champs de formulaire. Un premier audit réaliste se fait sans outil : test clavier, zoom à 200%, et lecteur d'écran natif.

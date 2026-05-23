@@ -4,7 +4,7 @@ description: "Comment optimiser les processus avec le Value Stream Mapping simpl
 publishDate: "2026-09-07"
 type: article
 domain: qualite-process
-image: "/images/themes/management.webp"
+image: "/images/themes/management.jpg"
 pillColor: purple
 relatedArticles:
   - domain: qualite-process
@@ -169,4 +169,4 @@ Ma règle : trois actions maximum par cycle d'amélioration. On choisit les troi
 
 Cette discipline du petit pas rapide est plus efficace que le grand chantier tous les deux ans. Elle maintient la dynamique, produit des résultats visibles rapidement, et donne aux équipes une raison de continuer à s'impliquer.
 
-> **Ce que j'en retiens** — Optimiser un processus, c'est d'abord le comprendre tel qu'il existe vraiment, pas tel qu'il est censé fonctionner. Le Value Stream Mapping simplifié révèle les gaspillages invisibles — attentes, doublons, surprocessing. Les 7 MUDA s'appliquent aussi bien au bureau qu'à l'usine. Et les meilleures améliorations viennent systématiquement des personnes qui font le travail, pas de ceux qui l'observent de loin.
+> **En résumé** — Optimiser un processus, c'est d'abord le comprendre tel qu'il existe vraiment, pas tel qu'il est censé fonctionner. Le Value Stream Mapping simplifié révèle les gaspillages invisibles — attentes, doublons, surprocessing. Les 7 MUDA s'appliquent aussi bien au bureau qu'à l'usine. Et les meilleures améliorations viennent systématiquement des personnes qui font le travail, pas de ceux qui l'observent de loin.

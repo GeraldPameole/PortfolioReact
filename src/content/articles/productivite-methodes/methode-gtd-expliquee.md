@@ -4,7 +4,7 @@ description: "GTD adapté aux managers et chefs de projet — les 5 étapes, pou
 publishDate: "2026-07-06"
 type: article
 domain: productivite-methodes
-image: "/images/themes/productivite.webp"
+image: "/images/themes/productivite.jpg"
 pillColor: indigo
 relatedArticles:
   - domain: productivite-methodes
@@ -102,4 +102,4 @@ La deuxième erreur : ne pas faire la revue hebdomadaire. C'est compréhensible 
 
 La troisième erreur : confondre "projet" et "action". GTD définit un projet comme tout ce qui nécessite plus d'une action pour être accompli. "Préparer la présentation du bilan trimestriel" est un projet, pas une action. L'action, c'est "rédiger les trois premiers slides". Cette distinction évite d'avoir des tâches qui ne progressent jamais parce qu'elles sont trop grosses pour être attaquées directement.
 
-> **Pour conclure sans platitude** — GTD n'est pas une méthode de productivité comme les autres : c'est un système pour externaliser la mémoire de travail et agir sur des actions concrètes plutôt que sur des intentions floues. La revue hebdomadaire est la clé de voûte sans laquelle tout s'effondre. Et le bon outil est celui qu'on utilise vraiment — pas celui qu'on a le mieux configuré.
+> **En résumé** — GTD n'est pas une méthode de productivité comme les autres : c'est un système pour externaliser la mémoire de travail et agir sur des actions concrètes plutôt que sur des intentions floues. La revue hebdomadaire est la clé de voûte sans laquelle tout s'effondre. Et le bon outil est celui qu'on utilise vraiment — pas celui qu'on a le mieux configuré.

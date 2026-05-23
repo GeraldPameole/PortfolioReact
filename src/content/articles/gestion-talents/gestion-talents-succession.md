@@ -4,7 +4,7 @@ description: "Comment identifier les postes réellement critiques, évaluer les 
 publishDate: "2025-11-24"
 type: article
 domain: gestion-talents
-image: "/images/themes/management.webp"
+image: "/images/themes/management.jpg"
 pillColor: teal
 theme: gestion
 ---
@@ -154,4 +154,4 @@ Dans mon équipe, j'avais un commercial qui était le seul à vraiment maîtrise
 
 La bonne pratique est simple : identifier les compétences qui reposent sur une seule ou deux personnes, et construire des binômes. Non pas pour diluer l'expertise, mais pour assurer que si la personne est absente ou part, l'organisation n'est pas bloquée.
 
-> **À retenir** — La planification de la succession commence par identifier les postes réellement critiques (impact si vacant × difficulté de remplacement), puis par distinguer la succession d'urgence — qui prend le relais dans les 30 jours — de la succession planifiée — qui prépare un successeur sur 12 à 18 mois. Un tableau de bord simple avec niveaux de préparation et indicateurs de risque, revu trimestriellement, vaut mieux qu'un plan annuel qui reste dans un tiroir.
+> **En résumé** — La planification de la succession commence par identifier les postes réellement critiques (impact si vacant × difficulté de remplacement), puis par distinguer la succession d'urgence — qui prend le relais dans les 30 jours — de la succession planifiée — qui prépare un successeur sur 12 à 18 mois. Un tableau de bord simple avec niveaux de préparation et indicateurs de risque, revu trimestriellement, vaut mieux qu'un plan annuel qui reste dans un tiroir.

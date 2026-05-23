@@ -4,7 +4,7 @@ description: "Le mentorat n'est pas du coaching, et ce n'est pas du management. 
 publishDate: "2025-05-26"
 type: article
 domain: formation
-image: "/images/themes/formation-carriere.webp"
+image: "/images/themes/formation-carriere.jpg"
 tags:
   - formation
   - competences
@@ -105,4 +105,4 @@ Le troisième est opérationnel : y a-t-il des indicateurs liés au poste du men
 
 Aucun de ces niveaux n'est parfait isolément. Ensemble, ils donnent une image honnête de ce que la relation a produit.
 
-> **Ce que ça veut dire concrètement** — Le mentorat est distinct du coaching et du management : c'est une relation de partage d'expérience, volontaire, sans lien hiérarchique. Il produit des résultats quand il est cadré dès le départ, rythmé par des séances préparées, et évalué à mi-parcours. Les pièges les plus courants sont l'inversion des rôles, la dépendance créée par une trop grande disponibilité, et les appariements mal pensés. Un mentorat bien structuré est l'un des outils de développement les plus puissants qu'une organisation puisse offrir — à condition de ne pas le confondre avec une simple relation sympathique.
+> **En résumé** — Le mentorat est distinct du coaching et du management : c'est une relation de partage d'expérience, volontaire, sans lien hiérarchique. Il produit des résultats quand il est cadré dès le départ, rythmé par des séances préparées, et évalué à mi-parcours. Les pièges les plus courants sont l'inversion des rôles, la dépendance créée par une trop grande disponibilité, et les appariements mal pensés. Un mentorat bien structuré est l'un des outils de développement les plus puissants qu'une organisation puisse offrir — à condition de ne pas le confondre avec une simple relation sympathique.

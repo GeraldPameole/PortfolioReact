@@ -4,7 +4,7 @@ description: "Progressive Web Apps vs app native vs site responsive — les 3 co
 publishDate: "2025-02-03"
 type: article
 domain: developpement-web
-image: "/images/themes/dev-web.webp"
+image: "/images/themes/dev-web.jpg"
 pillColor: green
 theme: technologie
 ---
@@ -144,4 +144,4 @@ Les cas réels où j'ai vu des PWA apporter de la valeur : une application de ca
 
 Ce qui ne nécessite pas de PWA : un blog, un site vitrine, un portfolio, une application SaaS avec des utilisateurs sur desktop. Dans ces cas, un site responsive bien optimisé fait le travail sans la complexité supplémentaire du Service Worker.
 
-> **Ce que j'en retiens** — Une PWA est un bon choix quand l'offline est critique, quand on veut éviter les stores, et quand le budget ne permet pas deux apps natives. Ce n'est pas un substitut à une vraie app native si on a besoin d'un accès hardware complet ou de notifications push fiables sur iOS. Les trois composants — Service Worker, Manifest, HTTPS — sont tous obligatoires pour avoir une vraie PWA, pas juste un site avec du cache.
+> **En résumé** — Une PWA est un bon choix quand l'offline est critique, quand on veut éviter les stores, et quand le budget ne permet pas deux apps natives. Ce n'est pas un substitut à une vraie app native si on a besoin d'un accès hardware complet ou de notifications push fiables sur iOS. Les trois composants — Service Worker, Manifest, HTTPS — sont tous obligatoires pour avoir une vraie PWA, pas juste un site avec du cache.

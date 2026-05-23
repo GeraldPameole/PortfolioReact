@@ -1,6 +1,9 @@
 ---
 ---
 <canvas id="three-bg" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;z-index:0;pointer-events:none;"></canvas>
+<div id="three-bg-label" aria-hidden="true" style="position:absolute;bottom:1.5rem;right:1.5rem;z-index:1;font-family:'JetBrains Mono',monospace;font-size:.72rem;letter-spacing:.12em;color:#b4c5ff;opacity:0;transition:opacity .6s ease;pointer-events:none;text-transform:uppercase;text-shadow:0 0 8px rgba(180,197,255,.3);">
+  <span data-cn></span>
+</div>
 
 <script type="module">
 import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.162.0/build/three.module.min.js';
@@ -19,12 +22,88 @@ const scene  = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(60, canvas.offsetWidth / canvas.offsetHeight, 0.1, 1000);
 camera.position.set(0, 0, 28);
 
-// ── Materials ─────────────────────────────────────────────────────────────────
-const matViolet = new THREE.MeshBasicMaterial({ color: 0x915EFF, transparent: true, opacity: 0.85 });
-const matCyan   = new THREE.MeshBasicMaterial({ color: 0x00CFFD, transparent: true, opacity: 0.75 });
-const matWhite  = new THREE.MeshBasicMaterial({ color: 0xffffff, transparent: true, opacity: 0.4 });
+// ── Modes (styles aléatoires) ─────────────────────────────────────────────────
+// Chaque mode garde le côté futuriste. La forme terrestre (icosaèdres) reste
+// toujours visible, indépendante du mode.
+const MODES = [
+  {
+    name: 'constellation',
+    palette: [0x915EFF, 0x00CFFD, 0xffffff],  // violet, cyan, blanc
+    connectDist: 7,
+    lineOpacity: 0.22,
+    nodeOpacityBase: 0.55,
+    nodeOpacityAmp:  0.35,
+    driftScale: 1.0,
+    trackForce: 0.0028,
+    trackRadius: 6,
+    swirl: 0,
+  },
+  {
+    name: 'vortex',
+    palette: [0xff5599, 0x915EFF, 0x00CFFD],  // rose/violet/cyan
+    connectDist: 5.5,
+    lineOpacity: 0.18,
+    nodeOpacityBase: 0.6,
+    nodeOpacityAmp:  0.3,
+    driftScale: 0.6,
+    trackForce: 0.0045,
+    trackRadius: 7,
+    swirl: 0.0009,
+  },
+  {
+    name: 'neural',
+    palette: [0x00ffaa, 0x60a5fa, 0xa78bfa],  // vert/bleu/violet
+    connectDist: 8.5,
+    lineOpacity: 0.32,
+    nodeOpacityBase: 0.5,
+    nodeOpacityAmp:  0.45,
+    driftScale: 0.4,
+    trackForce: 0.0035,
+    trackRadius: 8,
+    swirl: 0,
+  },
+  {
+    name: 'galaxy',
+    palette: [0xfbbf24, 0xfb923c, 0x915EFF],  // ambre/orange/violet
+    connectDist: 6,
+    lineOpacity: 0.16,
+    nodeOpacityBase: 0.55,
+    nodeOpacityAmp:  0.35,
+    driftScale: 0.8,
+    trackForce: 0.0022,
+    trackRadius: 5.5,
+    swirl: 0.0014,
+  },
+];
 
-const lineMat = new THREE.LineBasicMaterial({ vertexColors: true, transparent: true, opacity: 0.22, blending: THREE.AdditiveBlending });
+let modeIdx = 0;
+let nextModeIdx = 0;
+let modeBlend = 1;                 // 0 → mode courant, 1 → mode cible (atteint)
+const MODE_DURATION = 14;          // secondes par mode
+const MODE_BLEND_TIME = 2.2;       // secondes de transition
+let lastModeSwitch = 0;
+
+function pickNextMode() {
+  let n;
+  do { n = Math.floor(Math.random() * MODES.length); } while (n === modeIdx && MODES.length > 1);
+  nextModeIdx = n;
+  modeBlend = 0;
+}
+
+function lerp(a, b, t) { return a + (b - a) * t; }
+
+function currentMode() { return MODES[modeIdx]; }
+function targetMode()  { return MODES[nextModeIdx]; }
+
+function blendedNum(key) {
+  return lerp(currentMode()[key], targetMode()[key], modeBlend);
+}
+
+function blendedColor(i) {
+  const c1 = new THREE.Color(currentMode().palette[i % currentMode().palette.length]);
+  const c2 = new THREE.Color(targetMode().palette[i % targetMode().palette.length]);
+  return c1.lerp(c2, modeBlend);
+}
 
 // ── Nodes ─────────────────────────────────────────────────────────────────────
 const NODE_COUNT = 90;
@@ -33,14 +112,16 @@ const nodes  = [];
 const nodeGeo = new THREE.SphereGeometry(0.12, 8, 8);
 
 for (let i = 0; i < NODE_COUNT; i++) {
-  const mat = [matViolet, matCyan, matWhite][Math.floor(Math.random() * 3)];
-  const mesh = new THREE.Mesh(nodeGeo, mat.clone());
+  const paletteIdx = Math.floor(Math.random() * 3);
+  const mat = new THREE.MeshBasicMaterial({ color: 0xffffff, transparent: true, opacity: 0.8 });
+  const mesh = new THREE.Mesh(nodeGeo, mat);
   mesh.position.set(
     (Math.random() - 0.5) * SPREAD * 2,
     (Math.random() - 0.5) * SPREAD,
     (Math.random() - 0.5) * SPREAD * 1.5
   );
   mesh.userData = {
+    paletteIdx,
     vx: (Math.random() - 0.5) * 0.012,
     vy: (Math.random() - 0.5) * 0.008,
     vz: (Math.random() - 0.5) * 0.006,
@@ -50,26 +131,30 @@ for (let i = 0; i < NODE_COUNT; i++) {
   nodes.push(mesh);
 }
 
-// ── Connections ───────────────────────────────────────────────────────────────
-const CONNECT_DIST = 7;
+// ── Lines (connections) ───────────────────────────────────────────────────────
+const lineMat = new THREE.LineBasicMaterial({
+  vertexColors: true,
+  transparent: true,
+  opacity: 0.22,
+  blending: THREE.AdditiveBlending,
+});
 const lineSegments = [];
 
 function buildLines() {
-  // Remove old lines
-  lineSegments.forEach(l => scene.remove(l));
+  lineSegments.forEach(l => { scene.remove(l); l.geometry.dispose(); });
   lineSegments.length = 0;
 
   const positions = [];
   const colors    = [];
-  const vCol = new THREE.Color(0x915EFF);
-  const cCol = new THREE.Color(0x00CFFD);
+  const palA = blendedColor(0);
+  const palB = blendedColor(1);
+  const connectDist = blendedNum('connectDist');
 
   for (let i = 0; i < NODE_COUNT; i++) {
     for (let j = i + 1; j < NODE_COUNT; j++) {
       const d = nodes[i].position.distanceTo(nodes[j].position);
-      if (d < CONNECT_DIST) {
-        const alpha = 1 - d / CONNECT_DIST;
-        const col   = vCol.clone().lerp(cCol, Math.random());
+      if (d < connectDist) {
+        const col = palA.clone().lerp(palB, Math.random());
         positions.push(...nodes[i].position.toArray(), ...nodes[j].position.toArray());
         colors.push(col.r, col.g, col.b, col.r, col.g, col.b);
       }
@@ -80,6 +165,7 @@ function buildLines() {
   const geo = new THREE.BufferGeometry();
   geo.setAttribute('position', new THREE.Float32BufferAttribute(positions, 3));
   geo.setAttribute('color',    new THREE.Float32BufferAttribute(colors, 3));
+  lineMat.opacity = blendedNum('lineOpacity');
   const line = new THREE.LineSegments(geo, lineMat);
   scene.add(line);
   lineSegments.push(line);
@@ -87,29 +173,60 @@ function buildLines() {
 
 buildLines();
 
-// ── Floating icosahedron (central decorative mesh) ────────────────────────────
+// ── Forme terrestre : icosaèdres centraux (préservés, indépendants du mode) ──
 const icoGeo = new THREE.IcosahedronGeometry(4.5, 1);
-const icoMat = new THREE.MeshBasicMaterial({
-  color: 0x915EFF,
-  wireframe: true,
-  transparent: true,
-  opacity: 0.08,
-});
+const icoMat = new THREE.MeshBasicMaterial({ color: 0x915EFF, wireframe: true, transparent: true, opacity: 0.08 });
 const ico = new THREE.Mesh(icoGeo, icoMat);
 scene.add(ico);
 
-// Second icosahedron slightly offset
 const ico2Geo = new THREE.IcosahedronGeometry(7, 1);
 const ico2Mat = new THREE.MeshBasicMaterial({ color: 0x00CFFD, wireframe: true, transparent: true, opacity: 0.04 });
 const ico2 = new THREE.Mesh(ico2Geo, ico2Mat);
 ico2.rotation.z = 0.5;
 scene.add(ico2);
 
-// ── Mouse tilt ────────────────────────────────────────────────────────────────
-let mouseX = 0, mouseY = 0;
+// ── Mouse tracking : NDC → monde projeté sur le plan z=0 ──────────────────────
+const mouseNDC = new THREE.Vector2(0, 0);  // -1..1
+const mouseWorld = new THREE.Vector3();
+const raycaster = new THREE.Raycaster();
+const trackPlane = new THREE.Plane(new THREE.Vector3(0, 0, 1), 0);
+let mouseActive = false;
+let mouseStrength = 0;  // 0..1, monte quand la souris bouge, décroît sinon
+
+function updateMouseWorld() {
+  raycaster.setFromCamera(mouseNDC, camera);
+  raycaster.ray.intersectPlane(trackPlane, mouseWorld);
+}
+
 window.addEventListener('mousemove', e => {
-  mouseX = (e.clientX / window.innerWidth  - 0.5) * 2;
-  mouseY = (e.clientY / window.innerHeight - 0.5) * 2;
+  const rect = canvas.getBoundingClientRect();
+  // Si la souris n'est pas dans la zone du canvas → on l'ignore comme cible
+  // (sinon les nodes seraient attirés hors écran)
+  const insideX = e.clientX >= rect.left && e.clientX <= rect.right;
+  const insideY = e.clientY >= rect.top  && e.clientY <= rect.bottom;
+  if (insideX && insideY) {
+    mouseNDC.x = ((e.clientX - rect.left) / rect.width)  * 2 - 1;
+    mouseNDC.y = -(((e.clientY - rect.top) / rect.height) * 2 - 1);
+    mouseActive = true;
+    mouseStrength = Math.min(1, mouseStrength + 0.25);
+  } else {
+    mouseActive = false;
+  }
+}, { passive: true });
+
+window.addEventListener('mouseleave', () => { mouseActive = false; });
+
+// Touch support : on suit le doigt
+window.addEventListener('touchmove', e => {
+  if (!e.touches[0]) return;
+  const rect = canvas.getBoundingClientRect();
+  const t = e.touches[0];
+  if (t.clientX >= rect.left && t.clientX <= rect.right && t.clientY >= rect.top && t.clientY <= rect.bottom) {
+    mouseNDC.x = ((t.clientX - rect.left) / rect.width)  * 2 - 1;
+    mouseNDC.y = -(((t.clientY - rect.top) / rect.height) * 2 - 1);
+    mouseActive = true;
+    mouseStrength = Math.min(1, mouseStrength + 0.25);
+  }
 }, { passive: true });
 
 // ── Resize ────────────────────────────────────────────────────────────────────
@@ -124,30 +241,241 @@ function onResize() {
 }
 window.addEventListener('resize', onResize, { passive: true });
 
+// ── Constellations en arrière-plan ────────────────────────────────────────────
+// Représentations stylisées des grandes constellations, projetées sur un plan
+// lointain (z = -28). Une seule visible à la fois, fade in/out toutes les 10s.
+// Coordonnées dans un repère local [-1, 1] remappées à l'échelle scène.
+const BG_Z          = -28;
+const CONST_SCALE_X = 22;
+const CONST_SCALE_Y = 11;
+
+const CONSTELLATIONS = [
+  {
+    name: 'Hydra',
+    label: "Hydre · 1303°² · la plus grande",
+    stars: [
+      [-0.92,  0.55], [-0.82, 0.65], [-0.78, 0.48], [-0.7, 0.6],
+      [-0.55, 0.42], [-0.35, 0.2], [-0.15, 0.05], [0.05, -0.08],
+      [0.25, -0.2], [0.45, -0.32], [0.6, -0.48], [0.78, -0.6], [0.95, -0.78],
+    ],
+    edges: [[0,1],[1,2],[2,3],[3,4],[4,5],[5,6],[6,7],[7,8],[8,9],[9,10],[10,11],[11,12]],
+    specials: [],
+  },
+  {
+    name: 'Eridanus',
+    label: "Éridan · 1138°² · Achernar",
+    stars: [
+      [0.7, 0.85], [0.5, 0.72], [0.6, 0.55], [0.4, 0.45],
+      [0.5, 0.25], [0.3, 0.12], [0.1, -0.02], [-0.05, -0.22],
+      [0.05, -0.4], [-0.15, -0.55], [-0.05, -0.72], [-0.3, -0.88],
+    ],
+    edges: [[0,1],[1,2],[2,3],[3,4],[4,5],[5,6],[6,7],[7,8],[8,9],[9,10],[10,11]],
+    specials: [{ index: 11, name: 'Achernar', size: 0.42 }],
+  },
+  {
+    name: 'Centaurus',
+    label: "Centaure · α Centauri",
+    stars: [
+      [-0.65, 0.55], [-0.45, 0.45], [-0.25, 0.6], [-0.05, 0.35],
+      [0.18, 0.5], [0.3, 0.18], [0.45, -0.02],
+      [-0.55, -0.45], [-0.35, -0.6], [0.05, -0.55],
+      [0.55, -0.3], [0.72, -0.55],
+    ],
+    edges: [[0,1],[1,2],[2,3],[3,4],[4,5],[5,6],[6,10],[10,11],[1,7],[7,8],[5,9],[9,11]],
+    specials: [{ index: 11, name: 'α Centauri', size: 0.48 }],
+  },
+  {
+    name: 'Puppis',
+    label: "Poupe · ex-Navire Argo",
+    stars: [
+      [-0.55, 0.65], [-0.3, 0.78], [-0.05, 0.6], [0.18, 0.7],
+      [0.05, 0.3], [-0.18, 0.15], [-0.42, 0.22], [-0.55, 0.0],
+    ],
+    edges: [[0,1],[1,2],[2,3],[2,4],[4,5],[5,6],[6,7],[4,7]],
+    specials: [],
+  },
+  {
+    name: 'Carina',
+    label: "Carène · Canopus",
+    stars: [
+      [-0.7, -0.35], [-0.48, -0.48], [-0.18, -0.55], [0.1, -0.6],
+      [0.4, -0.62], [0.65, -0.5], [0.48, -0.3], [0.18, -0.38],
+      [-0.92, -0.72],
+    ],
+    edges: [[8,0],[0,1],[1,2],[2,3],[3,4],[4,5],[5,6],[6,7],[7,2]],
+    specials: [{ index: 8, name: 'Canopus', size: 0.55 }],
+  },
+  {
+    name: 'Vela',
+    label: "Voiles · ex-Navire Argo",
+    stars: [
+      [0.0, 0.65], [-0.32, 0.45], [-0.52, 0.2], [-0.42, -0.12],
+      [-0.1, -0.05], [0.22, 0.18], [0.32, 0.45], [-0.02, 0.28],
+    ],
+    edges: [[0,1],[1,2],[2,3],[3,4],[4,5],[5,6],[6,0],[7,1],[7,5]],
+    specials: [],
+  },
+  {
+    name: 'Hercules',
+    label: "Hercule · amas M13",
+    stars: [
+      [-0.72, 0.72], [-0.42, 0.52], [-0.58, 0.32], [-0.22, 0.58],
+      [-0.3, 0.1], [-0.08, 0.0], [0.12, 0.05],
+      [0.0, -0.2], [0.22, -0.28],
+      [0.4, 0.42], [0.58, 0.6], [0.3, 0.72],
+      [-0.18, 0.0],
+    ],
+    edges: [[0,1],[1,2],[2,3],[3,9],[9,10],[10,11],[1,4],[4,5],[5,6],[6,9],[5,7],[6,8]],
+    specials: [{ index: 12, name: 'M13', size: 0.4 }],
+  },
+];
+
+const constMatBase = { star: 0xb4c5ff, starBright: 0xffd96a, line: 0x6da3ff };
+
+CONSTELLATIONS.forEach(c => {
+  const g = new THREE.Group();
+  g.position.set(0, 0, BG_Z);
+
+  c.starsRef = [];
+  c.stars.forEach((p, i) => {
+    const special = c.specials.find(s => s.index === i);
+    const r = special ? special.size : 0.14;
+    const mat = new THREE.MeshBasicMaterial({
+      color: special ? constMatBase.starBright : constMatBase.star,
+      transparent: true,
+      opacity: 0,
+    });
+    const sphere = new THREE.Mesh(new THREE.SphereGeometry(r, 12, 12), mat);
+    sphere.position.set(p[0] * CONST_SCALE_X, p[1] * CONST_SCALE_Y, 0);
+    g.add(sphere);
+    c.starsRef.push(sphere);
+
+    // Halo subtil pour les étoiles brillantes notables
+    if (special) {
+      const haloMat = new THREE.MeshBasicMaterial({
+        color: constMatBase.starBright,
+        transparent: true,
+        opacity: 0,
+      });
+      const halo = new THREE.Mesh(new THREE.SphereGeometry(r * 2.4, 14, 14), haloMat);
+      halo.position.copy(sphere.position);
+      halo.userData.isHalo = true;
+      g.add(halo);
+      c.starsRef.push(halo);
+    }
+  });
+
+  // Lines
+  const positions = [];
+  c.edges.forEach(([a, b]) => {
+    const pa = c.stars[a], pb = c.stars[b];
+    positions.push(pa[0] * CONST_SCALE_X, pa[1] * CONST_SCALE_Y, 0);
+    positions.push(pb[0] * CONST_SCALE_X, pb[1] * CONST_SCALE_Y, 0);
+  });
+  const lineGeo = new THREE.BufferGeometry();
+  lineGeo.setAttribute('position', new THREE.Float32BufferAttribute(positions, 3));
+  const lineMatC = new THREE.LineBasicMaterial({
+    color: constMatBase.line,
+    transparent: true,
+    opacity: 0,
+    blending: THREE.AdditiveBlending,
+  });
+  c.linesRef = new THREE.LineSegments(lineGeo, lineMatC);
+  g.add(c.linesRef);
+
+  scene.add(g);
+  c.group = g;
+});
+
+// État du cycle constellation
+let constIdx     = 0;
+let constTimer   = 0;
+const CONST_INTERVAL = 10;        // 10s par constellation (cycle complet)
+const CONST_FADE     = 1.4;       // 1.4s fade in / out
+const CONST_PEAK_OP  = 0.55;      // opacité max (en arrière-plan)
+
+const labelEl = document.getElementById('three-bg-label');
+const labelTxt = labelEl?.querySelector('[data-cn]');
+
+function setConstellationAlpha(c, alpha) {
+  c.starsRef.forEach(s => {
+    const isHalo = s.userData && s.userData.isHalo;
+    s.material.opacity = alpha * (isHalo ? 0.4 : 1);
+  });
+  c.linesRef.material.opacity = alpha * 0.55;
+}
+
 // ── Animation loop ────────────────────────────────────────────────────────────
 let frameCount = 0;
 const clock = new THREE.Clock();
 
 function animate() {
   requestAnimationFrame(animate);
-  const t = clock.getElapsedTime();
+  const t  = clock.getElapsedTime();
+  const dt = Math.min(0.033, clock.getDelta() || 0.016);
   frameCount++;
 
-  // Rotate icohedrons
+  // Mode switching
+  if (lastModeSwitch === 0) lastModeSwitch = t;
+  if (modeBlend < 1) {
+    modeBlend = Math.min(1, modeBlend + dt / MODE_BLEND_TIME);
+    if (modeBlend >= 1) {
+      modeIdx = nextModeIdx;
+      lastModeSwitch = t;
+    }
+  } else if (t - lastModeSwitch > MODE_DURATION) {
+    pickNextMode();
+  }
+
+  // Decay mouse strength when no movement
+  if (!mouseActive) {
+    mouseStrength = Math.max(0, mouseStrength - dt * 0.6);
+  } else {
+    mouseStrength = Math.max(0, mouseStrength - dt * 0.15);
+  }
+  if (mouseStrength > 0.001) updateMouseWorld();
+
+  // Mode params (interpolés)
+  const trackForce  = blendedNum('trackForce');
+  const trackRadius = blendedNum('trackRadius');
+  const driftScale  = blendedNum('driftScale');
+  const opacBase    = blendedNum('nodeOpacityBase');
+  const opacAmp     = blendedNum('nodeOpacityAmp');
+  const swirl       = blendedNum('swirl');
+
+  // Icosaèdres (forme terrestre, inchangée par le mode)
   ico.rotation.x  = t * 0.08;
   ico.rotation.y  = t * 0.11;
   ico2.rotation.x = t * 0.05;
   ico2.rotation.y = -t * 0.07;
 
-  // Move nodes
+  // Nodes
   nodes.forEach(node => {
     const ud = node.userData;
-    // Gentle drift
-    node.position.x += ud.vx;
-    node.position.y += ud.vy;
-    node.position.z += ud.vz;
-    // Floating bob
+
+    // Drift + swirl (rotation orbitale légère autour du centre, surtout en mode vortex/galaxy)
+    if (swirl !== 0) {
+      const x = node.position.x, z = node.position.z;
+      const cos = Math.cos(swirl), sin = Math.sin(swirl);
+      node.position.x = x * cos - z * sin;
+      node.position.z = x * sin + z * cos;
+    }
+    node.position.x += ud.vx * driftScale;
+    node.position.y += ud.vy * driftScale;
+    node.position.z += ud.vz * driftScale;
     node.position.y += Math.sin(t * 0.6 + ud.phase) * 0.002;
+
+    // Attraction vers la souris projetée
+    if (mouseStrength > 0.001) {
+      const dx = mouseWorld.x - node.position.x;
+      const dy = mouseWorld.y - node.position.y;
+      const d  = Math.sqrt(dx * dx + dy * dy);
+      if (d < trackRadius && d > 0.05) {
+        const k = (1 - d / trackRadius) * trackForce * mouseStrength;
+        node.position.x += dx * k * 60;
+        node.position.y += dy * k * 60;
+      }
+    }
 
     // Boundary wrap
     const B = SPREAD;
@@ -158,16 +486,50 @@ function animate() {
     if (node.position.z >  B) node.position.z = -B;
     if (node.position.z < -B) node.position.z =  B;
 
-    // Pulse opacity
-    node.material.opacity = 0.55 + 0.35 * Math.sin(t * 1.2 + ud.phase);
+    // Couleur (cross-fadée selon le mode)
+    const col = blendedColor(ud.paletteIdx);
+    node.material.color.copy(col);
+    node.material.opacity = opacBase + opacAmp * Math.sin(t * 1.2 + ud.phase);
   });
 
-  // Rebuild lines every 6 frames
-  if (frameCount % 6 === 0) buildLines();
+  // Rebuild lines périodiquement (plus fréquent en mode actif)
+  const rebuildEvery = mouseStrength > 0.2 ? 4 : 6;
+  if (frameCount % rebuildEvery === 0) buildLines();
 
-  // Camera mouse parallax
-  camera.position.x += (mouseX * 3 - camera.position.x) * 0.03;
-  camera.position.y += (-mouseY * 2 - camera.position.y) * 0.03;
+  // Constellations en arrière-plan : fade in (1.4s) → hold → fade out (1.4s) → switch
+  constTimer += dt;
+  const hold = CONST_INTERVAL - 2 * CONST_FADE;
+  let alpha;
+  if (constTimer < CONST_FADE) {
+    alpha = (constTimer / CONST_FADE) * CONST_PEAK_OP;
+  } else if (constTimer < CONST_FADE + hold) {
+    alpha = CONST_PEAK_OP;
+  } else if (constTimer < CONST_INTERVAL) {
+    alpha = (1 - (constTimer - CONST_FADE - hold) / CONST_FADE) * CONST_PEAK_OP;
+  } else {
+    // Switch — masque l'ancienne, passe à la suivante
+    setConstellationAlpha(CONSTELLATIONS[constIdx], 0);
+    constIdx = (constIdx + 1) % CONSTELLATIONS.length;
+    constTimer = 0;
+    alpha = 0;
+  }
+  // Légère rotation lente du groupe pour donner de la vie
+  const cur = CONSTELLATIONS[constIdx];
+  cur.group.rotation.z = Math.sin(t * 0.05) * 0.04;
+  setConstellationAlpha(cur, alpha);
+
+  // Masque les autres (au cas où après resize/HMR)
+  CONSTELLATIONS.forEach((c, i) => { if (i !== constIdx) setConstellationAlpha(c, 0); });
+
+  // Label HTML (apparaît avec la constellation)
+  if (labelEl && labelTxt) {
+    labelTxt.textContent = cur.label;
+    labelEl.style.opacity = String(Math.min(1, alpha / CONST_PEAK_OP * 0.85));
+  }
+
+  // Camera parallax léger (effet global, séparé du tracking des nodes)
+  camera.position.x += (mouseNDC.x * 3 - camera.position.x) * 0.03;
+  camera.position.y += (mouseNDC.y * 2 - camera.position.y) * 0.03;
   camera.lookAt(scene.position);
 
   renderer.render(scene, camera);

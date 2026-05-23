@@ -4,7 +4,7 @@ description: "La communication, la gestion des conflits, l'adaptabilité ne sont
 publishDate: "2025-06-09"
 type: article
 domain: formation
-image: "/images/themes/formation-carriere.webp"
+image: "/images/themes/formation-carriere.jpg"
 tags:
   - formation
   - competences
@@ -131,4 +131,4 @@ Une formation de deux jours sur la communication non violente ou la gestion des 
 
 Ce que j'ai vu fonctionner chez SFR, c'était la combinaison : un apport structuré en formation, suivi de mises en situation sur le terrain, avec des debriefs réguliers en binôme ou en petits groupes. La formation formelle était le déclencheur — pas le coeur du dispositif.
 
-> **Le fond de l'affaire** — Les soft skills ne sont pas des traits de personnalité figés. Ce sont des compétences qui s'apprennent à condition d'être pratiquées dans des situations réelles, avec du feedback précis et régulier. Communication, gestion des conflits, adaptabilité, leadership, résolution de problèmes et empathie sont toutes développables avec la bonne approche. La formation formelle ouvre la voie — mais c'est la pratique délibérée, ancrée dans le quotidien de travail, qui transforme vraiment les comportements.
+> **En résumé** — Les soft skills ne sont pas des traits de personnalité figés. Ce sont des compétences qui s'apprennent à condition d'être pratiquées dans des situations réelles, avec du feedback précis et régulier. Communication, gestion des conflits, adaptabilité, leadership, résolution de problèmes et empathie sont toutes développables avec la bonne approche. La formation formelle ouvre la voie — mais c'est la pratique délibérée, ancrée dans le quotidien de travail, qui transforme vraiment les comportements.

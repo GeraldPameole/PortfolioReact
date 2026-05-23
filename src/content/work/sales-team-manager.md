@@ -1,66 +1,79 @@
 ---
-title: "Manager Développement Commercial"
-publishDate: "2015-01-01"
-description: "Management d'une équipe commerciale multicanale chez SFR. Développement du CA, coaching des vendeurs et pilotage des performances dans un environnement télécom hautement concurrentiel."
+title: "Superviseur Développement Commercial"
+publishDate: "2015-06-01"
+description: "Supervision commerciale chez SFR : 110% des objectifs sur 3 années, pilotage performance, fidélisation et veille stratégique. Poste 100% commercial — la formation interne aux équipes vente est un levier de performance, pas un métier."
 author: "Gérald Paméole"
 img: "/assets/svg/sales-manager.svg"
-img_alt: "Manager commercial en réunion d'équipe"
+img_alt: "Superviseur commercial en réunion d'équipe"
 company: "SFR"
-period: "2015 — 2018"
-location: "Paris, France"
+period: "Juin 2015 — Juin 2018"
+location: "Massy, France"
+domain: "developpement-commercial"
 technologies:
   - Management commercial
-  - CRM (Salesforce)
-  - Analyse de données de vente
-  - Coaching individuel
-  - Pilotage de KPIs commerciaux
-  - Stratégie multicanale
+  - Pilotage KPIs (conversion, panier moyen, NPS)
+  - Dashboards dynamiques
+  - Vente consultative, closing, prospection
+  - Veille concurrentielle
+  - Fidélisation client
 projectType: "professional"
 tags:
-  - Management
-  - Commercial
-  - Leadership
-  - Télécommunications
+  - Développement commercial
+  - Management commercial
   - Performance
+  - Fidélisation
+  - Télécommunications
 ---
 
 ## Mission
 
-Manager Développement Commercial chez SFR de 2012 à 2015. J'ai dirigé une équipe de 12 commerciaux multicanaux, piloté les performances de vente sur un secteur géographique confié et accompagné la montée en compétences des équipes dans un marché des télécoms très compétitif.
+Superviseur Développement Commercial chez SFR de juin 2015 à juin 2018 (Massy). **Rôle 100 % commercial** : pilotage de la surperformance, fidélisation client et veille stratégique. La conception de programmes de formation interne (closing, prospection, traitement des objections) est un levier au service de la performance commerciale — pas un métier de formateur.
 
 ### Responsabilités principales
 
-- Management direct d'une équipe de 12 commerciaux (boutique, téléphone, terrain)
-- Définition et suivi des objectifs commerciaux individuels et collectifs (CA, conquête, fidélisation)
-- Coaching hebdomadaire et accompagnement terrain des commerciaux
-- Reporting mensuel à la direction régionale sur les performances et les axes d'amélioration
-- Animation des briefs quotidiens et des réunions commerciales hebdomadaires
+- Pilotage opérationnel quotidien de l'équipe commerciale (KPIs, actions correctives)
+- Conception et animation de programmes de formation commerciale
+- Suivi des indicateurs (conversion, panier moyen, NPS) via dashboards dynamiques
+- Mise en place de programmes de fidélisation multi-niveaux
+- Veille concurrentielle et ajustements tactiques temps réel
 
 ## Réalisations clés
 
-### Performance commerciale
+### Surperformance commerciale
 
-- **+40 % de CA** sur le secteur confié en 2 ans, soit la meilleure progression de la région
-- Développement de nouveaux segments B2B représentant 25 % du CA total en fin de mandat
-- Réduction du taux de churn clients de 18 % à 12 % grâce aux actions de fidélisation
+- **110 % des objectifs annuels atteints** sur 3 années consécutives
+- **+20 % de croissance CA** via tactiques de vente innovantes
+- Pilotage rigoureux des actions terrain et adaptation au marché
 
-### Management d'équipe
+### Excellence formation
 
-- Mise en place d'un **programme de coaching individuel** mensuel pour chaque commercial
-- Création d'un **système de reconnaissance des performances** ayant réduit le turnover de 35 %
-- Formation de 3 commerciaux ayant ensuite évolué vers des postes de managers juniors
+- **Conception et animation de 50 programmes** de formation commerciale
+- **+35 % d'efficacité individuelle** mesurée post-formation
+- Modules dédiés : prospection, closing, traitement des objections
 
-### Innovation commerciale
+### Pilotage performance
 
-- Déploiement d'un **outil CRM** (Salesforce) au sein de l'équipe, multipliant par 2 le suivi du pipeline
-- Introduction d'une stratégie de vente consultative adaptée aux offres B2B SFR
-- Organisation d'événements clients qui ont généré +20 % de leads qualifiés
+- Suivi quotidien des **KPIs** (conversion, panier moyen, NPS) via dashboards dynamiques
+- **Actions correctives rapides** sur les écarts détectés
+- Industrialisation des routines de pilotage hebdo / mensuel
+
+### Fidélisation client
+
+- **85 % de taux de rétention** (vs 65 % moyenne secteur)
+- Programmes multi-niveaux et excellence relationnelle
+- Personnalisation des parcours selon segments
+
+### Veille stratégique
+
+- **Analyse concurrentielle proactive** (offres, pricing, tactiques)
+- Ajustements tactiques temps réel sur la base des signaux marché
+- Reporting hebdomadaire à la direction commerciale
 
 ## Compétences mobilisées
 
 | Domaine | Compétences |
 |---------|-------------|
-| Commercial | Vente consultative, négociation, fidélisation, conquête B2B/B2C |
-| Management | Leadership, coaching, gestion de la performance, animation d'équipe |
-| Outils | CRM Salesforce, reporting Excel, outils de tracking des ventes |
-| Stratégie | Analyse de marché, planification commerciale, segmentation |
+| Commercial | Pilotage performance, fidélisation, veille concurrentielle |
+| Formation | Ingénierie pédagogique, animation, évaluation impact |
+| Management | Animation d'équipe, coaching, actions correctives |
+| Data | KPIs, dashboards dynamiques, reporting |

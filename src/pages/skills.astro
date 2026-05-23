@@ -3,15 +3,15 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 const SKILL_GROUPS = [
   {
-    category: 'Gestion de Projet',
+    category: 'Gestion de Projet & Méthodologies',
     icon: '🗂️',
     color: '#60a5fa',
     skills: [
-      { name: 'Gestion de projet (PMP/Prince2)', level: 95 },
-      { name: 'Méthodologies Agile & Scrum',     level: 92 },
-      { name: 'Gestion des risques',             level: 88 },
-      { name: 'Planification & Estimation',      level: 90 },
-      { name: 'Gestion des parties prenantes',   level: 87 },
+      { name: 'Pilotage de projets (cycle en V & Agile)', level: 100 },
+      { name: 'Méthodologies Scrum & Kanban',             level: 95 },
+      { name: 'Gestion des risques & des parties prenantes', level: 92 },
+      { name: 'KPIs, SLA & tableaux de bord temps réel',  level: 95 },
+      { name: 'Reporting direction & analyses prédictives', level: 90 },
     ],
   },
   {
@@ -19,11 +19,11 @@ const SKILL_GROUPS = [
     icon: '🎯',
     color: '#a78bfa',
     skills: [
-      { name: 'Management d\'équipe',            level: 93 },
-      { name: 'Leadership situationnel',         level: 90 },
-      { name: 'Conduite du changement (ADKAR)',  level: 88 },
-      { name: 'Coaching & Mentoring',            level: 85 },
-      { name: 'Communication & négociation',     level: 89 },
+      { name: 'Management opérationnel (sous-traitants, équipes)', level: 95 },
+      { name: 'Coaching & mentoring',                  level: 90 },
+      { name: 'Conduite du changement',                level: 88 },
+      { name: "Interface NOC / Terrain / Direction",   level: 92 },
+      { name: 'Adaptabilité',                          level: 100 },
     ],
   },
   {
@@ -31,64 +31,134 @@ const SKILL_GROUPS = [
     icon: '💻',
     color: '#34d399',
     skills: [
-      { name: 'React / Next.js / Astro',         level: 85 },
-      { name: 'TypeScript / JavaScript',         level: 88 },
-      { name: 'Node.js / REST API',              level: 80 },
-      { name: 'Tailwind CSS / Design Systems',   level: 87 },
-      { name: 'Git & CI/CD',                     level: 82 },
+      { name: 'React / Next.js',                       level: 88 },
+      { name: 'TypeScript',                            level: 85 },
+      { name: 'JavaScript ES6+',                       level: 90 },
+      { name: 'HTML5 / CSS3 / Tailwind CSS',           level: 92 },
+      { name: 'Node.js / API REST / SQL',              level: 78 },
+      { name: 'WordPress (Elementor / Gutenberg / ACF)', level: 90 },
+      { name: 'Responsive Design',                     level: 92 },
     ],
   },
   {
-    category: 'Data & Analyse',
-    icon: '📊',
+    category: 'Outils & Frameworks Modernes',
+    icon: '⚡',
+    color: '#22d3ee',
+    skills: [
+      { name: 'Astro 4 (SSG / Islands)',               level: 88 },
+      { name: 'Three.js / WebGL',                      level: 78 },
+      { name: 'MDX & Content Collections',             level: 85 },
+      { name: 'ViewTransitions API',                   level: 82 },
+      { name: 'Vite / PostCSS',                        level: 80 },
+      { name: 'Tailwind plugins (typo, forms)',        level: 85 },
+    ],
+  },
+  {
+    category: 'Architecture & Qualité',
+    icon: '🏛️',
+    color: '#818cf8',
+    skills: [
+      { name: 'Architecture logicielle',               level: 85 },
+      { name: 'Conception UI/UX',                      level: 80 },
+      { name: 'Industrialisation & CI/CD',             level: 75 },
+      { name: 'Tests E2E (Cypress)',                   level: 72 },
+      { name: 'Code review systématique',              level: 92 },
+      { name: 'Optimisation code & qualité',           level: 88 },
+    ],
+  },
+  {
+    category: 'SEO & Performance Web',
+    icon: '🚀',
     color: '#67e8f9',
     skills: [
-      { name: 'KPIs & Tableaux de bord',         level: 91 },
-      { name: 'Power BI / Data Studio',          level: 82 },
-      { name: 'SQL & Analyse de données',        level: 78 },
-      { name: 'Reporting & Pilotage',            level: 90 },
-      { name: 'IA & Automatisation',             level: 75 },
+      { name: 'Core Web Vitals (LCP, FID, CLS)',       level: 88 },
+      { name: 'Balisage sémantique & accessibilité',   level: 85 },
+      { name: 'Yoast / Rank Math',                     level: 85 },
+      { name: 'Audit & optimisation technique',        level: 87 },
+      { name: 'Conformité RGPD',                       level: 90 },
     ],
   },
   {
-    category: 'Formation & Pédagogie',
+    category: 'Formation & Développement des Compétences',
     icon: '🎓',
     color: '#fbbf24',
     skills: [
-      { name: 'Ingénierie pédagogique',          level: 90 },
-      { name: 'Animation de formations',         level: 92 },
-      { name: 'E-learning & Digital Learning',   level: 82 },
-      { name: 'Évaluation Kirkpatrick',          level: 85 },
-      { name: 'Lean Management',                 level: 83 },
+      { name: 'Ingénierie pédagogique',                level: 95 },
+      { name: 'Animation de formations',               level: 100 },
+      { name: 'E-learning & blended learning',         level: 85 },
+      { name: 'Code review & mentorat technique',      level: 90 },
+      { name: "Évaluation d'impact post-formation",    level: 88 },
     ],
   },
   {
-    category: 'Qualité & Process',
-    icon: '✅',
+    category: 'Développement Commercial',
+    icon: '📈',
     color: '#f9a8d4',
     skills: [
-      { name: 'ISO 9001',                        level: 88 },
-      { name: 'Lean / Six Sigma',                level: 83 },
-      { name: 'Amélioration continue',           level: 87 },
-      { name: 'Cartographie processus (BPMN)',   level: 80 },
-      { name: 'Audit qualité',                   level: 82 },
+      { name: 'Pilotage de la performance commerciale', level: 100 },
+      { name: 'Prospection, closing, traitement objections', level: 95 },
+      { name: 'Fidélisation client & NPS',             level: 92 },
+      { name: 'Veille concurrentielle',                level: 90 },
+      { name: 'Esprit analytique',                     level: 100 },
+    ],
+  },
+  {
+    category: 'Veille Technologique',
+    icon: '🔭',
+    color: '#f472b6',
+    skills: [
+      { name: 'IA & Machine Learning',                 level: 70 },
+      { name: 'DevOps (Docker, GitHub Actions)',       level: 65 },
+      { name: 'Cloud (Vercel, AWS, Azure)',            level: 68 },
+      { name: 'Outils IA dev (Copilot, ChatGPT)',      level: 88 },
     ],
   },
 ];
 
-const TOOLS = [
-  'Jira', 'Confluence', 'Trello', 'Notion', 'Figma',
-  'VS Code', 'GitHub', 'Docker', 'Salesforce', 'HubSpot',
-  'Power BI', 'Teams', 'Slack', 'Moodle', 'Articulate',
-  'Zapier', 'Airtable', 'Linear', 'Webflow', 'Astro',
+// Outils par domaine — l'IA en premier (indispensable au quotidien)
+const TOOL_GROUPS = [
+  {
+    label: 'IA & Productivité',
+    items: ['ChatGPT', 'Claude', 'GitHub Copilot', 'Cursor', 'v0.dev', 'Perplexity', 'Midjourney'],
+  },
+  {
+    label: 'Dev & Frameworks',
+    items: ['Astro', 'React', 'Next.js', 'TypeScript', 'Three.js', 'MDX', 'Vite', 'Tailwind CSS', 'Node.js'],
+  },
+  {
+    label: 'CMS & Outils Web',
+    items: ['WordPress', 'Elementor', 'Gutenberg', 'ACF'],
+  },
+  {
+    label: 'SEO & Performance',
+    items: ['Lighthouse', 'PageSpeed Insights', 'Google Search Console', 'Yoast', 'Rank Math', 'Schema.org'],
+  },
+  {
+    label: 'Versionning, Tests & Deploy',
+    items: ['Git', 'GitHub', 'GitHub Actions', 'Cypress', 'Vercel', 'Docker', 'VS Code'],
+  },
+  {
+    label: 'Gestion de Projet',
+    items: ['Jira', 'Confluence', 'Trello', 'Notion', 'Miro'],
+  },
+  {
+    label: 'CRM & Commercial',
+    items: ['Salesforce', 'HubSpot', 'Pipedrive', 'LinkedIn Sales Navigator'],
+  },
+  {
+    label: 'Formation & Pédagogie',
+    items: ['Moodle', 'Articulate', 'Kahoot', 'Loom', 'Canva'],
+  },
+  {
+    label: 'Collaboration & Design',
+    items: ['Slack', 'Teams', 'Zoom', 'Figma'],
+  },
 ];
 
 const CERTS = [
-  { name: 'PMP — Project Management Professional', org: 'PMI', year: '2018', color: '#60a5fa' },
-  { name: 'Prince2 Practitioner',                  org: 'Axelos', year: '2017', color: '#a78bfa' },
-  { name: 'Lean Six Sigma Green Belt',              org: 'BSI', year: '2019', color: '#34d399' },
-  { name: 'Scrum Master (CSM)',                     org: 'Scrum Alliance', year: '2020', color: '#fbbf24' },
-  { name: 'ISO 9001 Lead Auditor',                  org: 'IRCA', year: '2021', color: '#f9a8d4' },
+  { name: 'Titre RNCP Niveau 6 — Développeur Full Stack JavaScript', org: 'IFOCOP / Paris', year: '2020', color: '#34d399' },
+  { name: 'Certification Professionnelle Chef de Projet — Scrum Agile', org: 'G2R Formation / Paris', year: 'Janvier 2020', color: '#60a5fa' },
+  { name: 'DUT Techniques de Commercialisation', org: 'IUT Marne-la-Vallée', year: '2004', color: '#f9a8d4' },
 ];
 ---
 
@@ -103,7 +173,7 @@ const CERTS = [
           Stack <span class="gradient-text">technique & métier</span>
         </h1>
         <p class="reveal reveal-delay-2" style="color:var(--text-3);font-size:1.05rem;max-width:500px;margin:1rem auto 0">
-          15 ans de pratique terrain en management, développement et formation.
+          20 ans de pratique terrain en management, développement et formation.
         </p>
       </div>
     </div>
@@ -151,8 +221,15 @@ const CERTS = [
         <span class="section-label reveal">Outils</span>
         <h2 class="reveal reveal-delay-1">Écosystème <span class="gradient-text">quotidien</span></h2>
       </div>
-      <div class="tools-grid reveal reveal-delay-2">
-        {TOOLS.map(t => <span class="tool-tag">{t}</span>)}
+      <div class="tool-groups">
+        {TOOL_GROUPS.map((g, gi) => (
+          <div class="tool-group reveal" style={`transition-delay:${gi*0.05}s`}>
+            <h3 class="tool-group-label">{g.label}</h3>
+            <div class="tools-grid">
+              {g.items.map(t => <span class="tool-tag">{t}</span>)}
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   </section>
@@ -163,7 +240,7 @@ const CERTS = [
   <section class="section">
     <div class="container container-sm">
       <div class="section-header">
-        <span class="section-label reveal">Certifications</span>
+        <span class="section-label reveal">Diplômes & Certifications</span>
         <h2 class="reveal reveal-delay-1">Reconnaissances <span class="gradient-text">officielles</span></h2>
       </div>
       <div class="certs-list">
@@ -212,6 +289,27 @@ const CERTS = [
 .skill-bar-bg   { height: 4px; background: var(--border); border-radius: 2px; overflow: hidden; }
 .skill-bar-fill { height: 100%; border-radius: 2px; width: 0; transition: width 1.2s var(--ease-out); }
 
+.tool-groups {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+.tool-group {
+  display: flex;
+  flex-direction: column;
+  gap: .85rem;
+}
+.tool-group-label {
+  font-family: var(--font-mono);
+  font-size: .78rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--text-3);
+  margin: 0;
+  padding-bottom: .35rem;
+  border-bottom: 1px dashed var(--border);
+}
 .tools-grid {
   display: flex;
   flex-wrap: wrap;

@@ -4,7 +4,7 @@ description: "Identifier les potentiels évolutifs, éviter le piège de la prom
 publishDate: "2025-10-06"
 type: article
 domain: gestion-talents
-image: "/images/themes/management.webp"
+image: "/images/themes/management.jpg"
 pillColor: teal
 theme: gestion
 ---
@@ -137,4 +137,4 @@ C'est là que j'ai identifié mes successeurs potentiels. Non pas en regardant l
 
 Le développement des talents n'est pas une initiative RH annuelle. C'est une pratique managériale hebdomadaire. Elle prend du temps — et elle est la meilleure façon de ne pas avoir à recruter en urgence dans six mois.
 
-> **Ce que ça change en pratique** — Développer les talents internes exige de distinguer performance actuelle et potentiel d'évolution, d'utiliser la matrice potentiel/performance pour orienter les décisions, et de construire des plans de succession qui indiquent clairement qui est prêt maintenant, dans 6-12 mois, ou dans 2 ans — avec des actions concrètes pour chaque cas. Le coaching individuel mensuel reste le meilleur outil d'identification du potentiel réel.
+> **En résumé** — Développer les talents internes exige de distinguer performance actuelle et potentiel d'évolution, d'utiliser la matrice potentiel/performance pour orienter les décisions, et de construire des plans de succession qui indiquent clairement qui est prêt maintenant, dans 6-12 mois, ou dans 2 ans — avec des actions concrètes pour chaque cas. Le coaching individuel mensuel reste le meilleur outil d'identification du potentiel réel.

@@ -11,13 +11,13 @@ keywords: "management, leadership, excellence organisationnelle, performance dur
 note: 4.7
 relatedContent:
   - title: "L'Importance du Leadership Authentique dans les Organisations Modernes"
-    url: "/blog/leadership-management/importance-leadership"
+    url: "/articles/importance-leadership"
     type: "article"
   - title: "Management hybride : Défis et opportunités pour les leaders"
     url: "/articles/management-hybride-defis-opportunites"
     type: "article"
   - title: "Zero to One"
-    url: "/livres/zero-to-one"
+    url: "/books/zero-to-one"
     type: "book"
 ---
 
@@ -38,8 +38,8 @@ Ce livre est indispensable pour tout dirigeant cherchant à transformer une orga
 
 Si vous avez apprécié "Good to Great", ces ressources pourraient vous intéresser :
 
-- [L'Importance du Leadership](/blog/leadership-management/importance-leadership) - Approfondir les principes du leadership de niveau 5
-- [Gestion de Projet Agile: Meilleures Pratiques](/blog/gestion-projet/gestion-projet-agile-meilleures-pratiques) - Mettre en œuvre la discipline et l'agilité dans la gestion de projet
-- [The Lean Startup](/livres/lean-startup) - Appliquer des principes d'excellence dans le contexte entrepreneurial
+- [L'Importance du Leadership](/articles/importance-leadership) - Approfondir les principes du leadership de niveau 5
+- [Gestion de Projet Agile: Meilleures Pratiques](/articles/gestion-projet-agile-meilleures-pratiques) - Mettre en œuvre la discipline et l'agilité dans la gestion de projet
+- [The Lean Startup](/books/lean-startup) - Appliquer des principes d'excellence dans le contexte entrepreneurial
 
 **Note des lecteurs : 4.8/5** - Un classique incontournable du management moderne

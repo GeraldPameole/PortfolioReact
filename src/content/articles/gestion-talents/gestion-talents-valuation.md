@@ -4,7 +4,7 @@ description: "La reconnaissance non-monétaire qui retient vraiment les talents,
 publishDate: "2025-12-01"
 type: article
 domain: gestion-talents
-image: "/images/themes/management.webp"
+image: "/images/themes/management.jpg"
 pillColor: teal
 theme: gestion
 ---
@@ -110,4 +110,4 @@ L'inverse — micromanager un collaborateur expérimenté — est une forme de d
 
 La pratique concrète que j'applique : pour chaque collaborateur confirmé, je liste les décisions que je prends actuellement à sa place, et je lui transfère la moitié dans le trimestre. Ce n'est pas du laisser-faire — je reste disponible, je donne du contexte, je discute des options. Mais je signe la décision de sa main, pas de la mienne.
 
-> **Ce que j'applique** — Valoriser un collaborateur suppose d'avoir sécurisé les bases (poste stable, rémunération juste) avant d'activer les leviers de reconnaissance. La reconnaissance verbale immédiate est la plus puissante et la plus oubliée. La progression doit être rendue visible par des entretiens dédiés à la trajectoire. L'autonomie accordée à un profil confirmé est la forme de reconnaissance la plus durable.
+> **En résumé** — Valoriser un collaborateur suppose d'avoir sécurisé les bases (poste stable, rémunération juste) avant d'activer les leviers de reconnaissance. La reconnaissance verbale immédiate est la plus puissante et la plus oubliée. La progression doit être rendue visible par des entretiens dédiés à la trajectoire. L'autonomie accordée à un profil confirmé est la forme de reconnaissance la plus durable.

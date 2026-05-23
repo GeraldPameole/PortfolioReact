@@ -6,11 +6,15 @@ const articles = await getCollection('articles');
 const books    = await getCollection('books');
 const works    = await getCollection('work');
 
+// Couleurs alignées avec src/config/domains.ts :
+//   gestion-projet → blue · developpement-web → green · developpement-commercial → orange
+//   qualite-process → purple · formation → yellow
 const TIMELINE = [
-  { period: '2021 – Présent', role: 'Chef de Projet — Maintenance Réseaux', company: 'KEOS TELECOM',    color: '#60a5fa', icon: '🚀' },
-  { period: '2019 – 2021',   role: 'Développeur Web Front-End',             company: 'ACTIV PARTNERS',  color: '#34d399', icon: '💻' },
-  { period: '2015 – 2018',   role: 'Manager Développement Commercial',      company: 'SFR',             color: '#a78bfa', icon: '📈' },
-  { period: '2012 – 2015',   role: 'Chargé de Qualité, Formation & Méthodes', company: 'SFR',          color: '#fbbf24', icon: '🎓' },
+  { period: 'Avril 2021 – Présent',     role: 'Pilote de Production & Chef de Projet Maintenance FTTB', company: 'KEOS TELECOM',   domain: 'Gestion de projet', color: '#60a5fa', icon: '🚀' },
+  { period: 'Juin 2020 – Février 2021', role: 'Développeur Front-End',                                  company: "ACTIV'PARTNERS", domain: 'Développement web', color: '#34d399', icon: '💻' },
+  { period: 'Juin 2015 – Juin 2018',    role: 'Superviseur Développement Commercial',                  company: 'SFR',            domain: 'Développement commercial', color: '#fb923c', icon: '🤝' },
+  { period: '2012 – Juin 2015',         role: 'Chargé de Qualité, Formation & Méthodes',                company: 'SFR',            domain: 'Qualité & process', color: '#a78bfa', icon: '✅' },
+  { period: 'Juin 2009 – Juin 2012',    role: 'Chargé de Formation (Offshore & Accompagnement)',        company: 'SFR',            domain: 'Formation & pédagogie', color: '#fbbf24', icon: '🎓' },
 ];
 
 const TESTIMONIALS = [
@@ -52,7 +56,7 @@ const VALS = [
 ];
 ---
 
-<BaseLayout title="À propos" description="Gérald Paméole — Chef de projet, expert en transformation digitale et développeur web avec 15 ans d'expérience.">
+<BaseLayout title="À propos" description="Gérald Paméole — Chef de projet, expert en transformation digitale et développeur web avec 20 ans d'expérience.">
 
   <!-- Hero -->
   <div class="about-hero">
@@ -70,7 +74,7 @@ const VALS = [
             Chef de projet digital · Expert en transformation · Développeur web · Formateur
           </p>
           <p class="reveal reveal-delay-3" style="color:var(--text-3);font-size:1.05rem;line-height:1.85;max-width:540px">
-            Depuis 15 ans, j'accompagne des organisations dans leurs projets les plus complexes —
+            Depuis 20 ans, j'accompagne des organisations dans leurs projets les plus complexes —
             de la refonte d'infrastructure télécom à la formation de managers,
             en passant par le développement d'applications web modernes.
           </p>
@@ -83,7 +87,7 @@ const VALS = [
         <!-- Stats panel -->
         <div class="hero-stats-panel reveal reveal-delay-2">
           <div class="stat-item">
-            <span class="stat-num gradient-text">15+</span>
+            <span class="stat-num gradient-text">20+</span>
             <span class="stat-txt">années d'expérience</span>
           </div>
           <div class="stat-item">
@@ -119,6 +123,7 @@ const VALS = [
               <span class="timeline-period" style={`color:${t.color}`}>{t.period}</span>
               <h3 class="timeline-role">{t.role}</h3>
               <p class="timeline-company">{t.company}</p>
+              <span class="timeline-domain" style={`color:${t.color};background:${t.color}14;border-color:${t.color}33`}>{t.domain}</span>
             </div>
           </div>
         ))}
@@ -190,7 +195,7 @@ const VALS = [
         </p>
         <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
           <a href="/contact" class="btn btn-primary">Envoyer un message</a>
-          <a href="https://www.linkedin.com/in/gerald-pameole/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">LinkedIn</a>
+          <a href="https://www.linkedin.com/in/geraldpameole/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">LinkedIn</a>
         </div>
       </div>
     </div>
@@ -275,6 +280,17 @@ const VALS = [
 .timeline-period  { font-family: var(--font-mono); font-size: .78rem; font-weight: 700; }
 .timeline-role    { font-size: 1rem; font-weight: 700; color: var(--text-1); font-family: var(--font-sans); margin: .35rem 0 .2rem; }
 .timeline-company { font-size: .855rem; color: var(--text-3); }
+.timeline-domain  {
+  display: inline-block;
+  margin-top: .65rem;
+  padding: .2rem .65rem;
+  font-family: var(--font-mono);
+  font-size: .72rem;
+  font-weight: 600;
+  letter-spacing: .02em;
+  border: 1px solid;
+  border-radius: var(--r-full);
+}
 
 /* Values */
 .vals-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem; }

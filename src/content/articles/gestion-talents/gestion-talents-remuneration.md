@@ -4,7 +4,7 @@ description: "Comprendre jusqu'où la rémunération motive vraiment, construire
 publishDate: "2025-11-10"
 type: article
 domain: gestion-talents
-image: "/images/themes/management.webp"
+image: "/images/themes/management.jpg"
 pillColor: teal
 theme: gestion
 ---
@@ -143,4 +143,4 @@ Dans une équipe commerciale, les gens finissent toujours par savoir ce que gagn
 
 Ce que j'ai fait : expliquer clairement la grille de rémunération de l'équipe — les fourchettes, les critères qui font qu'on est en haut ou en bas d'une fourchette, et les conditions pour évoluer. Pas les salaires nominaux de chaque personne, mais la logique du système. Ça a réduit les questions implicites et les frustrations non exprimées.
 
-> **À retenir** — La rémunération motive jusqu'à un certain seuil : en dessous, elle crée de l'insatisfaction ; au-dessus, ce sont la progression, la reconnaissance et l'intérêt du travail qui prennent le relais. Un package bien construit combine fixe compétitif, variable individuel lisible, variable collectif modeste et avantages réels. La transparence sur la logique de rémunération réduit les frustrations sans créer plus de tensions qu'elle n'en résout.
+> **En résumé** — La rémunération motive jusqu'à un certain seuil : en dessous, elle crée de l'insatisfaction ; au-dessus, ce sont la progression, la reconnaissance et l'intérêt du travail qui prennent le relais. Un package bien construit combine fixe compétitif, variable individuel lisible, variable collectif modeste et avantages réels. La transparence sur la logique de rémunération réduit les frustrations sans créer plus de tensions qu'elle n'en résout.

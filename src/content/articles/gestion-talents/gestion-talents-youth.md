@@ -4,7 +4,7 @@ description: "Comment adapter son management aux Gen Z et Millennials sans abdiq
 publishDate: "2025-12-22"
 type: article
 domain: gestion-talents
-image: "/images/themes/management.webp"
+image: "/images/themes/management.jpg"
 pillColor: teal
 theme: gestion
 ---
@@ -160,4 +160,4 @@ Un junior Gen Z qui rate deux fois le même livrable recevra le même entretien 
 
 Ce que j'ai constaté : les jeunes collaborateurs qui performent le mieux dans mes équipes sont ceux qui ont un manager exigeant et accessible — pas un manager permissif. Ce qu'ils n'acceptent pas, c'est l'arbitraire et le manque de transparence. Ce sont des choses que je ne pouvais pas non plus accepter à 25 ans.
 
-> **Le vrai bilan** — Manager les jeunes générations demande d'adapter la fréquence du feedback, la clarté des explications et la flexibilité organisationnelle — mais pas de baisser les standards de performance ou de tolérer le travail bâclé. La vraie adaptation, c'est d'être explicite là où d'autres générations acceptaient l'implicite. C'est un effort managérial légitime et rentable, pas une concession.
+> **En résumé** — Manager les jeunes générations demande d'adapter la fréquence du feedback, la clarté des explications et la flexibilité organisationnelle — mais pas de baisser les standards de performance ou de tolérer le travail bâclé. La vraie adaptation, c'est d'être explicite là où d'autres générations acceptaient l'implicite. C'est un effort managérial légitime et rentable, pas une concession.

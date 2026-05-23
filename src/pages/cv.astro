@@ -1,0 +1,522 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const PROFIL = {
+  nom: 'GERALD',
+  prenom: 'PAMEOLE',
+  titre: 'CHEF DE PROJET DIGITAL & EXCELLENCE OPÉRATIONNELLE',
+  adresse: '9 Rue Martin Porc 33320 Eysines',
+  tel: '0661826317',
+  mel: 'gerald.pameole@gmail.com',
+  www: 'https://lescarnetsdup.vercel.app/',
+};
+
+const APROPOS = `Chef de projet tech avec 20 ans d'expérience alliant pilotage opérationnel, développement full-stack et excellence commerciale. Spécialisé en transformation digitale, gestion de projets télécoms complexes et optimisation de la performance.`;
+
+const EXPERIENCES = [
+  {
+    periode: 'De avril 2021',
+    poste: 'Pilote de Production & Chef de Projet Maintenance FTTB',
+    entreprise: 'KEOS TELECOM',
+    lieu: 'Paris (Full Remote depuis Bordeaux)',
+    domaine: { label: 'Gestion de projet', color: '#1d4ed8' },
+    missions: [
+      { titre: 'Excellence Opérationnelle Réseau', desc: "Maintien de 98,7% de disponibilité sur infrastructure critique • Réduction MTTR de -25% via optimisation processus N1/N2/N3" },
+      { titre: 'Réduction Incidents Majeure', desc: "-40% de pannes récurrentes en 12 mois (synchronisation, latence) grâce à automatisation des tests et formation équipes terrain" },
+      { titre: 'Optimisation Performance Projet', desc: "-30% de retards de migration via refonte logistique et planification prédictive • Taux de succès 97% sur migrations complexes" },
+      { titre: 'Management Opérationnel', desc: "Pilotage quotidien de 17 mainteneurs sous-traitants (KPI, SLA, qualité) • Interface stratégique NOC/Terrain/Direction" },
+      { titre: 'Data-Driven Management', desc: "Création et pilotage de tableaux de bord temps réel (15 KPIs critiques) • Reporting direction avec analyses prédictives et recommandations stratégiques" },
+    ],
+  },
+  {
+    periode: 'De juin 2020 à février 2021',
+    poste: 'Développeur Front-End',
+    entreprise: "ACTIV'PARTNERS",
+    lieu: 'Paris',
+    domaine: { label: 'Développement web', color: '#15803d' },
+    missions: [
+      { titre: 'Delivery Projets Web', desc: "Refonte complète de 8 sites WordPress (thèmes custom, architecture React, intégrations API) dans les délais et budgets" },
+      { titre: 'Performance SEO', desc: "40% de visibilité organique moyenne via optimisation technique (Core Web Vitals, balisage sémantique, Yoast/Rank Math)" },
+      { titre: 'Conformité & Sécurité', desc: "Mise en conformité RGPD complète (cookies, mentions, politique confidentialité) • Sécurisation infrastructure WordPress" },
+      { titre: 'Leadership Technique', desc: "Mentorat quotidien d'équipe dev • Code review systématique • Formation bonnes pratiques (hooks, custom fields ACF, performance)" },
+      { titre: 'Stack Technique', desc: "React • Next.js • TypeScript • JavaScript ES6 • HTML5/CSS3 • WordPress (Elementor/Gutenberg) • Node.js • Git/GitHub • SQL • Tailwind CSS • API REST • Responsive Design" },
+    ],
+  },
+  {
+    periode: 'De juin 2015 à juin 2018',
+    poste: 'Superviseur Développement Commercial',
+    entreprise: 'SFR',
+    lieu: 'Massy',
+    domaine: { label: 'Développement commercial', color: '#c2410c' },
+    missions: [
+      { titre: 'Surperformance Commerciale', desc: "110% des objectifs annuels atteints sur 3 années consécutives • 20% de croissance CA via tactiques de vente innovantes" },
+      { titre: 'Excellence Formation', desc: "Conception et animation de 50 programmes augmentant l'efficacité individuelle de 35% (prospection, closing, objections)" },
+      { titre: 'Pilotage Performance', desc: "Suivi quotidien KPIs (conversion, panier moyen, NPS) via dashboards dynamiques • Actions correctives rapides sur écarts" },
+      { titre: 'Fidélisation Client', desc: "85% de taux de rétention (vs 65% moyenne secteur) via programmes multi-niveaux et excellence relationnelle" },
+      { titre: 'Veille Stratégique', desc: "Analyse concurrentielle proactive (offres, pricing, tactiques) permettant ajustements tactiques temps réel" },
+    ],
+  },
+  {
+    periode: 'De 2012 à juin 2015',
+    poste: 'Chargé de Qualité, Formation & Méthodes',
+    entreprise: 'SFR',
+    lieu: 'Paris',
+    domaine: { label: 'Qualité & process', color: '#6d28d9' },
+    missions: [
+      { titre: 'Impact Pédagogique', desc: "500+ collaborateurs formés sur produits, outils et méthodes SFR en 3 ans • 95% de satisfaction moyenne post-formation" },
+      { titre: 'Ingénierie de Formation', desc: "Conception de parcours blended (présentiel + e-learning) • Réduction du temps d'intégration nouveaux entrants de -30%" },
+      { titre: 'Innovation Pédagogique', desc: "Supports interactifs (vidéos, quiz, fiches pratiques) • Déploiement classes virtuelles & modules e-learning autonomes via LMS interne" },
+      { titre: 'Amélioration Processus', desc: "Identification et correction de 12 processus commerciaux générant des erreurs récurrentes • Rédaction guides méthodologiques (scripts, CRM, fiches réflexes)" },
+      { titre: 'Performance Qualité', desc: "Contribution à l'amélioration du NPS interne de +15 points sur le périmètre formé • Coordination étroite avec managers commerciaux" },
+    ],
+  },
+  {
+    periode: 'De juin 2009 à juin 2012',
+    poste: 'Chargé de Formation',
+    entreprise: 'SFR',
+    lieu: 'Paris',
+    domaine: { label: 'Formation & pédagogie', color: '#a16207' },
+    missions: [
+      { titre: 'Pilotage Formation Offshore', desc: "Conception et déploiement de programmes de formation pour les équipes offshore (centres partenaires multi-sites) • Standardisation des parcours pédagogiques cross-sites pour garantir un niveau de service homogène" },
+      { titre: 'Accompagnement Collaborateurs', desc: "Coaching individuel de 200+ collaborateurs sur 3 ans • Plans de montée en compétences personnalisés (techniques produits, outils CRM, posture relation client)" },
+      { titre: 'Excellence Pédagogique', desc: "Animation de 150+ sessions de formation (présentiel + classes virtuelles) • Taux de satisfaction post-formation de 92% mesuré sur l'ensemble des promotions" },
+      { titre: 'Industrialisation Pédagogique', desc: "Création d'une bibliothèque de modules réutilisables (supports, scripts, quiz) • Réduction de -40% du temps de mise en formation des nouveaux entrants" },
+      { titre: 'Coordination Multi-Sites', desc: "Interface entre sites offshore, équipes France et managers métier • Reporting régulier RH/Direction sur l'avancement des plans de développement et la performance post-formation" },
+    ],
+  },
+];
+
+const ETUDES = [
+  {
+    annee: '2020',
+    diplome: 'Titre RNCP Niveau 6 (Bac+3/4) - Développeur Full Stack JavaScript',
+    ecole: 'IFOCOP / Paris',
+    detail: 'Gestion de projet informatique • Conception UI/UX • Architecture logicielle • Optimisation code & qualité • React • Next.js • TypeScript • Node.js • Méthodologies Agile • Industrialisation',
+  },
+  {
+    annee: '2004',
+    diplome: 'DUT Techniques de Commercialisation',
+    ecole: 'IUT Marne-la-Vallée / Champs-sur-Marne',
+    detail: 'Négociation • Marketing opérationnel • CRM • Gestion de projet • Relation client • Prospection • Stratégie commerciale',
+  },
+];
+
+const FORMATIONS = [
+  {
+    date: 'janvier 2020',
+    titre: 'Certification Professionnelle Chef de Projet - Scrum Agile',
+    ecole: 'G2R Formation / Paris',
+    detail: 'Pilotage projets Agile (Scrum, Kanban) • Facilitation & résolution conflits • Gestion parties prenantes • Performance (burndown, velocity) • Coaching équipe • Outils : Jira, Trello, Confluence, Miro, Notion',
+  },
+];
+
+const CENTRES = [
+  {
+    label: 'Tech',
+    desc: 'IA & Machine Learning • Développement web (projets personnels React/Next.js) • DevOps • Cloud',
+  },
+  {
+    label: 'Culture',
+    desc: 'Littérature (classiques chinois, philosophie, sciences humaines) • Musique (piano, jazz, musiques du monde) • Gaming • Musées',
+  },
+  {
+    label: 'Sport',
+    desc: 'Cyclisme (gravel, randonnées cyclistes) • Handball',
+  },
+];
+
+const COMPETENCES = [
+  { label: 'Gestion de Projet & Méthodologies', niveau: 100 },
+  { label: 'Formation & Développement des Compétences', niveau: 100 },
+  { label: 'Analyse et développement commercial', niveau: 100 },
+  { label: 'Développement web', niveau: 80 },
+  { label: 'Adaptabilité', niveau: 100 },
+  { label: 'Esprit analytique', niveau: 100 },
+];
+---
+
+<BaseLayout
+  title="CV"
+  description="CV de Gérald Paméole — Chef de projet digital & excellence opérationnelle. 20 ans d'expérience en télécom, développement web et management commercial."
+>
+  <section class="cv-page">
+    <div class="cv-actions container">
+      <a href="/cv-gerald-pameole.pdf" download class="btn btn-primary">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Télécharger en PDF
+      </a>
+      <a href="/contact" class="btn btn-secondary">Me contacter</a>
+    </div>
+
+    <article class="cv-doc">
+      <!-- Header -->
+      <header class="cv-header">
+        <div class="cv-identity">
+          <h1 class="cv-name">
+            <span class="cv-firstname">{PROFIL.nom}</span>
+            <span class="cv-lastname">{PROFIL.prenom}</span>
+          </h1>
+          <p class="cv-role">{PROFIL.titre}</p>
+        </div>
+        <ul class="cv-contact">
+          <li><span class="cv-contact-label">adr :</span> {PROFIL.adresse}</li>
+          <li><span class="cv-contact-label">tél :</span> {PROFIL.tel}</li>
+          <li><span class="cv-contact-label">mél :</span> <a href={`mailto:${PROFIL.mel}`}>{PROFIL.mel}</a></li>
+          <li><span class="cv-contact-label">www :</span> <a href={PROFIL.www} target="_blank" rel="noopener noreferrer">{PROFIL.www}</a></li>
+        </ul>
+      </header>
+
+      <!-- À propos -->
+      <section class="cv-section">
+        <h2 class="cv-section-title">À PROPOS</h2>
+        <p class="cv-about">{APROPOS}</p>
+      </section>
+
+      <!-- Expériences -->
+      <section class="cv-section">
+        <h2 class="cv-section-title">EXPÉRIENCES</h2>
+        <div class="cv-entries">
+          {EXPERIENCES.map((exp) => (
+            <div class="cv-entry">
+              <div class="cv-entry-period">{exp.periode}</div>
+              <div class="cv-entry-content">
+                <h3 class="cv-entry-title">
+                  {exp.poste} <span class="cv-sep">/</span> <span class="cv-entry-company">{exp.entreprise}</span> <span class="cv-sep">/</span> {exp.lieu}
+                </h3>
+                <span class="cv-domain-tag" style={`color:${exp.domaine.color};background:${exp.domaine.color}1a;border-color:${exp.domaine.color}55`}>{exp.domaine.label}</span>
+                <ul class="cv-missions">
+                  {exp.missions.map((m) => (
+                    <li><strong>{m.titre} :</strong> {m.desc}</li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <!-- Études -->
+      <section class="cv-section">
+        <h2 class="cv-section-title">ÉTUDES - DIPLÔMES</h2>
+        <div class="cv-entries">
+          {ETUDES.map((e) => (
+            <div class="cv-entry">
+              <div class="cv-entry-period">{e.annee}</div>
+              <div class="cv-entry-content">
+                <h3 class="cv-entry-title">
+                  {e.diplome} <span class="cv-sep">/</span> {e.ecole}
+                </h3>
+                <p class="cv-entry-detail">{e.detail}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <!-- Formations complémentaires -->
+      <section class="cv-section">
+        <h2 class="cv-section-title">FORMATIONS COMPLÉMENTAIRES</h2>
+        <div class="cv-entries">
+          {FORMATIONS.map((f) => (
+            <div class="cv-entry">
+              <div class="cv-entry-period">{f.date}</div>
+              <div class="cv-entry-content">
+                <h3 class="cv-entry-title">
+                  {f.titre} <span class="cv-sep">/</span> {f.ecole}
+                </h3>
+                <p class="cv-entry-detail">{f.detail}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <!-- Compétences + Centres d'intérêt (2 colonnes) -->
+      <section class="cv-section cv-section-split">
+        <div class="cv-split-col">
+          <h2 class="cv-section-title">COMPÉTENCES</h2>
+          <ul class="cv-skills">
+            {COMPETENCES.map((s) => (
+              <li class="cv-skill">
+                <div class="cv-skill-fill" style={`width:${s.niveau}%`}></div>
+                <span class="cv-skill-label">{s.label}</span>
+                <span class="cv-skill-value">{s.niveau}%</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div class="cv-split-col">
+          <h2 class="cv-section-title">CENTRES D'INTÉRÊT</h2>
+          <div class="cv-interests">
+            {CENTRES.map((c) => (
+              <div class="cv-interest">
+                <h3 class="cv-interest-label">{c.label}</h3>
+                <p class="cv-interest-desc">{c.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    </article>
+  </section>
+</BaseLayout>
+
+<style>
+  .cv-page {
+    padding: 7rem 0 5rem;
+    background: var(--bg-0);
+  }
+
+  .cv-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+    max-width: 960px;
+    padding: 0 1.5rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .cv-actions .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  /* Document CV */
+  .cv-doc {
+    max-width: 960px;
+    margin: 0 auto;
+    background: #ffffff;
+    color: #1f2937;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    overflow: hidden;
+    font-family: 'Helvetica Neue', 'Arial', sans-serif;
+    line-height: 1.55;
+  }
+
+  /* Header bleu marine */
+  .cv-header {
+    background: #0a2768;
+    color: #ffffff;
+    padding: 2.5rem 3rem;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 2rem;
+    align-items: start;
+  }
+  .cv-name {
+    margin: 0;
+    line-height: 1.1;
+    letter-spacing: 0.18em;
+    font-weight: 300;
+    font-size: 2.4rem;
+    color: #ffffff;
+  }
+  .cv-firstname,
+  .cv-lastname {
+    display: block;
+  }
+  .cv-lastname { font-weight: 700; }
+  .cv-role {
+    margin: 0.85rem 0 0;
+    font-size: 0.78rem;
+    letter-spacing: 0.16em;
+    color: #c9d4f0;
+    font-weight: 400;
+  }
+  .cv-contact {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: 0.82rem;
+    line-height: 1.65;
+    text-align: right;
+  }
+  .cv-contact li { color: #e3eaf6; }
+  .cv-contact a { color: #ffffff; text-decoration: none; }
+  .cv-contact a:hover { text-decoration: underline; }
+  .cv-contact-label {
+    color: #ffffff;
+    font-weight: 700;
+  }
+
+  /* Sections */
+  .cv-section {
+    padding: 2rem 3rem;
+    border-bottom: 1px solid #d1d5db;
+  }
+  .cv-section:last-child { border-bottom: none; }
+
+  .cv-section-title {
+    font-size: 0.95rem;
+    letter-spacing: 0.18em;
+    font-weight: 700;
+    color: #0a2768;
+    margin: 0 0 1.5rem;
+    padding-bottom: 0.6rem;
+    border-bottom: 1.5px solid #0a2768;
+  }
+
+  .cv-about {
+    margin: 0;
+    font-size: 0.92rem;
+    color: #374151;
+    line-height: 1.7;
+  }
+
+  /* Entries (expériences, études, formations) */
+  .cv-entries {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .cv-entry {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 1.5rem;
+    align-items: start;
+  }
+  .cv-entry-period {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #0a2768;
+    line-height: 1.5;
+  }
+  .cv-entry-content { min-width: 0; }
+  .cv-entry-title {
+    margin: 0 0 0.75rem;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #0a2768;
+    line-height: 1.5;
+  }
+  .cv-entry-company { font-weight: 400; color: #374151; }
+  .cv-sep { color: #9ca3af; font-weight: 400; }
+
+  .cv-domain-tag {
+    display: inline-block;
+    margin: 0 0 0.85rem;
+    padding: 0.18rem 0.65rem;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    border: 1px solid;
+    border-radius: 999px;
+  }
+
+  .cv-missions {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+  }
+  .cv-missions li {
+    font-size: 0.85rem;
+    color: #374151;
+    line-height: 1.6;
+    padding-left: 0;
+  }
+  .cv-missions strong { color: #0a2768; font-weight: 700; }
+
+  .cv-entry-detail {
+    margin: 0;
+    font-size: 0.85rem;
+    color: #374151;
+    line-height: 1.6;
+  }
+
+  /* Section 2 colonnes (compétences + centres d'intérêt) */
+  .cv-section-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+  .cv-split-col { min-width: 0; }
+
+  /* Compétences */
+  .cv-skills {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+  }
+  .cv-skill {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.45rem 0.85rem;
+    background: rgba(10, 39, 104, 0.06);
+    border-radius: 2px;
+    overflow: hidden;
+    font-size: 0.85rem;
+  }
+  .cv-skill-fill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(10, 39, 104, 0.18);
+    z-index: 0;
+  }
+  .cv-skill-label,
+  .cv-skill-value {
+    position: relative;
+    z-index: 1;
+    color: #0a2768;
+    font-weight: 500;
+  }
+  .cv-skill-value { font-weight: 700; }
+
+  /* Centres d'intérêt */
+  .cv-interests {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+  .cv-interest-label {
+    margin: 0 0 0.5rem;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #0a2768;
+    letter-spacing: 0.02em;
+  }
+  .cv-interest-desc {
+    margin: 0;
+    font-size: 0.83rem;
+    color: #374151;
+    line-height: 1.6;
+  }
+
+  @media (max-width: 760px) {
+    .cv-page { padding: 6rem 0 3rem; }
+    .cv-header {
+      grid-template-columns: 1fr;
+      padding: 2rem 1.5rem;
+    }
+    .cv-contact { text-align: left; }
+    .cv-section { padding: 1.5rem; }
+    .cv-entry {
+      grid-template-columns: 1fr;
+      gap: 0.5rem;
+    }
+    .cv-section-split { grid-template-columns: 1fr; gap: 2rem; }
+    .cv-name { font-size: 1.9rem; }
+  }
+
+  /* Impression */
+  @media print {
+    .cv-page { padding: 0; background: #fff; }
+    .cv-actions { display: none; }
+    .cv-doc { box-shadow: none; border-radius: 0; max-width: none; }
+  }
+</style>
+</BaseLayout>

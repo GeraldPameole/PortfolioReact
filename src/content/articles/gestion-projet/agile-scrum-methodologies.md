@@ -4,7 +4,7 @@ description: "Comparaison pratique de Scrum, Kanban et SAFe — quand utiliser c
 publishDate: "2025-07-21"
 type: article
 domain: gestion-projet
-image: "/images/themes/management.webp"
+image: "/images/themes/management.jpg"
 pillColor: blue
 theme: gestion
 ---
@@ -94,4 +94,4 @@ Ce changement a rencontré de la résistance — les gens s'habituent aux rituel
 
 La méthode n'est pas une identité. C'est un outil. Changer d'outil quand le travail change, c'est de la compétence — pas de l'inconstance.
 
-> **Ce que ça veut dire concrètement** — Scrum convient aux équipes qui livrent par itérations sur un produit évolutif. Kanban s'impose dès que le travail est continu et imprévisible. SAFe n'a de sens qu'à grande échelle avec de vraies dépendances inter-équipes. Les hybrides fonctionnent si les règles sont claires. Et la méthode qui ne génère aucune conversation difficile est probablement appliquée en façade.
+> **En résumé** — Scrum convient aux équipes qui livrent par itérations sur un produit évolutif. Kanban s'impose dès que le travail est continu et imprévisible. SAFe n'a de sens qu'à grande échelle avec de vraies dépendances inter-équipes. Les hybrides fonctionnent si les règles sont claires. Et la méthode qui ne génère aucune conversation difficile est probablement appliquée en façade.

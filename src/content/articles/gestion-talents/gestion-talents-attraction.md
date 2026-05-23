@@ -4,7 +4,7 @@ description: "Comment construire une marque employeur qui attire vraiment, chois
 publishDate: "2025-09-29"
 type: article
 domain: gestion-talents
-image: "/images/themes/management.webp"
+image: "/images/themes/management.jpg"
 pillColor: teal
 theme: gestion
 ---
@@ -102,4 +102,4 @@ Chez SFR, j'ai commencé à demander systématiquement à mes commerciaux en pos
 
 Le recrutement le moins cher est celui qu'on ne fait qu'une fois. Un bon travail sur la marque employeur authentique coûte du temps, pas d'argent — et il divise le turnover.
 
-> **À retenir** — Attirer les bons profils passe par une marque employeur cohérente avec la réalité interne, un choix de canaux adapté au profil ciblé (la cooptation et les communautés d'abord, les job boards en complément), et une communication qui répond aux vraies questions des candidats : qualité du manager, trajectoire réelle, clarté des attentes.
+> **En résumé** — Attirer les bons profils passe par une marque employeur cohérente avec la réalité interne, un choix de canaux adapté au profil ciblé (la cooptation et les communautés d'abord, les job boards en complément), et une communication qui répond aux vraies questions des candidats : qualité du manager, trajectoire réelle, clarté des attentes.

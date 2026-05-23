@@ -11,13 +11,13 @@ keywords: "innovation, startup, entrepreneuriat, technologie, monopole, concurre
 note: 4.7
 relatedContent:
   - title: "Nouvelles Tendances de Développement Web"
-    url: "/blog/innovation-technologies/nouvelles-tendances-developpement-web"
+    url: "/articles/nouvelles-tendances-developpement-web"
     type: "article"
   - title: "IA 2024 : Impact Profond sur les Métiers et la Société"
-    url: "/blog/innovation-technologies/ia-transformation-societe-2024"
+    url: "/articles/ia-transformation-societe-2024"
     type: "article"
   - title: "The Lean Startup"
-    url: "/livres/lean-startup"
+    url: "/books/lean-startup"
     type: "book"
 ---
 
@@ -37,8 +37,8 @@ Ce livre remet en question les orthodoxies de l'entrepreneuriat moderne et offre
 
 Si vous avez apprécié "Zero to One", ces ressources pourraient vous intéresser :
 
-- [Nouvelles Tendances de Développement Web](/blog/innovation-technologies/nouvelles-tendances-developpement-web) - Comprendre les tendances actuelles en développement web
-- [IA 2024 : Impact Profond sur les Métiers et la Société](/blog/innovation-technologies/ia-transformation-societe-2024) - Comprendre l'impact potentiel de l'intelligence artificielle sur les métiers et la société
-- [The Lean Startup](/livres/lean-startup) - Une approche complémentaire de la création d'entreprise
+- [Nouvelles Tendances de Développement Web](/articles/nouvelles-tendances-developpement-web) - Comprendre les tendances actuelles en développement web
+- [IA 2024 : Impact Profond sur les Métiers et la Société](/articles/ia-transformation-societe-2024) - Comprendre l'impact potentiel de l'intelligence artificielle sur les métiers et la société
+- [The Lean Startup](/books/lean-startup) - Une approche complémentaire de la création d'entreprise
 
 **Note des lecteurs : 4.7/5** - Un ouvrage fondamental qui transforme la façon de penser l'innovation

@@ -4,7 +4,7 @@ description: "Comment identifier les compétences critiques concentrées sur une
 publishDate: "2025-09-15"
 type: article
 domain: gestion-talents
-image: "/images/themes/management.webp"
+image: "/images/themes/management.jpg"
 pillColor: teal
 theme: gestion
 ---
@@ -151,4 +151,4 @@ Court terme, c'est une question de survie : si la personne part sans préavis, q
 
 Le plan de succession informe les décisions de développement. Si Camille est identifiée comme successeur potentiel de Thomas sur les grands comptes, alors Camille doit avoir des opportunités de pratiquer cette compétence — des missions communes, des formations ciblées, un accès progressif aux dossiers sensibles. Sans ce plan, le développement est aléatoire. Avec, il est délibéré.
 
-> **Ce que ça change en pratique** — Une skills matrix simple et maintenue à jour révèle les dépendances critiques sur une seule personne avant que le départ ne crée une crise. Le binômage organisé transfère les compétences par l'exposition directe. Et les plans de succession transforment des risques identifiés en décisions de développement délibérées — à condition d'être construits avant d'en avoir besoin.
+> **En résumé** — Une skills matrix simple et maintenue à jour révèle les dépendances critiques sur une seule personne avant que le départ ne crée une crise. Le binômage organisé transfère les compétences par l'exposition directe. Et les plans de succession transforment des risques identifiés en décisions de développement délibérées — à condition d'être construits avant d'en avoir besoin.

@@ -4,7 +4,7 @@ description: "Bien-être structurel contre bien-être cosmétique, indicateurs r
 publishDate: "2025-12-29"
 type: article
 domain: gestion-talents
-image: "/images/themes/management.webp"
+image: "/images/themes/management.jpg"
 pillColor: teal
 theme: gestion
 ---
@@ -150,4 +150,4 @@ Ce ne sont pas des compétences exceptionnelles. Ce sont des comportements de ba
 
 Un baby-foot ne remplace pas un manager qui fait son travail correctement.
 
-> **Ce que j'applique** — Le bien-être au travail réel repose sur des conditions structurelles — charge soutenable, clarté des rôles, feedback honnête, manager accessible — et se mesure sur des indicateurs comportementaux comme l'absentéisme, le turnover et le présentéisme. Les programmes cosmétiques (yoga, baby-foot, fruits) peuvent être des compléments agréables, mais ne traitent aucune des causes réelles du mal-être. Le levier central reste le manager direct, pas la politique RH.
+> **En résumé** — Le bien-être au travail réel repose sur des conditions structurelles — charge soutenable, clarté des rôles, feedback honnête, manager accessible — et se mesure sur des indicateurs comportementaux comme l'absentéisme, le turnover et le présentéisme. Les programmes cosmétiques (yoga, baby-foot, fruits) peuvent être des compléments agréables, mais ne traitent aucune des causes réelles du mal-être. Le levier central reste le manager direct, pas la politique RH.

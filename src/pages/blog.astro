@@ -2,7 +2,6 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ArticleCard from '../components/ArticleCard.astro';
-import NewsletterBand from '../components/NewsletterBand.astro';
 
 const articles = await getCollection('articles');
 const sorted   = articles.sort((a, b) =>
@@ -75,8 +74,6 @@ const DOMAINS = [...new Set(articles.map((a: any) => a.data.domain).filter(Boole
     <!-- Pagination -->
     <nav id="pagination" class="pagination" aria-label="Pagination des articles"></nav>
   </div>
-
-  <NewsletterBand />
 </BaseLayout>
 
 <style>

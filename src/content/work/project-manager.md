@@ -1,66 +1,73 @@
 ---
-title: "Chef de Projet — Maintenance Réseaux"
-publishDate: "2021-02-01"
-description: "Pilotage de projets d'infrastructure télécom (DSL/FTTB), coordination d'équipes techniques et amélioration continue des performances réseaux."
+title: "Pilote de Production & Chef de Projet Maintenance FTTB"
+publishDate: "2021-04-01"
+description: "Pilotage opérationnel de l'infrastructure FTTB chez KEOS TELECOM : excellence réseau, réduction des incidents, management de mainteneurs sous-traitants et data-driven management."
 author: "Gérald Paméole"
 img: "/assets/svg/project-manager.svg"
 img_alt: "Chef de projet télécoms en action"
 company: "KEOS TELECOM"
-period: "Fév. 2021 — Présent"
-location: "Paris, France"
+period: "Avril 2021 — Présent"
+location: "Paris (Full Remote depuis Bordeaux)"
+domain: "gestion-projet"
 technologies:
-  - Méthodologies Agiles (Scrum / Kanban)
-  - Gestion de projet (Jira, MS Project)
-  - Réseaux DSL / FTTB
-  - Outils de monitoring réseau
-  - Coordination multi-équipes
-  - Reporting & KPIs
+  - Pilotage opérationnel réseau FTTB
+  - KPIs / SLA / MTTR
+  - Tableaux de bord temps réel
+  - Coordination NOC / Terrain / Direction
+  - Automatisation des tests
+  - Reporting & analyses prédictives
 projectType: "professional"
 tags:
   - Gestion de projet
   - Télécommunications
-  - Leadership
-  - Agile
-  - Réseaux
+  - Excellence opérationnelle
+  - Management
+  - FTTB
 ---
 
 ## Mission
 
-Chef de Projet Maintenance Réseaux chez KEOS TELECOM depuis février 2021. Je pilote les projets d'optimisation et de maintenance des infrastructures télécoms (DSL, FTTB), coordonne des équipes techniques pluridisciplinaires et supervise la qualité de service pour les opérations réseau.
+Pilote de Production et Chef de Projet Maintenance FTTB chez KEOS TELECOM depuis avril 2021 (en full remote depuis Bordeaux). Je pilote l'infrastructure FTTB critique, anime un réseau de mainteneurs sous-traitants et garantis l'excellence opérationnelle au quotidien.
 
 ### Responsabilités principales
 
-- Pilotage bout-en-bout des projets de maintenance et d'optimisation d'infrastructures DSL/FTTB
-- Coordination d'équipes techniques de 5 à 15 ingénieurs et techniciens terrain
-- Suivi des indicateurs de performance réseau et mise en œuvre des plans d'amélioration
-- Gestion de la relation client et reporting régulier auprès des parties prenantes
-- Animation des rituels Agile (daily, sprint planning, rétrospectives)
+- Pilotage opérationnel des opérations de maintenance FTTB sur infrastructure critique
+- Coordination quotidienne de 17 mainteneurs sous-traitants (KPI, SLA, qualité)
+- Interface stratégique entre NOC, équipes terrain et Direction
+- Conception et pilotage de tableaux de bord temps réel (15 KPIs critiques)
+- Reporting direction avec analyses prédictives et recommandations stratégiques
 
 ## Réalisations clés
 
-### Performance opérationnelle
+### Excellence opérationnelle réseau
 
-- **+30 % d'efficacité opérationnelle** sur les projets d'infrastructure grâce à l'introduction de méthodologies Agile adaptées au secteur télécom
-- **95 % de satisfaction client** maintenu sur l'ensemble des projets, mesurée via des enquêtes post-livraison
-- Réduction des délais de résolution d'incidents de 40 % grâce à un processus d'escalade optimisé
+- **98,7 % de disponibilité** maintenue sur infrastructure critique
+- **-25 % de MTTR** via optimisation des processus d'escalade N1 / N2 / N3
+- Industrialisation des procédures d'intervention sur sites FTTB
 
-### Coordination technique
+### Réduction des incidents
 
-- Déploiement d'un tableau de bord de suivi des KPIs réseau en temps réel (disponibilité, MTTR, taux de pannes)
-- Mise en place de procédures de gestion des incidents critiques sur les équipements DSL/FTTB
-- Harmonisation des méthodes de travail entre les équipes terrain et les équipes support
+- **-40 % de pannes récurrentes** en 12 mois (synchronisation, latence)
+- Automatisation des tests réseau et formation des équipes terrain
+- Mise en place de routines de diagnostic préventif
 
-### Innovation & amélioration continue
+### Optimisation performance projet
 
-- Introduction d'outils collaboratifs (Jira, Confluence) dans une organisation peu digitalisée
-- Création de reportings automatisés réduisant le temps de préparation des comptes rendus de 60 %
-- Formation des équipes aux pratiques Agile, résultant en +25 % de livraisons dans les délais
+- **-30 % de retards de migration** via refonte de la logistique et planification prédictive
+- **Taux de succès de 97 %** sur les migrations complexes
+- Anticipation des risques opérationnels par croisement de données historiques
+
+### Data-driven management
+
+- Création et pilotage de tableaux de bord temps réel (15 KPIs critiques)
+- Reporting direction avec analyses prédictives et recommandations stratégiques
+- Industrialisation du suivi qualité côté sous-traitants
 
 ## Compétences mobilisées
 
 | Domaine | Compétences |
 |---------|-------------|
-| Gestion de projet | Planification, suivi budgétaire, gestion des risques, reporting |
-| Technique | Réseaux DSL/FTTB, monitoring, protocoles télécoms |
-| Management | Leadership d'équipes, coaching, gestion du changement |
-| Méthodes | Scrum, Kanban, amélioration continue, ITIL |
+| Gestion de projet | Planification, gestion des risques, pilotage SLA, reporting direction |
+| Technique | Réseaux FTTB, monitoring, automatisation des tests |
+| Management | Pilotage de sous-traitants, KPI, interface multi-niveaux |
+| Data | Tableaux de bord temps réel, analyses prédictives |

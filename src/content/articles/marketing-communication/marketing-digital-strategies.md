@@ -4,7 +4,7 @@ description: "SEO, SEM, social, email, referral — quand investir dans chaque c
 publishDate: "2026-03-23"
 type: article
 domain: marketing-communication
-image: "/images/themes/marketing.webp"
+image: "/images/themes/marketing.jpg"
 pillColor: yellow
 theme: carriere
 tags:
@@ -157,4 +157,4 @@ Le volume de trafic ne dit rien seul. J'ai vu des campagnes social ads générer
 
 Pour chaque canal, je regarde trois indicateurs dans l'ordre : taux d'engagement ou de clic, taux de conversion sur la page de destination, et enfin valeur générée. Beaucoup s'arrêtent au premier. Ce sont souvent les mêmes qui se plaignent que "le digital ne fonctionne pas pour eux".
 
-> **En pratique** — Organique et payant ne s'opposent pas : l'un construit un actif durable, l'autre achète de la visibilité immédiate. Le SEO technique débloque ce que le contenu prépare. Le retargeting intelligent segmente sans agresser. Et l'attribution last-click vous ment depuis le début — passez à un modèle qui reflète la réalité du parcours client, même imparfaitement.
+> **En résumé** — Organique et payant ne s'opposent pas : l'un construit un actif durable, l'autre achète de la visibilité immédiate. Le SEO technique débloque ce que le contenu prépare. Le retargeting intelligent segmente sans agresser. Et l'attribution last-click vous ment depuis le début — passez à un modèle qui reflète la réalité du parcours client, même imparfaitement.

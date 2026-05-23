@@ -4,7 +4,7 @@ description: "Les formations théoriques en leadership n'ont qu'un impact limit�
 publishDate: "2026-02-02"
 type: article
 domain: leadership-management
-image: "/images/themes/management.webp"
+image: "/images/themes/management.jpg"
 pillColor: purple
 relatedArticles:
   - domain: leadership-management
@@ -145,4 +145,4 @@ Ce qu'elles ne peuvent pas faire : remplacer la confrontation au réel. Un modul
 
 La formation idéale au leadership n'est pas un programme. C'est une posture : chercher délibérément les situations qui me font sortir de ma zone de confort, m'entourer de gens qui me disent la vérité, et prendre le temps de comprendre ce que chaque expérience m'a appris.
 
-> **En pratique** — Se former au leadership, c'est d'abord choisir les bonnes expériences : les missions difficiles, les mentors exigeants et la pratique systématique du retour sur soi. Les formations formelles ne valent que si elles s'inscrivent dans ce terreau. L'influence, la décision sous incertitude et la gestion des tensions sont les trois compétences qui distinguent vraiment les leaders efficaces — et aucune ne s'acquiert en salle.
+> **En résumé** — Se former au leadership, c'est d'abord choisir les bonnes expériences : les missions difficiles, les mentors exigeants et la pratique systématique du retour sur soi. Les formations formelles ne valent que si elles s'inscrivent dans ce terreau. L'influence, la décision sous incertitude et la gestion des tensions sont les trois compétences qui distinguent vraiment les leaders efficaces — et aucune ne s'acquiert en salle.

@@ -11,13 +11,13 @@ keywords: "développement logiciel, code propre, pratiques agiles, refactoring, 
 note: 4.9
 relatedContent:
   - title: "Frameworks JavaScript en 2024 : Analyse Comparative pour Bien Choisir"
-    url: "/blog/developpement-web/frameworks-javascript-comparaison-2024"
+    url: "/articles/frameworks-javascript-comparaison-2024"
     type: "article"
   - title: "Accessibilité Web en 2024 : Guide Pratique pour Développeurs"
-    url: "/blog/developpement-web/web-accessibilite-guide-pratique"
+    url: "/articles/web-accessibilite-guide-pratique"
     type: "article"
   - title: "Atomic Habits"
-    url: "/livres/atomic-habits"
+    url: "/books/atomic-habits"
     type: "book"
 ---
 
@@ -37,8 +37,8 @@ Ce livre transforme non seulement la qualité du code que vous écrivez, mais é
 
 Si vous avez apprécié "Clean Code", ces ressources pourraient vous intéresser :
 
-- [Frameworks JavaScript en 2024 : Analyse Comparative](/blog/developpement-web/frameworks-javascript-comparaison-2024) - Pour appliquer les principes de code propre aux frameworks modernes
-- [Accessibilité Web en 2024 : Guide Pratique](/blog/developpement-web/web-accessibilite-guide-pratique) - L'accessibilité est un aspect essentiel d'un code propre et bien structuré
-- [Atomic Habits](/livres/atomic-habits) - Pour construire de bonnes habitudes de développement
+- [Frameworks JavaScript en 2024 : Analyse Comparative](/articles/frameworks-javascript-comparaison-2024) - Pour appliquer les principes de code propre aux frameworks modernes
+- [Accessibilité Web en 2024 : Guide Pratique](/articles/web-accessibilite-guide-pratique) - L'accessibilité est un aspect essentiel d'un code propre et bien structuré
+- [Atomic Habits](/books/atomic-habits) - Pour construire de bonnes habitudes de développement
 
 **Note des lecteurs : 4.9/5** - Un incontournable pour tout développeur professionnel

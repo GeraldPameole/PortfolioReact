@@ -3,30 +3,31 @@ title: "Chargé de Qualité, Formation & Méthodes"
 publishDate: "2012-01-01"
 description: "Conception et animation de formations sur les outils et méthodes pour les équipes commerciales SFR. Accompagnement à la montée en compétences et amélioration de la performance opérationnelle."
 author: "Gérald Paméole"
-img: "/assets/svg/former.svg"
-img_alt: "Formation professionnelle"
+img: "/assets/svg/quality-manager.svg"
+img_alt: "Cycle d'amélioration continue qualité"
 company: "SFR"
-period: "2012 — 2015"
+period: "2012 — Juin 2015"
 location: "Paris, France"
+domain: "qualite-process"
 technologies:
   - Ingénierie pédagogique
   - E-learning / Blended learning
-  - Outils CRM (Salesforce)
   - Plateformes LMS
   - Animation de groupes
   - Évaluation des acquis
+  - Amélioration continue
 projectType: "professional"
 tags:
   - Formation
   - Pédagogie
   - Qualité
-  - Management
+  - Méthodes
   - Télécommunications
 ---
 
 ## Mission
 
-Chargé de Qualité, Formation et Méthodes chez SFR de 2015 à 2018. J'ai conçu et animé les programmes de formation destinés aux équipes commerciales et aux forces de vente, tout en contribuant à l'amélioration continue des processus internes.
+Chargé de Qualité, Formation et Méthodes chez SFR de 2012 à juin 2015. J'ai conçu et animé les programmes de formation destinés aux équipes commerciales et aux forces de vente, tout en contribuant à l'amélioration continue des processus internes.
 
 ### Responsabilités principales
 

@@ -61,22 +61,10 @@ const DOMAIN_COLOR: Record<string, string> = {
 const accent   = DOMAIN_COLOR[domain] ?? 'var(--violet-light)';
 const domLabel = domain.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
 
-// Article image for og:image — fallback to domain theme image then profile
-const DOMAIN_OG: Record<string, string> = {
-  'developpement-web':        '/images/themes/dev-web.webp',
-  'formation':                '/images/themes/formation-carriere.webp',
-  'innovation-technologies':  '/images/themes/ia.webp',
-  'transformation-digitale':  '/images/themes/ia.webp',
-  'leadership-management':    '/images/themes/management.webp',
-  'gestion-projet':           '/images/themes/management.webp',
-  'gestion-talents':          '/images/themes/management.webp',
-  'developpement-commercial': '/images/themes/marketing.webp',
-  'marketing-communication':  '/images/themes/marketing.webp',
-  'productivite-methodes':    '/images/themes/productivite.webp',
-};
+// Article image for og:image
 const ogImage = (article.data as any).image
-  ?? DOMAIN_OG[domain]
-  ?? '/assets/webp/profile.webp';
+  ?? `/assets/articles/${article.slug.split('/').pop()}.jpg`
+  ?? '/placeholder-article.webp';
 
 // JSON-LD Article schema
 const canonicalUrl = `https://geraldpameole.fr/blog/${article.slug}`;

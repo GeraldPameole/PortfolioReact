@@ -4,7 +4,7 @@ description: "Les vraies raisons de départ ne sont pas toujours le salaire. Lev
 publishDate: "2025-10-13"
 type: article
 domain: gestion-talents
-image: "/images/themes/management.webp"
+image: "/images/themes/management.jpg"
 pillColor: teal
 theme: gestion
 ---
@@ -105,4 +105,4 @@ Ce que j'ai appris à force de pratique : être présent sans être envahissant,
 
 Entre 2015 et 2018, j'ai réduit le turnover de mon équipe de 35%. Pas grâce à des augmentations massives — le budget ne le permettait pas. Grâce à de la présence, de la clarté sur les attentes, et des conversations régulières sur le développement de chacun.
 
-> **Ce que j'applique** — Les gens partent parce qu'ils ne voient pas d'avenir, parce qu'ils ne se sentent pas reconnus, ou parce que la relation avec leur manager est dégradée. Les leviers les plus efficaces sont non-monétaires : délégation, visibilité, entretiens de maintien réguliers, et une attention sincère au développement individuel.
+> **En résumé** — Les gens partent parce qu'ils ne voient pas d'avenir, parce qu'ils ne se sentent pas reconnus, ou parce que la relation avec leur manager est dégradée. Les leviers les plus efficaces sont non-monétaires : délégation, visibilité, entretiens de maintien réguliers, et une attention sincère au développement individuel.

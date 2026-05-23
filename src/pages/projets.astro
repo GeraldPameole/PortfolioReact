@@ -7,27 +7,43 @@ const sorted = works.sort((a, b) =>
   new Date(b.data.publishDate).getTime() - new Date(a.data.publishDate).getTime()
 );
 
-// Category → color
+// Category → color (aligné sur src/config/domains.ts)
 const CAT_COLOR: Record<string, { label: string; color: string; icon: string }> = {
-  management:              { label: 'Management',        color: '#60a5fa', icon: '🗂️' },
+  management:              { label: 'Gestion de projet', color: '#60a5fa', icon: '🗂️' },
   'developpement-web':     { label: 'Développement Web', color: '#34d399', icon: '💻' },
-  business:                { label: 'Business',          color: '#fb923c', icon: '💼' },
-  'qualite-process':       { label: 'Qualité & Process', color: '#c4b5fd', icon: '✅' },
+  business:                { label: 'Développement commercial', color: '#fb923c', icon: '🤝' },
+  'qualite-process':       { label: 'Qualité & Process', color: '#a78bfa', icon: '✅' },
   'developpement-personnel':{ label: 'Formation',        color: '#fbbf24', icon: '🎓' },
 };
 
+// Mapping explicite frontmatter.domain → catégorie
+const DOMAIN_TO_CAT: Record<string, string> = {
+  'gestion-projet':           'management',
+  'developpement-web':        'developpement-web',
+  'developpement-commercial': 'business',
+  'qualite-process':          'qualite-process',
+  'formation':                'developpement-personnel',
+};
+
 function getCategory(project: any) {
-  const tags = project.data.tags ?? [];
-  const desc = (project.data.description ?? '').toLowerCase();
-  if (tags.some((t: string) => /web|react|dev|front|back|node/i.test(t)) || desc.includes('développement web')) return 'developpement-web';
-  if (tags.some((t: string) => /qualit|process|lean|iso/i.test(t)) || desc.includes('qualité')) return 'qualite-process';
-  if (tags.some((t: string) => /form|coach|train/i.test(t)) || desc.includes('formation')) return 'developpement-personnel';
-  if (tags.some((t: string) => /business|vente|commercial/i.test(t))) return 'business';
+  // 1. Le frontmatter `domain` prime — explicite > heuristique
+  const declaredDomain = project.data.domain;
+  if (declaredDomain && DOMAIN_TO_CAT[declaredDomain]) return DOMAIN_TO_CAT[declaredDomain];
+
+  // 2. Heuristique sur les tags uniquement (la description peut mentionner
+  //    "formation" comme levier d'un autre métier — cf. superviseur commercial)
+  const tags: string[] = (project.data.tags ?? []).map((t: string) => t.toLowerCase());
+  const tagStr = tags.join(' ');
+
+  if (/(commercial|business|vente|sales|fidélis)/.test(tagStr)) return 'business';
+  if (/(web|react|next|typescript|node|front|back|seo|rgpd)/.test(tagStr)) return 'developpement-web';
+  if (/(qualit|process|lean|iso|méthodes)/.test(tagStr)) return 'qualite-process';
+  if (/(form|coach|train|pédagog|offshore)/.test(tagStr)) return 'developpement-personnel';
   return 'management';
 }
 ---
 
-<BaseLayout title="Projets & Expériences" description="15 ans d'expérience en gestion de projet, développement web, management et formation.">
+<BaseLayout title="Projets & Expériences" description="20 ans d'expérience en gestion de projet, développement web, management et formation.">
 
   <!-- Hero -->
   <div class="page-hero">
@@ -40,7 +56,7 @@ function getCategory(project: any) {
           Projets &amp; <span class="gradient-text">réalisations</span>
         </h1>
         <p class="reveal reveal-delay-2" style="color:var(--text-3);font-size:1.05rem;max-width:540px;margin:1.25rem auto 0;line-height:1.8">
-          15 ans de terrain — gestion de projet télécom, développement web, management d'équipes et formation professionnelle.
+          20 ans de terrain — gestion de projet télécom, développement web, management d'équipes et formation professionnelle.
         </p>
       </div>
     </div>

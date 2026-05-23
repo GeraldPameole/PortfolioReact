@@ -4,7 +4,7 @@ description: "Comment identifier les vrais risques projet, tenir un registre op�
 publishDate: "2025-09-08"
 type: article
 domain: gestion-projet
-image: "/images/themes/management.webp"
+image: "/images/themes/management.jpg"
 pillColor: blue
 relatedArticles:
   - domain: gestion-projet
@@ -176,4 +176,4 @@ La revue des risques n'a pas besoin d'être une réunion formelle. Dans mes proj
 
 Trente minutes, pas plus. Si une discussion s'enlise, on prend une décision immédiate ou on planifie un point séparé. La revue des risques n'est pas un lieu de résolution de problèmes — c'est un outil de pilotage.
 
-> **Ce que ça change en pratique** — La gestion des risques projet devient utile quand le registre est simple (cinq colonnes suffisent), quand les risques sont spécifiques plutôt que génériques, quand chaque risque critique a un responsable nommé et une stratégie définie, et quand la revue mensuelle dure trente minutes avec un format fixe. Un tableau de risques qu'on ne regarde pas est pire qu'aucun tableau — il donne une fausse impression de contrôle.
+> **En résumé** — La gestion des risques projet devient utile quand le registre est simple (cinq colonnes suffisent), quand les risques sont spécifiques plutôt que génériques, quand chaque risque critique a un responsable nommé et une stratégie définie, et quand la revue mensuelle dure trente minutes avec un format fixe. Un tableau de risques qu'on ne regarde pas est pire qu'aucun tableau — il donne une fausse impression de contrôle.

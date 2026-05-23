@@ -4,7 +4,7 @@ description: "Gestion du temps qui fonctionne vraiment — time blocking, proté
 publishDate: "2026-06-29"
 type: article
 domain: productivite-methodes
-image: "/images/themes/productivite.webp"
+image: "/images/themes/productivite.jpg"
 pillColor: indigo
 relatedArticles:
   - domain: productivite-methodes
@@ -121,4 +121,4 @@ Cette organisation peut sembler rigide de l'extérieur, mais elle est en réalit
 
 La gestion du temps, au fond, c'est une façon de définir ses priorités de façon visible et défendable. Quand le matin est protégé, les réunions sont groupées, et les imprévus ont un espace dédié, la semaine produit plus avec moins de stress résiduel.
 
-> **Ce que j'applique** — Le temps ne se gère pas : c'est l'attention et l'énergie qui se gèrent. Protéger les premières heures de la journée pour le travail en profondeur, structurer la semaine en blocs typés, et prévoir des créneaux tampon pour l'imprévu — voilà ce qui fait la différence entre une semaine subie et une semaine choisie. Refuser n'est pas un manque d'engagement : c'est une décision de priorisation.
+> **En résumé** — Le temps ne se gère pas : c'est l'attention et l'énergie qui se gèrent. Protéger les premières heures de la journée pour le travail en profondeur, structurer la semaine en blocs typés, et prévoir des créneaux tampon pour l'imprévu — voilà ce qui fait la différence entre une semaine subie et une semaine choisie. Refuser n'est pas un manque d'engagement : c'est une décision de priorisation.

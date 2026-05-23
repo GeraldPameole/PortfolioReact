@@ -1,78 +1,85 @@
 ---
-title: "Développeur Web Front-End"
-publishDate: "2019-01-01"
-description: "Conception et développement d'interfaces web modernes pour des clients PME et grands comptes, avec focus sur la performance et l'accessibilité."
+title: "Développeur Front-End"
+publishDate: "2020-06-01"
+description: "Refonte de sites WordPress sur architecture React, optimisation SEO technique, conformité RGPD et leadership technique chez ACTIV'PARTNERS."
 author: "Gérald Paméole"
 img: "/assets/svg/web-developer.svg"
 img_alt: "Développeur web front-end"
-company: "ACTIV PARTNERS"
-period: "2019 — 2021"
+company: "ACTIV'PARTNERS"
+period: "Juin 2020 — Février 2021"
 location: "Paris, France"
+domain: "developpement-web"
 technologies:
-  - JavaScript / TypeScript
   - React
-  - WordPress / WooCommerce
-  - HTML5 / CSS3 / Sass
-  - Tailwind CSS
-  - PHP (thèmes & plugins WordPress)
-  - ACF / Elementor / Divi
+  - Next.js
+  - TypeScript
+  - JavaScript ES6
+  - HTML5 / CSS3
+  - WordPress (Elementor / Gutenberg)
   - Node.js
-  - Git / GitFlow
-  - Optimisation SEO
+  - Git / GitHub
+  - SQL
+  - Tailwind CSS
+  - API REST
+  - Responsive Design
 projectType: "professional"
 tags:
   - Développement Web
   - Front-end
   - React
-  - TypeScript
-  - UX/UI
+  - WordPress
+  - SEO
+  - RGPD
 ---
 
 ## Mission
 
-Développeur Web Front-End chez ACTIV PARTNERS de 2019 à 2021. J'ai conçu et développé des applications web pour une clientèle variée (PME, startups, grands comptes), en assurant la qualité du code, la performance et l'expérience utilisateur.
+Développeur Front-End chez ACTIV'PARTNERS de juin 2020 à février 2021. J'ai piloté la refonte de sites WordPress avec une architecture React moderne, optimisé la performance SEO, assuré la conformité RGPD et accompagné l'équipe dev sur les bonnes pratiques.
 
 ### Responsabilités principales
 
-- Développement front-end d'applications web responsives et accessibles
-- Collaboration avec les équipes design (maquettes → intégration pixel-perfect)
-- Optimisation des performances web (Core Web Vitals, temps de chargement)
-- Mise en place et suivi des bonnes pratiques SEO technique
-- Revue de code et mentoring des développeurs juniors
+- Refonte complète de sites WordPress avec thèmes custom et architecture React
+- Optimisation SEO technique (Core Web Vitals, balisage sémantique)
+- Mise en conformité RGPD (cookies, mentions, politique confidentialité)
+- Sécurisation et durcissement de l'infrastructure WordPress
+- Mentorat de l'équipe dev et code review systématique
 
 ## Réalisations clés
 
-### Développement & qualité
+### Delivery projets web
 
-- Livraison de **15+ interfaces web** responsives et accessibles (WCAG 2.1)
-- Réduction de **40 % du temps de chargement** par optimisation du code, des assets et mise en cache
-- Augmentation du **trafic organique de 35 %** grâce aux optimisations SEO on-page et technique
+- **Refonte complète de 8 sites WordPress** dans les délais et budgets
+- Thèmes custom, architecture React, intégrations API
+- Workflow de livraison structuré (staging, recettes, mises en production)
 
-### WordPress & écosystème CMS
+### Performance SEO
 
-- Développement de **thèmes WordPress sur-mesure** (PHP, hooks, template hierarchy) pour des clients PME
-- Intégration de **WooCommerce** avec personnalisation des flux de commande et des pages produits
-- Utilisation des constructeurs de pages (**Elementor, Divi**) et d'**Advanced Custom Fields (ACF)** pour des interfaces client flexibles
-- Optimisation des performances WordPress (caching, lazy loading, minification) et migrations d'hébergement
+- **+40 % de visibilité organique moyenne** via optimisation technique
+- Travail Core Web Vitals (LCP, FID, CLS), balisage sémantique
+- Pilotage des optimisations on-page avec Yoast / Rank Math
 
-### Architecture & bonnes pratiques
+### Conformité & sécurité
 
-- Introduction de **TypeScript** et des **React Hooks** dans l'entreprise, réduisant les bugs de 30 %
-- Mise en place d'un **design system** partagé pour harmoniser l'expérience utilisateur entre projets
-- Déploiement d'un workflow **GitFlow** structurant les cycles de livraison
+- Mise en conformité **RGPD complète** (cookies, mentions, politique de confidentialité)
+- **Sécurisation** de l'infrastructure WordPress (hardening, mises à jour, monitoring)
+- Audit régulier des vulnérabilités sur thèmes et plugins
 
-### Collaboration & transmission
+### Leadership technique
 
-- Formation de 3 développeurs juniors aux bonnes pratiques JavaScript/React
-- Documentation technique systématique favorisant la maintenabilité des projets
-- Animation de sessions de code review hebdomadaires
+- Mentorat quotidien de l'équipe dev
+- **Code review systématique** sur chaque pull request
+- Formation aux bonnes pratiques (hooks React, custom fields ACF, performance)
+
+## Stack technique
+
+React • Next.js • TypeScript • JavaScript ES6 • HTML5/CSS3 • WordPress (Elementor / Gutenberg) • Node.js • Git/GitHub • SQL • Tailwind CSS • API REST • Responsive Design
 
 ## Compétences mobilisées
 
 | Domaine | Compétences |
 |---------|-------------|
-| Front-end | React, TypeScript, JavaScript ES6+, HTML5/CSS3/Sass |
-| WordPress | Thèmes custom (PHP), WooCommerce, ACF, Elementor, Divi |
-| Outils | Git, Webpack, Vite, Figma, Chrome DevTools |
-| Qualité | Performance web, accessibilité WCAG, tests unitaires (Jest) |
-| Méthodes | Scrum, code review, documentation technique |
+| Front-end | React, Next.js, TypeScript, Tailwind CSS |
+| WordPress | Thèmes custom, Elementor, Gutenberg, ACF, sécurisation |
+| Performance | Core Web Vitals, SEO technique, Yoast / Rank Math |
+| Conformité | RGPD, mentions légales, gestion cookies |
+| Leadership | Code review, mentorat, formation bonnes pratiques |

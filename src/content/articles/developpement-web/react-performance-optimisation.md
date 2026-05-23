@@ -4,7 +4,7 @@ description: "Memo, lazy loading, bundle analysis — les optimisations React qu
 publishDate: "2025-02-10"
 type: article
 domain: developpement-web
-image: "/images/themes/dev-web.webp"
+image: "/images/themes/dev-web.jpg"
 pillColor: green
 relatedArticles:
   - domain: developpement-web

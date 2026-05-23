@@ -4,7 +4,7 @@ description: "React domine, Vue et Angular restent pertinents. Analyse objective
 publishDate: "2025-01-20"
 type: article
 domain: developpement-web
-image: "/images/themes/dev-web.webp"
+image: "/images/themes/dev-web.jpg"
 pillColor: green
 theme: technologie
 ---
@@ -141,4 +141,4 @@ Pour les projets React full, TypeScript est non-négociable dès que l'équipe d
 
 Le vrai critère que j'applique en 2025 : quel est le coût de maintenance dans 18 mois ? Un framework avec peu de conventions impose plus de discipline à l'équipe. Si cette discipline n'est pas naturelle dans l'équipe, il vaut mieux un framework opinionné même si la courbe est plus raide au départ.
 
-> **Pour conclure sans platitude** — React domine mais n'est pas universel : Vue est plus accessible pour les équipes réduites, Angular s'impose dans les grandes structures. Le vrai arbitrage n'est pas "quel est le meilleur framework" mais "quel est celui qui correspond à notre équipe, notre contexte et notre durée de projet". Choisir par habitude ou par popularité, c'est la source numéro un de complexité inutile.
+> **En résumé** — React domine mais n'est pas universel : Vue est plus accessible pour les équipes réduites, Angular s'impose dans les grandes structures. Le vrai arbitrage n'est pas "quel est le meilleur framework" mais "quel est celui qui correspond à notre équipe, notre contexte et notre durée de projet". Choisir par habitude ou par popularité, c'est la source numéro un de complexité inutile.

@@ -4,7 +4,7 @@ description: "Les cinq défaillances de processus les plus courantes dans les PM
 publishDate: "2026-08-24"
 type: article
 domain: qualite-process
-image: "/images/themes/management.webp"
+image: "/images/themes/management.jpg"
 pillColor: purple
 relatedArticles:
   - domain: qualite-process
@@ -118,4 +118,4 @@ Une fois le goulot identifié, on applique la même logique : quelle est la caus
 
 Les améliorations de processus qui échouent ont presque toujours en commun de ne pas avoir répondu à cette question préalable. On optimise des étapes secondaires, on achète un outil, on forme les gens sur des procédures qui ne résolvent pas le vrai problème. Cartographier d'abord, mesurer ensuite, améliorer en dernier : cet ordre n'est pas intuitif, mais il fait gagner du temps.
 
-> **Ce que j'applique** — Avant d'améliorer un processus, il faut le cartographier tel qu'il fonctionne réellement — pas tel qu'il est censé fonctionner. Les cinq défaillances les plus fréquentes dans les PME sont : la validation en entonnoir, l'absence de documentation, les contrôles redondants, les critères de sortie flous, et les outils parallèles qui court-circuitent le flux officiel. On priorise l'amélioration sur le point qui génère le plus de délai ou d'erreurs, on identifie la cause réelle, et on traite la cause — pas le symptôme.
+> **En résumé** — Avant d'améliorer un processus, il faut le cartographier tel qu'il fonctionne réellement — pas tel qu'il est censé fonctionner. Les cinq défaillances les plus fréquentes dans les PME sont : la validation en entonnoir, l'absence de documentation, les contrôles redondants, les critères de sortie flous, et les outils parallèles qui court-circuitent le flux officiel. On priorise l'amélioration sur le point qui génère le plus de délai ou d'erreurs, on identifie la cause réelle, et on traite la cause — pas le symptôme.

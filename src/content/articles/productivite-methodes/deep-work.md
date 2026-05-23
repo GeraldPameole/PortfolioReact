@@ -4,7 +4,7 @@ description: "Comment appliquer concrètement les principes de Cal Newport en op
 publishDate: "2026-05-18"
 type: article
 domain: productivite-methodes
-image: "/images/themes/productivite.webp"
+image: "/images/themes/productivite.jpg"
 pillColor: indigo
 theme: carriere
 ---

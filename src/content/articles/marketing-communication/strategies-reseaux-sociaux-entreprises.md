@@ -4,7 +4,7 @@ description: "LinkedIn, Instagram, TikTok, YouTube — quelle plateforme pour qu
 publishDate: "2026-04-13"
 type: article
 domain: marketing-communication
-image: "/images/themes/marketing.webp"
+image: "/images/themes/marketing.jpg"
 pillColor: yellow
 theme: carriere
 tags:
@@ -186,4 +186,4 @@ Ce qui fonctionne durablement : publier avec une régularité prévisible (mieux
 
 La question à se poser avant chaque publication : est-ce que quelqu'un qui ne me connaît pas trouverait ça utile, intéressant ou divertissant ? Si la réponse est non, c'est de la communication interne déguisée en social media.
 
-> **Pour conclure sans platitude** — Choisissez la plateforme selon votre objectif et votre audience, pas selon la tendance du moment. LinkedIn pour le B2B et le recrutement, YouTube pour l'expertise de fond, Instagram pour le B2C visuel, TikTok seulement si vous pouvez y être natif. Les algorithmes récompensent l'engagement précoce et de qualité — commentaires, sauvegardes, temps passé. Et construisez une communauté, pas juste un nombre d'abonnés.
+> **En résumé** — Choisissez la plateforme selon votre objectif et votre audience, pas selon la tendance du moment. LinkedIn pour le B2B et le recrutement, YouTube pour l'expertise de fond, Instagram pour le B2C visuel, TikTok seulement si vous pouvez y être natif. Les algorithmes récompensent l'engagement précoce et de qualité — commentaires, sauvegardes, temps passé. Et construisez une communauté, pas juste un nombre d'abonnés.

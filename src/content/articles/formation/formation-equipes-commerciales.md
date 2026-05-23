@@ -4,7 +4,7 @@ description: "Jeux de rôles structurés, double appel, feedback immédiat aprè
 publishDate: "2025-05-12"
 type: article
 domain: formation
-image: "/images/themes/formation-carriere.webp"
+image: "/images/themes/formation-carriere.jpg"
 tags:
   - formation
   - competences
@@ -141,4 +141,4 @@ La formation commerciale qui produit des résultats durables n'est pas un évén
 
 En pratique, cela signifie : des jeux de rôles courts et fréquents plutôt que de longues sessions rares, des debriefs en temps réel plutôt que des évaluations trimestrielles, et une remontée systématique des objections terrain vers la formation. La formation devient alors un processus vivant, alimenté par la réalité, pas une case à cocher dans le plan annuel.
 
-> **Le fond de l'affaire** — Former une équipe commerciale efficacement suppose de mettre la pratique avant la théorie : jeux de rôles structurés avec grille d'observation, double appel avec debrief en moins de dix minutes, et remontée hebdomadaire des objections terrain. La boucle courte entre action et feedback est le moteur de la progression. Sans elle, la formation reste de la connaissance morte.
+> **En résumé** — Former une équipe commerciale efficacement suppose de mettre la pratique avant la théorie : jeux de rôles structurés avec grille d'observation, double appel avec debrief en moins de dix minutes, et remontée hebdomadaire des objections terrain. La boucle courte entre action et feedback est le moteur de la progression. Sans elle, la formation reste de la connaissance morte.

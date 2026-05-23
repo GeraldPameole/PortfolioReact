@@ -4,7 +4,7 @@ description: "Comment construire un plan de formation qui produit des résultats
 publishDate: "2025-10-20"
 type: article
 domain: gestion-talents
-image: "/images/themes/management.webp"
+image: "/images/themes/management.jpg"
 pillColor: teal
 theme: gestion
 ---
@@ -126,4 +126,4 @@ Les formats les plus efficaces que j'ai observés sont dans cet ordre : les miss
 
 La dernière règle : toute formation doit avoir une date d'application concrète. Pas "je vais utiliser ça à l'occasion" — mais "dans deux semaines, je présente ce projet en utilisant cette méthode". Sans cette échéance, les acquis disparaissent en quelques semaines.
 
-> **Pour conclure sans platitude** — Former ses talents efficacement suppose un diagnostic par la matrice compétence × importance, une distinction claire entre formation corrective et formation de progression, une lecture patiente du ROI sur douze à dix-huit mois, et des plans de développement co-construits avec une date d'application concrète. Le catalogue de formation est un outil de dernier recours, pas un point de départ.
+> **En résumé** — Former ses talents efficacement suppose un diagnostic par la matrice compétence × importance, une distinction claire entre formation corrective et formation de progression, une lecture patiente du ROI sur douze à dix-huit mois, et des plans de développement co-construits avec une date d'application concrète. Le catalogue de formation est un outil de dernier recours, pas un point de départ.

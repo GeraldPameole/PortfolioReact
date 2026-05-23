@@ -4,7 +4,7 @@ description: "Comment utiliser le Pomodoro correctement en contexte professionne
 publishDate: "2026-07-13"
 type: article
 domain: productivite-methodes
-image: "/images/themes/productivite.webp"
+image: "/images/themes/productivite.jpg"
 pillColor: indigo
 relatedArticles:
   - domain: productivite-methodes
@@ -112,4 +112,4 @@ C'est cette prise de conscience — pas les 25 minutes — qui est le vrai bén�
 
 Après deux ans de pratique régulière, j'utilise le Pomodoro de façon moins stricte : je ne compte plus les cycles, je ne sonne plus le timer. Mais je conserve l'essentiel : définir une intention précise avant de commencer, faire une pause réelle entre deux blocs de travail, et noter ce que j'ai produit à la fin de chaque session. Ce sont ces trois habitudes, pas le chronomètre, qui font la différence.
 
-> **L'essentiel** — Le Pomodoro est un dispositif d'engagement, pas un minuteur. Son efficacité repose sur l'intention précise définie avant chaque cycle, non sur les 25 minutes en elles-mêmes. La durée est ajustable selon la nature de la tâche. En milieu professionnel chargé en réunions, il faut bloquer ses plages dans l'agenda et communiquer dessus explicitement — sinon la technique reste théorique.
+> **En résumé** — Le Pomodoro est un dispositif d'engagement, pas un minuteur. Son efficacité repose sur l'intention précise définie avant chaque cycle, non sur les 25 minutes en elles-mêmes. La durée est ajustable selon la nature de la tâche. En milieu professionnel chargé en réunions, il faut bloquer ses plages dans l'agenda et communiquer dessus explicitement — sinon la technique reste théorique.

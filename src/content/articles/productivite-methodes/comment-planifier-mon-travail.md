@@ -4,7 +4,7 @@ description: "Comment passer d'une liste chaotique à un plan d'action hebdomada
 publishDate: "2026-05-11"
 type: article
 domain: productivite-methodes
-image: "/images/themes/productivite.webp"
+image: "/images/themes/productivite.jpg"
 pillColor: indigo
 theme: carriere
 ---
@@ -207,4 +207,4 @@ Si une action ne rentre pas dans la semaine, c'est que j'ai trop d'objectifs ou 
 
 Ce système ne demande pas de logiciel sophistiqué. Un agenda classique et dix minutes le lundi matin suffisent. Ce qui compte, c'est la discipline de l'exécution, pas la complexité de l'outil.
 
-> **Ce que j'en retiens** — Planifier son travail concrètement, c'est distinguer la liste de tâches (capture) du plan d'action (décision). La weekly review en 20 minutes chaque vendredi, une grille hebdomadaire avec 30 % de buffer pour l'imprévu, et la déclinaison des objectifs en blocs agendés : ces trois habitudes transforment l'intention en résultats mesurables, sans surcharge ni illusion de contrôle.
+> **En résumé** — Planifier son travail concrètement, c'est distinguer la liste de tâches (capture) du plan d'action (décision). La weekly review en 20 minutes chaque vendredi, une grille hebdomadaire avec 30 % de buffer pour l'imprévu, et la déclinaison des objectifs en blocs agendés : ces trois habitudes transforment l'intention en résultats mesurables, sans surcharge ni illusion de contrôle.

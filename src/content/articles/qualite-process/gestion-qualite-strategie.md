@@ -4,7 +4,7 @@ description: "Construire une stratégie qualité — aligner exigence opération
 publishDate: "2026-08-31"
 type: article
 domain: qualite-process
-image: "/images/themes/management.webp"
+image: "/images/themes/management.jpg"
 pillColor: purple
 relatedArticles:
   - domain: qualite-process
@@ -116,4 +116,4 @@ Deuxièmement, des objectifs qualité traduits en bénéfices concrets pour les 
 
 Troisièmement, une démarche progressive et pragmatique. On ne change pas tout en même temps. On identifie un ou deux processus à fort impact, on les améliore, on consolide, et on passe au suivant. Cette logique de petits pas crée une dynamique positive — les équipes voient des résultats, elles font confiance à la démarche, elles s'y impliquent davantage.
 
-> **Ce que j'applique** — Aligner qualité et business, c'est d'abord choisir la bonne méthode pour le bon problème, éviter le piège de la certification décorative, et construire une démarche portée par le management avec des objectifs qui parlent aux équipes terrain. La qualité qui dure n'est pas une contrainte qu'on subit — c'est un levier qu'on choisit.
+> **En résumé** — Aligner qualité et business, c'est d'abord choisir la bonne méthode pour le bon problème, éviter le piège de la certification décorative, et construire une démarche portée par le management avec des objectifs qui parlent aux équipes terrain. La qualité qui dure n'est pas une contrainte qu'on subit — c'est un levier qu'on choisit.

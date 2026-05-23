@@ -4,7 +4,7 @@ description: "Retour d'expérience sur l'application des principes Agile à la g
 publishDate: "2025-08-18"
 type: article
 domain: gestion-projet
-image: "/images/themes/management.webp"
+image: "/images/themes/management.jpg"
 pillColor: blue
 theme: gestion
 ---

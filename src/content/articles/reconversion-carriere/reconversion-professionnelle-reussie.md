@@ -4,7 +4,7 @@ description: "Ce qui sépare une reconversion réussie d'un échec coûteux : di
 publishDate: "2026-09-21"
 type: article
 domain: reconversion-carriere
-image: "/images/themes/formation-carriere.webp"
+image: "/images/themes/formation-carriere.jpg"
 pillColor: rose
 theme: carriere
 ---
@@ -96,4 +96,4 @@ Sous-estimer le temps de montée en crédibilité. Même avec des compétences t
 
 Négliger le réseau dans le nouveau domaine. Les gens qui réussissent leur reconversion le plus vite ne sont pas ceux qui ont la meilleure formation. Ce sont ceux qui ont accès aux bonnes personnes au bon moment — un contact qui parle d'eux, un ancien qui les recommande, quelqu'un qui leur donne une première chance.
 
-> **L'essentiel** — Une reconversion réussie suit trois phases distinctes : un diagnostic honnête sur les vraies raisons de partir, une exploration terrain qui confronte les représentations à la réalité, et une transition construite progressivement quand c'est possible. Ce qui fait échouer n'est pas le manque de courage mais le manque de méthode — agir sans plan, idéaliser la cible, et sous-estimer le temps qu'il faut pour reconstruire sa crédibilité dans un nouveau secteur.
+> **En résumé** — Une reconversion réussie suit trois phases distinctes : un diagnostic honnête sur les vraies raisons de partir, une exploration terrain qui confronte les représentations à la réalité, et une transition construite progressivement quand c'est possible. Ce qui fait échouer n'est pas le manque de courage mais le manque de méthode — agir sans plan, idéaliser la cible, et sous-estimer le temps qu'il faut pour reconstruire sa crédibilité dans un nouveau secteur.

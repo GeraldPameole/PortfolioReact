@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500" fill="none">
+  <defs>
+    <linearGradient id="bgQ" x1="0" y1="0" x2="800" y2="500" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#050816"/>
+      <stop offset="100%" stop-color="#16102a"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="500" fill="url(#bgQ)"/>
+
+  <!-- Grid -->
+  <g stroke="#ffffff06" stroke-width="1">
+    <line x1="0" y1="125" x2="800" y2="125"/>
+    <line x1="0" y1="250" x2="800" y2="250"/>
+    <line x1="0" y1="375" x2="800" y2="375"/>
+    <line x1="200" y1="0" x2="200" y2="500"/>
+    <line x1="400" y1="0" x2="400" y2="500"/>
+    <line x1="600" y1="0" x2="600" y2="500"/>
+  </g>
+
+  <!-- Process board -->
+  <rect x="60" y="88" width="460" height="324" rx="10" fill="#0d0d17" stroke="#a78bfa25" stroke-width="1"/>
+
+  <!-- Board header -->
+  <rect x="60" y="88" width="460" height="40" rx="10" fill="#a78bfa15"/>
+  <rect x="60" y="116" width="460" height="12" fill="#a78bfa15"/>
+  <text x="280" y="114" font-family="sans-serif" font-size="13" fill="#a78bfa" text-anchor="middle" font-weight="700" letter-spacing="1">CYCLE D'AMÉLIORATION CONTINUE</text>
+
+  <!-- PDCA stages -->
+  <!-- Plan -->
+  <rect x="80" y="148" width="200" height="64" rx="8" fill="#a78bfa10" stroke="#a78bfa30" stroke-width="1"/>
+  <text x="90" y="168" font-family="monospace" font-size="9" fill="#a78bfa" font-weight="700">PLAN · Planifier</text>
+  <text x="90" y="184" font-family="sans-serif" font-size="11" fill="#e2e8f0">Cartographie processus</text>
+  <text x="90" y="200" font-family="sans-serif" font-size="10" fill="#94a3b8">Audit · Diagnostic · KPIs</text>
+  <rect x="80" y="207" width="140" height="4" rx="2" fill="#a78bfa20"/>
+  <rect x="80" y="207" width="140" height="4" rx="2" fill="#a78bfa"/>
+
+  <!-- Do -->
+  <rect x="300" y="148" width="200" height="64" rx="8" fill="#a78bfa10" stroke="#a78bfa30" stroke-width="1"/>
+  <text x="310" y="168" font-family="monospace" font-size="9" fill="#a78bfa" font-weight="700">DO · Déployer</text>
+  <text x="310" y="184" font-family="sans-serif" font-size="11" fill="#e2e8f0">Procédures &amp; guides</text>
+  <text x="310" y="200" font-family="sans-serif" font-size="10" fill="#94a3b8">Scripts · Fiches réflexes</text>
+  <rect x="300" y="207" width="170" height="4" rx="2" fill="#a78bfa20"/>
+  <rect x="300" y="207" width="170" height="4" rx="2" fill="#a78bfa" opacity="0.85"/>
+
+  <!-- Check -->
+  <rect x="80" y="228" width="200" height="64" rx="8" fill="#a78bfa08" stroke="#a78bfa25" stroke-width="1"/>
+  <text x="90" y="248" font-family="monospace" font-size="9" fill="#a78bfa" font-weight="700">CHECK · Mesurer</text>
+  <text x="90" y="264" font-family="sans-serif" font-size="11" fill="#e2e8f0">Suivi NPS &amp; conformité</text>
+  <text x="90" y="280" font-family="sans-serif" font-size="10" fill="#94a3b8">Tableaux de bord qualité</text>
+  <rect x="80" y="287" width="120" height="4" rx="2" fill="#a78bfa20"/>
+  <rect x="80" y="287" width="120" height="4" rx="2" fill="#a78bfa" opacity="0.6"/>
+
+  <!-- Act -->
+  <rect x="300" y="228" width="200" height="64" rx="8" fill="#a78bfa08" stroke="#a78bfa25" stroke-width="1"/>
+  <text x="310" y="248" font-family="monospace" font-size="9" fill="#a78bfa" font-weight="700">ACT · Ajuster</text>
+  <text x="310" y="264" font-family="sans-serif" font-size="11" fill="#e2e8f0">Corrections &amp; standards</text>
+  <text x="310" y="280" font-family="sans-serif" font-size="10" fill="#94a3b8">12 processus optimisés</text>
+  <rect x="300" y="287" width="100" height="4" rx="2" fill="#a78bfa20"/>
+  <rect x="300" y="287" width="100" height="4" rx="2" fill="#a78bfa" opacity="0.5"/>
+
+  <!-- Conformity section -->
+  <rect x="80" y="312" width="420" height="80" rx="8" fill="#0d0d17" stroke="#a78bfa18" stroke-width="1"/>
+  <text x="290" y="335" font-family="monospace" font-size="10" fill="#94a3b8" text-anchor="middle" letter-spacing="1">CONFORMITÉ &amp; QUALITÉ DE SERVICE</text>
+
+  <!-- Progress bars -->
+  <text x="92" y="356" font-family="monospace" font-size="9" fill="#94a3b8">Conformité procédures</text>
+  <rect x="220" y="346" width="260" height="8" rx="4" fill="#ffffff08"/>
+  <rect x="220" y="346" width="247" height="8" rx="4" fill="#a78bfa" opacity="0.9"/>
+  <text x="490" y="356" font-family="monospace" font-size="9" fill="#a78bfa">95%</text>
+
+  <text x="92" y="376" font-family="monospace" font-size="9" fill="#94a3b8">NPS interne (+15 pts)</text>
+  <rect x="220" y="366" width="260" height="8" rx="4" fill="#ffffff08"/>
+  <rect x="220" y="366" width="234" height="8" rx="4" fill="#a78bfa" opacity="0.9"/>
+  <text x="490" y="376" font-family="monospace" font-size="9" fill="#a78bfa">+15</text>
+
+  <!-- KPI panel right -->
+  <rect x="545" y="88" width="215" height="324" rx="10" fill="#0d0d17" stroke="#a78bfa18" stroke-width="1"/>
+  <text x="652" y="118" font-family="monospace" font-size="10" fill="#94a3b8" text-anchor="middle" letter-spacing="1">IMPACT QUALITÉ</text>
+
+  <text x="652" y="160" font-family="monospace" font-size="36" fill="#a78bfa" text-anchor="middle" font-weight="800">12</text>
+  <text x="652" y="182" font-family="monospace" font-size="10" fill="#94a3b8" text-anchor="middle">processus optimisés</text>
+
+  <line x1="565" y1="200" x2="745" y2="200" stroke="#a78bfa18" stroke-width="1"/>
+
+  <text x="652" y="238" font-family="monospace" font-size="32" fill="#a78bfa" text-anchor="middle" font-weight="800">-30%</text>
+  <text x="652" y="258" font-family="monospace" font-size="10" fill="#94a3b8" text-anchor="middle">temps d'intégration</text>
+
+  <line x1="565" y1="276" x2="745" y2="276" stroke="#a78bfa18" stroke-width="1"/>
+
+  <text x="652" y="314" font-family="monospace" font-size="32" fill="#a78bfa" text-anchor="middle" font-weight="800">+15</text>
+  <text x="652" y="334" font-family="monospace" font-size="10" fill="#94a3b8" text-anchor="middle">points NPS interne</text>
+
+  <line x1="565" y1="352" x2="745" y2="352" stroke="#a78bfa18" stroke-width="1"/>
+
+  <text x="652" y="388" font-family="monospace" font-size="32" fill="#a78bfa" text-anchor="middle" font-weight="800">3 ans</text>
+  <text x="652" y="408" font-family="monospace" font-size="10" fill="#94a3b8" text-anchor="middle">chez SFR</text>
+
+  <!-- Title -->
+  <text x="400" y="46" font-family="monospace" font-size="13" fill="#c8c8d0" text-anchor="middle" font-weight="600" letter-spacing="2">CHARGÉ DE QUALITÉ, FORMATION &amp; MÉTHODES</text>
+  <text x="400" y="64" font-family="monospace" font-size="10" fill="#a78bfa" text-anchor="middle" letter-spacing="1">SFR · 2012 – 2015</text>
+</svg>

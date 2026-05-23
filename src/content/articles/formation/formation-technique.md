@@ -4,7 +4,7 @@ description: "Comment comprendre ce que fait son équipe tech, quelles formation
 publishDate: "2025-06-23"
 type: article
 domain: formation
-image: "/images/themes/formation-carriere.webp"
+image: "/images/themes/formation-carriere.jpg"
 pillColor: red
 theme: formation
 ---
@@ -151,4 +151,4 @@ Un chef de projet qui travaille avec une équipe technique peut raisonnablement 
 
 Ce que j'ai mis en place chez KEOS : un format mensuel de deux heures avec un développeur de l'équipe — pas pour lui apprendre à coder, mais pour qu'il explique ce sur quoi il travaille et pourquoi certaines choses prennent du temps. En six mois, les réunions de cadrage projet ont changé de nature. Les questions posées étaient meilleures, les estimations moins contestées à l'aveugle, les risques mieux identifiés en amont.
 
-> **Ce que ça change en pratique** — La formation technique pour les non-développeurs n'a pas pour but de former des développeurs : elle vise le niveau "coordinateur technique", suffisant pour piloter efficacement et poser les bonnes questions. Le pair programming et les sessions de transmission interne ont un retour bien supérieur aux MOOC seuls. Six mois d'exposition active et structurée valent davantage que deux semaines de bootcamp sans suivi.
+> **En résumé** — La formation technique pour les non-développeurs n'a pas pour but de former des développeurs : elle vise le niveau "coordinateur technique", suffisant pour piloter efficacement et poser les bonnes questions. Le pair programming et les sessions de transmission interne ont un retour bien supérieur aux MOOC seuls. Six mois d'exposition active et structurée valent davantage que deux semaines de bootcamp sans suivi.
