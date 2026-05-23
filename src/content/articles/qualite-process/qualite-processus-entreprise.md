@@ -4,7 +4,7 @@ description: "Comment piloter la qualité des processus avec des KPIs utiles (cy
 publishDate: "2026-09-14"
 type: article
 domain: qualite-process
-image: "/images/themes/management.jpg"
+image: "/images/themes/management.webp"
 pillColor: purple
 relatedArticles:
   - domain: qualite-process
@@ -159,4 +159,4 @@ Ce qui maintient la dynamique, c'est la transparence des résultats. Quand une �
 
 C'est à ce moment que la qualité cesse d'être un projet pour devenir une façon de travailler.
 
-> **En résumé** — La qualité des processus sans bureaucratie repose sur trois disciplines : définir un standard clair avec deux ou trois KPIs choisis pour leur pertinence terrain, mesurer régulièrement avec des données brutes partagées avec l'équipe, et améliorer de façon ciblée par cycles courts. Le pilote processus est un opérationnel, les réunions qualité durent trente minutes, et chaque cycle produit une action visible. C'est ainsi que la qualité devient une habitude plutôt qu'un fardeau.
+> **En pratique** — La qualité des processus sans bureaucratie repose sur trois disciplines : définir un standard clair avec deux ou trois KPIs choisis pour leur pertinence terrain, mesurer régulièrement avec des données brutes partagées avec l'équipe, et améliorer de façon ciblée par cycles courts. Le pilote processus est un opérationnel, les réunions qualité durent trente minutes, et chaque cycle produit une action visible. C'est ainsi que la qualité devient une habitude plutôt qu'un fardeau.

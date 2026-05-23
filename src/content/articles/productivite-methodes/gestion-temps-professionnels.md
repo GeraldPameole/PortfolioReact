@@ -4,7 +4,7 @@ description: "Faire un audit honnête de son temps, identifier les trois voleurs
 publishDate: "2026-06-22"
 type: article
 domain: productivite-methodes
-image: "/images/themes/productivite.jpg"
+image: "/images/themes/productivite.webp"
 pillColor: indigo
 relatedArticles:
   - domain: productivite-methodes
@@ -134,4 +134,4 @@ J'ai instauré une routine de clôture en 15 minutes qui se compose de trois tem
 
 Ce troisième point semble anecdotique. Il ne l'est pas. Quand on travaille sur des projets longs — un déploiement réseau, une migration d'infrastructure, un accompagnement client — les journées peuvent sembler improductives même quand elles ne le sont pas. Nommer une avancée, même modeste, ancre le sentiment de progression et permet de partir avec l'esprit moins chargé.
 
-> **En résumé** — Le premier acte d'une meilleure gestion du temps, c'est un audit honnête : 5 jours de suivi par catégorie pour voir où le temps part vraiment. Les trois voleurs invisibles — email continu, réunions sans agenda, décisions différées — sont identifiables et remédiables. Et une routine de fin de journée en 15 minutes suffit à fermer proprement la journée, protéger le repos, et repartir le lendemain sans la charge du non-résolu.
+> **Ce que j'en retiens** — Le premier acte d'une meilleure gestion du temps, c'est un audit honnête : 5 jours de suivi par catégorie pour voir où le temps part vraiment. Les trois voleurs invisibles — email continu, réunions sans agenda, décisions différées — sont identifiables et remédiables. Et une routine de fin de journée en 15 minutes suffit à fermer proprement la journée, protéger le repos, et repartir le lendemain sans la charge du non-résolu.

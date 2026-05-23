@@ -4,7 +4,7 @@ description: "Assertif, passif, agressif ou manipulateur — comprendre ses prop
 publishDate: "2025-04-14"
 type: article
 domain: formation
-image: "/images/themes/formation-carriere.jpg"
+image: "/images/themes/formation-carriere.webp"
 tags:
   - formation
   - competences
@@ -160,4 +160,4 @@ Cette structure fait deux choses essentielles : elle évite le glissement vers l
 
 Un seul conseil supplémentaire : délivrez un message difficile à la fois. Si vous avez trois problèmes à soulever, choisissez le plus important. Les autres attendent. Un message bien reçu vaut plus que trois messages qui se noient mutuellement.
 
-> **En résumé** — La communication professionnelle se joue dans les registres qu'on utilise sans le savoir : assertif, passif, agressif ou manipulateur. L'assertivité se travaille, elle n'est pas un trait de caractère. L'écoute active précède toujours la réponse efficace. Et les messages difficiles se délivrent mieux avec une structure claire : contexte, observation, impact, demande, écoute — dans cet ordre.
+> **Ce que ça change en pratique** — La communication professionnelle se joue dans les registres qu'on utilise sans le savoir : assertif, passif, agressif ou manipulateur. L'assertivité se travaille, elle n'est pas un trait de caractère. L'écoute active précède toujours la réponse efficace. Et les messages difficiles se délivrent mieux avec une structure claire : contexte, observation, impact, demande, écoute — dans cet ordre.

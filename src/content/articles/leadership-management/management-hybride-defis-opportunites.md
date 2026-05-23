@@ -4,7 +4,7 @@ description: "Quand une partie de l'équipe est à distance, les signaux de mana
 publishDate: "2026-03-02"
 type: article
 domain: leadership-management
-image: "/images/themes/management.jpg"
+image: "/images/themes/management.webp"
 pillColor: purple
 relatedArticles:
   - domain: leadership-management
@@ -102,4 +102,4 @@ La règle que je me suis fixée : si je remarque deux de ces signaux sur deux se
 
 Le management hybride pousse à développer une rigueur de communication qu'on n'avait pas forcément en présentiel. C'est inconfortable au début. Mais les équipes qui le font bien finissent souvent par fonctionner mieux qu'elles ne le faisaient en tout-présentiel, parce que tout est plus explicite.
 
-> **En résumé** — En mode hybride, les signaux informels du présentiel disparaissent et doivent être remplacés par des pratiques explicites : adapter le canal à la situation (synchrone pour les décisions, asynchrone pour les mises à jour), concevoir des réunions qui incluent activement les participants à distance, et surveiller les signaux faibles de désengagement avec des points individuels réguliers. Ce n'est pas plus de management — c'est un management mieux pensé.
+> **Le fond de l'affaire** — En mode hybride, les signaux informels du présentiel disparaissent et doivent être remplacés par des pratiques explicites : adapter le canal à la situation (synchrone pour les décisions, asynchrone pour les mises à jour), concevoir des réunions qui incluent activement les participants à distance, et surveiller les signaux faibles de désengagement avec des points individuels réguliers. Ce n'est pas plus de management — c'est un management mieux pensé.

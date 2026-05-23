@@ -4,7 +4,7 @@ description: "Résistance, doute, puis engagement : voici les étapes réelles d
 publishDate: "2025-03-31"
 type: article
 domain: formation
-image: "/images/themes/formation-carriere.jpg"
+image: "/images/themes/formation-carriere.webp"
 pillColor: red
 theme: formation
 ---
@@ -145,4 +145,4 @@ En formant plus de 500 collaborateurs chez SFR entre 2012 et 2015, j'ai vu des d
 
 Le changement ne devient confortable qu'une fois traversé. Jamais avant.
 
-> **En résumé** — La résistance au changement est une étape normale, pas un obstacle à éliminer. Comprendre la courbe d'adaptation permet de la traverser plus vite : en nommant ce qu'on ressent, en cherchant les invariants, et en agissant tôt. Le rôle du manager n'est pas de convaincre mais d'écouter, d'éclairer le chemin et de laisser le temps nécessaire à une adaptation profonde.
+> **Le vrai bilan** — La résistance au changement est une étape normale, pas un obstacle à éliminer. Comprendre la courbe d'adaptation permet de la traverser plus vite : en nommant ce qu'on ressent, en cherchant les invariants, et en agissant tôt. Le rôle du manager n'est pas de convaincre mais d'écouter, d'éclairer le chemin et de laisser le temps nécessaire à une adaptation profonde.

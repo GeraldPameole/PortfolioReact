@@ -4,7 +4,7 @@ description: "Comment les organisations en transformation digitale perdent leurs
 publishDate: "2026-10-26"
 type: article
 domain: transformation-digitale
-image: "/images/themes/ia.jpg"
+image: "/images/themes/ia.webp"
 pillColor: pink
 relatedArticles:
   - domain: transformation-digitale
@@ -212,4 +212,4 @@ La transformation numérique change les outils, parfois les métiers, rarement l
 
 Ces besoins ne sont pas résolus par un LMS, un chatbot RH ou une plateforme d'e-learning. Ils sont résolus par des managers qui font leur travail de proximité, par des décisions transparentes sur l'organisation future, et par une communication honnête sur ce qui change et ce qui reste.
 
-> **En résumé** — Les organisations qui réussissent leur transformation numérique sur le plan des talents ne sont pas celles qui investissent le plus en technologie, mais celles qui anticipent la zone critique de départs entre le sixième et le dix-huitième mois, adaptent leur management aux quatre profils-types (expert tech, adaptatif, résistant, critique), et traitent les enjeux humains avec autant de rigueur que les enjeux techniques. La fidélisation des experts et l'intégration des profils non-digitaux ne sont pas des sujets RH périphériques — ce sont des conditions de réussite du projet lui-même.
+> **Le vrai bilan** — Les organisations qui réussissent leur transformation numérique sur le plan des talents ne sont pas celles qui investissent le plus en technologie, mais celles qui anticipent la zone critique de départs entre le sixième et le dix-huitième mois, adaptent leur management aux quatre profils-types (expert tech, adaptatif, résistant, critique), et traitent les enjeux humains avec autant de rigueur que les enjeux techniques. La fidélisation des experts et l'intégration des profils non-digitaux ne sont pas des sujets RH périphériques — ce sont des conditions de réussite du projet lui-même.

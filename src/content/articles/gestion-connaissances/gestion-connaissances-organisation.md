@@ -4,7 +4,7 @@ description: "Comment documenter sans bureaucratie, partager sans friction et pr
 publishDate: "2025-07-14"
 type: article
 domain: gestion-connaissances
-image: "/images/themes/management.jpg"
+image: "/images/themes/management.webp"
 pillColor: violet
 theme: gestion
 ---
@@ -96,4 +96,4 @@ Mais au-delà des outils, ce qui fait la différence, c'est la pratique de la re
 
 Le levier culturel le plus puissant que j'ai observé : valoriser publiquement les contributions à la base de connaissances collective. Pas avec des systèmes de points gamifiés — mais simplement en citant l'auteur quand un document est utile, en remerciant en réunion quelqu'un qui a documenté une procédure complexe, en intégrant la contribution au savoir collectif dans les entretiens d'évaluation.
 
-> **En résumé** — La gestion des connaissances échoue quand elle traite le problème comme un défaut de motivation. Elle réussit quand elle rend le partage plus simple et plus valorisé que la rétention. Les priorités concrètes : cartographier les compétences critiques non documentées, adopter une documentation légère et contextuelle plutôt que des processus lourds, et choisir des outils que les équipes utilisent déjà. Le risque réel n'est pas le manque de documentation — c'est de laisser partir des années d'expérience irremplaçable sans jamais les avoir capturées.
+> **Ce que j'applique** — La gestion des connaissances échoue quand elle traite le problème comme un défaut de motivation. Elle réussit quand elle rend le partage plus simple et plus valorisé que la rétention. Les priorités concrètes : cartographier les compétences critiques non documentées, adopter une documentation légère et contextuelle plutôt que des processus lourds, et choisir des outils que les équipes utilisent déjà. Le risque réel n'est pas le manque de documentation — c'est de laisser partir des années d'expérience irremplaçable sans jamais les avoir capturées.

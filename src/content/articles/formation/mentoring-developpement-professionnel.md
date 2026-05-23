@@ -4,7 +4,7 @@ description: "Fréquence, format, durée des séances, erreurs classiques du men
 publishDate: "2025-07-07"
 type: article
 domain: formation
-image: "/images/themes/formation-carriere.jpg"
+image: "/images/themes/formation-carriere.webp"
 tags:
   - formation
   - competences
@@ -190,4 +190,4 @@ La troisième : **ne pas tenir le cadre**. Les séances qui débordent, qui s'an
 
 Enfin : **confondre mentorat et coaching**. Le mentor partage son expérience et son réseau. Le coach accompagne sans mettre sa propre expérience dans la balance. Les deux sont valables, mais ils ne sont pas identiques. Si vous êtes mentor, partagez ce que vous avez vécu — avec discernement.
 
-> **En résumé** — Un programme de mentorat qui tient dans la durée repose sur une structure simple : cadence fixe, séances en quatre temps, sujet préparé par le mentoré. L'impact se mesure dès le départ sur des dimensions concrètes. Et le mentor efficace pose plus de questions qu'il ne donne de réponses — même quand il voit la solution avant l'autre.
+> **Le fond de l'affaire** — Un programme de mentorat qui tient dans la durée repose sur une structure simple : cadence fixe, séances en quatre temps, sujet préparé par le mentoré. L'impact se mesure dès le départ sur des dimensions concrètes. Et le mentor efficace pose plus de questions qu'il ne donne de réponses — même quand il voit la solution avant l'autre.

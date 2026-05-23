@@ -11,13 +11,13 @@ keywords: "productivité, concentration, travail profond, distraction, focus, at
 note: 4.8
 relatedContent:
   - title: "Gestion du Temps: Guide Pratique pour les Professionnels Occupés"
-    url: "/articles/gestion-temps-professionnels"
+    url: "/blog/productivite-methodes/gestion-temps-professionnels"
     type: "article"
   - title: "La Méthode GTD Expliquée: Organisation et Productivité"
-    url: "/articles/methode-gtd-expliquee"
+    url: "/blog/productivite-methodes/methode-gtd-expliquee"
     type: "article"
   - title: "Atomic Habits"
-    url: "/books/atomic-habits"
+    url: "/livres/atomic-habits"
     type: "book"
 ---
 
@@ -38,8 +38,8 @@ Ce livre est essentiel pour quiconque cherche à accomplir un travail intellectu
 
 Si vous avez apprécié "Deep Work", ces ressources pourraient vous intéresser :
 
-- [Gestion du Temps: Guide Pratique pour les Professionnels Occupés](/articles/gestion-temps-professionnels) - Pour approfondir les méthodes de gestion du temps
-- [La Méthode GTD Expliquée: Organisation et Productivité](/articles/methode-gtd-expliquee) - Une approche complémentaire à Deep Work pour organiser efficacement son travail
-- [Atomic Habits](/books/atomic-habits) - Comment construire des habitudes durables, y compris celles de concentration profonde
+- [Gestion du Temps: Guide Pratique pour les Professionnels Occupés](/blog/productivite-methodes/gestion-temps-professionnels) - Pour approfondir les méthodes de gestion du temps
+- [La Méthode GTD Expliquée: Organisation et Productivité](/blog/productivite-methodes/methode-gtd-expliquee) - Une approche complémentaire à Deep Work pour organiser efficacement son travail
+- [Atomic Habits](/livres/atomic-habits) - Comment construire des habitudes durables, y compris celles de concentration profonde
 
 **Note des lecteurs : 4.8/5** - Un livre qui transforme durablement la façon de travailler de ses lecteurs

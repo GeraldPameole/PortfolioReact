@@ -4,7 +4,7 @@ description: "Segmentation comportementale, automation utile et les trois métri
 publishDate: "2026-03-09"
 type: article
 domain: marketing-communication
-image: "/images/themes/marketing.jpg"
+image: "/images/themes/marketing.webp"
 pillColor: yellow
 relatedArticles:
   - domain: marketing-communication
@@ -108,4 +108,4 @@ Les erreurs les plus fréquentes que je vois : envoyer à des listes non nettoy�
 
 Ce que je recommande : segmenter les inactifs dès trois mois sans ouverture, lancer une campagne de réengagement courte, et supprimer proprement ceux qui ne répondent pas. Une base de 10 000 contacts engagés vaut infiniment plus qu'une base de 80 000 contacts dont 70% ne regardent plus jamais vos emails.
 
-> **En résumé** — L'email marketing performant repose sur trois leviers : une segmentation comportementale qui dépasse les critères démographiques, une automation déclenchée par les actions réelles des contacts plutôt que par un calendrier fixe, et une attention permanente à la délivrabilité. Les métriques à surveiller en priorité sont la conversion, le ratio clic/ouverture, et la santé globale de la base. Le volume d'envoi n'est jamais un indicateur de performance.
+> **Ce que ça change en pratique** — L'email marketing performant repose sur trois leviers : une segmentation comportementale qui dépasse les critères démographiques, une automation déclenchée par les actions réelles des contacts plutôt que par un calendrier fixe, et une attention permanente à la délivrabilité. Les métriques à surveiller en priorité sont la conversion, le ratio clic/ouverture, et la santé globale de la base. Le volume d'envoi n'est jamais un indicateur de performance.

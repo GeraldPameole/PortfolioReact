@@ -4,7 +4,7 @@ description: "Les vraies raisons de départ ne sont pas salariales. Comment iden
 publishDate: "2025-11-17"
 type: article
 domain: gestion-talents
-image: "/images/themes/management.jpg"
+image: "/images/themes/management.webp"
 pillColor: teal
 theme: gestion
 ---
@@ -108,4 +108,4 @@ Ce que j'ai compris depuis : une contre-offre peut retenir temporairement quelqu
 
 La vraie solution est en amont : créer les conditions pour que les bonnes personnes n'aient pas envie de partir. Ça passe par des conversations régulières, par de la clarté sur les perspectives d'évolution, et par un management qui fait que les gens se lèvent le matin sans appréhension.
 
-> **En résumé** — La rétention commence par comprendre que le salaire est rarement la première raison de départ : le management, le manque de perspectives et la culture comptent davantage. Identifier les signaux comportementaux dès 3 mois avant la rupture, mener des entretiens de maintien proactifs, et savoir qu'une contre-offre ne retient que temporairement — voilà les bases d'une vraie stratégie de rétention.
+> **Le fond de l'affaire** — La rétention commence par comprendre que le salaire est rarement la première raison de départ : le management, le manque de perspectives et la culture comptent davantage. Identifier les signaux comportementaux dès 3 mois avant la rupture, mener des entretiens de maintien proactifs, et savoir qu'une contre-offre ne retient que temporairement — voilà les bases d'une vraie stratégie de rétention.

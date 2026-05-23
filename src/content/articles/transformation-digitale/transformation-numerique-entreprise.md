@@ -4,7 +4,7 @@ description: "Comprendre les 5 niveaux de maturité digitale d'une organisation,
 publishDate: "2026-10-19"
 type: article
 domain: transformation-digitale
-image: "/images/themes/ia.jpg"
+image: "/images/themes/ia.webp"
 pillColor: pink
 theme: technologie
 ---
@@ -154,4 +154,4 @@ La stratégie que j'applique systématiquement : identifier les innovateurs et p
 
 Pour la majorité tardive et les retardataires, la question n'est pas de les convaincre intellectuellement que le numérique est l'avenir. C'est de leur montrer concrètement que le nouvel outil facilite leur travail à eux — que ça leur fait gagner du temps sur quelque chose de pénible. Sans ce bénéfice tangible et individuel, aucun argument généraliste ne tient.
 
-> **En résumé** — La transformation numérique échoue quand elle commence par les outils plutôt que par les processus. Le modèle de maturité en 5 niveaux donne une lecture honnête de la situation de départ, et impose une progression logique qu'on ne peut pas court-circuiter. Conduire le changement, c'est identifier les adoptants précoces, en faire des relais internes, et offrir à chaque profil une raison concrète et personnelle d'adopter le nouvel outil — pas une vision abstraite de la transformation digitale.
+> **Le vrai bilan** — La transformation numérique échoue quand elle commence par les outils plutôt que par les processus. Le modèle de maturité en 5 niveaux donne une lecture honnête de la situation de départ, et impose une progression logique qu'on ne peut pas court-circuiter. Conduire le changement, c'est identifier les adoptants précoces, en faire des relais internes, et offrir à chaque profil une raison concrète et personnelle d'adopter le nouvel outil — pas une vision abstraite de la transformation digitale.

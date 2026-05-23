@@ -4,7 +4,7 @@ description: "Identifier les potentiels, construire un plan de développement in
 publishDate: "2025-06-16"
 type: article
 domain: formation
-image: "/images/themes/formation-carriere.jpg"
+image: "/images/themes/formation-carriere.webp"
 pillColor: red
 relatedArticles:
   - domain: formation
@@ -197,4 +197,4 @@ Ce signal, seul le manager le voit. Et c'est lui qui doit décider d'en faire qu
 
 Le développement de son équipe n'est pas une tâche administrative à cocher. C'est l'un des leviers les plus directs sur la performance collective — et l'un de ceux qui génèrent le plus de fidélité. Un collaborateur qui sent que son manager investit dans son développement ne part pas facilement.
 
-> **En résumé** — Former les talents de son équipe commence par une identification honnête des potentiels, pas par un catalogue de formation. Le plan de développement individuel ne fonctionne que s'il est trimestriel, concret et suivi. Le budget formation est une ressource managériale — pas un sujet RH. Et le signal de développement, c'est le manager qui le voit et qui doit agir dessus.
+> **Pour conclure sans platitude** — Former les talents de son équipe commence par une identification honnête des potentiels, pas par un catalogue de formation. Le plan de développement individuel ne fonctionne que s'il est trimestriel, concret et suivi. Le budget formation est une ressource managériale — pas un sujet RH. Et le signal de développement, c'est le manager qui le voit et qui doit agir dessus.

@@ -4,7 +4,7 @@ description: "Coûts de coordination, free-riding, réunions efficaces et travai
 publishDate: "2025-04-07"
 type: article
 domain: formation
-image: "/images/themes/formation-carriere.jpg"
+image: "/images/themes/formation-carriere.webp"
 pillColor: red
 theme: formation
 ---
@@ -119,4 +119,4 @@ Ce travail de clarification se fait une fois, au lancement. Il ne dure pas éter
 
 La collaboration efficace est donc moins une question de cohésion que de structure. La cohésion aide. La structure, elle, est indispensable.
 
-> **En résumé** — La collaboration a un coût de coordination qui croît exponentiellement avec la taille : au-delà de sept ou huit personnes, les gains collectifs sont grignotés. Distinguer les types de réunions (brainstorming, décision, alignement, résolution), développer un asynchrone structuré, et clarifier les rôles de décision sont les trois leviers qui transforment une équipe active en équipe efficace.
+> **Pour conclure sans platitude** — La collaboration a un coût de coordination qui croît exponentiellement avec la taille : au-delà de sept ou huit personnes, les gains collectifs sont grignotés. Distinguer les types de réunions (brainstorming, décision, alignement, résolution), développer un asynchrone structuré, et clarifier les rôles de décision sont les trois leviers qui transforment une équipe active en équipe efficace.

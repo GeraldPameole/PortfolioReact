@@ -4,7 +4,7 @@ description: "Comprendre la loi de Parkinson pour arrêter de dilater ses tâche
 publishDate: "2026-06-15"
 type: article
 domain: productivite-methodes
-image: "/images/themes/productivite.jpg"
+image: "/images/themes/productivite.webp"
 pillColor: indigo
 relatedArticles:
   - domain: productivite-methodes
@@ -135,4 +135,4 @@ L'erreur classique : on passe ses journées dans le quadrant "urgent + pas impor
 
 Le truc simple que j'ai adopté : chaque lundi matin, 10 minutes pour classer les tâches de la semaine dans la matrice. Pas de long exercice — juste une question par tâche : urgent ou pas ? Important ou pas ? Ce classement pilote ensuite le timeboxing. Résultat : les vrais problèmes reçoivent l'attention qu'ils méritent, au bon moment.
 
-> **En résumé** — La loi de Parkinson est réelle : sans contrainte de temps, le travail s'étale et se dilue. Le timeboxing impose des bornes volontaires qui forcent l'essentiel. Le batching regroupe les tâches similaires pour préserver la profondeur. Et la matrice Eisenhower filtre ce qui mérite vraiment un créneau. Ces trois pratiques combinées ne requièrent ni outil complexe ni formation longue — juste une discipline de quelques minutes par semaine.
+> **Le vrai bilan** — La loi de Parkinson est réelle : sans contrainte de temps, le travail s'étale et se dilue. Le timeboxing impose des bornes volontaires qui forcent l'essentiel. Le batching regroupe les tâches similaires pour préserver la profondeur. Et la matrice Eisenhower filtre ce qui mérite vraiment un créneau. Ces trois pratiques combinées ne requièrent ni outil complexe ni formation longue — juste une discipline de quelques minutes par semaine.

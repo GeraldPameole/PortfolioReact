@@ -4,7 +4,7 @@ description: "Maîtriser la surcharge informationnelle — méthodes de filtrage
 publishDate: "2026-06-08"
 type: article
 domain: productivite-methodes
-image: "/images/themes/productivite.jpg"
+image: "/images/themes/productivite.webp"
 pillColor: indigo
 relatedArticles:
   - domain: productivite-methodes
@@ -115,4 +115,4 @@ La déconnexion réelle n'est pas une question de règle ou de loi — c'est une
 
 Ce que j'ai appliqué dans mes contextes : une plage horaire explicite où je suis joignable pour des urgences réelles (définie une fois pour toutes, connue de tous), et une règle ferme de non-consultation des outils de travail en dehors de cette plage. Au bout de quelques semaines, le système s'autorégule — les gens apprennent à anticiper et à utiliser les canaux adaptés à chaque niveau d'urgence.
 
-> **En résumé** — Les notifications tuent la concentration non pas à cause du temps qu'elles prennent, mais à cause du coût de recontextualisation qui suit chaque interruption. Reprendre le contrôle suppose de choisir délibérément quand et comment on consulte ses messages, de travailler en mode tâche unique, et d'établir des limites claires entre temps de travail et temps de récupération.
+> **Ce que j'en retiens** — Les notifications tuent la concentration non pas à cause du temps qu'elles prennent, mais à cause du coût de recontextualisation qui suit chaque interruption. Reprendre le contrôle suppose de choisir délibérément quand et comment on consulte ses messages, de travailler en mode tâche unique, et d'établir des limites claires entre temps de travail et temps de récupération.

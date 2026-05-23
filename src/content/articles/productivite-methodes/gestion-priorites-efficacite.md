@@ -4,7 +4,7 @@ description: "Comprendre pourquoi tout-est-prioritaire est un poison pour la pro
 publishDate: "2026-05-25"
 type: article
 domain: productivite-methodes
-image: "/images/themes/productivite.jpg"
+image: "/images/themes/productivite.webp"
 pillColor: indigo
 theme: carriere
 ---
@@ -143,4 +143,4 @@ Ce rituel révèle les dérives de priorisation avant qu'elles ne s'installent. 
 
 La vraie discipline de la priorisation n'est pas de savoir ce qu'on fait. C'est d'assumer ce qu'on choisit de ne pas faire.
 
-> **En résumé** — "Tout est prioritaire" n'est pas une surcharge de travail, c'est un manque de décision. La matrice impact/effort donne un critère simple pour trancher chaque matin. Le classement Must/Should/Could structure la semaine sans bureaucratie. Et le bilan hebdomadaire du vendredi consolide les choix avant que les dérives ne s'accumulent. Prioriser, c'est surtout choisir ce qu'on ne fera pas.
+> **Le vrai bilan** — "Tout est prioritaire" n'est pas une surcharge de travail, c'est un manque de décision. La matrice impact/effort donne un critère simple pour trancher chaque matin. Le classement Must/Should/Could structure la semaine sans bureaucratie. Et le bilan hebdomadaire du vendredi consolide les choix avant que les dérives ne s'accumulent. Prioriser, c'est surtout choisir ce qu'on ne fera pas.

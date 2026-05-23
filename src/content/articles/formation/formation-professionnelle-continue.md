@@ -4,7 +4,7 @@ description: "La formation professionnelle continue n'est pas seulement une obli
 publishDate: "2025-06-02"
 type: article
 domain: formation
-image: "/images/themes/formation-carriere.jpg"
+image: "/images/themes/formation-carriere.webp"
 pillColor: red
 theme: formation
 ---
@@ -110,4 +110,4 @@ Un bon plan formation d'équipe n'est pas une liste de sessions. C'est une répo
 
 À SFR, j'ai appris que les plans les plus efficaces étaient aussi les plus simples : deux ou trois priorités claires par collaborateur, un calendrier réaliste, et des points de suivi réguliers. Pas de catalogue de 40 formations proposées à tout le monde. La personnalisation, même modeste, fait toute la différence.
 
-> **En résumé** — La formation continue est un outil de rétention sous-utilisé, pas parce que les dispositifs manquent, mais parce que le suivi managérial fait défaut. La préparation en amont, le suivi post-formation et l'intégration dans un plan de développement individuel transforment une dépense en investissement. Chez SFR, cette approche structurée a atteint 95 % de satisfaction et réduit le temps d'intégration de 30 %. Le ROI devient visible à partir du moment où on laisse le temps à la phase 3 de se matérialiser.
+> **Le vrai bilan** — La formation continue est un outil de rétention sous-utilisé, pas parce que les dispositifs manquent, mais parce que le suivi managérial fait défaut. La préparation en amont, le suivi post-formation et l'intégration dans un plan de développement individuel transforment une dépense en investissement. Chez SFR, cette approche structurée a atteint 95 % de satisfaction et réduit le temps d'intégration de 30 %. Le ROI devient visible à partir du moment où on laisse le temps à la phase 3 de se matérialiser.

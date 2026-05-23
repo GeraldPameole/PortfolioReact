@@ -4,7 +4,7 @@ description: "Comment piloter un projet avec des KPIs utiles — lead time, taux
 publishDate: "2025-08-25"
 type: article
 domain: gestion-projet
-image: "/images/themes/management.jpg"
+image: "/images/themes/management.webp"
 pillColor: blue
 relatedArticles:
   - domain: gestion-projet
@@ -152,4 +152,4 @@ Le problème avec les métriques de confort : elles peuvent être excellentes pe
 
 La règle que j'applique : si une métrique ne déclenche jamais de conversation difficile, elle ne sert probablement à rien. Un bon indicateur doit parfois forcer une décision inconfortable — reporter une date, revoir le périmètre, reconnaître qu'une estimation était fausse. C'est ça, piloter par les données.
 
-> **En résumé** — Quatre indicateurs suffisent pour piloter un projet sérieusement : livraison dans les délais, taux de défauts, lead time et stabilité de vélocité. Revoyez-les chaque mois, cherchez les patterns, et méfiez-vous des métriques qui ne déclenchent jamais de conversation difficile. Ce qui se mesure s'améliore — à condition de mesurer les bonnes choses.
+> **L'essentiel** — Quatre indicateurs suffisent pour piloter un projet sérieusement : livraison dans les délais, taux de défauts, lead time et stabilité de vélocité. Revoyez-les chaque mois, cherchez les patterns, et méfiez-vous des métriques qui ne déclenchent jamais de conversation difficile. Ce qui se mesure s'améliore — à condition de mesurer les bonnes choses.

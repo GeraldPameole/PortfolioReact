@@ -4,7 +4,7 @@ description: "Comment comparer React, Vue, Angular et Svelte sans se laisser pi�
 publishDate: "2025-01-27"
 type: article
 domain: developpement-web
-image: "/images/themes/dev-web.jpg"
+image: "/images/themes/dev-web.webp"
 pillColor: green
 theme: technologie
 ---
@@ -174,4 +174,4 @@ La documentation est souvent un signal révélateur. La documentation officielle
 
 Enfin, le critère décisif que j'utilise pour clore le débat : quelle est la probabilité de trouver un développeur compétent sur ce framework dans six mois si j'ai besoin d'agrandir l'équipe ? Sur ce critère pragmatique, React domine sans ambiguïté.
 
-> **En résumé** — Comparer des frameworks JavaScript sérieusement exige de définir les critères avant de regarder les outils. Les benchmarks de laboratoire mesurent rarement ce qui compte en production. Les vrais arbitrages sont : taille du projet, composition de l'équipe, contraintes de recrutement, et exigences de maintenance. Choisir par mode ou par benchmark synthétique, c'est optimiser pour la mauvaise variable.
+> **Ce que j'en retiens** — Comparer des frameworks JavaScript sérieusement exige de définir les critères avant de regarder les outils. Les benchmarks de laboratoire mesurent rarement ce qui compte en production. Les vrais arbitrages sont : taille du projet, composition de l'équipe, contraintes de recrutement, et exigences de maintenance. Choisir par mode ou par benchmark synthétique, c'est optimiser pour la mauvaise variable.

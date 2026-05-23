@@ -4,7 +4,7 @@ description: "Ce qu'est vraiment le whistleblowing au-delà de la conformité, c
 publishDate: "2025-12-08"
 type: article
 domain: gestion-talents
-image: "/images/themes/management.jpg"
+image: "/images/themes/management.webp"
 pillColor: teal
 theme: gestion
 ---
@@ -129,4 +129,4 @@ La deuxième : traiter chaque signalement avec visibilité. Quand quelqu'un remo
 
 La troisième : protéger activement les personnes qui signalent. Pas seulement en paroles — en actes. Si quelqu'un subit une pression après avoir remonté un problème, le manager doit intervenir. Pas dans six mois : immédiatement.
 
-> **En résumé** — Le signalement en entreprise commence bien avant les canaux formels : il commence dans la qualité du climat managérial quotidien. Le coût du silence est toujours supérieur au coût du signalement, mais il est invisible jusqu'au point de non-retour. Un manager qui réagit bien aux signaux faibles crée les conditions où les problèmes remontent avant d'exploser.
+> **Ce que j'applique** — Le signalement en entreprise commence bien avant les canaux formels : il commence dans la qualité du climat managérial quotidien. Le coût du silence est toujours supérieur au coût du signalement, mais il est invisible jusqu'au point de non-retour. Un manager qui réagit bien aux signaux faibles crée les conditions où les problèmes remontent avant d'exploser.

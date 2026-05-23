@@ -4,7 +4,7 @@ description: "IA générative dans le contenu, zero-click searches, privacy-firs
 publishDate: "2026-03-30"
 type: article
 domain: marketing-communication
-image: "/images/themes/marketing.jpg"
+image: "/images/themes/marketing.webp"
 pillColor: yellow
 theme: carriere
 tags:
@@ -145,4 +145,4 @@ Le troisième : diversifier sans se disperser. Ne pas dépendre d'un seul canal,
 
 L'offre doit correspondre à la demande. Le message doit être clair et pertinent pour l'audience cible. La confiance se construit sur la durée, pas sur un coup de pub viral. Ces fondamentaux préexistent au digital et survivront à toutes les révolutions algorithmiques. L'IA peut accélérer l'exécution, mais elle ne remplace pas la pertinence.
 
-> **En résumé** — L'IA générative a changé la production de contenu, pas la nécessité d'avoir quelque chose de valable à dire. Les zero-click réduisent certains trafics SEO informationnels — adaptez vos intentions de requête. Le tracking se dégrade — construisez votre first-party data. Et dans tous les cas : les audiences que vous possédez (email, communauté) valent plus que celles que vous louez (social, search payant).
+> **Ce que ça veut dire concrètement** — L'IA générative a changé la production de contenu, pas la nécessité d'avoir quelque chose de valable à dire. Les zero-click réduisent certains trafics SEO informationnels — adaptez vos intentions de requête. Le tracking se dégrade — construisez votre first-party data. Et dans tous les cas : les audiences que vous possédez (email, communauté) valent plus que celles que vous louez (social, search payant).

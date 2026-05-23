@@ -4,7 +4,7 @@ description: "Architecture système, parcours utilisateur, workflow d'approbatio
 publishDate: "2026-05-04"
 type: article
 domain: outils-techniques
-image: "/images/themes/dev-web.jpg"
+image: "/images/themes/dev-web.webp"
 pillColor: slate
 theme: technologie
 ---
@@ -192,4 +192,4 @@ La question n'est pas "Mermaid ou Draw.io" — c'est "quel outil répond à ce b
 
 Mon usage personnel : Mermaid pour 70% des cas (documentation technique courante), Excalidraw pour les sessions de conception collaborative, Draw.io pour les diagrammes "officiels" qui vivent dans des docs de référence longuement stables.
 
-> **En résumé** — Mermaid est l'outil le plus efficace pour documenter des processus qui évoluent avec le code : architecture système, parcours utilisateur, workflows d'approbation. Les bonnes pratiques clés sont de limiter à 12 nœuds, de nommer les branches de décision et de cibler une question par diagramme. Les limites réelles sont le positionnement manuel, les diagrammes très denses et les présentations clients. Pour ces cas, Draw.io, Excalidraw ou Lucidchart restent des alternatives pertinentes selon le contexte.
+> **Ce que ça change en pratique** — Mermaid est l'outil le plus efficace pour documenter des processus qui évoluent avec le code : architecture système, parcours utilisateur, workflows d'approbation. Les bonnes pratiques clés sont de limiter à 12 nœuds, de nommer les branches de décision et de cibler une question par diagramme. Les limites réelles sont le positionnement manuel, les diagrammes très denses et les présentations clients. Pour ces cas, Draw.io, Excalidraw ou Lucidchart restent des alternatives pertinentes selon le contexte.

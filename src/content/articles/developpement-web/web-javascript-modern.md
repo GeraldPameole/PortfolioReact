@@ -4,7 +4,7 @@ description: "Optional chaining, nullish coalescing, structuredClone, Array.at()
 publishDate: "2025-03-10"
 type: article
 domain: developpement-web
-image: "/images/themes/dev-web.jpg"
+image: "/images/themes/dev-web.webp"
 pillColor: green
 theme: technologie
 ---
@@ -203,4 +203,4 @@ Le `var` n'a plus aucune raison d'être utilisé dans du code nouveau. `const` p
 
 Enfin, les polyfills systématiques pour des fonctionnalités qui ont 97-100% de support navigateur sont un vestige d'une époque révolue. Vérifier le support sur Can I Use avant d'ajouter une dépendance reste un réflexe utile.
 
-> **En résumé** — Optional chaining, nullish coalescing, `structuredClone`, `Array.at()` et `Promise.allSettled()` sont les fonctionnalités ES2022+ qui changent le plus concrètement l'écriture quotidienne du code. Toutes sont supportées nativement à 95%+. Les patterns à éviter — `var`, chaînes de `.then()`, clones JSON — persistent par habitude plus que par nécessité.
+> **En pratique** — Optional chaining, nullish coalescing, `structuredClone`, `Array.at()` et `Promise.allSettled()` sont les fonctionnalités ES2022+ qui changent le plus concrètement l'écriture quotidienne du code. Toutes sont supportées nativement à 95%+. Les patterns à éviter — `var`, chaînes de `.then()`, clones JSON — persistent par habitude plus que par nécessité.

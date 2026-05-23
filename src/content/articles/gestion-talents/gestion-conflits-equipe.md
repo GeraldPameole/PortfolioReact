@@ -4,7 +4,7 @@ description: "Les 4 types de conflits d'équipe, le moment où il faut interveni
 publishDate: "2025-09-22"
 type: article
 domain: gestion-talents
-image: "/images/themes/management.jpg"
+image: "/images/themes/management.webp"
 pillColor: teal
 theme: gestion
 ---
@@ -96,4 +96,4 @@ La clarté des rôles, c'est la meilleure prévention. Au démarrage d'un projet
 
 C'est un investissement de trente minutes en début de projet qui économise des heures de gestion de conflits en cours de route.
 
-> **En résumé** — Il existe quatre types de conflits — tâche, processus, relation, statut — et chacun se gère différemment. Le bon moment pour intervenir, c'est la tension, pas le désaccord ni la crise. La médiation efficace repose sur la neutralité du manager et un accord suivi dans le temps. Et la clarté des rôles au démarrage prévient la majorité des frictions avant qu'elles ne deviennent des conflits.
+> **Ce que j'applique** — Il existe quatre types de conflits — tâche, processus, relation, statut — et chacun se gère différemment. Le bon moment pour intervenir, c'est la tension, pas le désaccord ni la crise. La médiation efficace repose sur la neutralité du manager et un accord suivi dans le temps. Et la clarté des rôles au démarrage prévient la majorité des frictions avant qu'elles ne deviennent des conflits.

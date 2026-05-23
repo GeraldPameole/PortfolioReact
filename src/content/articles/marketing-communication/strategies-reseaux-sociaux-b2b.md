@@ -4,7 +4,7 @@ description: "Comment bâtir une présence B2B efficace sur LinkedIn — contenu
 publishDate: "2026-04-06"
 type: article
 domain: marketing-communication
-image: "/images/themes/marketing.jpg"
+image: "/images/themes/marketing.webp"
 pillColor: yellow
 relatedArticles:
   - domain: marketing-communication
@@ -112,4 +112,4 @@ YouTube et les podcasts ont un avantage que les réseaux texte n'ont pas : ils p
 
 Ce que je déconseille systématiquement en B2B pur : dépenser de l'énergie sur des réseaux orientés grand public (Instagram, TikTok) sauf si votre cible inclut explicitement des acheteurs présents sur ces plateformes. Dans la plupart des cas, c'est une dispersion sans retour.
 
-> **En résumé** — Une stratégie réseaux sociaux B2B qui fonctionne repose sur trois piliers : du contenu d'expert à voix humaine qui apporte une vraie valeur, un social selling basé sur la relation avant la transaction, et une mesure du ROI qui tient compte des cycles longs. LinkedIn est l'outil central. Ce n'est pas le volume de posts qui fait la différence, c'est la consistance et la pertinence sur la durée.
+> **Pour conclure sans platitude** — Une stratégie réseaux sociaux B2B qui fonctionne repose sur trois piliers : du contenu d'expert à voix humaine qui apporte une vraie valeur, un social selling basé sur la relation avant la transaction, et une mesure du ROI qui tient compte des cycles longs. LinkedIn est l'outil central. Ce n'est pas le volume de posts qui fait la différence, c'est la consistance et la pertinence sur la durée.

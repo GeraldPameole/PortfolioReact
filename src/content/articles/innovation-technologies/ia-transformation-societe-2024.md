@@ -4,7 +4,7 @@ description: "Au-delà du battage médiatique, ce que l'intelligence artificiell
 publishDate: "2026-01-12"
 type: article
 domain: innovation-technologies
-image: "/images/themes/ia.jpg"
+image: "/images/themes/ia.webp"
 pillColor: cyan
 theme: technologie
 ---
@@ -104,4 +104,4 @@ Des équipes qui publient du contenu généré sans relecture sérieuse. Des ana
 
 La règle que j'applique : l'IA produit, l'humain valide. Toujours. Ce n'est pas une limitation de l'outil — c'est une discipline de travail qui permet d'utiliser l'IA à son plein potentiel sans se faire piéger par ses angles morts.
 
-> **En résumé** — L'IA en 2025 transforme concrètement les tâches cognitives répétitives et la production de premiers jets. Elle ne remplace pas le jugement contextuel, la relation humaine ni les décisions qui impliquent des nuances que seule l'expérience vécue permet de saisir. Se positionner correctement, c'est adopter ces outils avec discernement, renforcer ce qu'ils ne peuvent pas faire, et maintenir en permanence un regard critique sur ce qu'ils produisent.
+> **Ce que ça change en pratique** — L'IA en 2025 transforme concrètement les tâches cognitives répétitives et la production de premiers jets. Elle ne remplace pas le jugement contextuel, la relation humaine ni les décisions qui impliquent des nuances que seule l'expérience vécue permet de saisir. Se positionner correctement, c'est adopter ces outils avec discernement, renforcer ce qu'ils ne peuvent pas faire, et maintenir en permanence un regard critique sur ce qu'ils produisent.

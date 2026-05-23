@@ -4,7 +4,7 @@ description: "Satisfaire un client ne suffit pas à le fidéliser. Les moments d
 publishDate: "2026-09-28"
 type: article
 domain: service-client
-image: "/images/themes/management.jpg"
+image: "/images/themes/management.webp"
 pillColor: emerald
 theme: carriere
 ---
@@ -161,4 +161,4 @@ La mesure est un outil de navigation, pas une fin en soi. Ce qui compte, c'est c
 
 L'excellence du service client n'est pas un état qu'on atteint. C'est un système de vigilance permanente sur les moments qui comptent vraiment, une culture où chaque personne en contact avec le client comprend que c'est dans les moments difficiles que la fidélité se joue — et que transformer une réclamation en bonne expérience est la démonstration la plus convaincante de ce que vaut une organisation.
 
-> **En résumé** — La satisfaction est un seuil minimal : elle ne crée pas la fidélité. Ce qui fidélise, c'est la façon dont on gère les moments de vérité — notamment les réclamations, où une résolution qui dépasse les attentes construit plus de confiance qu'une expérience ordinaire. NPS et CSAT sont complémentaires : l'un mesure la relation dans le temps, l'autre la transaction ponctuelle. Les utiliser intelligemment, c'est agir sur les causes, pas optimiser les scores.
+> **Ce que ça change en pratique** — La satisfaction est un seuil minimal : elle ne crée pas la fidélité. Ce qui fidélise, c'est la façon dont on gère les moments de vérité — notamment les réclamations, où une résolution qui dépasse les attentes construit plus de confiance qu'une expérience ordinaire. NPS et CSAT sont complémentaires : l'un mesure la relation dans le temps, l'autre la transaction ponctuelle. Les utiliser intelligemment, c'est agir sur les causes, pas optimiser les scores.

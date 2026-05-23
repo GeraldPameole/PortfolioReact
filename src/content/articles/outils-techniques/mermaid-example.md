@@ -4,7 +4,7 @@ description: "Intégration dans GitHub, Notion et Confluence, types de diagramme
 publishDate: "2026-04-20"
 type: article
 domain: outils-techniques
-image: "/images/themes/dev-web.jpg"
+image: "/images/themes/dev-web.webp"
 pillColor: slate
 theme: technologie
 ---
@@ -161,4 +161,4 @@ Commencez par un seul type de diagramme — le flowchart. Documentez un seul pro
 
 Quand ce réflexe est ancré, ajoutez le sequence diagram pour les APIs. Puis le ER diagram pour la base de données. Ne cherchez pas à couvrir tous les types en même temps.
 
-> **En résumé** — Mermaid est l'outil de documentation technique le plus efficace que j'utilise au quotidien : les diagrammes se versionnent avec le code, se rendent automatiquement dans GitHub et Notion, et restent maintenables dans le temps. Les types les plus utiles en pratique sont le flowchart et le sequence diagram. Les erreurs classiques sont l'indentation, les caractères spéciaux et les diagrammes trop denses. Préférez Draw.io quand le rendu visuel soigné prime sur la maintenabilité.
+> **Le vrai bilan** — Mermaid est l'outil de documentation technique le plus efficace que j'utilise au quotidien : les diagrammes se versionnent avec le code, se rendent automatiquement dans GitHub et Notion, et restent maintenables dans le temps. Les types les plus utiles en pratique sont le flowchart et le sequence diagram. Les erreurs classiques sont l'indentation, les caractères spéciaux et les diagrammes trop denses. Préférez Draw.io quand le rendu visuel soigné prime sur la maintenabilité.

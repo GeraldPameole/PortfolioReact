@@ -9,7 +9,7 @@ readingTime: 25
 hasMermaid: true
 targetAudience: "Dirigeants, Managers, Leaders, Professionnels du Management"
 domain: leadership-management
-image: "/images/themes/management.jpg"
+image: "/images/themes/management.webp"
 tags:
   - leadership-moderne
   - management
@@ -145,4 +145,4 @@ La réponse tient en trois pratiques.
 
 L'autorité vous donne un point de départ. L'influence, elle, se gagne dans chaque interaction, chaque décision, chaque moment où votre comportement confirme ou infirme ce que vous dites être.
 
-> **En résumé** — L'autorité formelle ouvre une porte, mais c'est l'influence construite dans le temps qui détermine le leadership réel. Adapter son style à la maturité de chaque collaborateur, tenir ses engagements sur les petites choses et développer les autres avant soi-même : voilà les trois axes qui construisent une légitimité durable, avec ou sans titre.
+> **Ce que ça veut dire concrètement** — L'autorité formelle ouvre une porte, mais c'est l'influence construite dans le temps qui détermine le leadership réel. Adapter son style à la maturité de chaque collaborateur, tenir ses engagements sur les petites choses et développer les autres avant soi-même : voilà les trois axes qui construisent une légitimité durable, avec ou sans titre.

@@ -4,7 +4,7 @@ description: "En B2B, publier régulièrement ne suffit pas. Ce qui convertit, c
 publishDate: "2026-03-16"
 type: article
 domain: marketing-communication
-image: "/images/themes/marketing.jpg"
+image: "/images/themes/marketing.webp"
 pillColor: yellow
 relatedArticles:
   - domain: marketing-communication
@@ -155,4 +155,4 @@ La première question à se poser avant de produire n'est pas "de quoi pourrions
 
 Quand on travaille à partir de cette question, le contenu change de nature. Il devient utile, spécifique, mémorable. Et c'est à ce moment-là qu'il commence à faire son vrai travail : créer une relation avec quelqu'un qui, quand il sera prêt à décider, pensera à vous en premier.
 
-> **En résumé** — Le contenu B2B ne convertit pas quand il parle de tout à tout le monde. Ce qui fonctionne, c'est un contenu aligné sur la question précise que se pose l'acheteur à chaque étape de son parcours : comprendre son problème avant de considérer des solutions, évaluer des approches avant de comparer des fournisseurs, obtenir des preuves concrètes avant de décider. La matrice format-objectif guide les choix ; la discipline de ne pas publier sans angle précis fait le reste.
+> **Ce que ça veut dire concrètement** — Le contenu B2B ne convertit pas quand il parle de tout à tout le monde. Ce qui fonctionne, c'est un contenu aligné sur la question précise que se pose l'acheteur à chaque étape de son parcours : comprendre son problème avant de considérer des solutions, évaluer des approches avant de comparer des fournisseurs, obtenir des preuves concrètes avant de décider. La matrice format-objectif guide les choix ; la discipline de ne pas publier sans angle précis fait le reste.

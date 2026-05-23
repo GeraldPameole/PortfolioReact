@@ -4,7 +4,7 @@ description: "Comment construire un plan de formation commerciale annuel efficac
 publishDate: "2025-05-05"
 type: article
 domain: formation
-image: "/images/themes/formation-carriere.jpg"
+image: "/images/themes/formation-carriere.webp"
 tags:
   - formation
   - competences
@@ -184,4 +184,4 @@ J'ai vu des plans bien conçus partir en fumée pour les mêmes raisons :
 
 Le plan de formation commerciale est un projet comme un autre : il faut un sponsor, un pilote, des jalons et des indicateurs. Ce n'est pas un programme de développement personnel — c'est un levier de performance business.
 
-> **En résumé** — Un plan de formation commerciale sur 12 mois fonctionne quand il alterne théorie courte, pratique encadrée et terrain, quand le management le porte au quotidien, et quand chaque trimestre est mesuré sur des KPIs réels. Sans mesure ni engagement du management direct, même le meilleur programme devient un budget perdu.
+> **Ce que j'applique** — Un plan de formation commerciale sur 12 mois fonctionne quand il alterne théorie courte, pratique encadrée et terrain, quand le management le porte au quotidien, et quand chaque trimestre est mesuré sur des KPIs réels. Sans mesure ni engagement du management direct, même le meilleur programme devient un budget perdu.

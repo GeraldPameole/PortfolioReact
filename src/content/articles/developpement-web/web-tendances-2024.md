@@ -4,7 +4,7 @@ description: "INP remplace FID dans les Core Web Vitals, View Transitions API, C
 publishDate: "2025-03-17"
 type: article
 domain: developpement-web
-image: "/images/themes/dev-web.jpg"
+image: "/images/themes/dev-web.webp"
 pillColor: green
 relatedArticles:
   - domain: developpement-web
@@ -154,4 +154,4 @@ CSS Subgrid résout un problème long à résoudre avec des hacks : aligner des 
 
 La Popover API remplace des dizaines de lignes de JavaScript pour gérer l'accessibilité et le positionnement des menus, tooltips et modales. C'est natif, ça gère le focus automatiquement, et ça n'a pas besoin de bibliothèque externe.
 
-> **En résumé** — En 2025, les vrais changements à intégrer maintenant sont : corriger INP si vous avez du JavaScript lourd sur les interactions, adopter CSS Container Queries pour des composants réellement réutilisables, et utiliser la View Transitions API pour les transitions entre états de page dans les SPA. Le support cross-browser est suffisant pour tous ces éléments. L'IA dans les UI marche quand elle améliore sans conditionner — pas quand elle devient le coeur de l'expérience.
+> **À retenir** — En 2025, les vrais changements à intégrer maintenant sont : corriger INP si vous avez du JavaScript lourd sur les interactions, adopter CSS Container Queries pour des composants réellement réutilisables, et utiliser la View Transitions API pour les transitions entre états de page dans les SPA. Le support cross-browser est suffisant pour tous ces éléments. L'IA dans les UI marche quand elle améliore sans conditionner — pas quand elle devient le coeur de l'expérience.

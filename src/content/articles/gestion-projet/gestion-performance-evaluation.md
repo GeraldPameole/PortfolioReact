@@ -4,7 +4,7 @@ description: "Comment mener des rétrospectives qui servent vraiment, conduire d
 publishDate: "2025-08-04"
 type: article
 domain: gestion-projet
-image: "/images/themes/management.jpg"
+image: "/images/themes/management.webp"
 pillColor: blue
 theme: gestion
 ---
@@ -80,4 +80,4 @@ La règle que j'applique : jamais commencer un entretien individuel par les chif
 
 Évaluer une performance sans contexte, c'est juger un résultat sans comprendre les conditions dans lesquelles il a été produit. Un chef de projet ou un manager qui ne comprend pas ça finit par démotiver les gens les plus consciencieux — ceux qui absorbent silencieusement les problèmes que les métriques ne montrent pas.
 
-> **En résumé** — Les rétrospectives en quatre quadrants avec un maximum de deux actions par itération fonctionnent mieux que les formats libres. Les entretiens mensuels courts remplacent avantageusement l'entretien annuel. Et les données de performance éclairent la conversation — elles ne la remplacent pas. Évaluer, c'est comprendre avant de conclure.
+> **Pour conclure sans platitude** — Les rétrospectives en quatre quadrants avec un maximum de deux actions par itération fonctionnent mieux que les formats libres. Les entretiens mensuels courts remplacent avantageusement l'entretien annuel. Et les données de performance éclairent la conversation — elles ne la remplacent pas. Évaluer, c'est comprendre avant de conclure.

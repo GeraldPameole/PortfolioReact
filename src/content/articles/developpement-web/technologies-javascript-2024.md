@@ -4,7 +4,7 @@ description: "ESM natif, top-level await, TypeScript 5+, Web Components — bila
 publishDate: "2025-02-17"
 type: article
 domain: developpement-web
-image: "/images/themes/dev-web.jpg"
+image: "/images/themes/dev-web.webp"
 pillColor: green
 theme: technologie
 tags:
@@ -180,4 +180,4 @@ La tendance de fond est positive : JavaScript en 2025 est un langage plus sûr, 
 
 Ce qui n'a pas changé : la nécessité de choisir ses outils selon le projet et non selon ce qui fait du bruit sur les réseaux. Le SSR n'est pas universel. Les Web Components ne remplacent pas les frameworks. Et écrire du JavaScript vanilla reste la meilleure façon de comprendre ce que les frameworks font réellement sous le capot.
 
-> **En résumé** — ESM natif, top-level await et TypeScript 5+ ont changé concrètement la façon d'écrire du JavaScript en 2025. Vite a remplacé Webpack sur les nouveaux projets. Le SSR universel reste sur-vendu pour les applications derrière authentification. La bonne stack dépend du contexte, pas de la tendance du moment.
+> **Le fond de l'affaire** — ESM natif, top-level await et TypeScript 5+ ont changé concrètement la façon d'écrire du JavaScript en 2025. Vite a remplacé Webpack sur les nouveaux projets. Le SSR universel reste sur-vendu pour les applications derrière authentification. La bonne stack dépend du contexte, pas de la tendance du moment.
