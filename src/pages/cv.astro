@@ -141,12 +141,37 @@ const COMPETENCES = [
 >
   <section class="cv-page">
     <div class="cv-actions container">
-      <a href="/assets/cv-gerald-pameole.pdf" download class="btn btn-primary">
+      <button type="button" id="cv-print-btn" class="btn btn-primary">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
         Télécharger en PDF
-      </a>
+      </button>
       <a href="/contact" class="btn btn-secondary">Me contacter</a>
     </div>
+
+    <script is:inline>
+      (function bindPrint() {
+        const btn = document.getElementById('cv-print-btn');
+        if (btn && !btn.dataset.bound) {
+          btn.dataset.bound = '1';
+          btn.addEventListener('click', () => window.print());
+        }
+        // Auto-print si arrivée via /cv?print=1 (depuis la home)
+        const params = new URLSearchParams(window.location.search);
+        if (params.get('print') === '1') {
+          // Petite tempo pour laisser le rendu se finaliser
+          setTimeout(() => window.print(), 400);
+          // Nettoie l'URL pour éviter re-print au reload
+          history.replaceState(null, '', window.location.pathname);
+        }
+      })();
+      document.addEventListener('astro:page-load', () => {
+        const btn = document.getElementById('cv-print-btn');
+        if (btn && !btn.dataset.bound) {
+          btn.dataset.bound = '1';
+          btn.addEventListener('click', () => window.print());
+        }
+      });
+    </script>
 
     <article class="cv-doc">
       <!-- Header -->
@@ -512,11 +537,65 @@ const COMPETENCES = [
     .cv-name { font-size: 1.9rem; }
   }
 
-  /* Impression */
+  /* Impression — rendu PDF propre */
   @media print {
-    .cv-page { padding: 0; background: #fff; }
-    .cv-actions { display: none; }
-    .cv-doc { box-shadow: none; border-radius: 0; max-width: none; }
+    @page {
+      size: A4;
+      margin: 10mm;
+    }
+
+    /* Force le rendu des couleurs (Chrome/Safari/Firefox) */
+    :global(*),
+    :global(*::before),
+    :global(*::after) {
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+      color-adjust: exact !important;
+    }
+
+    /* Masque tout le site sauf le document CV */
+    :global(html),
+    :global(body) {
+      background: #fff !important;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+    :global(#site-header),
+    :global(footer),
+    :global(.hero-badges),
+    :global(#three-bg),
+    :global(#three-bg-label),
+    :global(.orb),
+    :global(#back-to-top),
+    .cv-actions {
+      display: none !important;
+    }
+
+    .cv-page {
+      padding: 0 !important;
+      background: #fff !important;
+      min-height: 0 !important;
+    }
+    .cv-doc {
+      box-shadow: none !important;
+      border-radius: 0 !important;
+      max-width: none !important;
+      margin: 0 !important;
+    }
+
+    /* Évite les coupes inélégantes au milieu d'une expérience */
+    .cv-entry,
+    .cv-interest {
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
+    .cv-section {
+      break-inside: avoid-page;
+    }
+    .cv-section-title {
+      break-after: avoid;
+      page-break-after: avoid;
+    }
   }
 </style>
 </BaseLayout>
