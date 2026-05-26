@@ -390,9 +390,10 @@ CONSTELLATIONS.forEach(c => {
 // État du cycle constellation
 let constIdx     = 0;
 let constTimer   = 0;
-const CONST_INTERVAL = 10;        // 10s par constellation (cycle complet)
-const CONST_FADE     = 1.4;       // 1.4s fade in / out
+const CONST_INTERVAL = 6;         // 6s par constellation (cycle complet)
+const CONST_FADE     = 0.9;       // 0.9s fade in / out
 const CONST_PEAK_OP  = 0.55;      // opacité max (en arrière-plan)
+const CONST_ZOOM_AMP = 0.45;      // amplitude du zoom des traits sur les côtés (X)
 
 const labelEl = document.getElementById('three-bg-label');
 const labelTxt = labelEl?.querySelector('[data-cn]');
@@ -496,30 +497,52 @@ function animate() {
   const rebuildEvery = mouseStrength > 0.2 ? 4 : 6;
   if (frameCount % rebuildEvery === 0) buildLines();
 
-  // Constellations en arrière-plan : fade in (1.4s) → hold → fade out (1.4s) → switch
+  // Constellations en arrière-plan : fade in → hold → fade out → switch
+  // + effet de zoom avant/arrière sur les côtés (scaleX) pendant les transitions
   constTimer += dt;
   const hold = CONST_INTERVAL - 2 * CONST_FADE;
   let alpha;
+  let zoomScale = 1;
   if (constTimer < CONST_FADE) {
-    alpha = (constTimer / CONST_FADE) * CONST_PEAK_OP;
+    // Fade in : opacity 0→peak, scaleX 1+amp → 1 (zoom avant, les côtés se resserrent)
+    const p = constTimer / CONST_FADE;
+    const eased = 1 - Math.pow(1 - p, 3);  // easeOutCubic
+    alpha = p * CONST_PEAK_OP;
+    zoomScale = 1 + CONST_ZOOM_AMP * (1 - eased);
   } else if (constTimer < CONST_FADE + hold) {
     alpha = CONST_PEAK_OP;
+    zoomScale = 1;
   } else if (constTimer < CONST_INTERVAL) {
-    alpha = (1 - (constTimer - CONST_FADE - hold) / CONST_FADE) * CONST_PEAK_OP;
+    // Fade out : opacity peak→0, scaleX 1 → 1+amp (zoom arrière, les côtés s'écartent)
+    const p = (constTimer - CONST_FADE - hold) / CONST_FADE;
+    const eased = Math.pow(p, 2);  // easeInQuad
+    alpha = (1 - p) * CONST_PEAK_OP;
+    zoomScale = 1 + CONST_ZOOM_AMP * eased;
   } else {
-    // Switch — masque l'ancienne, passe à la suivante
-    setConstellationAlpha(CONSTELLATIONS[constIdx], 0);
+    // Switch — masque/reset l'ancienne, passe à la suivante
+    const old = CONSTELLATIONS[constIdx];
+    setConstellationAlpha(old, 0);
+    old.group.scale.set(1, 1, 1);
     constIdx = (constIdx + 1) % CONSTELLATIONS.length;
     constTimer = 0;
     alpha = 0;
+    zoomScale = 1 + CONST_ZOOM_AMP;  // démarre élargi (effet "zoom in" à venir)
   }
   // Légère rotation lente du groupe pour donner de la vie
   const cur = CONSTELLATIONS[constIdx];
   cur.group.rotation.z = Math.sin(t * 0.05) * 0.04;
+  // Applique le zoom : scaleX étend les côtés, scaleY/Z restent neutres
+  cur.group.scale.x = zoomScale;
+  cur.group.scale.y = 1 + (zoomScale - 1) * 0.25;  // léger effet vertical pour cohérence
   setConstellationAlpha(cur, alpha);
 
-  // Masque les autres (au cas où après resize/HMR)
-  CONSTELLATIONS.forEach((c, i) => { if (i !== constIdx) setConstellationAlpha(c, 0); });
+  // Masque les autres + reset leur scale (au cas où après resize/HMR)
+  CONSTELLATIONS.forEach((c, i) => {
+    if (i !== constIdx) {
+      setConstellationAlpha(c, 0);
+      c.group.scale.set(1, 1, 1);
+    }
+  });
 
   // Label HTML (apparaît avec la constellation)
   if (labelEl && labelTxt) {
