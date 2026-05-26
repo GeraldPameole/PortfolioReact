@@ -72,11 +72,22 @@ const pageTitle = `${title} | Gérald Paméole`;
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
+  <!-- Polices : chargement non bloquant via media=print puis onload -->
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap"
+    media="print"
+    onload="this.media='all'"
+  />
+  <noscript>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap"
+    />
+  </noscript>
+
   <!-- JSON-LD structured data -->
   <script type="application/ld+json" set:html={JSON.stringify(jsonLd ?? personSchema)} />
-
-  <!-- Plausible Analytics (privacy-first, no cookie consent needed) -->
-  <script defer data-domain="geraldpameole.fr" src="https://plausible.io/js/script.js"></script>
 
   <slot name="head" />
   <ViewTransitions fallback="swap" />
@@ -102,6 +113,7 @@ const pageTitle = `${title} | Gérald Paméole`;
     }
   </script>
 
+  <script defer data-domain="geraldpameole.fr" src="https://plausible.io/js/script.js"></script>
   <slot name="scripts" />
 </body>
 </html>

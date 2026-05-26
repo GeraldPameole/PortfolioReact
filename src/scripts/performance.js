@@ -93,17 +93,8 @@ if (!isBrowser) {
 
   // Différer le chargement des ressources non critiques
   function deferNonCriticalResources() {
-    // Charger les polices non essentielles après le chargement de la page
-    if (document.fonts) {
-      document.fonts.ready.then(() => {
-        // Charger les polices supplémentaires
-        const fontLink = document.createElement("link");
-        fontLink.rel = "stylesheet";
-        fontLink.href =
-          "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap";
-        document.head.appendChild(fontLink);
-      });
-    }
+    // (Roboto n'est utilisé que comme police système de secours, pas comme
+    //  webfont — inutile de la télécharger. Bloc supprimé.)
 
     // Charger les scripts non essentiels après le chargement de la page
     window.addEventListener("load", () => {
