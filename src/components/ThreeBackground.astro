@@ -239,6 +239,292 @@ const starMat = new THREE.PointsMaterial({
 const starfield = new THREE.Points(starGeo, starMat);
 scene.add(starfield);
 
+// ── Voie lactée : bande galactique en arrière-plan ───────────────────────────
+// Concentration d'étoiles le long d'une bande inclinée — évocation visuelle
+// de la Voie lactée vue depuis la Terre.
+const MILKY_COUNT = 700;
+const milkyPositions = new Float32Array(MILKY_COUNT * 3);
+const milkyColors    = new Float32Array(MILKY_COUNT * 3);
+const milkyCenter  = new THREE.Color(0xffe9bf);   // crème (centre dense)
+const milkyEdge    = new THREE.Color(0x6da3ff);   // bleuté (bords)
+for (let i = 0; i < MILKY_COUNT; i++) {
+  // Distribution gaussienne le long d'une bande inclinée ~25°
+  const along = (Math.random() - 0.5) * 160;
+  const across = (Math.random() + Math.random() + Math.random() - 1.5) * 6;  // gauss-like
+  const tilt = Math.PI / 7;
+  const x = along * Math.cos(tilt) - across * Math.sin(tilt);
+  const y = along * Math.sin(tilt) + across * Math.cos(tilt);
+  milkyPositions[i * 3]     = x;
+  milkyPositions[i * 3 + 1] = y - 8;  // décalée en bas
+  milkyPositions[i * 3 + 2] = -70 - Math.random() * 25;  // très loin
+
+  const tIntensity = 1 - Math.abs(across) / 9;  // brillant au centre, sombre aux bords
+  const col = milkyCenter.clone().lerp(milkyEdge, Math.abs(across) / 9);
+  const k = 0.35 + tIntensity * 0.55;
+  milkyColors[i * 3]     = col.r * k;
+  milkyColors[i * 3 + 1] = col.g * k;
+  milkyColors[i * 3 + 2] = col.b * k;
+}
+const milkyGeo = new THREE.BufferGeometry();
+milkyGeo.setAttribute('position', new THREE.BufferAttribute(milkyPositions, 3));
+milkyGeo.setAttribute('color',    new THREE.BufferAttribute(milkyColors, 3));
+const milkyMat = new THREE.PointsMaterial({
+  size: 0.85,
+  vertexColors: true,
+  transparent: true,
+  opacity: 0.55,
+  sizeAttenuation: true,
+  blending: THREE.AdditiveBlending,
+  depthWrite: false,
+});
+const milkyway = new THREE.Points(milkyGeo, milkyMat);
+scene.add(milkyway);
+
+// ── Objets cosmiques (synchronisés avec les constellations) ──────────────────
+// Chaque type est créé une fois, placé à z lointain, montré/caché au fil des
+// constellations avec des couleurs/dégradés correspondant à la réalité astro.
+const COSMIC_Z = -42;
+const cosmicLayer = new THREE.Group();
+scene.add(cosmicLayer);
+
+// Helper : place un objet à une position aléatoire sur les côtés
+function randomCosmicPosition() {
+  const side = Math.random() < 0.5 ? -1 : 1;
+  return {
+    x: side * (12 + Math.random() * 8),
+    y: (Math.random() - 0.5) * 10,
+    z: COSMIC_Z + (Math.random() - 0.5) * 8,
+  };
+}
+
+// 1. TROU NOIR — disque d'accrétion orange/rouge + horizon noir
+function makeBlackHole() {
+  const g = new THREE.Group();
+  const horizon = new THREE.Mesh(
+    new THREE.SphereGeometry(2, 28, 28),
+    new THREE.MeshBasicMaterial({ color: 0x000000, transparent: true, opacity: 0 }),
+  );
+  g.add(horizon);
+  const disk = new THREE.Mesh(
+    new THREE.RingGeometry(2.3, 4.8, 96),
+    new THREE.MeshBasicMaterial({ color: 0xff8800, side: THREE.DoubleSide, transparent: true, opacity: 0, blending: THREE.AdditiveBlending }),
+  );
+  disk.rotation.x = Math.PI / 2.3;
+  g.add(disk);
+  const halo = new THREE.Mesh(
+    new THREE.RingGeometry(4.8, 6.5, 64),
+    new THREE.MeshBasicMaterial({ color: 0xff4400, side: THREE.DoubleSide, transparent: true, opacity: 0, blending: THREE.AdditiveBlending }),
+  );
+  halo.rotation.x = Math.PI / 2.3;
+  g.add(halo);
+  return { group: g, type: 'blackhole', mats: [
+    { m: horizon.material, peak: 0.95 },
+    { m: disk.material,    peak: 0.75 },
+    { m: halo.material,    peak: 0.3  },
+  ], animate: (t) => { disk.rotation.z = t * 0.4; halo.rotation.z = -t * 0.2; } };
+}
+
+// 2. GALAXIE SPIRALE — centre jaune-or, bras bleus
+function makeGalaxy() {
+  const g = new THREE.Group();
+  const COUNT = 900;
+  const ARMS = 3;
+  const positions = new Float32Array(COUNT * 3);
+  const colors    = new Float32Array(COUNT * 3);
+  const centerC = new THREE.Color(0xffd9a0);
+  const armC    = new THREE.Color(0x6da3ff);
+  for (let i = 0; i < COUNT; i++) {
+    const arm = i % ARMS;
+    const r = Math.pow(Math.random(), 0.7) * 7;
+    const a = arm * (2 * Math.PI / ARMS) + r * 0.85 + (Math.random() - 0.5) * 0.5;
+    positions[i*3]   = Math.cos(a) * r;
+    positions[i*3+1] = Math.sin(a) * r * 0.65;
+    positions[i*3+2] = (Math.random() - 0.5) * 0.7;
+    const col = centerC.clone().lerp(armC, Math.min(1, r / 6));
+    colors[i*3]   = col.r;
+    colors[i*3+1] = col.g;
+    colors[i*3+2] = col.b;
+  }
+  const geo = new THREE.BufferGeometry();
+  geo.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+  geo.setAttribute('color',    new THREE.BufferAttribute(colors, 3));
+  const mat = new THREE.PointsMaterial({ size: 0.22, vertexColors: true, transparent: true, opacity: 0, blending: THREE.AdditiveBlending, sizeAttenuation: true, depthWrite: false });
+  const points = new THREE.Points(geo, mat);
+  g.add(points);
+  g.rotation.x = -0.5;
+  return { group: g, type: 'galaxy', mats: [{ m: mat, peak: 0.85 }], animate: (t) => { g.rotation.z = t * 0.06; } };
+}
+
+// 3. NÉBULEUSE — nuages violet/rose/cyan (formation stellaire)
+function makeNebula() {
+  const g = new THREE.Group();
+  const COUNT = 600;
+  const positions = new Float32Array(COUNT * 3);
+  const colors    = new Float32Array(COUNT * 3);
+  const palette = [
+    new THREE.Color(0xa855f7),  // violet
+    new THREE.Color(0xec4899),  // rose
+    new THREE.Color(0x06b6d4),  // cyan
+    new THREE.Color(0xf472b6),  // rose clair
+  ];
+  for (let i = 0; i < COUNT; i++) {
+    // Blob 3D gaussien
+    const r = (Math.random() + Math.random() + Math.random()) / 3 * 5;
+    const theta = Math.random() * Math.PI * 2;
+    const phi   = Math.acos(2 * Math.random() - 1);
+    positions[i*3]   = r * Math.sin(phi) * Math.cos(theta);
+    positions[i*3+1] = r * Math.sin(phi) * Math.sin(theta) * 0.8;
+    positions[i*3+2] = r * Math.cos(phi) * 0.5;
+    const col = palette[Math.floor(Math.random() * palette.length)];
+    const k = 0.5 + Math.random() * 0.5;
+    colors[i*3]   = col.r * k;
+    colors[i*3+1] = col.g * k;
+    colors[i*3+2] = col.b * k;
+  }
+  const geo = new THREE.BufferGeometry();
+  geo.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+  geo.setAttribute('color',    new THREE.BufferAttribute(colors, 3));
+  const mat = new THREE.PointsMaterial({ size: 0.55, vertexColors: true, transparent: true, opacity: 0, blending: THREE.AdditiveBlending, sizeAttenuation: true, depthWrite: false });
+  const points = new THREE.Points(geo, mat);
+  g.add(points);
+  return { group: g, type: 'nebula', mats: [{ m: mat, peak: 0.7 }], animate: (t) => { g.rotation.z = Math.sin(t * 0.08) * 0.15; } };
+}
+
+// 4. PULSAR — étoile à neutrons + 2 jets bipolaires rotatifs
+function makePulsar() {
+  const g = new THREE.Group();
+  const core = new THREE.Mesh(
+    new THREE.SphereGeometry(0.5, 20, 20),
+    new THREE.MeshBasicMaterial({ color: 0xffffff, transparent: true, opacity: 0 }),
+  );
+  g.add(core);
+  const halo = new THREE.Mesh(
+    new THREE.SphereGeometry(1.2, 20, 20),
+    new THREE.MeshBasicMaterial({ color: 0xb5e0ff, transparent: true, opacity: 0, blending: THREE.AdditiveBlending }),
+  );
+  g.add(halo);
+  // 2 jets coniques opposés
+  const jetGeo = new THREE.ConeGeometry(0.6, 6, 24, 1, true);
+  const jetMat = new THREE.MeshBasicMaterial({ color: 0x9ec3ff, transparent: true, opacity: 0, blending: THREE.AdditiveBlending, side: THREE.DoubleSide });
+  const jet1 = new THREE.Mesh(jetGeo, jetMat);
+  const jet2 = new THREE.Mesh(jetGeo, jetMat);
+  jet1.position.y = 3.5;
+  jet2.position.y = -3.5;
+  jet2.rotation.z = Math.PI;
+  g.add(jet1, jet2);
+  return { group: g, type: 'pulsar', mats: [
+    { m: core.material, peak: 1.0 },
+    { m: halo.material, peak: 0.5 },
+    { m: jetMat,        peak: 0.45 },
+  ], animate: (t) => { g.rotation.y = t * 1.2; } };
+}
+
+// 5. SUPERNOVA — anneau d'onde de choc en expansion (rouge/jaune)
+function makeSupernova() {
+  const g = new THREE.Group();
+  const core = new THREE.Mesh(
+    new THREE.SphereGeometry(0.6, 18, 18),
+    new THREE.MeshBasicMaterial({ color: 0xfde68a, transparent: true, opacity: 0, blending: THREE.AdditiveBlending }),
+  );
+  g.add(core);
+  const ring = new THREE.Mesh(
+    new THREE.TorusGeometry(3, 0.25, 16, 80),
+    new THREE.MeshBasicMaterial({ color: 0xfb923c, transparent: true, opacity: 0, blending: THREE.AdditiveBlending }),
+  );
+  g.add(ring);
+  const ring2 = new THREE.Mesh(
+    new THREE.TorusGeometry(4.5, 0.18, 12, 60),
+    new THREE.MeshBasicMaterial({ color: 0xef4444, transparent: true, opacity: 0, blending: THREE.AdditiveBlending }),
+  );
+  ring2.rotation.x = 0.3;
+  g.add(ring2);
+  return { group: g, type: 'supernova', mats: [
+    { m: core.material,  peak: 0.95 },
+    { m: ring.material,  peak: 0.7  },
+    { m: ring2.material, peak: 0.45 },
+  ], animate: (t) => { ring.rotation.z = t * 0.15; ring2.rotation.z = -t * 0.1; } };
+}
+
+// 6. AMAS GLOBULAIRE — concentration dense d'étoiles vieilles (jaune-blanc)
+function makeCluster() {
+  const g = new THREE.Group();
+  const COUNT = 500;
+  const positions = new Float32Array(COUNT * 3);
+  const colors    = new Float32Array(COUNT * 3);
+  const palette = [new THREE.Color(0xfef9c3), new THREE.Color(0xffe9bf), new THREE.Color(0xffffff)];
+  for (let i = 0; i < COUNT; i++) {
+    // Distribution sphérique très concentrée au centre
+    const r = Math.pow(Math.random(), 2.5) * 3.5;
+    const theta = Math.random() * Math.PI * 2;
+    const phi   = Math.acos(2 * Math.random() - 1);
+    positions[i*3]   = r * Math.sin(phi) * Math.cos(theta);
+    positions[i*3+1] = r * Math.sin(phi) * Math.sin(theta);
+    positions[i*3+2] = r * Math.cos(phi);
+    const col = palette[Math.floor(Math.random() * palette.length)];
+    const k = 0.6 + Math.random() * 0.4;
+    colors[i*3]   = col.r * k;
+    colors[i*3+1] = col.g * k;
+    colors[i*3+2] = col.b * k;
+  }
+  const geo = new THREE.BufferGeometry();
+  geo.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+  geo.setAttribute('color',    new THREE.BufferAttribute(colors, 3));
+  const mat = new THREE.PointsMaterial({ size: 0.18, vertexColors: true, transparent: true, opacity: 0, blending: THREE.AdditiveBlending, sizeAttenuation: true, depthWrite: false });
+  const points = new THREE.Points(geo, mat);
+  g.add(points);
+  return { group: g, type: 'cluster', mats: [{ m: mat, peak: 0.9 }], animate: () => {} };
+}
+
+// 7. COMÈTE — noyau + traînée de gaz/poussière (bleu pâle)
+function makeComet() {
+  const g = new THREE.Group();
+  const nucleus = new THREE.Mesh(
+    new THREE.SphereGeometry(0.35, 16, 16),
+    new THREE.MeshBasicMaterial({ color: 0xe0f2fe, transparent: true, opacity: 0, blending: THREE.AdditiveBlending }),
+  );
+  g.add(nucleus);
+  // Queue : cône allongé translucide
+  const tailGeo = new THREE.ConeGeometry(0.9, 8, 20, 1, true);
+  const tailMat = new THREE.MeshBasicMaterial({ color: 0x93c5fd, transparent: true, opacity: 0, blending: THREE.AdditiveBlending, side: THREE.DoubleSide });
+  const tail = new THREE.Mesh(tailGeo, tailMat);
+  tail.position.x = -4;
+  tail.rotation.z = Math.PI / 2;
+  g.add(tail);
+  // Coma
+  const coma = new THREE.Mesh(
+    new THREE.SphereGeometry(0.9, 18, 18),
+    new THREE.MeshBasicMaterial({ color: 0xbfdbfe, transparent: true, opacity: 0, blending: THREE.AdditiveBlending }),
+  );
+  g.add(coma);
+  return { group: g, type: 'comet', mats: [
+    { m: nucleus.material, peak: 0.95 },
+    { m: tail.material,    peak: 0.5  },
+    { m: coma.material,    peak: 0.4  },
+  ], animate: (t) => { g.rotation.z = Math.sin(t * 0.15) * 0.1; } };
+}
+
+const COSMIC_FACTORIES = {
+  blackhole: makeBlackHole,
+  galaxy:    makeGalaxy,
+  nebula:    makeNebula,
+  pulsar:    makePulsar,
+  supernova: makeSupernova,
+  cluster:   makeCluster,
+  comet:     makeComet,
+};
+const COSMIC_OBJECTS = {};
+Object.entries(COSMIC_FACTORIES).forEach(([type, factory]) => {
+  const obj = factory();
+  obj.group.visible = true;
+  cosmicLayer.add(obj.group);
+  COSMIC_OBJECTS[type] = obj;
+});
+
+// Helper: set opacity globale sur tous les matériaux d'un objet
+function setCosmicAlpha(obj, alpha) {
+  obj.mats.forEach(entry => { entry.m.opacity = entry.peak * alpha; });
+}
+
 // ── Resize ────────────────────────────────────────────────────────────────────
 let rebuildTimer;
 function onResize() {
@@ -258,6 +544,30 @@ window.addEventListener('resize', onResize, { passive: true });
 const BG_Z          = -28;
 const CONST_SCALE_X = 22;
 const CONST_SCALE_Y = 11;
+
+// Mapping constellation → objet cosmique pertinent (basé sur l'astronomie réelle
+// quand possible : ex. Voiles ↔ Nébuleuse des Voiles, Cygne ↔ Cygnus X-1 trou noir,
+// Hercule ↔ M13 amas globulaire, Taureau ↔ Pléiades, Orion ↔ Nébuleuse M42,
+// Cassiopée ↔ Cas A supernova, Gémeaux ↔ Geminga pulsar, Lyre ↔ M57 Anneau)
+const CONSTELLATION_COSMIC = {
+  'Hydre':         'galaxy',     // dans l'Hydre : galaxie M83
+  'Éridan':        'comet',      // le fleuve mythologique → trajectoire d'une comète
+  'Centaure':      'cluster',    // Oméga Centauri, amas globulaire
+  'Poupe':         'comet',      // navire & comète errante
+  'Carène':        'pulsar',     // Canopus, étoile très brillante
+  'Voiles':        'supernova',  // Nébuleuse des Voiles (Vela SNR)
+  'Hercule':       'cluster',    // M13, le grand amas globulaire
+  'Grande Ourse':  'galaxy',     // M81/M82, célèbres galaxies
+  'Petite Ourse':  'pulsar',     // Polaris, étoile guide brillante
+  'Orion':         'nebula',     // Nébuleuse d'Orion M42
+  'Cassiopée':     'supernova',  // Cas A, supernova historique
+  'Cygne':         'blackhole',  // Cygnus X-1, 1er trou noir identifié
+  'Lion':          'galaxy',     // le Triplet du Lion
+  'Scorpion':      'supernova',  // Antarès, future supernova
+  'Taureau':       'nebula',     // Nébuleuse du Crabe (M1)
+  'Gémeaux':       'pulsar',     // Geminga, célèbre pulsar
+  'Lyre':          'nebula',     // Nébuleuse de l'Anneau M57
+};
 
 const CONSTELLATIONS = [
   // ── Les 7 grandes/complexes (déjà présentes) ────────────────────────────────
@@ -625,6 +935,18 @@ function animate() {
     constTimer = 0;
     alpha = 0;
     zoomScale = 1 + CONST_ZOOM_AMP;  // démarre élargi (effet "zoom in" à venir)
+
+    // Repositionne l'objet cosmique associé à la nouvelle constellation
+    const newCur = CONSTELLATIONS[constIdx];
+    const cosmicType = CONSTELLATION_COSMIC[newCur.name];
+    if (cosmicType && COSMIC_OBJECTS[cosmicType]) {
+      const obj = COSMIC_OBJECTS[cosmicType];
+      const pos = randomCosmicPosition();
+      obj.group.position.set(pos.x, pos.y, pos.z);
+      // Échelle aléatoire pour varier
+      const s = 0.7 + Math.random() * 0.5;
+      obj.group.scale.set(s, s, s);
+    }
   }
   // Légère rotation lente du groupe pour donner de la vie
   const cur = CONSTELLATIONS[constIdx];
@@ -639,6 +961,18 @@ function animate() {
     if (i !== constIdx) {
       setConstellationAlpha(c, 0);
       c.group.scale.set(1, 1, 1);
+    }
+  });
+
+  // Objet cosmique associé : opacity synchronisée avec la constellation
+  const activeCosmicType = CONSTELLATION_COSMIC[cur.name];
+  const cosmicAlpha = Math.min(1, alpha / CONST_PEAK_OP);
+  Object.entries(COSMIC_OBJECTS).forEach(([type, obj]) => {
+    if (type === activeCosmicType) {
+      setCosmicAlpha(obj, cosmicAlpha);
+      obj.animate(t);
+    } else {
+      setCosmicAlpha(obj, 0);
     }
   });
 
