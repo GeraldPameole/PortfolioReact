@@ -968,11 +968,34 @@ function setConstellationAlpha(c, alpha) {
 }
 
 // ── Animation loop ────────────────────────────────────────────────────────────
+// Boucle pausable (hors-vue / onglet caché) + plafonnée à ~30 fps : un fond
+// décoratif n'a pas besoin de 60 fps, et libérer le main-thread corrige TBT/TTI.
 let frameCount = 0;
 const clock = new THREE.Clock();
+let running = false;
+let rafId = 0;
+let lastFrame = 0;
+const FRAME_MS = 33;            // ~30 fps
+
+function loop(now) {
+  if (!running) return;
+  rafId = requestAnimationFrame(loop);
+  if (now - lastFrame < FRAME_MS) return;   // plafonne le framerate
+  lastFrame = now;
+  animate();
+}
+function startLoop() {
+  if (running) return;
+  running = true;
+  clock.getDelta();            // reset le delta pour éviter un saut de dt après pause
+  rafId = requestAnimationFrame(loop);
+}
+function stopLoop() {
+  running = false;
+  cancelAnimationFrame(rafId);
+}
 
 function animate() {
-  requestAnimationFrame(animate);
   const t  = clock.getElapsedTime();
   const dt = Math.min(0.033, clock.getDelta() || 0.016);
   frameCount++;
@@ -1181,8 +1204,8 @@ function animate() {
     labelEl.style.opacity = String(Math.min(1, alpha / CONST_PEAK_OP * 0.95));
   }
 
-  // Update positions des pills DOM (projection 3D → écran)
-  updateCosmicPills();
+  // Update positions des pills DOM (projection 3D → écran) — 1 frame sur 2
+  if (frameCount % 2 === 0) updateCosmicPills();
 
   // Intro zoom cosmique : caméra recule de l'échelle humaine (z=4) vers
   // l'échelle cosmique (z=28) avec easing easeOutQuart, puis orbite douce.
@@ -1205,6 +1228,17 @@ function animate() {
   renderer.render(scene, camera);
 }
 
-animate();
+// Pause la boucle quand le hero sort du viewport (scroll) ou que l'onglet est
+// caché → rend le main-thread idle, ce que Lighthouse récompense (TTI/TBT).
+if ('IntersectionObserver' in window) {
+  new IntersectionObserver((entries) => {
+    entries[0].isIntersecting ? startLoop() : stopLoop();
+  }, { threshold: 0 }).observe(canvas);
+}
+document.addEventListener('visibilitychange', () => {
+  document.hidden ? stopLoop() : startLoop();
+});
+
+startLoop();
 } // fin initScene
 </script>
