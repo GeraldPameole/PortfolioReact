@@ -1,8 +1,9 @@
 ---
 ---
 <canvas id="three-bg" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;z-index:0;pointer-events:none;"></canvas>
-<div id="three-bg-label" aria-hidden="true" style="position:absolute;bottom:1.5rem;right:1.5rem;z-index:1;font-family:'JetBrains Mono',monospace;font-size:.72rem;letter-spacing:.12em;color:#b4c5ff;opacity:0;transition:opacity .6s ease;pointer-events:none;text-transform:uppercase;text-shadow:0 0 8px rgba(180,197,255,.3);">
-  <span data-cn></span>
+<div id="three-bg-label" aria-hidden="true" style="position:absolute;bottom:1.5rem;right:1.5rem;z-index:1;max-width:340px;font-family:'JetBrains Mono',monospace;color:#b4c5ff;opacity:0;transition:opacity .6s ease;pointer-events:none;text-shadow:0 0 8px rgba(180,197,255,.35);text-align:right;">
+  <div data-cn-name style="font-size:.95rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;line-height:1.2;margin-bottom:.35rem;color:#fff;"></div>
+  <div data-cn-fact style="font-size:.72rem;line-height:1.5;letter-spacing:.04em;color:#9fb3df;"></div>
 </div>
 
 <script type="module">
@@ -185,49 +186,58 @@ const ico2 = new THREE.Mesh(ico2Geo, ico2Mat);
 ico2.rotation.z = 0.5;
 scene.add(ico2);
 
-// ── Mouse tracking : NDC → monde projeté sur le plan z=0 ──────────────────────
-const mouseNDC = new THREE.Vector2(0, 0);  // -1..1
-const mouseWorld = new THREE.Vector3();
-const raycaster = new THREE.Raycaster();
-const trackPlane = new THREE.Plane(new THREE.Vector3(0, 0, 1), 0);
-let mouseActive = false;
-let mouseStrength = 0;  // 0..1, monte quand la souris bouge, décroît sinon
+// ── Fond étoilé profond (vraie profondeur d'espace) ───────────────────────────
+// Sphère stellaire lointaine, statique mais qui "twinkle" via opacity sinusoïdale.
+const STARFIELD_COUNT = 1200;
+const STARFIELD_RADIUS = 90;          // profondeur réelle de l'espace
+const starPositions = new Float32Array(STARFIELD_COUNT * 3);
+const starColors    = new Float32Array(STARFIELD_COUNT * 3);
+const starSizes     = new Float32Array(STARFIELD_COUNT);
+const starPhases    = new Float32Array(STARFIELD_COUNT);
+const starColorPalette = [
+  new THREE.Color(0xffffff),
+  new THREE.Color(0xc8d6ff),  // bleuté
+  new THREE.Color(0xffe9c0),  // jaunâtre
+  new THREE.Color(0xffd0b5),  // orangé
+  new THREE.Color(0xbfd3ff),
+];
+for (let i = 0; i < STARFIELD_COUNT; i++) {
+  // Distribution sphérique uniforme (méthode acos)
+  const u = Math.random();
+  const v = Math.random();
+  const theta = 2 * Math.PI * u;
+  const phi   = Math.acos(2 * v - 1);
+  const r     = STARFIELD_RADIUS * (0.7 + Math.random() * 0.6);
+  starPositions[i * 3]     = r * Math.sin(phi) * Math.cos(theta);
+  starPositions[i * 3 + 1] = r * Math.sin(phi) * Math.sin(theta);
+  starPositions[i * 3 + 2] = r * Math.cos(phi);
 
-function updateMouseWorld() {
-  raycaster.setFromCamera(mouseNDC, camera);
-  raycaster.ray.intersectPlane(trackPlane, mouseWorld);
+  const col = starColorPalette[Math.floor(Math.random() * starColorPalette.length)];
+  // Variation d'intensité aléatoire
+  const intensity = 0.4 + Math.random() * 0.6;
+  starColors[i * 3]     = col.r * intensity;
+  starColors[i * 3 + 1] = col.g * intensity;
+  starColors[i * 3 + 2] = col.b * intensity;
+
+  // Tailles variables (quelques étoiles brillantes, majorité petites)
+  starSizes[i] = Math.random() < 0.04 ? 1.6 + Math.random() * 0.8 : 0.4 + Math.random() * 0.6;
+  starPhases[i] = Math.random() * Math.PI * 2;
 }
-
-window.addEventListener('mousemove', e => {
-  const rect = canvas.getBoundingClientRect();
-  // Si la souris n'est pas dans la zone du canvas → on l'ignore comme cible
-  // (sinon les nodes seraient attirés hors écran)
-  const insideX = e.clientX >= rect.left && e.clientX <= rect.right;
-  const insideY = e.clientY >= rect.top  && e.clientY <= rect.bottom;
-  if (insideX && insideY) {
-    mouseNDC.x = ((e.clientX - rect.left) / rect.width)  * 2 - 1;
-    mouseNDC.y = -(((e.clientY - rect.top) / rect.height) * 2 - 1);
-    mouseActive = true;
-    mouseStrength = Math.min(1, mouseStrength + 0.25);
-  } else {
-    mouseActive = false;
-  }
-}, { passive: true });
-
-window.addEventListener('mouseleave', () => { mouseActive = false; });
-
-// Touch support : on suit le doigt
-window.addEventListener('touchmove', e => {
-  if (!e.touches[0]) return;
-  const rect = canvas.getBoundingClientRect();
-  const t = e.touches[0];
-  if (t.clientX >= rect.left && t.clientX <= rect.right && t.clientY >= rect.top && t.clientY <= rect.bottom) {
-    mouseNDC.x = ((t.clientX - rect.left) / rect.width)  * 2 - 1;
-    mouseNDC.y = -(((t.clientY - rect.top) / rect.height) * 2 - 1);
-    mouseActive = true;
-    mouseStrength = Math.min(1, mouseStrength + 0.25);
-  }
-}, { passive: true });
+const starGeo = new THREE.BufferGeometry();
+starGeo.setAttribute('position', new THREE.BufferAttribute(starPositions, 3));
+starGeo.setAttribute('color',    new THREE.BufferAttribute(starColors, 3));
+starGeo.setAttribute('size',     new THREE.BufferAttribute(starSizes, 1));
+const starMat = new THREE.PointsMaterial({
+  size: 0.6,
+  vertexColors: true,
+  transparent: true,
+  opacity: 0.9,
+  sizeAttenuation: true,
+  blending: THREE.AdditiveBlending,
+  depthWrite: false,
+});
+const starfield = new THREE.Points(starGeo, starMat);
+scene.add(starfield);
 
 // ── Resize ────────────────────────────────────────────────────────────────────
 let rebuildTimer;
@@ -250,9 +260,10 @@ const CONST_SCALE_X = 22;
 const CONST_SCALE_Y = 11;
 
 const CONSTELLATIONS = [
+  // ── Les 7 grandes/complexes (déjà présentes) ────────────────────────────────
   {
-    name: 'Hydra',
-    label: "Hydre · 1303°² · la plus grande",
+    name: 'Hydre',
+    fact: "La plus grande constellation du ciel (1303°²) · 68 étoiles à l'œil nu · s'étend sur 100° du ciel · visible de janvier à juin",
     stars: [
       [-0.92,  0.55], [-0.82, 0.65], [-0.78, 0.48], [-0.7, 0.6],
       [-0.55, 0.42], [-0.35, 0.2], [-0.15, 0.05], [0.05, -0.08],
@@ -262,8 +273,8 @@ const CONSTELLATIONS = [
     specials: [],
   },
   {
-    name: 'Eridanus',
-    label: "Éridan · 1138°² · Achernar",
+    name: 'Éridan',
+    fact: "6ᵉ plus grande (1138°²) · le fleuve mythologique du nord au sud · Achernar, étoile bleue très brillante (mag. 0,46)",
     stars: [
       [0.7, 0.85], [0.5, 0.72], [0.6, 0.55], [0.4, 0.45],
       [0.5, 0.25], [0.3, 0.12], [0.1, -0.02], [-0.05, -0.22],
@@ -273,8 +284,8 @@ const CONSTELLATIONS = [
     specials: [{ index: 11, name: 'Achernar', size: 0.42 }],
   },
   {
-    name: 'Centaurus',
-    label: "Centaure · α Centauri",
+    name: 'Centaure',
+    fact: "9ᵉ plus grande · abrite α Centauri, système stellaire le plus proche du Soleil (4,37 al) · Oméga Centauri, amas globulaire spectaculaire",
     stars: [
       [-0.65, 0.55], [-0.45, 0.45], [-0.25, 0.6], [-0.05, 0.35],
       [0.18, 0.5], [0.3, 0.18], [0.45, -0.02],
@@ -285,8 +296,8 @@ const CONSTELLATIONS = [
     specials: [{ index: 11, name: 'α Centauri', size: 0.48 }],
   },
   {
-    name: 'Puppis',
-    label: "Poupe · ex-Navire Argo",
+    name: 'Poupe',
+    fact: "Partie arrière du Navire Argo (constellation antique divisée en 3) · ζ Puppis, étoile supergéante très chaude",
     stars: [
       [-0.55, 0.65], [-0.3, 0.78], [-0.05, 0.6], [0.18, 0.7],
       [0.05, 0.3], [-0.18, 0.15], [-0.42, 0.22], [-0.55, 0.0],
@@ -295,8 +306,8 @@ const CONSTELLATIONS = [
     specials: [],
   },
   {
-    name: 'Carina',
-    label: "Carène · Canopus",
+    name: 'Carène',
+    fact: "Quille du Navire Argo · contient Canopus, 2ᵉ étoile la plus brillante du ciel (mag. -0,74) après Sirius",
     stars: [
       [-0.7, -0.35], [-0.48, -0.48], [-0.18, -0.55], [0.1, -0.6],
       [0.4, -0.62], [0.65, -0.5], [0.48, -0.3], [0.18, -0.38],
@@ -306,8 +317,8 @@ const CONSTELLATIONS = [
     specials: [{ index: 8, name: 'Canopus', size: 0.55 }],
   },
   {
-    name: 'Vela',
-    label: "Voiles · ex-Navire Argo",
+    name: 'Voiles',
+    fact: "Les voiles du Navire Argo · contient la Nébuleuse des Voiles, vestige d'une supernova explosée il y a ~11 000 ans",
     stars: [
       [0.0, 0.65], [-0.32, 0.45], [-0.52, 0.2], [-0.42, -0.12],
       [-0.1, -0.05], [0.22, 0.18], [0.32, 0.45], [-0.02, 0.28],
@@ -316,8 +327,8 @@ const CONSTELLATIONS = [
     specials: [],
   },
   {
-    name: 'Hercules',
-    label: "Hercule · amas M13",
+    name: 'Hercule',
+    fact: "5ᵉ plus grande · forme complexe difficile à identifier · abrite M13, l'amas globulaire le plus spectaculaire de l'hémisphère nord",
     stars: [
       [-0.72, 0.72], [-0.42, 0.52], [-0.58, 0.32], [-0.22, 0.58],
       [-0.3, 0.1], [-0.08, 0.0], [0.12, 0.05],
@@ -327,6 +338,112 @@ const CONSTELLATIONS = [
     ],
     edges: [[0,1],[1,2],[2,3],[3,9],[9,10],[10,11],[1,4],[4,5],[5,6],[6,9],[5,7],[6,8]],
     specials: [{ index: 12, name: 'M13', size: 0.4 }],
+  },
+  // ── 10 constellations les plus connues du grand public ──────────────────────
+  {
+    name: 'Grande Ourse',
+    fact: "Astérisme de la Grande Casserole / Big Dipper · 7 étoiles emblématiques · Mizar, première étoile double historique découverte (1650)",
+    stars: [
+      [-0.55, 0.35], [-0.7, 0.18], [-0.6, -0.05], [-0.4, 0.12],
+      [-0.15, 0.2], [0.1, 0.35], [0.35, 0.45],
+    ],
+    edges: [[0,1],[1,2],[2,3],[3,0],[3,4],[4,5],[5,6]],
+    specials: [{ index: 5, name: 'Mizar', size: 0.4 }],
+  },
+  {
+    name: 'Petite Ourse',
+    fact: "Contient Polaris, l'étoile polaire qui indique le Nord vrai à <1° près · circumpolaire dans l'hémisphère nord",
+    stars: [
+      [-0.1, 0.85], [-0.15, 0.6], [-0.05, 0.4], [-0.1, 0.15],
+      [-0.05, -0.1], [-0.3, -0.05], [-0.3, 0.18],
+    ],
+    edges: [[0,1],[1,2],[2,3],[3,4],[4,5],[5,6],[6,2]],
+    specials: [{ index: 0, name: 'Polaris', size: 0.5 }],
+  },
+  {
+    name: 'Orion',
+    fact: "Le Chasseur · Bételgeuse (géante rouge en fin de vie) et Rigel (supergéante bleue) · Ceinture d'Orion · Nébuleuse M42 visible à l'œil nu",
+    stars: [
+      [-0.35, 0.55], [0.35, 0.5],          // Bételgeuse, Bellatrix
+      [-0.15, 0.05], [0.0, 0.0], [0.15, -0.05],  // Ceinture
+      [-0.4, -0.55], [0.35, -0.5],         // Saiph, Rigel
+    ],
+    edges: [[0,1],[0,2],[1,4],[2,3],[3,4],[2,5],[4,6],[5,6]],
+    specials: [
+      { index: 0, name: 'Bételgeuse', size: 0.5 },
+      { index: 6, name: 'Rigel',      size: 0.5 },
+    ],
+  },
+  {
+    name: 'Cassiopée',
+    fact: "Le W céleste · 5 étoiles formant un W (ou M selon saison) · circumpolaire et opposée à la Grande Ourse autour de Polaris",
+    stars: [
+      [-0.75, 0.05], [-0.45, 0.45], [-0.05, -0.05], [0.35, 0.35], [0.65, -0.05],
+    ],
+    edges: [[0,1],[1,2],[2,3],[3,4]],
+    specials: [],
+  },
+  {
+    name: 'Cygne',
+    fact: "La Croix du Nord · Deneb forme l'un des 3 sommets du Triangle d'été (avec Véga et Altaïr) · vole le long de la Voie lactée",
+    stars: [
+      [0.0, 0.75], [0.0, 0.25], [0.55, 0.15], [-0.55, 0.15], [0.0, -0.55],
+    ],
+    edges: [[0,1],[1,2],[1,3],[1,4]],
+    specials: [{ index: 0, name: 'Deneb', size: 0.5 }],
+  },
+  {
+    name: 'Lion',
+    fact: "Régulus, le « cœur du Lion » · faucille (tête) + triangle (arrière) · les Léonides, pluie de météores spectaculaire en novembre",
+    stars: [
+      [-0.45, -0.3], [-0.4, 0.0], [-0.6, 0.15], [-0.75, 0.35], [-0.55, 0.45], [-0.78, 0.55],
+      [0.2, 0.25], [0.3, -0.05], [0.65, 0.2],
+    ],
+    edges: [[5,3],[3,4],[4,2],[2,1],[1,0],[1,6],[6,8],[8,7],[7,0]],
+    specials: [{ index: 0, name: 'Régulus', size: 0.48 }],
+  },
+  {
+    name: 'Scorpion',
+    fact: "Antarès, géante rouge rivale de Mars (« anti-Arès ») · sa queue se termine par Shaula, le dard · zodiacale, visible en été",
+    stars: [
+      [-0.7, 0.55], [-0.55, 0.4], [-0.3, 0.3], [-0.1, 0.0],
+      [-0.18, -0.15], [0.1, -0.3], [0.3, -0.45], [0.55, -0.5], [0.75, -0.3],
+    ],
+    edges: [[0,1],[1,2],[2,3],[3,4],[4,5],[5,6],[6,7],[7,8]],
+    specials: [{ index: 3, name: 'Antarès', size: 0.5 }],
+  },
+  {
+    name: 'Taureau',
+    fact: "Aldébaran, l'œil rouge du Taureau · contient les Pléiades (M45, amas ouvert visible à l'œil nu) et les Hyades autour d'Aldébaran",
+    stars: [
+      [-0.55, 0.3], [-0.3, 0.15], [0.0, 0.0], [0.3, 0.2], [0.55, 0.4],
+      [-0.75, 0.55], [0.75, 0.7],
+    ],
+    edges: [[0,1],[1,2],[2,3],[3,4],[0,5],[4,6]],
+    specials: [{ index: 2, name: 'Aldébaran', size: 0.5 }],
+  },
+  {
+    name: 'Gémeaux',
+    fact: "Castor (système de 6 étoiles) et Pollux (géante orange) forment les têtes des jumeaux · zodiacale · pluie des Géminides en décembre",
+    stars: [
+      [-0.25, 0.65], [0.25, 0.55],
+      [-0.3, 0.25], [0.2, 0.18],
+      [-0.4, -0.3], [0.05, -0.4],
+    ],
+    edges: [[0,1],[0,2],[1,3],[2,4],[3,5],[4,5]],
+    specials: [
+      { index: 0, name: 'Castor', size: 0.42 },
+      { index: 1, name: 'Pollux', size: 0.45 },
+    ],
+  },
+  {
+    name: 'Lyre',
+    fact: "Véga, 2ᵉ étoile la plus brillante de l'hémisphère nord · contient la Nébuleuse de l'Anneau M57 et le Triangle d'été",
+    stars: [
+      [0.0, 0.6], [-0.18, 0.42], [0.18, 0.42], [-0.22, 0.05], [0.22, 0.1], [0.0, -0.3],
+    ],
+    edges: [[0,1],[0,2],[1,2],[1,3],[2,4],[3,5],[4,5],[3,4]],
+    specials: [{ index: 0, name: 'Véga', size: 0.55 }],
   },
 ];
 
@@ -393,10 +510,11 @@ let constTimer   = 0;
 const CONST_INTERVAL = 6;         // 6s par constellation (cycle complet)
 const CONST_FADE     = 0.9;       // 0.9s fade in / out
 const CONST_PEAK_OP  = 0.55;      // opacité max (en arrière-plan)
-const CONST_ZOOM_AMP = 0.45;      // amplitude du zoom des traits sur les côtés (X)
+const CONST_ZOOM_AMP = 1.0;       // amplitude du zoom des traits sur les côtés (très prononcé)
 
-const labelEl = document.getElementById('three-bg-label');
-const labelTxt = labelEl?.querySelector('[data-cn]');
+const labelEl     = document.getElementById('three-bg-label');
+const labelNameEl = labelEl?.querySelector('[data-cn-name]');
+const labelFactEl = labelEl?.querySelector('[data-cn-fact]');
 
 function setConstellationAlpha(c, alpha) {
   c.starsRef.forEach(s => {
@@ -428,21 +546,14 @@ function animate() {
     pickNextMode();
   }
 
-  // Decay mouse strength when no movement
-  if (!mouseActive) {
-    mouseStrength = Math.max(0, mouseStrength - dt * 0.6);
-  } else {
-    mouseStrength = Math.max(0, mouseStrength - dt * 0.15);
-  }
-  if (mouseStrength > 0.001) updateMouseWorld();
-
   // Mode params (interpolés)
-  const trackForce  = blendedNum('trackForce');
-  const trackRadius = blendedNum('trackRadius');
   const driftScale  = blendedNum('driftScale');
   const opacBase    = blendedNum('nodeOpacityBase');
   const opacAmp     = blendedNum('nodeOpacityAmp');
   const swirl       = blendedNum('swirl');
+
+  // Twinkle subtil du fond étoilé
+  starMat.opacity = 0.78 + 0.18 * Math.sin(t * 0.4);
 
   // Icosaèdres (forme terrestre, inchangée par le mode)
   ico.rotation.x  = t * 0.08;
@@ -466,18 +577,6 @@ function animate() {
     node.position.z += ud.vz * driftScale;
     node.position.y += Math.sin(t * 0.6 + ud.phase) * 0.002;
 
-    // Attraction vers la souris projetée
-    if (mouseStrength > 0.001) {
-      const dx = mouseWorld.x - node.position.x;
-      const dy = mouseWorld.y - node.position.y;
-      const d  = Math.sqrt(dx * dx + dy * dy);
-      if (d < trackRadius && d > 0.05) {
-        const k = (1 - d / trackRadius) * trackForce * mouseStrength;
-        node.position.x += dx * k * 60;
-        node.position.y += dy * k * 60;
-      }
-    }
-
     // Boundary wrap
     const B = SPREAD;
     if (node.position.x >  B) node.position.x = -B;
@@ -493,9 +592,8 @@ function animate() {
     node.material.opacity = opacBase + opacAmp * Math.sin(t * 1.2 + ud.phase);
   });
 
-  // Rebuild lines périodiquement (plus fréquent en mode actif)
-  const rebuildEvery = mouseStrength > 0.2 ? 4 : 6;
-  if (frameCount % rebuildEvery === 0) buildLines();
+  // Rebuild lines périodiquement
+  if (frameCount % 6 === 0) buildLines();
 
   // Constellations en arrière-plan : fade in → hold → fade out → switch
   // + effet de zoom avant/arrière sur les côtés (scaleX) pendant les transitions
@@ -545,14 +643,16 @@ function animate() {
   });
 
   // Label HTML (apparaît avec la constellation)
-  if (labelEl && labelTxt) {
-    labelTxt.textContent = cur.label;
-    labelEl.style.opacity = String(Math.min(1, alpha / CONST_PEAK_OP * 0.85));
+  if (labelEl && labelNameEl && labelFactEl) {
+    labelNameEl.textContent = cur.name;
+    labelFactEl.textContent = cur.fact;
+    labelEl.style.opacity = String(Math.min(1, alpha / CONST_PEAK_OP * 0.95));
   }
 
-  // Camera parallax léger (effet global, séparé du tracking des nodes)
-  camera.position.x += (mouseNDC.x * 3 - camera.position.x) * 0.03;
-  camera.position.y += (mouseNDC.y * 2 - camera.position.y) * 0.03;
+  // Rotation lente de la caméra autour du centre (effet "vol spatial")
+  const orbit = t * 0.025;
+  camera.position.x = Math.sin(orbit) * 1.8;
+  camera.position.y = Math.sin(t * 0.06) * 0.9;
   camera.lookAt(scene.position);
 
   renderer.render(scene, camera);
