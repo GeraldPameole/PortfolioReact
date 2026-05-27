@@ -28,7 +28,7 @@ const personSchema = {
   "@context": "https://schema.org",
   "@type": "Person",
   "name": "Gérald Paméole",
-  "url": "https://geraldpameole.fr",
+  "url": "https://geraldpameole.vercel.app",
   "jobTitle": "Chef de Projet Pilotage d'Activité & Expert en Digitalisation",
   "worksFor": { "@type": "Organization", "name": "KEOS TELECOM" },
   "sameAs": [
@@ -37,7 +37,7 @@ const personSchema = {
   ]
 };
 
-const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://geraldpameole.fr');
+const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://geraldpameole.vercel.app');
 const pageTitle = `${title} | Gérald Paméole`;
 ---
 
@@ -56,13 +56,13 @@ const pageTitle = `${title} | Gérald Paméole`;
   <meta property="og:description" content={description} />
   <meta property="og:type"        content={type} />
   <meta property="og:url"         content={canonicalURL} />
-  <meta property="og:image"       content={new URL(image, Astro.site || 'https://geraldpameole.fr')} />
+  <meta property="og:image"       content={new URL(image, Astro.site || 'https://geraldpameole.vercel.app')} />
   <meta property="og:site_name"   content="Gérald Paméole" />
 
   <meta name="twitter:card"        content="summary_large_image" />
   <meta name="twitter:title"       content={pageTitle} />
   <meta name="twitter:description" content={description} />
-  <meta name="twitter:image"       content={new URL(image, Astro.site || 'https://geraldpameole.fr')} />
+  <meta name="twitter:image"       content={new URL(image, Astro.site || 'https://geraldpameole.vercel.app')} />
 
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="canonical" href={canonicalURL} />
@@ -113,7 +113,7 @@ const pageTitle = `${title} | Gérald Paméole`;
     }
   </script>
 
-  <script defer data-domain="geraldpameole.fr" src="https://plausible.io/js/script.js"></script>
+  <script defer data-domain="geraldpameole.vercel.app" src="https://plausible.io/js/script.js"></script>
   <slot name="scripts" />
 </body>
 </html>

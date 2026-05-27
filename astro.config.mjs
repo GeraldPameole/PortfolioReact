@@ -5,7 +5,7 @@ import sitemap  from "@astrojs/sitemap";
 import { defineConfig } from "astro/config";
 
 export default defineConfig({
-  site: "https://geraldpameole.fr",
+  site: "https://geraldpameole.vercel.app",
   integrations: [mdx(), tailwind(), react(), sitemap()],
   server: {
     host: true,

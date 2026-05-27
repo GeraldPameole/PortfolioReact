@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://geraldpameole.fr/sitemap-index.xml
+Sitemap: https://geraldpameole.vercel.app/sitemap-index.xml

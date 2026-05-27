@@ -79,14 +79,14 @@ const ogImage = (article.data as any).image
   ?? '/assets/webp/profile.webp';
 
 // JSON-LD Article schema
-const canonicalUrl = `https://geraldpameole.fr/blog/${article.slug}`;
+const canonicalUrl = `https://geraldpameole.vercel.app/blog/${article.slug}`;
 const articleSchema = {
   "@context": "https://schema.org",
   "@type": "Article",
   "headline": article.data.title,
   "description": article.data.description,
   "datePublished": article.data.publishDate,
-  "author": { "@type": "Person", "name": "Gérald Paméole", "url": "https://geraldpameole.fr" },
+  "author": { "@type": "Person", "name": "Gérald Paméole", "url": "https://geraldpameole.vercel.app" },
   "publisher": { "@type": "Person", "name": "Gérald Paméole" },
   "url": canonicalUrl,
   "keywords": (tags as string[]).join(', '),

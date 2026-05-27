@@ -13,14 +13,14 @@ export async function GET(context: APIContext) {
   );
 
   // Base absolue (sans slash final) pour rendre les URLs des images/liens valides en email
-  const site = (context.site?.toString() ?? 'https://geraldpameole.fr/').replace(/\/$/, '');
+  const site = (context.site?.toString() ?? 'https://geraldpameole.vercel.app/').replace(/\/$/, '');
   const absolutize = (html: string) => html.replace(/(src|href)="\/(?!\/)/g, `$1="${site}/`);
 
   return rss({
     title: 'Gérald Paméole — Blog',
     description:
       'Management, transformation digitale, développement web et productivité — articles hebdomadaires.',
-    site: context.site ?? 'https://geraldpameole.fr',
+    site: context.site ?? 'https://geraldpameole.vercel.app',
     items: sorted.map((article) => ({
       title: article.data.title,
       description: article.data.description,
