@@ -3,6 +3,7 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Hero from '../components/Hero.astro';
 import ArticleCard from '../components/ArticleCard.astro';
+import NewsletterBand from '../components/NewsletterBand.astro';
 
 const allArticles = await getCollection('articles');
 const recentArticles = allArticles
@@ -143,6 +144,9 @@ const colorMap: Record<string, { bg: string; border: string; text: string }> = {
       </div>
     </div>
   </section>
+
+  <!-- NEWSLETTER -->
+  <NewsletterBand />
 
   <!-- CTA -->
   <section class="section" style="padding-bottom:8rem">
