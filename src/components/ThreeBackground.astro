@@ -63,7 +63,12 @@ if (canvas && !reduceMotion && window.innerWidth >= 768) {
   }
 }
 
-function initScene(THREE, canvas) {
+async function initScene(THREE, canvas) {
+// Découpe l'init en tâches courtes (< 50ms) → réduit TBT et le nombre de long tasks
+const yieldToMain = () =>
+  (window.scheduler && window.scheduler.yield)
+    ? window.scheduler.yield()
+    : new Promise((r) => setTimeout(r, 0));
 
 // ── Renderer ──────────────────────────────────────────────────────────────────
 const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
@@ -267,6 +272,7 @@ const ico2 = new THREE.Mesh(ico2Geo, ico2Mat);
 ico2.rotation.z = 0.5;
 scene.add(ico2);
 
+await yieldToMain();
 // ── Fond étoilé profond (champ stellaire dense, multi-couleurs) ───────────────
 // 3000 étoiles distribuées sur une sphère, palette riche évoquant les vraies
 // teintes du ciel profond (blanc, bleu, jaune, orange, rougeâtre).
@@ -355,6 +361,7 @@ const brightMat = new THREE.PointsMaterial({
 const brightStars = new THREE.Points(brightGeo, brightMat);
 scene.add(brightStars);
 
+await yieldToMain();
 // ── Nuages galactiques animés (nébulosité interstellaire) ─────────────────────
 // 6 nuages diffus aux couleurs de l'univers (violet, magenta, lavande, crème,
 // bleu profond, pourpre). Chaque nuage est un ensemble de gros points très
@@ -444,6 +451,7 @@ for (let i = 0; i < NEBULA_LAYOUT.length; i++) {
   nebulaClouds.push(cloud);
 }
 
+await yieldToMain();
 // ── Planètes orbitales (rotation continue) ────────────────────────────────────
 // 4 planètes en orbite autour du centre, profondeurs variées, vitesses
 // différentes (loi de Kepler simplifiée : plus loin = plus lent).
@@ -593,6 +601,7 @@ function onResize() {
 }
 window.addEventListener('resize', onResize, { passive: true });
 
+await yieldToMain();
 // ── Constellations en arrière-plan ────────────────────────────────────────────
 // Représentations stylisées des grandes constellations, projetées sur un plan
 // lointain (z = -28). Une seule visible à la fois, fade in/out toutes les 10s.
@@ -813,7 +822,8 @@ const CONST_LINE_COLOR = {
 };
 const constMatBase = { star: 0xd8e3ff, starBright: 0xffd96a };
 
-CONSTELLATIONS.forEach(c => {
+let _cBuilt = 0;
+for (const c of CONSTELLATIONS) {
   const g = new THREE.Group();
   g.position.set(0, 0, BG_Z);
 
@@ -881,7 +891,8 @@ CONSTELLATIONS.forEach(c => {
   g.visible = false;     // masqué par défaut ; la boucle active la constellation courante
   scene.add(g);
   c.group = g;
-});
+  if (++_cBuilt % 4 === 0) await yieldToMain();   // fractionne le build des 17 constellations
+}
 
 // État du cycle constellation
 let constIdx     = 0;
@@ -896,6 +907,7 @@ const labelEl     = document.getElementById('three-bg-label');
 const labelNameEl = labelEl?.querySelector('[data-cn-name]');
 const labelFactEl = labelEl?.querySelector('[data-cn-fact]');
 
+await yieldToMain();
 // ── Pills DOM (étiquettes 2D suivant les objets célestes en arrière-plan) ────
 // Chaque pill se positionne via projection 3D → écran à chaque frame.
 const pillsContainer = document.getElementById('cosmic-pills');
