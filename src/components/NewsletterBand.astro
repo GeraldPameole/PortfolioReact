@@ -14,7 +14,7 @@ const FORM_ACTION = "https://buttondown.com/api/emails/embed-subscribe/Apex_971"
         <p class="nl-desc">Management, transformation digitale, développement web — les meilleurs articles directement dans votre boîte mail. Aucun spam, désabonnement en un clic.</p>
       </div>
 
-      <form id="nl-form" action={FORM_ACTION} method="POST" class="nl-form" novalidate>
+      <form id="nl-form" action={FORM_ACTION} method="POST" class="nl-form">
         <input type="hidden" name="tag" value="site-web" />
         <div class="nl-fields">
           <input
@@ -173,6 +173,11 @@ document.addEventListener('astro:page-load', () => {
 
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
+    // Pas d'email valide → on affiche le message natif et on NE cache PAS le formulaire
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
     const btn = form.querySelector('button[type="submit"]') as HTMLButtonElement;
     btn.disabled = true;
     btn.textContent = '…';
