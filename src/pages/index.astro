@@ -79,7 +79,7 @@ const colorMap: Record<string, { bg: string; border: string; text: string }> = {
           {SERVICES.map((s, i) => (
             <div class="service-card glass-card reveal" style={`transition-delay:${i*0.1}s`}>
               <span class="service-icon">{s.icon}</span>
-              <div><h4 class="service-title">{s.title}</h4><p class="service-desc">{s.desc}</p></div>
+              <div><h3 class="service-title">{s.title}</h3><p class="service-desc">{s.desc}</p></div>
             </div>
           ))}
         </div>

@@ -28,7 +28,7 @@
 
   --text-1: #ffffff;
   --text-2: #cbd5e1;
-  --text-3: #64748b;
+  --text-3: #94a3b8;  /* slate-400 : contraste AA (~6:1) sur fond sombre */
   --text-4: #334155;
 
   --border:        rgba(255,255,255,0.07);
