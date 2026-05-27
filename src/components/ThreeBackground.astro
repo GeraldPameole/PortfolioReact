@@ -70,6 +70,8 @@ const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true 
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5));
 renderer.setClearColor(0x000000, 0);
 renderer.setSize(canvas.offsetWidth, canvas.offsetHeight);
+// Dimensions mises en cache : évite de lire le layout (forced reflow) à chaque frame
+let canvasW = canvas.offsetWidth, canvasH = canvas.offsetHeight;
 
 // ── Scene + Camera ────────────────────────────────────────────────────────────
 const scene  = new THREE.Scene();
@@ -582,6 +584,7 @@ scene.add(moonOrbitVis.line);
 let rebuildTimer;
 function onResize() {
   const w = canvas.offsetWidth, h = canvas.offsetHeight;
+  canvasW = w; canvasH = h;
   renderer.setSize(w, h);
   camera.aspect = w / h;
   camera.updateProjectionMatrix();
@@ -948,8 +951,7 @@ nebulaClouds.forEach(c => {
 });
 
 function updateCosmicPills() {
-  const w = canvas.offsetWidth;
-  const h = canvas.offsetHeight;
+  const w = canvasW, h = canvasH;  // dimensions en cache : zéro lecture de layout par frame
   for (let i = 0; i < cosmicPills.length; i++) {
     const p = cosmicPills[i];
     const opacity = p.getOpacity();
