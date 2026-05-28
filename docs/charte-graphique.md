@@ -119,3 +119,63 @@ Composant `ThreeBackground.astro`, présent uniquement sur la home (dans `Hero.a
 - **Transitions** : `0.2s-0.7s ease` selon le contexte (boutons rapides, cards lentes).
 - **`prefers-reduced-motion`** respecté : le fond WebGL et les transitions lourdes se désactivent.
 - **ViewTransitions Astro** : navigation SPA avec fallback `swap`.
+
+## 11. Classes utilitaires de contenu
+
+> Classes héritées du système de design unifié. Encore activement utilisées (5-6 fichiers chacune). Définies dans `src/styles/content.css` (+ `typography.css`, `palette.css`).
+
+### Conteneurs (largeurs maxi)
+
+| Classe | Max width | Usage |
+|---|---|---|
+| `.content-container` | **64 rem** (1024px) | Conteneur par défaut, centré, padding adaptatif |
+| `.content-container-wide` | **80 rem** (1280px) | Pages avec grilles ou beaucoup de contenu (themes, liste blog) |
+| `.content-container-narrow` | **48 rem** (768px) | Articles, contenus de lecture (optimisé pour la lisibilité) |
+
+### Typographie
+
+- **`.content-typography`** : applique automatiquement la hiérarchie des titres, les tailles de police, les marges et les styles pour listes / liens / citations / code. À mettre sur le wrapper d'un contenu rédigé.
+
+### Composants
+
+- **`.content-card`** : carte avec ombre, bordure, padding cohérent.
+- **`.content-section`** : section avec marge inférieure standardisée.
+
+### Exemple d'usage
+
+```astro
+<div class="content-container-wide">
+  <div class="content-typography">
+    <h2>Sous-titre</h2>
+    <p>Contenu du paragraphe avec styles automatiques…</p>
+  </div>
+</div>
+```
+
+### Variables CSS dédiées (espacements et largeurs)
+
+Définies dans `src/styles/content.css` :
+
+```css
+:root {
+  --content-spacing-xs: 0.5rem;   /* 8px */
+  --content-spacing-sm: 1rem;     /* 16px */
+  --content-spacing-md: 1.5rem;   /* 24px */
+  --content-spacing-lg: 2rem;     /* 32px */
+  --content-spacing-xl: 2.5rem;   /* 40px */
+  --content-spacing-2xl: 3rem;    /* 48px */
+  --content-spacing-3xl: 4rem;    /* 64px */
+
+  --content-max-width-sm: 42rem;  /* 672px */
+  --content-max-width-md: 48rem;  /* 768px */
+  --content-max-width-lg: 64rem;  /* 1024px */
+  --content-max-width-xl: 80rem;  /* 1280px */
+}
+```
+
+### Bonnes pratiques
+
+1. Préférer ces classes unifiées aux styles ad-hoc.
+2. Respecter la hiérarchie h1→h2→h3 (cf. § 3 et l'a11y `npm test`).
+3. Utiliser les variables CSS pour les espacements (pas de valeurs hardcodées).
+4. Tester la responsivité (mobile / tablet / desktop).

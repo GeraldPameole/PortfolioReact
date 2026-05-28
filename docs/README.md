@@ -76,3 +76,8 @@ Inspirés d'une liste classique de documents projet web. Beaucoup ne s'appliquen
 - `charte-*` : seulement quand l'identité change.
 
 Quand un assistant IA travaille sur le projet, lui pointer ce dossier `docs/` + `CLAUDE.md` à la racine pour qu'il ait le contexte complet.
+
+## 🗂️ Historique du `docs/`
+
+- **28 mai 2026** : création de la documentation projet complète (13 fichiers).
+- **28 mai 2026** : suppression des anciens docs `code-documentation.md` (entièrement obsolète : palette/composants/scripts/tests qui n'existent plus) et `design-system.md` (parties utiles — classes `.content-container*` et `.content-typography` — migrées en § 11 de `charte-graphique.md`).
