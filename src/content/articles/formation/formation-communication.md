@@ -27,7 +27,6 @@ theme: formation
   <text x="350" y="345" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#94a3b8">Faible respect de soi</text>
   <text x="62" y="188" text-anchor="start" font-family="sans-serif" font-size="10" fill="#94a3b8">Faible respect d'autrui</text>
   <text x="530" y="188" text-anchor="start" font-family="sans-serif" font-size="10" fill="#94a3b8">Fort respect d'autrui</text>
-
   <!-- Quadrant Assertif (haut-droite) -->
   <rect x="358" y="58" width="274" height="124" rx="10" fill="#14532d" opacity="0.85"/>
   <text x="495" y="96" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="bold" fill="#86efac">Assertif</text>
@@ -35,7 +34,6 @@ theme: formation
   <text x="495" y="132" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#86efac">tout en respectant l'autre</text>
   <text x="495" y="152" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#86efac">→ Idéal professionnel</text>
   <text x="495" y="172" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#86efac">→ Confiance réciproque</text>
-
   <!-- Quadrant Agressif (haut-gauche) -->
   <rect x="68" y="58" width="274" height="124" rx="10" fill="#450a0a" opacity="0.85"/>
   <text x="205" y="96" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="bold" fill="#f87171">Agressif</text>
@@ -43,7 +41,6 @@ theme: formation
   <text x="205" y="132" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#f87171">de l'autre</text>
   <text x="205" y="152" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#f87171">→ Tensions, peur</text>
   <text x="205" y="172" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#f87171">→ Résultats court terme</text>
-
   <!-- Quadrant Passif (bas-droite) -->
   <rect x="358" y="198" width="274" height="124" rx="10" fill="#1e293b" opacity="0.85"/>
   <text x="495" y="236" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="bold" fill="#94a3b8">Passif</text>
@@ -51,7 +48,6 @@ theme: formation
   <text x="495" y="272" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#94a3b8">le conflit à tout prix</text>
   <text x="495" y="292" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#94a3b8">→ Frustration accumulée</text>
   <text x="495" y="312" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#94a3b8">→ Besoins non exprimés</text>
-
   <!-- Quadrant Manipulateur (bas-gauche) -->
   <rect x="68" y="198" width="274" height="124" rx="10" fill="#451a03" opacity="0.85"/>
   <text x="205" y="236" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="bold" fill="#fbbf24">Manipulateur</text>
@@ -94,7 +90,6 @@ Ce que j'ai observé systématiquement : les managers qui écoutaient mieux rés
   <rect width="700" height="360" fill="#0a0f2e" rx="12"/>
   <!-- Titre -->
   <text x="350" y="28" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="bold" fill="#c8c8d0">Structure d'un message difficile</text>
-
   <!-- Étape 1 : Contexte -->
   <rect x="30" y="55" width="116" height="220" rx="8" fill="#1e1b4b"/>
   <text x="88" y="88" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold" fill="#915EFF">Contexte</text>
@@ -102,10 +97,8 @@ Ce que j'ai observé systématiquement : les managers qui écoutaient mieux rés
   <text x="88" y="128" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#c8c8d0">la situation</text>
   <text x="88" y="148" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#94a3b8">sans jugement</text>
   <text x="88" y="240" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="bold" fill="#fbbf24">~1 min</text>
-
   <!-- Flèche -->
   <polygon points="150,165 166,155 166,175" fill="#94a3b8"/>
-
   <!-- Étape 2 : Observation -->
   <rect x="168" y="55" width="116" height="220" rx="8" fill="#0c2340"/>
   <text x="226" y="88" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold" fill="#00cffd">Observation</text>
@@ -113,10 +106,8 @@ Ce que j'ai observé systématiquement : les managers qui écoutaient mieux rés
   <text x="226" y="128" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#c8c8d0">observables</text>
   <text x="226" y="148" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#94a3b8">pas interprétés</text>
   <text x="226" y="240" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="bold" fill="#fbbf24">~2 min</text>
-
   <!-- Flèche -->
   <polygon points="288,165 304,155 304,175" fill="#94a3b8"/>
-
   <!-- Étape 3 : Impact -->
   <rect x="306" y="55" width="116" height="220" rx="8" fill="#2d1b00"/>
   <text x="364" y="88" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold" fill="#fbbf24">Impact</text>
@@ -124,10 +115,8 @@ Ce que j'ai observé systématiquement : les managers qui écoutaient mieux rés
   <text x="364" y="128" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#c8c8d0">pour l'équipe</text>
   <text x="364" y="148" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#94a3b8">ou le projet</text>
   <text x="364" y="240" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="bold" fill="#fbbf24">~2 min</text>
-
   <!-- Flèche -->
   <polygon points="426,165 442,155 442,175" fill="#94a3b8"/>
-
   <!-- Étape 4 : Demande -->
   <rect x="444" y="55" width="116" height="220" rx="8" fill="#14532d"/>
   <text x="502" y="88" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold" fill="#86efac">Demande</text>
@@ -135,10 +124,8 @@ Ce que j'ai observé systématiquement : les managers qui écoutaient mieux rés
   <text x="502" y="128" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#c8c8d0">concrètement</text>
   <text x="502" y="148" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#94a3b8">de la personne</text>
   <text x="502" y="240" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="bold" fill="#fbbf24">~2 min</text>
-
   <!-- Flèche -->
   <polygon points="564,165 580,155 580,175" fill="#94a3b8"/>
-
   <!-- Étape 5 : Écoute -->
   <rect x="582" y="55" width="100" height="220" rx="8" fill="#1a0040"/>
   <text x="632" y="88" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold" fill="#915EFF">Écoute</text>
@@ -146,7 +133,6 @@ Ce que j'ai observé systématiquement : les managers qui écoutaient mieux rés
   <text x="632" y="128" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#c8c8d0">l'autre répondre</text>
   <text x="632" y="148" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#94a3b8">sans interrompre</text>
   <text x="632" y="240" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="bold" fill="#fbbf24">~5 min</text>
-
   <!-- Barre de durée totale -->
   <rect x="30" y="295" width="652" height="14" rx="4" fill="#1e293b"/>
   <text x="356" y="326" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#94a3b8">Durée totale recommandée : 12 à 15 minutes — un seul message par échange</text>

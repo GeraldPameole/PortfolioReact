@@ -32,49 +32,38 @@ Pour mes recrutements commerciaux, je posais systématiquement la même question
   <rect width="700" height="420" fill="#0a0f2e" rx="12"/>
   <!-- Title -->
   <text x="350" y="38" font-family="monospace" font-size="15" fill="#00cffd" text-anchor="middle" font-weight="bold">Entonnoir de recrutement — taux de conversion</text>
-
   <!-- Funnel layers -->
   <!-- Sourcing -->
   <polygon points="100,60 600,60 530,120 170,120" fill="#915EFF" opacity="0.85"/>
   <text x="350" y="97" font-family="monospace" font-size="13" fill="#ffffff" text-anchor="middle" font-weight="bold">SOURCING</text>
   <text x="350" y="112" font-family="monospace" font-size="11" fill="#e0d7ff" text-anchor="middle">100 candidats identifiés</text>
-
   <!-- Arrow + rate -->
   <text x="620" y="135" font-family="monospace" font-size="11" fill="#fbbf24" text-anchor="start">↓ 40 %</text>
-
   <!-- Présélection -->
   <polygon points="170,128 530,128 475,188 225,188" fill="#7340e0" opacity="0.85"/>
   <text x="350" y="163" font-family="monospace" font-size="13" fill="#ffffff" text-anchor="middle" font-weight="bold">PRÉSÉLECTION</text>
   <text x="350" y="178" font-family="monospace" font-size="11" fill="#e0d7ff" text-anchor="middle">40 dossiers retenus</text>
-
   <text x="620" y="203" font-family="monospace" font-size="11" fill="#fbbf24" text-anchor="start">↓ 50 %</text>
-
   <!-- Entretiens -->
   <polygon points="225,196 475,196 430,256 270,256" fill="#00cffd" opacity="0.75"/>
   <text x="350" y="231" font-family="monospace" font-size="13" fill="#0a0f2e" text-anchor="middle" font-weight="bold">ENTRETIENS</text>
   <text x="350" y="246" font-family="monospace" font-size="11" fill="#0a0f2e" text-anchor="middle">20 candidats reçus</text>
-
   <text x="620" y="271" font-family="monospace" font-size="11" fill="#fbbf24" text-anchor="start">↓ 30 %</text>
-
   <!-- Offre -->
   <polygon points="270,264 430,264 400,324 300,324" fill="#86efac" opacity="0.80"/>
   <text x="350" y="299" font-family="monospace" font-size="13" fill="#0a0f2e" text-anchor="middle" font-weight="bold">OFFRE</text>
   <text x="350" y="314" font-family="monospace" font-size="11" fill="#0a0f2e" text-anchor="middle">6 offres envoyées</text>
-
   <text x="620" y="339" font-family="monospace" font-size="11" fill="#fbbf24" text-anchor="start">↓ 50 %</text>
-
   <!-- Onboarding -->
   <polygon points="300,332 400,332 385,392 315,392" fill="#fbbf24" opacity="0.90"/>
   <text x="350" y="366" font-family="monospace" font-size="13" fill="#0a0f2e" text-anchor="middle" font-weight="bold">ONBOARDING</text>
   <text x="350" y="381" font-family="monospace" font-size="11" fill="#0a0f2e" text-anchor="middle">3 intégrations réussies</text>
-
   <!-- Left labels -->
   <text x="25" y="97" font-family="monospace" font-size="10" fill="#915EFF" text-anchor="start">Étape 1</text>
   <text x="25" y="163" font-family="monospace" font-size="10" fill="#7340e0" text-anchor="start">Étape 2</text>
   <text x="25" y="231" font-family="monospace" font-size="10" fill="#00cffd" text-anchor="start">Étape 3</text>
   <text x="25" y="299" font-family="monospace" font-size="10" fill="#86efac" text-anchor="start">Étape 4</text>
   <text x="25" y="366" font-family="monospace" font-size="10" fill="#fbbf24" text-anchor="start">Étape 5</text>
-
   <!-- Footer note -->
   <text x="350" y="412" font-family="monospace" font-size="10" fill="#64748b" text-anchor="middle">Taux de conversion indicatifs — varient selon secteur et poste</text>
 </svg>

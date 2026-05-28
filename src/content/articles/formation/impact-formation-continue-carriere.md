@@ -27,17 +27,14 @@ La distinction entre compétences techniques et comportementales est souvent pr�
   <rect width="700" height="380" fill="#0a0f2e" rx="12"/>
   <!-- Title -->
   <text x="350" y="34" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="bold" fill="#c8c8d0">Matrice des compétences — Technique vs Comportemental</text>
-
   <!-- Axes -->
   <line x1="350" y1="60" x2="350" y2="340" stroke="#94a3b8" stroke-width="1.5"/>
   <line x1="80" y1="200" x2="630" y2="200" stroke="#94a3b8" stroke-width="1.5"/>
-
   <!-- Axis labels -->
   <text x="350" y="55" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#86efac">Comportemental élevé</text>
   <text x="350" y="355" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#94a3b8">Comportemental faible</text>
   <text x="84" y="198" text-anchor="start" font-family="sans-serif" font-size="12" fill="#94a3b8">Technique faible</text>
   <text x="540" y="198" text-anchor="start" font-family="sans-serif" font-size="12" fill="#00cffd">Technique élevé</text>
-
   <!-- Q1: top-left (comportemental élevé / technique faible) -->
   <rect x="85" y="65" width="258" height="128" rx="6" fill="#fbbf24" opacity="0.08" stroke="#fbbf24" stroke-width="1"/>
   <text x="214" y="105" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#fbbf24">Leader intuitif</text>
@@ -45,7 +42,6 @@ La distinction entre compétences techniques et comportementales est souvent pr�
   <text x="214" y="139" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#94a3b8">• Motivateur d'équipe</text>
   <text x="214" y="155" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#fbbf24">→ Ajouter expertise métier</text>
   <text x="214" y="171" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#94a3b8">Formations certifiantes</text>
-
   <!-- Q2: top-right (comportemental élevé / technique élevé) -->
   <rect x="355" y="65" width="268" height="128" rx="6" fill="#915EFF" opacity="0.12" stroke="#915EFF" stroke-width="1.5"/>
   <text x="489" y="105" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#915EFF">Expert complet</text>
@@ -53,7 +49,6 @@ La distinction entre compétences techniques et comportementales est souvent pr�
   <text x="489" y="139" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#94a3b8">• Consultant / Référent</text>
   <text x="489" y="155" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#915EFF">→ Partager, former, élargir</text>
   <text x="489" y="171" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#94a3b8">Mentorat, conférences</text>
-
   <!-- Q3: bottom-left (comportemental faible / technique faible) -->
   <rect x="85" y="207" width="258" height="128" rx="6" fill="#94a3b8" opacity="0.06" stroke="#94a3b8" stroke-width="1"/>
   <text x="214" y="247" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#94a3b8">En développement</text>
@@ -61,7 +56,6 @@ La distinction entre compétences techniques et comportementales est souvent pr�
   <text x="214" y="281" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#94a3b8">• Nouveau poste</text>
   <text x="214" y="297" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#86efac">→ Priorité : ancrage métier</text>
   <text x="214" y="313" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#94a3b8">Binôme + formation terrain</text>
-
   <!-- Q4: bottom-right (comportemental faible / technique élevé) -->
   <rect x="355" y="207" width="268" height="128" rx="6" fill="#00cffd" opacity="0.08" stroke="#00cffd" stroke-width="1"/>
   <text x="489" y="247" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#00cffd">Expert technique</text>

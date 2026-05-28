@@ -22,11 +22,9 @@ L'investissement formation a une structure particulière : les coûts sont immé
   <rect width="700" height="380" fill="#0a0f2e" rx="12"/>
   <!-- Title -->
   <text x="350" y="35" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="bold" fill="#c8c8d0">ROI de la formation — Courbe de valeur ajoutée sur 12 mois</text>
-
   <!-- Axes -->
   <line x1="80" y1="310" x2="650" y2="310" stroke="#94a3b8" stroke-width="1.5"/>
   <line x1="80" y1="60" x2="80" y2="310" stroke="#94a3b8" stroke-width="1.5"/>
-
   <!-- Y-axis labels -->
   <text x="72" y="314" text-anchor="end" font-family="monospace" font-size="11" fill="#94a3b8">0</text>
   <text x="72" y="240" text-anchor="end" font-family="monospace" font-size="11" fill="#94a3b8">+</text>
@@ -38,7 +36,6 @@ L'investissement formation a une structure particulière : les coûts sont immé
   <line x1="80" y1="170" x2="650" y2="170" stroke="#1e2a4a" stroke-width="1"/>
   <line x1="80" y1="100" x2="650" y2="100" stroke="#1e2a4a" stroke-width="1"/>
   <line x1="80" y1="360" x2="650" y2="360" stroke="#1e2a4a" stroke-width="1"/>
-
   <!-- X-axis labels: mois -->
   <text x="80" y="328" text-anchor="middle" font-family="monospace" font-size="10" fill="#94a3b8">M0</text>
   <text x="174" y="328" text-anchor="middle" font-family="monospace" font-size="10" fill="#94a3b8">M2</text>
@@ -47,35 +44,28 @@ L'investissement formation a une structure particulière : les coûts sont immé
   <text x="456" y="328" text-anchor="middle" font-family="monospace" font-size="10" fill="#94a3b8">M8</text>
   <text x="550" y="328" text-anchor="middle" font-family="monospace" font-size="10" fill="#94a3b8">M10</text>
   <text x="644" y="328" text-anchor="middle" font-family="monospace" font-size="10" fill="#94a3b8">M12</text>
-
   <!-- Curve: value over time -->
   <!-- Phase 1: Investissement initial — dip below 0 (M0 to M3) -->
   <!-- Phase 2: Montée en compétence — rise to 0 then up (M3 to M7) -->
   <!-- Phase 3: Retour sur investissement — strong positive (M7 to M12) -->
   <polyline points="80,310 127,355 174,350 220,330 268,300 315,255 362,210 410,175 456,140 503,108 550,90 597,78 644,68" fill="none" stroke="#00cffd" stroke-width="2.5" stroke-linejoin="round"/>
-
   <!-- Shaded area under curve (positive zone) -->
   <polygon points="220,310 220,330 268,300 315,255 362,210 410,175 456,140 503,108 550,90 597,78 644,68 644,310" fill="#00cffd" opacity="0.08"/>
-
   <!-- Phase labels with vertical dividers -->
   <line x1="220" y1="60" x2="220" y2="310" stroke="#fbbf24" stroke-width="1" stroke-dasharray="4,3"/>
   <line x1="410" y1="60" x2="410" y2="310" stroke="#fbbf24" stroke-width="1" stroke-dasharray="4,3"/>
-
   <!-- Phase 1 label -->
   <rect x="83" y="62" width="132" height="46" rx="5" fill="#0a0f2e" stroke="#fbbf24" stroke-width="1" opacity="0.9"/>
   <text x="149" y="82" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="bold" fill="#fbbf24">Phase 1</text>
   <text x="149" y="98" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#94a3b8">Investissement initial</text>
-
   <!-- Phase 2 label -->
   <rect x="223" y="62" width="182" height="46" rx="5" fill="#0a0f2e" stroke="#86efac" stroke-width="1" opacity="0.9"/>
   <text x="314" y="82" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="bold" fill="#86efac">Phase 2</text>
   <text x="314" y="98" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#94a3b8">Montée en compétence</text>
-
   <!-- Phase 3 label -->
   <rect x="413" y="62" width="200" height="46" rx="5" fill="#0a0f2e" stroke="#915EFF" stroke-width="1" opacity="0.9"/>
   <text x="513" y="82" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="bold" fill="#915EFF">Phase 3</text>
   <text x="513" y="98" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#94a3b8">Retour sur investissement</text>
-
   <!-- Y-axis title -->
   <text x="18" y="200" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#94a3b8" transform="rotate(-90,18,200)">Valeur ajoutée</text>
 </svg></div>

@@ -25,21 +25,17 @@ tags:
   <rect width="700" height="360" fill="#0a0f2e" rx="12"/>
   <!-- Titre -->
   <text x="350" y="28" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="bold" fill="#c8c8d0">Matrice potentiel / performance — 9 cases</text>
-
   <!-- Labels axes -->
   <text x="24" y="195" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#94a3b8" transform="rotate(-90,24,195)">Potentiel</text>
   <text x="380" y="352" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#94a3b8">Performance</text>
-
   <!-- Sous-labels axe X -->
   <text x="150" y="342" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#94a3b8">Faible</text>
   <text x="370" y="342" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#94a3b8">Moyen</text>
   <text x="590" y="342" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#94a3b8">Fort</text>
-
   <!-- Sous-labels axe Y -->
   <text x="44" y="302" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#94a3b8">Faible</text>
   <text x="44" y="195" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#94a3b8">Moyen</text>
   <text x="44" y="88" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#94a3b8">Fort</text>
-
   <!-- Rangée haute (fort potentiel) -->
   <!-- Case 1 : faible perf / fort potentiel -->
   <rect x="62" y="50" width="192" height="92" rx="6" fill="#1e1b4b"/>
@@ -47,21 +43,18 @@ tags:
   <text x="158" y="96" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#94a3b8">Fort potentiel, livraison</text>
   <text x="158" y="111" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#94a3b8">insuffisante → coacher</text>
   <text x="158" y="130" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#fbbf24">Accompagner intensément</text>
-
   <!-- Case 2 : moyen perf / fort potentiel -->
   <rect x="278" y="50" width="192" height="92" rx="6" fill="#0c2340"/>
   <text x="374" y="78" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="bold" fill="#00cffd">Talent à développer</text>
   <text x="374" y="96" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#94a3b8">Bons résultats, haut</text>
   <text x="374" y="111" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#94a3b8">potentiel → accélérer</text>
   <text x="374" y="130" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#fbbf24">Plan de développement</text>
-
   <!-- Case 3 : fort perf / fort potentiel -->
   <rect x="494" y="50" width="192" height="92" rx="6" fill="#052e16"/>
   <text x="590" y="78" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="bold" fill="#86efac">Futur leader</text>
   <text x="590" y="96" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#c8c8d0">Excellence actuelle +</text>
   <text x="590" y="111" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#c8c8d0">potentiel élevé</text>
   <text x="590" y="130" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#fbbf24">Responsabiliser, exposer</text>
-
   <!-- Rangée milieu (moyen potentiel) -->
   <!-- Case 4 -->
   <rect x="62" y="152" width="192" height="92" rx="6" fill="#1a0a0a"/>
@@ -69,34 +62,29 @@ tags:
   <text x="158" y="198" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#94a3b8">Faible perf, potentiel</text>
   <text x="158" y="213" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#94a3b8">moyen → clarifier</text>
   <text x="158" y="232" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#fbbf24">Entretien direct</text>
-
   <!-- Case 5 -->
   <rect x="278" y="152" width="192" height="92" rx="6" fill="#1e293b"/>
   <text x="374" y="180" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="bold" fill="#94a3b8">Solide</text>
   <text x="374" y="198" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#94a3b8">Fiable, dans le moyen</text>
   <text x="374" y="213" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#94a3b8">sur les deux axes</text>
   <text x="374" y="232" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#fbbf24">Reconnaître, stabiliser</text>
-
   <!-- Case 6 -->
   <rect x="494" y="152" width="192" height="92" rx="6" fill="#0c2340"/>
   <text x="590" y="180" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="bold" fill="#00cffd">Contributeur fort</text>
   <text x="590" y="198" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#94a3b8">Excellente performance</text>
   <text x="590" y="213" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#94a3b8">potentiel limité</text>
   <text x="590" y="232" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#fbbf24">Valoriser l'expertise</text>
-
   <!-- Rangée basse (faible potentiel) -->
   <!-- Case 7 -->
   <rect x="62" y="254" width="192" height="72" rx="6" fill="#1a0a0a"/>
   <text x="158" y="278" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="bold" fill="#f87171">Inadéquation</text>
   <text x="158" y="296" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#94a3b8">Recadrer ou réorienter</text>
   <text x="158" y="314" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#fbbf24">Action RH urgente</text>
-
   <!-- Case 8 -->
   <rect x="278" y="254" width="192" height="72" rx="6" fill="#1e293b"/>
   <text x="374" y="278" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="bold" fill="#94a3b8">Exécutant fiable</text>
   <text x="374" y="296" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#94a3b8">Stable, peu d'évolution</text>
   <text x="374" y="314" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#fbbf24">Maintenir le poste</text>
-
   <!-- Case 9 -->
   <rect x="494" y="254" width="192" height="72" rx="6" fill="#052e16"/>
   <text x="590" y="278" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="bold" fill="#86efac">Expert métier</text>
@@ -125,7 +113,6 @@ Un plan de développement individuel — un vrai — répond à quatre questions
   <rect width="700" height="360" fill="#0a0f2e" rx="12"/>
   <!-- Titre -->
   <text x="350" y="28" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="bold" fill="#c8c8d0">Structure d'un Plan de Développement Individuel</text>
-
   <!-- Bloc 1 : Où je suis -->
   <rect x="60" y="60" width="240" height="105" rx="10" fill="#1e1b4b"/>
   <text x="180" y="88" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold" fill="#915EFF">Où je suis</text>
@@ -133,11 +120,9 @@ Un plan de développement individuel — un vrai — répond à quatre questions
   <text x="180" y="125" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#c8c8d0">Points forts / lacunes</text>
   <text x="180" y="142" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#94a3b8">Diagnostic honnête</text>
   <text x="180" y="157" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#fbbf24">Étape 1 — Diagnostic</text>
-
   <!-- Flèche droite vers bloc 2 -->
   <line x1="300" y1="112" x2="400" y2="112" stroke="#915EFF" stroke-width="2"/>
   <polygon points="396,106 410,112 396,118" fill="#915EFF"/>
-
   <!-- Bloc 2 : Où je veux aller -->
   <rect x="400" y="60" width="240" height="105" rx="10" fill="#052e16"/>
   <text x="520" y="88" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold" fill="#86efac">Où je veux aller</text>
@@ -145,11 +130,9 @@ Un plan de développement individuel — un vrai — répond à quatre questions
   <text x="520" y="125" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#c8c8d0">Poste visé ou</text>
   <text x="520" y="142" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#c8c8d0">compétence clé</text>
   <text x="520" y="157" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#fbbf24">Étape 2 — Objectif</text>
-
   <!-- Flèche bas vers bloc 3 (depuis bloc 2) -->
   <line x1="520" y1="165" x2="520" y2="228" stroke="#86efac" stroke-width="2"/>
   <polygon points="514,224 526,224 520,238" fill="#86efac"/>
-
   <!-- Bloc 3 : Comment -->
   <rect x="400" y="238" width="240" height="105" rx="10" fill="#0c2340"/>
   <text x="520" y="266" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold" fill="#00cffd">Comment</text>
@@ -157,11 +140,9 @@ Un plan de développement individuel — un vrai — répond à quatre questions
   <text x="520" y="303" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#c8c8d0">Formation, missions,</text>
   <text x="520" y="320" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#c8c8d0">mentorat, lectures</text>
   <text x="520" y="335" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#fbbf24">Étape 3 — Actions</text>
-
   <!-- Flèche gauche vers bloc 4 -->
   <line x1="400" y1="290" x2="300" y2="290" stroke="#00cffd" stroke-width="2"/>
   <polygon points="304,284 290,290 304,296" fill="#00cffd"/>
-
   <!-- Bloc 4 : Comment mesurer -->
   <rect x="60" y="238" width="240" height="105" rx="10" fill="#2d1b00"/>
   <text x="180" y="266" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold" fill="#fbbf24">Comment mesurer</text>
@@ -169,7 +150,6 @@ Un plan de développement individuel — un vrai — répond à quatre questions
   <text x="180" y="303" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#c8c8d0">Comportements</text>
   <text x="180" y="320" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#c8c8d0">observables</text>
   <text x="180" y="335" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#fbbf24">Étape 4 — Mesure</text>
-
   <!-- Flèche remontante vers bloc 1 -->
   <line x1="180" y1="238" x2="180" y2="165" stroke="#fbbf24" stroke-width="2"/>
   <polygon points="174,169 186,169 180,155" fill="#fbbf24"/>

@@ -27,38 +27,31 @@ Le conflit de statut concerne la reconnaissance, la hiérarchie informelle, l'in
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 460" style="max-width:100%;height:auto">
   <rect width="600" height="460" fill="#0a0f2e" rx="12"/>
   <text x="300" y="34" font-family="monospace" font-size="14" fill="#00cffd" text-anchor="middle" font-weight="bold">Escalade de conflit — niveaux d'intensité</text>
-
   <!-- Level 5 — Rupture (top of pyramid) — rouge -->
   <polygon points="300,55 220,135 380,135" fill="#dc2626" opacity="0.85"/>
   <text x="300" y="102" font-family="monospace" font-size="11" fill="#fff" text-anchor="middle" font-weight="bold">RUPTURE</text>
   <text x="300" y="117" font-family="monospace" font-size="9" fill="#fca5a5" text-anchor="middle">Départ / licenciement</text>
-
   <!-- Level 4 — Crise -->
   <polygon points="220,143 380,143 430,215 170,215" fill="#ea580c" opacity="0.82"/>
   <text x="300" y="183" font-family="monospace" font-size="11" fill="#fff" text-anchor="middle" font-weight="bold">CRISE</text>
   <text x="300" y="198" font-family="monospace" font-size="9" fill="#fed7aa" text-anchor="middle">Confrontation ouverte, escalade RH</text>
-
   <!-- Level 3 — Conflit déclaré -->
   <polygon points="170,223 430,223 490,300 110,300" fill="#ca8a04" opacity="0.80"/>
   <text x="300" y="263" font-family="monospace" font-size="11" fill="#fff" text-anchor="middle" font-weight="bold">CONFLIT DÉCLARÉ</text>
   <text x="300" y="278" font-family="monospace" font-size="9" fill="#fef08a" text-anchor="middle">Positions figées, coalitions dans l'équipe</text>
-
   <!-- Level 2 — Tension -->
   <polygon points="110,308 490,308 545,388 55,388" fill="#15803d" opacity="0.70"/>
   <text x="300" y="350" font-family="monospace" font-size="11" fill="#fff" text-anchor="middle" font-weight="bold">TENSION</text>
   <text x="300" y="365" font-family="monospace" font-size="9" fill="#bbf7d0" text-anchor="middle">Communication réduite, évitement, irritabilité</text>
-
   <!-- Level 1 — Désaccord (base) -->
   <polygon points="55,396 545,396 600,440 0,440" fill="#0369a1" opacity="0.72"/>
   <text x="300" y="422" font-family="monospace" font-size="11" fill="#fff" text-anchor="middle" font-weight="bold">DÉSACCORD</text>
   <text x="300" y="437" font-family="monospace" font-size="9" fill="#bae6fd" text-anchor="middle">Points de vue différents, échanges directs possibles</text>
-
   <!-- Intervention arrow -->
   <line x1="490" y1="310" x2="530" y2="270" stroke="#fbbf24" stroke-width="2" stroke-dasharray="5,3"/>
   <circle cx="490" cy="310" r="7" fill="#fbbf24" opacity="0.9"/>
   <text x="535" y="266" font-family="monospace" font-size="10" fill="#fbbf24">← Intervenir ici</text>
   <text x="535" y="280" font-family="monospace" font-size="10" fill="#fbbf24">   (niveau 2)</text>
-
   <!-- Left side labels -->
   <text x="18" y="104" font-family="monospace" font-size="9" fill="#dc2626">Niv. 5</text>
   <text x="18" y="183" font-family="monospace" font-size="9" fill="#ea580c">Niv. 4</text>

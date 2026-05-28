@@ -35,54 +35,46 @@ La visibilité interne, c'est mettre en avant le travail de ses collaborateurs d
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 480" style="max-width:100%;height:auto">
   <rect width="680" height="480" fill="#0a0f2e" rx="12"/>
   <text x="340" y="36" font-family="monospace" font-size="15" fill="#00cffd" text-anchor="middle" font-weight="bold">Stay Interview — 5 questions clés</text>
-
   <!-- Central circle -->
   <circle cx="340" cy="248" r="68" fill="#1a1f4e" stroke="#915EFF" stroke-width="2.5"/>
   <text x="340" y="243" font-family="monospace" font-size="12" fill="#915EFF" text-anchor="middle" font-weight="bold">Pourquoi</text>
   <text x="340" y="259" font-family="monospace" font-size="12" fill="#915EFF" text-anchor="middle" font-weight="bold">restez-vous ?</text>
-
   <!-- Q1 — top -->
   <circle cx="340" cy="98" r="52" fill="#1a1f4e" stroke="#00cffd" stroke-width="2"/>
   <text x="340" y="90" font-family="monospace" font-size="10" fill="#00cffd" text-anchor="middle">Qu'est-ce qui</text>
   <text x="340" y="104" font-family="monospace" font-size="10" fill="#00cffd" text-anchor="middle">vous motive</text>
   <text x="340" y="118" font-family="monospace" font-size="10" fill="#00cffd" text-anchor="middle">chaque matin ?</text>
   <line x1="340" y1="150" x2="340" y2="180" stroke="#00cffd" stroke-width="1.5" stroke-dasharray="4,3"/>
-
   <!-- Q2 — top-right -->
   <circle cx="530" cy="168" r="52" fill="#1a1f4e" stroke="#86efac" stroke-width="2"/>
   <text x="530" y="160" font-family="monospace" font-size="10" fill="#86efac" text-anchor="middle">Qu'est-ce qui</text>
   <text x="530" y="174" font-family="monospace" font-size="10" fill="#86efac" text-anchor="middle">vous ferait</text>
   <text x="530" y="188" font-family="monospace" font-size="10" fill="#86efac" text-anchor="middle">partir ?</text>
   <line x1="478" y1="192" x2="408" y2="218" stroke="#86efac" stroke-width="1.5" stroke-dasharray="4,3"/>
-
   <!-- Q3 — bottom-right -->
   <circle cx="490" cy="358" r="52" fill="#1a1f4e" stroke="#fbbf24" stroke-width="2"/>
   <text x="490" y="350" font-family="monospace" font-size="10" fill="#fbbf24" text-anchor="middle">Que manque-</text>
   <text x="490" y="364" font-family="monospace" font-size="10" fill="#fbbf24" text-anchor="middle">t-il pour vous</text>
   <text x="490" y="378" font-family="monospace" font-size="10" fill="#fbbf24" text-anchor="middle">développer ?</text>
   <line x1="438" y1="332" x2="400" y2="298" stroke="#fbbf24" stroke-width="1.5" stroke-dasharray="4,3"/>
-
   <!-- Q4 — bottom-left -->
   <circle cx="190" cy="358" r="52" fill="#1a1f4e" stroke="#f87171" stroke-width="2"/>
   <text x="190" y="350" font-family="monospace" font-size="10" fill="#f87171" text-anchor="middle">Comment puis-je</text>
   <text x="190" y="364" font-family="monospace" font-size="10" fill="#f87171" text-anchor="middle">mieux vous</text>
   <text x="190" y="378" font-family="monospace" font-size="10" fill="#f87171" text-anchor="middle">soutenir ?</text>
   <line x1="242" y1="332" x2="280" y2="298" stroke="#f87171" stroke-width="1.5" stroke-dasharray="4,3"/>
-
   <!-- Q5 — top-left -->
   <circle cx="150" cy="168" r="52" fill="#1a1f4e" stroke="#c084fc" stroke-width="2"/>
   <text x="150" y="160" font-family="monospace" font-size="10" fill="#c084fc" text-anchor="middle">Où vous voyez-</text>
   <text x="150" y="174" font-family="monospace" font-size="10" fill="#c084fc" text-anchor="middle">vous dans</text>
   <text x="150" y="188" font-family="monospace" font-size="10" fill="#c084fc" text-anchor="middle">2 ans ?</text>
   <line x1="202" y1="192" x2="272" y2="218" stroke="#c084fc" stroke-width="1.5" stroke-dasharray="4,3"/>
-
   <!-- Legend categories -->
   <text x="30" y="440" font-family="monospace" font-size="10" fill="#00cffd">● Motivation</text>
   <text x="130" y="440" font-family="monospace" font-size="10" fill="#86efac">● Risques</text>
   <text x="215" y="440" font-family="monospace" font-size="10" fill="#fbbf24">● Développement</text>
   <text x="360" y="440" font-family="monospace" font-size="10" fill="#f87171">● Soutien manager</text>
   <text x="500" y="440" font-family="monospace" font-size="10" fill="#c084fc">● Avenir</text>
-
   <text x="340" y="465" font-family="monospace" font-size="10" fill="#64748b" text-anchor="middle">À conduire tous les 6 mois, en individuel, en dehors des évaluations classiques</text>
 </svg>
 </div>

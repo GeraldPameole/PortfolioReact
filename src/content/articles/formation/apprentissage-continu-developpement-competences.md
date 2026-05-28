@@ -32,7 +32,6 @@ Ce modèle dit qu'environ 70 % de ce qu'on apprend vient de l'expérience terrai
   <rect width="700" height="380" fill="#0a0f2e" rx="12"/>
   <!-- Title -->
   <text x="350" y="38" text-anchor="middle" font-family="sans-serif" font-size="17" font-weight="bold" fill="#c8c8d0">Modèle 70-20-10 — Répartition de l'apprentissage</text>
-
   <!-- Pie chart center -->
   <!-- 70% sector: cyan — 0 to 252deg (70% of 360) -->
   <path d="M350,200 L350,60 A140,140 0 0,1 484,270 Z" fill="#00cffd" opacity="0.85"/>
@@ -40,26 +39,21 @@ Ce modèle dit qu'environ 70 % de ce qu'on apprend vient de l'expérience terrai
   <path d="M350,200 L484,270 A140,140 0 0,1 282,330 Z" fill="#86efac" opacity="0.85"/>
   <!-- 10% sector: violet — 324 to 360deg -->
   <path d="M350,200 L282,330 A140,140 0 0,1 350,60 Z" fill="#915EFF" opacity="0.85"/>
-
   <!-- Inner circle (donut) -->
   <circle cx="350" cy="200" r="68" fill="#0a0f2e"/>
-
   <!-- Center label -->
   <text x="350" y="194" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#94a3b8">Apprentissage</text>
   <text x="350" y="212" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#94a3b8">en entreprise</text>
-
   <!-- Labels: 70% -->
   <line x1="430" y1="130" x2="520" y2="100" stroke="#00cffd" stroke-width="1.5"/>
   <text x="524" y="95" font-family="sans-serif" font-size="22" font-weight="bold" fill="#00cffd">70%</text>
   <text x="524" y="113" font-family="sans-serif" font-size="13" fill="#c8c8d0">Expérience terrain</text>
   <text x="524" y="129" font-family="sans-serif" font-size="11" fill="#94a3b8">Missions, erreurs, projets</text>
-
   <!-- Labels: 20% -->
   <line x1="415" y1="308" x2="510" y2="310" stroke="#86efac" stroke-width="1.5"/>
   <text x="514" y="305" font-family="sans-serif" font-size="22" font-weight="bold" fill="#86efac">20%</text>
   <text x="514" y="323" font-family="sans-serif" font-size="13" fill="#c8c8d0">Apprentissage social</text>
   <text x="514" y="339" font-family="sans-serif" font-size="11" fill="#94a3b8">Pairs, mentors, feedback</text>
-
   <!-- Labels: 10% -->
   <line x1="296" y1="280" x2="130" y2="300" stroke="#915EFF" stroke-width="1.5"/>
   <text x="60" y="295" font-family="sans-serif" font-size="22" font-weight="bold" fill="#915EFF">10%</text>

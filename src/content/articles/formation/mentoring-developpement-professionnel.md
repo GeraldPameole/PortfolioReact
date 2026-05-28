@@ -19,7 +19,6 @@ theme: formation
   <rect width="700" height="360" fill="#0a0f2e" rx="12"/>
   <!-- Titre -->
   <text x="350" y="28" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="bold" fill="#c8c8d0">Structure d'une séance de mentorat — 60 minutes</text>
-
   <!-- Bloc 1 : Check-in -->
   <rect x="30" y="55" width="145" height="240" rx="10" fill="#1e1b4b"/>
   <text x="103" y="90" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold" fill="#915EFF">Check-in</text>
@@ -31,10 +30,8 @@ theme: formation
   <text x="103" y="216" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#94a3b8">précédentes</text>
   <rect x="55" y="265" width="96" height="22" rx="6" fill="#915EFF" opacity="0.3"/>
   <text x="103" y="280" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#fbbf24">10 min</text>
-
   <!-- Flèche -->
   <polygon points="178,175 194,165 194,185" fill="#94a3b8"/>
-
   <!-- Bloc 2 : Sujet du jour -->
   <rect x="197" y="55" width="160" height="240" rx="10" fill="#0c2340"/>
   <text x="277" y="90" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold" fill="#00cffd">Sujet du jour</text>
@@ -46,10 +43,8 @@ theme: formation
   <text x="277" y="210" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#94a3b8">Partage d'expérience</text>
   <rect x="229" y="265" width="96" height="22" rx="6" fill="#00cffd" opacity="0.3"/>
   <text x="277" y="280" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#fbbf24">30 min</text>
-
   <!-- Flèche -->
   <polygon points="360,175 376,165 376,185" fill="#94a3b8"/>
-
   <!-- Bloc 3 : Ressources/Actions -->
   <rect x="379" y="55" width="160" height="240" rx="10" fill="#052e16"/>
   <text x="459" y="90" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold" fill="#86efac">Ressources</text>
@@ -61,10 +56,8 @@ theme: formation
   <text x="459" y="215" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#94a3b8">à solliciter</text>
   <rect x="411" y="265" width="96" height="22" rx="6" fill="#86efac" opacity="0.3"/>
   <text x="459" y="280" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#fbbf24">15 min</text>
-
   <!-- Flèche -->
   <polygon points="542,175 558,165 558,185" fill="#94a3b8"/>
-
   <!-- Bloc 4 : Feedback -->
   <rect x="562" y="55" width="118" height="240" rx="10" fill="#2d1b00"/>
   <text x="621" y="90" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold" fill="#fbbf24">Feedback</text>
@@ -75,7 +68,6 @@ theme: formation
   <text x="621" y="190" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#94a3b8">si nécessaire</text>
   <rect x="573" y="265" width="96" height="22" rx="6" fill="#fbbf24" opacity="0.3"/>
   <text x="621" y="280" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#fbbf24">5 min</text>
-
   <text x="350" y="330" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#94a3b8">Le mentoré prépare le sujet du jour — le mentor pose des questions, pas des réponses</text>
 </svg></div>
 
@@ -110,11 +102,9 @@ Les cinq dernières minutes sont pour le feedback mutuel. Qu'est-ce qui a été 
   <rect width="700" height="360" fill="#0a0f2e" rx="12"/>
   <!-- Titre -->
   <text x="350" y="28" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="bold" fill="#c8c8d0">Progression du mentoré sur 6 mois — 3 dimensions</text>
-
   <!-- Axes -->
   <line x1="70" y1="290" x2="650" y2="290" stroke="#94a3b8" stroke-width="1.5"/>
   <line x1="70" y1="60" x2="70" y2="290" stroke="#94a3b8" stroke-width="1.5"/>
-
   <!-- Labels axe X (mois) -->
   <text x="70" y="310" text-anchor="middle" font-family="monospace" font-size="11" fill="#94a3b8">M0</text>
   <text x="186" y="310" text-anchor="middle" font-family="monospace" font-size="11" fill="#94a3b8">M1</text>
@@ -122,7 +112,6 @@ Les cinq dernières minutes sont pour le feedback mutuel. Qu'est-ce qui a été 
   <text x="418" y="310" text-anchor="middle" font-family="monospace" font-size="11" fill="#94a3b8">M3</text>
   <text x="534" y="310" text-anchor="middle" font-family="monospace" font-size="11" fill="#94a3b8">M4</text>
   <text x="650" y="310" text-anchor="middle" font-family="monospace" font-size="11" fill="#94a3b8">M5</text>
-
   <!-- Labels axe Y -->
   <text x="62" y="293" text-anchor="end" font-family="monospace" font-size="10" fill="#94a3b8">0</text>
   <text x="62" y="234" text-anchor="end" font-family="monospace" font-size="10" fill="#94a3b8">3</text>
@@ -130,12 +119,10 @@ Les cinq dernières minutes sont pour le feedback mutuel. Qu'est-ce qui a été 
   <text x="62" y="116" text-anchor="end" font-family="monospace" font-size="10" fill="#94a3b8">7</text>
   <text x="62" y="66" text-anchor="end" font-family="monospace" font-size="10" fill="#94a3b8">10</text>
   <text x="20" y="175" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#94a3b8" transform="rotate(-90,20,175)">Score /10</text>
-
   <!-- Lignes de grille horizontales -->
   <line x1="70" y1="234" x2="650" y2="234" stroke="#1e293b" stroke-width="1"/>
   <line x1="70" y1="175" x2="650" y2="175" stroke="#1e293b" stroke-width="1"/>
   <line x1="70" y1="116" x2="650" y2="116" stroke="#1e293b" stroke-width="1"/>
-
   <!-- Courbe Confiance (violet) - points: M0=4, M1=4.5, M2=5.5, M3=6.5, M4=7.5, M5=8.5 -->
   <polyline points="70,220 186,208 302,185 418,162 534,138 650,116" fill="none" stroke="#915EFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
   <circle cx="70" cy="220" r="5" fill="#915EFF"/>
@@ -144,7 +131,6 @@ Les cinq dernières minutes sont pour le feedback mutuel. Qu'est-ce qui a été 
   <circle cx="418" cy="162" r="5" fill="#915EFF"/>
   <circle cx="534" cy="138" r="5" fill="#915EFF"/>
   <circle cx="650" cy="116" r="5" fill="#915EFF"/>
-
   <!-- Courbe Compétence (cyan) - points: M0=5, M1=5.5, M2=6, M3=7, M4=7.5, M5=9 -->
   <polyline points="70,210 186,197 302,186 418,163 534,151 650,104" fill="none" stroke="#00cffd" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
   <circle cx="70" cy="210" r="5" fill="#00cffd"/>
@@ -153,7 +139,6 @@ Les cinq dernières minutes sont pour le feedback mutuel. Qu'est-ce qui a été 
   <circle cx="418" cy="163" r="5" fill="#00cffd"/>
   <circle cx="534" cy="151" r="5" fill="#00cffd"/>
   <circle cx="650" cy="104" r="5" fill="#00cffd"/>
-
   <!-- Courbe Autonomie (vert) - points: M0=3, M1=3.5, M2=5, M3=6, M4=7, M5=8 -->
   <polyline points="70,232 186,220 302,198 418,175 534,151 650,128" fill="none" stroke="#86efac" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
   <circle cx="70" cy="232" r="5" fill="#86efac"/>
@@ -162,7 +147,6 @@ Les cinq dernières minutes sont pour le feedback mutuel. Qu'est-ce qui a été 
   <circle cx="418" cy="175" r="5" fill="#86efac"/>
   <circle cx="534" cy="151" r="5" fill="#86efac"/>
   <circle cx="650" cy="128" r="5" fill="#86efac"/>
-
   <!-- Légende -->
   <rect x="100" y="60" width="14" height="4" rx="2" fill="#915EFF"/>
   <text x="120" y="66" font-family="sans-serif" font-size="11" fill="#915EFF">Confiance</text>

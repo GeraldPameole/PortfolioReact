@@ -33,38 +33,30 @@ Le trimestriel, lui, est le seul moment où on regarde formellement les chiffres
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 380" style="max-width:100%;height:auto">
   <rect width="720" height="380" fill="#0a0f2e" rx="12"/>
   <text x="360" y="36" font-family="monospace" font-size="15" fill="#00cffd" text-anchor="middle" font-weight="bold">Courbe de performance individuelle — 12 mois</text>
-
   <!-- Axes -->
   <line x1="70" y1="300" x2="670" y2="300" stroke="#334155" stroke-width="1.5"/>
   <line x1="70" y1="60" x2="70" y2="300" stroke="#334155" stroke-width="1.5"/>
-
   <!-- Y-axis labels -->
   <text x="60" y="64" font-family="monospace" font-size="10" fill="#64748b" text-anchor="end">Haut</text>
   <text x="60" y="185" font-family="monospace" font-size="10" fill="#64748b" text-anchor="end">Cible</text>
   <text x="60" y="290" font-family="monospace" font-size="10" fill="#64748b" text-anchor="end">Bas</text>
-
   <!-- Zone backgrounds -->
   <!-- Sous-performance zone (bottom) -->
   <rect x="70" y="240" width="600" height="60" fill="#f87171" opacity="0.12" rx="3"/>
   <text x="680" y="275" font-family="monospace" font-size="9" fill="#f87171" text-anchor="end">Sous-perf.</text>
-
   <!-- Performance attendue zone (middle) -->
   <rect x="70" y="150" width="600" height="90" fill="#86efac" opacity="0.10" rx="3"/>
   <text x="680" y="200" font-family="monospace" font-size="9" fill="#86efac" text-anchor="end">Attendue</text>
-
   <!-- Sur-performance zone (top) -->
   <rect x="70" y="60" width="600" height="90" fill="#00cffd" opacity="0.10" rx="3"/>
   <text x="680" y="110" font-family="monospace" font-size="9" fill="#00cffd" text-anchor="end">Sur-perf.</text>
-
   <!-- Target line -->
   <line x1="70" y1="185" x2="670" y2="185" stroke="#86efac" stroke-width="1" stroke-dasharray="5,4" opacity="0.6"/>
-
   <!-- Performance curve (path) -->
   <!-- Points: Jan=185, Fév=200, Mars=220, Avr=240(dérive), Mai=255(crise), Juin=230(intervention), Juil=200, Aout=180, Sep=170, Oct=160, Nov=150, Dec=140 -->
   <polyline
     points="70,185 120,195 170,182 220,175 270,168 320,260 370,255 420,220 470,185 520,172 570,162 620,148 670,140"
     fill="none" stroke="#915EFF" stroke-width="2.5"/>
-
   <!-- Data points -->
   <circle cx="70" cy="185" r="4" fill="#915EFF"/>
   <circle cx="120" cy="195" r="4" fill="#915EFF"/>
@@ -80,15 +72,12 @@ Le trimestriel, lui, est le seul moment où on regarde formellement les chiffres
   <circle cx="570" cy="162" r="4" fill="#915EFF"/>
   <circle cx="620" cy="148" r="4" fill="#86efac"/>
   <circle cx="670" cy="140" r="4" fill="#86efac"/>
-
   <!-- Intervention arrow and label -->
   <line x1="420" y1="215" x2="420" y2="178" stroke="#fbbf24" stroke-width="1.5"/>
   <text x="425" y="170" font-family="monospace" font-size="10" fill="#fbbf24">↑ Intervention</text>
   <text x="425" y="182" font-family="monospace" font-size="10" fill="#fbbf24">coaching</text>
-
   <!-- Drop annotation -->
   <text x="300" y="275" font-family="monospace" font-size="9" fill="#f87171">chute détectée</text>
-
   <!-- X axis months -->
   <text x="70" y="316" font-family="monospace" font-size="9" fill="#64748b" text-anchor="middle">Jan</text>
   <text x="120" y="316" font-family="monospace" font-size="9" fill="#64748b" text-anchor="middle">Fév</text>
@@ -102,7 +91,6 @@ Le trimestriel, lui, est le seul moment où on regarde formellement les chiffres
   <text x="520" y="316" font-family="monospace" font-size="9" fill="#64748b" text-anchor="middle">Oct</text>
   <text x="570" y="316" font-family="monospace" font-size="9" fill="#64748b" text-anchor="middle">Nov</text>
   <text x="620" y="316" font-family="monospace" font-size="9" fill="#64748b" text-anchor="middle">Déc</text>
-
   <!-- Legend -->
   <rect x="100" y="335" width="12" height="4" fill="#f87171" opacity="0.4"/>
   <text x="116" y="342" font-family="monospace" font-size="9" fill="#f87171">Sous-performance</text>
@@ -112,7 +100,6 @@ Le trimestriel, lui, est le seul moment où on regarde formellement les chiffres
   <text x="476" y="342" font-family="monospace" font-size="9" fill="#00cffd">Sur-performance</text>
   <circle cx="610" cy="339" r="5" fill="#fbbf24"/>
   <text x="620" y="342" font-family="monospace" font-size="9" fill="#fbbf24">Intervention</text>
-
   <text x="360" y="368" font-family="monospace" font-size="10" fill="#64748b" text-anchor="middle">Exemple indicatif — courbe réelle varie selon le profil et le contexte</text>
 </svg>
 </div>

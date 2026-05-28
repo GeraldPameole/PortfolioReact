@@ -27,39 +27,31 @@ Ces trois rôles sont souvent confondus, et cette confusion est source d'attente
   <rect width="700" height="380" fill="#0a0f2e" rx="12"/>
   <!-- Title -->
   <text x="350" y="34" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="bold" fill="#c8c8d0">Triangle des rôles d'accompagnement</text>
-
   <!-- Triangle sides -->
   <polygon points="350,65 130,320 570,320" fill="none" stroke="#94a3b8" stroke-width="2"/>
   <!-- Triangle fill subtle -->
   <polygon points="350,65 130,320 570,320" fill="#1e2a4a" opacity="0.4"/>
-
   <!-- Vertex: MENTOR (top) -->
   <circle cx="350" cy="65" r="38" fill="#915EFF" opacity="0.2" stroke="#915EFF" stroke-width="2"/>
   <text x="350" y="60" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold" fill="#915EFF">MENTOR</text>
   <text x="350" y="78" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#c8c8d0">Expérience partagée</text>
-
   <!-- Vertex: COACH (bottom-left) -->
   <circle cx="130" cy="320" r="38" fill="#00cffd" opacity="0.2" stroke="#00cffd" stroke-width="2"/>
   <text x="130" y="316" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold" fill="#00cffd">COACH</text>
   <text x="130" y="334" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#c8c8d0">Questions puissantes</text>
-
   <!-- Vertex: MANAGER (bottom-right) -->
   <circle cx="570" cy="320" r="38" fill="#86efac" opacity="0.2" stroke="#86efac" stroke-width="2"/>
   <text x="570" y="316" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold" fill="#86efac">MANAGER</text>
   <text x="570" y="334" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#c8c8d0">Objectifs & résultats</text>
-
   <!-- Mentor zone description (top area) -->
   <text x="350" y="140" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#915EFF">Partage son vécu, ouvre son réseau</text>
   <text x="350" y="156" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#94a3b8">Relation volontaire, long terme, sans lien hiérarchique</text>
-
   <!-- Coach zone description (left area) -->
   <text x="200" y="255" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#00cffd">Aide à trouver ses propres réponses</text>
   <text x="200" y="271" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#94a3b8">Contrat défini, méthode structurée</text>
-
   <!-- Manager zone description (right area) -->
   <text x="490" y="255" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#86efac">Évalue, organise, pilote</text>
   <text x="490" y="271" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#94a3b8">Responsable des performances</text>
-
   <!-- Center zone label -->
   <text x="350" y="215" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#fbbf24">Zone idéale :</text>
   <text x="350" y="230" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#fbbf24">postures complémentaires</text>

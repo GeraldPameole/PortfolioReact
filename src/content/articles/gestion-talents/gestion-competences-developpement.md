@@ -27,7 +27,6 @@ Une skills matrix, c'est un tableau croisé : les collaborateurs en lignes, les 
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 360" style="max-width:100%;height:auto">
   <rect width="720" height="360" fill="#0a0f2e" rx="12"/>
   <text x="360" y="30" font-family="monospace" font-size="14" fill="#00cffd" text-anchor="middle" font-weight="bold">Skills Matrix — Équipe commerciale (exemple)</text>
-
   <!-- Column headers -->
   <text x="155" y="58" font-family="monospace" font-size="9" fill="#94a3b8" text-anchor="middle">Offres</text>
   <text x="155" y="69" font-family="monospace" font-size="9" fill="#94a3b8" text-anchor="middle">complexes</text>
@@ -39,14 +38,12 @@ Une skills matrix, c'est un tableau croisé : les collaborateurs en lignes, les 
   <text x="485" y="69" font-family="monospace" font-size="9" fill="#94a3b8" text-anchor="middle">nouveaux</text>
   <text x="595" y="58" font-family="monospace" font-size="9" fill="#94a3b8" text-anchor="middle">Appels</text>
   <text x="595" y="69" font-family="monospace" font-size="9" fill="#94a3b8" text-anchor="middle">d'offres</text>
-
   <!-- Row headers -->
   <text x="65" y="106" font-family="monospace" font-size="10" fill="#e2e8f0" text-anchor="middle">Thomas</text>
   <text x="65" y="166" font-family="monospace" font-size="10" fill="#e2e8f0" text-anchor="middle">Camille</text>
   <text x="65" y="226" font-family="monospace" font-size="10" fill="#e2e8f0" text-anchor="middle">Romain</text>
   <text x="65" y="286" font-family="monospace" font-size="10" fill="#e2e8f0" text-anchor="middle">Sophie</text>
   <text x="65" y="326" font-family="monospace" font-size="10" fill="#e2e8f0" text-anchor="middle">David</text>
-
   <!-- Grid lines -->
   <line x1="110" y1="78" x2="660" y2="78" stroke="#1e293b" stroke-width="1"/>
   <line x1="110" y1="138" x2="660" y2="138" stroke="#1e293b" stroke-width="1"/>
@@ -60,7 +57,6 @@ Une skills matrix, c'est un tableau croisé : les collaborateurs en lignes, les 
   <line x1="550" y1="78" x2="550" y2="340" stroke="#1e293b" stroke-width="1"/>
   <line x1="660" y1="78" x2="660" y2="340" stroke="#1e293b" stroke-width="1"/>
   <line x1="110" y1="340" x2="660" y2="340" stroke="#1e293b" stroke-width="1"/>
-
   <!-- Thomas row: expert, expert, op, op, absent -->
   <rect x="111" y="79" width="109" height="59" fill="#86efac" opacity="0.35" rx="2"/>
   <text x="155" y="114" font-family="monospace" font-size="11" fill="#86efac" text-anchor="middle" font-weight="bold">Expert</text>
@@ -72,7 +68,6 @@ Une skills matrix, c'est un tableau croisé : les collaborateurs en lignes, les 
   <text x="485" y="114" font-family="monospace" font-size="11" fill="#00cffd" text-anchor="middle">Opérationnel</text>
   <rect x="551" y="79" width="109" height="59" fill="#1e293b" rx="2"/>
   <text x="595" y="114" font-family="monospace" font-size="11" fill="#475569" text-anchor="middle">Absent</text>
-
   <!-- Camille row: op, débutant, expert, expert, op -->
   <rect x="111" y="139" width="109" height="59" fill="#00cffd" opacity="0.25" rx="2"/>
   <text x="155" y="174" font-family="monospace" font-size="11" fill="#00cffd" text-anchor="middle">Opérationnel</text>
@@ -84,7 +79,6 @@ Une skills matrix, c'est un tableau croisé : les collaborateurs en lignes, les 
   <text x="485" y="174" font-family="monospace" font-size="11" fill="#86efac" text-anchor="middle" font-weight="bold">Expert</text>
   <rect x="551" y="139" width="109" height="59" fill="#00cffd" opacity="0.25" rx="2"/>
   <text x="595" y="174" font-family="monospace" font-size="11" fill="#00cffd" text-anchor="middle">Opérationnel</text>
-
   <!-- Romain row: débutant, op, absent, débutant, expert -->
   <rect x="111" y="199" width="109" height="59" fill="#fbbf24" opacity="0.25" rx="2"/>
   <text x="155" y="234" font-family="monospace" font-size="11" fill="#fbbf24" text-anchor="middle">Débutant</text>
@@ -96,7 +90,6 @@ Une skills matrix, c'est un tableau croisé : les collaborateurs en lignes, les 
   <text x="485" y="234" font-family="monospace" font-size="11" fill="#fbbf24" text-anchor="middle">Débutant</text>
   <rect x="551" y="199" width="109" height="59" fill="#86efac" opacity="0.35" rx="2"/>
   <text x="595" y="234" font-family="monospace" font-size="11" fill="#86efac" text-anchor="middle" font-weight="bold">Expert</text>
-
   <!-- Sophie row: op, expert, op, absent, débutant -->
   <rect x="111" y="259" width="109" height="49" fill="#00cffd" opacity="0.25" rx="2"/>
   <text x="155" y="289" font-family="monospace" font-size="11" fill="#00cffd" text-anchor="middle">Opérationnel</text>
@@ -108,7 +101,6 @@ Une skills matrix, c'est un tableau croisé : les collaborateurs en lignes, les 
   <text x="485" y="289" font-family="monospace" font-size="11" fill="#475569" text-anchor="middle">Absent</text>
   <rect x="551" y="259" width="109" height="49" fill="#fbbf24" opacity="0.25" rx="2"/>
   <text x="595" y="289" font-family="monospace" font-size="11" fill="#fbbf24" text-anchor="middle">Débutant</text>
-
   <!-- David row: absent, débutant, op, op, op -->
   <rect x="111" y="309" width="109" height="31" fill="#1e293b" rx="2"/>
   <text x="155" y="330" font-family="monospace" font-size="11" fill="#475569" text-anchor="middle">Absent</text>
@@ -120,7 +112,6 @@ Une skills matrix, c'est un tableau croisé : les collaborateurs en lignes, les 
   <text x="485" y="330" font-family="monospace" font-size="11" fill="#00cffd" text-anchor="middle">Opérationnel</text>
   <rect x="551" y="309" width="109" height="31" fill="#00cffd" opacity="0.25" rx="2"/>
   <text x="595" y="330" font-family="monospace" font-size="11" fill="#00cffd" text-anchor="middle">Opérationnel</text>
-
   <!-- Legend -->
   <rect x="30" y="348" width="12" height="8" fill="#1e293b" rx="2"/>
   <text x="46" y="356" font-family="monospace" font-size="9" fill="#475569">Absent</text>

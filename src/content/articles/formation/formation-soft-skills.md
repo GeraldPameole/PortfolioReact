@@ -33,7 +33,6 @@ La différence avec les compétences techniques, c'est que les soft skills se d�
   <rect width="700" height="400" fill="#0a0f2e" rx="12"/>
   <!-- Title -->
   <text x="350" y="34" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="bold" fill="#c8c8d0">Radar — Évolution des soft skills avant / après formation</text>
-
   <!-- Center -->
   <!-- Hexagon radar: 6 axes, center at 350,215, radius 130 -->
   <!-- Angles: 90°(top), 30°, 330°, 270°(bottom), 210°, 150° -->
@@ -45,7 +44,6 @@ La différence avec les compétences techniques, c'est que les soft skills se d�
        BL:     350-130*cos(30)=237.3, 215-130*sin(30)=280 → 237,280
        TL:     350-130*cos(30)=237.3, 215-130*sin(30)=150 → 237,150
   -->
-
   <!-- Grid hexagons at 25%, 50%, 75%, 100% -->
   <!-- 25% r=32.5 -->
   <polygon points="350,182 383,198 383,231 350,247 317,231 317,198" fill="none" stroke="#1e2a4a" stroke-width="1"/>
@@ -55,7 +53,6 @@ La différence avec les compétences techniques, c'est que les soft skills se d�
   <polygon points="350,117 434,166 434,264 350,312 266,264 266,166" fill="none" stroke="#1e2a4a" stroke-width="1.2"/>
   <!-- 100% r=130 -->
   <polygon points="350,85 463,150 463,280 350,345 237,280 237,150" fill="none" stroke="#94a3b8" stroke-width="1.5"/>
-
   <!-- Axes -->
   <line x1="350" y1="215" x2="350" y2="85" stroke="#94a3b8" stroke-width="1" stroke-dasharray="3,3"/>
   <line x1="350" y1="215" x2="463" y2="150" stroke="#94a3b8" stroke-width="1" stroke-dasharray="3,3"/>
@@ -63,7 +60,6 @@ La différence avec les compétences techniques, c'est que les soft skills se d�
   <line x1="350" y1="215" x2="350" y2="345" stroke="#94a3b8" stroke-width="1" stroke-dasharray="3,3"/>
   <line x1="350" y1="215" x2="237" y2="280" stroke="#94a3b8" stroke-width="1" stroke-dasharray="3,3"/>
   <line x1="350" y1="215" x2="237" y2="150" stroke="#94a3b8" stroke-width="1" stroke-dasharray="3,3"/>
-
   <!-- AVANT profile (r values as % of 130): Communication 50%, Gestion conflits 35%, Adaptabilité 55%, Leadership 40%, Résolution pb 60%, Empathie 50%) -->
   <!-- Communication (top, axis 0): 50% → r=65 → 350, 215-65=150 -->
   <!-- Gestion conflits (TR, axis 60°): 35% → r=45.5 → 350+45.5*0.866=389, 215-45.5*0.5=192 -->
@@ -72,7 +68,6 @@ La différence avec les compétences techniques, c'est que les soft skills se d�
   <!-- Résolution pb (BL, axis 240°): 60% → r=78 → 350-78*0.866=282, 215+78*0.5=254 -->
   <!-- Empathie (TL, axis 300°): 50% → r=65 → 350-65*0.866=294, 215-65*0.5=182 -->
   <polygon points="350,150 389,192 412,251 350,267 282,254 294,182" fill="#fbbf24" fill-opacity="0.15" stroke="#fbbf24" stroke-width="2"/>
-
   <!-- APRÈS profile (values): Communication 80%, Gestion conflits 70%, Adaptabilité 85%, Leadership 75%, Résolution pb 88%, Empathie 78% -->
   <!-- Communication: 80% → r=104 → 350, 215-104=111 -->
   <!-- Gestion conflits: 70% → r=91 → 350+91*0.866=429, 215-91*0.5=169 -->
@@ -81,7 +76,6 @@ La différence avec les compétences techniques, c'est que les soft skills se d�
   <!-- Résolution pb: 88% → r=114.4 → 350-114.4*0.866=251, 215+114.4*0.5=272 -->
   <!-- Empathie: 78% → r=101.4 → 350-101.4*0.866=262, 215-101.4*0.5=164 -->
   <polygon points="350,111 429,169 446,270 350,312 251,272 262,164" fill="#915EFF" fill-opacity="0.18" stroke="#915EFF" stroke-width="2.5"/>
-
   <!-- Axis labels -->
   <text x="350" y="76" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#c8c8d0">Communication</text>
   <text x="480" y="148" text-anchor="start" font-family="sans-serif" font-size="11" fill="#c8c8d0">Gestion</text>
@@ -91,7 +85,6 @@ La différence avec les compétences techniques, c'est que les soft skills se d�
   <text x="80" y="280" text-anchor="end" font-family="sans-serif" font-size="11" fill="#c8c8d0">Résolution</text>
   <text x="80" y="294" text-anchor="end" font-family="sans-serif" font-size="11" fill="#c8c8d0">problèmes</text>
   <text x="80" y="148" text-anchor="end" font-family="sans-serif" font-size="11" fill="#c8c8d0">Empathie</text>
-
   <!-- Legend -->
   <rect x="490" y="55" width="14" height="3" fill="#fbbf24" rx="1"/>
   <text x="510" y="62" font-family="sans-serif" font-size="11" fill="#fbbf24">Avant formation</text>

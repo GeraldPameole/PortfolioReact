@@ -14,27 +14,22 @@ theme: formation
   <rect width="700" height="360" fill="#0a0f2e" rx="12"/>
   <!-- Titre -->
   <text x="350" y="28" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="bold" fill="#c8c8d0">Taux de complétion moyen selon le format de formation</text>
-
   <!-- Barre MOOC -->
   <text x="160" y="75" text-anchor="end" font-family="monospace" font-size="12" fill="#94a3b8">MOOC seul</text>
   <rect x="170" y="58" width="27" height="28" rx="4" fill="#f87171"/>
   <text x="204" y="76" text-anchor="start" font-family="monospace" font-size="13" font-weight="bold" fill="#f87171">5%</text>
-
   <!-- Barre Vidéo -->
   <text x="160" y="135" text-anchor="end" font-family="monospace" font-size="12" fill="#94a3b8">Vidéo seule</text>
   <rect x="170" y="118" width="62" height="28" rx="4" fill="#fbbf24"/>
   <text x="240" y="136" text-anchor="start" font-family="monospace" font-size="13" font-weight="bold" fill="#fbbf24">23%</text>
-
   <!-- Barre Blended -->
   <text x="160" y="195" text-anchor="end" font-family="monospace" font-size="12" fill="#94a3b8">Blended learning</text>
   <rect x="170" y="178" width="181" height="28" rx="4" fill="#00cffd"/>
   <text x="358" y="196" text-anchor="start" font-family="monospace" font-size="13" font-weight="bold" fill="#00cffd">67%</text>
-
   <!-- Barre Cohort-based -->
   <text x="160" y="255" text-anchor="end" font-family="monospace" font-size="12" fill="#94a3b8">Cohorte guidée</text>
   <rect x="170" y="238" width="227" height="28" rx="4" fill="#86efac"/>
   <text x="404" y="256" text-anchor="start" font-family="monospace" font-size="13" font-weight="bold" fill="#86efac">84%</text>
-
   <!-- Axe horizontal -->
   <line x1="170" y1="290" x2="570" y2="290" stroke="#94a3b8" stroke-width="1"/>
   <text x="170" y="308" text-anchor="middle" font-family="monospace" font-size="10" fill="#94a3b8">0%</text>
@@ -47,7 +42,6 @@ theme: formation
   <line x1="370" y1="50" x2="370" y2="290" stroke="#1e293b" stroke-width="1"/>
   <line x1="470" y1="50" x2="470" y2="290" stroke="#1e293b" stroke-width="1"/>
   <line x1="570" y1="50" x2="570" y2="290" stroke="#1e293b" stroke-width="1"/>
-
   <text x="350" y="340" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#94a3b8">Source : observations terrain et benchmarks sectoriels</text>
 </svg></div>
 
@@ -84,29 +78,24 @@ La troisième différence est la **contextualisation**. "Voici la technique de g
   <rect width="700" height="360" fill="#0a0f2e" rx="12"/>
   <!-- Titre -->
   <text x="350" y="28" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="bold" fill="#c8c8d0">Architecture blended learning — 3 couches</text>
-
   <!-- Couche 1 : Auto-apprentissage -->
   <rect x="60" y="55" width="580" height="72" rx="10" fill="#1e1b4b"/>
   <text x="200" y="85" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold" fill="#915EFF">Couche 1 — Auto-apprentissage</text>
   <text x="200" y="106" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#c8c8d0">Modules e-learning courts · Vidéos · Quiz · Lectures</text>
   <text x="530" y="85" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#94a3b8">Avant / entre les séances</text>
   <text x="530" y="106" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#94a3b8">En autonomie, à son rythme</text>
-
   <!-- Flèche 1 vers 2 -->
   <line x1="350" y1="128" x2="350" y2="148" stroke="#915EFF" stroke-width="2"/>
   <polygon points="344,148 356,148 350,162" fill="#915EFF"/>
-
   <!-- Couche 2 : Pratique guidée -->
   <rect x="60" y="163" width="580" height="72" rx="10" fill="#0c2340"/>
   <text x="200" y="193" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold" fill="#00cffd">Couche 2 — Pratique guidée</text>
   <text x="200" y="214" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#c8c8d0">Classes virtuelles · Ateliers · Q&amp;R · Mises en situation</text>
   <text x="530" y="193" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#94a3b8">Séances synchrones</text>
   <text x="530" y="214" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#94a3b8">1 à 2h par semaine</text>
-
   <!-- Flèche 2 vers 3 -->
   <line x1="350" y1="236" x2="350" y2="256" stroke="#00cffd" stroke-width="2"/>
   <polygon points="344,256 356,256 350,270" fill="#00cffd"/>
-
   <!-- Couche 3 : Application terrain -->
   <rect x="60" y="271" width="580" height="72" rx="10" fill="#052e16"/>
   <text x="200" y="301" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold" fill="#86efac">Couche 3 — Application terrain</text>
