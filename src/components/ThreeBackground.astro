@@ -46,6 +46,8 @@
 </style>
 
 <script>
+// @ts-nocheck — gros script WebGL plein de math non typée (Three.js, buffers,
+//               vecteurs). On ne le passe pas au type-checker (bruit inutile).
 // Fond décoratif WebGL — sorti du chemin critique :
 //  • import('three') dynamique (bundlé same-origin par Astro), pas via CDN
 //  • déclenché après idle (jamais pendant le chargement initial)
