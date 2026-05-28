@@ -8,7 +8,9 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "check": "astro check",
+    "test": "astro check"
   },
   "dependencies": {
     "@astrojs/mdx": "^2.0.0",
@@ -24,6 +26,7 @@
     "three": "^0.162.0"
   },
   "devDependencies": {
+    "@astrojs/check": "^0.9.9",
     "@eslint/js": "^10.0.1",
     "@tailwindcss/aspect-ratio": "^0.4.2",
     "@tailwindcss/forms": "^0.5.7",
@@ -38,6 +41,6 @@
     "eslint-plugin-astro": "^1.7.0",
     "globals": "^17.6.0",
     "tailwindcss": "^3.4.0",
-    "typescript": "^5.3.3"
+    "typescript": "^5.9.3"
   }
 }

@@ -13,8 +13,8 @@ Le contenu et l'UI sont **en français** — rédige commentaires, textes et mes
 - `npm run dev` — serveur de dev sur **http://localhost:3000** (port 3000 forcé dans `astro.config.mjs`, `host: true`), **pas** le 4321 par défaut d'Astro.
 - `npm run build` — génère `dist/` (~249 pages).
 - `npm run preview` — sert le build (port 4321 par défaut, car le bloc `server` ne s'applique qu'au dev).
-
-Pas de lint ni de tests configurés.
+- `npm run lint` — ESLint (flat config, plugin Astro). `scripts/` est ignoré (scripts one-shot).
+- `npm test` / `npm run check` — `astro check` : valide les schémas de collections, les types TS et les templates. Baseline ~45 erreurs TS legacy à nettoyer dans le temps (non bloquant pour le build).
 
 ## Contenu (collections Astro)
 
