@@ -49,6 +49,34 @@ const year = new Date().getFullYear();
       </div>
     </div>
 
+    <div class="footer-newsletter">
+      <div class="fnl-text">
+        <p class="fnav-title" style="margin-bottom:0">Newsletter</p>
+        <span class="fnl-tagline">Un article par semaine, sans bruit.</span>
+      </div>
+      <form
+        id="footer-nl-form"
+        action="https://buttondown.com/api/emails/embed-subscribe/Apex_971"
+        method="POST"
+        class="fnl-form"
+      >
+        <input type="hidden" name="tag" value="footer" />
+        <input
+          type="email"
+          name="email"
+          required
+          placeholder="votre@email.com"
+          class="fnl-input"
+          autocomplete="email"
+          aria-label="Votre adresse email"
+        />
+        <button type="submit" class="fnl-btn" aria-label="S'abonner à la newsletter">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m9 18 6-6-6-6"/></svg>
+        </button>
+        <span class="fnl-success" role="status" hidden>Inscrit ✓</span>
+      </form>
+    </div>
+
     <div class="footer-bottom">
       <p class="footer-copy">© {year} Gérald Paméole — <a href="/mentions-legales" style="color:inherit;text-decoration:underline;text-underline-offset:2px;opacity:0.7">Mentions légales</a></p>
       <div class="footer-tech">
@@ -83,6 +111,41 @@ const year = new Date().getFullYear();
 .footer-copy { color:var(--text-4); font-size:0.82rem; }
 .footer-tech { display:flex; align-items:center; gap:0.4rem; color:var(--text-4); font-size:0.8rem; }
 .tech-tag { background:var(--glass); border:1px solid var(--border); border-radius:var(--r-sm); padding:0.12rem 0.5rem; font-family:var(--font-mono); font-size:0.72rem; color:var(--text-3); }
+/* Mini-formulaire newsletter (compact) */
+.footer-newsletter { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:1.5rem; padding:1.5rem 0; border-top:1px solid var(--border); margin-bottom:1.5rem; }
+.fnl-text { display:flex; flex-direction:column; gap:0.2rem; }
+.fnl-tagline { font-size:0.85rem; color:var(--text-3); }
+.fnl-form { display:flex; align-items:center; gap:0.5rem; min-width:280px; }
+.fnl-input { flex:1; background:var(--bg-2); border:1px solid var(--border); border-radius:var(--r-md); padding:0.55rem 0.9rem; font-size:0.85rem; color:var(--text-1); font-family:var(--font-sans); transition:border-color .2s; }
+.fnl-input:focus { outline:none; border-color:var(--violet); box-shadow:0 0 0 3px rgba(145,94,255,.12); }
+.fnl-btn { background:var(--violet); border:none; color:#fff; border-radius:var(--r-md); width:38px; height:38px; display:inline-flex; align-items:center; justify-content:center; cursor:pointer; transition:background .2s; }
+.fnl-btn:hover { background:var(--violet-light, #a78bfa); }
+.fnl-btn[disabled] { opacity:.6; cursor:default; }
+.fnl-success { color:#86efac; font-size:0.9rem; font-weight:600; }
 @media(max-width:900px){ .footer-grid{grid-template-columns:1fr 1fr;} .footer-brand{grid-column:1/-1;} }
-@media(max-width:600px){ .footer-grid{grid-template-columns:1fr;} .footer-bottom{flex-direction:column;align-items:flex-start;} }
+@media(max-width:600px){ .footer-grid{grid-template-columns:1fr;} .footer-bottom{flex-direction:column;align-items:flex-start;} .footer-newsletter{flex-direction:column;align-items:stretch;} .fnl-form{width:100%;} }
 </style>
+
+<script>
+document.addEventListener('astro:page-load', () => {
+  const form = document.getElementById('footer-nl-form') as HTMLFormElement | null;
+  if (!form) return;
+  const btn = form.querySelector('button[type="submit"]') as HTMLButtonElement;
+  const input = form.querySelector('input[type="email"]') as HTMLInputElement;
+  const success = form.querySelector('.fnl-success') as HTMLElement;
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    if (!form.checkValidity()) { form.reportValidity(); return; }
+    btn.disabled = true;
+    try {
+      // Buttondown embed-subscribe : no-cors + succès optimiste
+      await fetch(form.action, { method: 'POST', mode: 'no-cors', body: new FormData(form) });
+      input.hidden = true;
+      btn.hidden = true;
+      success.hidden = false;
+    } catch {
+      btn.disabled = false;
+    }
+  });
+});
+</script>
