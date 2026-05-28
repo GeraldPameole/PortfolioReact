@@ -21,7 +21,7 @@ tags:
 
 ## La transformation digitale n'est pas un projet IT
 
-Quand je suis arrivé chez KEOS TELECOM en 2021 comme Chef de Projet Maintenance Réseaux, la transformation digitale était déjà sur toutes les lèvres. Mais sur le terrain, la réalité était différente : des techniciens qui travaillaient encore avec des feuilles Excel partagées par email, des rapports d'intervention rédigés à la main, et des outils de supervision réseau sous-exploités parce que personne n'avait été formé à les lire correctement.
+Quand je suis arrivé chez KEOS TELECOM en 2021 comme Chef de Projet Maintenance Réseaux, la transformation digitale était déjà sur toutes les lèvres. Mais sur le terrain, la réalité était différente : des techniciens qui n'incrémentaient pas leur suivi et notes dans les systèmes numériques, des rapports d'intervention communiqués oralement, et des outils de supervision réseau sous-exploités parce que personne n'avait été formé à les lire correctement.
 
 Ce n'est pas un problème de budget ou de technologie. C'est un problème de méthode et d'adoption.
 

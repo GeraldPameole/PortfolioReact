@@ -9,7 +9,7 @@ pillColor: green
 theme: technologie
 ---
 
-Chez ACTIV PARTNERS, j'ai démarré plusieurs projets sous React parce que c'était la norme implicite dans l'équipe. Rétrospectivement, deux de ces projets auraient été plus simples et plus rapides à livrer avec Vue. Pas parce que React est mauvais — il est excellent — mais parce qu'on avait choisi l'outil par réflexe, pas par analyse.
+Chez ACTIV PARTNERS, j'ai démarré plusieurs projets sous Wordpress puis React parce que c'était la norme implicite dans l'équipe. Rétrospectivement, deux de ces projets auraient été plus simples et plus rapides à livrer avec Vue. Pas parce que React est mauvais — il est excellent — mais parce qu'on avait choisi l'outil par réflexe, pas par analyse.
 
 En 2025, l'écosystème JavaScript a mûri au point où aucun framework n'est objectivement supérieur pour tous les contextes. React domine les offres d'emploi et les projets existants, Vue conserve une communauté fidèle et une entrée en matière plus douce, Angular s'impose dans les grosses organisations qui ont besoin de structure forte dès le départ. Ce qui différencie les équipes efficaces, c'est leur capacité à choisir selon le projet, pas selon la mode.
 
@@ -61,13 +61,13 @@ L'écosystème React est sans concurrence en volume : plus de librairies, plus d
 
 C'est la question que peu de ressources posent honnêtement. React n'est pas le bon choix pour un site vitrine ou une landing page de quelques pages. Le coût d'installation — bundler, JSX, hydratation — est disproportionné par rapport au résultat. Un site WordPress bien optimisé ou un rendu serveur simple livrera la même expérience utilisateur avec moins de complexité.
 
-Pour un prototype rapide qui doit être montré dans deux jours, Vue ou même du HTML + Alpine.js suffit amplement. La richesse de l'écosystème React devient un obstacle quand on n'a pas le temps de faire les bons choix de librairies.
+Pour un prototype rapide qui doit être montré dans deux jours, Vue ou même du HTML + Alpine.js suffit amplement, voire mm une maquette IA. La richesse de l'écosystème React devient un obstacle quand on n'a pas le temps de faire les bons choix de librairies.
 
 Pour une application enterprise avec des dizaines de développeurs et des contraintes fortes sur les tests, l'architecture et la cohérence du code, Angular a une longueur d'avance. Son opinionisme — souvent perçu comme un défaut — devient un atout quand l'équipe est grande : tout le monde écrit le code de la même façon.
 
 ## Méthode de décision pratique
 
-Avant de choisir un framework, je pose trois questions : quelle est la durée de vie attendue du projet (moins de 6 mois = minimalisme), quelle est la taille de l'équipe (plus de 5 devs = Angular ou React avec conventions strictes), et qui va maintenir le code (si les développeurs connaissent déjà Vue, ne pas introduire React pour "suivre la tendance").
+Avant de choisir un framework, je pose trois questions : quelle est la durée de vie attendue du projet (moins de 6 mois = minimalisme), quelle est la taille de l'équipe (plus de 5 devs = Angular ou React avec conventions strictes), et qui va maintenir le code (si les développeurs connaissent déjà Vue ou un outil IA, ne pas introduire React pour "suivre la tendance").
 
 La quatrième question, souvent oubliée : est-ce que le projet a besoin d'un framework du tout ? Pour une application CRUD basique sans interactions complexes, un rendu serveur (Laravel Blade, Django Templates, Rails ERB) avec un peu de JavaScript vanilla reste parfaitement défendable.
 

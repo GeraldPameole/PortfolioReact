@@ -11,7 +11,7 @@ theme: technologie
 
 ## Pourquoi la plupart des transformations numériques commencent mal
 
-La scène se répète régulièrement dans les entreprises que j'accompagne chez KEOS TELECOM : un dirigeant revient d'un salon ou d'un séminaire avec l'idée d'implémenter un nouvel outil — CRM, plateforme collaborative, solution de gestion documentaire. Les licences sont achetées, le déploiement est lancé, et six mois plus tard l'outil est sous-utilisé ou abandonné. L'équipe reprend les anciennes habitudes. On conclut que "les collaborateurs n'étaient pas prêts".
+La scène se répète régulièrement dans les entreprises que j'ai pu accompagner  chez ACTIV PARTNERS : un dirigeant revient d'un salon ou d'un séminaire avec l'idée d'implémenter un nouvel outil — CRM, plateforme collaborative, solution de gestion documentaire. Les licences sont achetées, le déploiement est lancé, et six mois plus tard l'outil est sous-utilisé ou abandonné. L'équipe reprend les anciennes habitudes. On conclut que "les collaborateurs n'étaient pas prêts".
 
 La vraie cause est presque toujours ailleurs : on a changé l'outil sans changer le processus. Un CRM déployé sur un processus commercial désorganisé devient une base de données mal remplie. Une plateforme collaborative imposée à une équipe qui communique par email depuis 10 ans génère de la résistance, pas de la collaboration.
 

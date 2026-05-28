@@ -11,7 +11,7 @@ theme: carriere
 
 La reconversion professionnelle est l'un des sujets où les bons conseils et les mauvais conseils se ressemblent dangereusement. "Suivez votre passion", "Osez tout quitter", "Votre expérience se transfère partout"... Ces formules sonnent bien. Elles ne préparent pas à ce qui se passe vraiment quand on décide de changer de voie après dix ou quinze ans dans un secteur.
 
-J'ai accompagné des transitions de carrière dans des contextes variés — de la reconversion contrainte après une restructuration à la reconversion choisie par un professionnel en milieu de carrière qui voulait autre chose. Ce que j'ai appris, c'est que ce n'est pas le courage qui manque. C'est la méthode.
+J'ai rencontré des tas de personnes dans des transitions de carrière dans des contextes variés — de la reconversion contrainte après une restructuration à la reconversion choisie par un professionnel en milieu de carrière qui voulait autre chose. Ce que j'ai appris, c'est que ce n'est pas le courage qui manque. C'est la méthode.
 
 <div style="overflow-x:auto;margin:2rem 0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 200" style="max-width:100%;height:auto">
   <rect width="760" height="200" fill="#0a0f2e"/>
@@ -56,7 +56,7 @@ J'ai accompagné des transitions de carrière dans des contextes variés — de 
 
 ## Phase 1 : le diagnostic honnête que personne ne veut faire
 
-La première phase est la plus inconfortable. Elle consiste à regarder sa situation en face, sans se raconter d'histoires. Ce que j'entends souvent au début d'un accompagnement : "Je veux devenir consultant", "Je veux travailler dans le digital", "Je veux être formateur." Ce sont des directions, pas des diagnostics.
+La première phase est la plus inconfortable. Elle consiste à regarder sa situation en face, sans se raconter d'histoires. Ce que j'entends souvent au début d'un échange : "Je veux devenir consultant", "Je veux travailler dans le digital", "Je veux être formateur." Ce sont des directions, pas des diagnostics.
 
 Un diagnostic honnête répond à d'autres questions. Pourquoi je veux partir ? Est-ce le secteur, le poste, l'entreprise, le management, ou quelque chose de plus profond sur ma façon de travailler ? Ce que je fais aujourd'hui — qu'est-ce que j'aime vraiment dedans, et qu'est-ce que j'évite de faire ? Quelles sont mes contraintes réelles : financières, géographiques, familiales, de temps ?
 

@@ -11,7 +11,7 @@ theme: technologie
 
 Le débat frameworks JavaScript ressemble souvent à une dispute religieuse : les défenseurs de React accusent Vue d'être trop simple, les fans de Svelte moquent le bundle size de React, les développeurs Angular regardent tout ça de loin avec leur architecture en béton armé. Aucune de ces postures n'aide à prendre une décision dans un contexte réel.
 
-Quand j'ai démarré chez ACTIV PARTNERS en 2019, le projet utilisait React. Personne ne m'a expliqué pourquoi React plutôt que Vue — c'était "ce que tout le monde utilisait". Ce n'est pas une raison. Une comparaison sérieuse exige des critères définis avant de regarder les frameworks, pas après.
+Quand j'ai démarré chez ACTIV PARTNERS en 2020, le projet utilisait WordPress + React. Personne ne m'a expliqué pourquoi React plutôt que Vue — c'était "ce que tout le monde utilisait". Ce n'est pas une raison. Une comparaison sérieuse exige des critères définis avant de regarder les frameworks, pas après.
 
 ## Pourquoi les benchmarks populaires trompent
 
