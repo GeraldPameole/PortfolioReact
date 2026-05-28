@@ -38,3 +38,6 @@ Thumbs.db
 
 # Rapports générés (audits perf, etc.)
 lighthouse-report.json
+
+# Skills Claude (perso, hors repo)
+skills/

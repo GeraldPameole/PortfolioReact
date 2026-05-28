@@ -306,7 +306,7 @@ const DOMAINS = [...new Set(articles.map((a: any) => a.data.domain).filter(Boole
       var left  = Math.max(2, currentPage - 1);
       var right = Math.min(totalPages - 1, currentPage + 1);
       if (left > 2)             pages.push('…');
-      for (var i = left; i <= right; i++) pages.push(i);
+      for (let i = left; i <= right; i++) pages.push(i);
       if (right < totalPages - 1) pages.push('…');
       pages.push(totalPages);
     }

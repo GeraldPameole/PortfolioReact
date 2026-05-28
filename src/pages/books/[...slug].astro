@@ -41,7 +41,7 @@ const professionLabels: Record<string, string> = {
 		<div class="book-content-wrapper">
 			<aside class="book-sidebar">
 				{book.data.coverImage ? (
-					<img src={book.data.coverImage} alt={`Couverture du livre ${book.data.title}`} class="book-cover" />
+					<img src={book.data.coverImage} alt={`Couverture du livre ${book.data.title}`} class="book-cover" fetchpriority="high" decoding="async" />
 				) : (
 					<div class="book-cover-placeholder">
 						<div class="book-title-placeholder">{book.data.title}</div>

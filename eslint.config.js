@@ -3,8 +3,8 @@ import astro from 'eslint-plugin-astro';
 import globals from 'globals';
 
 export default [
-  // Ignorés (sorties de build, cache, deps)
-  { ignores: ['dist/', '.astro/', 'node_modules/'] },
+  // Ignorés (sorties de build, cache, deps, scripts one-shot de maintenance)
+  { ignores: ['dist/', '.astro/', 'node_modules/', 'scripts/'] },
 
   js.configs.recommended,
   ...astro.configs['flat/recommended'],

@@ -48,7 +48,7 @@ const empty = 5 - full - (half ? 1 : 0);
         <!-- Cover -->
         <div class="cover-wrap" style={`border-color:${color}35`}>
           {book.data.coverImage ? (
-            <img src={book.data.coverImage} alt={`Couverture — ${book.data.title}`} class="cover-img" />
+            <img src={book.data.coverImage} alt={`Couverture — ${book.data.title}`} class="cover-img" fetchpriority="high" decoding="async" />
           ) : (
             <div class="cover-placeholder" style={`background:linear-gradient(135deg,${color}20,${color}08)`}>
               <span class="cover-letter" style={`color:${color}`}>{book.data.title[0]}</span>
