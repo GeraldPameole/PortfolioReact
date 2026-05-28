@@ -14,9 +14,9 @@ const buttonId = `backButton-${position}`;
   <span class="text-sm font-medium">Retour</span>
 </button>
 
-<script>
+<script define:vars={{ position }}>
   document.addEventListener('DOMContentLoaded', () => {
-    const backButton = document.getElementById("backButton-" + ("${position}" || "top-left"));
+    const backButton = document.getElementById("backButton-" + (position || "top-left"));
     if (!backButton) return;
     if (window.location.pathname === '/' || window.location.pathname === '/index.html') {
       backButton.style.display = 'none';

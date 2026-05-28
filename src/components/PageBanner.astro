@@ -7,6 +7,13 @@ interface Props {
   icon?: string;
   animate?: boolean;
   contentPosition?: 'center' | 'left' | 'right';
+  // Props supplémentaires tolérés par les appels historiques (subtitle, buttonText,
+  // customClass…) — non utilisés, mais déclarés pour satisfaire le type-checker.
+  subtitle?: string;
+  image?: string;
+  buttonText?: string;
+  buttonUrl?: string;
+  customClass?: string;
 }
 
 const {

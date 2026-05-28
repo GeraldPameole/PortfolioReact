@@ -77,11 +77,11 @@ export const FEATURED_ARTICLES_BY_DOMAIN = {
 } as const;
 
 // Fonction pour obtenir les articles mis en avant d'un domaine
-export function getFeaturedArticlesForDomain(domain: string): string[] {
+export function getFeaturedArticlesForDomain(domain: string): readonly string[] {
   return (
     FEATURED_ARTICLES_BY_DOMAIN[
       domain as keyof typeof FEATURED_ARTICLES_BY_DOMAIN
-    ] || []
+    ] ?? []
   );
 }
 

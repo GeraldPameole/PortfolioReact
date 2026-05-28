@@ -22,6 +22,9 @@ export interface ThemeConfig {
   bg: string;
   text: string;
   image: string;
+  // Couleurs Tailwind utilisées par les bannières / cartes (ex : "indigo-500", "blue-600")
+  color?: string;
+  colorTo?: string;
 }
 
 // ── Thèmes standardisés ───────────────────────────────────────────────────────
