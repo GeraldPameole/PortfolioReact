@@ -151,12 +151,12 @@ const stats = [
           <div class={`w-12 h-12 rounded-full flex items-center justify-center mr-4 bg-gradient-to-r from-${standardThemes[currentTheme as ThemeKey]?.color || 'blue-500'} to-${standardThemes[currentTheme as ThemeKey]?.colorTo || 'indigo-600'} text-white`}>
             <span class="text-2xl">{standardThemes[currentTheme as ThemeKey]?.icon || '📚'}</span>
           </div>
-          <h2 class="text-3xl font-bold text-[#111827] dark:text-white">
+          <h1 class="text-3xl font-bold text-[#111827] dark:text-white">
             {standardThemes[currentTheme as ThemeKey]?.label || currentTheme}
             <span class="ml-2 text-lg font-normal text-gray-500 dark:text-gray-400">
               ({themeArticles.length} article{themeArticles.length > 1 ? 's' : ''})
             </span>
-          </h2>
+          </h1>
         </div>
 
         <!-- Articles du thème -->

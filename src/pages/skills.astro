@@ -187,7 +187,7 @@ const CERTS = [
           <div class="skill-group glass-card reveal" style={`transition-delay:${gi*0.1}s`}>
             <div class="group-header">
               <span class="group-icon">{group.icon}</span>
-              <h3 class="group-name" style={`color:${group.color}`}>{group.category}</h3>
+              <h2 class="group-name" style={`color:${group.color}`}>{group.category}</h2>
             </div>
             <div class="skill-list">
               {group.skills.map(skill => (
@@ -248,7 +248,7 @@ const CERTS = [
           <div class="cert-card glass-card reveal" style={`transition-delay:${i*0.1}s`}>
             <div class="cert-bar" style={`background:${c.color}`}></div>
             <div class="cert-body">
-              <h4 class="cert-name">{c.name}</h4>
+              <h3 class="cert-name">{c.name}</h3>
               <div class="cert-meta">
                 <span class="cert-org" style={`color:${c.color}`}>{c.org}</span>
                 <span class="cert-year">{c.year}</span>
