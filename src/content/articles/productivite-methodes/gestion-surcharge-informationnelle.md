@@ -99,6 +99,70 @@ La messagerie instantanée (quelle qu'en soit la forme) est plus délicate, parc
 
 Pour le tri des emails entrants, j'utilise une règle simple : action immédiate (moins de 2 minutes), délégation, archivage ou suppression. Tout ce qui ne rentre pas dans ces trois cases va dans un dossier "à traiter" avec une échéance. Rien ne reste dans la boîte de réception comme décision en attente.
 
+<div style="overflow-x:auto;margin:2rem 0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 360" style="max-width:100%;height:auto">
+  <rect width="700" height="360" fill="#0a0f2e"/>
+  <text x="350" y="28" font-family="monospace" font-size="13" fill="#00cffd" text-anchor="middle" font-weight="bold">LA RÈGLE DES 5 SORTIES — TRI EFFICACE DE L'INBOX</text>
+  <text x="350" y="46" font-family="monospace" font-size="9" fill="#7e8da4" text-anchor="middle">Chaque email passe par UNE de ces 5 sorties — jamais ne « reste à décider ».</text>
+  <rect x="270" y="65" width="160" height="45" fill="#1a1f4e" stroke="#915EFF" stroke-width="1.5" rx="6"/>
+  <text x="350" y="86" font-family="sans-serif" font-size="14" fill="#915EFF" text-anchor="middle" font-weight="bold">INBOX</text>
+  <text x="350" y="102" font-family="monospace" font-size="9" fill="#cbd5e1" text-anchor="middle">2-3 consultations / jour à heures fixes</text>
+  <line x1="350" y1="113" x2="350" y2="135" stroke="#94a3b8" stroke-width="1.5"/>
+  <polygon points="350,135 344,129 356,129" fill="#94a3b8"/>
+  <line x1="80" y1="142" x2="620" y2="142" stroke="#94a3b8" stroke-width="1"/>
+  <line x1="80" y1="142" x2="80" y2="152" stroke="#94a3b8" stroke-width="1"/>
+  <line x1="215" y1="142" x2="215" y2="152" stroke="#94a3b8" stroke-width="1"/>
+  <line x1="350" y1="142" x2="350" y2="152" stroke="#94a3b8" stroke-width="1"/>
+  <line x1="485" y1="142" x2="485" y2="152" stroke="#94a3b8" stroke-width="1"/>
+  <line x1="620" y1="142" x2="620" y2="152" stroke="#94a3b8" stroke-width="1"/>
+  <rect x="20" y="155" width="120" height="160" fill="#1a1f4e" stroke="#86efac" stroke-width="1.5" rx="6"/>
+  <text x="80" y="180" font-family="sans-serif" font-size="11" fill="#86efac" text-anchor="middle" font-weight="bold">AGIR</text>
+  <text x="80" y="195" font-family="monospace" font-size="9" fill="#a7f3d0" text-anchor="middle">SI &lt; 2 MIN</text>
+  <line x1="35" y1="205" x2="125" y2="205" stroke="#1e293b" stroke-width="0.5"/>
+  <text x="80" y="225" font-family="sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">Répondre, valider,</text>
+  <text x="80" y="238" font-family="sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">transférer aussitôt.</text>
+  <text x="80" y="265" font-family="sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle" font-style="italic">Quitter l'inbox</text>
+  <text x="80" y="278" font-family="sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle" font-style="italic">aussitôt après.</text>
+  <text x="80" y="303" font-family="monospace" font-size="10" fill="#86efac" text-anchor="middle" font-weight="bold">≈ 60-70 %</text>
+  <rect x="155" y="155" width="120" height="160" fill="#1a1f4e" stroke="#00cffd" stroke-width="1.5" rx="6"/>
+  <text x="215" y="180" font-family="sans-serif" font-size="11" fill="#00cffd" text-anchor="middle" font-weight="bold">DÉLÉGUER</text>
+  <text x="215" y="195" font-family="monospace" font-size="9" fill="#67e8f9" text-anchor="middle">PAS MON RÔLE</text>
+  <line x1="170" y1="205" x2="260" y2="205" stroke="#1e293b" stroke-width="0.5"/>
+  <text x="215" y="225" font-family="sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">Forward avec une</text>
+  <text x="215" y="238" font-family="sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">consigne claire au</text>
+  <text x="215" y="251" font-family="sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">bon interlocuteur.</text>
+  <text x="215" y="278" font-family="sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle" font-style="italic">Noter pour suivi</text>
+  <text x="215" y="291" font-family="sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle" font-style="italic">si critique.</text>
+  <rect x="290" y="155" width="120" height="160" fill="#1a1f4e" stroke="#915EFF" stroke-width="1.5" rx="6"/>
+  <text x="350" y="180" font-family="sans-serif" font-size="11" fill="#b48bff" text-anchor="middle" font-weight="bold">ARCHIVER</text>
+  <text x="350" y="195" font-family="monospace" font-size="9" fill="#c4b5fd" text-anchor="middle">RÉFÉRENCE</text>
+  <line x1="305" y1="205" x2="395" y2="205" stroke="#1e293b" stroke-width="0.5"/>
+  <text x="350" y="225" font-family="sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">Information utile</text>
+  <text x="350" y="238" font-family="sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">à conserver mais</text>
+  <text x="350" y="251" font-family="sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">sans action.</text>
+  <text x="350" y="278" font-family="sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle" font-style="italic">Une recherche</text>
+  <text x="350" y="291" font-family="sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle" font-style="italic">la retrouvera.</text>
+  <rect x="425" y="155" width="120" height="160" fill="#1a1f4e" stroke="#ef4444" stroke-width="1.5" rx="6"/>
+  <text x="485" y="180" font-family="sans-serif" font-size="11" fill="#fb7185" text-anchor="middle" font-weight="bold">SUPPRIMER</text>
+  <text x="485" y="195" font-family="monospace" font-size="9" fill="#fca5a5" text-anchor="middle">AUCUNE VALEUR</text>
+  <line x1="440" y1="205" x2="530" y2="205" stroke="#1e293b" stroke-width="0.5"/>
+  <text x="485" y="225" font-family="sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">Newsletter non lue,</text>
+  <text x="485" y="238" font-family="sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">spam, notification</text>
+  <text x="485" y="251" font-family="sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">système.</text>
+  <text x="485" y="278" font-family="sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle" font-style="italic">Désabonner si</text>
+  <text x="485" y="291" font-family="sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle" font-style="italic">le flux récidive.</text>
+  <rect x="560" y="155" width="120" height="160" fill="#1a1f4e" stroke="#fb923c" stroke-width="1.5" rx="6"/>
+  <text x="620" y="180" font-family="sans-serif" font-size="11" fill="#fdba74" text-anchor="middle" font-weight="bold">À TRAITER</text>
+  <text x="620" y="195" font-family="monospace" font-size="9" fill="#fed7aa" text-anchor="middle">+ ÉCHÉANCE</text>
+  <line x1="575" y1="205" x2="665" y2="205" stroke="#1e293b" stroke-width="0.5"/>
+  <text x="620" y="225" font-family="sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">Demande réelle</text>
+  <text x="620" y="238" font-family="sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">qui prendra du</text>
+  <text x="620" y="251" font-family="sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">temps de cerveau.</text>
+  <text x="620" y="278" font-family="sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle" font-style="italic">Date butoir +</text>
+  <text x="620" y="291" font-family="sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle" font-style="italic">dossier à part.</text>
+  <line x1="20" y1="328" x2="680" y2="328" stroke="#1e293b" stroke-width="1"/>
+  <text x="350" y="348" font-family="monospace" font-size="10" fill="#00cffd" text-anchor="middle" font-weight="bold">Règle d'or : aucun email ne reste « à décider plus tard » dans la boîte de réception.</text>
+</svg></div>
+
 ## Le principe du travail en tâche unique
 
 Le multitâche est un mythe. Le cerveau humain ne peut pas traiter deux tâches cognitives complexes en parallèle — il bascule rapidement d'une à l'autre en perdant du contexte à chaque fois. Ce qu'on appelle "multitâche", c'est en réalité de la commutation rapide entre des tâches, avec tous les coûts de recontextualisation que j'ai évoqués plus haut.
@@ -106,6 +170,58 @@ Le multitâche est un mythe. Le cerveau humain ne peut pas traiter deux tâches 
 Le travail en tâche unique — que certains appellent "single-tasking" — consiste à travailler sur une seule chose à la fois, jusqu'à la complétion ou jusqu'à un point de pause naturel. Ça paraît évident. C'est pourtant à l'opposé de ce que la culture de productivité apparente encourage, avec ses tableaux Kanban débordants et ses fenêtres empilées.
 
 En pratique, ça suppose de définir au début de chaque journée les deux ou trois tâches importantes du jour, dans l'ordre. Une seule chose à la fois, en bloquant les distractions. Quand une tâche est terminée, on passe à la suivante. Les urgences qui arrivent entre deux sont notées pour être traitées après — sauf si elles sont vraiment urgentes au sens littéral, c'est-à-dire que quelqu'un attend un résultat en ce moment même.
+
+<div style="overflow-x:auto;margin:2rem 0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 360" style="max-width:100%;height:auto">
+  <rect width="700" height="360" fill="#0a0f2e"/>
+  <text x="350" y="28" font-family="monospace" font-size="13" fill="#00cffd" text-anchor="middle" font-weight="bold">LE MYTHE DU MULTITÂCHE — CE QUE COÛTE LA COMMUTATION</text>
+  <text x="350" y="46" font-family="monospace" font-size="9" fill="#7e8da4" text-anchor="middle">Trois tâches sur une journée — rouge = recontextualisation perdue à chaque switch.</text>
+  <text x="20" y="80" font-family="sans-serif" font-size="11" fill="#ef4444" font-weight="bold">CE QU'ON CROIT FAIRE — MULTITÂCHE</text>
+  <text x="20" y="96" font-family="monospace" font-size="9" fill="#fb7185">9 blocs alternés · ~23 min de recontextualisation perdues entre chaque switch</text>
+  <rect x="20" y="108" width="60" height="32" fill="#86efac"/>
+  <text x="50" y="129" font-family="monospace" font-size="11" fill="#0a0f2e" text-anchor="middle" font-weight="bold">A</text>
+  <rect x="80" y="108" width="12" height="32" fill="#ef4444" opacity="0.7"/>
+  <rect x="92" y="108" width="60" height="32" fill="#00cffd"/>
+  <text x="122" y="129" font-family="monospace" font-size="11" fill="#0a0f2e" text-anchor="middle" font-weight="bold">B</text>
+  <rect x="152" y="108" width="12" height="32" fill="#ef4444" opacity="0.7"/>
+  <rect x="164" y="108" width="50" height="32" fill="#86efac"/>
+  <text x="189" y="129" font-family="monospace" font-size="11" fill="#0a0f2e" text-anchor="middle" font-weight="bold">A</text>
+  <rect x="214" y="108" width="12" height="32" fill="#ef4444" opacity="0.7"/>
+  <rect x="226" y="108" width="55" height="32" fill="#915EFF"/>
+  <text x="253" y="129" font-family="monospace" font-size="11" fill="#ffffff" text-anchor="middle" font-weight="bold">C</text>
+  <rect x="281" y="108" width="12" height="32" fill="#ef4444" opacity="0.7"/>
+  <rect x="293" y="108" width="60" height="32" fill="#00cffd"/>
+  <text x="323" y="129" font-family="monospace" font-size="11" fill="#0a0f2e" text-anchor="middle" font-weight="bold">B</text>
+  <rect x="353" y="108" width="12" height="32" fill="#ef4444" opacity="0.7"/>
+  <rect x="365" y="108" width="55" height="32" fill="#86efac"/>
+  <text x="392" y="129" font-family="monospace" font-size="11" fill="#0a0f2e" text-anchor="middle" font-weight="bold">A</text>
+  <rect x="420" y="108" width="12" height="32" fill="#ef4444" opacity="0.7"/>
+  <rect x="432" y="108" width="50" height="32" fill="#915EFF"/>
+  <text x="457" y="129" font-family="monospace" font-size="11" fill="#ffffff" text-anchor="middle" font-weight="bold">C</text>
+  <rect x="482" y="108" width="12" height="32" fill="#ef4444" opacity="0.7"/>
+  <rect x="494" y="108" width="55" height="32" fill="#86efac"/>
+  <text x="521" y="129" font-family="monospace" font-size="11" fill="#0a0f2e" text-anchor="middle" font-weight="bold">A</text>
+  <rect x="549" y="108" width="12" height="32" fill="#ef4444" opacity="0.7"/>
+  <rect x="561" y="108" width="55" height="32" fill="#00cffd"/>
+  <text x="588" y="129" font-family="monospace" font-size="11" fill="#0a0f2e" text-anchor="middle" font-weight="bold">B</text>
+  <rect x="616" y="108" width="12" height="32" fill="#ef4444" opacity="0.7"/>
+  <rect x="628" y="108" width="52" height="32" fill="#915EFF"/>
+  <text x="654" y="129" font-family="monospace" font-size="11" fill="#ffffff" text-anchor="middle" font-weight="bold">C</text>
+  <text x="20" y="170" font-family="monospace" font-size="9" fill="#fb7185">→ Bilan : aucune tâche n'aboutit. Chaque tâche reste à ~50% de complétion.</text>
+  <text x="20" y="215" font-family="sans-serif" font-size="11" fill="#86efac" font-weight="bold">CE QUI SE PASSE VRAIMENT — TÂCHE UNIQUE</text>
+  <text x="20" y="231" font-family="monospace" font-size="9" fill="#a7f3d0">3 blocs nets · 0 perte de contexte · 3 livrables en fin de journée</text>
+  <rect x="20" y="243" width="220" height="32" fill="#86efac"/>
+  <text x="130" y="264" font-family="monospace" font-size="12" fill="#0a0f2e" text-anchor="middle" font-weight="bold">TÂCHE A — terminée ✓</text>
+  <rect x="240" y="243" width="6" height="32" fill="#1e293b"/>
+  <rect x="246" y="243" width="220" height="32" fill="#00cffd"/>
+  <text x="356" y="264" font-family="monospace" font-size="12" fill="#0a0f2e" text-anchor="middle" font-weight="bold">TÂCHE B — terminée ✓</text>
+  <rect x="466" y="243" width="6" height="32" fill="#1e293b"/>
+  <rect x="472" y="243" width="208" height="32" fill="#915EFF"/>
+  <text x="576" y="264" font-family="monospace" font-size="12" fill="#ffffff" text-anchor="middle" font-weight="bold">TÂCHE C — terminée ✓</text>
+  <text x="20" y="305" font-family="monospace" font-size="9" fill="#a7f3d0">→ Bilan : trois livrables. Même énergie investie. Cerveau moins épuisé.</text>
+  <line x1="20" y1="320" x2="680" y2="320" stroke="#1e293b" stroke-width="1"/>
+  <text x="350" y="340" font-family="monospace" font-size="10" fill="#00cffd" text-anchor="middle" font-weight="bold">Source du chiffre : étude Gloria Mark (UC Irvine, 2008) — 23 min en moyenne pour retrouver le focus.</text>
+  <text x="350" y="354" font-family="monospace" font-size="9" fill="#7e8da4" text-anchor="middle">Le multitâche n'est pas une compétence. C'est une illusion qui coûte cher.</text>
+</svg></div>
 
 ## Le droit à la déconnexion : au-delà de la loi
 

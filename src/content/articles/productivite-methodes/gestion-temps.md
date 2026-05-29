@@ -111,6 +111,40 @@ La question que je pose avant d'accepter une réunion ou une demande : est-ce qu
 
 Le piège du manager ou du chef de projet, c'est de confondre disponibilité et valeur ajoutée. Être présent partout, répondre à tout immédiatement, participer à chaque réunion — ça donne l'impression d'être impliqué. Ça remplace le travail réel par de la réactivité permanente. La valeur ajoutée d'un chef de projet ne vient pas de sa disponibilité instantanée, mais de la qualité de ses décisions — et les bonnes décisions se prennent avec un cerveau reposé et une vision claire du périmètre.
 
+<div style="overflow-x:auto;margin:2rem 0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 360" style="max-width:100%;height:auto">
+  <rect width="700" height="360" fill="#0a0f2e"/>
+  <text x="350" y="28" font-family="monospace" font-size="13" fill="#00cffd" text-anchor="middle" font-weight="bold">FAUT-IL ACCEPTER CETTE DEMANDE ?</text>
+  <text x="350" y="46" font-family="monospace" font-size="9" fill="#7e8da4" text-anchor="middle">Réunion, sollicitation, nouvelle tâche — l'arbre de décision en 2 questions.</text>
+  <rect x="290" y="65" width="120" height="35" rx="5" fill="#915EFF" opacity="0.85"/>
+  <text x="350" y="88" font-family="sans-serif" font-size="11" fill="#fff" text-anchor="middle" font-weight="bold">DEMANDE ENTRANTE</text>
+  <line x1="350" y1="100" x2="350" y2="120" stroke="#94a3b8" stroke-width="1.5"/>
+  <polygon points="350,120 344,114 356,114" fill="#94a3b8"/>
+  <rect x="230" y="125" width="240" height="55" rx="6" fill="#1a1f4e" stroke="#00cffd" stroke-width="1.5"/>
+  <text x="350" y="147" font-family="sans-serif" font-size="12" fill="#00cffd" text-anchor="middle" font-weight="bold">Avance un objectif</text>
+  <text x="350" y="163" font-family="sans-serif" font-size="12" fill="#00cffd" text-anchor="middle" font-weight="bold">de cette semaine ?</text>
+  <line x1="270" y1="180" x2="180" y2="210" stroke="#86efac" stroke-width="1.5"/>
+  <text x="215" y="200" font-family="monospace" font-size="11" fill="#86efac" font-weight="bold">OUI</text>
+  <line x1="430" y1="180" x2="520" y2="210" stroke="#fbbf24" stroke-width="1.5"/>
+  <text x="485" y="200" font-family="monospace" font-size="11" fill="#fbbf24" font-weight="bold">NON</text>
+  <rect x="100" y="215" width="160" height="55" rx="6" fill="#86efac" opacity="0.85"/>
+  <text x="180" y="240" font-family="sans-serif" font-size="13" fill="#0a0f2e" text-anchor="middle" font-weight="bold">✓ ACCEPTER</text>
+  <text x="180" y="258" font-family="monospace" font-size="9" fill="#0a0f2e" text-anchor="middle">Bloquer le créneau dans</text>
+  <text x="180" y="270" font-family="monospace" font-size="9" fill="#0a0f2e" text-anchor="middle">l'agenda. Préparer.</text>
+  <rect x="420" y="215" width="240" height="55" rx="6" fill="#1a1f4e" stroke="#fbbf24" stroke-width="1.5"/>
+  <text x="540" y="237" font-family="sans-serif" font-size="11" fill="#fbbf24" text-anchor="middle" font-weight="bold">Est-ce urgent ET ma</text>
+  <text x="540" y="253" font-family="sans-serif" font-size="11" fill="#fbbf24" text-anchor="middle" font-weight="bold">présence indispensable ?</text>
+  <line x1="465" y1="270" x2="395" y2="298" stroke="#86efac" stroke-width="1.5"/>
+  <text x="425" y="290" font-family="monospace" font-size="10" fill="#86efac" font-weight="bold">OUI</text>
+  <line x1="595" y1="270" x2="640" y2="298" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="630" y="290" font-family="monospace" font-size="10" fill="#fb7185" font-weight="bold">NON</text>
+  <rect x="310" y="303" width="160" height="45" rx="6" fill="#86efac" opacity="0.85"/>
+  <text x="390" y="324" font-family="sans-serif" font-size="11" fill="#0a0f2e" text-anchor="middle" font-weight="bold">✓ ACCEPTER (court)</text>
+  <text x="390" y="338" font-family="monospace" font-size="9" fill="#0a0f2e" text-anchor="middle">Format minimal et utile</text>
+  <rect x="490" y="303" width="180" height="45" rx="6" fill="#ef4444" opacity="0.9"/>
+  <text x="580" y="324" font-family="sans-serif" font-size="11" fill="#ffffff" text-anchor="middle" font-weight="bold">✗ REFUSER + COMPTE-RENDU</text>
+  <text x="580" y="338" font-family="monospace" font-size="9" fill="#ffffff" text-anchor="middle">Économise ton focus</text>
+</svg></div>
+
 ## Les blocs tampon — ce que personne ne planifie
 
 Un agenda réaliste inclut du temps non planifié. Les imprévus existent : un partenaire qui rappelle, un incident qui nécessite une décision rapide, un mail qui demande une réponse immédiate. Si l'agenda est rempli à 100 %, chaque imprévu crée une chaîne de décalages.
@@ -118,6 +152,52 @@ Un agenda réaliste inclut du temps non planifié. Les imprévus existent : un p
 Je bloque deux créneaux par jour de 30 à 45 minutes sans contenu prédéfini. Ce sont mes blocs tampon. Quand un imprévu arrive, il entre dans le prochain bloc tampon disponible — pas dans le bloc de focus. Si le bloc tampon reste libre, j'avance des tâches ou je le transforme en temps de décompression.
 
 Cette organisation peut sembler rigide de l'extérieur, mais elle est en réalité plus flexible qu'un agenda ouvert. Un agenda ouvert devient un agenda contrôlé par les autres. Un agenda structuré avec des blocs définis donne la maîtrise sur ce qui est prioritaire — et l'espace pour absorber ce qui ne peut pas attendre.
+
+<div style="overflow-x:auto;margin:2rem 0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 320" style="max-width:100%;height:auto">
+  <rect width="700" height="320" fill="#0a0f2e"/>
+  <text x="350" y="28" font-family="monospace" font-size="13" fill="#00cffd" text-anchor="middle" font-weight="bold">LES BLOCS TAMPON — L'AGENDA QUI ABSORBE L'IMPRÉVU</text>
+  <text x="350" y="46" font-family="monospace" font-size="9" fill="#7e8da4" text-anchor="middle">2 créneaux de 30-45 min/jour sans contenu prédéfini = différence entre semaine subie et semaine choisie.</text>
+  <text x="50" y="78" font-family="monospace" font-size="10" fill="#94a3b8" text-anchor="middle">8h</text>
+  <text x="115" y="78" font-family="monospace" font-size="10" fill="#94a3b8" text-anchor="middle">10h</text>
+  <text x="180" y="78" font-family="monospace" font-size="10" fill="#94a3b8" text-anchor="middle">12h</text>
+  <text x="245" y="78" font-family="monospace" font-size="10" fill="#94a3b8" text-anchor="middle">14h</text>
+  <text x="310" y="78" font-family="monospace" font-size="10" fill="#94a3b8" text-anchor="middle">16h</text>
+  <text x="375" y="78" font-family="monospace" font-size="10" fill="#94a3b8" text-anchor="middle">18h</text>
+  <rect x="50" y="88" width="97" height="42" fill="#00cffd" opacity="0.85"/>
+  <text x="98" y="113" font-family="monospace" font-size="10" fill="#0a0f2e" text-anchor="middle" font-weight="bold">FOCUS MATIN</text>
+  <rect x="147" y="88" width="33" height="42" fill="#915EFF" opacity="0.75"/>
+  <text x="163" y="113" font-family="monospace" font-size="9" fill="#ffffff" text-anchor="middle">RÉU</text>
+  <rect x="180" y="88" width="49" height="42" fill="#475569" opacity="0.55"/>
+  <text x="204" y="113" font-family="monospace" font-size="9" fill="#cbd5e1" text-anchor="middle">DÉJ</text>
+  <rect x="229" y="88" width="16" height="42" fill="#915EFF" opacity="0.75"/>
+  <rect x="245" y="84" width="16" height="50" fill="#fb923c" stroke="#fdba74" stroke-width="2"/>
+  <rect x="261" y="88" width="81" height="42" fill="#00cffd" opacity="0.55"/>
+  <text x="301" y="113" font-family="monospace" font-size="9" fill="#0a0f2e" text-anchor="middle">RÉACTIF / COORD</text>
+  <rect x="342" y="84" width="16" height="50" fill="#fb923c" stroke="#fdba74" stroke-width="2"/>
+  <rect x="358" y="88" width="17" height="42" fill="#475569" opacity="0.55"/>
+  <line x1="253" y1="134" x2="253" y2="155" stroke="#fb923c" stroke-width="1.2"/>
+  <text x="253" y="170" font-family="monospace" font-size="9" fill="#fdba74" text-anchor="middle" font-weight="bold">TAMPON 1</text>
+  <text x="253" y="182" font-family="monospace" font-size="8" fill="#cbd5e1" text-anchor="middle">30 min — milieu d'après-midi</text>
+  <line x1="350" y1="134" x2="350" y2="155" stroke="#fb923c" stroke-width="1.2"/>
+  <text x="350" y="170" font-family="monospace" font-size="9" fill="#fdba74" text-anchor="middle" font-weight="bold">TAMPON 2</text>
+  <text x="350" y="182" font-family="monospace" font-size="8" fill="#cbd5e1" text-anchor="middle">30 min — fin de journée</text>
+  <rect x="430" y="88" width="12" height="12" fill="#00cffd" opacity="0.85"/>
+  <text x="448" y="98" font-family="monospace" font-size="10" fill="#cbd5e1">Focus / Travail</text>
+  <rect x="430" y="106" width="12" height="12" fill="#915EFF" opacity="0.75"/>
+  <text x="448" y="116" font-family="monospace" font-size="10" fill="#cbd5e1">Réunions / Coord</text>
+  <rect x="430" y="124" width="12" height="12" fill="#fb923c"/>
+  <text x="448" y="134" font-family="monospace" font-size="10" fill="#cbd5e1">Tampon (NON planifié)</text>
+  <line x1="20" y1="200" x2="680" y2="200" stroke="#1e293b" stroke-width="1"/>
+  <text x="20" y="222" font-family="monospace" font-size="10" fill="#ef4444" font-weight="bold">SANS TAMPON</text>
+  <text x="20" y="240" font-family="sans-serif" font-size="10" fill="#cbd5e1">→ Un imprévu = chaîne de</text>
+  <text x="20" y="253" font-family="sans-serif" font-size="10" fill="#cbd5e1">décalages, focus du lendemain</text>
+  <text x="20" y="266" font-family="sans-serif" font-size="10" fill="#cbd5e1">détruit, soirée volée.</text>
+  <text x="360" y="222" font-family="monospace" font-size="10" fill="#86efac" font-weight="bold">AVEC TAMPON</text>
+  <text x="360" y="240" font-family="sans-serif" font-size="10" fill="#cbd5e1">→ L'imprévu est absorbé sans</text>
+  <text x="360" y="253" font-family="sans-serif" font-size="10" fill="#cbd5e1">casser le reste. Si rien n'arrive :</text>
+  <text x="360" y="266" font-family="sans-serif" font-size="10" fill="#cbd5e1">décompression ou avance.</text>
+  <text x="350" y="300" font-family="monospace" font-size="11" fill="#00cffd" text-anchor="middle" font-weight="bold">Un agenda à 80% planifié est PLUS flexible qu'un agenda à 100%.</text>
+</svg></div>
 
 La gestion du temps, au fond, c'est une façon de définir ses priorités de façon visible et défendable. Quand le matin est protégé, les réunions sont groupées, et les imprévus ont un espace dédié, la semaine produit plus avec moins de stress résiduel.
 

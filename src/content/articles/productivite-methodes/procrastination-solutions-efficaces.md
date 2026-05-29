@@ -92,6 +92,76 @@ Je ne vais pas lister dix méthodes. Voici les quatre que j'utilise et que j'ai 
 
 **Réduire la friction.** Plus une tâche demande d'effort pour commencer, plus on la reporte. La solution : préparer l'environnement à l'avance. Le soir, j'ouvre les fichiers sur lesquels je travaillerai le lendemain matin. Le document ouvert devant moi au réveil supprime la friction du démarrage.
 
+<div style="overflow-x:auto;margin:2rem 0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 320" style="max-width:100%;height:auto">
+  <rect width="700" height="320" fill="#0a0f2e"/>
+  <text x="350" y="28" font-family="monospace" font-size="13" fill="#00cffd" text-anchor="middle" font-weight="bold">QUATRE TECHNIQUES ANTI-PROCRASTINATION</text>
+  <text x="350" y="46" font-family="monospace" font-size="9" fill="#7e8da4" text-anchor="middle">Ce qui marche en pratique — pas ce qui s'écrit bien dans les livres.</text>
+  <rect x="15" y="65" width="160" height="230" rx="6" fill="#1a1f4e" stroke="#86efac" stroke-width="1.5"/>
+  <circle cx="40" cy="92" r="14" fill="#86efac" opacity="0.25"/>
+  <text x="40" y="97" font-family="sans-serif" font-size="14" fill="#86efac" text-anchor="middle" font-weight="bold">1</text>
+  <text x="95" y="88" font-family="sans-serif" font-size="11" fill="#86efac" text-anchor="middle" font-weight="bold">RÈGLE</text>
+  <text x="95" y="102" font-family="sans-serif" font-size="11" fill="#86efac" text-anchor="middle" font-weight="bold">DES 2 MINUTES</text>
+  <line x1="25" y1="118" x2="165" y2="118" stroke="#1e293b" stroke-width="0.5"/>
+  <text x="25" y="138" font-family="monospace" font-size="9" fill="#fbbf24" font-weight="bold">PRINCIPE</text>
+  <text x="25" y="154" font-family="sans-serif" font-size="10" fill="#cbd5e1">Si une tâche prend</text>
+  <text x="25" y="167" font-family="sans-serif" font-size="10" fill="#cbd5e1">moins de 2 min, on</text>
+  <text x="25" y="180" font-family="sans-serif" font-size="10" fill="#cbd5e1">la fait MAINTENANT.</text>
+  <text x="25" y="205" font-family="monospace" font-size="9" fill="#fbbf24" font-weight="bold">EFFET</text>
+  <text x="25" y="221" font-family="sans-serif" font-size="10" fill="#cbd5e1">Stop l'accumulation.</text>
+  <text x="25" y="234" font-family="sans-serif" font-size="10" fill="#cbd5e1">Moins de charge</text>
+  <text x="25" y="247" font-family="sans-serif" font-size="10" fill="#cbd5e1">mentale résiduelle.</text>
+  <text x="25" y="272" font-family="monospace" font-size="9" fill="#86efac" font-style="italic">→ Répondre, valider,</text>
+  <text x="25" y="284" font-family="monospace" font-size="9" fill="#86efac" font-style="italic">archiver dans la foulée.</text>
+  <rect x="185" y="65" width="160" height="230" rx="6" fill="#1a1f4e" stroke="#00cffd" stroke-width="1.5"/>
+  <circle cx="210" cy="92" r="14" fill="#00cffd" opacity="0.25"/>
+  <text x="210" y="97" font-family="sans-serif" font-size="14" fill="#00cffd" text-anchor="middle" font-weight="bold">2</text>
+  <text x="265" y="88" font-family="sans-serif" font-size="11" fill="#00cffd" text-anchor="middle" font-weight="bold">INTENTIONS</text>
+  <text x="265" y="102" font-family="sans-serif" font-size="11" fill="#00cffd" text-anchor="middle" font-weight="bold">D'IMPLÉMENTATION</text>
+  <line x1="195" y1="118" x2="335" y2="118" stroke="#1e293b" stroke-width="0.5"/>
+  <text x="195" y="138" font-family="monospace" font-size="9" fill="#fbbf24" font-weight="bold">PRINCIPE</text>
+  <text x="195" y="154" font-family="sans-serif" font-size="10" fill="#cbd5e1">Lier l'intention à un</text>
+  <text x="195" y="167" font-family="sans-serif" font-size="10" fill="#cbd5e1">contexte précis :</text>
+  <text x="195" y="180" font-family="sans-serif" font-size="10" fill="#cbd5e1">moment + lieu +</text>
+  <text x="195" y="193" font-family="sans-serif" font-size="10" fill="#cbd5e1">déclencheur.</text>
+  <text x="195" y="216" font-family="monospace" font-size="9" fill="#fbbf24" font-weight="bold">EFFET</text>
+  <text x="195" y="232" font-family="sans-serif" font-size="10" fill="#cbd5e1">Taux d'exécution</text>
+  <text x="195" y="245" font-family="sans-serif" font-size="10" fill="#cbd5e1">x3 (recherche).</text>
+  <text x="195" y="270" font-family="monospace" font-size="9" fill="#67e8f9" font-style="italic">→ « Demain 9h15, au</text>
+  <text x="195" y="282" font-family="monospace" font-size="9" fill="#67e8f9" font-style="italic">bureau, avant les mails »</text>
+  <rect x="355" y="65" width="160" height="230" rx="6" fill="#1a1f4e" stroke="#915EFF" stroke-width="1.5"/>
+  <circle cx="380" cy="92" r="14" fill="#915EFF" opacity="0.3"/>
+  <text x="380" y="97" font-family="sans-serif" font-size="14" fill="#b48bff" text-anchor="middle" font-weight="bold">3</text>
+  <text x="435" y="88" font-family="sans-serif" font-size="11" fill="#b48bff" text-anchor="middle" font-weight="bold">COUPLAGE</text>
+  <text x="435" y="102" font-family="sans-serif" font-size="11" fill="#b48bff" text-anchor="middle" font-weight="bold">DE TÂCHES</text>
+  <line x1="365" y1="118" x2="505" y2="118" stroke="#1e293b" stroke-width="0.5"/>
+  <text x="365" y="138" font-family="monospace" font-size="9" fill="#fbbf24" font-weight="bold">PRINCIPE</text>
+  <text x="365" y="154" font-family="sans-serif" font-size="10" fill="#cbd5e1">Associer une tâche</text>
+  <text x="365" y="167" font-family="sans-serif" font-size="10" fill="#cbd5e1">désagréable à une</text>
+  <text x="365" y="180" font-family="sans-serif" font-size="10" fill="#cbd5e1">activité agréable.</text>
+  <text x="365" y="205" font-family="monospace" font-size="9" fill="#fbbf24" font-weight="bold">EFFET</text>
+  <text x="365" y="221" font-family="sans-serif" font-size="10" fill="#cbd5e1">Crée une association</text>
+  <text x="365" y="234" font-family="sans-serif" font-size="10" fill="#cbd5e1">positive. Réduit</text>
+  <text x="365" y="247" font-family="sans-serif" font-size="10" fill="#cbd5e1">la résistance.</text>
+  <text x="365" y="272" font-family="monospace" font-size="9" fill="#c4b5fd" font-style="italic">→ Rédiger les rapports</text>
+  <text x="365" y="284" font-family="monospace" font-size="9" fill="#c4b5fd" font-style="italic">en écoutant de la musique.</text>
+  <rect x="525" y="65" width="160" height="230" rx="6" fill="#1a1f4e" stroke="#fb923c" stroke-width="1.5"/>
+  <circle cx="550" cy="92" r="14" fill="#fb923c" opacity="0.3"/>
+  <text x="550" y="97" font-family="sans-serif" font-size="14" fill="#fdba74" text-anchor="middle" font-weight="bold">4</text>
+  <text x="605" y="88" font-family="sans-serif" font-size="11" fill="#fdba74" text-anchor="middle" font-weight="bold">RÉDUIRE</text>
+  <text x="605" y="102" font-family="sans-serif" font-size="11" fill="#fdba74" text-anchor="middle" font-weight="bold">LA FRICTION</text>
+  <line x1="535" y1="118" x2="675" y2="118" stroke="#1e293b" stroke-width="0.5"/>
+  <text x="535" y="138" font-family="monospace" font-size="9" fill="#fbbf24" font-weight="bold">PRINCIPE</text>
+  <text x="535" y="154" font-family="sans-serif" font-size="10" fill="#cbd5e1">Préparer</text>
+  <text x="535" y="167" font-family="sans-serif" font-size="10" fill="#cbd5e1">l'environnement</text>
+  <text x="535" y="180" font-family="sans-serif" font-size="10" fill="#cbd5e1">à l'avance.</text>
+  <text x="535" y="205" font-family="monospace" font-size="9" fill="#fbbf24" font-weight="bold">EFFET</text>
+  <text x="535" y="221" font-family="sans-serif" font-size="10" fill="#cbd5e1">Démarrage immédiat.</text>
+  <text x="535" y="234" font-family="sans-serif" font-size="10" fill="#cbd5e1">Aucune raison de</text>
+  <text x="535" y="247" font-family="sans-serif" font-size="10" fill="#cbd5e1">reporter.</text>
+  <text x="535" y="272" font-family="monospace" font-size="9" fill="#fed7aa" font-style="italic">→ Fichier ouvert le soir</text>
+  <text x="535" y="284" font-family="monospace" font-size="9" fill="#fed7aa" font-style="italic">pour démarrer au réveil.</text>
+</svg></div>
+
 ## Comment repérer la procrastination dans une équipe
 
 C'est là que ça devient intéressant pour les managers. La procrastination collective est plus difficile à détecter que l'individuelle, parce qu'elle se dissimule derrière des comportements légitimes en apparence.
@@ -101,6 +171,60 @@ Quelques signaux concrets : des réunions de préparation qui se multiplient san
 Dans la majorité des cas, la réponse est soit une tâche mal définie, soit une crainte non exprimée de se tromper. Clarifier les critères de succès d'une tâche et donner explicitement le droit à l'erreur règle souvent le problème plus vite qu'un discours sur la motivation.
 
 La procrastination en entreprise est aussi souvent liée à l'absence de conséquences immédiates. Une échéance à trois semaines génère moins d'urgence ressentie qu'une à trois jours, même si l'enjeu est identique. Découper les livrables en jalons intermédiaires visibles recrée cette pression de façon saine.
+
+<div style="overflow-x:auto;margin:2rem 0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 360" style="max-width:100%;height:auto">
+  <rect width="700" height="360" fill="#0a0f2e"/>
+  <text x="350" y="28" font-family="monospace" font-size="13" fill="#00cffd" text-anchor="middle" font-weight="bold">PROCRASTINATION COLLECTIVE — SIGNAUX, CAUSES, ACTIONS</text>
+  <text x="350" y="46" font-family="monospace" font-size="9" fill="#7e8da4" text-anchor="middle">Pas un défaut de motivation — un signal système que le manager peut traiter.</text>
+  <rect x="15" y="65" width="220" height="270" rx="6" fill="#1a1f4e" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="125" y="92" font-family="sans-serif" font-size="11" fill="#fb7185" text-anchor="middle" font-weight="bold">SIGNAL 1</text>
+  <text x="125" y="113" font-family="sans-serif" font-size="12" fill="#ffffff" text-anchor="middle" font-weight="bold">Réunions de prep</text>
+  <text x="125" y="128" font-family="sans-serif" font-size="12" fill="#ffffff" text-anchor="middle" font-weight="bold">qui se multiplient</text>
+  <text x="125" y="143" font-family="sans-serif" font-size="12" fill="#ffffff" text-anchor="middle" font-weight="bold">sans décision</text>
+  <line x1="35" y1="160" x2="215" y2="160" stroke="#1e293b" stroke-width="0.5"/>
+  <text x="35" y="180" font-family="monospace" font-size="9" fill="#fbbf24" font-weight="bold">CAUSE PROFONDE</text>
+  <text x="35" y="198" font-family="sans-serif" font-size="10" fill="#cbd5e1">Tâche mal définie —</text>
+  <text x="35" y="211" font-family="sans-serif" font-size="10" fill="#cbd5e1">objectif flou,</text>
+  <text x="35" y="224" font-family="sans-serif" font-size="10" fill="#cbd5e1">critères de succès</text>
+  <text x="35" y="237" font-family="sans-serif" font-size="10" fill="#cbd5e1">absents.</text>
+  <text x="35" y="262" font-family="monospace" font-size="9" fill="#86efac" font-weight="bold">ACTION MANAGER</text>
+  <text x="35" y="280" font-family="sans-serif" font-size="10" fill="#cbd5e1">Clarifier les critères</text>
+  <text x="35" y="293" font-family="sans-serif" font-size="10" fill="#cbd5e1">de succès AVANT</text>
+  <text x="35" y="306" font-family="sans-serif" font-size="10" fill="#cbd5e1">d'attendre la mise</text>
+  <text x="35" y="319" font-family="sans-serif" font-size="10" fill="#cbd5e1">en action.</text>
+  <rect x="245" y="65" width="220" height="270" rx="6" fill="#1a1f4e" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="355" y="92" font-family="sans-serif" font-size="11" fill="#fb7185" text-anchor="middle" font-weight="bold">SIGNAL 2</text>
+  <text x="355" y="113" font-family="sans-serif" font-size="12" fill="#ffffff" text-anchor="middle" font-weight="bold">Demandes de</text>
+  <text x="355" y="128" font-family="sans-serif" font-size="12" fill="#ffffff" text-anchor="middle" font-weight="bold">précision excessives</text>
+  <text x="355" y="143" font-family="sans-serif" font-size="12" fill="#ffffff" text-anchor="middle" font-weight="bold">avant de démarrer</text>
+  <line x1="265" y1="160" x2="445" y2="160" stroke="#1e293b" stroke-width="0.5"/>
+  <text x="265" y="180" font-family="monospace" font-size="9" fill="#fbbf24" font-weight="bold">CAUSE PROFONDE</text>
+  <text x="265" y="198" font-family="sans-serif" font-size="10" fill="#cbd5e1">Crainte non exprimée</text>
+  <text x="265" y="211" font-family="sans-serif" font-size="10" fill="#cbd5e1">de se tromper —</text>
+  <text x="265" y="224" font-family="sans-serif" font-size="10" fill="#cbd5e1">pas de droit à</text>
+  <text x="265" y="237" font-family="sans-serif" font-size="10" fill="#cbd5e1">l'erreur perçu.</text>
+  <text x="265" y="262" font-family="monospace" font-size="9" fill="#86efac" font-weight="bold">ACTION MANAGER</text>
+  <text x="265" y="280" font-family="sans-serif" font-size="10" fill="#cbd5e1">Donner explicitement</text>
+  <text x="265" y="293" font-family="sans-serif" font-size="10" fill="#cbd5e1">le droit à l'erreur.</text>
+  <text x="265" y="306" font-family="sans-serif" font-size="10" fill="#cbd5e1">Couper court aux</text>
+  <text x="265" y="319" font-family="sans-serif" font-size="10" fill="#cbd5e1">précisions qui retardent.</text>
+  <rect x="475" y="65" width="210" height="270" rx="6" fill="#1a1f4e" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="580" y="92" font-family="sans-serif" font-size="11" fill="#fb7185" text-anchor="middle" font-weight="bold">SIGNAL 3</text>
+  <text x="580" y="113" font-family="sans-serif" font-size="12" fill="#ffffff" text-anchor="middle" font-weight="bold">Tâches qui reviennent</text>
+  <text x="580" y="128" font-family="sans-serif" font-size="12" fill="#ffffff" text-anchor="middle" font-weight="bold">sprint après sprint</text>
+  <text x="580" y="143" font-family="sans-serif" font-size="12" fill="#ffffff" text-anchor="middle" font-weight="bold">sans avancer</text>
+  <line x1="495" y1="160" x2="665" y2="160" stroke="#1e293b" stroke-width="0.5"/>
+  <text x="495" y="180" font-family="monospace" font-size="9" fill="#fbbf24" font-weight="bold">CAUSE PROFONDE</text>
+  <text x="495" y="198" font-family="sans-serif" font-size="10" fill="#cbd5e1">Échéance lointaine,</text>
+  <text x="495" y="211" font-family="sans-serif" font-size="10" fill="#cbd5e1">aucune conséquence</text>
+  <text x="495" y="224" font-family="sans-serif" font-size="10" fill="#cbd5e1">immédiate perçue.</text>
+  <text x="495" y="262" font-family="monospace" font-size="9" fill="#86efac" font-weight="bold">ACTION MANAGER</text>
+  <text x="495" y="280" font-family="sans-serif" font-size="10" fill="#cbd5e1">Découper en jalons</text>
+  <text x="495" y="293" font-family="sans-serif" font-size="10" fill="#cbd5e1">intermédiaires visibles.</text>
+  <text x="495" y="306" font-family="sans-serif" font-size="10" fill="#cbd5e1">Recréer l'urgence</text>
+  <text x="495" y="319" font-family="sans-serif" font-size="10" fill="#cbd5e1">de façon saine.</text>
+  <text x="350" y="352" font-family="monospace" font-size="10" fill="#00cffd" text-anchor="middle" font-weight="bold">« Qu'est-ce qui bloque vraiment ? » &gt; « Pourquoi vous ne travaillez pas ? »</text>
+</svg></div>
 
 ## Ce que ça change quand on le gère vraiment
 

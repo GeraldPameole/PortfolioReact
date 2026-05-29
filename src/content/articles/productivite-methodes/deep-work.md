@@ -11,7 +11,7 @@ theme: carriere
 
 ## Le problème n'est pas le manque de temps
 
-Je travaille en open space depuis plusieurs années. Appels entrants, Slack, réunions calées sans prévenir, collègues qui passent "juste pour une question rapide" — le contexte est hostile à la concentration. Ce n'est pas une exception française, c'est la norme dans la plupart des environnements professionnels d'aujourd'hui.
+J'ai travaillé en open space plusieurs années. Appels entrants, Teams, réunions calées sans prévenir, collègues qui passent "juste pour une question rapide" — le contexte est hostile à la concentration. Ce n'est pas une exception française, c'est la norme dans la plupart des environnements professionnels d'aujourd'hui.
 
 Cal Newport a posé un diagnostic juste dans *Deep Work* : la capacité à se concentrer sur une tâche cognitive difficile pendant une période prolongée est devenue rare — et donc précieuse. Ce qu'il appelle le "travail en profondeur" s'oppose au travail superficiel, qui consiste à répondre à des emails, assister à des réunions, traiter des demandes urgentes — des activités visibles mais à faible valeur cognitive.
 

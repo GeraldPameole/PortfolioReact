@@ -85,6 +85,60 @@ Les signes physiques enfin : troubles du sommeil, tensions musculaires chronique
 
 Sur une équipe, ces signaux sont visibles si on y prête attention. Un collaborateur qui ne prend plus la parole en réunion alors qu'il était actif, des délais qui glissent sur des tâches habituellement maîtrisées, une énergie générale qui s'effondre en fin de semaine. Ce ne sont pas des détails à gérer "quand on aura le temps" — ce sont des alertes qui demandent une réaction rapide.
 
+<div style="overflow-x:auto;margin:2rem 0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 340" style="max-width:100%;height:auto">
+  <rect width="700" height="340" fill="#0a0f2e"/>
+  <text x="350" y="28" font-family="monospace" font-size="13" fill="#00cffd" text-anchor="middle" font-weight="bold">SIGNAUX D'ALARME — TROIS DIMENSIONS À SURVEILLER</text>
+  <text x="350" y="46" font-family="monospace" font-size="9" fill="#7e8da4" text-anchor="middle">Le burn-out ne s'installe pas brutalement. Voici ce qui annonce l'effondrement.</text>
+  <rect x="15" y="65" width="218" height="240" rx="6" fill="#1a1f4e" stroke="#fb923c" stroke-width="1.5"/>
+  <circle cx="50" cy="98" r="20" fill="#fb923c" opacity="0.2"/>
+  <text x="50" y="105" font-family="sans-serif" font-size="18" fill="#fdba74" text-anchor="middle">🧠</text>
+  <text x="135" y="93" font-family="sans-serif" font-size="11" fill="#fdba74" text-anchor="middle" font-weight="bold">ÉPUISEMENT</text>
+  <text x="135" y="107" font-family="sans-serif" font-size="11" fill="#fdba74" text-anchor="middle" font-weight="bold">COGNITIF</text>
+  <line x1="30" y1="130" x2="218" y2="130" stroke="#1e293b" stroke-width="0.5"/>
+  <text x="30" y="150" font-family="monospace" font-size="9" fill="#fbbf24" font-weight="bold">SYMPTÔMES</text>
+  <text x="30" y="167" font-family="sans-serif" font-size="10" fill="#cbd5e1">• Erreurs inhabituelles</text>
+  <text x="30" y="181" font-family="sans-serif" font-size="10" fill="#cbd5e1">• Oublis sur tâches</text>
+  <text x="30" y="195" font-family="sans-serif" font-size="10" fill="#cbd5e1">   maîtrisées</text>
+  <text x="30" y="209" font-family="sans-serif" font-size="10" fill="#cbd5e1">• Phrases qu'on ne</text>
+  <text x="30" y="223" font-family="sans-serif" font-size="10" fill="#cbd5e1">   finit plus</text>
+  <text x="30" y="237" font-family="sans-serif" font-size="10" fill="#cbd5e1">• Décisions simples</text>
+  <text x="30" y="251" font-family="sans-serif" font-size="10" fill="#cbd5e1">   qui paralysent</text>
+  <text x="30" y="278" font-family="monospace" font-size="9" fill="#86efac" font-weight="bold">→ ALERTE SI</text>
+  <text x="30" y="294" font-family="monospace" font-size="9" fill="#a7f3d0">Cerveau en mode</text>
+  <rect x="245" y="65" width="218" height="240" rx="6" fill="#1a1f4e" stroke="#915EFF" stroke-width="1.5"/>
+  <circle cx="280" cy="98" r="20" fill="#915EFF" opacity="0.2"/>
+  <text x="280" y="105" font-family="sans-serif" font-size="18" fill="#b48bff" text-anchor="middle">💔</text>
+  <text x="365" y="93" font-family="sans-serif" font-size="11" fill="#b48bff" text-anchor="middle" font-weight="bold">DÉTACHEMENT</text>
+  <text x="365" y="107" font-family="sans-serif" font-size="11" fill="#b48bff" text-anchor="middle" font-weight="bold">ÉMOTIONNEL</text>
+  <line x1="260" y1="130" x2="448" y2="130" stroke="#1e293b" stroke-width="0.5"/>
+  <text x="260" y="150" font-family="monospace" font-size="9" fill="#fbbf24" font-weight="bold">SYMPTÔMES</text>
+  <text x="260" y="167" font-family="sans-serif" font-size="10" fill="#cbd5e1">• Indifférence pour</text>
+  <text x="260" y="181" font-family="sans-serif" font-size="10" fill="#cbd5e1">   le travail</text>
+  <text x="260" y="195" font-family="sans-serif" font-size="10" fill="#cbd5e1">• Irritabilité accrue</text>
+  <text x="260" y="209" font-family="sans-serif" font-size="10" fill="#cbd5e1">• Cynisme sur sujets</text>
+  <text x="260" y="223" font-family="sans-serif" font-size="10" fill="#cbd5e1">   qui mobilisaient</text>
+  <text x="260" y="237" font-family="sans-serif" font-size="10" fill="#cbd5e1">• On fait le geste,</text>
+  <text x="260" y="251" font-family="sans-serif" font-size="10" fill="#cbd5e1">   pas le sens.</text>
+  <text x="260" y="278" font-family="monospace" font-size="9" fill="#86efac" font-weight="bold">→ ALERTE SI</text>
+  <text x="260" y="294" font-family="monospace" font-size="9" fill="#a7f3d0">Dépersonnalisation</text>
+  <rect x="475" y="65" width="210" height="240" rx="6" fill="#1a1f4e" stroke="#ef4444" stroke-width="1.5"/>
+  <circle cx="510" cy="98" r="20" fill="#ef4444" opacity="0.2"/>
+  <text x="510" y="105" font-family="sans-serif" font-size="18" fill="#fb7185" text-anchor="middle">⚡</text>
+  <text x="590" y="93" font-family="sans-serif" font-size="11" fill="#fb7185" text-anchor="middle" font-weight="bold">SIGNES</text>
+  <text x="590" y="107" font-family="sans-serif" font-size="11" fill="#fb7185" text-anchor="middle" font-weight="bold">PHYSIQUES</text>
+  <line x1="490" y1="130" x2="670" y2="130" stroke="#1e293b" stroke-width="0.5"/>
+  <text x="490" y="150" font-family="monospace" font-size="9" fill="#fbbf24" font-weight="bold">SYMPTÔMES</text>
+  <text x="490" y="167" font-family="sans-serif" font-size="10" fill="#cbd5e1">• Troubles du sommeil</text>
+  <text x="490" y="181" font-family="sans-serif" font-size="10" fill="#cbd5e1">• Tensions musculaires</text>
+  <text x="490" y="195" font-family="sans-serif" font-size="10" fill="#cbd5e1">   chroniques</text>
+  <text x="490" y="209" font-family="sans-serif" font-size="10" fill="#cbd5e1">• Infections à</text>
+  <text x="490" y="223" font-family="sans-serif" font-size="10" fill="#cbd5e1">   répétition</text>
+  <text x="490" y="237" font-family="sans-serif" font-size="10" fill="#cbd5e1">• Mal de tête, dos.</text>
+  <text x="490" y="278" font-family="monospace" font-size="9" fill="#86efac" font-weight="bold">→ ALERTE SI</text>
+  <text x="490" y="294" font-family="monospace" font-size="9" fill="#a7f3d0">Le corps parle avant</text>
+  <text x="350" y="325" font-family="monospace" font-size="10" fill="#00cffd" text-anchor="middle" font-weight="bold">Ces signaux sont aussi visibles dans une équipe. Y prêter attention = devoir managérial.</text>
+</svg></div>
+
 ## Routines de récupération en contexte professionnel
 
 La récupération, dans le monde du travail, est encore trop souvent perçue comme une perte de temps. C'est l'inverse. Un athlète qui ne récupère pas se blesse. Un professionnel qui ne récupère pas commet des erreurs, prend de mauvaises décisions, et finit par décrocher.
@@ -96,5 +150,57 @@ Les micro-pauses ensuite. Travailler 90 minutes de façon concentrée puis prend
 Le cloisonnement des fins de journée enfin. Un rituel court (même 5 minutes) qui marque la fin du temps de travail. Écrire les trois points principaux du lendemain, fermer les applications de travail, sortir du bureau ou de l'espace dédié. Ce sas de décompression aide le système nerveux à comprendre que la pression peut baisser.
 
 Pour les managers, l'enjeu est d'intégrer ces logiques de récupération dans la culture d'équipe. Pas en les rendant obligatoires — ça ne fonctionne pas — mais en les rendant visibles et légitimes. Quand le manager lui-même part à l'heure et ne répond pas aux messages le soir, l'équipe comprend que c'est acceptable.
+
+<div style="overflow-x:auto;margin:2rem 0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 340" style="max-width:100%;height:auto">
+  <rect width="700" height="340" fill="#0a0f2e"/>
+  <text x="350" y="28" font-family="monospace" font-size="13" fill="#00cffd" text-anchor="middle" font-weight="bold">TROIS ROUTINES DE RÉCUPÉRATION — SOCLE DE LA PERFORMANCE DURABLE</text>
+  <text x="350" y="46" font-family="monospace" font-size="9" fill="#7e8da4" text-anchor="middle">Récupérer n'est pas une perte de temps. C'est la condition pour ne pas se blesser.</text>
+  <rect x="15" y="65" width="218" height="245" rx="6" fill="#1a1f4e" stroke="#86efac" stroke-width="1.5"/>
+  <text x="125" y="93" font-family="sans-serif" font-size="11" fill="#86efac" text-anchor="middle" font-weight="bold">1 — DÉCONNEXION</text>
+  <text x="125" y="108" font-family="sans-serif" font-size="11" fill="#86efac" text-anchor="middle" font-weight="bold">RÉELLE</text>
+  <line x1="35" y1="125" x2="215" y2="125" stroke="#1e293b" stroke-width="0.5"/>
+  <text x="35" y="145" font-family="monospace" font-size="9" fill="#fbbf24" font-weight="bold">QUOI</text>
+  <text x="35" y="161" font-family="sans-serif" font-size="10" fill="#cbd5e1">Pas de petits mails</text>
+  <text x="35" y="174" font-family="sans-serif" font-size="10" fill="#cbd5e1">le soir. Pas de</text>
+  <text x="35" y="187" font-family="sans-serif" font-size="10" fill="#cbd5e1">messagerie ouverte</text>
+  <text x="35" y="200" font-family="sans-serif" font-size="10" fill="#cbd5e1">pendant les vacances.</text>
+  <text x="35" y="225" font-family="monospace" font-size="9" fill="#fbbf24" font-weight="bold">POURQUOI</text>
+  <text x="35" y="241" font-family="sans-serif" font-size="10" fill="#cbd5e1">Le cerveau ne récupère</text>
+  <text x="35" y="254" font-family="sans-serif" font-size="10" fill="#cbd5e1">pas si le signal de</text>
+  <text x="35" y="267" font-family="sans-serif" font-size="10" fill="#cbd5e1">danger reste actif.</text>
+  <text x="35" y="292" font-family="monospace" font-size="9" fill="#86efac" font-style="italic">→ Notifications OFF</text>
+  <text x="35" y="304" font-family="monospace" font-size="9" fill="#86efac" font-style="italic">  hors plages.</text>
+  <rect x="245" y="65" width="218" height="245" rx="6" fill="#1a1f4e" stroke="#00cffd" stroke-width="1.5"/>
+  <text x="355" y="93" font-family="sans-serif" font-size="11" fill="#00cffd" text-anchor="middle" font-weight="bold">2 — MICRO-PAUSES</text>
+  <text x="355" y="108" font-family="sans-serif" font-size="11" fill="#00cffd" text-anchor="middle" font-weight="bold">90 / 10-15</text>
+  <line x1="265" y1="125" x2="445" y2="125" stroke="#1e293b" stroke-width="0.5"/>
+  <text x="265" y="145" font-family="monospace" font-size="9" fill="#fbbf24" font-weight="bold">QUOI</text>
+  <text x="265" y="161" font-family="sans-serif" font-size="10" fill="#cbd5e1">90 min concentrées</text>
+  <text x="265" y="174" font-family="sans-serif" font-size="10" fill="#cbd5e1">puis 10-15 min de</text>
+  <text x="265" y="187" font-family="sans-serif" font-size="10" fill="#cbd5e1">pause RÉELLE</text>
+  <text x="265" y="200" font-family="sans-serif" font-size="10" fill="#cbd5e1">(hors écran).</text>
+  <text x="265" y="225" font-family="monospace" font-size="9" fill="#fbbf24" font-weight="bold">POURQUOI</text>
+  <text x="265" y="241" font-family="sans-serif" font-size="10" fill="#cbd5e1">Productivité après</text>
+  <text x="265" y="254" font-family="sans-serif" font-size="10" fill="#cbd5e1">pause &gt; 4 h enchaînées</text>
+  <text x="265" y="267" font-family="sans-serif" font-size="10" fill="#cbd5e1">sans interruption.</text>
+  <text x="265" y="292" font-family="monospace" font-size="9" fill="#67e8f9" font-style="italic">→ Marcher, changer</text>
+  <text x="265" y="304" font-family="monospace" font-size="9" fill="#67e8f9" font-style="italic">  d'environnement.</text>
+  <rect x="475" y="65" width="210" height="245" rx="6" fill="#1a1f4e" stroke="#915EFF" stroke-width="1.5"/>
+  <text x="580" y="93" font-family="sans-serif" font-size="11" fill="#b48bff" text-anchor="middle" font-weight="bold">3 — RITUEL</text>
+  <text x="580" y="108" font-family="sans-serif" font-size="11" fill="#b48bff" text-anchor="middle" font-weight="bold">DE FIN DE JOURNÉE</text>
+  <line x1="495" y1="125" x2="665" y2="125" stroke="#1e293b" stroke-width="0.5"/>
+  <text x="495" y="145" font-family="monospace" font-size="9" fill="#fbbf24" font-weight="bold">QUOI</text>
+  <text x="495" y="161" font-family="sans-serif" font-size="10" fill="#cbd5e1">Rituel court (5 min)</text>
+  <text x="495" y="174" font-family="sans-serif" font-size="10" fill="#cbd5e1">qui marque la fin :</text>
+  <text x="495" y="187" font-family="sans-serif" font-size="10" fill="#cbd5e1">3 points pour demain,</text>
+  <text x="495" y="200" font-family="sans-serif" font-size="10" fill="#cbd5e1">fermer les apps.</text>
+  <text x="495" y="225" font-family="monospace" font-size="9" fill="#fbbf24" font-weight="bold">POURQUOI</text>
+  <text x="495" y="241" font-family="sans-serif" font-size="10" fill="#cbd5e1">Sas de décompression :</text>
+  <text x="495" y="254" font-family="sans-serif" font-size="10" fill="#cbd5e1">le système nerveux</text>
+  <text x="495" y="267" font-family="sans-serif" font-size="10" fill="#cbd5e1">comprend &quot;c'est fini&quot;.</text>
+  <text x="495" y="292" font-family="monospace" font-size="9" fill="#c4b5fd" font-style="italic">→ Sortir du bureau</text>
+  <text x="495" y="304" font-family="monospace" font-size="9" fill="#c4b5fd" font-style="italic">  ou de l'espace dédié.</text>
+  <text x="350" y="330" font-family="monospace" font-size="10" fill="#00cffd" text-anchor="middle" font-weight="bold">Le manager qui part à l'heure légitime la récupération de toute l'équipe.</text>
+</svg></div>
 
 > **À retenir** — Le stress n'est pas l'ennemi : c'est le niveau et la durée qui déterminent si on est dans une zone de haute performance ou sur la pente du burn-out. Savoir lire les signaux d'alarme — en soi et chez les autres — et construire des routines de récupération réelles, c'est le socle d'une performance durable sous pression.
