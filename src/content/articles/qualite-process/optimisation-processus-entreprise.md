@@ -96,7 +96,17 @@ Le Value Stream Mapping — cartographie du flux de valeur — n'est pas réserv
 
 ## Les 7 gaspillages MUDA appliqués au bureau
 
-Le concept de MUDA vient du Lean manufacturing. Il désigne tout ce qui consomme des ressources sans créer de valeur pour le client. Dans un contexte industriel, c'est évident. Dans un contexte de service ou de bureau, ça l'est moins — et pourtant les gaspillages sont tout aussi réels.
+Le terme **MUDA** (無駄) vient directement du japonais — il signifie littéralement « gaspillage », « futilité », tout ce qui est sans utilité. Le concept a été formalisé par **Taiichi Ohno**, ingénieur en chef chez Toyota dans les années 1950, dans ce qui allait devenir le **Toyota Production System** (TPS), puis le mouvement Lean.
+
+MUDA s'inscrit dans un triptyque, les **« 3 M »** que Toyota traque méthodiquement :
+
+- **MUDA** (無駄) — *gaspillage* : toute activité qui consomme des ressources sans produire de valeur pour le client.
+- **MURA** (斑) — *irrégularité* : variations de charge, de qualité, de cadence.
+- **MURI** (無理) — *surcharge* : pression excessive sur les personnes ou les équipements.
+
+Le principe central est simple : du point de vue du client final, **toute activité est soit à valeur ajoutée (VA), soit du MUDA**. Les approches Lean affinent encore en distinguant la **NVA nécessaire** (administrative, conformité réglementaire — incompressible à court terme) de la **NVA pure** (à éliminer en priorité).
+
+Dans un contexte industriel, identifier les MUDA est relativement intuitif : un stock qui dort, une machine qui attend, une pièce qu'on transporte inutilement. Dans un contexte de service ou de bureau, ça l'est beaucoup moins — et pourtant les gaspillages sont tout aussi réels. C'est là que la grille des **7 MUDA** (héritée du TPS et adaptée au tertiaire) devient un outil de diagnostic puissant.
 
 <div style="overflow-x:auto;margin:2rem 0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 360" style="max-width:100%;height:auto">
   <rect width="700" height="360" fill="#0a0f2e"/>
@@ -168,5 +178,60 @@ Après la cartographie vient la tentation de tout vouloir améliorer en même te
 Ma règle : trois actions maximum par cycle d'amélioration. On choisit les trois gaspillages qui ont le plus d'impact sur le temps total ou sur la qualité du résultat pour le client. On les traite. On mesure. On stabilise. Et seulement ensuite, on passe au cycle suivant.
 
 Cette discipline du petit pas rapide est plus efficace que le grand chantier tous les deux ans. Elle maintient la dynamique, produit des résultats visibles rapidement, et donne aux équipes une raison de continuer à s'impliquer.
+
+<div style="overflow-x:auto;margin:2rem 0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 320" style="max-width:100%;height:auto">
+  <rect width="700" height="320" fill="#0a0f2e"/>
+  <text x="350" y="28" font-family="monospace" font-size="13" fill="#00cffd" text-anchor="middle" font-weight="bold">AVANT / APRÈS — RÉPARTITION DU TEMPS</text>
+  <text x="20" y="72" font-family="sans-serif" font-size="11" fill="#94a3b8" font-weight="bold">AVANT  (processus actuel)</text>
+  <text x="680" y="72" font-family="monospace" font-size="10" fill="#7e8da4" text-anchor="end">Total : 3 h 00</text>
+  <rect x="20" y="86" width="170" height="36" fill="#86efac"/>
+  <rect x="190" y="86" width="510" height="36" fill="#fb923c" opacity="0.75"/>
+  <rect x="20" y="86" width="680" height="36" fill="none" stroke="#94a3b8" stroke-width="1"/>
+  <text x="105" y="109" font-family="monospace" font-size="10" fill="#0a0f2e" text-anchor="middle" font-weight="bold">VA  25%</text>
+  <text x="445" y="109" font-family="monospace" font-size="10" fill="#0a0f2e" text-anchor="middle" font-weight="bold">GASPILLAGES  75%</text>
+  <text x="20" y="172" font-family="sans-serif" font-size="11" fill="#94a3b8" font-weight="bold">APRÈS  (cartographie + 3 actions ciblées)</text>
+  <text x="680" y="172" font-family="monospace" font-size="10" fill="#7e8da4" text-anchor="end">Total : 1 h 30  (−50%)</text>
+  <rect x="20" y="186" width="170" height="36" fill="#86efac"/>
+  <rect x="190" y="186" width="170" height="36" fill="#fb923c" opacity="0.75"/>
+  <rect x="20" y="186" width="340" height="36" fill="none" stroke="#94a3b8" stroke-width="1"/>
+  <text x="105" y="209" font-family="monospace" font-size="10" fill="#0a0f2e" text-anchor="middle" font-weight="bold">VA  50%</text>
+  <text x="275" y="209" font-family="monospace" font-size="10" fill="#0a0f2e" text-anchor="middle" font-weight="bold">RÉSIDU  50%</text>
+  <line x1="190" y1="80" x2="190" y2="232" stroke="#94a3b8" stroke-width="0.5" stroke-dasharray="2,3"/>
+  <text x="350" y="270" font-family="monospace" font-size="11" fill="#00cffd" text-anchor="middle" font-weight="bold">Gain : −50% de temps total, +25 points de valeur ajoutée</text>
+  <text x="350" y="288" font-family="monospace" font-size="9" fill="#7e8da4" text-anchor="middle">La valeur ajoutée reste la même (170 px) — seul le gaspillage se réduit.</text>
+  <text x="350" y="304" font-family="monospace" font-size="9" fill="#7e8da4" text-anchor="middle">Trois gaspillages traités par cycle. Le suivant continue.</text>
+</svg></div>
+
+<div style="overflow-x:auto;margin:2rem 0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 360" style="max-width:100%;height:auto">
+  <rect width="700" height="360" fill="#0a0f2e"/>
+  <text x="350" y="28" font-family="monospace" font-size="13" fill="#00cffd" text-anchor="middle" font-weight="bold">CYCLE PDCA — L'AMÉLIORATION CONTINUE</text>
+  <path d="M 230 200 A 120 120 0 0 1 350 80 L 350 200 Z" fill="#915EFF" opacity="0.85"/>
+  <text x="290" y="135" font-family="sans-serif" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">PLAN</text>
+  <text x="290" y="152" font-family="monospace" font-size="10" fill="#ffffff" text-anchor="middle">Planifier</text>
+  <path d="M 350 80 A 120 120 0 0 1 470 200 L 350 200 Z" fill="#00cffd" opacity="0.85"/>
+  <text x="410" y="135" font-family="sans-serif" font-size="15" fill="#0a0f2e" text-anchor="middle" font-weight="bold">DO</text>
+  <text x="410" y="152" font-family="monospace" font-size="10" fill="#0a0f2e" text-anchor="middle">Réaliser</text>
+  <path d="M 470 200 A 120 120 0 0 1 350 320 L 350 200 Z" fill="#86efac" opacity="0.85"/>
+  <text x="410" y="248" font-family="sans-serif" font-size="14" fill="#0a0f2e" text-anchor="middle" font-weight="bold">CHECK</text>
+  <text x="410" y="265" font-family="monospace" font-size="10" fill="#0a0f2e" text-anchor="middle">Vérifier</text>
+  <path d="M 350 320 A 120 120 0 0 1 230 200 L 350 200 Z" fill="#fb923c" opacity="0.9"/>
+  <text x="290" y="248" font-family="sans-serif" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">ACT</text>
+  <text x="290" y="265" font-family="monospace" font-size="10" fill="#ffffff" text-anchor="middle">Ajuster</text>
+  <circle cx="350" cy="200" r="140" fill="none" stroke="#94a3b8" stroke-width="1" stroke-dasharray="4,4"/>
+  <polygon points="490,200 482,194 482,206" fill="#94a3b8"/>
+  <text x="40" y="135" font-family="monospace" font-size="9" fill="#b48bff">Choisir 3 actions max</text>
+  <text x="40" y="148" font-family="monospace" font-size="9" fill="#b48bff">Définir l'indicateur</text>
+  <text x="40" y="161" font-family="monospace" font-size="9" fill="#b48bff">Cibler l'impact client</text>
+  <text x="560" y="135" font-family="monospace" font-size="9" fill="#67e8f9">Tester en condition réelle</text>
+  <text x="560" y="148" font-family="monospace" font-size="9" fill="#67e8f9">Sur un périmètre limité</text>
+  <text x="560" y="161" font-family="monospace" font-size="9" fill="#67e8f9">Documenter l'écart</text>
+  <text x="560" y="255" font-family="monospace" font-size="9" fill="#86efac">Mesurer l'effet réel</text>
+  <text x="560" y="268" font-family="monospace" font-size="9" fill="#86efac">Comparer aux KPIs</text>
+  <text x="560" y="281" font-family="monospace" font-size="9" fill="#86efac">Recueillir les retours</text>
+  <text x="40" y="255" font-family="monospace" font-size="9" fill="#fb923c">Pérenniser ou corriger</text>
+  <text x="40" y="268" font-family="monospace" font-size="9" fill="#fb923c">Standardiser ce qui marche</text>
+  <text x="40" y="281" font-family="monospace" font-size="9" fill="#fb923c">Lancer le cycle suivant</text>
+  <text x="350" y="345" font-family="monospace" font-size="10" fill="#7e8da4" text-anchor="middle">Petits pas rapides &gt; grand chantier tous les 2 ans</text>
+</svg></div>
 
 > **Ce que j'en retiens** — Optimiser un processus, c'est d'abord le comprendre tel qu'il existe vraiment, pas tel qu'il est censé fonctionner. Le Value Stream Mapping simplifié révèle les gaspillages invisibles — attentes, doublons, surprocessing. Les 7 MUDA s'appliquent aussi bien au bureau qu'à l'usine. Et les meilleures améliorations viennent systématiquement des personnes qui font le travail, pas de ceux qui l'observent de loin.
