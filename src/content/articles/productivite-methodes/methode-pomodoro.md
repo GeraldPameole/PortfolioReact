@@ -94,6 +94,43 @@ Pour les tâches administratives ou répétitives — traitement de mails, mise 
 
 Pour les tâches créatives ou exploratoires — brainstorming, conception — la technique Pomodoro s'applique différemment. On l'utilise non pas pour rester concentré mais pour délimiter une plage dédiée et éviter que la réflexion s'étire indéfiniment sans produire de livrable.
 
+<div style="overflow-x:auto;margin:2rem 0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 360" style="max-width:100%;height:auto">
+  <rect width="700" height="360" fill="#0a0f2e"/>
+  <text x="350" y="28" font-family="monospace" font-size="13" fill="#00cffd" text-anchor="middle" font-weight="bold">ADAPTER LE POMODORO AU TYPE DE TÂCHE</text>
+  <text x="350" y="46" font-family="monospace" font-size="9" fill="#7e8da4" text-anchor="middle">Vert = concentration · Orange = pause · Échelle : 1 min = 5 px</text>
+  <text x="20" y="78" font-family="sans-serif" font-size="10" fill="#94a3b8" font-weight="bold">TYPE DE TÂCHE</text>
+  <text x="200" y="78" font-family="sans-serif" font-size="10" fill="#94a3b8" font-weight="bold">EXEMPLES</text>
+  <text x="685" y="78" font-family="monospace" font-size="10" fill="#94a3b8" text-anchor="end" font-weight="bold">DURÉE</text>
+  <line x1="20" y1="86" x2="680" y2="86" stroke="#1e293b" stroke-width="1"/>
+  <text x="20" y="115" font-family="monospace" font-size="11" fill="#915EFF" font-weight="bold">CLASSIQUE</text>
+  <text x="20" y="130" font-family="monospace" font-size="9" fill="#b48bff">référence</text>
+  <text x="200" y="115" font-family="sans-serif" font-size="10" fill="#cbd5e1">Format historique de Cirillo (années 80)</text>
+  <rect x="200" y="125" width="125" height="14" fill="#86efac"/>
+  <rect x="325" y="125" width="25" height="14" fill="#fb923c" opacity="0.85"/>
+  <text x="685" y="135" font-family="monospace" font-size="10" fill="#94a3b8" text-anchor="end">25 / 5 min</text>
+  <text x="20" y="170" font-family="monospace" font-size="11" fill="#00cffd" font-weight="bold">ANALYTIQUE</text>
+  <text x="20" y="185" font-family="monospace" font-size="9" fill="#67e8f9">profondeur</text>
+  <text x="200" y="170" font-family="sans-serif" font-size="10" fill="#cbd5e1">Rédaction, code, analyse, design</text>
+  <rect x="200" y="180" width="225" height="14" fill="#86efac"/>
+  <rect x="425" y="180" width="50" height="14" fill="#fb923c" opacity="0.85"/>
+  <text x="685" y="190" font-family="monospace" font-size="10" fill="#94a3b8" text-anchor="end">40-50 / 10 min</text>
+  <text x="20" y="225" font-family="monospace" font-size="11" fill="#fde047" font-weight="bold">ADMINISTRATIF</text>
+  <text x="20" y="240" font-family="monospace" font-size="9" fill="#fcd34d">élan</text>
+  <text x="200" y="225" font-family="sans-serif" font-size="10" fill="#cbd5e1">Mails, dashboards, réponses courtes</text>
+  <rect x="200" y="235" width="90" height="14" fill="#86efac"/>
+  <rect x="290" y="235" width="25" height="14" fill="#fb923c" opacity="0.85"/>
+  <text x="685" y="245" font-family="monospace" font-size="10" fill="#94a3b8" text-anchor="end">15-20 / 5 min</text>
+  <text x="20" y="280" font-family="monospace" font-size="11" fill="#f472b6" font-weight="bold">CRÉATIF</text>
+  <text x="20" y="295" font-family="monospace" font-size="9" fill="#f9a8d4">plage dédiée</text>
+  <text x="200" y="280" font-family="sans-serif" font-size="10" fill="#cbd5e1">Brainstorming, conception, exploration</text>
+  <rect x="200" y="290" width="300" height="14" fill="#86efac" opacity="0.65"/>
+  <rect x="500" y="290" width="75" height="14" fill="#fb923c" opacity="0.65"/>
+  <text x="685" y="300" font-family="monospace" font-size="10" fill="#94a3b8" text-anchor="end">45-60 / 15 min</text>
+  <line x1="20" y1="318" x2="680" y2="318" stroke="#1e293b" stroke-width="1"/>
+  <text x="350" y="340" font-family="monospace" font-size="11" fill="#00cffd" text-anchor="middle" font-weight="bold">La durée n'est pas la règle — l'intention l'est.</text>
+  <text x="350" y="354" font-family="monospace" font-size="9" fill="#7e8da4" text-anchor="middle">Définir ce que l'on va produire AVANT de lancer le timer = 80% du bénéfice.</text>
+</svg></div>
+
 ## Pourquoi ça échoue dans les cultures de réunions
 
 Le Pomodoro suppose qu'on contrôle son agenda. C'est le problème central en entreprise. Si votre journée comporte six réunions d'une heure, il ne reste pratiquement aucune plage suffisamment longue pour faire un cycle complet.

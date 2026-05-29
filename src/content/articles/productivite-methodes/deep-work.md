@@ -73,6 +73,68 @@ J'ai adopté deux règles simples qui fonctionnent dans un contexte professionne
 
 **Définir la tâche avant de commencer.** Newport insiste sur ce point, et il a raison. S'asseoir devant un écran en se disant "je vais avancer sur le dossier X" est une garantie de perdre du temps. Je commence chaque bloc avec une formulation précise : "Je rédige la section 2 du rapport d'incident du 3 mai" ou "J'analyse les données de MTTR du trimestre et j'identifie les trois zones à risque." Cette précision réduit le temps de démarrage et augmente la qualité du travail produit.
 
+<div style="overflow-x:auto;margin:2rem 0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 360" style="max-width:100%;height:auto">
+  <rect width="700" height="360" fill="#0a0f2e"/>
+  <text x="350" y="28" font-family="monospace" font-size="13" fill="#00cffd" text-anchor="middle" font-weight="bold">JOURNÉE TYPE — OÙ PLACER LE DEEP WORK</text>
+  <text x="350" y="46" font-family="monospace" font-size="9" fill="#7e8da4" text-anchor="middle">Manager en open space : Newport adapté à la culture des réunions et des remontées.</text>
+  <text x="50" y="100" font-family="monospace" font-size="10" fill="#94a3b8" text-anchor="middle">8 h</text>
+  <text x="110" y="100" font-family="monospace" font-size="10" fill="#94a3b8" text-anchor="middle">9 h</text>
+  <text x="170" y="100" font-family="monospace" font-size="10" fill="#94a3b8" text-anchor="middle">10 h</text>
+  <text x="230" y="100" font-family="monospace" font-size="10" fill="#94a3b8" text-anchor="middle">11 h</text>
+  <text x="290" y="100" font-family="monospace" font-size="10" fill="#94a3b8" text-anchor="middle">12 h</text>
+  <text x="350" y="100" font-family="monospace" font-size="10" fill="#94a3b8" text-anchor="middle">13 h</text>
+  <text x="410" y="100" font-family="monospace" font-size="10" fill="#94a3b8" text-anchor="middle">14 h</text>
+  <text x="470" y="100" font-family="monospace" font-size="10" fill="#94a3b8" text-anchor="middle">15 h</text>
+  <text x="530" y="100" font-family="monospace" font-size="10" fill="#94a3b8" text-anchor="middle">16 h</text>
+  <text x="590" y="100" font-family="monospace" font-size="10" fill="#94a3b8" text-anchor="middle">17 h</text>
+  <text x="650" y="100" font-family="monospace" font-size="10" fill="#94a3b8" text-anchor="middle">18 h</text>
+  <rect x="50" y="110" width="120" height="50" fill="#00cffd" opacity="0.85"/>
+  <text x="110" y="135" font-family="sans-serif" font-size="11" fill="#0a0f2e" text-anchor="middle" font-weight="bold">DEEP WORK #1</text>
+  <text x="110" y="150" font-family="monospace" font-size="9" fill="#0a0f2e" text-anchor="middle">120 min — priorité</text>
+  <rect x="170" y="110" width="30" height="50" fill="#fb923c" opacity="0.85"/>
+  <text x="185" y="138" font-family="monospace" font-size="10" fill="#0a0f2e" text-anchor="middle" font-weight="bold">@ 1</text>
+  <rect x="200" y="110" width="90" height="50" fill="#915EFF" opacity="0.75"/>
+  <text x="245" y="135" font-family="sans-serif" font-size="11" fill="#ffffff" text-anchor="middle" font-weight="bold">RÉUNIONS</text>
+  <text x="245" y="150" font-family="monospace" font-size="9" fill="#ffffff" text-anchor="middle">90 min</text>
+  <rect x="290" y="110" width="60" height="50" fill="#475569" opacity="0.55"/>
+  <text x="320" y="138" font-family="sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle">DÉJEUNER</text>
+  <rect x="350" y="110" width="120" height="50" fill="#915EFF" opacity="0.75"/>
+  <text x="410" y="135" font-family="sans-serif" font-size="11" fill="#ffffff" text-anchor="middle" font-weight="bold">COORDINATION</text>
+  <text x="410" y="150" font-family="monospace" font-size="9" fill="#ffffff" text-anchor="middle">réunions + remontées (120 min)</text>
+  <rect x="470" y="110" width="30" height="50" fill="#fb923c" opacity="0.85"/>
+  <text x="485" y="138" font-family="monospace" font-size="10" fill="#0a0f2e" text-anchor="middle" font-weight="bold">@ 2</text>
+  <rect x="500" y="110" width="90" height="50" fill="#00cffd" opacity="0.6"/>
+  <text x="545" y="135" font-family="sans-serif" font-size="11" fill="#0a0f2e" text-anchor="middle" font-weight="bold">DEEP WORK #2</text>
+  <text x="545" y="150" font-family="monospace" font-size="9" fill="#0a0f2e" text-anchor="middle">90 min — si possible</text>
+  <rect x="590" y="110" width="60" height="50" fill="#fb923c" opacity="0.75"/>
+  <text x="620" y="135" font-family="sans-serif" font-size="10" fill="#0a0f2e" text-anchor="middle" font-weight="bold">WRAP-UP</text>
+  <text x="620" y="150" font-family="monospace" font-size="9" fill="#0a0f2e" text-anchor="middle">@ 3 + revue</text>
+  <rect x="50" y="110" width="600" height="50" fill="none" stroke="#94a3b8" stroke-width="1"/>
+  <rect x="50" y="186" width="12" height="12" fill="#00cffd" opacity="0.85"/>
+  <text x="68" y="196" font-family="monospace" font-size="10" fill="#cbd5e1">Deep Work</text>
+  <rect x="160" y="186" width="12" height="12" fill="#915EFF" opacity="0.75"/>
+  <text x="178" y="196" font-family="monospace" font-size="10" fill="#cbd5e1">Réunions / coord.</text>
+  <rect x="305" y="186" width="12" height="12" fill="#fb923c" opacity="0.85"/>
+  <text x="323" y="196" font-family="monospace" font-size="10" fill="#cbd5e1">Email (3 plages dédiées)</text>
+  <rect x="500" y="186" width="12" height="12" fill="#475569" opacity="0.55"/>
+  <text x="518" y="196" font-family="monospace" font-size="10" fill="#cbd5e1">Pause</text>
+  <line x1="50" y1="215" x2="650" y2="215" stroke="#1e293b" stroke-width="1"/>
+  <text x="20" y="240" font-family="monospace" font-size="10" fill="#86efac" font-weight="bold">PRINCIPE 1</text>
+  <text x="20" y="257" font-family="sans-serif" font-size="9" fill="#cbd5e1">Le matin (8h-10h) =</text>
+  <text x="20" y="270" font-family="sans-serif" font-size="9" fill="#cbd5e1">deep work non négociable.</text>
+  <text x="20" y="283" font-family="sans-serif" font-size="9" fill="#cbd5e1">Pas de Slack, pas de mails.</text>
+  <text x="245" y="240" font-family="monospace" font-size="10" fill="#86efac" font-weight="bold">PRINCIPE 2</text>
+  <text x="245" y="257" font-family="sans-serif" font-size="9" fill="#cbd5e1">Définir la tâche AVANT</text>
+  <text x="245" y="270" font-family="sans-serif" font-size="9" fill="#cbd5e1">de s'asseoir. Précis :</text>
+  <text x="245" y="283" font-family="sans-serif" font-size="9" fill="#cbd5e1">« rédige la section 2 ».</text>
+  <text x="470" y="240" font-family="monospace" font-size="10" fill="#86efac" font-weight="bold">PRINCIPE 3</text>
+  <text x="470" y="257" font-family="sans-serif" font-size="9" fill="#cbd5e1">3 plages email/jour</text>
+  <text x="470" y="270" font-family="sans-serif" font-size="9" fill="#cbd5e1">au lieu de réactivité</text>
+  <text x="470" y="283" font-family="sans-serif" font-size="9" fill="#cbd5e1">permanente. Cela suffit.</text>
+  <text x="350" y="320" font-family="monospace" font-size="11" fill="#00cffd" text-anchor="middle" font-weight="bold">2 × 45 min/semaine = changement réel.</text>
+  <text x="350" y="338" font-family="monospace" font-size="9" fill="#7e8da4" text-anchor="middle">Le reste vient par renforcement — pas en lisant dix livres sur la productivité.</text>
+</svg></div>
+
 ## Ce que j'ai abandonné du livre
 
 Newport recommande d'arrêter les réseaux sociaux et de minimiser drastiquement les emails. Dans un contexte académique, c'est faisable. Dans un poste de chef de projet en entreprise, c'est un luxe inaccessible. La coordination avec les équipes techniques, les remontées clients, les échanges avec la hiérarchie — tout passe par ces canaux.

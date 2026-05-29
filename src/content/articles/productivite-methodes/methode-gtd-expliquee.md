@@ -102,4 +102,59 @@ La deuxième erreur : ne pas faire la revue hebdomadaire. C'est compréhensible 
 
 La troisième erreur : confondre "projet" et "action". GTD définit un projet comme tout ce qui nécessite plus d'une action pour être accompli. "Préparer la présentation du bilan trimestriel" est un projet, pas une action. L'action, c'est "rédiger les trois premiers slides". Cette distinction évite d'avoir des tâches qui ne progressent jamais parce qu'elles sont trop grosses pour être attaquées directement.
 
+<div style="overflow-x:auto;margin:2rem 0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 360" style="max-width:100%;height:auto">
+  <rect width="700" height="360" fill="#0a0f2e"/>
+  <text x="350" y="28" font-family="monospace" font-size="13" fill="#00cffd" text-anchor="middle" font-weight="bold">LES 3 PIÈGES QUI SABOTENT GTD</text>
+  <text x="350" y="46" font-family="monospace" font-size="9" fill="#7e8da4" text-anchor="middle">Trois erreurs identifiables en 30 secondes — et leur antidote</text>
+  <rect x="15" y="70" width="220" height="240" fill="#1a1f4e" rx="6" stroke="#ef4444" stroke-width="1.5"/>
+  <circle cx="40" cy="100" r="16" fill="#ef4444" opacity="0.2"/>
+  <text x="40" y="106" font-family="sans-serif" font-size="18" fill="#ef4444" text-anchor="middle" font-weight="bold">1</text>
+  <text x="75" y="98" font-family="sans-serif" font-size="11" fill="#ffffff" font-weight="bold">L'OUTIL D'ABORD</text>
+  <text x="75" y="113" font-family="monospace" font-size="9" fill="#ef4444">le piège #1</text>
+  <line x1="30" y1="130" x2="220" y2="130" stroke="#94a3b8" stroke-width="0.5" opacity="0.4"/>
+  <text x="30" y="150" font-family="monospace" font-size="9" fill="#fb923c" font-weight="bold">SYMPTÔME</text>
+  <text x="30" y="166" font-family="sans-serif" font-size="10" fill="#cbd5e1">3 heures à configurer Todoist</text>
+  <text x="30" y="180" font-family="sans-serif" font-size="10" fill="#cbd5e1">avant d'avoir capturé une</text>
+  <text x="30" y="194" font-family="sans-serif" font-size="10" fill="#cbd5e1">seule action.</text>
+  <text x="30" y="225" font-family="monospace" font-size="9" fill="#86efac" font-weight="bold">ANTIDOTE</text>
+  <text x="30" y="241" font-family="sans-serif" font-size="10" fill="#cbd5e1">Un carnet et un stylo</text>
+  <text x="30" y="255" font-family="sans-serif" font-size="10" fill="#cbd5e1">suffisent pour démarrer.</text>
+  <text x="30" y="269" font-family="sans-serif" font-size="10" fill="#cbd5e1">Méthode d'abord, outil après.</text>
+  <text x="30" y="290" font-family="monospace" font-size="9" fill="#86efac">→ Capturer 2 semaines avant</text>
+  <text x="30" y="302" font-family="monospace" font-size="9" fill="#86efac">  de choisir l'outil.</text>
+  <rect x="245" y="70" width="220" height="240" fill="#1a1f4e" rx="6" stroke="#ef4444" stroke-width="1.5"/>
+  <circle cx="270" cy="100" r="16" fill="#ef4444" opacity="0.2"/>
+  <text x="270" y="106" font-family="sans-serif" font-size="18" fill="#ef4444" text-anchor="middle" font-weight="bold">2</text>
+  <text x="305" y="98" font-family="sans-serif" font-size="11" fill="#ffffff" font-weight="bold">PAS DE REVUE HEBDO</text>
+  <text x="305" y="113" font-family="monospace" font-size="9" fill="#ef4444">le piège #2</text>
+  <line x1="260" y1="130" x2="450" y2="130" stroke="#94a3b8" stroke-width="0.5" opacity="0.4"/>
+  <text x="260" y="150" font-family="monospace" font-size="9" fill="#fb923c" font-weight="bold">SYMPTÔME</text>
+  <text x="260" y="166" font-family="sans-serif" font-size="10" fill="#cbd5e1">Listes désynchronisées de la</text>
+  <text x="260" y="180" font-family="sans-serif" font-size="10" fill="#cbd5e1">réalité, perte de confiance,</text>
+  <text x="260" y="194" font-family="sans-serif" font-size="10" fill="#cbd5e1">abandon progressif.</text>
+  <text x="260" y="225" font-family="monospace" font-size="9" fill="#86efac" font-weight="bold">ANTIDOTE</text>
+  <text x="260" y="241" font-family="sans-serif" font-size="10" fill="#cbd5e1">Une revue mal faite en</text>
+  <text x="260" y="255" font-family="sans-serif" font-size="10" fill="#cbd5e1">20 min vaut mieux que pas</text>
+  <text x="260" y="269" font-family="sans-serif" font-size="10" fill="#cbd5e1">de revue du tout.</text>
+  <text x="260" y="290" font-family="monospace" font-size="9" fill="#86efac">→ Créneau non négociable</text>
+  <text x="260" y="302" font-family="monospace" font-size="9" fill="#86efac">  dans l'agenda.</text>
+  <rect x="475" y="70" width="220" height="240" fill="#1a1f4e" rx="6" stroke="#ef4444" stroke-width="1.5"/>
+  <circle cx="500" cy="100" r="16" fill="#ef4444" opacity="0.2"/>
+  <text x="500" y="106" font-family="sans-serif" font-size="18" fill="#ef4444" text-anchor="middle" font-weight="bold">3</text>
+  <text x="535" y="98" font-family="sans-serif" font-size="11" fill="#ffffff" font-weight="bold">PROJET = ACTION</text>
+  <text x="535" y="113" font-family="monospace" font-size="9" fill="#ef4444">le piège #3</text>
+  <line x1="490" y1="130" x2="680" y2="130" stroke="#94a3b8" stroke-width="0.5" opacity="0.4"/>
+  <text x="490" y="150" font-family="monospace" font-size="9" fill="#fb923c" font-weight="bold">SYMPTÔME</text>
+  <text x="490" y="166" font-family="sans-serif" font-size="10" fill="#cbd5e1">« Préparer la présentation »</text>
+  <text x="490" y="180" font-family="sans-serif" font-size="10" fill="#cbd5e1">stagne 3 semaines sur la</text>
+  <text x="490" y="194" font-family="sans-serif" font-size="10" fill="#cbd5e1">liste sans avancer.</text>
+  <text x="490" y="225" font-family="monospace" font-size="9" fill="#86efac" font-weight="bold">ANTIDOTE</text>
+  <text x="490" y="241" font-family="sans-serif" font-size="10" fill="#cbd5e1">Projet = &gt;1 action.</text>
+  <text x="490" y="255" font-family="sans-serif" font-size="10" fill="#cbd5e1">Action = verbe concret,</text>
+  <text x="490" y="269" font-family="sans-serif" font-size="10" fill="#cbd5e1">atomique, faisable.</text>
+  <text x="490" y="290" font-family="monospace" font-size="9" fill="#86efac">→ « Rédiger 3 slides »</text>
+  <text x="490" y="302" font-family="monospace" font-size="9" fill="#86efac">  ≠ « Préparer présentation ».</text>
+  <text x="350" y="340" font-family="monospace" font-size="10" fill="#00cffd" text-anchor="middle" font-weight="bold">Ces 3 erreurs cumulent l'essentiel des abandons GTD. Les repérer = les éviter.</text>
+</svg></div>
+
 > **Pour conclure sans platitude** — GTD n'est pas une méthode de productivité comme les autres : c'est un système pour externaliser la mémoire de travail et agir sur des actions concrètes plutôt que sur des intentions floues. La revue hebdomadaire est la clé de voûte sans laquelle tout s'effondre. Et le bon outil est celui qu'on utilise vraiment — pas celui qu'on a le mieux configuré.
