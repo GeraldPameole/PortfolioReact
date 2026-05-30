@@ -81,6 +81,39 @@ Avant de s'inscrire à une formation, trois questions valent plus que tous les c
 
 **Troisième question : est-ce que je vais avoir l'espace pour pratiquer après ?** Une formation sans terrain de pratique immédiate est une information sans ancrage. Si vous vous formez à la facilitation d'ateliers mais que vous n'avez aucune occasion d'animer quoi que ce soit dans les semaines qui suivent — le retour sur investissement sera faible.
 
+<div style="overflow-x:auto;margin:2rem 0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 360" style="max-width:100%;height:auto">
+  <rect width="700" height="360" fill="#0a0f2e" rx="12"/>
+  <text x="350" y="28" font-family="monospace" font-size="13" fill="#00cffd" text-anchor="middle" font-weight="bold">FILTRE EN 3 QUESTIONS AVANT DE S'INSCRIRE</text>
+  <text x="350" y="46" font-family="monospace" font-size="9" fill="#7e8da4" text-anchor="middle">arbre de décision pour évaluer le ROI personnel d'une formation</text>
+  <rect x="240" y="65" width="220" height="44" rx="8" fill="#1a1f4e" stroke="#fbbf24" stroke-width="1.5"/>
+  <text x="350" y="84" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="bold" fill="#fbbf24">FORMATION ENVISAGÉE</text>
+  <text x="350" y="100" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#cbd5e1">avant de signer, trois filtres</text>
+  <line x1="350" y1="109" x2="350" y2="130" stroke="#94a3b8" stroke-width="1"/>
+  <rect x="190" y="130" width="320" height="38" rx="6" fill="#1a1f4e" stroke="#00cffd" stroke-width="1.5"/>
+  <text x="208" y="148" font-family="monospace" font-size="11" fill="#67e8f9" font-weight="bold">Q1</text>
+  <text x="350" y="148" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="bold" fill="#ffffff">Quel problème concret résout-elle ?</text>
+  <text x="350" y="162" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#cbd5e1">Une situation réelle des 12 prochains mois — pas une compétence abstraite</text>
+  <line x1="350" y1="168" x2="350" y2="188" stroke="#94a3b8" stroke-width="1"/>
+  <rect x="190" y="188" width="320" height="38" rx="6" fill="#1a1f4e" stroke="#86efac" stroke-width="1.5"/>
+  <text x="208" y="206" font-family="monospace" font-size="11" fill="#a7f3d0" font-weight="bold">Q2</text>
+  <text x="350" y="206" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="bold" fill="#ffffff">Le marché valorise-t-il cette compétence ?</text>
+  <text x="350" y="220" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#cbd5e1">Même sans projet de départ — calibre la valeur et l'argument interne</text>
+  <line x1="350" y1="226" x2="350" y2="246" stroke="#94a3b8" stroke-width="1"/>
+  <rect x="190" y="246" width="320" height="38" rx="6" fill="#1a1f4e" stroke="#915EFF" stroke-width="1.5"/>
+  <text x="208" y="264" font-family="monospace" font-size="11" fill="#b48bff" font-weight="bold">Q3</text>
+  <text x="350" y="264" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="bold" fill="#ffffff">Aurai-je l'espace pour pratiquer après ?</text>
+  <text x="350" y="278" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#cbd5e1">Sans terrain de mise en œuvre, l'information ne s'ancre pas</text>
+  <line x1="350" y1="284" x2="350" y2="300" stroke="#94a3b8" stroke-width="1"/>
+  <line x1="350" y1="300" x2="180" y2="300" stroke="#94a3b8" stroke-width="1"/>
+  <line x1="350" y1="300" x2="520" y2="300" stroke="#94a3b8" stroke-width="1"/>
+  <line x1="180" y1="300" x2="180" y2="312" stroke="#94a3b8" stroke-width="1"/>
+  <line x1="520" y1="300" x2="520" y2="312" stroke="#94a3b8" stroke-width="1"/>
+  <rect x="80" y="312" width="200" height="32" rx="6" fill="#86efac" opacity="0.15" stroke="#86efac" stroke-width="1.5"/>
+  <text x="180" y="332" text-anchor="middle" font-family="monospace" font-size="11" fill="#a7f3d0" font-weight="bold">3 oui → GO</text>
+  <rect x="420" y="312" width="200" height="32" rx="6" fill="#ef4444" opacity="0.15" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="520" y="332" text-anchor="middle" font-family="monospace" font-size="11" fill="#fca5a5" font-weight="bold">1 non → REPOUSSER</text>
+</svg></div>
+
 ## Construire un plan de développement individuel sur 3 ans
 
 Trois ans, c'est un horizon suffisamment long pour se projeter et suffisamment court pour rester réaliste. Le plan n'a pas besoin d'être détaillé sur toute la période — l'important est de savoir où on veut arriver, et de travailler à rebours.
@@ -92,5 +125,47 @@ Trois ans, c'est un horizon suffisamment long pour se projeter et suffisamment c
 **Année 3 — Pratiquer et démontrer.** L'objectif n'est plus d'acquérir — c'est de légitimer. Prendre des responsabilités qui correspondent à ce qu'on a développé, rendre visible ce qu'on sait faire, construire une réputation dans les domaines qu'on a travaillés. C'est aussi souvent le bon moment pour évaluer si la trajectoire visée correspond encore à ce qu'on veut vraiment.
 
 Chez SFR, les collaborateurs qui avaient un plan de développement même simple — trois priorités sur 18 mois, discutées avec leur manager — progressaient notablement plus vite que ceux qui formaient en réaction aux opportunités ou aux obligations. Pas parce que le plan était parfait, mais parce qu'il créait une intention qui guidait les choix au quotidien.
+
+<div style="overflow-x:auto;margin:2rem 0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 360" style="max-width:100%;height:auto">
+  <rect width="700" height="360" fill="#0a0f2e" rx="12"/>
+  <text x="350" y="28" font-family="monospace" font-size="13" fill="#00cffd" text-anchor="middle" font-weight="bold">PLAN DE DÉVELOPPEMENT INDIVIDUEL — 3 ANS</text>
+  <text x="350" y="46" font-family="monospace" font-size="9" fill="#7e8da4" text-anchor="middle">consolider, étendre, légitimer — une intention par phase</text>
+  <line x1="80" y1="170" x2="620" y2="170" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="620,170 610,164 610,176" fill="#94a3b8"/>
+  <circle cx="153" cy="170" r="8" fill="#00cffd" stroke="#0a0f2e" stroke-width="3"/>
+  <circle cx="350" cy="170" r="8" fill="#86efac" stroke="#0a0f2e" stroke-width="3"/>
+  <circle cx="547" cy="170" r="8" fill="#915EFF" stroke="#0a0f2e" stroke-width="3"/>
+  <text x="153" y="155" text-anchor="middle" font-family="monospace" font-size="10" fill="#67e8f9" font-weight="bold">ANNÉE 1</text>
+  <text x="350" y="155" text-anchor="middle" font-family="monospace" font-size="10" fill="#a7f3d0" font-weight="bold">ANNÉE 2</text>
+  <text x="547" y="155" text-anchor="middle" font-family="monospace" font-size="10" fill="#b48bff" font-weight="bold">ANNÉE 3</text>
+  <rect x="40" y="195" width="226" height="135" rx="8" fill="#1a1f4e" stroke="#00cffd" stroke-width="1.5"/>
+  <text x="153" y="218" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold" fill="#ffffff">Consolider</text>
+  <text x="153" y="234" text-anchor="middle" font-family="monospace" font-size="9" fill="#67e8f9">&amp; compléter</text>
+  <line x1="60" y1="244" x2="246" y2="244" stroke="#67e8f9" stroke-width="0.5" stroke-dasharray="3,2"/>
+  <text x="55" y="262" font-family="sans-serif" font-size="9" fill="#cbd5e1">• Combler les lacunes</text>
+  <text x="55" y="277" font-family="sans-serif" font-size="9" fill="#cbd5e1">  qui limitent aujourd'hui</text>
+  <text x="55" y="292" font-family="sans-serif" font-size="9" fill="#cbd5e1">• Formations courtes,</text>
+  <text x="55" y="307" font-family="sans-serif" font-size="9" fill="#cbd5e1">  application immédiate</text>
+  <text x="55" y="322" font-family="sans-serif" font-size="9" fill="#fbbf24">  → solidifier la base</text>
+  <rect x="237" y="195" width="226" height="135" rx="8" fill="#1a1f4e" stroke="#86efac" stroke-width="1.5"/>
+  <text x="350" y="218" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold" fill="#ffffff">Étendre</text>
+  <text x="350" y="234" text-anchor="middle" font-family="monospace" font-size="9" fill="#a7f3d0">&amp; élargir</text>
+  <line x1="257" y1="244" x2="443" y2="244" stroke="#a7f3d0" stroke-width="0.5" stroke-dasharray="3,2"/>
+  <text x="252" y="262" font-family="sans-serif" font-size="9" fill="#cbd5e1">• Préparer le prochain</text>
+  <text x="252" y="277" font-family="sans-serif" font-size="9" fill="#cbd5e1">  rôle (management, métier)</text>
+  <text x="252" y="292" font-family="sans-serif" font-size="9" fill="#cbd5e1">• Mentorat clé : apprendre</text>
+  <text x="252" y="307" font-family="sans-serif" font-size="9" fill="#cbd5e1">  de qui a déjà navigué</text>
+  <text x="252" y="322" font-family="sans-serif" font-size="9" fill="#fbbf24">  → préparer le passage</text>
+  <rect x="434" y="195" width="226" height="135" rx="8" fill="#1a1f4e" stroke="#915EFF" stroke-width="1.5"/>
+  <text x="547" y="218" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold" fill="#ffffff">Pratiquer</text>
+  <text x="547" y="234" text-anchor="middle" font-family="monospace" font-size="9" fill="#b48bff">&amp; démontrer</text>
+  <line x1="454" y1="244" x2="640" y2="244" stroke="#b48bff" stroke-width="0.5" stroke-dasharray="3,2"/>
+  <text x="449" y="262" font-family="sans-serif" font-size="9" fill="#cbd5e1">• Prendre des resp.</text>
+  <text x="449" y="277" font-family="sans-serif" font-size="9" fill="#cbd5e1">  qui exploitent l'acquis</text>
+  <text x="449" y="292" font-family="sans-serif" font-size="9" fill="#cbd5e1">• Rendre visible, bâtir</text>
+  <text x="449" y="307" font-family="sans-serif" font-size="9" fill="#cbd5e1">  une réputation</text>
+  <text x="449" y="322" font-family="sans-serif" font-size="9" fill="#fbbf24">  → légitimer l'expertise</text>
+  <text x="350" y="350" font-family="monospace" font-size="10" fill="#00cffd" text-anchor="middle" font-weight="bold">Travailler à rebours depuis la cible — 3 priorités à la fois, pas 30</text>
+</svg></div>
 
 > **Ce que ça veut dire concrètement** — Choisir une formation sans logique de trajectoire, c'est s'agiter sans avancer. Le premier travail est de distinguer ce qu'on doit développer (compétences techniques vs comportementales) et de ne pas négliger le second au profit du premier. Le plan de développement sur 3 ans — consolider en année 1, étendre en année 2, légitimer en année 3 — donne un cadre réaliste pour faire de la formation un investissement stratégique plutôt qu'une case à cocher.

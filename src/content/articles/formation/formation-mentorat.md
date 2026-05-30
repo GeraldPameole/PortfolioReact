@@ -77,6 +77,44 @@ Voici ce que j'ai appris à mettre en place, et qui transforme vraiment les rés
 
 **Un bilan à mi-parcours.** Après trois ou quatre mois, une séance dédiée à regarder : est-ce que cette relation nous apporte ce qu'on en attendait ? Faut-il ajuster le format, les sujets, la fréquence ? Cette conversation méta est souvent négligée — c'est pourtant elle qui permet de relancer ou de conclure intelligemment.
 
+<div style="overflow-x:auto;margin:2rem 0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 360" style="max-width:100%;height:auto">
+  <rect width="700" height="360" fill="#0a0f2e" rx="12"/>
+  <text x="350" y="28" font-family="monospace" font-size="13" fill="#00cffd" text-anchor="middle" font-weight="bold">STRUCTURER UNE RELATION DE MENTORAT</text>
+  <text x="350" y="46" font-family="monospace" font-size="9" fill="#7e8da4" text-anchor="middle">timeline d'une relation qui produit des résultats sur 6 à 12 mois</text>
+  <line x1="80" y1="180" x2="620" y2="180" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="620,180 610,174 610,186" fill="#94a3b8"/>
+  <text x="60" y="184" text-anchor="end" font-family="monospace" font-size="9" fill="#7e8da4">M0</text>
+  <text x="640" y="184" font-family="monospace" font-size="9" fill="#7e8da4">M+12</text>
+  <circle cx="130" cy="180" r="14" fill="#00cffd" stroke="#0a0f2e" stroke-width="3"/>
+  <text x="130" y="184" text-anchor="middle" font-family="monospace" font-size="10" fill="#0a0f2e" font-weight="bold">1</text>
+  <rect x="40" y="210" width="190" height="120" rx="8" fill="#1a1f4e" stroke="#00cffd" stroke-width="1.5"/>
+  <text x="135" y="232" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="bold" fill="#ffffff">Séance de cadrage</text>
+  <text x="135" y="247" text-anchor="middle" font-family="monospace" font-size="9" fill="#67e8f9">M0 — 1h en commun</text>
+  <line x1="55" y1="257" x2="215" y2="257" stroke="#67e8f9" stroke-width="0.5" stroke-dasharray="3,2"/>
+  <text x="50" y="273" font-family="sans-serif" font-size="9" fill="#cbd5e1">• Pourquoi maintenant ?</text>
+  <text x="50" y="287" font-family="sans-serif" font-size="9" fill="#cbd5e1">• Quelles compétences ?</text>
+  <text x="50" y="301" font-family="sans-serif" font-size="9" fill="#cbd5e1">• Fréquence &amp; durée</text>
+  <text x="50" y="315" font-family="sans-serif" font-size="9" fill="#fbbf24">• Confidentialité</text>
+  <circle cx="350" cy="180" r="14" fill="#86efac" stroke="#0a0f2e" stroke-width="3"/>
+  <text x="350" y="184" text-anchor="middle" font-family="monospace" font-size="10" fill="#0a0f2e" font-weight="bold">2</text>
+  <rect x="255" y="100" width="190" height="60" rx="8" fill="#1a1f4e" stroke="#86efac" stroke-width="1.5"/>
+  <text x="350" y="120" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="bold" fill="#ffffff">Rythme tenu</text>
+  <text x="350" y="135" text-anchor="middle" font-family="monospace" font-size="9" fill="#a7f3d0">1 séance/mois préparée</text>
+  <text x="350" y="151" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#cbd5e1">→ régularité &gt; fréquence</text>
+  <line x1="350" y1="160" x2="350" y2="167" stroke="#86efac" stroke-width="1" stroke-dasharray="2,2"/>
+  <circle cx="547" cy="180" r="14" fill="#915EFF" stroke="#0a0f2e" stroke-width="3"/>
+  <text x="547" y="184" text-anchor="middle" font-family="monospace" font-size="10" fill="#0a0f2e" font-weight="bold">3</text>
+  <rect x="452" y="210" width="190" height="120" rx="8" fill="#1a1f4e" stroke="#915EFF" stroke-width="1.5"/>
+  <text x="547" y="232" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="bold" fill="#ffffff">Bilan mi-parcours</text>
+  <text x="547" y="247" text-anchor="middle" font-family="monospace" font-size="9" fill="#b48bff">M+3 à M+4</text>
+  <line x1="467" y1="257" x2="627" y2="257" stroke="#b48bff" stroke-width="0.5" stroke-dasharray="3,2"/>
+  <text x="462" y="273" font-family="sans-serif" font-size="9" fill="#cbd5e1">• Apport réel ?</text>
+  <text x="462" y="287" font-family="sans-serif" font-size="9" fill="#cbd5e1">• Format à ajuster ?</text>
+  <text x="462" y="301" font-family="sans-serif" font-size="9" fill="#cbd5e1">• Sujets à recentrer ?</text>
+  <text x="462" y="315" font-family="sans-serif" font-size="9" fill="#fbbf24">• Relancer ou conclure</text>
+  <text x="350" y="350" font-family="monospace" font-size="10" fill="#00cffd" text-anchor="middle" font-weight="bold">1h de cadrage + un rythme tenu battent 6 mois d'échanges flous</text>
+</svg></div>
+
 ## Les pièges classiques à éviter
 
 Le premier piège, c'est l'inversion des rôles. Le mentoré attend des réponses, des solutions, une feuille de route. Le mentor finit par tout diriger, à donner des injonctions plutôt que de partager son expérience. La relation devient directive et perd son caractère d'apprentissage.
@@ -84,6 +122,52 @@ Le premier piège, c'est l'inversion des rôles. Le mentoré attend des réponse
 Le deuxième, c'est la confusion entre disponibilité et mentorat. Un mentor accessible en permanence, qui répond à chaque message dans l'heure, ne fait pas un meilleur mentorat — il crée une dépendance. Le mentoré doit apprendre à résoudre ses problèmes lui-même entre les séances, pas à déléguer ses décisions.
 
 Le troisième, que j'ai vu plusieurs fois chez SFR lors du déploiement de notre programme interne, c'est l'appariement forcé. Mettre en relation deux personnes parce que leurs postes se ressemblent sur un organigramme ne suffit pas. La compatibilité de personnalité et d'intention compte autant que la proximité de parcours. Quand l'alchimie n'est pas là, il vaut mieux le reconnaître vite et trouver un autre binôme.
+
+<div style="overflow-x:auto;margin:2rem 0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 360" style="max-width:100%;height:auto">
+  <rect width="700" height="360" fill="#0a0f2e" rx="12"/>
+  <text x="350" y="28" font-family="monospace" font-size="13" fill="#00cffd" text-anchor="middle" font-weight="bold">LES 3 PIÈGES CLASSIQUES DU MENTORAT</text>
+  <text x="350" y="46" font-family="monospace" font-size="9" fill="#7e8da4" text-anchor="middle">signaux faibles et garde-fous pour chacun</text>
+  <rect x="20" y="70" width="210" height="250" rx="8" fill="#1a1f4e" stroke="#ef4444" stroke-width="1.5"/>
+  <circle cx="125" cy="105" r="22" fill="#ef4444" opacity="0.2" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="125" y="111" text-anchor="middle" font-family="monospace" font-size="14" fill="#fca5a5" font-weight="bold">!</text>
+  <text x="125" y="148" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#ffffff">Inversion des rôles</text>
+  <text x="125" y="172" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#cbd5e1">Le mentor finit par</text>
+  <text x="125" y="186" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#cbd5e1">tout diriger, donner</text>
+  <text x="125" y="200" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#cbd5e1">des injonctions.</text>
+  <line x1="40" y1="218" x2="210" y2="218" stroke="#fb7185" stroke-width="0.5" stroke-dasharray="3,2"/>
+  <text x="125" y="238" text-anchor="middle" font-family="monospace" font-size="9" fill="#86efac" font-weight="bold">GARDE-FOU</text>
+  <text x="125" y="258" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#a7f3d0">Partager son vécu,</text>
+  <text x="125" y="272" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#a7f3d0">jamais imposer un plan.</text>
+  <text x="125" y="286" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#a7f3d0">« Voilà ce que j'ai vécu,</text>
+  <text x="125" y="300" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#a7f3d0">à toi de décider. »</text>
+  <rect x="245" y="70" width="210" height="250" rx="8" fill="#1a1f4e" stroke="#fb923c" stroke-width="1.5"/>
+  <circle cx="350" cy="105" r="22" fill="#fb923c" opacity="0.2" stroke="#fb923c" stroke-width="1.5"/>
+  <text x="350" y="111" text-anchor="middle" font-family="monospace" font-size="14" fill="#fdba74" font-weight="bold">!</text>
+  <text x="350" y="148" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#ffffff">Dépendance créée</text>
+  <text x="350" y="172" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#cbd5e1">Le mentor répond à</text>
+  <text x="350" y="186" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#cbd5e1">tout, dans l'heure :</text>
+  <text x="350" y="200" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#cbd5e1">le mentoré délègue.</text>
+  <line x1="265" y1="218" x2="435" y2="218" stroke="#fdba74" stroke-width="0.5" stroke-dasharray="3,2"/>
+  <text x="350" y="238" text-anchor="middle" font-family="monospace" font-size="9" fill="#86efac" font-weight="bold">GARDE-FOU</text>
+  <text x="350" y="258" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#a7f3d0">Disponibilité bornée,</text>
+  <text x="350" y="272" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#a7f3d0">décisions traitées entre</text>
+  <text x="350" y="286" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#a7f3d0">les séances. Autonomie</text>
+  <text x="350" y="300" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#a7f3d0">d'abord, échange ensuite.</text>
+  <rect x="470" y="70" width="210" height="250" rx="8" fill="#1a1f4e" stroke="#915EFF" stroke-width="1.5"/>
+  <circle cx="575" cy="105" r="22" fill="#915EFF" opacity="0.2" stroke="#915EFF" stroke-width="1.5"/>
+  <text x="575" y="111" text-anchor="middle" font-family="monospace" font-size="14" fill="#b48bff" font-weight="bold">!</text>
+  <text x="575" y="148" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#ffffff">Appariement forcé</text>
+  <text x="575" y="172" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#cbd5e1">Postes proches sur</text>
+  <text x="575" y="186" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#cbd5e1">l'organigramme ne</text>
+  <text x="575" y="200" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#cbd5e1">font pas un binôme.</text>
+  <line x1="490" y1="218" x2="660" y2="218" stroke="#b48bff" stroke-width="0.5" stroke-dasharray="3,2"/>
+  <text x="575" y="238" text-anchor="middle" font-family="monospace" font-size="9" fill="#86efac" font-weight="bold">GARDE-FOU</text>
+  <text x="575" y="258" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#a7f3d0">Vérifier alchimie au</text>
+  <text x="575" y="272" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#a7f3d0">cadrage. Si elle manque,</text>
+  <text x="575" y="286" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#a7f3d0">reconnaître vite et</text>
+  <text x="575" y="300" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#a7f3d0">changer de binôme.</text>
+  <text x="350" y="345" font-family="monospace" font-size="10" fill="#00cffd" text-anchor="middle" font-weight="bold">Reconnaître le piège tôt vaut mieux que prolonger une relation qui s'étiole</text>
+</svg></div>
 
 ## Mesurer l'impact d'une relation de mentorat
 

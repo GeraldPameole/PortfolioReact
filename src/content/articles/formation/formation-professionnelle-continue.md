@@ -94,10 +94,81 @@ Le deuxième écueil, c'est l'absence de suivi. Une conversation dans les deux s
 
 Le troisième, et celui que j'ai vu le plus souvent, c'est de confondre formation et reconnaissance. Former un collaborateur, c'est investir dans son développement. Mais si par ailleurs il ne se sent pas reconnu, valorisé, s'il voit ses propositions ignorées et ses progrès non remarqués — la formation ne compensera pas. Elle n'est pas un substitut à un management de qualité. Elle en est un composant.
 
+<div style="overflow-x:auto;margin:2rem 0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 360" style="max-width:100%;height:auto">
+  <rect width="700" height="360" fill="#0a0f2e" rx="12"/>
+  <text x="350" y="28" font-family="monospace" font-size="13" fill="#00cffd" text-anchor="middle" font-weight="bold">LES 3 ÉCUEILS MANAGÉRIAUX DE LA FORMATION</text>
+  <text x="350" y="46" font-family="monospace" font-size="9" fill="#7e8da4" text-anchor="middle">erreurs fréquentes et leur correction concrète</text>
+  <rect x="20" y="70" width="210" height="250" rx="8" fill="#1a1f4e" stroke="#ef4444" stroke-width="1.5"/>
+  <circle cx="125" cy="105" r="22" fill="#ef4444" opacity="0.2" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="125" y="111" text-anchor="middle" font-family="monospace" font-size="16" font-weight="bold" fill="#fca5a5">01</text>
+  <text x="125" y="148" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#ffffff">Pas de préparation</text>
+  <text x="125" y="172" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#cbd5e1">Envoyer en formation</text>
+  <text x="125" y="186" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#cbd5e1">sans cadrer en amont,</text>
+  <text x="125" y="200" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#cbd5e1">sans préparer le terrain.</text>
+  <line x1="40" y1="218" x2="210" y2="218" stroke="#fb7185" stroke-width="0.5" stroke-dasharray="3,2"/>
+  <text x="125" y="238" text-anchor="middle" font-family="monospace" font-size="9" fill="#86efac" font-weight="bold">CORRECTIF</text>
+  <text x="125" y="258" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#a7f3d0">Échange 15 min avant :</text>
+  <text x="125" y="272" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#a7f3d0">pourquoi, quoi changer,</text>
+  <text x="125" y="286" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#a7f3d0">comment on mesure.</text>
+  <text x="125" y="308" text-anchor="middle" font-family="monospace" font-size="9" fill="#7e8da4">→ Donner du sens</text>
+  <rect x="245" y="70" width="210" height="250" rx="8" fill="#1a1f4e" stroke="#fb923c" stroke-width="1.5"/>
+  <circle cx="350" cy="105" r="22" fill="#fb923c" opacity="0.2" stroke="#fb923c" stroke-width="1.5"/>
+  <text x="350" y="111" text-anchor="middle" font-family="monospace" font-size="16" font-weight="bold" fill="#fdba74">02</text>
+  <text x="350" y="148" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#ffffff">Aucun suivi après</text>
+  <text x="350" y="172" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#cbd5e1">La formation finit,</text>
+  <text x="350" y="186" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#cbd5e1">rien ne change, les vieux</text>
+  <text x="350" y="200" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#cbd5e1">réflexes reprennent.</text>
+  <line x1="265" y1="218" x2="435" y2="218" stroke="#fdba74" stroke-width="0.5" stroke-dasharray="3,2"/>
+  <text x="350" y="238" text-anchor="middle" font-family="monospace" font-size="9" fill="#86efac" font-weight="bold">CORRECTIF</text>
+  <text x="350" y="258" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#a7f3d0">Point court à J+15 :</text>
+  <text x="350" y="272" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#a7f3d0">« Tu as pu tester ?</text>
+  <text x="350" y="286" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#a7f3d0">Qu'est-ce qui marche ? »</text>
+  <text x="350" y="308" text-anchor="middle" font-family="monospace" font-size="9" fill="#7e8da4">→ ×3 sur le transfert</text>
+  <rect x="470" y="70" width="210" height="250" rx="8" fill="#1a1f4e" stroke="#915EFF" stroke-width="1.5"/>
+  <circle cx="575" cy="105" r="22" fill="#915EFF" opacity="0.2" stroke="#915EFF" stroke-width="1.5"/>
+  <text x="575" y="111" text-anchor="middle" font-family="monospace" font-size="16" font-weight="bold" fill="#b48bff">03</text>
+  <text x="575" y="148" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#ffffff">Formation = reconnaissance</text>
+  <text x="575" y="172" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#cbd5e1">Croire qu'une formation</text>
+  <text x="575" y="186" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#cbd5e1">compense l'absence de</text>
+  <text x="575" y="200" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#cbd5e1">reconnaissance quotidienne.</text>
+  <line x1="490" y1="218" x2="660" y2="218" stroke="#b48bff" stroke-width="0.5" stroke-dasharray="3,2"/>
+  <text x="575" y="238" text-anchor="middle" font-family="monospace" font-size="9" fill="#86efac" font-weight="bold">CORRECTIF</text>
+  <text x="575" y="258" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#a7f3d0">Articuler formation +</text>
+  <text x="575" y="272" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#a7f3d0">feedback + visibilité +</text>
+  <text x="575" y="286" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#a7f3d0">progression de mission.</text>
+  <text x="575" y="308" text-anchor="middle" font-family="monospace" font-size="9" fill="#7e8da4">→ Un composant, pas tout</text>
+  <text x="350" y="345" font-family="monospace" font-size="10" fill="#00cffd" text-anchor="middle" font-weight="bold">Préparer · suivre · reconnaître — sinon la formation reste lettre morte</text>
+</svg></div>
+
 ## Construire un plan formation qui tient dans la durée
 
 Un bon plan formation d'équipe n'est pas une liste de sessions. C'est une réponse à trois questions : quelles sont les compétences critiques pour les 18 prochains mois ? Qui dans l'équipe a le plus besoin de les développer ? Quelle combinaison de formation formelle, d'apprentissage terrain et de mentoring permet d'y arriver de façon réaliste ?
 
 À SFR, j'ai appris que les plans les plus efficaces étaient aussi les plus simples : deux ou trois priorités claires par collaborateur, un calendrier réaliste, et des points de suivi réguliers. Pas de catalogue de 40 formations proposées à tout le monde. La personnalisation, même modeste, fait toute la différence.
+
+<div style="overflow-x:auto;margin:2rem 0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 360" style="max-width:100%;height:auto">
+  <rect width="700" height="360" fill="#0a0f2e" rx="12"/>
+  <text x="350" y="28" font-family="monospace" font-size="13" fill="#00cffd" text-anchor="middle" font-weight="bold">CONSTRUIRE UN PLAN FORMATION D'ÉQUIPE</text>
+  <text x="350" y="46" font-family="monospace" font-size="9" fill="#7e8da4" text-anchor="middle">trois questions à répondre avant d'ouvrir le catalogue</text>
+  <rect x="40" y="75" width="620" height="70" rx="8" fill="#1a1f4e" stroke="#00cffd" stroke-width="1.5"/>
+  <circle cx="80" cy="110" r="20" fill="#00cffd" opacity="0.2" stroke="#00cffd" stroke-width="1.5"/>
+  <text x="80" y="116" text-anchor="middle" font-family="monospace" font-size="14" font-weight="bold" fill="#67e8f9">Q1</text>
+  <text x="115" y="100" font-family="sans-serif" font-size="12" font-weight="bold" fill="#ffffff">Quelles compétences seront critiques dans 18 mois ?</text>
+  <text x="115" y="118" font-family="sans-serif" font-size="10" fill="#cbd5e1">Lecture stratégique : projets, évolutions métier, technologies à intégrer.</text>
+  <text x="115" y="134" font-family="sans-serif" font-size="10" fill="#94a3b8">→ Choisir 3 à 5 priorités, pas 20.</text>
+  <rect x="40" y="160" width="620" height="70" rx="8" fill="#1a1f4e" stroke="#86efac" stroke-width="1.5"/>
+  <circle cx="80" cy="195" r="20" fill="#86efac" opacity="0.2" stroke="#86efac" stroke-width="1.5"/>
+  <text x="80" y="201" text-anchor="middle" font-family="monospace" font-size="14" font-weight="bold" fill="#a7f3d0">Q2</text>
+  <text x="115" y="185" font-family="sans-serif" font-size="12" font-weight="bold" fill="#ffffff">Qui a le plus besoin de les développer ?</text>
+  <text x="115" y="203" font-family="sans-serif" font-size="10" fill="#cbd5e1">Lecture individuelle : niveau actuel, trajectoire, appétence, contexte.</text>
+  <text x="115" y="219" font-family="sans-serif" font-size="10" fill="#94a3b8">→ 2 à 3 priorités par collaborateur, jamais plus.</text>
+  <rect x="40" y="245" width="620" height="70" rx="8" fill="#1a1f4e" stroke="#915EFF" stroke-width="1.5"/>
+  <circle cx="80" cy="280" r="20" fill="#915EFF" opacity="0.2" stroke="#915EFF" stroke-width="1.5"/>
+  <text x="80" y="286" text-anchor="middle" font-family="monospace" font-size="14" font-weight="bold" fill="#b48bff">Q3</text>
+  <text x="115" y="270" font-family="sans-serif" font-size="12" font-weight="bold" fill="#ffffff">Quelle combinaison réaliste pour y arriver ?</text>
+  <text x="115" y="288" font-family="sans-serif" font-size="10" fill="#cbd5e1">Mix : formation formelle + apprentissage terrain + mentoring + binôme.</text>
+  <text x="115" y="304" font-family="sans-serif" font-size="10" fill="#94a3b8">→ Calendrier tenable, pas un calendrier idéal.</text>
+  <text x="350" y="345" font-family="monospace" font-size="10" fill="#00cffd" text-anchor="middle" font-weight="bold">Un plan simple et personnalisé bat un catalogue exhaustif</text>
+</svg></div>
 
 > **Le vrai bilan** — La formation continue est un outil de rétention sous-utilisé, pas parce que les dispositifs manquent, mais parce que le suivi managérial fait défaut. La préparation en amont, le suivi post-formation et l'intégration dans un plan de développement individuel transforment une dépense en investissement. Chez SFR, cette approche structurée a atteint 95 % de satisfaction et réduit le temps d'intégration de 30 %. Le ROI devient visible à partir du moment où on laisse le temps à la phase 3 de se matérialiser.

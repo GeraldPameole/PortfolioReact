@@ -23,6 +23,48 @@ J'ai vu ce phénomène se reproduire encore et encore chez SFR, notamment lors d
 
 Quand on a restructuré ce parcours pour l'étaler sur les 90 premiers jours, avec des points réguliers, des mises en situation progressives et des binômes terrain, le temps d'intégration a baissé de 30 %. Ce n'est pas la qualité du contenu qui avait changé — c'est la structure de l'apprentissage dans le temps.
 
+<div style="overflow-x:auto;margin:2rem 0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 360" style="max-width:100%;height:auto">
+  <rect width="700" height="360" fill="#0a0f2e" rx="12"/>
+  <text x="350" y="28" font-family="monospace" font-size="13" fill="#00cffd" text-anchor="middle" font-weight="bold">COURBE D'OUBLI — POURQUOI LA FORMATION PONCTUELLE FUIT</text>
+  <text x="350" y="46" font-family="monospace" font-size="9" fill="#7e8da4" text-anchor="middle">rétention observée après une session unique vs un parcours étalé</text>
+  <line x1="80" y1="290" x2="650" y2="290" stroke="#94a3b8" stroke-width="1.5"/>
+  <line x1="80" y1="80" x2="80" y2="290" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="72" y="294" text-anchor="end" font-family="monospace" font-size="9" fill="#7e8da4">0%</text>
+  <text x="72" y="240" text-anchor="end" font-family="monospace" font-size="9" fill="#7e8da4">25%</text>
+  <text x="72" y="190" text-anchor="end" font-family="monospace" font-size="9" fill="#7e8da4">50%</text>
+  <text x="72" y="140" text-anchor="end" font-family="monospace" font-size="9" fill="#7e8da4">75%</text>
+  <text x="72" y="90" text-anchor="end" font-family="monospace" font-size="9" fill="#7e8da4">100%</text>
+  <line x1="80" y1="240" x2="650" y2="240" stroke="#1a1f4e" stroke-width="0.5"/>
+  <line x1="80" y1="190" x2="650" y2="190" stroke="#1a1f4e" stroke-width="0.5"/>
+  <line x1="80" y1="140" x2="650" y2="140" stroke="#1a1f4e" stroke-width="0.5"/>
+  <text x="80" y="308" text-anchor="middle" font-family="monospace" font-size="9" fill="#7e8da4">J0</text>
+  <text x="190" y="308" text-anchor="middle" font-family="monospace" font-size="9" fill="#7e8da4">J+3</text>
+  <text x="300" y="308" text-anchor="middle" font-family="monospace" font-size="9" fill="#7e8da4">J+7</text>
+  <text x="410" y="308" text-anchor="middle" font-family="monospace" font-size="9" fill="#7e8da4">J+15</text>
+  <text x="520" y="308" text-anchor="middle" font-family="monospace" font-size="9" fill="#7e8da4">J+30</text>
+  <text x="630" y="308" text-anchor="middle" font-family="monospace" font-size="9" fill="#7e8da4">J+90</text>
+  <path d="M 80 90 Q 130 145 190 190 Q 250 220 300 240 Q 360 255 410 265 Q 480 273 520 277 Q 590 282 650 285" fill="none" stroke="#ef4444" stroke-width="2.5"/>
+  <circle cx="80" cy="90" r="4" fill="#ef4444"/>
+  <circle cx="190" cy="190" r="3" fill="#ef4444"/>
+  <circle cx="300" cy="240" r="3" fill="#ef4444"/>
+  <circle cx="520" cy="277" r="3" fill="#ef4444"/>
+  <circle cx="650" cy="285" r="4" fill="#ef4444"/>
+  <text x="660" y="289" font-family="monospace" font-size="9" fill="#fca5a5">~10%</text>
+  <path d="M 80 90 L 145 130 L 145 95 L 210 135 L 210 100 L 275 140 L 275 105 L 340 145 L 340 110 L 405 150 L 405 115 L 470 155 L 470 120 L 535 160 L 535 125 L 600 165 L 600 130 L 650 135" fill="none" stroke="#86efac" stroke-width="2.5"/>
+  <circle cx="80" cy="90" r="4" fill="#86efac"/>
+  <circle cx="145" cy="95" r="3" fill="#86efac"/>
+  <circle cx="275" cy="105" r="3" fill="#86efac"/>
+  <circle cx="405" cy="115" r="3" fill="#86efac"/>
+  <circle cx="535" cy="125" r="3" fill="#86efac"/>
+  <circle cx="650" cy="135" r="4" fill="#86efac"/>
+  <text x="660" y="139" font-family="monospace" font-size="9" fill="#a7f3d0">~70%</text>
+  <rect x="95" y="70" width="14" height="3" fill="#ef4444"/>
+  <text x="115" y="74" font-family="monospace" font-size="9" fill="#fca5a5">Formation ponctuelle (2j)</text>
+  <rect x="290" y="70" width="14" height="3" fill="#86efac"/>
+  <text x="310" y="74" font-family="monospace" font-size="9" fill="#a7f3d0">Parcours étalé + relances</text>
+  <text x="350" y="345" font-family="monospace" font-size="10" fill="#00cffd" text-anchor="middle" font-weight="bold">Les relances espacées battent la session unique, même excellente</text>
+</svg></div>
+
 ## Le modèle 70-20-10 : ce que ça veut dire concrètement
 
 Ce modèle dit qu'environ 70 % de ce qu'on apprend vient de l'expérience terrain, 20 % des échanges avec les pairs et managers, et 10 % des formations formelles. Ce ratio n'est pas une loi scientifique gravée dans le marbre, mais une boussole utile pour calibrer ses investissements pédagogiques.
@@ -82,5 +124,38 @@ Le taux de satisfaction post-formation est un indicateur de confort, pas d'effic
 Pour mesurer ça concrètement, j'utilisais trois points d'observation : observation en situation réelle trois semaines après la formation, entretien avec le manager direct sur les changements constatés, et suivi d'un indicateur opérationnel lié à la compétence travaillée — temps de traitement, taux d'erreur, satisfaction client.
 
 Ce triangle — observation, témoignage managérial, indicateur terrain — donne une image beaucoup plus honnête de l'efficacité d'un dispositif que n'importe quel questionnaire de fin de session.
+
+<div style="overflow-x:auto;margin:2rem 0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 360" style="max-width:100%;height:auto">
+  <rect width="700" height="360" fill="#0a0f2e" rx="12"/>
+  <text x="350" y="28" font-family="monospace" font-size="13" fill="#00cffd" text-anchor="middle" font-weight="bold">TRIANGLE DE MESURE D'IMPACT D'UNE FORMATION</text>
+  <text x="350" y="46" font-family="monospace" font-size="9" fill="#7e8da4" text-anchor="middle">trois points d'observation qui valent mieux qu'un questionnaire</text>
+  <polygon points="350,90 180,290 520,290" fill="#1a1f4e" stroke="#94a3b8" stroke-width="1.5" opacity="0.4"/>
+  <text x="350" y="190" text-anchor="middle" font-family="monospace" font-size="10" fill="#fbbf24" font-weight="bold">IMPACT</text>
+  <text x="350" y="207" text-anchor="middle" font-family="monospace" font-size="10" fill="#fbbf24" font-weight="bold">RÉEL</text>
+  <text x="350" y="224" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#94a3b8">croisement des 3</text>
+  <circle cx="350" cy="90" r="32" fill="#00cffd" opacity="0.2" stroke="#00cffd" stroke-width="2"/>
+  <text x="350" y="87" text-anchor="middle" font-family="monospace" font-size="11" font-weight="bold" fill="#67e8f9">OBS</text>
+  <text x="350" y="101" text-anchor="middle" font-family="monospace" font-size="8" fill="#67e8f9">terrain</text>
+  <rect x="225" y="135" width="250" height="50" rx="6" fill="#1a1f4e" stroke="#00cffd" stroke-width="1"/>
+  <text x="350" y="153" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="bold" fill="#ffffff">Observation en situation</text>
+  <text x="350" y="170" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#cbd5e1">3 semaines après — voir le comportement</text>
+  <circle cx="180" cy="290" r="32" fill="#915EFF" opacity="0.2" stroke="#915EFF" stroke-width="2"/>
+  <text x="180" y="288" text-anchor="middle" font-family="monospace" font-size="11" font-weight="bold" fill="#b48bff">MGR</text>
+  <text x="180" y="301" text-anchor="middle" font-family="monospace" font-size="8" fill="#b48bff">témoignage</text>
+  <rect x="50" y="245" width="120" height="80" rx="6" fill="#1a1f4e" stroke="#915EFF" stroke-width="1"/>
+  <text x="110" y="265" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="bold" fill="#ffffff">Manager direct</text>
+  <text x="110" y="283" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#cbd5e1">Qu'est-ce qui a</text>
+  <text x="110" y="296" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#cbd5e1">changé concrètement</text>
+  <text x="110" y="309" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#cbd5e1">dans son travail ?</text>
+  <circle cx="520" cy="290" r="32" fill="#86efac" opacity="0.2" stroke="#86efac" stroke-width="2"/>
+  <text x="520" y="288" text-anchor="middle" font-family="monospace" font-size="11" font-weight="bold" fill="#a7f3d0">KPI</text>
+  <text x="520" y="301" text-anchor="middle" font-family="monospace" font-size="8" fill="#a7f3d0">opérationnel</text>
+  <rect x="555" y="245" width="120" height="80" rx="6" fill="#1a1f4e" stroke="#86efac" stroke-width="1"/>
+  <text x="615" y="265" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="bold" fill="#ffffff">Indicateur lié</text>
+  <text x="615" y="283" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#cbd5e1">Temps de traitement,</text>
+  <text x="615" y="296" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#cbd5e1">taux d'erreur, satis</text>
+  <text x="615" y="309" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#cbd5e1">client → tendance ?</text>
+  <text x="350" y="346" font-family="monospace" font-size="10" fill="#00cffd" text-anchor="middle" font-weight="bold">Aucun seul n'est fiable — les trois ensemble donnent une image honnête</text>
+</svg></div>
 
 > **L'essentiel** — La formation ponctuelle isole l'apprentissage de la réalité du travail. Une culture apprenante, c'est l'inverse : elle intègre l'apprentissage dans le flux quotidien, via l'expérience terrain (70%), les échanges entre pairs et managers (20%), et des formations formelles ciblées (10%). Chez SFR, cette approche a réduit le temps d'intégration de 30 % et atteint 95 % de satisfaction. La clé n'est pas le volume de formation dispensé, mais la qualité de l'ancrage dans la pratique réelle.

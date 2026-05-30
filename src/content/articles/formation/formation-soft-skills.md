@@ -118,10 +118,76 @@ La méthode qui fonctionne n'est pas compliquée, mais elle demande de la discip
 
 **Tenir un journal de bord court.** Après chaque situation difficile — une réunion tendue, un désaccord, une présentation — noter en deux lignes : ce qui a bien fonctionné, ce qu'on referait différemment. Pas pour se juger, mais pour capitaliser sur l'expérience plutôt que de la laisser passer.
 
+<div style="overflow-x:auto;margin:2rem 0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 360" style="max-width:100%;height:auto">
+  <rect width="700" height="360" fill="#0a0f2e" rx="12"/>
+  <text x="350" y="28" font-family="monospace" font-size="13" fill="#00cffd" text-anchor="middle" font-weight="bold">MÉTHODE 4 ÉTAPES — DÉVELOPPER UNE SOFT SKILL</text>
+  <text x="350" y="46" font-family="monospace" font-size="9" fill="#7e8da4" text-anchor="middle">boucle de pratique délibérée à répéter sur 3 à 6 mois</text>
+  <line x1="100" y1="180" x2="600" y2="180" stroke="#915EFF" stroke-width="2" stroke-dasharray="6,4" opacity="0.4"/>
+  <circle cx="100" cy="180" r="38" fill="#00cffd" opacity="0.2" stroke="#00cffd" stroke-width="2"/>
+  <text x="100" y="178" text-anchor="middle" font-family="monospace" font-size="11" font-weight="bold" fill="#67e8f9">01</text>
+  <text x="100" y="192" text-anchor="middle" font-family="monospace" font-size="9" fill="#67e8f9">CIBLER</text>
+  <text x="100" y="115" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="bold" fill="#ffffff">Comportement précis</text>
+  <text x="100" y="240" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#cbd5e1">Pas « mieux</text>
+  <text x="100" y="253" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#cbd5e1">communiquer » —</text>
+  <text x="100" y="266" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#cbd5e1">« structurer mes</text>
+  <text x="100" y="279" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#cbd5e1">points en 3 idées »</text>
+  <circle cx="266" cy="180" r="38" fill="#86efac" opacity="0.2" stroke="#86efac" stroke-width="2"/>
+  <text x="266" y="178" text-anchor="middle" font-family="monospace" font-size="11" font-weight="bold" fill="#a7f3d0">02</text>
+  <text x="266" y="192" text-anchor="middle" font-family="monospace" font-size="9" fill="#a7f3d0">PRATIQUER</text>
+  <text x="266" y="115" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="bold" fill="#ffffff">Faibles enjeux d'abord</text>
+  <text x="266" y="240" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#cbd5e1">Tester avec un</text>
+  <text x="266" y="253" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#cbd5e1">collègue de confiance</text>
+  <text x="266" y="266" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#cbd5e1">avant un client</text>
+  <text x="266" y="279" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#cbd5e1">stratégique</text>
+  <circle cx="434" cy="180" r="38" fill="#fbbf24" opacity="0.2" stroke="#fbbf24" stroke-width="2"/>
+  <text x="434" y="178" text-anchor="middle" font-family="monospace" font-size="11" font-weight="bold" fill="#fbbf24">03</text>
+  <text x="434" y="192" text-anchor="middle" font-family="monospace" font-size="9" fill="#fbbf24">FEEDBACK</text>
+  <text x="434" y="115" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="bold" fill="#ffffff">Précis et situé</text>
+  <text x="434" y="240" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#cbd5e1">« Qu'aurais-je pu</text>
+  <text x="434" y="253" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#cbd5e1">formuler autrement</text>
+  <text x="434" y="266" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#cbd5e1">dans cet échange ? »</text>
+  <text x="434" y="279" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#cbd5e1">→ ancrer dans le réel</text>
+  <circle cx="600" cy="180" r="38" fill="#915EFF" opacity="0.2" stroke="#915EFF" stroke-width="2"/>
+  <text x="600" y="178" text-anchor="middle" font-family="monospace" font-size="11" font-weight="bold" fill="#b48bff">04</text>
+  <text x="600" y="192" text-anchor="middle" font-family="monospace" font-size="9" fill="#b48bff">CAPITALISER</text>
+  <text x="600" y="115" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="bold" fill="#ffffff">Journal court</text>
+  <text x="600" y="240" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#cbd5e1">2 lignes après</text>
+  <text x="600" y="253" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#cbd5e1">chaque situation :</text>
+  <text x="600" y="266" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#cbd5e1">ce qui marche,</text>
+  <text x="600" y="279" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#cbd5e1">ce qu'on refait</text>
+  <path d="M 600 220 Q 650 320 350 320 Q 50 320 100 220" fill="none" stroke="#915EFF" stroke-width="1.5" stroke-dasharray="4,3" opacity="0.6"/>
+  <polygon points="100,220 95,228 105,228" fill="#915EFF" opacity="0.8"/>
+  <text x="350" y="313" text-anchor="middle" font-family="monospace" font-size="9" fill="#b48bff" font-style="italic">boucle à répéter</text>
+  <text x="350" y="345" font-family="monospace" font-size="10" fill="#00cffd" text-anchor="middle" font-weight="bold">Pratique délibérée + feedback précis = changement durable</text>
+</svg></div>
+
 ## Ce que la formation formelle peut et ne peut pas faire
 
 Une formation de deux jours sur la communication non violente ou la gestion des conflits peut ouvrir des prises de conscience, donner un vocabulaire commun, introduire des méthodes. Elle ne changera pas les comportements de fond sans un ancrage dans la pratique quotidienne.
 
 Ce que j'ai vu fonctionner chez SFR, c'était la combinaison : un apport structuré en formation, suivi de mises en situation sur le terrain, avec des debriefs réguliers en binôme ou en petits groupes. La formation formelle était le déclencheur — pas le coeur du dispositif.
+
+<div style="overflow-x:auto;margin:2rem 0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 360" style="max-width:100%;height:auto">
+  <rect width="700" height="360" fill="#0a0f2e" rx="12"/>
+  <text x="350" y="28" font-family="monospace" font-size="13" fill="#00cffd" text-anchor="middle" font-weight="bold">FORMATION SEULE VS FORMATION + ANCRAGE TERRAIN</text>
+  <text x="350" y="46" font-family="monospace" font-size="9" fill="#7e8da4" text-anchor="middle">transfert observable des soft skills à 3 mois</text>
+  <text x="50" y="80" font-family="monospace" font-size="10" fill="#fb7185" font-weight="bold">A — FORMATION SEULE (2 jours)</text>
+  <rect x="50" y="92" width="600" height="28" rx="4" fill="#1a1f4e" stroke="#fb7185" stroke-width="1"/>
+  <rect x="50" y="92" width="120" height="28" rx="4" fill="#ef4444" opacity="0.55"/>
+  <text x="110" y="111" text-anchor="middle" font-family="monospace" font-size="11" fill="#ffffff" font-weight="bold">20%</text>
+  <text x="660" y="111" font-family="monospace" font-size="9" fill="#fca5a5">transfert observé</text>
+  <text x="350" y="142" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#cbd5e1">Apport théorique sans relais : oubli rapide, retour aux réflexes initiaux</text>
+  <text x="50" y="180" font-family="monospace" font-size="10" fill="#a7f3d0" font-weight="bold">B — FORMATION + ANCRAGE TERRAIN (3 mois)</text>
+  <rect x="50" y="192" width="600" height="28" rx="4" fill="#1a1f4e" stroke="#86efac" stroke-width="1"/>
+  <rect x="50" y="192" width="450" height="28" rx="4" fill="#86efac" opacity="0.55"/>
+  <text x="275" y="211" text-anchor="middle" font-family="monospace" font-size="11" fill="#0a0f2e" font-weight="bold">75%</text>
+  <text x="660" y="211" font-family="monospace" font-size="9" fill="#a7f3d0">transfert observé</text>
+  <text x="350" y="242" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#cbd5e1">Apport + mises en situation + debriefs binôme : comportement durable</text>
+  <rect x="50" y="265" width="600" height="60" rx="6" fill="#1a1f4e" stroke="#915EFF" stroke-width="1"/>
+  <text x="65" y="285" font-family="monospace" font-size="10" fill="#b48bff" font-weight="bold">Le déclencheur ≠ le cœur du dispositif.</text>
+  <text x="65" y="302" font-family="sans-serif" font-size="10" fill="#cbd5e1">La salle ouvre une prise de conscience et donne un vocabulaire commun ;</text>
+  <text x="65" y="318" font-family="sans-serif" font-size="10" fill="#cbd5e1">les comportements changent dans la pratique quotidienne avec feedback.</text>
+  <text x="350" y="350" font-family="monospace" font-size="10" fill="#00cffd" text-anchor="middle" font-weight="bold">Ce n'est pas la formation qui transforme — c'est ce qui se passe après</text>
+</svg></div>
 
 > **Le fond de l'affaire** — Les soft skills ne sont pas des traits de personnalité figés. Ce sont des compétences qui s'apprennent à condition d'être pratiquées dans des situations réelles, avec du feedback précis et régulier. Communication, gestion des conflits, adaptabilité, leadership, résolution de problèmes et empathie sont toutes développables avec la bonne approche. La formation formelle ouvre la voie — mais c'est la pratique délibérée, ancrée dans le quotidien de travail, qui transforme vraiment les comportements.
