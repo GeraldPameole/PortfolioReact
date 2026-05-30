@@ -98,6 +98,51 @@ Pour le bundle, `webpack-bundle-analyzer` ou `vite-bundle-visualizer` produisent
 
 Un anti-pattern courant : envelopper tout avec `React.memo`, `useMemo` et `useCallback` "par précaution". Ça complexifie le code, ça rend les bugs plus difficiles à tracer, et ça n'améliore pas nécessairement les performances. Le Profiler d'abord, l'optimisation ensuite.
 
+<div style="overflow-x:auto;margin:2rem 0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 360" style="max-width:100%;height:auto">
+  <rect width="700" height="360" fill="#0a0f2e" rx="12"/>
+  <text x="350" y="28" font-family="monospace" font-size="13" fill="#00cffd" text-anchor="middle" font-weight="bold">FAUT-IL MÉMOÏSER ? — ARBRE DE DÉCISION</text>
+  <text x="350" y="46" font-family="monospace" font-size="9" fill="#7e8da4" text-anchor="middle">React.memo / useMemo / useCallback — quand le coût vaut le bénéfice</text>
+  <rect x="270" y="65" width="160" height="40" rx="8" fill="#1a1f4e" stroke="#915EFF" stroke-width="1.5"/>
+  <text x="350" y="82" font-family="sans-serif" font-size="11" fill="#ffffff" text-anchor="middle" font-weight="bold">Composant identifié</text>
+  <text x="350" y="96" font-family="monospace" font-size="9" fill="#b48bff" text-anchor="middle">par le Profiler</text>
+  <line x1="350" y1="105" x2="350" y2="125" stroke="#94a3b8" stroke-width="1"/>
+  <rect x="270" y="125" width="160" height="40" rx="8" fill="#1a1f4e" stroke="#fdba74" stroke-width="1.2"/>
+  <text x="350" y="142" font-family="sans-serif" font-size="11" fill="#fdba74" text-anchor="middle" font-weight="bold">Rendu coûteux ?</text>
+  <text x="350" y="156" font-family="monospace" font-size="8" fill="#7e8da4" text-anchor="middle">&gt; 16ms ou liste &gt; 100 items</text>
+  <line x1="270" y1="145" x2="160" y2="180" stroke="#fb7185" stroke-width="1"/>
+  <text x="200" y="170" font-family="monospace" font-size="9" fill="#fb7185" text-anchor="middle">non</text>
+  <line x1="430" y1="145" x2="540" y2="180" stroke="#a7f3d0" stroke-width="1"/>
+  <text x="500" y="170" font-family="monospace" font-size="9" fill="#a7f3d0" text-anchor="middle">oui</text>
+  <rect x="60" y="180" width="200" height="80" rx="8" fill="#1a1f4e" stroke="#fb7185" stroke-width="1"/>
+  <text x="160" y="200" font-family="monospace" font-size="10" fill="#fb7185" text-anchor="middle" font-weight="bold">NE PAS MÉMOÏSER</text>
+  <line x1="80" y1="208" x2="240" y2="208" stroke="#fb7185" stroke-width="0.5" opacity="0.3"/>
+  <text x="160" y="224" font-family="sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">Le coût de comparaison</text>
+  <text x="160" y="238" font-family="sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">dépasse le bénéfice.</text>
+  <text x="160" y="252" font-family="sans-serif" font-size="9" fill="#fb7185" text-anchor="middle">Laisse React faire son job.</text>
+  <rect x="440" y="180" width="200" height="80" rx="8" fill="#1a1f4e" stroke="#a7f3d0" stroke-width="1"/>
+  <text x="540" y="200" font-family="monospace" font-size="10" fill="#a7f3d0" text-anchor="middle" font-weight="bold">PROPS STABLES ?</text>
+  <line x1="460" y1="208" x2="620" y2="208" stroke="#a7f3d0" stroke-width="0.5" opacity="0.3"/>
+  <text x="540" y="226" font-family="sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">Si props recréées à chaque</text>
+  <text x="540" y="240" font-family="sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">rendu (objet, fonction inline)</text>
+  <text x="540" y="254" font-family="monospace" font-size="9" fill="#fdba74" text-anchor="middle">→ memo inutile sans useCallback</text>
+  <line x1="540" y1="260" x2="540" y2="285" stroke="#94a3b8" stroke-width="1"/>
+  <rect x="60" y="290" width="180" height="58" rx="8" fill="#1a1f4e" stroke="#67e8f9" stroke-width="1"/>
+  <text x="150" y="307" font-family="monospace" font-size="10" fill="#67e8f9" text-anchor="middle" font-weight="bold">React.memo</text>
+  <line x1="80" y1="315" x2="220" y2="315" stroke="#67e8f9" stroke-width="0.5" opacity="0.3"/>
+  <text x="150" y="330" font-family="sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">composant pur,</text>
+  <text x="150" y="342" font-family="sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">props simples</text>
+  <rect x="255" y="290" width="180" height="58" rx="8" fill="#1a1f4e" stroke="#b48bff" stroke-width="1"/>
+  <text x="345" y="307" font-family="monospace" font-size="10" fill="#b48bff" text-anchor="middle" font-weight="bold">useMemo</text>
+  <line x1="275" y1="315" x2="415" y2="315" stroke="#b48bff" stroke-width="0.5" opacity="0.3"/>
+  <text x="345" y="330" font-family="sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">calculs lourds,</text>
+  <text x="345" y="342" font-family="sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">tri / filtre listes</text>
+  <rect x="450" y="290" width="180" height="58" rx="8" fill="#1a1f4e" stroke="#fdba74" stroke-width="1"/>
+  <text x="540" y="307" font-family="monospace" font-size="10" fill="#fdba74" text-anchor="middle" font-weight="bold">useCallback</text>
+  <line x1="470" y1="315" x2="610" y2="315" stroke="#fdba74" stroke-width="0.5" opacity="0.3"/>
+  <text x="540" y="330" font-family="sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">fonction passée à</text>
+  <text x="540" y="342" font-family="sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">un enfant mémoïsé</text>
+</svg></div>
+
 ## Lazy loading et code splitting : l'impact le plus immédiat
 
 C'est généralement là que le gain est le plus rapide. `React.lazy` combiné avec `Suspense` permet de charger des composants à la demande — typiquement, par route.
@@ -130,6 +175,54 @@ Sans analyse du bundle, on optimise dans le noir. Voici le diagnostic en trois �
 3. **React DevTools Profiler** pour les problèmes de re-rendu. Enregistrer une interaction utilisateur typique, identifier les composants qui se rendent plus de 2-3 fois sans raison visible, remonter l'arbre pour trouver la source du re-rendu en cascade.
 
 L'ordre d'intervention recommandé par impact décroissant : code splitting d'abord (impact fort, complexité faible), optimisation des imports de librairies (impact fort, effort modéré), memoization ciblée sur les composants identifiés par le Profiler (impact modéré, effort variable).
+
+<div style="overflow-x:auto;margin:2rem 0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 360" style="max-width:100%;height:auto">
+  <rect width="700" height="360" fill="#0a0f2e" rx="12"/>
+  <text x="350" y="28" font-family="monospace" font-size="13" fill="#00cffd" text-anchor="middle" font-weight="bold">MATRICE IMPACT × EFFORT — ORDRE D'INTERVENTION</text>
+  <text x="350" y="46" font-family="monospace" font-size="9" fill="#7e8da4" text-anchor="middle">par où commencer pour maximiser le ROI perf</text>
+  <line x1="100" y1="80" x2="100" y2="310" stroke="#94a3b8" stroke-width="1.2"/>
+  <line x1="100" y1="310" x2="650" y2="310" stroke="#94a3b8" stroke-width="1.2"/>
+  <text x="50" y="195" font-family="monospace" font-size="10" fill="#cbd5e1" text-anchor="middle" transform="rotate(-90 50 195)">IMPACT PERF</text>
+  <text x="375" y="335" font-family="monospace" font-size="10" fill="#cbd5e1" text-anchor="middle">EFFORT D'IMPLÉMENTATION</text>
+  <text x="90" y="312" font-family="monospace" font-size="9" fill="#7e8da4" text-anchor="end">faible</text>
+  <text x="90" y="90" font-family="monospace" font-size="9" fill="#7e8da4" text-anchor="end">fort</text>
+  <text x="100" y="325" font-family="monospace" font-size="9" fill="#7e8da4" text-anchor="middle">faible</text>
+  <text x="650" y="325" font-family="monospace" font-size="9" fill="#7e8da4" text-anchor="middle">fort</text>
+  <line x1="375" y1="80" x2="375" y2="310" stroke="#94a3b8" stroke-width="0.4" stroke-dasharray="3,3" opacity="0.5"/>
+  <line x1="100" y1="195" x2="650" y2="195" stroke="#94a3b8" stroke-width="0.4" stroke-dasharray="3,3" opacity="0.5"/>
+  <text x="237" y="75" font-family="monospace" font-size="8" fill="#a7f3d0" text-anchor="middle">QUICK WINS</text>
+  <text x="512" y="75" font-family="monospace" font-size="8" fill="#fdba74" text-anchor="middle">PROJETS MAJEURS</text>
+  <text x="237" y="325" font-family="monospace" font-size="8" fill="#b48bff" text-anchor="middle">À FAIRE EN PASSANT</text>
+  <text x="512" y="325" font-family="monospace" font-size="8" fill="#fb7185" text-anchor="middle">À ÉVITER (souvent)</text>
+  <circle cx="180" cy="110" r="36" fill="#a7f3d0" fill-opacity="0.18" stroke="#a7f3d0" stroke-width="1.2"/>
+  <text x="180" y="108" font-family="monospace" font-size="9" fill="#a7f3d0" text-anchor="middle" font-weight="bold">React.lazy</text>
+  <text x="180" y="120" font-family="monospace" font-size="8" fill="#a7f3d0" text-anchor="middle">par route</text>
+  <text x="180" y="160" font-family="sans-serif" font-size="8" fill="#94a3b8" text-anchor="middle">1) commencer ici</text>
+  <circle cx="300" cy="135" r="30" fill="#a7f3d0" fill-opacity="0.18" stroke="#a7f3d0" stroke-width="1.2"/>
+  <text x="300" y="133" font-family="monospace" font-size="9" fill="#a7f3d0" text-anchor="middle" font-weight="bold">named</text>
+  <text x="300" y="145" font-family="monospace" font-size="8" fill="#a7f3d0" text-anchor="middle">imports</text>
+  <text x="300" y="180" font-family="sans-serif" font-size="8" fill="#94a3b8" text-anchor="middle">2) lodash, date-fns</text>
+  <circle cx="460" cy="155" r="28" fill="#fdba74" fill-opacity="0.18" stroke="#fdba74" stroke-width="1.2"/>
+  <text x="460" y="155" font-family="monospace" font-size="9" fill="#fdba74" text-anchor="middle" font-weight="bold">dynamic</text>
+  <text x="460" y="167" font-family="monospace" font-size="8" fill="#fdba74" text-anchor="middle">imports</text>
+  <text x="460" y="195" font-family="sans-serif" font-size="8" fill="#94a3b8" text-anchor="middle">3) libs lourdes</text>
+  <circle cx="250" cy="225" r="26" fill="#67e8f9" fill-opacity="0.18" stroke="#67e8f9" stroke-width="1.2"/>
+  <text x="250" y="223" font-family="monospace" font-size="9" fill="#67e8f9" text-anchor="middle" font-weight="bold">memo</text>
+  <text x="250" y="235" font-family="monospace" font-size="8" fill="#67e8f9" text-anchor="middle">ciblée</text>
+  <text x="250" y="262" font-family="sans-serif" font-size="8" fill="#94a3b8" text-anchor="middle">4) après Profiler</text>
+  <circle cx="540" cy="115" r="28" fill="#fdba74" fill-opacity="0.18" stroke="#fdba74" stroke-width="1.2"/>
+  <text x="540" y="113" font-family="monospace" font-size="9" fill="#fdba74" text-anchor="middle" font-weight="bold">Server</text>
+  <text x="540" y="125" font-family="monospace" font-size="8" fill="#fdba74" text-anchor="middle">Components</text>
+  <text x="540" y="155" font-family="sans-serif" font-size="8" fill="#94a3b8" text-anchor="middle">5) refonte archi</text>
+  <circle cx="570" cy="265" r="24" fill="#fb7185" fill-opacity="0.18" stroke="#fb7185" stroke-width="1.2"/>
+  <text x="570" y="263" font-family="monospace" font-size="8" fill="#fb7185" text-anchor="middle" font-weight="bold">memo</text>
+  <text x="570" y="274" font-family="monospace" font-size="8" fill="#fb7185" text-anchor="middle">"partout"</text>
+  <text x="570" y="298" font-family="sans-serif" font-size="8" fill="#fb7185" text-anchor="middle">complexité &gt; gain</text>
+  <circle cx="155" cy="270" r="22" fill="#b48bff" fill-opacity="0.18" stroke="#b48bff" stroke-width="1.2"/>
+  <text x="155" y="268" font-family="monospace" font-size="8" fill="#b48bff" text-anchor="middle" font-weight="bold">Lighthouse</text>
+  <text x="155" y="278" font-family="monospace" font-size="8" fill="#b48bff" text-anchor="middle">audit</text>
+  <text x="155" y="298" font-family="sans-serif" font-size="8" fill="#94a3b8" text-anchor="middle">à chaque release</text>
+</svg></div>
 
 ## Ce qu'on ne doit pas optimiser prématurément
 
