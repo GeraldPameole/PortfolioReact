@@ -91,6 +91,44 @@ Ce que j'ai mis en place sur mes propres projets : commenter intelligemment les 
 La règle que j'applique : avant de demander quoi que ce soit, apporter de la valeur trois fois. Un commentaire utile, un article partagé avec une vraie opinion, une réponse à leur question dans un fil de discussion. Ce n'est pas de la manipulation, c'est de la construction de relation.
 
 L'autre piège à éviter : automatiser les messages de connexion avec des textes génériques. Les outils qui permettent d'envoyer 200 demandes par semaine avec le prénom inséré automatiquement ne construisent pas de réseau. Ils créent de la fatigue et abîment la réputation de l'expéditeur.
+<div style="overflow-x:auto;margin:2rem 0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 360" style="max-width:100%;height:auto">
+  <rect width="700" height="360" fill="#0a0f2e"/>
+  <text x="350" y="28" font-family="monospace" font-size="13" fill="#00cffd" text-anchor="middle" font-weight="bold">RÈGLE DU 3:1 — APPORTER AVANT DE DEMANDER</text>
+  <text x="350" y="46" font-family="monospace" font-size="9" fill="#7e8da4" text-anchor="middle">Trois interactions de valeur avant une sollicitation commerciale</text>
+  <rect x="60" y="80" width="180" height="200" rx="10" fill="#1a1f4e" stroke="#86efac" stroke-width="1.2"/>
+  <circle cx="150" cy="115" r="20" fill="#86efac" opacity="0.2"/>
+  <text x="150" y="121" font-family="monospace" font-size="16" fill="#86efac" text-anchor="middle" font-weight="bold">1</text>
+  <text x="150" y="155" font-family="sans-serif" font-size="12" fill="#a7f3d0" text-anchor="middle" font-weight="bold">COMMENTER</text>
+  <text x="150" y="180" font-family="sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle">Réagir publiquement</text>
+  <text x="150" y="195" font-family="sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle">sur leurs posts</text>
+  <text x="150" y="225" font-family="monospace" font-size="9" fill="#7e8da4" text-anchor="middle">Visibilité réciproque</text>
+  <text x="150" y="240" font-family="monospace" font-size="9" fill="#7e8da4" text-anchor="middle">Ton humain, jamais</text>
+  <text x="150" y="253" font-family="monospace" font-size="9" fill="#7e8da4" text-anchor="middle">le pitch produit</text>
+  <text x="150" y="270" font-family="monospace" font-size="8" fill="#86efac" text-anchor="middle">→ effort faible</text>
+  <rect x="260" y="80" width="180" height="200" rx="10" fill="#1a1f4e" stroke="#00cffd" stroke-width="1.2"/>
+  <circle cx="350" cy="115" r="20" fill="#00cffd" opacity="0.2"/>
+  <text x="350" y="121" font-family="monospace" font-size="16" fill="#00cffd" text-anchor="middle" font-weight="bold">2</text>
+  <text x="350" y="155" font-family="sans-serif" font-size="12" fill="#67e8f9" text-anchor="middle" font-weight="bold">PARTAGER</text>
+  <text x="350" y="180" font-family="sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle">Diffuser une ressource</text>
+  <text x="350" y="195" font-family="sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle">utile à leur sujet</text>
+  <text x="350" y="225" font-family="monospace" font-size="9" fill="#7e8da4" text-anchor="middle">Article, étude, retour</text>
+  <text x="350" y="240" font-family="monospace" font-size="9" fill="#7e8da4" text-anchor="middle">d'expérience ciblé</text>
+  <text x="350" y="253" font-family="monospace" font-size="9" fill="#7e8da4" text-anchor="middle">sans auto-promo</text>
+  <text x="350" y="270" font-family="monospace" font-size="8" fill="#00cffd" text-anchor="middle">→ effort moyen</text>
+  <rect x="460" y="80" width="180" height="200" rx="10" fill="#1a1f4e" stroke="#915EFF" stroke-width="1.2"/>
+  <circle cx="550" cy="115" r="20" fill="#915EFF" opacity="0.2"/>
+  <text x="550" y="121" font-family="monospace" font-size="16" fill="#b48bff" text-anchor="middle" font-weight="bold">3</text>
+  <text x="550" y="155" font-family="sans-serif" font-size="12" fill="#c4b5fd" text-anchor="middle" font-weight="bold">RÉPONDRE</text>
+  <text x="550" y="180" font-family="sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle">Aider sur leur</text>
+  <text x="550" y="195" font-family="sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle">vraie question</text>
+  <text x="550" y="225" font-family="monospace" font-size="9" fill="#7e8da4" text-anchor="middle">Réponse argumentée</text>
+  <text x="550" y="240" font-family="monospace" font-size="9" fill="#7e8da4" text-anchor="middle">dans un fil ou en DM</text>
+  <text x="550" y="253" font-family="monospace" font-size="9" fill="#7e8da4" text-anchor="middle">sans contrepartie</text>
+  <text x="550" y="270" font-family="monospace" font-size="8" fill="#b48bff" text-anchor="middle">→ effort élevé</text>
+  <text x="350" y="310" font-family="monospace" font-size="11" fill="#fbbf24" text-anchor="middle" font-weight="bold">─── puis seulement, la sollicitation ───</text>
+  <rect x="220" y="320" width="260" height="28" rx="14" fill="#1a1f4e" stroke="#fbbf24" stroke-width="1"/>
+  <text x="350" y="338" font-family="sans-serif" font-size="11" fill="#fdba74" text-anchor="middle">"On se parle 20 min sur votre sujet ?"</text>
+</svg></div>
 
 ## Mesurer le ROI social en B2B sans se perdre dans les indicateurs
 
@@ -111,5 +149,38 @@ X (ex-Twitter) est utile dans les secteurs tech, médias et politique. Les écha
 YouTube et les podcasts ont un avantage que les réseaux texte n'ont pas : ils permettent de démontrer la compétence sur la durée. Une série de vidéos courtes sur un sujet précis construit une crédibilité difficile à obtenir avec des posts texte seuls. Le coût de production est plus élevé, mais l'impact sur la confiance est proportionnel.
 
 Ce que je déconseille systématiquement en B2B pur : dépenser de l'énergie sur des réseaux orientés grand public (Instagram, TikTok) sauf si votre cible inclut explicitement des acheteurs présents sur ces plateformes. Dans la plupart des cas, c'est une dispersion sans retour.
+<div style="overflow-x:auto;margin:2rem 0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 360" style="max-width:100%;height:auto">
+  <rect width="700" height="360" fill="#0a0f2e"/>
+  <text x="350" y="28" font-family="monospace" font-size="13" fill="#00cffd" text-anchor="middle" font-weight="bold">CANAUX B2B — OÙ INVESTIR SON ÉNERGIE</text>
+  <text x="350" y="46" font-family="monospace" font-size="9" fill="#7e8da4" text-anchor="middle">Effort de production vs impact sur la décision d'achat</text>
+  <line x1="80" y1="320" x2="660" y2="320" stroke="#7e8da4" stroke-width="1"/>
+  <line x1="80" y1="70" x2="80" y2="320" stroke="#7e8da4" stroke-width="1"/>
+  <text x="370" y="345" font-family="monospace" font-size="10" fill="#94a3b8" text-anchor="middle">Effort de production →</text>
+  <text x="60" y="200" font-family="monospace" font-size="10" fill="#94a3b8" text-anchor="middle" transform="rotate(-90 60 200)">Impact crédibilité →</text>
+  <line x1="80" y1="195" x2="660" y2="195" stroke="#7e8da4" stroke-width="0.5" stroke-dasharray="3 3" opacity="0.4"/>
+  <line x1="370" y1="70" x2="370" y2="320" stroke="#7e8da4" stroke-width="0.5" stroke-dasharray="3 3" opacity="0.4"/>
+  <text x="220" y="85" font-family="monospace" font-size="8" fill="#86efac" text-anchor="middle">FORT IMPACT / FAIBLE EFFORT</text>
+  <text x="520" y="85" font-family="monospace" font-size="8" fill="#fbbf24" text-anchor="middle">FORT IMPACT / FORT EFFORT</text>
+  <text x="220" y="312" font-family="monospace" font-size="8" fill="#fb7185" text-anchor="middle">FAIBLE IMPACT / FAIBLE EFFORT</text>
+  <text x="520" y="312" font-family="monospace" font-size="8" fill="#fb7185" text-anchor="middle">FAIBLE IMPACT / FORT EFFORT</text>
+  <circle cx="200" cy="130" r="32" fill="#00cffd" opacity="0.25" stroke="#00cffd" stroke-width="1.5"/>
+  <text x="200" y="128" font-family="sans-serif" font-size="13" fill="#67e8f9" text-anchor="middle" font-weight="bold">LinkedIn</text>
+  <text x="200" y="143" font-family="monospace" font-size="9" fill="#cbd5e1" text-anchor="middle">cœur B2B</text>
+  <circle cx="310" cy="175" r="24" fill="#915EFF" opacity="0.25" stroke="#915EFF" stroke-width="1.5"/>
+  <text x="310" y="173" font-family="sans-serif" font-size="12" fill="#c4b5fd" text-anchor="middle" font-weight="bold">X / Twitter</text>
+  <text x="310" y="187" font-family="monospace" font-size="9" fill="#cbd5e1" text-anchor="middle">tech / médias</text>
+  <circle cx="500" cy="140" r="30" fill="#fbbf24" opacity="0.25" stroke="#fbbf24" stroke-width="1.5"/>
+  <text x="500" y="138" font-family="sans-serif" font-size="13" fill="#fbbf24" text-anchor="middle" font-weight="bold">YouTube</text>
+  <text x="500" y="152" font-family="monospace" font-size="9" fill="#cbd5e1" text-anchor="middle">démo durée</text>
+  <circle cx="590" cy="170" r="26" fill="#fbbf24" opacity="0.2" stroke="#fdba74" stroke-width="1.5"/>
+  <text x="590" y="168" font-family="sans-serif" font-size="12" fill="#fdba74" text-anchor="middle" font-weight="bold">Podcast</text>
+  <text x="590" y="182" font-family="monospace" font-size="9" fill="#cbd5e1" text-anchor="middle">confiance ++</text>
+  <circle cx="560" cy="265" r="22" fill="#fb7185" opacity="0.2" stroke="#fb7185" stroke-width="1.2"/>
+  <text x="560" y="263" font-family="sans-serif" font-size="11" fill="#fb7185" text-anchor="middle" font-weight="bold">TikTok</text>
+  <text x="560" y="277" font-family="monospace" font-size="9" fill="#cbd5e1" text-anchor="middle">rarement B2B</text>
+  <circle cx="180" cy="270" r="22" fill="#fb7185" opacity="0.18" stroke="#fb7185" stroke-width="1.2"/>
+  <text x="180" y="268" font-family="sans-serif" font-size="11" fill="#fb7185" text-anchor="middle" font-weight="bold">Insta</text>
+  <text x="180" y="282" font-family="monospace" font-size="9" fill="#cbd5e1" text-anchor="middle">dispersion</text>
+</svg></div>
 
 > **Pour conclure sans platitude** — Une stratégie réseaux sociaux B2B qui fonctionne repose sur trois piliers : du contenu d'expert à voix humaine qui apporte une vraie valeur, un social selling basé sur la relation avant la transaction, et une mesure du ROI qui tient compte des cycles longs. LinkedIn est l'outil central. Ce n'est pas le volume de posts qui fait la différence, c'est la consistance et la pertinence sur la durée.

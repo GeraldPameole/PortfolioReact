@@ -63,6 +63,29 @@ Un diagnostic honnête répond à d'autres questions. Pourquoi je veux partir ? 
 Le bilan de compétences peut être utile à cette étape. Pas comme révélateur magique — il ne trouvera pas votre vocation à votre place — mais comme outil de mise à plat structuré. Ce qui le rend utile, c'est la qualité des échanges avec le conseiller et la profondeur de réflexion qu'on y apporte. Un bilan fait à la va-vite produit des conclusions génériques qui ne servent à rien.
 
 Ce que je vois souvent échouer à cette phase : décider trop vite, avant d'avoir vraiment compris ce qui ne va pas dans la situation actuelle. Des professionnels qui changent de secteur et retrouvent exactement les mêmes frustrations deux ans plus tard, parce que le problème n'était pas le secteur.
+<div style="overflow-x:auto;margin:2rem 0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 360" style="max-width:100%;height:auto">
+  <rect width="700" height="360" fill="#0a0f2e"/>
+  <text x="350" y="28" font-family="monospace" font-size="13" fill="#00cffd" text-anchor="middle" font-weight="bold">IKIGAI — LES 4 QUESTIONS DU DIAGNOSTIC HONNÊTE</text>
+  <text x="350" y="46" font-family="monospace" font-size="9" fill="#7e8da4" text-anchor="middle">L'intersection des 4 cercles éclaire une cible viable, pas seulement désirable</text>
+  <circle cx="280" cy="180" r="100" fill="#915EFF" opacity="0.18" stroke="#915EFF" stroke-width="1.5"/>
+  <circle cx="420" cy="180" r="100" fill="#00cffd" opacity="0.18" stroke="#00cffd" stroke-width="1.5"/>
+  <circle cx="280" cy="240" r="100" fill="#86efac" opacity="0.18" stroke="#86efac" stroke-width="1.5"/>
+  <circle cx="420" cy="240" r="100" fill="#fbbf24" opacity="0.18" stroke="#fbbf24" stroke-width="1.5"/>
+  <text x="200" y="110" font-family="sans-serif" font-size="11" fill="#b48bff" text-anchor="middle" font-weight="bold">CE QUE J'AIME</text>
+  <text x="200" y="125" font-family="monospace" font-size="9" fill="#cbd5e1" text-anchor="middle">passion réelle</text>
+  <text x="200" y="138" font-family="monospace" font-size="9" fill="#cbd5e1" text-anchor="middle">pas idéalisée</text>
+  <text x="500" y="110" font-family="sans-serif" font-size="11" fill="#67e8f9" text-anchor="middle" font-weight="bold">CE QUE JE SAIS FAIRE</text>
+  <text x="500" y="125" font-family="monospace" font-size="9" fill="#cbd5e1" text-anchor="middle">compétences</text>
+  <text x="500" y="138" font-family="monospace" font-size="9" fill="#cbd5e1" text-anchor="middle">transférables</text>
+  <text x="200" y="318" font-family="sans-serif" font-size="11" fill="#a7f3d0" text-anchor="middle" font-weight="bold">CE DONT LE MONDE A BESOIN</text>
+  <text x="200" y="333" font-family="monospace" font-size="9" fill="#cbd5e1" text-anchor="middle">demande réelle du marché</text>
+  <text x="500" y="318" font-family="sans-serif" font-size="11" fill="#fdba74" text-anchor="middle" font-weight="bold">CE POUR QUOI JE PEUX ÊTRE PAYÉ</text>
+  <text x="500" y="333" font-family="monospace" font-size="9" fill="#cbd5e1" text-anchor="middle">viabilité économique</text>
+  <text x="350" y="155" font-family="monospace" font-size="9" fill="#94a3b8" text-anchor="middle">passion</text>
+  <text x="350" y="205" font-family="monospace" font-size="10" fill="#ffffff" text-anchor="middle" font-weight="bold">IKIGAI</text>
+  <text x="350" y="220" font-family="monospace" font-size="8" fill="#94a3b8" text-anchor="middle">cible viable</text>
+  <text x="350" y="270" font-family="monospace" font-size="9" fill="#94a3b8" text-anchor="middle">métier</text>
+</svg></div>
 
 ## Phase 2 : explorer sans romantiser
 
@@ -85,6 +108,58 @@ La transition progressive, c'est démarrer des missions ou des projets dans la n
 Ce n'est pas toujours possible. Certains secteurs exigent une formation longue et incompatible avec un emploi à plein temps. Certains employeurs n'acceptent pas le travail en dehors. Dans ces cas, la rupture nette est parfois inévitable, mais elle doit s'appuyer sur une préparation financière sérieuse — avoir au minimum douze à dix-huit mois de charges couvertes avant de sauter.
 
 L'erreur que je vois le plus souvent à cette phase : miser sur la passion pour compenser le manque de préparation. "Je serai tellement motivé que ça marchera." La motivation ne compense pas l'absence de compétences reconnues par le marché, le manque de réseau dans le nouveau secteur, ou une situation financière qui génère une pression permanente. La passion, c'est du carburant. Ce n'est pas un plan.
+<div style="overflow-x:auto;margin:2rem 0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 360" style="max-width:100%;height:auto">
+  <rect width="700" height="360" fill="#0a0f2e"/>
+  <text x="350" y="28" font-family="monospace" font-size="13" fill="#00cffd" text-anchor="middle" font-weight="bold">PROGRESSIVE OU RADICALE — ARBRE DE DÉCISION</text>
+  <text x="350" y="46" font-family="monospace" font-size="9" fill="#7e8da4" text-anchor="middle">Trois questions qui orientent vers la bonne stratégie de transition</text>
+  <rect x="270" y="65" width="160" height="40" rx="20" fill="#1a1f4e" stroke="#00cffd" stroke-width="1.5"/>
+  <text x="350" y="89" font-family="sans-serif" font-size="11" fill="#67e8f9" text-anchor="middle">Reconversion envisagée</text>
+  <line x1="350" y1="105" x2="350" y2="125" stroke="#7e8da4" stroke-width="1"/>
+  <rect x="220" y="125" width="260" height="38" rx="6" fill="#1a1f4e" stroke="#fbbf24" stroke-width="1"/>
+  <text x="350" y="149" font-family="sans-serif" font-size="11" fill="#fdba74" text-anchor="middle">Q1: formation longue obligatoire ?</text>
+  <line x1="280" y1="163" x2="180" y2="180" stroke="#7e8da4" stroke-width="1"/>
+  <line x1="420" y1="163" x2="520" y2="180" stroke="#7e8da4" stroke-width="1"/>
+  <text x="225" y="175" font-family="monospace" font-size="9" fill="#86efac">non</text>
+  <text x="465" y="175" font-family="monospace" font-size="9" fill="#fb7185">oui (santé, droit...)</text>
+  <rect x="60" y="180" width="240" height="38" rx="6" fill="#1a1f4e" stroke="#fbbf24" stroke-width="1"/>
+  <text x="180" y="204" font-family="sans-serif" font-size="11" fill="#fdba74" text-anchor="middle">Q2: 12-18 mois de réserve ?</text>
+  <line x1="120" y1="218" x2="100" y2="240" stroke="#7e8da4" stroke-width="1"/>
+  <line x1="240" y1="218" x2="260" y2="240" stroke="#7e8da4" stroke-width="1"/>
+  <text x="80" y="234" font-family="monospace" font-size="9" fill="#fb7185">non</text>
+  <text x="270" y="234" font-family="monospace" font-size="9" fill="#86efac">oui</text>
+  <rect x="20" y="240" width="160" height="90" rx="8" fill="#1a1f4e" stroke="#86efac" stroke-width="1.5"/>
+  <text x="100" y="262" font-family="sans-serif" font-size="12" fill="#a7f3d0" text-anchor="middle" font-weight="bold">PROGRESSIVE</text>
+  <text x="100" y="280" font-family="sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle">Tester en parallèle</text>
+  <text x="100" y="294" font-family="sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle">de l'emploi actuel</text>
+  <text x="100" y="313" font-family="monospace" font-size="9" fill="#86efac" text-anchor="middle">→ freelance, soir,</text>
+  <text x="100" y="324" font-family="monospace" font-size="9" fill="#86efac" text-anchor="middle">missions associatives</text>
+  <rect x="200" y="240" width="160" height="90" rx="8" fill="#1a1f4e" stroke="#00cffd" stroke-width="1.5"/>
+  <text x="280" y="262" font-family="sans-serif" font-size="12" fill="#67e8f9" text-anchor="middle" font-weight="bold">HYBRIDE</text>
+  <text x="280" y="280" font-family="sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle">Temps partiel +</text>
+  <text x="280" y="294" font-family="sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle">portfolio progressif</text>
+  <text x="280" y="313" font-family="monospace" font-size="9" fill="#00cffd" text-anchor="middle">→ 80% emploi +</text>
+  <text x="280" y="324" font-family="monospace" font-size="9" fill="#00cffd" text-anchor="middle">missions cibles</text>
+  <line x1="520" y1="218" x2="520" y2="240" stroke="#7e8da4" stroke-width="1"/>
+  <rect x="400" y="180" width="240" height="38" rx="6" fill="#1a1f4e" stroke="#fbbf24" stroke-width="1"/>
+  <text x="520" y="204" font-family="sans-serif" font-size="11" fill="#fdba74" text-anchor="middle">Q3: réserve + filet familial ?</text>
+  <line x1="460" y1="240" x2="440" y2="240" stroke="#7e8da4" stroke-width="0"/>
+  <line x1="460" y1="218" x2="440" y2="240" stroke="#7e8da4" stroke-width="1"/>
+  <line x1="580" y1="218" x2="600" y2="240" stroke="#7e8da4" stroke-width="1"/>
+  <text x="420" y="234" font-family="monospace" font-size="9" fill="#86efac">oui</text>
+  <text x="610" y="234" font-family="monospace" font-size="9" fill="#fb7185">non</text>
+  <rect x="380" y="240" width="160" height="90" rx="8" fill="#1a1f4e" stroke="#fbbf24" stroke-width="1.5"/>
+  <text x="460" y="262" font-family="sans-serif" font-size="12" fill="#fdba74" text-anchor="middle" font-weight="bold">RADICALE</text>
+  <text x="460" y="280" font-family="sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle">Rupture + formation</text>
+  <text x="460" y="294" font-family="sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle">dédiée à plein temps</text>
+  <text x="460" y="313" font-family="monospace" font-size="9" fill="#fbbf24" text-anchor="middle">→ acceptable si</text>
+  <text x="460" y="324" font-family="monospace" font-size="9" fill="#fbbf24" text-anchor="middle">trésorerie sécurisée</text>
+  <rect x="560" y="240" width="120" height="90" rx="8" fill="#1a1f4e" stroke="#fb7185" stroke-width="1.5"/>
+  <text x="620" y="262" font-family="sans-serif" font-size="12" fill="#fb7185" text-anchor="middle" font-weight="bold">STOP</text>
+  <text x="620" y="280" font-family="sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle">Re-préparer</text>
+  <text x="620" y="294" font-family="sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle">avant de sauter</text>
+  <text x="620" y="313" font-family="monospace" font-size="9" fill="#fb7185" text-anchor="middle">→ épargne 12 mois</text>
+  <text x="620" y="324" font-family="monospace" font-size="9" fill="#fb7185" text-anchor="middle">d'abord</text>
+</svg></div>
 
 ## Ce qui fait vraiment échouer une reconversion
 

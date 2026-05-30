@@ -87,6 +87,51 @@ L'automation qui fonctionne est déclenchée par le comportement. Si quelqu'un o
 Ce que je mets en place systématiquement : des branches conditionnelles dans les séquences. L'email suivant dépend de ce que le destinataire a fait avec le précédent. Ça demande plus de travail à la conception, mais la différence sur les taux d'engagement est immédiatement visible. Et ça permet de sortir automatiquement les contacts qui ne réagissent plus, plutôt que de continuer à leur écrire dans le vide.
 
 La fréquence est aussi un levier sous-estimé. En B2B, une cadence trop soutenue fatigue les contacts et déclenche des désabonnements. Il vaut mieux envoyer moins et s'assurer que chaque email apporte quelque chose de concret.
+<div style="overflow-x:auto;margin:2rem 0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 360" style="max-width:100%;height:auto">
+  <rect width="700" height="360" fill="#0a0f2e"/>
+  <text x="350" y="28" font-family="monospace" font-size="13" fill="#00cffd" text-anchor="middle" font-weight="bold">SÉQUENCE EMAIL — AUTOMATION DÉCLENCHÉE PAR LE COMPORTEMENT</text>
+  <text x="350" y="46" font-family="monospace" font-size="9" fill="#7e8da4" text-anchor="middle">L'email suivant dépend de la réaction au précédent, pas du calendrier</text>
+  <rect x="290" y="70" width="120" height="48" rx="8" fill="#1a1f4e" stroke="#915EFF" stroke-width="1.5"/>
+  <text x="350" y="92" font-family="monospace" font-size="11" fill="#b48bff" text-anchor="middle" font-weight="bold">EMAIL #1</text>
+  <text x="350" y="108" font-family="sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle">message initial</text>
+  <line x1="350" y1="118" x2="350" y2="140" stroke="#7e8da4" stroke-width="1"/>
+  <line x1="350" y1="140" x2="140" y2="140" stroke="#7e8da4" stroke-width="1"/>
+  <line x1="350" y1="140" x2="560" y2="140" stroke="#7e8da4" stroke-width="1"/>
+  <line x1="140" y1="140" x2="140" y2="160" stroke="#fb7185" stroke-width="1"/>
+  <line x1="350" y1="140" x2="350" y2="160" stroke="#fbbf24" stroke-width="1"/>
+  <line x1="560" y1="140" x2="560" y2="160" stroke="#86efac" stroke-width="1"/>
+  <text x="140" y="155" font-family="monospace" font-size="9" fill="#fb7185" text-anchor="middle">non ouvert</text>
+  <text x="350" y="155" font-family="monospace" font-size="9" fill="#fbbf24" text-anchor="middle">ouvert / pas cliqué</text>
+  <text x="560" y="155" font-family="monospace" font-size="9" fill="#86efac" text-anchor="middle">cliqué</text>
+  <rect x="60" y="165" width="160" height="80" rx="8" fill="#1a1f4e" stroke="#fb7185" stroke-width="1.2"/>
+  <text x="140" y="185" font-family="monospace" font-size="11" fill="#fb7185" text-anchor="middle" font-weight="bold">Changer l'angle</text>
+  <text x="140" y="205" font-family="sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">Nouvel objet, nouveau</text>
+  <text x="140" y="218" font-family="sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">timing, format court</text>
+  <text x="140" y="237" font-family="monospace" font-size="9" fill="#fb7185" text-anchor="middle">→ J+5 max 1 relance</text>
+  <rect x="270" y="165" width="160" height="80" rx="8" fill="#1a1f4e" stroke="#fbbf24" stroke-width="1.2"/>
+  <text x="350" y="185" font-family="monospace" font-size="11" fill="#fbbf24" text-anchor="middle" font-weight="bold">Apporter +</text>
+  <text x="350" y="205" font-family="sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">Contenu approfondi,</text>
+  <text x="350" y="218" font-family="sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">cas client, ressource</text>
+  <text x="350" y="237" font-family="monospace" font-size="9" fill="#fbbf24" text-anchor="middle">→ J+3 même thème</text>
+  <rect x="480" y="165" width="160" height="80" rx="8" fill="#1a1f4e" stroke="#86efac" stroke-width="1.2"/>
+  <text x="560" y="185" font-family="monospace" font-size="11" fill="#86efac" text-anchor="middle" font-weight="bold">Convertir</text>
+  <text x="560" y="205" font-family="sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">Offre, démo, RDV,</text>
+  <text x="560" y="218" font-family="sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">contact direct</text>
+  <text x="560" y="237" font-family="monospace" font-size="9" fill="#86efac" text-anchor="middle">→ J+1 quand chaud</text>
+  <line x1="140" y1="245" x2="140" y2="265" stroke="#fb7185" stroke-width="1" stroke-dasharray="3 3"/>
+  <line x1="350" y1="245" x2="350" y2="265" stroke="#fbbf24" stroke-width="1" stroke-dasharray="3 3"/>
+  <line x1="560" y1="245" x2="560" y2="265" stroke="#86efac" stroke-width="1" stroke-dasharray="3 3"/>
+  <rect x="60" y="265" width="160" height="50" rx="6" fill="#1a1f4e" stroke="#fb7185" stroke-width="0.8" opacity="0.85"/>
+  <text x="140" y="285" font-family="monospace" font-size="10" fill="#fb7185" text-anchor="middle">Si 3 non-ouvertures</text>
+  <text x="140" y="302" font-family="sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">→ sortir de la séquence</text>
+  <rect x="270" y="265" width="160" height="50" rx="6" fill="#1a1f4e" stroke="#fbbf24" stroke-width="0.8" opacity="0.85"/>
+  <text x="350" y="285" font-family="monospace" font-size="10" fill="#fbbf24" text-anchor="middle">Re-scorer le contact</text>
+  <text x="350" y="302" font-family="sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">→ alimenter la nurture</text>
+  <rect x="480" y="265" width="160" height="50" rx="6" fill="#1a1f4e" stroke="#86efac" stroke-width="0.8" opacity="0.85"/>
+  <text x="560" y="285" font-family="monospace" font-size="10" fill="#86efac" text-anchor="middle">Notifier commercial</text>
+  <text x="560" y="302" font-family="sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">→ relais humain ciblé</text>
+  <text x="350" y="345" font-family="monospace" font-size="9" fill="#94a3b8" text-anchor="middle">→ Chaque branche évite le matraquage générique et préserve la délivrabilité</text>
+</svg></div>
 
 ## Les trois métriques qui comptent vraiment
 
@@ -107,5 +152,50 @@ La délivrabilité email repose sur deux choses : la réputation du domaine exp�
 Les erreurs les plus fréquentes que je vois : envoyer à des listes non nettoyées depuis des mois (les adresses invalides génèrent des rebonds qui plombent la réputation), ne jamais supprimer les contacts inactifs depuis longtemps, utiliser des objets d'email trop "commerciaux" qui déclenchent les filtres, ou changer brutalement de volume d'envoi sans période de montée en charge.
 
 Ce que je recommande : segmenter les inactifs dès trois mois sans ouverture, lancer une campagne de réengagement courte, et supprimer proprement ceux qui ne répondent pas. Une base de 10 000 contacts engagés vaut infiniment plus qu'une base de 80 000 contacts dont 70% ne regardent plus jamais vos emails.
+<div style="overflow-x:auto;margin:2rem 0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 360" style="max-width:100%;height:auto">
+  <rect width="700" height="360" fill="#0a0f2e"/>
+  <text x="350" y="28" font-family="monospace" font-size="13" fill="#00cffd" text-anchor="middle" font-weight="bold">SCORE DE DÉLIVRABILITÉ — LES 6 LEVIERS À SURVEILLER</text>
+  <text x="350" y="46" font-family="monospace" font-size="9" fill="#7e8da4" text-anchor="middle">Réputation domaine + pertinence contenu = arrivée en boîte principale</text>
+  <rect x="40" y="70" width="200" height="80" rx="8" fill="#1a1f4e" stroke="#86efac" stroke-width="1.2"/>
+  <circle cx="62" cy="92" r="9" fill="#86efac"/>
+  <text x="62" y="96" font-family="monospace" font-size="11" fill="#0a0f2e" text-anchor="middle" font-weight="bold">1</text>
+  <text x="82" y="96" font-family="monospace" font-size="11" fill="#a7f3d0">Authentification</text>
+  <text x="55" y="118" font-family="sans-serif" font-size="10" fill="#cbd5e1">SPF, DKIM, DMARC alignés</text>
+  <text x="55" y="135" font-family="sans-serif" font-size="10" fill="#cbd5e1">sur le domaine d'envoi</text>
+  <rect x="250" y="70" width="200" height="80" rx="8" fill="#1a1f4e" stroke="#86efac" stroke-width="1.2"/>
+  <circle cx="272" cy="92" r="9" fill="#86efac"/>
+  <text x="272" y="96" font-family="monospace" font-size="11" fill="#0a0f2e" text-anchor="middle" font-weight="bold">2</text>
+  <text x="292" y="96" font-family="monospace" font-size="11" fill="#a7f3d0">Base nettoyée</text>
+  <text x="265" y="118" font-family="sans-serif" font-size="10" fill="#cbd5e1">Inactifs sortis &gt; 3 mois,</text>
+  <text x="265" y="135" font-family="sans-serif" font-size="10" fill="#cbd5e1">hard bounces supprimés</text>
+  <rect x="460" y="70" width="200" height="80" rx="8" fill="#1a1f4e" stroke="#86efac" stroke-width="1.2"/>
+  <circle cx="482" cy="92" r="9" fill="#86efac"/>
+  <text x="482" y="96" font-family="monospace" font-size="11" fill="#0a0f2e" text-anchor="middle" font-weight="bold">3</text>
+  <text x="502" y="96" font-family="monospace" font-size="11" fill="#a7f3d0">Montée progressive</text>
+  <text x="475" y="118" font-family="sans-serif" font-size="10" fill="#cbd5e1">Volume stable, pas de</text>
+  <text x="475" y="135" font-family="sans-serif" font-size="10" fill="#cbd5e1">pic d'envoi soudain</text>
+  <rect x="40" y="170" width="200" height="80" rx="8" fill="#1a1f4e" stroke="#fbbf24" stroke-width="1.2"/>
+  <circle cx="62" cy="192" r="9" fill="#fbbf24"/>
+  <text x="62" y="196" font-family="monospace" font-size="11" fill="#0a0f2e" text-anchor="middle" font-weight="bold">4</text>
+  <text x="82" y="196" font-family="monospace" font-size="11" fill="#fdba74">Objet sobre</text>
+  <text x="55" y="218" font-family="sans-serif" font-size="10" fill="#cbd5e1">Pas de "URGENT", "GRATUIT",</text>
+  <text x="55" y="235" font-family="sans-serif" font-size="10" fill="#cbd5e1">d'emoji racoleur ni de !!!</text>
+  <rect x="250" y="170" width="200" height="80" rx="8" fill="#1a1f4e" stroke="#fbbf24" stroke-width="1.2"/>
+  <circle cx="272" cy="192" r="9" fill="#fbbf24"/>
+  <text x="272" y="196" font-family="monospace" font-size="11" fill="#0a0f2e" text-anchor="middle" font-weight="bold">5</text>
+  <text x="292" y="196" font-family="monospace" font-size="11" fill="#fdba74">Ratio texte / image</text>
+  <text x="265" y="218" font-family="sans-serif" font-size="10" fill="#cbd5e1">Texte lisible présent,</text>
+  <text x="265" y="235" font-family="sans-serif" font-size="10" fill="#cbd5e1">unsubscribe visible</text>
+  <rect x="460" y="170" width="200" height="80" rx="8" fill="#1a1f4e" stroke="#fb7185" stroke-width="1.2"/>
+  <circle cx="482" cy="192" r="9" fill="#fb7185"/>
+  <text x="482" y="196" font-family="monospace" font-size="11" fill="#0a0f2e" text-anchor="middle" font-weight="bold">6</text>
+  <text x="502" y="196" font-family="monospace" font-size="11" fill="#fb7185">Taux de plaintes</text>
+  <text x="475" y="218" font-family="sans-serif" font-size="10" fill="#cbd5e1">Cible &lt; 0,1 % — au-delà</text>
+  <text x="475" y="235" font-family="sans-serif" font-size="10" fill="#cbd5e1">alerte rouge providers</text>
+  <rect x="80" y="280" width="540" height="60" rx="10" fill="#1a1f4e" stroke="#00cffd" stroke-width="1"/>
+  <text x="350" y="302" font-family="monospace" font-size="11" fill="#67e8f9" text-anchor="middle" font-weight="bold">SIGNAL DÉCISIF POUR LES PROVIDERS</text>
+  <text x="350" y="322" font-family="sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle">Un faible engagement durable = classement automatique en indésirable.</text>
+  <text x="350" y="334" font-family="sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle">L'engagement est devenu la métrique de réputation n°1, avant la technique.</text>
+</svg></div>
 
 > **Ce que ça change en pratique** — L'email marketing performant repose sur trois leviers : une segmentation comportementale qui dépasse les critères démographiques, une automation déclenchée par les actions réelles des contacts plutôt que par un calendrier fixe, et une attention permanente à la délivrabilité. Les métriques à surveiller en priorité sont la conversion, le ratio clic/ouverture, et la santé globale de la base. Le volume d'envoi n'est jamais un indicateur de performance.

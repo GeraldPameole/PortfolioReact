@@ -67,6 +67,47 @@ Dans la plupart des cas, quelqu'un qui ne partage pas sa connaissance le fait po
 Le système récompense implicitement la rétention. Si documenter ce qu'on sait prend deux heures et que personne ne le remarque, mais qu'être "l'unique référent" sur un sujet vous vaut des sollicitations régulières et une certaine visibilité — où est l'incitation à partager ?
 
 C'est pour ça que toutes les initiatives de gestion des connaissances qui commencent par "il faut que les gens partagent plus" échouent. Il faut d'abord changer ce que le système récompense, et rendre le partage moins coûteux que la rétention.
+<div style="overflow-x:auto;margin:2rem 0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 360" style="max-width:100%;height:auto">
+  <rect width="700" height="360" fill="#0a0f2e"/>
+  <text x="350" y="28" font-family="monospace" font-size="13" fill="#00cffd" text-anchor="middle" font-weight="bold">CYCLE SECI — NONAKA · TRANSFORMER LE TACITE EN EXPLICITE</text>
+  <text x="350" y="46" font-family="monospace" font-size="9" fill="#7e8da4" text-anchor="middle">Quatre conversions qui font vivre la connaissance dans une équipe</text>
+  <text x="200" y="75" font-family="monospace" font-size="9" fill="#7e8da4" text-anchor="middle">DE</text>
+  <text x="500" y="75" font-family="monospace" font-size="9" fill="#7e8da4" text-anchor="middle">VERS</text>
+  <text x="60" y="180" font-family="monospace" font-size="10" fill="#7e8da4" text-anchor="middle" transform="rotate(-90 60 180)">TACITE          EXPLICITE</text>
+  <text x="350" y="335" font-family="monospace" font-size="10" fill="#7e8da4" text-anchor="middle">TACITE                                                             EXPLICITE</text>
+  <rect x="100" y="90" width="240" height="100" rx="10" fill="#1a1f4e" stroke="#915EFF" stroke-width="1.5"/>
+  <text x="220" y="115" font-family="sans-serif" font-size="13" fill="#b48bff" text-anchor="middle" font-weight="bold">SOCIALISATION</text>
+  <text x="220" y="132" font-family="monospace" font-size="9" fill="#c4b5fd" text-anchor="middle">tacite → tacite</text>
+  <text x="220" y="153" font-family="sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle">Apprentissage par observation,</text>
+  <text x="220" y="167" font-family="sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle">compagnonnage, binôme</text>
+  <text x="220" y="183" font-family="monospace" font-size="9" fill="#7e8da4" text-anchor="middle">Junior qui suit un expert sur le terrain</text>
+  <rect x="360" y="90" width="240" height="100" rx="10" fill="#1a1f4e" stroke="#00cffd" stroke-width="1.5"/>
+  <text x="480" y="115" font-family="sans-serif" font-size="13" fill="#67e8f9" text-anchor="middle" font-weight="bold">EXTERNALISATION</text>
+  <text x="480" y="132" font-family="monospace" font-size="9" fill="#67e8f9" text-anchor="middle">tacite → explicite</text>
+  <text x="480" y="153" font-family="sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle">Mise en mots du savoir-faire,</text>
+  <text x="480" y="167" font-family="sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle">procédure, schéma, retex écrit</text>
+  <text x="480" y="183" font-family="monospace" font-size="9" fill="#7e8da4" text-anchor="middle">Étape la plus coûteuse → la plus rare</text>
+  <rect x="100" y="210" width="240" height="100" rx="10" fill="#1a1f4e" stroke="#fbbf24" stroke-width="1.5"/>
+  <text x="220" y="235" font-family="sans-serif" font-size="13" fill="#fdba74" text-anchor="middle" font-weight="bold">INTÉRIORISATION</text>
+  <text x="220" y="252" font-family="monospace" font-size="9" fill="#fdba74" text-anchor="middle">explicite → tacite</text>
+  <text x="220" y="273" font-family="sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle">Apprentissage par la pratique</text>
+  <text x="220" y="287" font-family="sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle">de la doc existante</text>
+  <text x="220" y="303" font-family="monospace" font-size="9" fill="#7e8da4" text-anchor="middle">Lire puis faire → reflexes ancrés</text>
+  <rect x="360" y="210" width="240" height="100" rx="10" fill="#1a1f4e" stroke="#86efac" stroke-width="1.5"/>
+  <text x="480" y="235" font-family="sans-serif" font-size="13" fill="#a7f3d0" text-anchor="middle" font-weight="bold">COMBINAISON</text>
+  <text x="480" y="252" font-family="monospace" font-size="9" fill="#a7f3d0" text-anchor="middle">explicite → explicite</text>
+  <text x="480" y="273" font-family="sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle">Croiser, agréger, structurer</text>
+  <text x="480" y="287" font-family="sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle">des contenus déjà formalisés</text>
+  <text x="480" y="303" font-family="monospace" font-size="9" fill="#7e8da4" text-anchor="middle">Wiki, base de procédures, synthèses</text>
+  <path d="M 340 140 Q 350 130 360 140" stroke="#00cffd" stroke-width="1.5" fill="none"/>
+  <polygon points="360,140 354,134 354,146" fill="#00cffd"/>
+  <path d="M 480 190 Q 480 200 480 210" stroke="#86efac" stroke-width="1.5" fill="none"/>
+  <polygon points="480,210 474,204 486,204" fill="#86efac"/>
+  <path d="M 360 260 Q 350 270 340 260" stroke="#fbbf24" stroke-width="1.5" fill="none"/>
+  <polygon points="340,260 346,254 346,266" fill="#fbbf24"/>
+  <path d="M 220 210 Q 220 200 220 190" stroke="#915EFF" stroke-width="1.5" fill="none"/>
+  <polygon points="220,90 214,96 226,96" fill="#915EFF"/>
+</svg></div>
 
 ## Documenter sans créer de la bureaucratie
 
@@ -87,6 +128,53 @@ J'ai vu cette situation dans des contextes très différents. Une PME dont la di
 Dans tous ces cas, l'organisation fonctionnait bien — jusqu'au départ de la personne. Et là, des semaines de galère pour reconstituer ce qui aurait pu être documenté en quelques heures.
 
 La cartographie des compétences critiques est un exercice simple que la plupart des organisations n'ont jamais fait. Il s'agit d'identifier les personnes dont le départ serait immédiatement problématique, de comprendre ce qu'elles savent que personne d'autre ne sait, et de commencer à transférer ou documenter ce savoir — sans attendre qu'elles préviennent de partir.
+<div style="overflow-x:auto;margin:2rem 0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 360" style="max-width:100%;height:auto">
+  <rect width="700" height="360" fill="#0a0f2e"/>
+  <text x="350" y="28" font-family="monospace" font-size="13" fill="#00cffd" text-anchor="middle" font-weight="bold">CARTOGRAPHIE DES COMPÉTENCES CRITIQUES</text>
+  <text x="350" y="46" font-family="monospace" font-size="9" fill="#7e8da4" text-anchor="middle">Criticité du savoir × Nombre de détenteurs · priorités d'action</text>
+  <line x1="120" y1="80" x2="120" y2="310" stroke="#7e8da4" stroke-width="1"/>
+  <line x1="120" y1="310" x2="640" y2="310" stroke="#7e8da4" stroke-width="1"/>
+  <text x="100" y="195" font-family="monospace" font-size="10" fill="#94a3b8" text-anchor="middle" transform="rotate(-90 100 195)">Criticité opérationnelle →</text>
+  <text x="380" y="335" font-family="monospace" font-size="10" fill="#94a3b8" text-anchor="middle">Nombre de personnes qui maîtrisent →</text>
+  <text x="115" y="80" font-family="monospace" font-size="9" fill="#94a3b8" text-anchor="end">haute</text>
+  <text x="115" y="200" font-family="monospace" font-size="9" fill="#94a3b8" text-anchor="end">moyenne</text>
+  <text x="115" y="305" font-family="monospace" font-size="9" fill="#94a3b8" text-anchor="end">basse</text>
+  <text x="160" y="325" font-family="monospace" font-size="9" fill="#94a3b8" text-anchor="middle">1 seule</text>
+  <text x="380" y="325" font-family="monospace" font-size="9" fill="#94a3b8" text-anchor="middle">2-3</text>
+  <text x="600" y="325" font-family="monospace" font-size="9" fill="#94a3b8" text-anchor="middle">équipe entière</text>
+  <rect x="125" y="85" width="170" height="110" rx="6" fill="#fb7185" opacity="0.15" stroke="#fb7185" stroke-width="1.2"/>
+  <text x="210" y="108" font-family="monospace" font-size="11" fill="#fb7185" text-anchor="middle" font-weight="bold">ZONE ROUGE</text>
+  <text x="210" y="125" font-family="sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle">Critique + 1 détenteur</text>
+  <text x="210" y="145" font-family="monospace" font-size="9" fill="#fb7185" text-anchor="middle">PRIORITÉ ABSOLUE</text>
+  <text x="210" y="162" font-family="sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">Doc immédiate +</text>
+  <text x="210" y="175" font-family="sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">binôme de transfert</text>
+  <text x="210" y="190" font-family="monospace" font-size="8" fill="#7e8da4" text-anchor="middle">Ex: config infra unique</text>
+  <rect x="300" y="85" width="170" height="110" rx="6" fill="#fbbf24" opacity="0.12" stroke="#fbbf24" stroke-width="1.2"/>
+  <text x="385" y="108" font-family="monospace" font-size="11" fill="#fbbf24" text-anchor="middle" font-weight="bold">ZONE ORANGE</text>
+  <text x="385" y="125" font-family="sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle">Critique + peu de relais</text>
+  <text x="385" y="145" font-family="monospace" font-size="9" fill="#fbbf24" text-anchor="middle">SURVEILLER</text>
+  <text x="385" y="162" font-family="sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">Documenter à 6 mois,</text>
+  <text x="385" y="175" font-family="sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">organiser revue trim.</text>
+  <text x="385" y="190" font-family="monospace" font-size="8" fill="#7e8da4" text-anchor="middle">Ex: relation client clé</text>
+  <rect x="475" y="85" width="165" height="110" rx="6" fill="#86efac" opacity="0.12" stroke="#86efac" stroke-width="1.2"/>
+  <text x="557" y="108" font-family="monospace" font-size="11" fill="#86efac" text-anchor="middle" font-weight="bold">ZONE VERTE</text>
+  <text x="557" y="125" font-family="sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle">Critique + savoir partagé</text>
+  <text x="557" y="145" font-family="monospace" font-size="9" fill="#86efac" text-anchor="middle">RAS</text>
+  <text x="557" y="162" font-family="sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">Maintenir la doc</text>
+  <text x="557" y="175" font-family="sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">existante à jour</text>
+  <text x="557" y="190" font-family="monospace" font-size="8" fill="#7e8da4" text-anchor="middle">Ex: procédure standard</text>
+  <rect x="125" y="200" width="170" height="105" rx="6" fill="#fbbf24" opacity="0.1" stroke="#fbbf24" stroke-width="1"/>
+  <text x="210" y="225" font-family="monospace" font-size="11" fill="#fbbf24" text-anchor="middle" font-weight="bold">À DOCUMENTER</text>
+  <text x="210" y="247" font-family="sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">Pas critique aujourd'hui</text>
+  <text x="210" y="262" font-family="sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">mais peut le devenir</text>
+  <text x="210" y="285" font-family="monospace" font-size="8" fill="#7e8da4" text-anchor="middle">Doc légère, contextuelle,</text>
+  <text x="210" y="297" font-family="monospace" font-size="8" fill="#7e8da4" text-anchor="middle">15 min après la tâche</text>
+  <rect x="300" y="200" width="340" height="105" rx="6" fill="#1a1f4e" stroke="#94a3b8" stroke-width="0.8"/>
+  <text x="470" y="225" font-family="monospace" font-size="11" fill="#94a3b8" text-anchor="middle" font-weight="bold">ZONE NEUTRE — pas d'action prioritaire</text>
+  <text x="470" y="250" font-family="sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle">Le savoir s'auto-entretient parce qu'il est mobilisé</text>
+  <text x="470" y="265" font-family="sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle">régulièrement par plusieurs personnes</text>
+  <text x="470" y="290" font-family="monospace" font-size="8" fill="#7e8da4" text-anchor="middle">Risque résiduel : faible — ne pas sur-documenter</text>
+</svg></div>
 
 ## Outils et pratiques : ce qui marche vraiment
 
