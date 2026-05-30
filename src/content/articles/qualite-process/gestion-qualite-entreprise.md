@@ -87,6 +87,71 @@ Quand j'ai introduit des procédures de compte-rendu standardisées pour les tec
 
 La qualité ne s'impose pas. Elle se vend, avec des arguments concrets et des résultats visibles rapidement.
 
+<div style="overflow-x:auto;margin:2rem 0">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 360" style="max-width:100%;height:auto">
+  <rect width="700" height="360" fill="#0a0f2e" rx="12"/>
+  <text x="350" y="28" font-family="monospace" font-size="13" fill="#00cffd" text-anchor="middle" font-weight="bold">RÉSISTANCE AU CHANGEMENT — DÉCODER LE VRAI BLOCAGE</text>
+  <text x="350" y="46" font-family="monospace" font-size="9" fill="#7e8da4" text-anchor="middle">la cause apparente cache presque toujours un manque de sens</text>
+  <!-- Carte 1 : Ce qu'on entend -->
+  <rect x="40" y="70" width="195" height="240" rx="10" fill="#1a1f4e" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="137" y="95" font-family="monospace" font-size="11" fill="#fb7185" text-anchor="middle" font-weight="bold">CE QU'ON ENTEND</text>
+  <text x="137" y="112" font-family="monospace" font-size="9" fill="#fca5a5" text-anchor="middle">la surface du refus</text>
+  <line x1="60" y1="125" x2="215" y2="125" stroke="#ef4444" stroke-width="0.5" opacity="0.5"/>
+  <text x="55" y="148" font-family="monospace" font-size="10" fill="#fca5a5">"Encore de</text>
+  <text x="55" y="162" font-family="monospace" font-size="10" fill="#fca5a5"> l'administratif."</text>
+  <text x="55" y="190" font-family="monospace" font-size="10" fill="#fca5a5">"On a toujours</text>
+  <text x="55" y="204" font-family="monospace" font-size="10" fill="#fca5a5"> fait comme ça."</text>
+  <text x="55" y="232" font-family="monospace" font-size="10" fill="#fca5a5">"Pas le temps</text>
+  <text x="55" y="246" font-family="monospace" font-size="10" fill="#fca5a5"> pour ça."</text>
+  <text x="55" y="274" font-family="monospace" font-size="10" fill="#fca5a5">"À quoi ça sert</text>
+  <text x="55" y="288" font-family="monospace" font-size="10" fill="#fca5a5"> vraiment ?"</text>
+  <!-- Flèche -->
+  <path d="M245 190 L285 190" stroke="#fbbf24" stroke-width="2" fill="none" marker-end="url(#arr-yel)"/>
+  <defs>
+    <marker id="arr-yel" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#fbbf24"/>
+    </marker>
+  </defs>
+  <text x="265" y="180" font-family="monospace" font-size="8" fill="#fbbf24" text-anchor="middle">décoder</text>
+  <!-- Carte 2 : Vraie cause -->
+  <rect x="295" y="70" width="195" height="240" rx="10" fill="#1a1f4e" stroke="#fbbf24" stroke-width="1.5"/>
+  <text x="392" y="95" font-family="monospace" font-size="11" fill="#fbbf24" text-anchor="middle" font-weight="bold">LA VRAIE CAUSE</text>
+  <text x="392" y="112" font-family="monospace" font-size="9" fill="#fde68a" text-anchor="middle">manque de sens</text>
+  <line x1="315" y1="125" x2="470" y2="125" stroke="#fbbf24" stroke-width="0.5" opacity="0.5"/>
+  <text x="310" y="148" font-family="sans-serif" font-size="10" fill="#fde68a">• Le bénéfice perso</text>
+  <text x="310" y="162" font-family="sans-serif" font-size="10" fill="#fde68a">  n'est pas visible</text>
+  <text x="310" y="190" font-family="sans-serif" font-size="10" fill="#fde68a">• L'effort demandé</text>
+  <text x="310" y="204" font-family="sans-serif" font-size="10" fill="#fde68a">  semble plus grand</text>
+  <text x="310" y="218" font-family="sans-serif" font-size="10" fill="#fde68a">  que le gain</text>
+  <text x="310" y="246" font-family="sans-serif" font-size="10" fill="#fde68a">• Pas de lien clair</text>
+  <text x="310" y="260" font-family="sans-serif" font-size="10" fill="#fde68a">  avec le quotidien</text>
+  <text x="310" y="288" font-family="sans-serif" font-size="10" fill="#fde68a">• La consigne vient</text>
+  <text x="310" y="302" font-family="sans-serif" font-size="10" fill="#fde68a">  "d'ailleurs"</text>
+  <!-- Flèche 2 -->
+  <path d="M500 190 L540 190" stroke="#86efac" stroke-width="2" fill="none" marker-end="url(#arr-grn)"/>
+  <defs>
+    <marker id="arr-grn" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#86efac"/>
+    </marker>
+  </defs>
+  <text x="520" y="180" font-family="monospace" font-size="8" fill="#86efac" text-anchor="middle">vendre</text>
+  <!-- Carte 3 : Levier qui fonctionne -->
+  <rect x="550" y="70" width="125" height="240" rx="10" fill="#1a1f4e" stroke="#86efac" stroke-width="1.5"/>
+  <text x="612" y="95" font-family="monospace" font-size="11" fill="#86efac" text-anchor="middle" font-weight="bold">LE LEVIER</text>
+  <text x="612" y="112" font-family="monospace" font-size="9" fill="#a7f3d0" text-anchor="middle">argument concret</text>
+  <line x1="565" y1="125" x2="660" y2="125" stroke="#86efac" stroke-width="0.5" opacity="0.5"/>
+  <text x="612" y="150" font-family="monospace" font-size="9" fill="#a7f3d0" text-anchor="middle">Données</text>
+  <text x="612" y="162" font-family="monospace" font-size="9" fill="#a7f3d0" text-anchor="middle">terrain</text>
+  <text x="612" y="190" font-family="monospace" font-size="9" fill="#a7f3d0" text-anchor="middle">Gain perso</text>
+  <text x="612" y="202" font-family="monospace" font-size="9" fill="#a7f3d0" text-anchor="middle">chiffré</text>
+  <text x="612" y="230" font-family="monospace" font-size="9" fill="#a7f3d0" text-anchor="middle">Résultat</text>
+  <text x="612" y="242" font-family="monospace" font-size="9" fill="#a7f3d0" text-anchor="middle">visible vite</text>
+  <text x="612" y="270" font-family="monospace" font-size="9" fill="#a7f3d0" text-anchor="middle">Histoire</text>
+  <text x="612" y="282" font-family="monospace" font-size="9" fill="#a7f3d0" text-anchor="middle">racontable</text>
+  <text x="350" y="345" font-family="monospace" font-size="10" fill="#00cffd" text-anchor="middle" font-weight="bold">20 minutes de compte-rendu = 3 à 4 heures de récidive évitée</text>
+</svg>
+</div>
+
 ## Construire des indicateurs qui servent les équipes
 
 Le défaut des systèmes qualité mal conçus est de produire des indicateurs pour le management sans utilité directe pour les équipes opérationnelles. Un technicien ne s'intéresse pas au taux de conformité global de son département. Il s'intéresse à savoir si son intervention d'hier a résolu le problème durablement.
@@ -94,5 +159,58 @@ Le défaut des systèmes qualité mal conçus est de produire des indicateurs po
 J'ai appris à construire des indicateurs à deux niveaux : des métriques opérationnelles visibles et actionnables par les équipes terrain (taux de récidive par type d'incident, délai moyen de résolution par zone), et des métriques stratégiques pour le pilotage global (SLA global, tendance sur 3 mois, coût de la non-qualité estimé).
 
 Quand les équipes voient leurs propres indicateurs évoluer positivement grâce à leurs changements de pratiques, la culture qualité se construit naturellement. C'est le seul chemin qui dure.
+
+<div style="overflow-x:auto;margin:2rem 0">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 360" style="max-width:100%;height:auto">
+  <rect width="700" height="360" fill="#0a0f2e" rx="12"/>
+  <text x="350" y="28" font-family="monospace" font-size="13" fill="#00cffd" text-anchor="middle" font-weight="bold">INDICATEURS À DEUX NIVEAUX — TERRAIN ET STRATÉGIE</text>
+  <text x="350" y="46" font-family="monospace" font-size="9" fill="#7e8da4" text-anchor="middle">le même système mesuré sous deux angles complémentaires</text>
+  <!-- Niveau Stratégique en haut -->
+  <rect x="60" y="70" width="580" height="115" rx="10" fill="#1a1f4e" stroke="#915EFF" stroke-width="1.5"/>
+  <text x="80" y="92" font-family="monospace" font-size="11" fill="#b48bff" font-weight="bold">NIVEAU STRATÉGIQUE</text>
+  <text x="80" y="108" font-family="sans-serif" font-size="9" fill="#c4b5fd">pour la direction — pilotage global</text>
+  <!-- Mini-cartes stratégiques -->
+  <rect x="80" y="122" width="130" height="50" rx="6" fill="#0a0f2e" stroke="#915EFF" stroke-width="0.8"/>
+  <text x="145" y="140" font-family="monospace" font-size="9" fill="#c4b5fd" text-anchor="middle">SLA global</text>
+  <text x="145" y="156" font-family="monospace" font-size="11" fill="#b48bff" text-anchor="middle" font-weight="bold">97,2 %</text>
+  <text x="145" y="167" font-family="monospace" font-size="7" fill="#7e8da4" text-anchor="middle">tendance 3 mois</text>
+  <rect x="225" y="122" width="130" height="50" rx="6" fill="#0a0f2e" stroke="#915EFF" stroke-width="0.8"/>
+  <text x="290" y="140" font-family="monospace" font-size="9" fill="#c4b5fd" text-anchor="middle">Coût non-qualité</text>
+  <text x="290" y="156" font-family="monospace" font-size="11" fill="#b48bff" text-anchor="middle" font-weight="bold">€/mois</text>
+  <text x="290" y="167" font-family="monospace" font-size="7" fill="#7e8da4" text-anchor="middle">arbitrage budget</text>
+  <rect x="370" y="122" width="130" height="50" rx="6" fill="#0a0f2e" stroke="#915EFF" stroke-width="0.8"/>
+  <text x="435" y="140" font-family="monospace" font-size="9" fill="#c4b5fd" text-anchor="middle">Conformité globale</text>
+  <text x="435" y="156" font-family="monospace" font-size="11" fill="#b48bff" text-anchor="middle" font-weight="bold">tableau</text>
+  <text x="435" y="167" font-family="monospace" font-size="7" fill="#7e8da4" text-anchor="middle">vue par département</text>
+  <rect x="515" y="122" width="115" height="50" rx="6" fill="#0a0f2e" stroke="#915EFF" stroke-width="0.8"/>
+  <text x="572" y="140" font-family="monospace" font-size="9" fill="#c4b5fd" text-anchor="middle">Réclamations</text>
+  <text x="572" y="156" font-family="monospace" font-size="11" fill="#b48bff" text-anchor="middle" font-weight="bold">N -12 %</text>
+  <text x="572" y="167" font-family="monospace" font-size="7" fill="#7e8da4" text-anchor="middle">vs trimestre N-1</text>
+  <!-- Flèche entre niveaux -->
+  <line x1="350" y1="190" x2="350" y2="215" stroke="#fbbf24" stroke-width="2" stroke-dasharray="4,3"/>
+  <text x="360" y="207" font-family="monospace" font-size="9" fill="#fbbf24">les deux niveaux se nourrissent</text>
+  <!-- Niveau Opérationnel en bas -->
+  <rect x="60" y="220" width="580" height="115" rx="10" fill="#1a1f4e" stroke="#86efac" stroke-width="1.5"/>
+  <text x="80" y="242" font-family="monospace" font-size="11" fill="#86efac" font-weight="bold">NIVEAU OPÉRATIONNEL</text>
+  <text x="80" y="258" font-family="sans-serif" font-size="9" fill="#a7f3d0">pour les équipes terrain — visible et actionnable</text>
+  <rect x="80" y="272" width="130" height="50" rx="6" fill="#0a0f2e" stroke="#86efac" stroke-width="0.8"/>
+  <text x="145" y="290" font-family="monospace" font-size="9" fill="#a7f3d0" text-anchor="middle">Récidive / type</text>
+  <text x="145" y="306" font-family="monospace" font-size="11" fill="#86efac" text-anchor="middle" font-weight="bold">par incident</text>
+  <text x="145" y="317" font-family="monospace" font-size="7" fill="#7e8da4" text-anchor="middle">"mon intervention tient"</text>
+  <rect x="225" y="272" width="130" height="50" rx="6" fill="#0a0f2e" stroke="#86efac" stroke-width="0.8"/>
+  <text x="290" y="290" font-family="monospace" font-size="9" fill="#a7f3d0" text-anchor="middle">Délai / zone</text>
+  <text x="290" y="306" font-family="monospace" font-size="11" fill="#86efac" text-anchor="middle" font-weight="bold">2,4 h moy</text>
+  <text x="290" y="317" font-family="monospace" font-size="7" fill="#7e8da4" text-anchor="middle">mon secteur</text>
+  <rect x="370" y="272" width="130" height="50" rx="6" fill="#0a0f2e" stroke="#86efac" stroke-width="0.8"/>
+  <text x="435" y="290" font-family="monospace" font-size="9" fill="#a7f3d0" text-anchor="middle">Première résolution</text>
+  <text x="435" y="306" font-family="monospace" font-size="11" fill="#86efac" text-anchor="middle" font-weight="bold">%</text>
+  <text x="435" y="317" font-family="monospace" font-size="7" fill="#7e8da4" text-anchor="middle">par technicien</text>
+  <rect x="515" y="272" width="115" height="50" rx="6" fill="#0a0f2e" stroke="#86efac" stroke-width="0.8"/>
+  <text x="572" y="290" font-family="monospace" font-size="9" fill="#a7f3d0" text-anchor="middle">Irritant suivi</text>
+  <text x="572" y="306" font-family="monospace" font-size="11" fill="#86efac" text-anchor="middle" font-weight="bold">concret</text>
+  <text x="572" y="317" font-family="monospace" font-size="7" fill="#7e8da4" text-anchor="middle">choisi par l'équipe</text>
+  <text x="350" y="352" font-family="monospace" font-size="10" fill="#00cffd" text-anchor="middle" font-weight="bold">terrain → mesure ce qu'on vit  •  stratégie → arbitre ce qu'on investit</text>
+</svg>
+</div>
 
 > **La qualité n'est pas un état qu'on atteint — c'est un mouvement qu'on maintient. Les organisations qui construisent une vraie culture d'amélioration continue ne cherchent pas la perfection ; elles cherchent à être systématiquement un peu meilleures qu'hier.**

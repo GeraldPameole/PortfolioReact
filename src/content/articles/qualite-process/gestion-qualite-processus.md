@@ -108,6 +108,94 @@ Après plusieurs années à travailler avec des structures de taille moyenne, j'
 
 **5. Les outils qui court-circuitent le processus.** On a un processus officiel, et en parallèle tout le monde utilise le mail, WhatsApp ou un fichier Excel personnel pour tracer les demandes. L'outil officiel est vide, le vrai flux est invisible. Ce n'est pas un problème d'outil — c'est un signal que le processus officiel génère trop de friction.
 
+<div style="overflow-x:auto;margin:2rem 0">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 360" style="max-width:100%;height:auto">
+  <rect width="700" height="360" fill="#0a0f2e" rx="12"/>
+  <text x="350" y="28" font-family="monospace" font-size="13" fill="#00cffd" text-anchor="middle" font-weight="bold">CINQ DÉFAILLANCES RÉCURRENTES DANS LES PME</text>
+  <text x="350" y="46" font-family="monospace" font-size="9" fill="#7e8da4" text-anchor="middle">repérer le bon symptôme pour cibler le bon levier</text>
+  <!-- Carte 1 : Validation en entonnoir -->
+  <rect x="30" y="70" width="125" height="265" rx="8" fill="#1a1f4e" stroke="#ef4444" stroke-width="1.2"/>
+  <circle cx="92" cy="100" r="18" fill="#0a0f2e" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="92" y="106" font-family="monospace" font-size="13" fill="#fb7185" text-anchor="middle" font-weight="bold">1</text>
+  <text x="92" y="138" font-family="monospace" font-size="10" fill="#fca5a5" text-anchor="middle" font-weight="bold">Validation</text>
+  <text x="92" y="151" font-family="monospace" font-size="10" fill="#fca5a5" text-anchor="middle" font-weight="bold">en entonnoir</text>
+  <line x1="50" y1="165" x2="135" y2="165" stroke="#ef4444" stroke-width="0.5" opacity="0.5"/>
+  <text x="92" y="183" font-family="sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">Une seule</text>
+  <text x="92" y="196" font-family="sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">personne valide</text>
+  <text x="92" y="209" font-family="sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">tout. Absence =</text>
+  <text x="92" y="222" font-family="sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">flux arrêté.</text>
+  <text x="92" y="260" font-family="monospace" font-size="8" fill="#fbbf24" text-anchor="middle" font-weight="bold">→ LEVIER</text>
+  <text x="92" y="278" font-family="sans-serif" font-size="9" fill="#fde68a" text-anchor="middle">Répartir ou</text>
+  <text x="92" y="291" font-family="sans-serif" font-size="9" fill="#fde68a" text-anchor="middle">cibler les cas</text>
+  <text x="92" y="304" font-family="sans-serif" font-size="9" fill="#fde68a" text-anchor="middle">qui justifient</text>
+  <text x="92" y="317" font-family="sans-serif" font-size="9" fill="#fde68a" text-anchor="middle">une validation</text>
+  <!-- Carte 2 : Non documenté -->
+  <rect x="165" y="70" width="125" height="265" rx="8" fill="#1a1f4e" stroke="#fb923c" stroke-width="1.2"/>
+  <circle cx="227" cy="100" r="18" fill="#0a0f2e" stroke="#fb923c" stroke-width="1.5"/>
+  <text x="227" y="106" font-family="monospace" font-size="13" fill="#fdba74" text-anchor="middle" font-weight="bold">2</text>
+  <text x="227" y="138" font-family="monospace" font-size="10" fill="#fdba74" text-anchor="middle" font-weight="bold">Processus</text>
+  <text x="227" y="151" font-family="monospace" font-size="10" fill="#fdba74" text-anchor="middle" font-weight="bold">non documenté</text>
+  <line x1="185" y1="165" x2="270" y2="165" stroke="#fb923c" stroke-width="0.5" opacity="0.5"/>
+  <text x="227" y="183" font-family="sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">Tout repose</text>
+  <text x="227" y="196" font-family="sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">sur 2-3 mémoires.</text>
+  <text x="227" y="209" font-family="sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">Un départ et le</text>
+  <text x="227" y="222" font-family="sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">flux se dégrade.</text>
+  <text x="227" y="260" font-family="monospace" font-size="8" fill="#fbbf24" text-anchor="middle" font-weight="bold">→ LEVIER</text>
+  <text x="227" y="278" font-family="sans-serif" font-size="9" fill="#fde68a" text-anchor="middle">Une page : étapes,</text>
+  <text x="227" y="291" font-family="sans-serif" font-size="9" fill="#fde68a" text-anchor="middle">responsables,</text>
+  <text x="227" y="304" font-family="sans-serif" font-size="9" fill="#fde68a" text-anchor="middle">critères de</text>
+  <text x="227" y="317" font-family="sans-serif" font-size="9" fill="#fde68a" text-anchor="middle">décision.</text>
+  <!-- Carte 3 : Contrôles redondants -->
+  <rect x="300" y="70" width="125" height="265" rx="8" fill="#1a1f4e" stroke="#fbbf24" stroke-width="1.2"/>
+  <circle cx="362" cy="100" r="18" fill="#0a0f2e" stroke="#fbbf24" stroke-width="1.5"/>
+  <text x="362" y="106" font-family="monospace" font-size="13" fill="#fbbf24" text-anchor="middle" font-weight="bold">3</text>
+  <text x="362" y="138" font-family="monospace" font-size="10" fill="#fde68a" text-anchor="middle" font-weight="bold">Contrôles</text>
+  <text x="362" y="151" font-family="monospace" font-size="10" fill="#fde68a" text-anchor="middle" font-weight="bold">redondants</text>
+  <line x1="320" y1="165" x2="405" y2="165" stroke="#fbbf24" stroke-width="0.5" opacity="0.5"/>
+  <text x="362" y="183" font-family="sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">Trois personnes</text>
+  <text x="362" y="196" font-family="sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">vérifient la</text>
+  <text x="362" y="209" font-family="sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">même chose, sans</text>
+  <text x="362" y="222" font-family="sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">valeur ajoutée.</text>
+  <text x="362" y="260" font-family="monospace" font-size="8" fill="#fbbf24" text-anchor="middle" font-weight="bold">→ LEVIER</text>
+  <text x="362" y="278" font-family="sans-serif" font-size="9" fill="#fde68a" text-anchor="middle">Périmètre précis</text>
+  <text x="362" y="291" font-family="sans-serif" font-size="9" fill="#fde68a" text-anchor="middle">et différencié</text>
+  <text x="362" y="304" font-family="sans-serif" font-size="9" fill="#fde68a" text-anchor="middle">par contrôle.</text>
+  <!-- Carte 4 : Critère sortie -->
+  <rect x="435" y="70" width="125" height="265" rx="8" fill="#1a1f4e" stroke="#00cffd" stroke-width="1.2"/>
+  <circle cx="497" cy="100" r="18" fill="#0a0f2e" stroke="#00cffd" stroke-width="1.5"/>
+  <text x="497" y="106" font-family="monospace" font-size="13" fill="#67e8f9" text-anchor="middle" font-weight="bold">4</text>
+  <text x="497" y="138" font-family="monospace" font-size="10" fill="#67e8f9" text-anchor="middle" font-weight="bold">Critère de</text>
+  <text x="497" y="151" font-family="monospace" font-size="10" fill="#67e8f9" text-anchor="middle" font-weight="bold">sortie absent</text>
+  <line x1="455" y1="165" x2="540" y2="165" stroke="#00cffd" stroke-width="0.5" opacity="0.5"/>
+  <text x="497" y="183" font-family="sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">"L'étape est</text>
+  <text x="497" y="196" font-family="sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">terminée quand ?"</text>
+  <text x="497" y="209" font-family="sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">Chacun a sa</text>
+  <text x="497" y="222" font-family="sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">propre réponse.</text>
+  <text x="497" y="260" font-family="monospace" font-size="8" fill="#fbbf24" text-anchor="middle" font-weight="bold">→ LEVIER</text>
+  <text x="497" y="278" font-family="sans-serif" font-size="9" fill="#fde68a" text-anchor="middle">Definition of</text>
+  <text x="497" y="291" font-family="sans-serif" font-size="9" fill="#fde68a" text-anchor="middle">Done explicite</text>
+  <text x="497" y="304" font-family="sans-serif" font-size="9" fill="#fde68a" text-anchor="middle">et vérifiable</text>
+  <text x="497" y="317" font-family="sans-serif" font-size="9" fill="#fde68a" text-anchor="middle">par tous.</text>
+  <!-- Carte 5 : Outils parallèles -->
+  <rect x="570" y="70" width="125" height="265" rx="8" fill="#1a1f4e" stroke="#915EFF" stroke-width="1.2"/>
+  <circle cx="632" cy="100" r="18" fill="#0a0f2e" stroke="#915EFF" stroke-width="1.5"/>
+  <text x="632" y="106" font-family="monospace" font-size="13" fill="#b48bff" text-anchor="middle" font-weight="bold">5</text>
+  <text x="632" y="138" font-family="monospace" font-size="10" fill="#c4b5fd" text-anchor="middle" font-weight="bold">Outils qui</text>
+  <text x="632" y="151" font-family="monospace" font-size="10" fill="#c4b5fd" text-anchor="middle" font-weight="bold">court-circuitent</text>
+  <line x1="590" y1="165" x2="675" y2="165" stroke="#915EFF" stroke-width="0.5" opacity="0.5"/>
+  <text x="632" y="183" font-family="sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">Mail, WhatsApp,</text>
+  <text x="632" y="196" font-family="sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">Excel perso.</text>
+  <text x="632" y="209" font-family="sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">L'outil officiel</text>
+  <text x="632" y="222" font-family="sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">est vide.</text>
+  <text x="632" y="260" font-family="monospace" font-size="8" fill="#fbbf24" text-anchor="middle" font-weight="bold">→ LEVIER</text>
+  <text x="632" y="278" font-family="sans-serif" font-size="9" fill="#fde68a" text-anchor="middle">Réduire la</text>
+  <text x="632" y="291" font-family="sans-serif" font-size="9" fill="#fde68a" text-anchor="middle">friction du</text>
+  <text x="632" y="304" font-family="sans-serif" font-size="9" fill="#fde68a" text-anchor="middle">canal officiel,</text>
+  <text x="632" y="317" font-family="sans-serif" font-size="9" fill="#fde68a" text-anchor="middle">pas l'imposer.</text>
+  <text x="350" y="352" font-family="monospace" font-size="10" fill="#00cffd" text-anchor="middle" font-weight="bold">le bon levier = la vraie cause, jamais le symptôme</text>
+</svg>
+</div>
+
 ## Prioriser ce qu'on améliore en premier
 
 Tout améliorer en même temps ne fonctionne pas. En dehors des ressources que cela mobilise, changer plusieurs choses simultanément rend impossible de savoir ce qui a eu un effet.
@@ -117,5 +205,57 @@ La question à se poser pour prioriser est simple : quelle est l'étape qui cré
 Une fois le goulot identifié, on applique la même logique : quelle est la cause principale de ce goulot ? Manque de capacité, mauvaise définition des critères, mauvais canal d'information ? On traite la cause, pas le symptôme. Ajouter une ressource sur un goulot causé par des critères flous ne règle rien — ça dilue juste le problème.
 
 Les améliorations de processus qui échouent ont presque toujours en commun de ne pas avoir répondu à cette question préalable. On optimise des étapes secondaires, on achète un outil, on forme les gens sur des procédures qui ne résolvent pas le vrai problème. Cartographier d'abord, mesurer ensuite, améliorer en dernier : cet ordre n'est pas intuitif, mais il fait gagner du temps.
+
+<div style="overflow-x:auto;margin:2rem 0">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 360" style="max-width:100%;height:auto">
+  <rect width="700" height="360" fill="#0a0f2e" rx="12"/>
+  <text x="350" y="28" font-family="monospace" font-size="13" fill="#00cffd" text-anchor="middle" font-weight="bold">MATRICE DE PRIORISATION — EFFORT × IMPACT</text>
+  <text x="350" y="46" font-family="monospace" font-size="9" fill="#7e8da4" text-anchor="middle">par où commencer quand tout semble à corriger</text>
+  <!-- Axes -->
+  <line x1="160" y1="70" x2="160" y2="320" stroke="#7e8da4" stroke-width="1"/>
+  <line x1="160" y1="320" x2="640" y2="320" stroke="#7e8da4" stroke-width="1"/>
+  <!-- Axe labels -->
+  <text x="155" y="80" font-family="monospace" font-size="10" fill="#cbd5e1" text-anchor="end" font-weight="bold">Impact</text>
+  <text x="155" y="92" font-family="monospace" font-size="9" fill="#7e8da4" text-anchor="end">élevé</text>
+  <text x="155" y="318" font-family="monospace" font-size="9" fill="#7e8da4" text-anchor="end">faible</text>
+  <text x="170" y="335" font-family="monospace" font-size="9" fill="#7e8da4">faible</text>
+  <text x="635" y="335" font-family="monospace" font-size="9" fill="#7e8da4" text-anchor="end">élevé</text>
+  <text x="640" y="318" font-family="monospace" font-size="10" fill="#cbd5e1" text-anchor="end" font-weight="bold">Effort</text>
+  <!-- Grille en croix -->
+  <line x1="400" y1="70" x2="400" y2="320" stroke="#1e2a5e" stroke-width="1" stroke-dasharray="3,3"/>
+  <line x1="160" y1="195" x2="640" y2="195" stroke="#1e2a5e" stroke-width="1" stroke-dasharray="3,3"/>
+  <!-- Quadrant Q1 : Quick wins (haut-gauche) -->
+  <rect x="165" y="75" width="230" height="115" rx="6" fill="#0a1f18" opacity="0.7"/>
+  <text x="280" y="100" font-family="monospace" font-size="11" fill="#86efac" text-anchor="middle" font-weight="bold">QUICK WINS</text>
+  <text x="280" y="115" font-family="monospace" font-size="8" fill="#a7f3d0" text-anchor="middle">commencer ICI</text>
+  <text x="280" y="140" font-family="sans-serif" font-size="9" fill="#a7f3d0" text-anchor="middle">• supprimer un contrôle</text>
+  <text x="280" y="153" font-family="sans-serif" font-size="9" fill="#a7f3d0" text-anchor="middle">  redondant identifié</text>
+  <text x="280" y="167" font-family="sans-serif" font-size="9" fill="#a7f3d0" text-anchor="middle">• documenter une étape</text>
+  <text x="280" y="180" font-family="sans-serif" font-size="9" fill="#a7f3d0" text-anchor="middle">  qui repose sur 1 personne</text>
+  <!-- Quadrant Q2 : Projets stratégiques (haut-droit) -->
+  <rect x="405" y="75" width="230" height="115" rx="6" fill="#1e1b4b" opacity="0.7"/>
+  <text x="520" y="100" font-family="monospace" font-size="11" fill="#b48bff" text-anchor="middle" font-weight="bold">PROJETS STRATÉGIQUES</text>
+  <text x="520" y="115" font-family="monospace" font-size="8" fill="#c4b5fd" text-anchor="middle">planifier — découper</text>
+  <text x="520" y="140" font-family="sans-serif" font-size="9" fill="#c4b5fd" text-anchor="middle">• refonte du goulot</text>
+  <text x="520" y="153" font-family="sans-serif" font-size="9" fill="#c4b5fd" text-anchor="middle">  N+1 (validation 4 j)</text>
+  <text x="520" y="167" font-family="sans-serif" font-size="9" fill="#c4b5fd" text-anchor="middle">• outillage central qui</text>
+  <text x="520" y="180" font-family="sans-serif" font-size="9" fill="#c4b5fd" text-anchor="middle">  remplace les canaux off</text>
+  <!-- Quadrant Q3 : À faire ensuite (bas-gauche) -->
+  <rect x="165" y="200" width="230" height="115" rx="6" fill="#1f1700" opacity="0.7"/>
+  <text x="280" y="225" font-family="monospace" font-size="11" fill="#fbbf24" text-anchor="middle" font-weight="bold">À FAIRE ENSUITE</text>
+  <text x="280" y="240" font-family="monospace" font-size="8" fill="#fde68a" text-anchor="middle">mais sans urgence</text>
+  <text x="280" y="265" font-family="sans-serif" font-size="9" fill="#fde68a" text-anchor="middle">• harmoniser un nommage</text>
+  <text x="280" y="278" font-family="sans-serif" font-size="9" fill="#fde68a" text-anchor="middle">• mettre à jour un modèle</text>
+  <text x="280" y="291" font-family="sans-serif" font-size="9" fill="#fde68a" text-anchor="middle">  de compte-rendu</text>
+  <!-- Quadrant Q4 : Piège (bas-droit) -->
+  <rect x="405" y="200" width="230" height="115" rx="6" fill="#2d1515" opacity="0.7"/>
+  <text x="520" y="225" font-family="monospace" font-size="11" fill="#fb7185" text-anchor="middle" font-weight="bold">PIÈGE — À ÉVITER</text>
+  <text x="520" y="240" font-family="monospace" font-size="8" fill="#fca5a5" text-anchor="middle">gros effort, faible impact</text>
+  <text x="520" y="265" font-family="sans-serif" font-size="9" fill="#fca5a5" text-anchor="middle">• manuel qualité de 200 p.</text>
+  <text x="520" y="278" font-family="sans-serif" font-size="9" fill="#fca5a5" text-anchor="middle">• outil sophistiqué sur</text>
+  <text x="520" y="291" font-family="sans-serif" font-size="9" fill="#fca5a5" text-anchor="middle">  un processus mal compris</text>
+  <text x="350" y="352" font-family="monospace" font-size="10" fill="#00cffd" text-anchor="middle" font-weight="bold">d'abord les quick wins → créer la dynamique → traiter le goulot</text>
+</svg>
+</div>
 
 > **Ce que j'applique** — Avant d'améliorer un processus, il faut le cartographier tel qu'il fonctionne réellement — pas tel qu'il est censé fonctionner. Les cinq défaillances les plus fréquentes dans les PME sont : la validation en entonnoir, l'absence de documentation, les contrôles redondants, les critères de sortie flous, et les outils parallèles qui court-circuitent le flux officiel. On priorise l'amélioration sur le point qui génère le plus de délai ou d'erreurs, on identifie la cause réelle, et on traite la cause — pas le symptôme.

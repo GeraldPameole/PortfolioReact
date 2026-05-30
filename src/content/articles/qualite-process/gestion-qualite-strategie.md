@@ -31,6 +31,52 @@ L'alignement qualité-business, c'est comprendre que chaque objectif qualité do
 
 Chez SFR, j'ai vu des dossiers qualité rester dans un tiroir parce qu'ils étaient présentés en termes de conformité — "on est à 78% sur l'indicateur X". Quand on a retraduit les mêmes données en "chaque point de non-conformité coûte en moyenne N euros de retour en SAV", les arbitrages ont changé. La qualité est devenue un argument business, pas un impératif réglementaire subi.
 
+<div style="overflow-x:auto;margin:2rem 0">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 360" style="max-width:100%;height:auto">
+  <rect width="700" height="360" fill="#0a0f2e" rx="12"/>
+  <text x="350" y="28" font-family="monospace" font-size="13" fill="#00cffd" text-anchor="middle" font-weight="bold">TRADUIRE LA QUALITÉ EN LANGAGE BUSINESS</text>
+  <text x="350" y="46" font-family="monospace" font-size="9" fill="#7e8da4" text-anchor="middle">deux discours, une même réalité — celui de droite débloque les budgets</text>
+  <!-- Colonne gauche : langage conformité -->
+  <rect x="40" y="70" width="280" height="240" rx="10" fill="#1a1f4e" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="180" y="96" font-family="monospace" font-size="11" fill="#fb7185" text-anchor="middle" font-weight="bold">LANGAGE CONFORMITÉ</text>
+  <text x="180" y="112" font-family="monospace" font-size="9" fill="#fca5a5" text-anchor="middle">reste dans le tiroir du COMEX</text>
+  <line x1="60" y1="125" x2="300" y2="125" stroke="#ef4444" stroke-width="0.5" opacity="0.5"/>
+  <rect x="60" y="140" width="240" height="44" rx="6" fill="#0a0f2e" stroke="#ef4444" stroke-width="0.6"/>
+  <text x="180" y="160" font-family="monospace" font-size="10" fill="#fca5a5" text-anchor="middle">Taux de conformité</text>
+  <text x="180" y="176" font-family="monospace" font-size="13" fill="#fb7185" text-anchor="middle" font-weight="bold">78 % sur indicateur X</text>
+  <rect x="60" y="195" width="240" height="44" rx="6" fill="#0a0f2e" stroke="#ef4444" stroke-width="0.6"/>
+  <text x="180" y="215" font-family="monospace" font-size="10" fill="#fca5a5" text-anchor="middle">Écart à la norme</text>
+  <text x="180" y="231" font-family="monospace" font-size="13" fill="#fb7185" text-anchor="middle" font-weight="bold">12 non-conformités</text>
+  <rect x="60" y="250" width="240" height="44" rx="6" fill="#0a0f2e" stroke="#ef4444" stroke-width="0.6"/>
+  <text x="180" y="270" font-family="monospace" font-size="10" fill="#fca5a5" text-anchor="middle">Procédure</text>
+  <text x="180" y="286" font-family="monospace" font-size="13" fill="#fb7185" text-anchor="middle" font-weight="bold">non appliquée à 22 %</text>
+  <!-- Flèche traduction -->
+  <path d="M330 190 L370 190" stroke="#fbbf24" stroke-width="2.5" fill="none" marker-end="url(#arr-yel-s)"/>
+  <defs>
+    <marker id="arr-yel-s" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#fbbf24"/>
+    </marker>
+  </defs>
+  <text x="350" y="178" font-family="monospace" font-size="9" fill="#fbbf24" text-anchor="middle">traduire</text>
+  <text x="350" y="208" font-family="monospace" font-size="9" fill="#fbbf24" text-anchor="middle">en € / temps</text>
+  <!-- Colonne droite : langage business -->
+  <rect x="380" y="70" width="280" height="240" rx="10" fill="#1a1f4e" stroke="#86efac" stroke-width="1.5"/>
+  <text x="520" y="96" font-family="monospace" font-size="11" fill="#86efac" text-anchor="middle" font-weight="bold">LANGAGE BUSINESS</text>
+  <text x="520" y="112" font-family="monospace" font-size="9" fill="#a7f3d0" text-anchor="middle">débloque les arbitrages</text>
+  <line x1="400" y1="125" x2="640" y2="125" stroke="#86efac" stroke-width="0.5" opacity="0.5"/>
+  <rect x="400" y="140" width="240" height="44" rx="6" fill="#0a0f2e" stroke="#86efac" stroke-width="0.6"/>
+  <text x="520" y="160" font-family="monospace" font-size="10" fill="#a7f3d0" text-anchor="middle">Coût retour SAV</text>
+  <text x="520" y="176" font-family="monospace" font-size="13" fill="#86efac" text-anchor="middle" font-weight="bold">N € / point de NC</text>
+  <rect x="400" y="195" width="240" height="44" rx="6" fill="#0a0f2e" stroke="#86efac" stroke-width="0.6"/>
+  <text x="520" y="215" font-family="monospace" font-size="10" fill="#a7f3d0" text-anchor="middle">Réclamations évitées</text>
+  <text x="520" y="231" font-family="monospace" font-size="13" fill="#86efac" text-anchor="middle" font-weight="bold">heures support / mois</text>
+  <rect x="400" y="250" width="240" height="44" rx="6" fill="#0a0f2e" stroke="#86efac" stroke-width="0.6"/>
+  <text x="520" y="270" font-family="monospace" font-size="10" fill="#a7f3d0" text-anchor="middle">Première résolution</text>
+  <text x="520" y="286" font-family="monospace" font-size="13" fill="#86efac" text-anchor="middle" font-weight="bold">+ X pts = - Y appels</text>
+  <text x="350" y="345" font-family="monospace" font-size="10" fill="#00cffd" text-anchor="middle" font-weight="bold">la qualité devient un argument business, pas un impératif subi</text>
+</svg>
+</div>
+
 ## Choisir la bonne méthode selon le contexte
 
 Il n'existe pas une seule bonne méthode qualité. Le choix dépend du secteur, de la maturité de l'organisation, du type de problèmes à résoudre, et des ressources disponibles. Trop souvent, on adopte une approche parce que c'est "la norme du secteur" ou parce que le cabinet de conseil la recommande — sans se demander si elle correspond réellement aux besoins.
@@ -115,5 +161,56 @@ Premièrement, un portage managérial réel — pas un sponsor qui signe les doc
 Deuxièmement, des objectifs qualité traduits en bénéfices concrets pour les équipes opérationnelles. Réduire les reprises, c'est aussi moins de stress pour les techniciens. Améliorer le premier contact, c'est moins d'appels entrants frustrés. Le lien entre qualité et conditions de travail doit être explicite.
 
 Troisièmement, une démarche progressive et pragmatique. On ne change pas tout en même temps. On identifie un ou deux processus à fort impact, on les améliore, on consolide, et on passe au suivant. Cette logique de petits pas crée une dynamique positive — les équipes voient des résultats, elles font confiance à la démarche, elles s'y impliquent davantage.
+
+<div style="overflow-x:auto;margin:2rem 0">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 360" style="max-width:100%;height:auto">
+  <rect width="700" height="360" fill="#0a0f2e" rx="12"/>
+  <text x="350" y="28" font-family="monospace" font-size="13" fill="#00cffd" text-anchor="middle" font-weight="bold">LES TROIS PILIERS D'UNE DÉMARCHE QUALITÉ QUI DURE</text>
+  <text x="350" y="46" font-family="monospace" font-size="9" fill="#7e8da4" text-anchor="middle">il en manque un seul → la démarche s'effondre en 6 mois</text>
+  <!-- Pilier 1 : Portage managérial -->
+  <rect x="40" y="70" width="200" height="240" rx="10" fill="#1a1f4e" stroke="#915EFF" stroke-width="1.5"/>
+  <circle cx="140" cy="110" r="22" fill="#0a0f2e" stroke="#915EFF" stroke-width="2"/>
+  <text x="140" y="116" font-family="monospace" font-size="14" fill="#b48bff" text-anchor="middle" font-weight="bold">1</text>
+  <text x="140" y="150" font-family="monospace" font-size="11" fill="#b48bff" text-anchor="middle" font-weight="bold">PORTAGE</text>
+  <text x="140" y="164" font-family="monospace" font-size="11" fill="#b48bff" text-anchor="middle" font-weight="bold">MANAGÉRIAL</text>
+  <line x1="60" y1="178" x2="220" y2="178" stroke="#915EFF" stroke-width="0.5" opacity="0.5"/>
+  <text x="140" y="198" font-family="sans-serif" font-size="9" fill="#c4b5fd" text-anchor="middle">Le management</text>
+  <text x="140" y="211" font-family="sans-serif" font-size="9" fill="#c4b5fd" text-anchor="middle">suit les indicateurs</text>
+  <text x="140" y="224" font-family="sans-serif" font-size="9" fill="#c4b5fd" text-anchor="middle">et traite les écarts</text>
+  <text x="140" y="237" font-family="sans-serif" font-size="9" fill="#c4b5fd" text-anchor="middle">en personne.</text>
+  <text x="140" y="265" font-family="monospace" font-size="8" fill="#ef4444" text-anchor="middle" font-weight="bold">SI ABSENT →</text>
+  <text x="140" y="283" font-family="sans-serif" font-size="9" fill="#fca5a5" text-anchor="middle">les équipes ne</text>
+  <text x="140" y="296" font-family="sans-serif" font-size="9" fill="#fca5a5" text-anchor="middle">s'investissent pas</text>
+  <!-- Pilier 2 : Bénéfice équipes -->
+  <rect x="250" y="70" width="200" height="240" rx="10" fill="#1a1f4e" stroke="#00cffd" stroke-width="1.5"/>
+  <circle cx="350" cy="110" r="22" fill="#0a0f2e" stroke="#00cffd" stroke-width="2"/>
+  <text x="350" y="116" font-family="monospace" font-size="14" fill="#67e8f9" text-anchor="middle" font-weight="bold">2</text>
+  <text x="350" y="150" font-family="monospace" font-size="11" fill="#67e8f9" text-anchor="middle" font-weight="bold">BÉNÉFICE</text>
+  <text x="350" y="164" font-family="monospace" font-size="11" fill="#67e8f9" text-anchor="middle" font-weight="bold">POUR LE TERRAIN</text>
+  <line x1="270" y1="178" x2="430" y2="178" stroke="#00cffd" stroke-width="0.5" opacity="0.5"/>
+  <text x="350" y="198" font-family="sans-serif" font-size="9" fill="#67e8f9" text-anchor="middle">Chaque objectif</text>
+  <text x="350" y="211" font-family="sans-serif" font-size="9" fill="#67e8f9" text-anchor="middle">qualité = moins de</text>
+  <text x="350" y="224" font-family="sans-serif" font-size="9" fill="#67e8f9" text-anchor="middle">stress / reprises /</text>
+  <text x="350" y="237" font-family="sans-serif" font-size="9" fill="#67e8f9" text-anchor="middle">appels frustrés.</text>
+  <text x="350" y="265" font-family="monospace" font-size="8" fill="#ef4444" text-anchor="middle" font-weight="bold">SI ABSENT →</text>
+  <text x="350" y="283" font-family="sans-serif" font-size="9" fill="#fca5a5" text-anchor="middle">la démarche est</text>
+  <text x="350" y="296" font-family="sans-serif" font-size="9" fill="#fca5a5" text-anchor="middle">vécue comme charge</text>
+  <!-- Pilier 3 : Progressif -->
+  <rect x="460" y="70" width="200" height="240" rx="10" fill="#1a1f4e" stroke="#86efac" stroke-width="1.5"/>
+  <circle cx="560" cy="110" r="22" fill="#0a0f2e" stroke="#86efac" stroke-width="2"/>
+  <text x="560" y="116" font-family="monospace" font-size="14" fill="#86efac" text-anchor="middle" font-weight="bold">3</text>
+  <text x="560" y="150" font-family="monospace" font-size="11" fill="#86efac" text-anchor="middle" font-weight="bold">PROGRESSIF</text>
+  <text x="560" y="164" font-family="monospace" font-size="11" fill="#86efac" text-anchor="middle" font-weight="bold">ET PRAGMATIQUE</text>
+  <line x1="480" y1="178" x2="640" y2="178" stroke="#86efac" stroke-width="0.5" opacity="0.5"/>
+  <text x="560" y="198" font-family="sans-serif" font-size="9" fill="#a7f3d0" text-anchor="middle">1 ou 2 processus</text>
+  <text x="560" y="211" font-family="sans-serif" font-size="9" fill="#a7f3d0" text-anchor="middle">à fort impact à la</text>
+  <text x="560" y="224" font-family="sans-serif" font-size="9" fill="#a7f3d0" text-anchor="middle">fois. Consolider</text>
+  <text x="560" y="237" font-family="sans-serif" font-size="9" fill="#a7f3d0" text-anchor="middle">avant d'enchaîner.</text>
+  <text x="560" y="265" font-family="monospace" font-size="8" fill="#ef4444" text-anchor="middle" font-weight="bold">SI ABSENT →</text>
+  <text x="560" y="283" font-family="sans-serif" font-size="9" fill="#fca5a5" text-anchor="middle">épuisement des</text>
+  <text x="560" y="296" font-family="sans-serif" font-size="9" fill="#fca5a5" text-anchor="middle">équipes en 6 mois</text>
+  <text x="350" y="345" font-family="monospace" font-size="10" fill="#00cffd" text-anchor="middle" font-weight="bold">les trois sont multiplicatifs, pas additifs — l'absence d'un seul = zéro</text>
+</svg>
+</div>
 
 > **Ce que j'applique** — Aligner qualité et business, c'est d'abord choisir la bonne méthode pour le bon problème, éviter le piège de la certification décorative, et construire une démarche portée par le management avec des objectifs qui parlent aux équipes terrain. La qualité qui dure n'est pas une contrainte qu'on subit — c'est un levier qu'on choisit.
