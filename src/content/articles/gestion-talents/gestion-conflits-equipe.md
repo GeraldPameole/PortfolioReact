@@ -24,6 +24,71 @@ Le conflit de relation est le plus difficile à gérer parce qu'il touche aux pe
 Le conflit de statut concerne la reconnaissance, la hiérarchie informelle, l'influence dans le groupe. Qui est le plus compétent, qui a l'oreille du manager, qui compte dans les décisions. Ce type de conflit est souvent mal identifié parce qu'il se manifeste sous forme de conflits de tâche ou de relation en surface. Il faut creuser pour voir ce qui se joue réellement.
 
 <div style="overflow-x:auto;margin:2rem 0">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 360" style="max-width:100%;height:auto">
+  <rect width="700" height="360" fill="#0a0f2e" rx="12"/>
+  <text x="350" y="28" font-family="monospace" font-size="13" fill="#00cffd" text-anchor="middle" font-weight="bold">LES 4 TYPES DE CONFLITS — RECONNAÎTRE POUR RÉAGIR</text>
+  <text x="350" y="46" font-family="monospace" font-size="9" fill="#7e8da4" text-anchor="middle">chaque type appelle une réponse managériale différente</text>
+  <!-- Card 1 — Tâche -->
+  <rect x="20" y="70" width="155" height="240" fill="#1a1f4e" stroke="#86efac" stroke-width="1.5" rx="8"/>
+  <rect x="20" y="70" width="155" height="32" fill="#86efac" opacity="0.20" rx="8"/>
+  <text x="97" y="91" font-family="sans-serif" font-size="13" fill="#86efac" text-anchor="middle" font-weight="bold">TÂCHE</text>
+  <text x="97" y="120" font-family="monospace" font-size="9" fill="#a7f3d0" text-anchor="middle">Désaccord sur</text>
+  <text x="97" y="132" font-family="monospace" font-size="9" fill="#a7f3d0" text-anchor="middle">le quoi / comment</text>
+  <text x="97" y="160" font-family="monospace" font-size="9" fill="#cbd5e1" text-anchor="middle">• priorités</text>
+  <text x="97" y="174" font-family="monospace" font-size="9" fill="#cbd5e1" text-anchor="middle">• méthode</text>
+  <text x="97" y="188" font-family="monospace" font-size="9" fill="#cbd5e1" text-anchor="middle">• objectifs</text>
+  <line x1="35" y1="210" x2="160" y2="210" stroke="#86efac" stroke-width="0.5" opacity="0.4"/>
+  <text x="97" y="232" font-family="monospace" font-size="9" fill="#86efac" text-anchor="middle" font-weight="bold">Réponse</text>
+  <text x="97" y="252" font-family="monospace" font-size="9" fill="#cbd5e1" text-anchor="middle">Encourager</text>
+  <text x="97" y="266" font-family="monospace" font-size="9" fill="#cbd5e1" text-anchor="middle">le débat</text>
+  <text x="97" y="290" font-family="monospace" font-size="9" fill="#86efac" text-anchor="middle">+ sain</text>
+  <!-- Card 2 — Processus -->
+  <rect x="190" y="70" width="155" height="240" fill="#1a1f4e" stroke="#00cffd" stroke-width="1.5" rx="8"/>
+  <rect x="190" y="70" width="155" height="32" fill="#00cffd" opacity="0.20" rx="8"/>
+  <text x="267" y="91" font-family="sans-serif" font-size="13" fill="#00cffd" text-anchor="middle" font-weight="bold">PROCESSUS</text>
+  <text x="267" y="120" font-family="monospace" font-size="9" fill="#67e8f9" text-anchor="middle">Organisation</text>
+  <text x="267" y="132" font-family="monospace" font-size="9" fill="#67e8f9" text-anchor="middle">du travail</text>
+  <text x="267" y="160" font-family="monospace" font-size="9" fill="#cbd5e1" text-anchor="middle">• qui fait quoi</text>
+  <text x="267" y="174" font-family="monospace" font-size="9" fill="#cbd5e1" text-anchor="middle">• circulation info</text>
+  <text x="267" y="188" font-family="monospace" font-size="9" fill="#cbd5e1" text-anchor="middle">• coordination</text>
+  <line x1="205" y1="210" x2="330" y2="210" stroke="#00cffd" stroke-width="0.5" opacity="0.4"/>
+  <text x="267" y="232" font-family="monospace" font-size="9" fill="#00cffd" text-anchor="middle" font-weight="bold">Réponse</text>
+  <text x="267" y="252" font-family="monospace" font-size="9" fill="#cbd5e1" text-anchor="middle">Clarifier</text>
+  <text x="267" y="266" font-family="monospace" font-size="9" fill="#cbd5e1" text-anchor="middle">l'organisation</text>
+  <text x="267" y="290" font-family="monospace" font-size="9" fill="#00cffd" text-anchor="middle">structurel</text>
+  <!-- Card 3 — Relation -->
+  <rect x="360" y="70" width="155" height="240" fill="#1a1f4e" stroke="#ef4444" stroke-width="1.5" rx="8"/>
+  <rect x="360" y="70" width="155" height="32" fill="#ef4444" opacity="0.20" rx="8"/>
+  <text x="437" y="91" font-family="sans-serif" font-size="13" fill="#fb7185" text-anchor="middle" font-weight="bold">RELATION</text>
+  <text x="437" y="120" font-family="monospace" font-size="9" fill="#fca5a5" text-anchor="middle">Personnalités</text>
+  <text x="437" y="132" font-family="monospace" font-size="9" fill="#fca5a5" text-anchor="middle">et valeurs</text>
+  <text x="437" y="160" font-family="monospace" font-size="9" fill="#cbd5e1" text-anchor="middle">• styles opposés</text>
+  <text x="437" y="174" font-family="monospace" font-size="9" fill="#cbd5e1" text-anchor="middle">• incompatibilité</text>
+  <text x="437" y="188" font-family="monospace" font-size="9" fill="#cbd5e1" text-anchor="middle">• antipathie</text>
+  <line x1="375" y1="210" x2="500" y2="210" stroke="#ef4444" stroke-width="0.5" opacity="0.4"/>
+  <text x="437" y="232" font-family="monospace" font-size="9" fill="#fb7185" text-anchor="middle" font-weight="bold">Réponse</text>
+  <text x="437" y="252" font-family="monospace" font-size="9" fill="#cbd5e1" text-anchor="middle">Cadre pro</text>
+  <text x="437" y="266" font-family="monospace" font-size="9" fill="#cbd5e1" text-anchor="middle">pas d'amitié</text>
+  <text x="437" y="290" font-family="monospace" font-size="9" fill="#fb7185" text-anchor="middle">+ difficile</text>
+  <!-- Card 4 — Statut -->
+  <rect x="530" y="70" width="155" height="240" fill="#1a1f4e" stroke="#915EFF" stroke-width="1.5" rx="8"/>
+  <rect x="530" y="70" width="155" height="32" fill="#915EFF" opacity="0.20" rx="8"/>
+  <text x="607" y="91" font-family="sans-serif" font-size="13" fill="#b48bff" text-anchor="middle" font-weight="bold">STATUT</text>
+  <text x="607" y="120" font-family="monospace" font-size="9" fill="#c4b5fd" text-anchor="middle">Reconnaissance</text>
+  <text x="607" y="132" font-family="monospace" font-size="9" fill="#c4b5fd" text-anchor="middle">et influence</text>
+  <text x="607" y="160" font-family="monospace" font-size="9" fill="#cbd5e1" text-anchor="middle">• qui décide</text>
+  <text x="607" y="174" font-family="monospace" font-size="9" fill="#cbd5e1" text-anchor="middle">• légitimité</text>
+  <text x="607" y="188" font-family="monospace" font-size="9" fill="#cbd5e1" text-anchor="middle">• hiérarchie info.</text>
+  <line x1="545" y1="210" x2="670" y2="210" stroke="#915EFF" stroke-width="0.5" opacity="0.4"/>
+  <text x="607" y="232" font-family="monospace" font-size="9" fill="#b48bff" text-anchor="middle" font-weight="bold">Réponse</text>
+  <text x="607" y="252" font-family="monospace" font-size="9" fill="#cbd5e1" text-anchor="middle">Identifier</text>
+  <text x="607" y="266" font-family="monospace" font-size="9" fill="#cbd5e1" text-anchor="middle">le vrai sujet</text>
+  <text x="607" y="290" font-family="monospace" font-size="9" fill="#b48bff" text-anchor="middle">masqué</text>
+  <text x="350" y="345" font-family="monospace" font-size="10" fill="#00cffd" text-anchor="middle" font-weight="bold">Diagnostiquer le type avant d'intervenir — chaque type a sa réponse</text>
+</svg>
+</div>
+
+<div style="overflow-x:auto;margin:2rem 0">
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 460" style="max-width:100%;height:auto">
   <rect width="600" height="460" fill="#0a0f2e" rx="12"/>
   <text x="300" y="34" font-family="monospace" font-size="14" fill="#00cffd" text-anchor="middle" font-weight="bold">Escalade de conflit — niveaux d'intensité</text>
@@ -80,6 +145,60 @@ Ma méthode en trois temps. D'abord, voir chaque personne individuellement — p
 Ensuite, réunion commune — mais seulement si les deux personnes sont d'accord pour la tenir. Je pose les règles au départ : on parle de faits et de besoins, pas d'intentions qu'on prête à l'autre. Mon rôle n'est pas de trancher, c'est de faciliter un accord que les deux peuvent tenir.
 
 Enfin, suivi. Un accord sans suivi ne tient pas. Je revois chacun deux semaines après pour vérifier que ce qui a été dit se traduit en actes. Si ce n'est pas le cas, la conversation recommence — avec plus de sérieux cette fois.
+
+<div style="overflow-x:auto;margin:2rem 0">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 360" style="max-width:100%;height:auto">
+  <rect width="700" height="360" fill="#0a0f2e" rx="12"/>
+  <text x="350" y="28" font-family="monospace" font-size="13" fill="#00cffd" text-anchor="middle" font-weight="bold">MÉDIATION EN 3 TEMPS — RESTER NEUTRE</text>
+  <text x="350" y="46" font-family="monospace" font-size="9" fill="#7e8da4" text-anchor="middle">la séquence qui évite de prendre parti</text>
+  <!-- Timeline horizontal line -->
+  <line x1="100" y1="180" x2="600" y2="180" stroke="#334155" stroke-width="2"/>
+  <!-- Étape 1 — Écoute séparée -->
+  <circle cx="150" cy="180" r="34" fill="#1a1f4e" stroke="#00cffd" stroke-width="2.5"/>
+  <text x="150" y="178" font-family="monospace" font-size="14" fill="#00cffd" text-anchor="middle" font-weight="bold">1</text>
+  <text x="150" y="194" font-family="monospace" font-size="8" fill="#67e8f9" text-anchor="middle">J+0</text>
+  <rect x="60" y="80" width="180" height="62" fill="#1a1f4e" stroke="#00cffd" stroke-width="1" rx="6"/>
+  <text x="150" y="100" font-family="sans-serif" font-size="11" fill="#00cffd" text-anchor="middle" font-weight="bold">ÉCOUTE SÉPARÉE</text>
+  <text x="150" y="118" font-family="monospace" font-size="9" fill="#cbd5e1" text-anchor="middle">Mêmes questions aux 2</text>
+  <text x="150" y="132" font-family="monospace" font-size="9" fill="#cbd5e1" text-anchor="middle">Comprendre, pas juger</text>
+  <line x1="150" y1="142" x2="150" y2="146" stroke="#00cffd" stroke-width="1"/>
+  <polygon points="150,150 146,144 154,144" fill="#00cffd"/>
+  <text x="60" y="232" font-family="monospace" font-size="9" fill="#7e8da4">Ressenti +</text>
+  <text x="60" y="244" font-family="monospace" font-size="9" fill="#7e8da4">attentes des</text>
+  <text x="60" y="256" font-family="monospace" font-size="9" fill="#7e8da4">deux parties</text>
+  <!-- Étape 2 — Réunion conjointe -->
+  <circle cx="350" cy="180" r="34" fill="#1a1f4e" stroke="#915EFF" stroke-width="2.5"/>
+  <text x="350" y="178" font-family="monospace" font-size="14" fill="#915EFF" text-anchor="middle" font-weight="bold">2</text>
+  <text x="350" y="194" font-family="monospace" font-size="8" fill="#b48bff" text-anchor="middle">J+2 à J+4</text>
+  <rect x="260" y="80" width="180" height="62" fill="#1a1f4e" stroke="#915EFF" stroke-width="1" rx="6"/>
+  <text x="350" y="100" font-family="sans-serif" font-size="11" fill="#915EFF" text-anchor="middle" font-weight="bold">RÉUNION CONJOINTE</text>
+  <text x="350" y="118" font-family="monospace" font-size="9" fill="#cbd5e1" text-anchor="middle">Faits + besoins</text>
+  <text x="350" y="132" font-family="monospace" font-size="9" fill="#cbd5e1" text-anchor="middle">Manager = facilitateur</text>
+  <line x1="350" y1="142" x2="350" y2="146" stroke="#915EFF" stroke-width="1"/>
+  <polygon points="350,150 346,144 354,144" fill="#915EFF"/>
+  <text x="260" y="232" font-family="monospace" font-size="9" fill="#7e8da4">Accord tenable</text>
+  <text x="260" y="244" font-family="monospace" font-size="9" fill="#7e8da4">par les deux</text>
+  <text x="260" y="256" font-family="monospace" font-size="9" fill="#7e8da4">parties</text>
+  <!-- Étape 3 — Suivi -->
+  <circle cx="550" cy="180" r="34" fill="#1a1f4e" stroke="#fbbf24" stroke-width="2.5"/>
+  <text x="550" y="178" font-family="monospace" font-size="14" fill="#fbbf24" text-anchor="middle" font-weight="bold">3</text>
+  <text x="550" y="194" font-family="monospace" font-size="8" fill="#fbbf24" text-anchor="middle">J+14</text>
+  <rect x="460" y="80" width="180" height="62" fill="#1a1f4e" stroke="#fbbf24" stroke-width="1" rx="6"/>
+  <text x="550" y="100" font-family="sans-serif" font-size="11" fill="#fbbf24" text-anchor="middle" font-weight="bold">SUIVI INDIVIDUEL</text>
+  <text x="550" y="118" font-family="monospace" font-size="9" fill="#cbd5e1" text-anchor="middle">Vérifier les actes</text>
+  <text x="550" y="132" font-family="monospace" font-size="9" fill="#cbd5e1" text-anchor="middle">Pas seulement les mots</text>
+  <line x1="550" y1="142" x2="550" y2="146" stroke="#fbbf24" stroke-width="1"/>
+  <polygon points="550,150 546,144 554,144" fill="#fbbf24"/>
+  <text x="460" y="232" font-family="monospace" font-size="9" fill="#7e8da4">Si pas d'effet:</text>
+  <text x="460" y="244" font-family="monospace" font-size="9" fill="#7e8da4">on recommence,</text>
+  <text x="460" y="256" font-family="monospace" font-size="9" fill="#7e8da4">plus sérieux</text>
+  <!-- Bottom warning -->
+  <rect x="100" y="285" width="500" height="44" fill="#1a1f4e" stroke="#ef4444" stroke-width="1" rx="6" opacity="0.85"/>
+  <text x="350" y="305" font-family="monospace" font-size="10" fill="#fb7185" text-anchor="middle" font-weight="bold">PIÈGE À ÉVITER</text>
+  <text x="350" y="320" font-family="monospace" font-size="9" fill="#cbd5e1" text-anchor="middle">Trancher après avoir entendu une seule version = perdre sa capacité à aider</text>
+  <text x="350" y="350" font-family="monospace" font-size="10" fill="#00cffd" text-anchor="middle" font-weight="bold">Le manager facilite, ne juge pas — la solution vient des deux parties</text>
+</svg>
+</div>
 
 ## Prévenir plutôt que guérir : la clarté des rôles
 

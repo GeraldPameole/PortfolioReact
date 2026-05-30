@@ -19,6 +19,63 @@ La deuxième erreur, c'est le clonage. On recrute des gens qui nous ressemblent,
 
 La troisième, c'est le biais de similarité. On préfère inconsciemment le candidat avec qui on a passé un bon moment en entretien à celui qui correspond objectivement mieux au poste. Ce biais est puissant et difficile à identifier seul. La seule façon de le contrer, c'est de structurer le processus pour ne pas se fier uniquement à ses impressions.
 
+<div style="overflow-x:auto;margin:2rem 0">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 360" style="max-width:100%;height:auto">
+  <rect width="700" height="360" fill="#0a0f2e" rx="12"/>
+  <text x="350" y="28" font-family="monospace" font-size="13" fill="#00cffd" text-anchor="middle" font-weight="bold">LES 3 ERREURS QUI PLOMBENT UN RECRUTEMENT</text>
+  <text x="350" y="46" font-family="monospace" font-size="9" fill="#7e8da4" text-anchor="middle">les éviter, c'est déjà recruter mieux</text>
+  <!-- Card 1 — Urgence -->
+  <rect x="20" y="70" width="210" height="245" fill="#1a1f4e" stroke="#ef4444" stroke-width="1.5" rx="8"/>
+  <rect x="20" y="70" width="210" height="36" fill="#ef4444" opacity="0.20" rx="8"/>
+  <text x="125" y="93" font-family="sans-serif" font-size="12" fill="#fb7185" text-anchor="middle" font-weight="bold">⏱  RECRUTER VITE</text>
+  <text x="125" y="122" font-family="monospace" font-size="10" fill="#fca5a5" text-anchor="middle" font-weight="bold">Symptômes</text>
+  <text x="35" y="142" font-family="monospace" font-size="9" fill="#cbd5e1">• Poste vacant urgent</text>
+  <text x="35" y="156" font-family="monospace" font-size="9" fill="#cbd5e1">• Pression de l'équipe</text>
+  <text x="35" y="170" font-family="monospace" font-size="9" fill="#cbd5e1">• "Premier acceptable"</text>
+  <line x1="35" y1="186" x2="215" y2="186" stroke="#ef4444" stroke-width="0.5" opacity="0.4"/>
+  <text x="125" y="207" font-family="monospace" font-size="10" fill="#fca5a5" text-anchor="middle" font-weight="bold">Coût réel</text>
+  <text x="35" y="227" font-family="monospace" font-size="9" fill="#cbd5e1">• Départ à 4 mois</text>
+  <text x="35" y="241" font-family="monospace" font-size="9" fill="#cbd5e1">• Poste à rouvrir</text>
+  <text x="35" y="255" font-family="monospace" font-size="9" fill="#cbd5e1">• 2 trimestres perdus</text>
+  <line x1="35" y1="272" x2="215" y2="272" stroke="#ef4444" stroke-width="0.5" opacity="0.4"/>
+  <text x="125" y="293" font-family="monospace" font-size="9" fill="#fb7185" text-anchor="middle" font-weight="bold">Antidote</text>
+  <text x="125" y="308" font-family="monospace" font-size="9" fill="#cbd5e1" text-anchor="middle">Tenir 6 semaines</text>
+  <!-- Card 2 — Clonage -->
+  <rect x="245" y="70" width="210" height="245" fill="#1a1f4e" stroke="#fb923c" stroke-width="1.5" rx="8"/>
+  <rect x="245" y="70" width="210" height="36" fill="#fb923c" opacity="0.20" rx="8"/>
+  <text x="350" y="93" font-family="sans-serif" font-size="12" fill="#fdba74" text-anchor="middle" font-weight="bold">⎘  CLONER L'ÉQUIPE</text>
+  <text x="350" y="122" font-family="monospace" font-size="10" fill="#fed7aa" text-anchor="middle" font-weight="bold">Symptômes</text>
+  <text x="260" y="142" font-family="monospace" font-size="9" fill="#cbd5e1">• Mêmes écoles</text>
+  <text x="260" y="156" font-family="monospace" font-size="9" fill="#cbd5e1">• Mêmes parcours</text>
+  <text x="260" y="170" font-family="monospace" font-size="9" fill="#cbd5e1">• "Bonne fit culturel"</text>
+  <line x1="260" y1="186" x2="440" y2="186" stroke="#fb923c" stroke-width="0.5" opacity="0.4"/>
+  <text x="350" y="207" font-family="monospace" font-size="10" fill="#fed7aa" text-anchor="middle" font-weight="bold">Coût réel</text>
+  <text x="260" y="227" font-family="monospace" font-size="9" fill="#cbd5e1">• Chambre d'écho</text>
+  <text x="260" y="241" font-family="monospace" font-size="9" fill="#cbd5e1">• Angles morts collectifs</text>
+  <text x="260" y="255" font-family="monospace" font-size="9" fill="#cbd5e1">• Décisions affaiblies</text>
+  <line x1="260" y1="272" x2="440" y2="272" stroke="#fb923c" stroke-width="0.5" opacity="0.4"/>
+  <text x="350" y="293" font-family="monospace" font-size="9" fill="#fdba74" text-anchor="middle" font-weight="bold">Antidote</text>
+  <text x="350" y="308" font-family="monospace" font-size="9" fill="#cbd5e1" text-anchor="middle">Chercher différents</text>
+  <!-- Card 3 — Biais de similarité -->
+  <rect x="470" y="70" width="210" height="245" fill="#1a1f4e" stroke="#915EFF" stroke-width="1.5" rx="8"/>
+  <rect x="470" y="70" width="210" height="36" fill="#915EFF" opacity="0.20" rx="8"/>
+  <text x="575" y="93" font-family="sans-serif" font-size="12" fill="#b48bff" text-anchor="middle" font-weight="bold">⚐  BIAIS DE SIMILARITÉ</text>
+  <text x="575" y="122" font-family="monospace" font-size="10" fill="#c4b5fd" text-anchor="middle" font-weight="bold">Symptômes</text>
+  <text x="485" y="142" font-family="monospace" font-size="9" fill="#cbd5e1">• "Bon feeling"</text>
+  <text x="485" y="156" font-family="monospace" font-size="9" fill="#cbd5e1">• Conversation agréable</text>
+  <text x="485" y="170" font-family="monospace" font-size="9" fill="#cbd5e1">• Impression > faits</text>
+  <line x1="485" y1="186" x2="665" y2="186" stroke="#915EFF" stroke-width="0.5" opacity="0.4"/>
+  <text x="575" y="207" font-family="monospace" font-size="10" fill="#c4b5fd" text-anchor="middle" font-weight="bold">Coût réel</text>
+  <text x="485" y="227" font-family="monospace" font-size="9" fill="#cbd5e1">• Compétences ratées</text>
+  <text x="485" y="241" font-family="monospace" font-size="9" fill="#cbd5e1">• Diversité réduite</text>
+  <text x="485" y="255" font-family="monospace" font-size="9" fill="#cbd5e1">• Erreur invisible</text>
+  <line x1="485" y1="272" x2="665" y2="272" stroke="#915EFF" stroke-width="0.5" opacity="0.4"/>
+  <text x="575" y="293" font-family="monospace" font-size="9" fill="#b48bff" text-anchor="middle" font-weight="bold">Antidote</text>
+  <text x="575" y="308" font-family="monospace" font-size="9" fill="#cbd5e1" text-anchor="middle">Structurer le process</text>
+  <text x="350" y="345" font-family="monospace" font-size="10" fill="#00cffd" text-anchor="middle" font-weight="bold">Un mauvais recrutement coûte 6 à 12 mois d'énergie à toute l'équipe</text>
+</svg>
+</div>
+
 ## L'entretien structuré : un outil simple, encore trop rare
 
 Un entretien non structuré, c'est une conversation agréable qui prédit mal la performance future. Un entretien structuré, c'est le même ensemble de questions pour tous les candidats, avec des critères d'évaluation définis avant l'entretien — pas après.
@@ -76,6 +133,61 @@ C'est l'angle mort de la plupart des managers. On consacre des semaines à séle
 Dans mon équipe, j'ai mis en place un onboarding structuré sur les trois premiers mois avec des jalons clairs : la première semaine pour comprendre l'environnement et les outils, le premier mois pour maîtriser les basiques du poste, les deux mois suivants pour atteindre une première autonomie. Chaque nouveau collaborateur avait un point hebdomadaire avec moi pendant les six premières semaines — court, structuré, et centré sur ce qui bloquait.
 
 Ce dispositif a eu un effet direct sur la rétention. Entre 2015 et 2018, un seul collaborateur a quitté l'équipe pendant sa période d'essai, contre trois les deux années précédentes selon les équipes RH.
+
+<div style="overflow-x:auto;margin:2rem 0">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 360" style="max-width:100%;height:auto">
+  <rect width="700" height="360" fill="#0a0f2e" rx="12"/>
+  <text x="350" y="28" font-family="monospace" font-size="13" fill="#00cffd" text-anchor="middle" font-weight="bold">ONBOARDING — 3 MOIS, 3 JALONS</text>
+  <text x="350" y="46" font-family="monospace" font-size="9" fill="#7e8da4" text-anchor="middle">le recrutement ne s'arrête pas à la signature</text>
+  <!-- Timeline axis -->
+  <line x1="60" y1="170" x2="640" y2="170" stroke="#334155" stroke-width="2"/>
+  <!-- J0 marker -->
+  <circle cx="60" cy="170" r="6" fill="#00cffd"/>
+  <text x="60" y="195" font-family="monospace" font-size="9" fill="#7e8da4" text-anchor="middle">J0</text>
+  <!-- Week 1 — Découverte -->
+  <rect x="80" y="80" width="160" height="80" fill="#1a1f4e" stroke="#00cffd" stroke-width="1.5" rx="6"/>
+  <text x="160" y="100" font-family="sans-serif" font-size="11" fill="#00cffd" text-anchor="middle" font-weight="bold">SEMAINE 1</text>
+  <text x="160" y="118" font-family="monospace" font-size="9" fill="#67e8f9" text-anchor="middle">Comprendre</text>
+  <text x="160" y="130" font-family="monospace" font-size="9" fill="#cbd5e1" text-anchor="middle">l'environnement</text>
+  <text x="160" y="142" font-family="monospace" font-size="9" fill="#cbd5e1" text-anchor="middle">+ les outils</text>
+  <text x="160" y="154" font-family="monospace" font-size="9" fill="#cbd5e1" text-anchor="middle">+ les acteurs</text>
+  <line x1="160" y1="160" x2="160" y2="168" stroke="#00cffd" stroke-width="1"/>
+  <circle cx="160" cy="170" r="5" fill="#00cffd"/>
+  <text x="160" y="195" font-family="monospace" font-size="9" fill="#7e8da4" text-anchor="middle">S1</text>
+  <text x="160" y="208" font-family="monospace" font-size="8" fill="#7e8da4" text-anchor="middle">point hebdo</text>
+  <!-- Month 1 — Basiques -->
+  <rect x="270" y="80" width="160" height="80" fill="#1a1f4e" stroke="#915EFF" stroke-width="1.5" rx="6"/>
+  <text x="350" y="100" font-family="sans-serif" font-size="11" fill="#915EFF" text-anchor="middle" font-weight="bold">MOIS 1</text>
+  <text x="350" y="118" font-family="monospace" font-size="9" fill="#b48bff" text-anchor="middle">Maîtriser</text>
+  <text x="350" y="130" font-family="monospace" font-size="9" fill="#cbd5e1" text-anchor="middle">les basiques</text>
+  <text x="350" y="142" font-family="monospace" font-size="9" fill="#cbd5e1" text-anchor="middle">du poste</text>
+  <text x="350" y="154" font-family="monospace" font-size="9" fill="#cbd5e1" text-anchor="middle">— autonomie partielle</text>
+  <line x1="350" y1="160" x2="350" y2="168" stroke="#915EFF" stroke-width="1"/>
+  <circle cx="350" cy="170" r="5" fill="#915EFF"/>
+  <text x="350" y="195" font-family="monospace" font-size="9" fill="#7e8da4" text-anchor="middle">M1</text>
+  <text x="350" y="208" font-family="monospace" font-size="8" fill="#7e8da4" text-anchor="middle">jalon</text>
+  <!-- Month 2-3 — Autonomie -->
+  <rect x="460" y="80" width="180" height="80" fill="#1a1f4e" stroke="#86efac" stroke-width="1.5" rx="6"/>
+  <text x="550" y="100" font-family="sans-serif" font-size="11" fill="#86efac" text-anchor="middle" font-weight="bold">MOIS 2-3</text>
+  <text x="550" y="118" font-family="monospace" font-size="9" fill="#a7f3d0" text-anchor="middle">Atteindre</text>
+  <text x="550" y="130" font-family="monospace" font-size="9" fill="#cbd5e1" text-anchor="middle">une première</text>
+  <text x="550" y="142" font-family="monospace" font-size="9" fill="#cbd5e1" text-anchor="middle">autonomie</text>
+  <text x="550" y="154" font-family="monospace" font-size="9" fill="#cbd5e1" text-anchor="middle">— validation essai</text>
+  <line x1="550" y1="160" x2="550" y2="168" stroke="#86efac" stroke-width="1"/>
+  <circle cx="550" cy="170" r="5" fill="#86efac"/>
+  <text x="550" y="195" font-family="monospace" font-size="9" fill="#7e8da4" text-anchor="middle">M3</text>
+  <text x="550" y="208" font-family="monospace" font-size="8" fill="#7e8da4" text-anchor="middle">bilan</text>
+  <!-- Bottom — Cadence des points 1:1 -->
+  <rect x="60" y="235" width="580" height="55" fill="#1a1f4e" stroke="#fbbf24" stroke-width="1" rx="6"/>
+  <text x="75" y="255" font-family="sans-serif" font-size="11" fill="#fbbf24" font-weight="bold">Cadence des 1:1 avec le manager</text>
+  <text x="75" y="273" font-family="monospace" font-size="9" fill="#cbd5e1">→ Hebdomadaire pendant 6 semaines    → court, structuré, centré sur "qu'est-ce qui bloque ?"</text>
+  <text x="75" y="285" font-family="monospace" font-size="9" fill="#fed7aa">→ Pas un débrief, pas un cours : un débloquage actif</text>
+  <!-- Result block -->
+  <rect x="60" y="305" width="580" height="35" fill="#1a1f4e" stroke="#86efac" stroke-width="1" rx="6" opacity="0.85"/>
+  <text x="350" y="325" font-family="monospace" font-size="10" fill="#86efac" text-anchor="middle" font-weight="bold">Résultat 2015-2018 : 1 départ en période d'essai vs 3 les années précédentes</text>
+  <text x="350" y="353" font-family="monospace" font-size="9" fill="#7e8da4" text-anchor="middle">Trois mois de présence active = rétention durable</text>
+</svg>
+</div>
 
 ## Ce que je retiens pour recruter juste
 
