@@ -79,12 +79,124 @@ En pratique, les projets que je pilote utilisent rarement une méthode pure. Le 
 
 Ce qui fonctionne bien : définir clairement quelle partie du travail suit quelle règle. Les demandes urgentes passent dans la file Kanban. Les nouvelles fonctionnalités passent par le backlog Scrum et entrent dans un sprint après priorisation. La séparation évite le mélange qui noie tout.
 
+<div style="overflow-x:auto;margin:2rem 0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 360" style="max-width:100%;height:auto">
+  <rect width="700" height="360" fill="#0a0f2e" rx="12"/>
+  <text x="350" y="28" font-family="monospace" font-size="13" fill="#00cffd" text-anchor="middle" font-weight="bold">HYBRIDE SCRUM + KANBAN</text>
+  <text x="350" y="46" font-family="monospace" font-size="9" fill="#7e8da4" text-anchor="middle">deux flux séparés, une seule équipe — la séparation évite le mélange qui noie tout</text>
+  <!-- Scrum core (left) -->
+  <rect x="40" y="70" width="280" height="240" rx="10" fill="#1a1f4e" stroke="#915EFF" stroke-width="1.5"/>
+  <text x="180" y="98" font-family="sans-serif" font-size="13" fill="#b48bff" text-anchor="middle" font-weight="bold">Noyau Scrum</text>
+  <text x="180" y="116" font-family="monospace" font-size="10" fill="#7e8da4" text-anchor="middle">fonctionnalités planifiées</text>
+  <!-- Sprint cycle dots -->
+  <circle cx="90" cy="160" r="22" fill="#0a0f2e" stroke="#915EFF" stroke-width="1.5"/>
+  <text x="90" y="164" font-family="monospace" font-size="9" fill="#c4b5fd" text-anchor="middle">Plan</text>
+  <circle cx="180" cy="160" r="22" fill="#0a0f2e" stroke="#915EFF" stroke-width="1.5"/>
+  <text x="180" y="164" font-family="monospace" font-size="9" fill="#c4b5fd" text-anchor="middle">Dev</text>
+  <circle cx="270" cy="160" r="22" fill="#0a0f2e" stroke="#915EFF" stroke-width="1.5"/>
+  <text x="270" y="164" font-family="monospace" font-size="9" fill="#c4b5fd" text-anchor="middle">Revue</text>
+  <path d="M 112 160 L 158 160" stroke="#915EFF" stroke-width="1.2" marker-end="url(#arrV)"/>
+  <path d="M 202 160 L 248 160" stroke="#915EFF" stroke-width="1.2" marker-end="url(#arrV)"/>
+  <text x="180" y="210" font-family="monospace" font-size="10" fill="#cbd5e1" text-anchor="middle">Sprint 2 semaines</text>
+  <text x="180" y="250" font-family="sans-serif" font-size="10" fill="#86efac" text-anchor="middle">→ cadence et prévisibilité</text>
+  <text x="180" y="270" font-family="sans-serif" font-size="10" fill="#86efac" text-anchor="middle">→ backlog priorisé</text>
+  <text x="180" y="290" font-family="sans-serif" font-size="10" fill="#86efac" text-anchor="middle">→ Definition of Done partagée</text>
+  <!-- Kanban flow (right) -->
+  <rect x="380" y="70" width="280" height="240" rx="10" fill="#1a1f4e" stroke="#00cffd" stroke-width="1.5"/>
+  <text x="520" y="98" font-family="sans-serif" font-size="13" fill="#67e8f9" text-anchor="middle" font-weight="bold">Flux Kanban</text>
+  <text x="520" y="116" font-family="monospace" font-size="10" fill="#7e8da4" text-anchor="middle">demandes entrantes / bugs</text>
+  <!-- Columns -->
+  <rect x="400" y="140" width="75" height="100" rx="4" fill="#0a0f2e" stroke="#00cffd" stroke-width="1"/>
+  <text x="437" y="158" font-family="monospace" font-size="9" fill="#67e8f9" text-anchor="middle">À faire</text>
+  <text x="437" y="172" font-family="monospace" font-size="8" fill="#7e8da4" text-anchor="middle">WIP ∞</text>
+  <rect x="482" y="140" width="75" height="100" rx="4" fill="#0a0f2e" stroke="#fbbf24" stroke-width="1"/>
+  <text x="519" y="158" font-family="monospace" font-size="9" fill="#fbbf24" text-anchor="middle">En cours</text>
+  <text x="519" y="172" font-family="monospace" font-size="8" fill="#fbbf24" text-anchor="middle">WIP ≤ 3</text>
+  <rect x="564" y="140" width="75" height="100" rx="4" fill="#0a0f2e" stroke="#86efac" stroke-width="1"/>
+  <text x="601" y="158" font-family="monospace" font-size="9" fill="#86efac" text-anchor="middle">Livré</text>
+  <text x="601" y="172" font-family="monospace" font-size="8" fill="#7e8da4" text-anchor="middle">flux continu</text>
+  <!-- Cards inside columns -->
+  <rect x="408" y="182" width="59" height="12" rx="2" fill="#915EFF" opacity="0.5"/>
+  <rect x="408" y="200" width="59" height="12" rx="2" fill="#915EFF" opacity="0.5"/>
+  <rect x="408" y="218" width="59" height="12" rx="2" fill="#915EFF" opacity="0.5"/>
+  <rect x="490" y="182" width="59" height="12" rx="2" fill="#fbbf24" opacity="0.6"/>
+  <rect x="490" y="200" width="59" height="12" rx="2" fill="#fbbf24" opacity="0.6"/>
+  <rect x="572" y="182" width="59" height="12" rx="2" fill="#86efac" opacity="0.5"/>
+  <text x="520" y="270" font-family="sans-serif" font-size="10" fill="#67e8f9" text-anchor="middle">→ urgences absorbées</text>
+  <text x="520" y="290" font-family="sans-serif" font-size="10" fill="#67e8f9" text-anchor="middle">→ sprint protégé</text>
+  <text x="350" y="338" font-family="monospace" font-size="9" fill="#fb923c" text-anchor="middle">règle d'aiguillage : urgent client → Kanban · nouveau besoin → backlog Scrum</text>
+  <defs>
+    <marker id="arrV" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#915EFF"/></marker>
+  </defs>
+</svg></div>
+
 Les anti-patterns que j'ai observés, tous réels :
 
 - **Scrum sans rôle de product owner clair** : le backlog devient un fourre-tout et les développeurs décident seuls de ce qui est prioritaire.
 - **Kanban sans WIP limits** : la colonne "En cours" accumule vingt tâches et le tableau devient une illusion de suivi.
 - **SAFe imposé sur une petite équipe** : le PI Planning dure deux jours pour produire un plan que tout le monde oublie trois semaines après.
 - **Le Sprint planning de façade** : on remplit le sprint de tâches sans estimer leur charge réelle, et on finit systématiquement en retard.
+
+<div style="overflow-x:auto;margin:2rem 0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 360" style="max-width:100%;height:auto">
+  <rect width="700" height="360" fill="#0a0f2e" rx="12"/>
+  <text x="350" y="28" font-family="monospace" font-size="13" fill="#00cffd" text-anchor="middle" font-weight="bold">4 ANTI-PATTERNS QUI TUENT L'AGILITÉ</text>
+  <text x="350" y="46" font-family="monospace" font-size="9" fill="#7e8da4" text-anchor="middle">signaux que la méthode est appliquée en façade</text>
+  <!-- Card 1 -->
+  <rect x="30" y="70" width="150" height="260" rx="10" fill="#1a1f4e" stroke="#fb7185" stroke-width="1.5"/>
+  <text x="105" y="98" font-family="monospace" font-size="11" fill="#fb7185" text-anchor="middle" font-weight="bold">PO FANTÔME</text>
+  <line x1="50" y1="108" x2="160" y2="108" stroke="#fb7185" stroke-width="1" opacity="0.5"/>
+  <text x="105" y="132" font-family="sans-serif" font-size="10" fill="#ffffff" text-anchor="middle" font-weight="bold">Scrum sans</text>
+  <text x="105" y="146" font-family="sans-serif" font-size="10" fill="#ffffff" text-anchor="middle" font-weight="bold">product owner</text>
+  <text x="105" y="176" font-family="sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">Backlog fourre-tout,</text>
+  <text x="105" y="190" font-family="sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">devs qui priorisent</text>
+  <text x="105" y="204" font-family="sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">seuls, valeur diluée</text>
+  <text x="105" y="240" font-family="monospace" font-size="8" fill="#fb7185" text-anchor="middle">→ Symptôme</text>
+  <text x="105" y="260" font-family="sans-serif" font-size="9" fill="#fdba74" text-anchor="middle">Personne ne sait</text>
+  <text x="105" y="274" font-family="sans-serif" font-size="9" fill="#fdba74" text-anchor="middle">pourquoi on fait</text>
+  <text x="105" y="288" font-family="sans-serif" font-size="9" fill="#fdba74" text-anchor="middle">telle story</text>
+  <text x="105" y="316" font-family="monospace" font-size="8" fill="#86efac" text-anchor="middle">Fix : 1 PO unique</text>
+  <!-- Card 2 -->
+  <rect x="195" y="70" width="150" height="260" rx="10" fill="#1a1f4e" stroke="#fbbf24" stroke-width="1.5"/>
+  <text x="270" y="98" font-family="monospace" font-size="11" fill="#fbbf24" text-anchor="middle" font-weight="bold">KANBAN MOLLE</text>
+  <line x1="215" y1="108" x2="325" y2="108" stroke="#fbbf24" stroke-width="1" opacity="0.5"/>
+  <text x="270" y="132" font-family="sans-serif" font-size="10" fill="#ffffff" text-anchor="middle" font-weight="bold">Tableau sans</text>
+  <text x="270" y="146" font-family="sans-serif" font-size="10" fill="#ffffff" text-anchor="middle" font-weight="bold">WIP limits</text>
+  <text x="270" y="176" font-family="sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">20 tâches "en cours",</text>
+  <text x="270" y="190" font-family="sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">aucune finie,</text>
+  <text x="270" y="204" font-family="sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">illusion d'activité</text>
+  <text x="270" y="240" font-family="monospace" font-size="8" fill="#fbbf24" text-anchor="middle">→ Symptôme</text>
+  <text x="270" y="260" font-family="sans-serif" font-size="9" fill="#fdba74" text-anchor="middle">Lead time qui</text>
+  <text x="270" y="274" font-family="sans-serif" font-size="9" fill="#fdba74" text-anchor="middle">explose, tickets</text>
+  <text x="270" y="288" font-family="sans-serif" font-size="9" fill="#fdba74" text-anchor="middle">qui pourrissent</text>
+  <text x="270" y="316" font-family="monospace" font-size="8" fill="#86efac" text-anchor="middle">Fix : WIP ≤ 3/perso</text>
+  <!-- Card 3 -->
+  <rect x="360" y="70" width="150" height="260" rx="10" fill="#1a1f4e" stroke="#fb923c" stroke-width="1.5"/>
+  <text x="435" y="98" font-family="monospace" font-size="11" fill="#fb923c" text-anchor="middle" font-weight="bold">SAFe TROP TÔT</text>
+  <line x1="380" y1="108" x2="490" y2="108" stroke="#fb923c" stroke-width="1" opacity="0.5"/>
+  <text x="435" y="132" font-family="sans-serif" font-size="10" fill="#ffffff" text-anchor="middle" font-weight="bold">SAFe sur une</text>
+  <text x="435" y="146" font-family="sans-serif" font-size="10" fill="#ffffff" text-anchor="middle" font-weight="bold">équipe de 10</text>
+  <text x="435" y="176" font-family="sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">2 jours de PI</text>
+  <text x="435" y="190" font-family="sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">Planning pour un</text>
+  <text x="435" y="204" font-family="sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">plan oublié à J+15</text>
+  <text x="435" y="240" font-family="monospace" font-size="8" fill="#fb923c" text-anchor="middle">→ Symptôme</text>
+  <text x="435" y="260" font-family="sans-serif" font-size="9" fill="#fdba74" text-anchor="middle">Bureaucratie qui</text>
+  <text x="435" y="274" font-family="sans-serif" font-size="9" fill="#fdba74" text-anchor="middle">étouffe la vitesse</text>
+  <text x="435" y="288" font-family="sans-serif" font-size="9" fill="#fdba74" text-anchor="middle">de livraison</text>
+  <text x="435" y="316" font-family="monospace" font-size="8" fill="#86efac" text-anchor="middle">Fix : revenir Scrum</text>
+  <!-- Card 4 -->
+  <rect x="525" y="70" width="150" height="260" rx="10" fill="#1a1f4e" stroke="#915EFF" stroke-width="1.5"/>
+  <text x="600" y="98" font-family="monospace" font-size="11" fill="#b48bff" text-anchor="middle" font-weight="bold">SPRINT FAÇADE</text>
+  <line x1="545" y1="108" x2="655" y2="108" stroke="#915EFF" stroke-width="1" opacity="0.5"/>
+  <text x="600" y="132" font-family="sans-serif" font-size="10" fill="#ffffff" text-anchor="middle" font-weight="bold">Planning sans</text>
+  <text x="600" y="146" font-family="sans-serif" font-size="10" fill="#ffffff" text-anchor="middle" font-weight="bold">estimation</text>
+  <text x="600" y="176" font-family="sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">On remplit, on lance,</text>
+  <text x="600" y="190" font-family="sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">on finit en retard</text>
+  <text x="600" y="204" font-family="sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">chaque sprint</text>
+  <text x="600" y="240" font-family="monospace" font-size="8" fill="#b48bff" text-anchor="middle">→ Symptôme</text>
+  <text x="600" y="260" font-family="sans-serif" font-size="9" fill="#fdba74" text-anchor="middle">Vélocité erratique,</text>
+  <text x="600" y="274" font-family="sans-serif" font-size="9" fill="#fdba74" text-anchor="middle">stories qui durent</text>
+  <text x="600" y="288" font-family="sans-serif" font-size="9" fill="#fdba74" text-anchor="middle">2-3 sprints</text>
+  <text x="600" y="316" font-family="monospace" font-size="8" fill="#86efac" text-anchor="middle">Fix : DoR strict</text>
+</svg></div>
 
 ## Ce que j'ai appris en changeant de méthode en cours de route
 

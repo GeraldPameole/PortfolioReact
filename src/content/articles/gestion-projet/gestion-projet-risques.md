@@ -79,6 +79,68 @@ La matrice probabilité/impact n'est utile que si elle débouche sur des décisi
 
 **Zone verte (acceptable)** : on l'a listé, on n'y consacre pas de temps de gestion actif.
 
+<div style="overflow-x:auto;margin:2rem 0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 360" style="max-width:100%;height:auto">
+  <rect width="700" height="360" fill="#0a0f2e" rx="12"/>
+  <text x="350" y="28" font-family="monospace" font-size="13" fill="#00cffd" text-anchor="middle" font-weight="bold">4 STRATÉGIES DE RÉPONSE AU RISQUE</text>
+  <text x="350" y="46" font-family="monospace" font-size="9" fill="#7e8da4" text-anchor="middle">éviter · transférer · mitiger · accepter — chaque case = une décision concrète</text>
+  <!-- Card 1 - Éviter -->
+  <rect x="30" y="70" width="150" height="260" rx="10" fill="#1a1f4e" stroke="#86efac" stroke-width="1.5"/>
+  <circle cx="105" cy="110" r="20" fill="#0a0f2e" stroke="#86efac" stroke-width="1.5"/>
+  <path d="M 95 110 L 102 117 L 115 103" stroke="#86efac" stroke-width="2" fill="none"/>
+  <text x="105" y="156" font-family="monospace" font-size="12" fill="#86efac" text-anchor="middle" font-weight="bold">ÉVITER</text>
+  <line x1="50" y1="166" x2="160" y2="166" stroke="#86efac" stroke-width="1" opacity="0.4"/>
+  <text x="105" y="186" font-family="sans-serif" font-size="10" fill="#ffffff" text-anchor="middle" font-weight="bold">Supprimer la cause</text>
+  <text x="105" y="212" font-family="sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">Changer le périmètre,</text>
+  <text x="105" y="226" font-family="sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">l'approche ou la</text>
+  <text x="105" y="240" font-family="sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">techno pour que le</text>
+  <text x="105" y="254" font-family="sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">risque disparaisse</text>
+  <text x="105" y="288" font-family="monospace" font-size="8" fill="#a7f3d0" text-anchor="middle">Exemple terrain</text>
+  <text x="105" y="304" font-family="sans-serif" font-size="8" fill="#fdba74" text-anchor="middle">Site mal sécurisé →</text>
+  <text x="105" y="316" font-family="sans-serif" font-size="8" fill="#fdba74" text-anchor="middle">on déplace le shelter</text>
+  <!-- Card 2 - Transférer -->
+  <rect x="195" y="70" width="150" height="260" rx="10" fill="#1a1f4e" stroke="#00cffd" stroke-width="1.5"/>
+  <circle cx="270" cy="110" r="20" fill="#0a0f2e" stroke="#00cffd" stroke-width="1.5"/>
+  <path d="M 260 110 L 280 110 M 274 104 L 280 110 L 274 116" stroke="#00cffd" stroke-width="2" fill="none"/>
+  <text x="270" y="156" font-family="monospace" font-size="12" fill="#00cffd" text-anchor="middle" font-weight="bold">TRANSFÉRER</text>
+  <line x1="215" y1="166" x2="325" y2="166" stroke="#00cffd" stroke-width="1" opacity="0.4"/>
+  <text x="270" y="186" font-family="sans-serif" font-size="10" fill="#ffffff" text-anchor="middle" font-weight="bold">Déplacer la charge</text>
+  <text x="270" y="212" font-family="sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">Assurance, pénalités</text>
+  <text x="270" y="226" font-family="sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">contractuelles,</text>
+  <text x="270" y="240" font-family="sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">sous-traitance avec</text>
+  <text x="270" y="254" font-family="sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">SLA clair</text>
+  <text x="270" y="288" font-family="monospace" font-size="8" fill="#67e8f9" text-anchor="middle">Exemple terrain</text>
+  <text x="270" y="304" font-family="sans-serif" font-size="8" fill="#fdba74" text-anchor="middle">Retard fournisseur →</text>
+  <text x="270" y="316" font-family="sans-serif" font-size="8" fill="#fdba74" text-anchor="middle">clause pénalité/jour</text>
+  <!-- Card 3 - Mitiger -->
+  <rect x="360" y="70" width="150" height="260" rx="10" fill="#1a1f4e" stroke="#fbbf24" stroke-width="1.5"/>
+  <circle cx="435" cy="110" r="20" fill="#0a0f2e" stroke="#fbbf24" stroke-width="1.5"/>
+  <path d="M 425 116 L 432 109 L 438 113 L 445 104" stroke="#fbbf24" stroke-width="2" fill="none"/>
+  <text x="435" y="156" font-family="monospace" font-size="12" fill="#fbbf24" text-anchor="middle" font-weight="bold">MITIGER</text>
+  <line x1="380" y1="166" x2="490" y2="166" stroke="#fbbf24" stroke-width="1" opacity="0.4"/>
+  <text x="435" y="186" font-family="sans-serif" font-size="10" fill="#ffffff" text-anchor="middle" font-weight="bold">Réduire P ou I</text>
+  <text x="435" y="212" font-family="sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">Plan B activable,</text>
+  <text x="435" y="226" font-family="sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">redondance, stocks</text>
+  <text x="435" y="240" font-family="sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">tampons, formation</text>
+  <text x="435" y="254" font-family="sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">croisée des équipes</text>
+  <text x="435" y="288" font-family="monospace" font-size="8" fill="#fbbf24" text-anchor="middle">Exemple terrain</text>
+  <text x="435" y="304" font-family="sans-serif" font-size="8" fill="#fdba74" text-anchor="middle">Expert unique →</text>
+  <text x="435" y="316" font-family="sans-serif" font-size="8" fill="#fdba74" text-anchor="middle">binôme formé sur 3 mois</text>
+  <!-- Card 4 - Accepter -->
+  <rect x="525" y="70" width="150" height="260" rx="10" fill="#1a1f4e" stroke="#94a3b8" stroke-width="1.5"/>
+  <circle cx="600" cy="110" r="20" fill="#0a0f2e" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="600" y="116" font-family="monospace" font-size="14" fill="#94a3b8" text-anchor="middle" font-weight="bold">∅</text>
+  <text x="600" y="156" font-family="monospace" font-size="12" fill="#94a3b8" text-anchor="middle" font-weight="bold">ACCEPTER</text>
+  <line x1="545" y1="166" x2="655" y2="166" stroke="#94a3b8" stroke-width="1" opacity="0.4"/>
+  <text x="600" y="186" font-family="sans-serif" font-size="10" fill="#ffffff" text-anchor="middle" font-weight="bold">Documenter, vivre avec</text>
+  <text x="600" y="212" font-family="sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">Coût de traitement</text>
+  <text x="600" y="226" font-family="sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">supérieur à l'impact</text>
+  <text x="600" y="240" font-family="sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">probable — surveillé</text>
+  <text x="600" y="254" font-family="sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">en revue de sprint</text>
+  <text x="600" y="288" font-family="monospace" font-size="8" fill="#cbd5e1" text-anchor="middle">Exemple terrain</text>
+  <text x="600" y="304" font-family="sans-serif" font-size="8" fill="#fdba74" text-anchor="middle">Bug cosmétique →</text>
+  <text x="600" y="316" font-family="sans-serif" font-size="8" fill="#fdba74" text-anchor="middle">backlog, pas de plan B</text>
+</svg></div>
+
 ## La revue de risques : rythme et format
 
 L'erreur que j'observe régulièrement : faire une session de gestion des risques au démarrage du projet, alimenter un registre, et ne plus jamais y revenir formellement. Les risques évoluent. Certains se concrétisent partiellement, d'autres disparaissent, de nouveaux apparaissent.
@@ -86,6 +148,78 @@ L'erreur que j'observe régulièrement : faire une session de gestion des risque
 Sur mes projets, je cale une revue de risques en début de chaque sprint ou toutes les deux semaines minimum. Elle dure 15-20 minutes. Le registre n'a pas besoin d'être long — 10 à 15 risques actifs, c'est déjà suffisant pour être gérable. Au-delà, c'est souvent du remplissage qui dilue l'attention sur les vrais enjeux.
 
 Le registre que j'utilise a sept colonnes : description du risque, probabilité (H/M/F), impact (H/M/F), score (produit des deux), plan de réponse, responsable, statut. Simple, lisible, mis à jour à chaque revue.
+
+<div style="overflow-x:auto;margin:2rem 0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 320" style="max-width:100%;height:auto">
+  <rect width="700" height="320" fill="#0a0f2e" rx="12"/>
+  <text x="350" y="28" font-family="monospace" font-size="13" fill="#00cffd" text-anchor="middle" font-weight="bold">REGISTRE DE RISQUES — 7 COLONNES UTILES</text>
+  <text x="350" y="46" font-family="monospace" font-size="9" fill="#7e8da4" text-anchor="middle">simple, lisible, mis à jour à chaque revue de sprint</text>
+  <!-- Header row -->
+  <rect x="20" y="70" width="660" height="32" rx="4" fill="#915EFF"/>
+  <text x="60" y="91" font-family="monospace" font-size="10" fill="#ffffff" text-anchor="middle" font-weight="bold">Risque</text>
+  <text x="180" y="91" font-family="monospace" font-size="10" fill="#ffffff" text-anchor="middle" font-weight="bold">P</text>
+  <text x="225" y="91" font-family="monospace" font-size="10" fill="#ffffff" text-anchor="middle" font-weight="bold">I</text>
+  <text x="275" y="91" font-family="monospace" font-size="10" fill="#ffffff" text-anchor="middle" font-weight="bold">Score</text>
+  <text x="410" y="91" font-family="monospace" font-size="10" fill="#ffffff" text-anchor="middle" font-weight="bold">Plan de réponse</text>
+  <text x="560" y="91" font-family="monospace" font-size="10" fill="#ffffff" text-anchor="middle" font-weight="bold">Resp.</text>
+  <text x="640" y="91" font-family="monospace" font-size="10" fill="#ffffff" text-anchor="middle" font-weight="bold">Statut</text>
+  <!-- Row 1 -->
+  <rect x="20" y="106" width="660" height="42" fill="#1a1f4e"/>
+  <rect x="20" y="106" width="660" height="42" fill="#fb7185" opacity="0.08"/>
+  <text x="30" y="124" font-family="sans-serif" font-size="9" fill="#cbd5e1">Retard autorisation</text>
+  <text x="30" y="138" font-family="sans-serif" font-size="9" fill="#cbd5e1">accès site collectivité</text>
+  <text x="180" y="131" font-family="monospace" font-size="11" fill="#fb7185" text-anchor="middle" font-weight="bold">H</text>
+  <text x="225" y="131" font-family="monospace" font-size="11" fill="#fb7185" text-anchor="middle" font-weight="bold">H</text>
+  <rect x="252" y="118" width="46" height="20" rx="4" fill="#fb7185"/>
+  <text x="275" y="132" font-family="monospace" font-size="10" fill="#0a0f2e" text-anchor="middle" font-weight="bold">9</text>
+  <text x="310" y="124" font-family="sans-serif" font-size="9" fill="#cbd5e1">Pré-dossier déposé J-60,</text>
+  <text x="310" y="138" font-family="sans-serif" font-size="9" fill="#cbd5e1">site secondaire identifié</text>
+  <text x="560" y="131" font-family="monospace" font-size="9" fill="#67e8f9" text-anchor="middle">PM</text>
+  <rect x="612" y="118" width="56" height="20" rx="4" fill="#fbbf24"/>
+  <text x="640" y="132" font-family="monospace" font-size="9" fill="#0a0f2e" text-anchor="middle" font-weight="bold">ACTIF</text>
+  <!-- Row 2 -->
+  <rect x="20" y="152" width="660" height="42" fill="#1a1f4e"/>
+  <rect x="20" y="152" width="660" height="42" fill="#fbbf24" opacity="0.06"/>
+  <text x="30" y="170" font-family="sans-serif" font-size="9" fill="#cbd5e1">Rupture stock antennes</text>
+  <text x="30" y="184" font-family="sans-serif" font-size="9" fill="#cbd5e1">chez fournisseur unique</text>
+  <text x="180" y="177" font-family="monospace" font-size="11" fill="#fbbf24" text-anchor="middle" font-weight="bold">M</text>
+  <text x="225" y="177" font-family="monospace" font-size="11" fill="#fb7185" text-anchor="middle" font-weight="bold">H</text>
+  <rect x="252" y="164" width="46" height="20" rx="4" fill="#fb923c"/>
+  <text x="275" y="178" font-family="monospace" font-size="10" fill="#0a0f2e" text-anchor="middle" font-weight="bold">6</text>
+  <text x="310" y="170" font-family="sans-serif" font-size="9" fill="#cbd5e1">Sourcing fournisseur</text>
+  <text x="310" y="184" font-family="sans-serif" font-size="9" fill="#cbd5e1">alt., stock tampon 10%</text>
+  <text x="560" y="177" font-family="monospace" font-size="9" fill="#67e8f9" text-anchor="middle">Achats</text>
+  <rect x="612" y="164" width="56" height="20" rx="4" fill="#fbbf24"/>
+  <text x="640" y="178" font-family="monospace" font-size="9" fill="#0a0f2e" text-anchor="middle" font-weight="bold">ACTIF</text>
+  <!-- Row 3 -->
+  <rect x="20" y="198" width="660" height="42" fill="#1a1f4e"/>
+  <rect x="20" y="198" width="660" height="42" fill="#86efac" opacity="0.05"/>
+  <text x="30" y="216" font-family="sans-serif" font-size="9" fill="#cbd5e1">Indisponibilité expert</text>
+  <text x="30" y="230" font-family="sans-serif" font-size="9" fill="#cbd5e1">configuration cœur réseau</text>
+  <text x="180" y="223" font-family="monospace" font-size="11" fill="#fbbf24" text-anchor="middle" font-weight="bold">M</text>
+  <text x="225" y="223" font-family="monospace" font-size="11" fill="#fbbf24" text-anchor="middle" font-weight="bold">M</text>
+  <rect x="252" y="210" width="46" height="20" rx="4" fill="#fbbf24"/>
+  <text x="275" y="224" font-family="monospace" font-size="10" fill="#0a0f2e" text-anchor="middle" font-weight="bold">4</text>
+  <text x="310" y="216" font-family="sans-serif" font-size="9" fill="#cbd5e1">Binôme formé en interne,</text>
+  <text x="310" y="230" font-family="sans-serif" font-size="9" fill="#cbd5e1">docs procédures à jour</text>
+  <text x="560" y="223" font-family="monospace" font-size="9" fill="#67e8f9" text-anchor="middle">Tech lead</text>
+  <rect x="612" y="210" width="56" height="20" rx="4" fill="#86efac"/>
+  <text x="640" y="224" font-family="monospace" font-size="9" fill="#0a0f2e" text-anchor="middle" font-weight="bold">TRAITÉ</text>
+  <!-- Row 4 -->
+  <rect x="20" y="244" width="660" height="42" fill="#1a1f4e"/>
+  <text x="30" y="262" font-family="sans-serif" font-size="9" fill="#cbd5e1">Demandes changements</text>
+  <text x="30" y="276" font-family="sans-serif" font-size="9" fill="#cbd5e1">cosmétiques de dernière min.</text>
+  <text x="180" y="269" font-family="monospace" font-size="11" fill="#86efac" text-anchor="middle" font-weight="bold">F</text>
+  <text x="225" y="269" font-family="monospace" font-size="11" fill="#86efac" text-anchor="middle" font-weight="bold">F</text>
+  <rect x="252" y="256" width="46" height="20" rx="4" fill="#86efac"/>
+  <text x="275" y="270" font-family="monospace" font-size="10" fill="#0a0f2e" text-anchor="middle" font-weight="bold">1</text>
+  <text x="310" y="262" font-family="sans-serif" font-size="9" fill="#cbd5e1">Accepté, traitement en</text>
+  <text x="310" y="276" font-family="sans-serif" font-size="9" fill="#cbd5e1">phase 2 si nécessaire</text>
+  <text x="560" y="269" font-family="monospace" font-size="9" fill="#67e8f9" text-anchor="middle">PO</text>
+  <rect x="612" y="256" width="56" height="20" rx="4" fill="#94a3b8"/>
+  <text x="640" y="270" font-family="monospace" font-size="9" fill="#0a0f2e" text-anchor="middle" font-weight="bold">VEILLE</text>
+  <!-- Footer hint -->
+  <text x="350" y="304" font-family="monospace" font-size="9" fill="#fb923c" text-anchor="middle">10 à 15 risques actifs max — au-delà, dilution et perte d'attention sur les vrais enjeux</text>
+</svg></div>
 
 ## Construire la culture de prévention
 

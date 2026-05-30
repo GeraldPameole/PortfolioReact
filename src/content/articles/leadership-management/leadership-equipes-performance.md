@@ -53,6 +53,88 @@ La grande illusion du leadership, c'est de croire qu'il s'agit d'abord de techni
 
 **5. La gestion des conflits au plus tôt.** Dans une équipe commerciale, les tensions naissent vite — concurrence interne, jalousie sur les primes, désaccords sur les périmètres clients. J'ai appris à intervenir dès les premiers signaux, sans attendre que le problème soit évident. Un conflit latent pendant trois semaines coûte bien plus en énergie collective qu'une conversation difficile tenue rapidement.
 
+<div style="overflow-x:auto;margin:2rem 0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 360" style="max-width:100%;height:auto">
+  <rect width="700" height="360" fill="#0a0f2e" rx="12"/>
+  <text x="350" y="28" font-family="monospace" font-size="13" fill="#00cffd" text-anchor="middle" font-weight="bold">LES 5 LEVIERS QUI ONT FONCTIONNÉ</text>
+  <text x="350" y="46" font-family="monospace" font-size="9" fill="#7e8da4" text-anchor="middle">retour de terrain — équipe de 12 commerciaux SFR (2015-2018)</text>
+  <!-- 5 cards row -->
+  <!-- Card 1 - Vision -->
+  <rect x="20" y="70" width="130" height="270" rx="10" fill="#1a1f4e" stroke="#915EFF" stroke-width="1.5"/>
+  <circle cx="85" cy="105" r="18" fill="#915EFF" opacity="0.2" stroke="#915EFF" stroke-width="1.5"/>
+  <text x="85" y="111" font-family="monospace" font-size="14" fill="#b48bff" text-anchor="middle" font-weight="bold">1</text>
+  <text x="85" y="148" font-family="sans-serif" font-size="11" fill="#b48bff" text-anchor="middle" font-weight="bold">Vision</text>
+  <text x="85" y="162" font-family="sans-serif" font-size="11" fill="#b48bff" text-anchor="middle" font-weight="bold">claire</text>
+  <line x1="35" y1="174" x2="135" y2="174" stroke="#915EFF" stroke-width="0.8" opacity="0.4"/>
+  <text x="85" y="194" font-family="sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">Le "pourquoi"</text>
+  <text x="85" y="208" font-family="sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">avant les chiffres</text>
+  <text x="85" y="222" font-family="sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">hebdo</text>
+  <rect x="35" y="240" width="100" height="22" rx="4" fill="#0a0f2e" stroke="#915EFF" stroke-width="0.8"/>
+  <text x="85" y="255" font-family="monospace" font-size="8" fill="#c4b5fd" text-anchor="middle">Posture</text>
+  <text x="85" y="282" font-family="sans-serif" font-size="8" fill="#fdba74" text-anchor="middle">Pourquoi est-ce</text>
+  <text x="85" y="296" font-family="sans-serif" font-size="8" fill="#fdba74" text-anchor="middle">que ce que je fais</text>
+  <text x="85" y="310" font-family="sans-serif" font-size="8" fill="#fdba74" text-anchor="middle">compte ?</text>
+  <!-- Card 2 - Exemplarité -->
+  <rect x="160" y="70" width="130" height="270" rx="10" fill="#1a1f4e" stroke="#00cffd" stroke-width="1.5"/>
+  <circle cx="225" cy="105" r="18" fill="#00cffd" opacity="0.2" stroke="#00cffd" stroke-width="1.5"/>
+  <text x="225" y="111" font-family="monospace" font-size="14" fill="#67e8f9" text-anchor="middle" font-weight="bold">2</text>
+  <text x="225" y="148" font-family="sans-serif" font-size="11" fill="#67e8f9" text-anchor="middle" font-weight="bold">Exemplarité</text>
+  <text x="225" y="162" font-family="sans-serif" font-size="11" fill="#67e8f9" text-anchor="middle" font-weight="bold">non négo.</text>
+  <line x1="175" y1="174" x2="275" y2="174" stroke="#00cffd" stroke-width="0.8" opacity="0.4"/>
+  <text x="225" y="194" font-family="sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">Ce qu'on demande,</text>
+  <text x="225" y="208" font-family="sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">on l'incarne</text>
+  <text x="225" y="222" font-family="sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">d'abord</text>
+  <rect x="175" y="240" width="100" height="22" rx="4" fill="#0a0f2e" stroke="#00cffd" stroke-width="0.8"/>
+  <text x="225" y="255" font-family="monospace" font-size="8" fill="#67e8f9" text-anchor="middle">Posture</text>
+  <text x="225" y="282" font-family="sans-serif" font-size="8" fill="#fdba74" text-anchor="middle">Ponctualité, prépa,</text>
+  <text x="225" y="296" font-family="sans-serif" font-size="8" fill="#fdba74" text-anchor="middle">mental positif —</text>
+  <text x="225" y="310" font-family="sans-serif" font-size="8" fill="#fdba74" text-anchor="middle">absorbé en miroir</text>
+  <!-- Card 3 - Feedback -->
+  <rect x="300" y="70" width="130" height="270" rx="10" fill="#1a1f4e" stroke="#86efac" stroke-width="1.5"/>
+  <circle cx="365" cy="105" r="18" fill="#86efac" opacity="0.2" stroke="#86efac" stroke-width="1.5"/>
+  <text x="365" y="111" font-family="monospace" font-size="14" fill="#a7f3d0" text-anchor="middle" font-weight="bold">3</text>
+  <text x="365" y="148" font-family="sans-serif" font-size="11" fill="#a7f3d0" text-anchor="middle" font-weight="bold">Feedback</text>
+  <text x="365" y="162" font-family="sans-serif" font-size="11" fill="#a7f3d0" text-anchor="middle" font-weight="bold">individualisé</text>
+  <line x1="315" y1="174" x2="415" y2="174" stroke="#86efac" stroke-width="0.8" opacity="0.4"/>
+  <text x="365" y="194" font-family="sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">30 min hebdo</text>
+  <text x="365" y="208" font-family="sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">par personne,</text>
+  <text x="365" y="222" font-family="sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">pas du contrôle</text>
+  <rect x="315" y="240" width="100" height="22" rx="4" fill="#0a0f2e" stroke="#86efac" stroke-width="0.8"/>
+  <text x="365" y="255" font-family="monospace" font-size="8" fill="#a7f3d0" text-anchor="middle">Posture</text>
+  <text x="365" y="282" font-family="sans-serif" font-size="8" fill="#fdba74" text-anchor="middle">Qu'est-ce qui te</text>
+  <text x="365" y="296" font-family="sans-serif" font-size="8" fill="#fdba74" text-anchor="middle">bloque ? Le manager</text>
+  <text x="365" y="310" font-family="sans-serif" font-size="8" fill="#fdba74" text-anchor="middle">l'ignore souvent</text>
+  <!-- Card 4 - Délégation -->
+  <rect x="440" y="70" width="130" height="270" rx="10" fill="#1a1f4e" stroke="#fbbf24" stroke-width="1.5"/>
+  <circle cx="505" cy="105" r="18" fill="#fbbf24" opacity="0.2" stroke="#fbbf24" stroke-width="1.5"/>
+  <text x="505" y="111" font-family="monospace" font-size="14" fill="#fbbf24" text-anchor="middle" font-weight="bold">4</text>
+  <text x="505" y="148" font-family="sans-serif" font-size="11" fill="#fbbf24" text-anchor="middle" font-weight="bold">Délégation</text>
+  <text x="505" y="162" font-family="sans-serif" font-size="11" fill="#fbbf24" text-anchor="middle" font-weight="bold">contrôle léger</text>
+  <line x1="455" y1="174" x2="555" y2="174" stroke="#fbbf24" stroke-width="0.8" opacity="0.4"/>
+  <text x="505" y="194" font-family="sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">Quoi, quand,</text>
+  <text x="505" y="208" font-family="sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">résultat attendu —</text>
+  <text x="505" y="222" font-family="sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">pas le comment</text>
+  <rect x="455" y="240" width="100" height="22" rx="4" fill="#0a0f2e" stroke="#fbbf24" stroke-width="0.8"/>
+  <text x="505" y="255" font-family="monospace" font-size="8" fill="#fbbf24" text-anchor="middle">Posture</text>
+  <text x="505" y="282" font-family="sans-serif" font-size="8" fill="#fdba74" text-anchor="middle">Le micromanagement</text>
+  <text x="505" y="296" font-family="sans-serif" font-size="8" fill="#fdba74" text-anchor="middle">épuise les deux</text>
+  <text x="505" y="310" font-family="sans-serif" font-size="8" fill="#fdba74" text-anchor="middle">côtés à la fois</text>
+  <!-- Card 5 - Conflits -->
+  <rect x="580" y="70" width="100" height="270" rx="10" fill="#1a1f4e" stroke="#fb7185" stroke-width="1.5"/>
+  <circle cx="630" cy="105" r="18" fill="#fb7185" opacity="0.2" stroke="#fb7185" stroke-width="1.5"/>
+  <text x="630" y="111" font-family="monospace" font-size="14" fill="#fb7185" text-anchor="middle" font-weight="bold">5</text>
+  <text x="630" y="148" font-family="sans-serif" font-size="11" fill="#fb7185" text-anchor="middle" font-weight="bold">Conflits</text>
+  <text x="630" y="162" font-family="sans-serif" font-size="11" fill="#fb7185" text-anchor="middle" font-weight="bold">au plus tôt</text>
+  <line x1="595" y1="174" x2="665" y2="174" stroke="#fb7185" stroke-width="0.8" opacity="0.4"/>
+  <text x="630" y="194" font-family="sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">Premiers</text>
+  <text x="630" y="208" font-family="sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">signaux,</text>
+  <text x="630" y="222" font-family="sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">on intervient</text>
+  <rect x="595" y="240" width="70" height="22" rx="4" fill="#0a0f2e" stroke="#fb7185" stroke-width="0.8"/>
+  <text x="630" y="255" font-family="monospace" font-size="8" fill="#fb7185" text-anchor="middle">Posture</text>
+  <text x="630" y="282" font-family="sans-serif" font-size="8" fill="#fdba74" text-anchor="middle">3 sem. de</text>
+  <text x="630" y="296" font-family="sans-serif" font-size="8" fill="#fdba74" text-anchor="middle">tension &gt;</text>
+  <text x="630" y="310" font-family="sans-serif" font-size="8" fill="#fdba74" text-anchor="middle">1 conv. dure</text>
+</svg></div>
+
 ## Ce que les théories du leadership ne disent pas
 
 Les modèles académiques — leadership situationnel, servant leadership, management par les forces — ont une utilité réelle comme cadre de réflexion. Mais sur le terrain, on n'a pas le temps de se demander dans quel quadrant de la matrice on se trouve.
