@@ -3,6 +3,44 @@
 > Historique des évolutions du site, dérivé du `git log`. Format inspiré de [Keep a Changelog](https://keepachangelog.com/).
 > Type des commits : `feat` (nouvelle fonctionnalité), `fix` (correctif), `perf` (performance), `a11y` (accessibilité), `refactor`, `chore` (outillage), `docs`, `style`.
 
+## 2026-05-31 — Métier Relation Client, automatisation LinkedIn, refonte du corpus mi-2026
+
+### Ajouté
+
+- **5ᵉ métier "Relation Client Premium" (SFR 2005-2009)** : nouvelle fiche `src/content/work/customer-care-officer.md` avec 5 axes (croissance ARPU, portefeuille VIP, fidélisation, data CRM, veille marché) et leurs KPIs. Entrée correspondante dans le CV (`cv.astro` EXPERIENCES) en pied de timeline chronologique. Mapping domaine `relation-client` (rose `#f472b6`, icône 💎) dans `projets.astro` (`CAT_COLOR` + `DOMAIN_TO_CAT`). Tagline et récit `about.astro` mis à jour : "Quatre métiers" → **"Cinq métiers"**. Visuel cover `public/assets/svg/customer-care.svg` (5 tuiles axes en charte rose). (`3929ee2`)
+- **RSS enrichi pour Buffer/LinkedIn auto-drafts** : champs `enclosure` (image article absolutisée → visuel du post LinkedIn, engagement ×3 vs lien nu), `categories` (tags → hashtags suggérés), `author` (attribution propre). Le champ `content` (HTML complet) reste pour RSS-to-email Buttondown. 95 enclosures + 95 authors + 45 categories vérifiés au build. (`eafb43f`)
+- **Redirections 301 Vercel** (`vercel.json`) pour les 9 anciens slugs supprimés ou renommés (préserve le jus SEO Google et évite les 404 sur les bookmarks existants). Couverture : 4 fusions (frameworks JS, tendances web, 3 IA), 2 renommages (`react-performance-optimisation` → `…-2026`, `technologies-javascript-2024` → `…-2026`). (`9e8b8a2`)
+
+### Modifié
+
+- **Fond des fiches métier renforcé** (`projets/[...slug].astro`) — chaque fiche a désormais une signature visuelle par couleur de métier propagée via CSS custom props (`--accent` / `--accent-rgb`) :
+  - Image héro : opacity 0.25 → **0.55** (+120%), saturation 0.6 → 1.05.
+  - 2 orbs colorés dans l'accent au héro + 2 dans le corps (radial-gradient teinté).
+  - Titres `h2` : border + barre underline en accent. `h3`/`em`/`code`/`.metric` en accent.
+  - Sidebar blocks : gradient bg + border + barre top en accent. Pills tech/tag en accent.
+  - Mapping : `relation-client` rose `#f472b6`, `developpement-commercial` orange `#fb923c`, `gestion-projet` bleu `#60a5fa`, `developpement-web` vert `#34d399`, `qualite-process` violet `#a78bfa`, `formation` ambre `#fbbf24`. (`3a2ebcf`)
+- **Refonte du corpus articles mi-2026 — 7 chantiers en parallèle** (`f94b6ff`). Bilan : 95 → **92 articles** (densification : fusion de 7 doublons en 3 articles modernes, renommage de 2 articles `-2024` en `-2026`).
+  1. `strategies-reseaux-sociaux-b2b.md` — nouvelle section "Algorithme LinkedIn 2025-2026" (lien sortant pénalisé / 1er commentaire, dwell time, 3-5 hashtags optimum, carrousel PDF portée ×3, vidéo native, creator badges, engagement 60 min critiques, 1200+ caractères = bonus, recyclage 3-4 sem toléré). Sources Buffer State of Social 2025, Hootsuite Social Trends 2026.
+  2. `web-accessibilite-guide-pratique.md` — nouvelle section "Ce que change l'EAA (depuis juin 2025)" : périmètre obligatoire (e-commerce, banque, transport, audiovisuel), seuil microentreprise 10 salariés ET CA < 2 M€, sanctions jusqu'à 250 000 €, référentiels (RGAA 4.1 + EN 301 549 + WCAG 2.2 AA). WCAG 2.1 → **WCAG 2.2** (juin 2023, 9 nouveaux critères tactile/cognitif).
+  3. `react-performance-optimisation.md` → **`react-performance-2026.md`** (git mv) — avertissement frontal "si vous écrivez encore useMemo/useCallback partout, vous travaillez contre l'outil". Sections React Compiler (auto-memoization, gain ~50% JS client), Stack 2026 (Next 15 + Compiler/Turbopack OU Vite 6 + plugin), Hooks React 19 (`useOptimistic`, `useActionState`, `useFormStatus`, `use()`, Actions, ref-as-prop, Document Metadata native), Server Components + PPR. Diagnostic enrichi (`react-scan`, INP remplace FID).
+  4. `technologies-javascript-2024.md` → **`technologies-javascript-2026.md`** (git mv) — TS 5.7/5.8 + `--isolatedDeclarations` + TC39 décorateurs. Node 22 LTS + `--experimental-strip-types` (TS sans build). Bun 1.x stable (avec nuances). Vite 6 + Environment API. Stack 2026 actualisée.
+  5. **Fusion 2→1** : `frameworks-javascript-analyse-2024.md` + `frameworks-javascript-comparaison-2024.md` → **`frameworks-javascript-2026.md`** — combine "adoption réelle" (State of JS 2024-2025, npm trends) + "méthode de choix objective". Couvre React 19+Compiler, Next 15, Astro 5, Svelte 5+SvelteKit, Solid/SolidStart, TanStack Start, Vue 3/Nuxt 4, Qwik (honnêtement niche), Remix → React Router v7. Section "Ce que vous pouvez ignorer sans remords".
+  6. **Fusion 2→1** : `web-tendances-2025.md` + `tendances-developpement-web-2025.md` → **`tendances-web-2026.md`** — état web mi-2026 : RSC mainstream, React Compiler stable, edge computing (Vercel/CF Workers + D1/Hyperdrive), Astro 5 Server Islands, View Transitions (retard Safari), AI-assisted dev (Cursor/Claude Code/Windsurf/Copilot Workspace), CSS moderne (Container Queries, `:has()`, Subgrid, Popover, Anchor Positioning), impact AEO/SGE.
+  7. **Restructuration 3→2** : `ia-transformation-societe-2024-analyse.md` + `ia-transformation-societe-2024.md` + `intelligence-artificielle-transformation-marketing.md` → **`ia-workflows-pro-2026.md`** + **`ia-marketing-2026.md`** — article 1 : ère des agents (Operator/Claude Agent SDK/Manus), MCP standard de facto, coding agents (Claude Code/Cursor/Windsurf/Devin), orchestration LLM + outils. Article 2 : effondrement SEO informationnel (Google AI Overviews, Perplexity), AEO, contenu IA détectable et pénalisé, attribution cassée par LLMs, Claude Sonnet 4.6 / Opus 4.7 / Haiku 4.5, chute prix inférence ~10× depuis 2023.
+
+### Cohérence
+
+- **5 fichiers livre auto-corrigés** par les agents (liens internes vers les nouveaux slugs) : `clean-code.md`, `eloquent-javascript.md`, `lean-startup.md`, `zero-to-one.md`, `src/config/featured-articles.ts`.
+- **0 référence orpheline** aux 9 anciens slugs dans `src/` (vérifié `rg`).
+- **Charte SVG respectée** sur tous les nouveaux blocs : viewBox 700×320/360, palette charte (`#0a0f2e`, `#915EFF`, `#00cffd`, `#86efac`, `#fb923c`, `#fbbf24`), **0 ligne blanche** dans les blocs `<svg>…</svg>` (CommonMark fermerait le bloc HTML sinon).
+
+### Métriques
+
+- **Articles** : 95 → 92 (−3 doublons nets).
+- **Pages buildées** : 250 → **262** (+12, nouvelles routes incluses).
+- **Métiers** : 4 → **5** (Relation Client Premium ajouté).
+- **Fiches métier** : 5 → **6** (`/projets/customer-care-officer/`).
+
 ## 2026-05-28 — Robustesse contenu, types et UX
 
 ### Corrigé
