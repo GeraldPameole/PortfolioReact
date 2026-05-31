@@ -7,6 +7,11 @@ domain: gestion-projet
 image: "/images/themes/management.webp"
 pillColor: blue
 theme: gestion
+tags:
+  - gestion-projet
+  - agile
+  - scrum
+  - kanban
 ---
 
 ## Pourquoi la question n'est pas "quelle méthode est la meilleure ?"

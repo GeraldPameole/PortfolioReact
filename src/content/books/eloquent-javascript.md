@@ -13,8 +13,8 @@ relatedContent:
   - title: "Frameworks JavaScript en 2026 : adopter ou attendre"
     url: "/blog/developpement-web/frameworks-javascript-2026"
     type: "article"
-  - title: "Progressive Web Apps en 2024 : L'Avenir du Web Mobile"
-    url: "/blog/developpement-web/progressive-web-apps-2024"
+  - title: "PWA en 2026 : quand c'est pertinent, quand ce ne l'est pas"
+    url: "/blog/developpement-web/progressive-web-apps-2026"
     type: "article"
   - title: "Clean Code"
     url: "/livres/clean-code"
@@ -38,7 +38,7 @@ La troisième édition mise à jour intègre les évolutions récentes du langag
 Si vous avez apprécié "Eloquent JavaScript", ces ressources pourraient vous intéresser :
 
 - [Frameworks JavaScript en 2026 : adopter ou attendre](/blog/developpement-web/frameworks-javascript-2026) - Pour appliquer vos connaissances JavaScript dans un framework moderne
-- [Progressive Web Apps en 2024 : L'Avenir du Web Mobile](/blog/developpement-web/progressive-web-apps-2024) - Pour créer des applications web avancées avec JavaScript
+- [PWA en 2026 : quand c'est pertinent, quand ce ne l'est pas](/blog/developpement-web/progressive-web-apps-2026) - Pour créer des applications web installables et offline avec JavaScript
 - [Clean Code](/livres/clean-code) - Pour perfectionner vos compétences d'écriture de code de qualité
 
 **Note des lecteurs : 4.8/5** - Un ouvrage qui transforme la façon dont vous concevez la programmation JavaScript

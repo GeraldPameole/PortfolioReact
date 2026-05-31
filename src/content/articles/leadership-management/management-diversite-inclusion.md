@@ -7,6 +7,11 @@ domain: leadership-management
 image: "/images/themes/management.webp"
 pillColor: purple
 theme: gestion
+tags:
+  - management
+  - diversite
+  - inclusion
+  - biais
 ---
 
 Je travaille dans des environnements professionnels où la diversité est un sujet permanent. Conférences, chartes, comités dédiés, formations obligatoires. Et pourtant, quand je regarde les comités de direction, les promotions accordées, les opportunités de développement distribuées, les schémas restent souvent les mêmes.

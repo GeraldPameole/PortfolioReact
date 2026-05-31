@@ -45,6 +45,11 @@
       "source": "/blog/innovation-technologies/intelligence-artificielle-transformation-marketing",
       "destination": "/blog/innovation-technologies/ia-marketing-2026/",
       "permanent": true
+    },
+    {
+      "source": "/blog/developpement-web/progressive-web-apps-2024",
+      "destination": "/blog/developpement-web/progressive-web-apps-2026/",
+      "permanent": true
     }
   ]
 }

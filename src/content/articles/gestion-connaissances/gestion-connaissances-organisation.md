@@ -7,6 +7,11 @@ domain: gestion-connaissances
 image: "/images/themes/management.webp"
 pillColor: violet
 theme: gestion
+tags:
+  - gestion-connaissances
+  - documentation
+  - partage
+  - organisation
 ---
 
 Dans toutes les organisations que j'ai traversées ou accompagnées, j'ai observé le même paradoxe : des professionnels très compétents qui gardent leur savoir pour eux, et des directions qui se plaignent que l'information ne circule pas. Les deux ont tort, et les deux ont raison. Le problème n'est ni le manque de bonne volonté ni un défaut de culture — c'est l'absence d'un système qui rend le partage plus facile que la rétention.

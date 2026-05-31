@@ -7,6 +7,11 @@ domain: gestion-talents
 image: "/images/themes/management.webp"
 pillColor: teal
 theme: gestion
+tags:
+  - gestion-talents
+  - remuneration
+  - motivation
+  - package
 ---
 
 ## Ce que j'ai appris en fixant les variables de 12 commerciaux

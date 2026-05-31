@@ -7,6 +7,11 @@ domain: transformation-digitale
 image: "/images/themes/ia.webp"
 pillColor: pink
 theme: technologie
+tags:
+  - transformation-digitale
+  - processus
+  - conduite-changement
+  - maturite-digitale
 ---
 
 ## Pourquoi la plupart des transformations numériques commencent mal

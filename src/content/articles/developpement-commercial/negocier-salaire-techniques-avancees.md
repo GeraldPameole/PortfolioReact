@@ -7,6 +7,11 @@ domain: developpement-commercial
 image: "/images/themes/management.webp"
 pillColor: orange
 theme: carriere
+tags:
+  - carriere
+  - negociation
+  - salaire
+  - developpement-commercial
 ---
 
 ## Pourquoi la plupart des gens négocient mal leur salaire

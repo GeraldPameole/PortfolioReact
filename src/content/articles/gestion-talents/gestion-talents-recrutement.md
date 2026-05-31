@@ -7,6 +7,11 @@ domain: gestion-talents
 image: "/images/themes/management.webp"
 pillColor: teal
 theme: gestion
+tags:
+  - gestion-talents
+  - recrutement
+  - entretien
+  - biais
 ---
 
 Quand j'ai pris la direction commerciale d'une équipe de douze personnes chez SFR en 2015, j'ai commis l'une des erreurs classiques du recrutement : recruter vite pour combler un poste vacant. Le résultat ? Un collaborateur parti au bout de quatre mois, un poste à réouvrir, et une équipe déstabilisée pendant deux trimestres. Cette expérience m'a convaincu que recruter est un acte de management stratégique, pas une urgence administrative.

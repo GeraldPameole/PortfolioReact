@@ -7,6 +7,11 @@ domain: developpement-commercial
 image: "/images/themes/management.webp"
 pillColor: orange
 theme: carriere
+tags:
+  - recrutement
+  - talents
+  - digital
+  - management
 ---
 
 ## Le problème réel du recrutement tech

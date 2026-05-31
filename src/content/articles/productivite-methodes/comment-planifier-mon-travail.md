@@ -7,6 +7,11 @@ domain: productivite-methodes
 image: "/images/themes/productivite.webp"
 pillColor: indigo
 theme: carriere
+tags:
+  - productivite
+  - planification
+  - organisation
+  - methodes
 ---
 
 ## Pourquoi la liste de tâches ne suffit pas

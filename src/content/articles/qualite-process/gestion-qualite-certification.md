@@ -7,6 +7,11 @@ domain: qualite-process
 image: "/images/themes/management.webp"
 pillColor: purple
 theme: gestion
+tags:
+  - qualite
+  - iso-9001
+  - certification
+  - process
 ---
 
 ## Ce que ISO 9001 demande vraiment — et ce qu'on croit à tort

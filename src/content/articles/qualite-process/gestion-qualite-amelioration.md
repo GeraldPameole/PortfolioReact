@@ -7,6 +7,11 @@ domain: qualite-process
 image: "/images/themes/management.webp"
 pillColor: purple
 theme: gestion
+tags:
+  - qualite
+  - kaizen
+  - amelioration-continue
+  - management
 ---
 
 L'amélioration continue, c'est l'un de ces sujets où l'écart entre la théorie et le terrain est brutal. On te vend des transformations massives, des programmes sur 18 mois, des cabinets de conseil avec des livrables en PowerPoint. Puis six mois après le lancement, tout retombe. Les équipes ont repris leurs habitudes, les indicateurs sont remontés dans un tiroir, et tout le monde a oublié.

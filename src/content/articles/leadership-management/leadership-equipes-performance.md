@@ -7,6 +7,11 @@ domain: leadership-management
 image: "/images/themes/management.webp"
 pillColor: purple
 theme: gestion
+tags:
+  - management
+  - leadership
+  - performance
+  - equipe
 ---
 
 ## Ce qu'on apprend en gérant une équipe de 12 commerciaux

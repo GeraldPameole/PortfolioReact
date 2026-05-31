@@ -7,6 +7,11 @@ domain: gestion-talents
 image: "/images/themes/management.webp"
 pillColor: teal
 theme: gestion
+tags:
+  - gestion-talents
+  - competences
+  - skills-matrix
+  - succession
 ---
 
 Dans mon équipe commerciale chez SFR, il y avait un commercial — appelons-le Thomas — qui maîtrisait mieux que quiconque la négociation sur les contrats d'entreprise complexes. Quand il était absent, les autres se débrouillaient tant bien que mal, mais les dossiers sensibles attendaient son retour. Quand il est parti pour un concurrent en 2017, on a réalisé qu'on avait une dépendance critique à une seule personne. Ce type de situation est évitable. Mais ça demande d'avoir cartographié les compétences avant que la crise arrive.

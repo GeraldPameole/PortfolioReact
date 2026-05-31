@@ -7,6 +7,11 @@ domain: formation
 image: "/images/themes/formation-carriere.webp"
 pillColor: red
 theme: formation
+tags:
+  - formation
+  - elearning
+  - blended-learning
+  - pedagogie
 ---
 
 <div style="overflow-x:auto;margin:2rem 0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 360" style="max-width:100%;height:auto">

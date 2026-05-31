@@ -7,6 +7,11 @@ domain: gestion-projet
 image: "/images/themes/management.webp"
 pillColor: blue
 theme: gestion
+tags:
+  - gestion-projet
+  - risques
+  - anticipation
+  - methodologie
 ---
 
 La gestion des risques est l'une des disciplines où l'écart entre la théorie et la pratique est le plus brutal. En théorie : registre des risques, matrice probabilité/impact, plans de réponse documentés. En pratique, sur un chantier de déploiement réseau ou une migration d'infrastructure : un technicien bloqué sur site parce qu'une autorisation d'accès a été oubliée, un équipement qui arrive avec trois semaines de retard sans qu'aucun plan B n't ait été préparé.

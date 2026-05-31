@@ -7,6 +7,11 @@ domain: developpement-web
 image: "/images/themes/dev-web.webp"
 pillColor: green
 theme: technologie
+tags:
+  - developpement
+  - javascript
+  - es2022
+  - bonnes-pratiques
 ---
 
 Sur les revues de code chez ACTIV PARTNERS, j'ai vu des collègues écrire des conditions à cinq niveaux d'imbrication pour accéder à une propriété potentiellement nulle. Ce n'est pas une question de compétence — c'est une habitude héritée d'une époque où JavaScript n'avait pas les outils pour faire mieux. Aujourd'hui, ces outils existent, ils sont supportés nativement par tous les navigateurs modernes, et ils simplifient le code de façon concrète.

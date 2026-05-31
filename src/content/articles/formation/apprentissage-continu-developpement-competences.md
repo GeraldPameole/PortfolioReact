@@ -7,6 +7,11 @@ domain: formation
 image: "/images/themes/formation-carriere.webp"
 pillColor: red
 theme: formation
+tags:
+  - formation
+  - apprentissage
+  - competences
+  - culture-apprenante
 ---
 
 Quand j'ai rejoint l'équipe formation de SFR en 2012, le plan de formation ressemblait à une liste de sessions planifiées deux fois par an. On convoquait les collaborateurs en salle, on leur délivrait du contenu pendant deux jours, et on cochait la case. Taux de satisfaction correct. Impact sur le terrain : difficile à mesurer.

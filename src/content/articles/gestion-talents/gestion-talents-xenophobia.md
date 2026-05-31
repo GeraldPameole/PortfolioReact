@@ -7,6 +7,11 @@ domain: gestion-talents
 image: "/images/themes/management.webp"
 pillColor: teal
 theme: gestion
+tags:
+  - management
+  - diversite
+  - multiculturel
+  - inclusion
 ---
 
 Chez KEOS TELECOM, j'ai eu la chance de travailler avec des profils venant de sept pays différents sur un même projet. Et j'ai commis la même erreur que beaucoup de managers au départ : croire que la diversité culturelle se gère avec de la bonne volonté et quelques formations sur les "clichés à éviter". La réalité est plus subtile et plus riche que ça.

@@ -7,6 +7,11 @@ domain: formation
 image: "/images/themes/formation-carriere.webp"
 pillColor: red
 theme: formation
+tags:
+  - formation
+  - competences
+  - technique
+  - gestion-projet
 ---
 
 Je ne suis pas développeur. Je suis chef de projet, et j'ai passé plusieurs années à coordonner des équipes techniques — des équipes qui codent, qui administrent des systèmes, qui déploient des infrastructures. La question que j'ai dû résoudre n'était pas "comment devenir technique" mais "comment collaborer efficacement avec des gens qui le sont". C'est une question très différente, et la réponse l'est tout autant.

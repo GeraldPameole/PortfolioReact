@@ -7,6 +7,11 @@ domain: gestion-talents
 image: "/images/themes/management.webp"
 pillColor: teal
 theme: gestion
+tags:
+  - gestion-talents
+  - retention
+  - departs
+  - entretien-maintien
 ---
 
 ## Ce qu'on croit savoir sur les raisons de départ

@@ -7,6 +7,11 @@ domain: gestion-talents
 image: "/images/themes/management.webp"
 pillColor: teal
 theme: gestion
+tags:
+  - management
+  - bien-etre
+  - qvt
+  - charge-de-travail
 ---
 
 Quand j'entends "bien-être au travail", je pense immédiatement aux deux cas extrêmes que j'ai croisés dans ma carrière. D'un côté, une organisation qui avait installé un baby-foot, commandé des fruits le mardi, et lancé un programme de méditation — pendant que la charge de travail avait augmenté de trente pour cent sans que les effectifs suivent. De l'autre, une équipe sans aucune initiative "bien-être", mais avec un manager qui gérait les plannings avec bon sens, qui donnait du feedback honnête, et où le taux d'absentéisme était le plus bas de l'entreprise.

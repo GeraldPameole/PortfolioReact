@@ -7,6 +7,11 @@ domain: gestion-projet
 image: "/images/themes/management.webp"
 pillColor: blue
 theme: gestion
+tags:
+  - gestion-projet
+  - agile
+  - scrum
+  - telecom
 ---
 
 Appliquer Agile à des projets d'infrastructure télécom, c'est naviguer entre deux réalités qui se frottent : la flexibilité itérative du manifeste Agile d'un côté, les contraintes dures de la maintenance réseau de l'autre — fenêtres d'intervention planifiées, coordination avec les opérateurs, validation technique en cascade. Chez KEOS TELECOM, j'ai appris à tirer parti de la structure Scrum sans la plaquer mécaniquement sur un contexte qui la digère mal.

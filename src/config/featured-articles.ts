@@ -7,7 +7,7 @@ export const FEATURED_ARTICLES_BY_DOMAIN = {
   ],
   "developpement-web": [
     "frameworks-javascript-2026",
-    "progressive-web-apps-2024",
+    "progressive-web-apps-2026",
   ],
   "qualite-process": [
     "gestion-qualite-amelioration",

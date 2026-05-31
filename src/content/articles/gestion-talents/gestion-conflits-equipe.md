@@ -7,6 +7,11 @@ domain: gestion-talents
 image: "/images/themes/management.webp"
 pillColor: teal
 theme: gestion
+tags:
+  - management
+  - conflits
+  - mediation
+  - equipe
 ---
 
 J'ai fait une erreur classique en début de carrière : laisser un désaccord entre deux commerciaux de mon équipe se régler tout seul. La logique semblait bonne — des adultes professionnels capables de gérer leurs différends. Six semaines plus tard, ce qui était une friction sur la répartition des comptes clients était devenu un conflit ouvert qui polluait les réunions d'équipe et prenait de l'espace dans mes one-on-one. J'aurais dû intervenir à la semaine deux. J'ai appris depuis que les conflits ne se résolvent jamais tout seuls — ils se déplacent et s'amplifient.

@@ -7,6 +7,11 @@ domain: gestion-projet
 image: "/images/themes/management.webp"
 pillColor: blue
 theme: gestion
+tags:
+  - gestion-projet
+  - retrospective
+  - evaluation
+  - feedback
 ---
 
 ## L'évaluation telle qu'on la pratique — et pourquoi ça ne fonctionne pas

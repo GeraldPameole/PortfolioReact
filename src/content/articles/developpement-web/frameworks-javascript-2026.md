@@ -7,6 +7,11 @@ domain: developpement-web
 image: "/images/themes/dev-web.webp"
 pillColor: green
 theme: technologie
+tags:
+  - developpement
+  - javascript
+  - frameworks
+  - react
 ---
 
 Chez ACTIV PARTNERS, j'ai démarré plusieurs projets sous WordPress puis React parce que c'était la norme implicite de l'équipe. Rétrospectivement, deux de ces projets auraient été plus rapides à livrer avec Vue, et un troisième serait parti directement en Astro si j'avais eu le recul que j'ai aujourd'hui. Pas parce que React est mauvais — il est excellent — mais parce qu'on avait choisi l'outil par réflexe, pas par analyse.

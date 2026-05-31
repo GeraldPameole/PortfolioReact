@@ -8,6 +8,11 @@ domain: developpement-web
 image: "/images/themes/dev-web.webp"
 pillColor: green
 theme: technologie
+tags:
+  - accessibilite
+  - wcag
+  - eaa
+  - developpement
 ---
 
 L'accessibilité web est un de ces sujets que tout le monde cite mais que peu de développeurs regardent vraiment dans le blanc des yeux. Quand je travaillais sur des projets web chez ACTIV PARTNERS, l'accessibilité apparaissait rarement dans les spécifications, et quand elle y apparaissait, c'était sous forme de cases à cocher sans vrai sens opérationnel. Ce que j'ai appris depuis, c'est que l'essentiel de ce qui bloque les utilisateurs en situation de handicap se règle avec quatre corrections, et que la moitié d'entre elles améliorent aussi l'expérience pour tout le monde.

@@ -7,6 +7,11 @@ domain: gestion-talents
 image: "/images/themes/management.webp"
 pillColor: teal
 theme: gestion
+tags:
+  - gestion-talents
+  - reconnaissance
+  - autonomie
+  - management
 ---
 
 Quand j'ai rejoint KEOS TELECOM comme chef de projet en 2021, j'ai hérité d'une équipe technique compétente et silencieuse. Pas de conflits, pas de retours négatifs — mais pas d'élan non plus. En creusant, j'ai compris ce qui manquait : personne ne leur avait dit, depuis longtemps, que leur travail comptait vraiment.

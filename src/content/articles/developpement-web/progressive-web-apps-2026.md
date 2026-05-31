@@ -1,12 +1,18 @@
 ---
-title: "PWA en 2025 : quand c'est pertinent, quand ce ne l'est pas"
-description: "Progressive Web Apps vs app native vs site responsive — les 3 composants clés, les vraies limites sur iOS, et les cas d'usage où ça a du sens."
+title: "PWA en 2026 : quand c'est pertinent, quand ce ne l'est pas"
+description: "Progressive Web Apps vs app native vs site responsive en 2026 — les 3 composants clés, les limites résiduelles sur iOS 18+, et les cas d'usage où ça a du sens."
 publishDate: "2025-02-03"
+updatedDate: "2026-05-31"
 type: article
 domain: developpement-web
 image: "/images/themes/dev-web.webp"
 pillColor: green
 theme: technologie
+tags:
+  - developpement
+  - pwa
+  - mobile
+  - web
 ---
 
 ## Le problème avec les PWA : tout le monde en parle, peu savent choisir
@@ -78,11 +84,11 @@ Une Progressive Web App n'est pas une solution universelle. C'est une réponse �
 
 Une PWA repose sur trois piliers techniques. Sans les trois, on n'a pas une PWA — on a soit un site avec du cache, soit un site installable mais fragile.
 
-**Le Service Worker** est le cerveau de l'affaire. C'est un script JavaScript qui tourne en arrière-plan, indépendamment de la page. Il intercepte les requêtes réseau et décide quoi faire : aller chercher en cache, aller chercher sur le réseau, ou faire les deux en parallèle. C'est lui qui permet le mode offline et qui gère les stratégies de cache. L'écrire à la main est laborieux — la librairie Workbox de Google simplifie considérablement le travail.
+**Le Service Worker** est le cerveau de l'affaire. C'est un script JavaScript qui tourne en arrière-plan, indépendamment de la page. Il intercepte les requêtes réseau et décide quoi faire : aller chercher en cache, aller chercher sur le réseau, ou faire les deux en parallèle. C'est lui qui permet le mode offline et qui gère les stratégies de cache. L'écrire à la main est laborieux — la librairie Workbox de Google (v7 stable en 2026) simplifie considérablement le travail. Sur un projet Vite, le plugin `vite-plugin-pwa` est devenu le défaut de fait : il génère le manifest, enregistre le service worker et intègre Workbox sans configuration lourde.
 
 **Le Web App Manifest** est un fichier JSON qui décrit l'application : nom, icônes, couleur de thème, mode d'affichage (standalone pour cacher l'interface du navigateur). C'est ce fichier qui permet au navigateur de proposer l'installation sur l'écran d'accueil. Sans lui, pas d'installation possible.
 
-**HTTPS** est un prérequis non négociable. Les Service Workers ne fonctionnent que sur des connexions sécurisées. C'est une protection contre les attaques de type man-in-the-middle sur du code qui intercepte le réseau. En 2025, HTTPS est gratuit via Let's Encrypt — ce n'est plus une contrainte budgétaire, juste une étape de configuration.
+**HTTPS** est un prérequis non négociable. Les Service Workers ne fonctionnent que sur des connexions sécurisées. C'est une protection contre les attaques de type man-in-the-middle sur du code qui intercepte le réseau. En 2026, HTTPS est gratuit via Let's Encrypt et activé par défaut sur la quasi-totalité des hébergeurs (Vercel, Netlify, OVH, Cloudflare Pages) — ce n'est plus une contrainte, juste une étape de configuration.
 
 <div style="overflow-x:auto;margin:2rem 0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 360" style="max-width:100%;height:auto">
   <rect width="700" height="360" fill="#0a0f2e"/>
@@ -130,13 +136,13 @@ Une PWA repose sur trois piliers techniques. Sans les trois, on n'a pas une PWA 
   <text x="350" y="335" font-family="monospace" font-size="9" fill="#fbbf24" text-anchor="middle">Sans les 3 couches actives, la PWA est incomplète</text>
 </svg></div>
 
-## Les vraies limites sur iOS
+## Les limites résiduelles sur iOS en 2026
 
-Apple a longtemps traîné les pieds sur les PWA. En 2025, iOS supporte les Service Workers et l'installation sur l'écran d'accueil, mais avec des restrictions importantes.
+Apple a longtemps traîné les pieds sur les PWA. Depuis iOS 16.4 (mars 2023), Safari supporte les Web Push notifications pour les PWA installées sur l'écran d'accueil, et avec iOS 18 le support est devenu suffisamment stable pour la prod. Mais des restrictions importantes demeurent en 2026.
 
-Les notifications push restent partiellement supportées et peu fiables selon les versions d'iOS. L'accès aux fonctionnalités hardware — Bluetooth, NFC, accès complet à la caméra pour certains usages — est plus restreint que sur Android. Le stockage en cache est limité et peut être purgé par iOS en cas de pression mémoire, ce qui casse l'expérience offline si on ne l'a pas anticipé.
+Les notifications push n'arrivent que si l'utilisateur a explicitement ajouté la PWA à son écran d'accueil — pas depuis Safari ouvert dans un onglet, contrairement à Android. Le taux de conversion "visite Safari → installation home screen → opt-in notifs" reste très faible (~2-5 % selon les retours observés), bien en dessous de ce qu'on obtient avec une vraie app native distribuée sur l'App Store. L'accès aux fonctionnalités hardware — Bluetooth, NFC, accès complet à la caméra pour certains usages — est plus restreint que sur Android. Le stockage en cache est limité et peut être purgé par iOS si la PWA n'est pas ouverte pendant plusieurs semaines, ce qui casse l'expérience offline si on ne l'a pas anticipé.
 
-Concrètement : si votre audience est majoritairement sur iOS et que votre application dépend de notifications push ou d'un accès hardware avancé, une PWA ne suffira pas. Si votre audience est mixte et que les cas d'usage principaux sont l'accès rapide et l'utilisation offline basique, la PWA est viable.
+Concrètement : si votre audience est majoritairement sur iOS et que votre application dépend d'un funnel push fiable ou d'un accès hardware avancé, une PWA ne suffira pas. Si votre audience est mixte et que les cas d'usage principaux sont l'accès rapide et l'utilisation offline basique, la PWA est viable — d'autant qu'en 2026 vous pouvez également la publier sur le Google Play Store via Bubblewrap/TWA sans réécrire de code Android.
 
 ## Cas d'usage où une PWA a du sens
 

@@ -7,6 +7,11 @@ domain: outils-techniques
 image: "/images/themes/dev-web.webp"
 pillColor: slate
 theme: technologie
+tags:
+  - outils
+  - mermaid
+  - visualisation
+  - documentation
 ---
 
 ## Mermaid en situation réelle : trois cas qui ont changé ma façon de travailler

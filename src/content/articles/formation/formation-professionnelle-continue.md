@@ -7,6 +7,11 @@ domain: formation
 image: "/images/themes/formation-carriere.webp"
 pillColor: red
 theme: formation
+tags:
+  - formation
+  - retention
+  - talents
+  - management
 ---
 
 Il y a une question que j'ai entendue souvent chez les managers de SFR, surtout au moment des entretiens annuels : "Et si je forme mon collaborateur et qu'il part ?" La réponse que j'ai fini par donner, après des mois à piloter des dispositifs de formation pour plus de 500 collaborateurs : "Et si vous ne le formez pas, et qu'il reste ?"

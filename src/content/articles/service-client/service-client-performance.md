@@ -2,6 +2,7 @@
 title: "Performance du service client : KPIs, réclamations et cas difficiles"
 description: "Les KPIs qui comptent vraiment (FCR, AHT, NPS, CSAT, taux d'abandon), comment exploiter les réclamations pour améliorer les processus, et former les équipes aux situations difficiles."
 publishDate: "2026-10-05"
+updatedDate: "2026-05-31"
 type: article
 domain: service-client
 image: "/images/themes/management.webp"
@@ -186,4 +187,56 @@ Un tableau de bord qui ne génère pas de décision est une dépense inutile. Ch
 
 Cette discipline de la décision automatique évite les réunions qui concluent "c'est préoccupant, à surveiller". Elle force l'action. Et c'est l'action, pas l'analyse, qui améliore la performance d'un service client.
 
-> **Le fond de l'affaire** — La performance d'un service client se pilote avec cinq KPIs bien compris (FCR, AHT, CSAT, NPS, taux d'abandon), des réclamations classifiées pour identifier les causes racines des processus défaillants, et des équipes formées aux situations difficiles par l'entraînement sur cas réels. Chaque indicateur doit déclencher une règle de décision : sans action associée, un tableau de bord ne sert qu'à se donner bonne conscience.
+## KPIs qui comptent vraiment — l'expérience du portefeuille premium
+
+Quand je dis qu'un tableau de bord doit générer une décision, ce n'est pas une posture théorique. C'est ce que j'ai construit, jour après jour, sur le portefeuille premium SFR que j'ai piloté entre 2005 et 2009. À l'époque, ce que la hiérarchie regardait, c'était surtout le nombre d'appels traités et le volume de souscriptions. Ce que je regardais, moi, sur mes 200 comptes VIP en moyenne, c'était trois choses : l'ARPU, la précision du scoring churn, et l'efficacité comparée des actions ciblées.
+
+**ARPU +12 %/an** sur le portefeuille suivi, **LTV de 950 € par client/an**. Ces deux chiffres, regardés ensemble et au mois, racontent une histoire que le volume d'appels ne raconte jamais : est-ce que la relation client crée de la valeur, ou est-ce qu'elle ne fait que maintenir un débit ? Quand on pilote sur le volume, on est content d'avoir traité 1 200 appels dans le mois. Quand on pilote sur l'ARPU et la LTV, on se demande pourquoi les 30 % d'upsell réussis ne génèrent en moyenne que +18 € par client/mois — et on se met à travailler la qualité des conversations, pas leur quantité.
+
+**Score de churn avec plus de 60 % de précision** sur les comptes à risque. Cet indicateur, je l'ai appris à mes dépens, n'a de valeur que si on l'utilise. Pendant les premiers mois, j'avais le score, mais je continuais à traiter les comptes dans l'ordre des sollicitations entrantes. Le jour où on a basculé sur "le score pilote la priorité des contacts", l'efficacité a sauté.
+
+**+25 % d'efficacité des campagnes ciblées vs envois génériques**. Cet écart, mesuré sur la même base et la même offre, c'est la preuve chiffrée qu'un message contextualisé sur un persona pèse plus qu'un message générique envoyé à 100 % du portefeuille. Sur les **5 personas comportementaux** qu'on avait construits et activés en campagne, certains performaient à +40 %. D'autres à +10 %. Mais aucun ne descendait sous l'efficacité du message générique.
+
+L'enseignement clé que je tire de cette période : **mesurer l'ARPU et le NPS au quotidien évite de piloter au rétroviseur**. Quand on découvre en fin de trimestre que l'ARPU a baissé, c'est trop tard pour comprendre pourquoi — on a perdu le contexte des conversations qui ont produit le résultat. Quand on regarde l'ARPU semaine après semaine, on voit la corrélation avec les actions du moment : la campagne du mardi, le nouveau pitch d'upsell du lundi, le départ de tel concurrent.
+
+<div style="overflow-x:auto;margin:2rem 0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 360" style="max-width:100%;height:auto">
+  <rect width="700" height="360" fill="#0a0f2e" rx="12"/>
+  <text x="350" y="30" text-anchor="middle" fill="#ffffff" font-family="system-ui,sans-serif" font-size="15" font-weight="700">KPIs vanity vs KPIs actionnables — service client</text>
+  <text x="350" y="52" text-anchor="middle" fill="#94a3b8" font-family="system-ui,sans-serif" font-size="11">Ce qui rassure le management vs ce qui pilote la valeur</text>
+  <!-- Left column: Vanity -->
+  <rect x="40" y="72" width="300" height="260" rx="10" fill="#f87171" fill-opacity="0.08" stroke="#f87171" stroke-width="1.5"/>
+  <text x="190" y="98" text-anchor="middle" fill="#f87171" font-family="system-ui,sans-serif" font-size="13" font-weight="700">KPIs vanity</text>
+  <text x="190" y="114" text-anchor="middle" fill="#94a3b8" font-family="system-ui,sans-serif" font-size="10">Faciles a montrer, durs a actionner</text>
+  <!-- vanity items -->
+  <text x="60" y="142" fill="#f87171" font-family="system-ui,sans-serif" font-size="11" font-weight="700">Nombre d'appels traites</text>
+  <text x="60" y="158" fill="#94a3b8" font-family="system-ui,sans-serif" font-size="10">Mesure le debit, pas la valeur creee</text>
+  <text x="60" y="184" fill="#f87171" font-family="system-ui,sans-serif" font-size="11" font-weight="700">Duree moyenne d'appel seule</text>
+  <text x="60" y="200" fill="#94a3b8" font-family="system-ui,sans-serif" font-size="10">Pousse a raccourcir, pas a resoudre</text>
+  <text x="60" y="226" fill="#f87171" font-family="system-ui,sans-serif" font-size="11" font-weight="700">Score satisfaction global mensuel</text>
+  <text x="60" y="242" fill="#94a3b8" font-family="system-ui,sans-serif" font-size="10">Trop agrege pour identifier la cause</text>
+  <text x="60" y="268" fill="#f87171" font-family="system-ui,sans-serif" font-size="11" font-weight="700">Volume de souscriptions brutes</text>
+  <text x="60" y="284" fill="#94a3b8" font-family="system-ui,sans-serif" font-size="10">Ignore le churn et la marge</text>
+  <text x="60" y="310" fill="#f87171" font-family="system-ui,sans-serif" font-size="11" font-weight="700">Taux d'ouverture des emails</text>
+  <text x="60" y="326" fill="#94a3b8" font-family="system-ui,sans-serif" font-size="10">Aucun lien avec la conversion reelle</text>
+  <!-- Arrow between columns -->
+  <path d="M 350 200 L 370 200 L 365 195 M 370 200 L 365 205" stroke="#00cffd" stroke-width="2" fill="none"/>
+  <!-- Right column: Actionnable -->
+  <rect x="380" y="72" width="280" height="260" rx="10" fill="#86efac" fill-opacity="0.10" stroke="#86efac" stroke-width="1.5"/>
+  <text x="520" y="98" text-anchor="middle" fill="#86efac" font-family="system-ui,sans-serif" font-size="13" font-weight="700">KPIs actionnables</text>
+  <text x="520" y="114" text-anchor="middle" fill="#94a3b8" font-family="system-ui,sans-serif" font-size="10">Chaque chiffre declenche une action</text>
+  <!-- actionable items -->
+  <text x="400" y="142" fill="#86efac" font-family="system-ui,sans-serif" font-size="11" font-weight="700">ARPU par segment</text>
+  <text x="400" y="158" fill="#94a3b8" font-family="system-ui,sans-serif" font-size="10">SFR : +12 %/an sur premium</text>
+  <text x="400" y="184" fill="#86efac" font-family="system-ui,sans-serif" font-size="11" font-weight="700">LTV par client</text>
+  <text x="400" y="200" fill="#94a3b8" font-family="system-ui,sans-serif" font-size="10">SFR : 950 EUR/an par VIP</text>
+  <text x="400" y="226" fill="#86efac" font-family="system-ui,sans-serif" font-size="11" font-weight="700">Score de churn predictif</text>
+  <text x="400" y="242" fill="#94a3b8" font-family="system-ui,sans-serif" font-size="10">SFR : precision &gt; 60 % sur a-risque</text>
+  <text x="400" y="268" fill="#86efac" font-family="system-ui,sans-serif" font-size="11" font-weight="700">Efficacite campagne ciblee vs generique</text>
+  <text x="400" y="284" fill="#94a3b8" font-family="system-ui,sans-serif" font-size="10">SFR : +25 % sur ciblee</text>
+  <text x="400" y="310" fill="#86efac" font-family="system-ui,sans-serif" font-size="11" font-weight="700">NPS contextualise par moment-cle</text>
+  <text x="400" y="326" fill="#94a3b8" font-family="system-ui,sans-serif" font-size="10">SFR : +15 pts sur le periode suivie</text>
+</svg></div>
+
+C'est pour ça que je suis intransigeant sur le tempo de mesure aujourd'hui : un KPI revu une fois par mois ne sert qu'au reporting. Un KPI revu chaque semaine, avec une règle de décision claire, devient un outil de pilotage. La différence ne tient pas à la sophistication de l'outil — elle tient à la discipline de la routine.
+
+> **Le fond de l'affaire** — La performance d'un service client se pilote avec cinq KPIs bien compris (FCR, AHT, CSAT, NPS, taux d'abandon), des réclamations classifiées pour identifier les causes racines des processus défaillants, et des équipes formées aux situations difficiles par l'entraînement sur cas réels. Chaque indicateur doit déclencher une règle de décision : sans action associée, un tableau de bord ne sert qu'à se donner bonne conscience. Et comme me l'a appris l'expérience du portefeuille premium SFR — ARPU +12 %/an, LTV 950 €, score churn >60 % de précision, +25 % d'efficacité sur le ciblé —, mesurer l'ARPU et le NPS au quotidien évite de piloter au rétroviseur.

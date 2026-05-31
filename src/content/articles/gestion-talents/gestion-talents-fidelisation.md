@@ -7,6 +7,11 @@ domain: gestion-talents
 image: "/images/themes/management.webp"
 pillColor: teal
 theme: gestion
+tags:
+  - gestion-talents
+  - fidelisation
+  - engagement
+  - management
 ---
 
 En 2016, un de mes meilleurs commerciaux chez SFR est venu me voir pour m'annoncer qu'il avait une offre externe. Il était dans les trois premiers de l'équipe sur le chiffre d'affaires, et ce que je pensais être un problème de rémunération s'est avéré être tout autre chose. Il voulait plus de responsabilités, il avait l'impression que sa progression était bloquée, et il ne se sentait pas entendu. On a eu la conversation trop tard. Il est parti. Ce départ aurait pu être évité si j'avais mieux anticipé.

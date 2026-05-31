@@ -7,6 +7,11 @@ domain: gestion-talents
 image: "/images/themes/management.webp"
 pillColor: teal
 theme: gestion
+tags:
+  - gestion-talents
+  - formation
+  - plan-developpement
+  - roi
 ---
 
 Chez SFR, j'ai géré le budget formation d'une équipe de quarante personnes. La première année, j'ai fait la même erreur que beaucoup : j'ai laissé les collaborateurs choisir dans un catalogue. Tout le monde était content. Rien n'avait changé six mois plus tard. C'est là que j'ai compris que former sans diagnostic, c'est dépenser sans investir.

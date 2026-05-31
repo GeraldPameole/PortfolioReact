@@ -7,6 +7,11 @@ domain: gestion-talents
 image: "/images/themes/management.webp"
 pillColor: teal
 theme: gestion
+tags:
+  - gestion-talents
+  - promotion-interne
+  - mobilite
+  - developpement
 ---
 
 ## Le problème avec les promotions internes

@@ -7,6 +7,11 @@ domain: formation
 image: "/images/themes/formation-carriere.webp"
 pillColor: red
 theme: formation
+tags:
+  - formation
+  - collaboration
+  - equipe
+  - asynchrone
 ---
 
 Mettre des gens dans la même salle — ou dans le même canal Slack — ne produit pas de la collaboration. J'ai mis du temps à comprendre ça. Chez SFR, j'ai vu des équipes de qualité se réunir trois fois par semaine sans jamais prendre une décision. Chez KEOS TELECOM, j'ai piloté des projets où les échanges asynchrones entre des gens qui ne se voyaient pas tous les jours produisaient des résultats nets, propres, rapides. La différence ne tenait pas aux outils. Elle tenait à la compréhension de ce que la collaboration coûte réellement.

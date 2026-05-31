@@ -7,6 +7,11 @@ domain: gestion-talents
 image: "/images/themes/management.webp"
 pillColor: teal
 theme: gestion
+tags:
+  - gestion-talents
+  - succession
+  - postes-critiques
+  - continuite
 ---
 
 ## Ce qui arrive quand on n'a pas planifié la succession

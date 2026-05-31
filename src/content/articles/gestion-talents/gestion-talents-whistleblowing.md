@@ -7,6 +7,11 @@ domain: gestion-talents
 image: "/images/themes/management.webp"
 pillColor: teal
 theme: gestion
+tags:
+  - management
+  - signalement
+  - ethique
+  - culture
 ---
 
 En 2022, un chef de projet de mon équipe chez KEOS TELECOM m'a signalé un dysfonctionnement dans la gestion d'un contrat fournisseur. Il avait hésité deux semaines avant de venir me voir. Deux semaines pendant lesquelles le problème s'était aggravé. Quand je lui ai demandé pourquoi il avait attendu, il m'a répondu : "Je ne savais pas si c'était mon rôle de le dire." C'est exactement le problème que le whistleblowing doit résoudre — pas la mécanique des canaux, mais la certitude que signaler est la bonne chose à faire.

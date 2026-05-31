@@ -7,6 +7,11 @@ domain: outils-techniques
 image: "/images/themes/dev-web.webp"
 pillColor: slate
 theme: technologie
+tags:
+  - outils
+  - mermaid
+  - documentation
+  - diagrammes
 ---
 
 ## Pourquoi Mermaid a changé ma façon de documenter

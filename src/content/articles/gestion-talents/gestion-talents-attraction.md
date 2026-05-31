@@ -7,6 +7,11 @@ domain: gestion-talents
 image: "/images/themes/management.webp"
 pillColor: teal
 theme: gestion
+tags:
+  - gestion-talents
+  - recrutement
+  - marque-employeur
+  - sourcing
 ---
 
 ## Ce que les candidats voient avant de postuler

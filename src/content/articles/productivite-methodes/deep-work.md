@@ -7,6 +7,11 @@ domain: productivite-methodes
 image: "/images/themes/productivite.webp"
 pillColor: indigo
 theme: carriere
+tags:
+  - productivite
+  - deep-work
+  - concentration
+  - methodes
 ---
 
 ## Le problème n'est pas le manque de temps

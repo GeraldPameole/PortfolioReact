@@ -7,6 +7,11 @@ domain: outils-techniques
 image: "/images/themes/dev-web.webp"
 pillColor: slate
 theme: technologie
+tags:
+  - design
+  - ui
+  - accessibilite
+  - design-system
 ---
 
 ## Pourquoi les couleurs ne sont pas qu'une question d'esthétique

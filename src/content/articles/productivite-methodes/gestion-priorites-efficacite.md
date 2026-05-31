@@ -7,6 +7,11 @@ domain: productivite-methodes
 image: "/images/themes/productivite.webp"
 pillColor: indigo
 theme: carriere
+tags:
+  - productivite
+  - priorisation
+  - efficacite
+  - methodes
 ---
 
 ## Quand tout est prioritaire, rien ne l'est vraiment

@@ -7,6 +7,11 @@ domain: gestion-talents
 image: "/images/themes/management.webp"
 pillColor: teal
 theme: gestion
+tags:
+  - management
+  - generations
+  - gen-z
+  - feedback
 ---
 
 Depuis que je manage des équipes chez KEOS TELECOM, j'ai intégré des profils de toutes générations — des Millennials arrivés en 2021, des Gen Z depuis 2023. Et j'ai aussi encadré des formateurs bien établis chez SFR entre 2012 et 2015. Ce que j'observe : le discours dominant sur les jeunes en entreprise mélange des réalités fondées et des généralisations qui ne tiennent pas.

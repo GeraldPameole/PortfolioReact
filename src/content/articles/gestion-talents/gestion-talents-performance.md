@@ -7,6 +7,11 @@ domain: gestion-talents
 image: "/images/themes/management.webp"
 pillColor: teal
 theme: gestion
+tags:
+  - gestion-talents
+  - performance
+  - feedback
+  - management
 ---
 
 J'ai animé des entretiens annuels de performance pendant trois ans chez SFR avant de réaliser que c'était un rituel inefficace pour tout le monde. Le collaborateur préparait ses justifications pendant des semaines, moi je cherchais des formulations qui passent bien sur le papier, et à la fin on se retrouvait avec une note sur cinq et un plan de développement qu'on ne regardait plus avant l'année suivante. Ce système n'aidait personne à progresser.

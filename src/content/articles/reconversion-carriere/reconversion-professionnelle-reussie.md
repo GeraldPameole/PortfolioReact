@@ -7,6 +7,11 @@ domain: reconversion-carriere
 image: "/images/themes/formation-carriere.webp"
 pillColor: rose
 theme: carriere
+tags:
+  - reconversion
+  - carriere
+  - transition
+  - methode
 ---
 
 La reconversion professionnelle est l'un des sujets où les bons conseils et les mauvais conseils se ressemblent dangereusement. "Suivez votre passion", "Osez tout quitter", "Votre expérience se transfère partout"... Ces formules sonnent bien. Elles ne préparent pas à ce qui se passe vraiment quand on décide de changer de voie après dix ou quinze ans dans un secteur.

@@ -7,6 +7,11 @@ domain: gestion-projet
 image: "/images/themes/management.webp"
 pillColor: blue
 theme: gestion
+tags:
+  - gestion-projet
+  - management
+  - delegation
+  - performance
 ---
 
 Le micro-management est souvent présenté comme un défaut de personnalité. C'est rarement le cas. Il vient généralement d'un diagnostic raté : un manager qui ne sait pas où en est réellement son équipe applique le seul levier qu'il maîtrise — la supervision rapprochée. L'inverse est tout aussi vrai : déléguer à quelqu'un qui n'a pas encore les compétences pour gérer l'autonomie, c'est l'abandonner, pas lui faire confiance.
