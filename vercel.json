@@ -1,0 +1,50 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "redirects": [
+    {
+      "source": "/blog/developpement-web/frameworks-javascript-analyse-2024",
+      "destination": "/blog/developpement-web/frameworks-javascript-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/developpement-web/frameworks-javascript-comparaison-2024",
+      "destination": "/blog/developpement-web/frameworks-javascript-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/developpement-web/tendances-developpement-web-2025",
+      "destination": "/blog/developpement-web/tendances-web-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/developpement-web/web-tendances-2025",
+      "destination": "/blog/developpement-web/tendances-web-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/developpement-web/react-performance-optimisation",
+      "destination": "/blog/developpement-web/react-performance-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/developpement-web/technologies-javascript-2024",
+      "destination": "/blog/developpement-web/technologies-javascript-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/innovation-technologies/ia-transformation-societe-2024-analyse",
+      "destination": "/blog/innovation-technologies/ia-workflows-pro-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/innovation-technologies/ia-transformation-societe-2024",
+      "destination": "/blog/innovation-technologies/ia-workflows-pro-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/innovation-technologies/intelligence-artificielle-transformation-marketing",
+      "destination": "/blog/innovation-technologies/ia-marketing-2026/",
+      "permanent": true
+    }
+  ]
+}
