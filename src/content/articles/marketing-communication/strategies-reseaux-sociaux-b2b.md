@@ -1,7 +1,8 @@
 ---
-title: "LinkedIn et réseaux sociaux B2B : une stratégie qui génère de vrais leads"
-description: "Comment bâtir une présence B2B efficace sur LinkedIn — contenu d'expert, social selling sans spam, et mesure du ROI social réellement utile."
+title: "LinkedIn et réseaux sociaux B2B : une stratégie qui génère de vrais leads (édition 2026)"
+description: "Comment bâtir une présence B2B efficace sur LinkedIn en 2026 — algorithme actuel, contenu d'expert, social selling sans spam, et mesure du ROI social réellement utile."
 publishDate: "2026-04-06"
+updatedDate: "2026-05-31"
 type: article
 domain: marketing-communication
 image: "/images/themes/marketing.webp"
@@ -82,6 +83,60 @@ Le second format se lit. Le premier non.
 
 En B2B, les personnes achètent d'abord la crédibilité. Ensuite le produit. C'est pour ça que construire une voix d'expert sur LinkedIn est un investissement à moyen terme, pas une campagne qu'on active à la demande.
 
+## L'algorithme LinkedIn 2025-2026 : ce qui marche vraiment
+
+J'écris cette section mi-2026, et c'est une mise à jour importante : l'algo LinkedIn a beaucoup bougé en 2025. Les reflexes hérités des années 2020-2023 ne fonctionnent plus, et certains sont même contre-productifs. Voici ce que j'observe sur mes propres posts et sur les comptes que j'accompagne — à recouper avec les rapports publics récents (Buffer *State of Social* 2025, Hootsuite *Social Trends* 2026, et les analyses régulières de Richard van der Blom sur la plateforme).
+
+**Le lien sortant est pénalisé.** C'est probablement le changement le plus structurant. Un post qui pointe vers un article externe dans son corps voit sa portée nettement dégradée — LinkedIn cherche à garder l'utilisateur sur la plateforme. Le réflexe désormais standard : mettre le lien en premier commentaire et l'annoncer dans le post ("lien en commentaire"). C'est moins élégant, mais l'écart de portée est trop visible pour s'en passer.
+
+**Le dwell time pèse plus que les likes.** L'algorithme mesure le temps passé sur un post avant de scroller. Conséquence concrète : un texte long et aéré, un carrousel qu'on parcourt, ou une vidéo native qu'on regarde performent beaucoup mieux qu'une image stock qu'on balaie en deux secondes. Les posts qui dépassent 1200 caractères déclenchent le bouton "voir plus", et chaque clic sur ce bouton est lu comme un signal d'engagement supplémentaire.
+
+**3 à 5 hashtags, pas plus.** Au-delà, LinkedIn détecte du *hashtag stuffing* et la portée chute. Les hashtags doivent être pertinents et stables d'un post à l'autre, pas une liste de 20 mots-clés génériques.
+
+**Le carrousel PDF est devenu le format le plus performant.** Concrètement : on uploade un PDF en tant que document, il s'affiche sous forme de carrousel feuilletable dans le fil. Sur mes propres tests et ceux remontés par les analystes de la plateforme, la portée est souvent multipliée par 3 face à un post texte simple. Le format colle parfaitement au dwell time : on prend le temps de feuilleter.
+
+**Vidéo native > lien YouTube.** Même logique que le lien sortant : uploader directement la vidéo sur LinkedIn (sous-titres en dur recommandés, la majorité regarde sans le son) est largement préféré par l'algo à un lien YouTube.
+
+**Les 60 premières minutes décident de tout.** L'engagement reçu dans la première heure conditionne la portée totale du post. Notifier sa communauté proche (équipe, partenaires, réseau direct) dans ce créneau n'est pas du *hack*, c'est devenu une hygiène de publication. À l'inverse, les "pods d'engagement" automatisés sont identifiés et pénalisés.
+
+**La question en fin de post bat le CTA classique.** Terminer par "Et vous, comment gérez-vous ce sujet chez vous ?" génère bien plus de commentaires qu'un "Découvrez notre offre". Et les commentaires (surtout les réponses entre tiers) valent plus que les likes.
+
+**Creator badges et programme Creator Accelerator.** LinkedIn pousse depuis 2024-2025 ses créateurs identifiés, avec un badge visible et un accès au programme *Creator Accelerator* pour ceux qui publient régulièrement sur un sujet. Ce n'est pas indispensable, mais ça aide à structurer une ligne éditoriale au lieu de papillonner.
+
+**Le recyclage est désormais toléré.** Reposter un même contenu sous un angle ou un format légèrement différent à 3 ou 4 semaines d'intervalle est devenu une pratique acceptée — et performante. La quasi-totalité du réseau n'a pas vu le premier passage, et le second tour atteint souvent une audience complémentaire.
+
+Dernière précision honnête : ce sont les bonnes pratiques observées **mi-2026**. L'algo bouge plusieurs fois par an, parfois discrètement. Ce qui ne change pas, c'est l'idée de fond — LinkedIn récompense ce qui retient l'attention et garde l'utilisateur sur la plateforme. Le reste, c'est de la tactique.
+
+<div style="overflow-x:auto;margin:2rem 0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 360" style="max-width:100%;height:auto">
+  <rect width="700" height="360" fill="#0a0f2e"/>
+  <text x="350" y="28" font-family="monospace" font-size="13" fill="#00cffd" text-anchor="middle" font-weight="bold">ALGO LINKEDIN 2026 — CE QUI BOOSTE, CE QUI PÉNALISE</text>
+  <text x="350" y="46" font-family="monospace" font-size="9" fill="#7e8da4" text-anchor="middle">Observations terrain + sources Buffer / Hootsuite / Richard van der Blom 2025-2026</text>
+  <rect x="40" y="70" width="305" height="270" rx="10" fill="#0f1638" stroke="#86efac" stroke-width="1.2"/>
+  <text x="192" y="95" font-family="monospace" font-size="12" fill="#86efac" text-anchor="middle" font-weight="bold">+  CE QUI BOOSTE LA PORTÉE</text>
+  <text x="55" y="125" font-family="sans-serif" font-size="11" fill="#a7f3d0">- Carrousel PDF (document) — portée x3</text>
+  <text x="55" y="148" font-family="sans-serif" font-size="11" fill="#a7f3d0">- Vidéo native avec sous-titres en dur</text>
+  <text x="55" y="171" font-family="sans-serif" font-size="11" fill="#a7f3d0">- Texte > 1200 car. (bouton "voir plus")</text>
+  <text x="55" y="194" font-family="sans-serif" font-size="11" fill="#a7f3d0">- Question d'engagement en fin de post</text>
+  <text x="55" y="217" font-family="sans-serif" font-size="11" fill="#a7f3d0">- Réponses aux commentaires &lt; 1 h</text>
+  <text x="55" y="240" font-family="sans-serif" font-size="11" fill="#a7f3d0">- 3 à 5 hashtags pertinents</text>
+  <text x="55" y="263" font-family="sans-serif" font-size="11" fill="#a7f3d0">- Engagement dans les 60 premières min</text>
+  <text x="55" y="286" font-family="sans-serif" font-size="11" fill="#a7f3d0">- Lien externe en premier commentaire</text>
+  <text x="55" y="309" font-family="sans-serif" font-size="11" fill="#a7f3d0">- Recyclage à 3-4 semaines (angle neuf)</text>
+  <text x="55" y="328" font-family="monospace" font-size="9" fill="#86efac">→ dwell time = signal n°1</text>
+  <rect x="355" y="70" width="305" height="270" rx="10" fill="#0f1638" stroke="#fb7185" stroke-width="1.2"/>
+  <text x="507" y="95" font-family="monospace" font-size="12" fill="#fb7185" text-anchor="middle" font-weight="bold">−  CE QUI PÉNALISE LA PORTÉE</text>
+  <text x="370" y="125" font-family="sans-serif" font-size="11" fill="#fecaca">- Lien sortant dans le corps du post</text>
+  <text x="370" y="148" font-family="sans-serif" font-size="11" fill="#fecaca">- Image stock générique, peu lue</text>
+  <text x="370" y="171" font-family="sans-serif" font-size="11" fill="#fecaca">- Plus de 5 hashtags (hashtag stuffing)</text>
+  <text x="370" y="194" font-family="sans-serif" font-size="11" fill="#fecaca">- Lien YouTube vs vidéo native</text>
+  <text x="370" y="217" font-family="sans-serif" font-size="11" fill="#fecaca">- Pods d'engagement automatisés</text>
+  <text x="370" y="240" font-family="sans-serif" font-size="11" fill="#fecaca">- Mentions massives non sollicitées</text>
+  <text x="370" y="263" font-family="sans-serif" font-size="11" fill="#fecaca">- Posts ultra-courts sans contexte</text>
+  <text x="370" y="286" font-family="sans-serif" font-size="11" fill="#fecaca">- Demandes de connexion en masse</text>
+  <text x="370" y="309" font-family="sans-serif" font-size="11" fill="#fecaca">- CTA commercial brut sans valeur</text>
+  <text x="370" y="328" font-family="monospace" font-size="9" fill="#fb7185">→ tout ce qui fait scroller plus vite</text>
+</svg></div>
+
 ## Social selling : convaincre sans importuner
 
 Le social selling, c'est l'art d'être présent dans la réflexion de l'acheteur avant qu'il soit prêt à acheter. Ce n'est pas envoyer un message de prospection à froid avec "Je voulais vous présenter notre offre" deux secondes après avoir envoyé une demande de connexion.
@@ -138,7 +193,7 @@ Je distingue trois niveaux d'indicateurs. Le premier niveau : la portée et la v
 
 Ce que je recommande : poser systématiquement la question "Comment avez-vous entendu parler de moi ?" lors des premiers échanges commerciaux. En quelques mois, vous aurez des données réelles sur ce qui a déclenché l'intérêt. Dans mon expérience, la réponse "LinkedIn" ou "j'ai vu vos publications" revient beaucoup plus souvent qu'on ne le pense.
 
-La cadence de publication idéale en B2B : deux à trois posts par semaine suffit, à condition que chaque post porte une vraie idée. Mieux vaut moins publier et maintenir la qualité que tenir un rythme quotidien avec du contenu creux.
+La cadence de publication idéale en B2B : deux à trois posts par semaine suffit, à condition que chaque post porte une vraie idée. Mieux vaut moins publier et maintenir la qualité que tenir un rythme quotidien avec du contenu creux. Et dans cette cadence, varier les formats — un texte long le lundi, un carrousel PDF le mercredi, une vidéo native une fois par mois — donne aujourd'hui de bien meilleurs résultats que trois posts texte interchangeables.
 
 ## Ce que les autres réseaux apportent (ou n'apportent pas) en B2B
 
@@ -183,4 +238,4 @@ Ce que je déconseille systématiquement en B2B pur : dépenser de l'énergie su
   <text x="180" y="282" font-family="monospace" font-size="9" fill="#cbd5e1" text-anchor="middle">dispersion</text>
 </svg></div>
 
-> **Pour conclure sans platitude** — Une stratégie réseaux sociaux B2B qui fonctionne repose sur trois piliers : du contenu d'expert à voix humaine qui apporte une vraie valeur, un social selling basé sur la relation avant la transaction, et une mesure du ROI qui tient compte des cycles longs. LinkedIn est l'outil central. Ce n'est pas le volume de posts qui fait la différence, c'est la consistance et la pertinence sur la durée.
+> **Pour conclure sans platitude** — Une stratégie réseaux sociaux B2B qui fonctionne en 2026 repose sur trois piliers : du contenu d'expert à voix humaine qui apporte une vraie valeur, un social selling basé sur la relation avant la transaction, et une mesure du ROI qui tient compte des cycles longs. LinkedIn est l'outil central, et son algorithme actuel récompense le format long, le carrousel, la vidéo native, et tout ce qui retient l'attention sur la plateforme. Ce n'est pas le volume de posts qui fait la différence, c'est la consistance et la pertinence sur la durée — et la capacité à ajuster sans s'accrocher aux recettes d'il y a deux ans.

@@ -6,8 +6,7 @@ export const FEATURED_ARTICLES_BY_DOMAIN = {
     "gestion-performance-evaluation",
   ],
   "developpement-web": [
-    "frameworks-javascript-analyse-2024",
-    "frameworks-javascript-comparaison-2024",
+    "frameworks-javascript-2026",
     "progressive-web-apps-2024",
   ],
   "qualite-process": [
@@ -50,8 +49,8 @@ export const FEATURED_ARTICLES_BY_DOMAIN = {
     "management-hybride-defis-opportunites",
   ],
   "innovation-technologies": [
-    "ia-transformation-societe-2024-analyse",
-    "intelligence-artificielle-transformation-marketing",
+    "ia-workflows-pro-2026",
+    "ia-marketing-2026",
     "nouvelles-tendances-developpement-web",
   ],
   "service-client": [

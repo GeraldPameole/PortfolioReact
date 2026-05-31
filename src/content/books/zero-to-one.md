@@ -13,8 +13,8 @@ relatedContent:
   - title: "Nouvelles Tendances de Développement Web"
     url: "/blog/innovation-technologies/nouvelles-tendances-developpement-web"
     type: "article"
-  - title: "IA 2024 : Impact Profond sur les Métiers et la Société"
-    url: "/blog/innovation-technologies/ia-transformation-societe-2024"
+  - title: "IA et workflows professionnels en 2026 : agents, MCP, et ce qui marche vraiment"
+    url: "/blog/innovation-technologies/ia-workflows-pro-2026"
     type: "article"
   - title: "The Lean Startup"
     url: "/livres/lean-startup"
@@ -38,7 +38,7 @@ Ce livre remet en question les orthodoxies de l'entrepreneuriat moderne et offre
 Si vous avez apprécié "Zero to One", ces ressources pourraient vous intéresser :
 
 - [Nouvelles Tendances de Développement Web](/blog/innovation-technologies/nouvelles-tendances-developpement-web) - Comprendre les tendances actuelles en développement web
-- [IA 2024 : Impact Profond sur les Métiers et la Société](/blog/innovation-technologies/ia-transformation-societe-2024) - Comprendre l'impact potentiel de l'intelligence artificielle sur les métiers et la société
+- [IA et workflows professionnels en 2026 : agents, MCP, et ce qui marche vraiment](/blog/innovation-technologies/ia-workflows-pro-2026) - Agents, MCP et coding tools : ce qui marche vraiment en 2026
 - [The Lean Startup](/livres/lean-startup) - Une approche complémentaire de la création d'entreprise
 
 **Note des lecteurs : 4.7/5** - Un ouvrage fondamental qui transforme la façon de penser l'innovation

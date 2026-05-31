@@ -10,8 +10,8 @@ amazonLink: "https://www.amazon.fr/Clean-Code-Handbook-Software-Craftsmanship/dp
 keywords: "développement logiciel, code propre, pratiques agiles, refactoring, principes SOLID, dette technique, Uncle Bob, qualité du code, maintenabilité"
 note: 4.9
 relatedContent:
-  - title: "Frameworks JavaScript en 2024 : Analyse Comparative pour Bien Choisir"
-    url: "/blog/developpement-web/frameworks-javascript-comparaison-2024"
+  - title: "Frameworks JavaScript en 2026 : adopter ou attendre"
+    url: "/blog/developpement-web/frameworks-javascript-2026"
     type: "article"
   - title: "Accessibilité Web en 2024 : Guide Pratique pour Développeurs"
     url: "/blog/developpement-web/web-accessibilite-guide-pratique"
@@ -37,7 +37,7 @@ Ce livre transforme non seulement la qualité du code que vous écrivez, mais é
 
 Si vous avez apprécié "Clean Code", ces ressources pourraient vous intéresser :
 
-- [Frameworks JavaScript en 2024 : Analyse Comparative](/blog/developpement-web/frameworks-javascript-comparaison-2024) - Pour appliquer les principes de code propre aux frameworks modernes
+- [Frameworks JavaScript en 2026 : adopter ou attendre](/blog/developpement-web/frameworks-javascript-2026) - Pour appliquer les principes de code propre aux frameworks modernes
 - [Accessibilité Web en 2024 : Guide Pratique](/blog/developpement-web/web-accessibilite-guide-pratique) - L'accessibilité est un aspect essentiel d'un code propre et bien structuré
 - [Atomic Habits](/livres/atomic-habits) - Pour construire de bonnes habitudes de développement
 

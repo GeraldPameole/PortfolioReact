@@ -10,8 +10,8 @@ amazonLink: "https://www.amazon.fr/Lean-Startup-Entrepreneurs-Continuous-Innovat
 keywords: "entrepreneuriat, startup, innovation, MVP, lean, développement de produit, agilité, expérimentation, modèle d'affaires"
 note: 4.7
 relatedContent:
-  - title: "Frameworks JavaScript en 2024 : Analyse Comparative pour Bien Choisir"
-    url: "/blog/developpement-web/frameworks-javascript-comparaison-2024"
+  - title: "Frameworks JavaScript en 2026 : adopter ou attendre"
+    url: "/blog/developpement-web/frameworks-javascript-2026"
     type: "article"
   - title: "Stratégies Marketing Digital 2025"
     url: "/blog/marketing-communication/strategies-marketing-digital-2025"
@@ -36,7 +36,7 @@ Cette approche permet aux entrepreneurs de construire des entreprises plus agile
 
 Si vous avez apprécié "The Lean Startup", ces ressources pourraient vous intéresser :
 
-- [Frameworks JavaScript en 2024 : Analyse Comparative pour Bien Choisir](/blog/developpement-web/frameworks-javascript-comparaison-2024) - Application des principes Lean au choix de technologies
+- [Frameworks JavaScript en 2026 : adopter ou attendre](/blog/developpement-web/frameworks-javascript-2026) - Application des principes Lean au choix de technologies
 - [Stratégies Marketing Digital 2025](/blog/marketing-communication/strategies-marketing-digital-2025) - Approches agiles pour le marketing moderne
 - [Good to Great](/livres/good-to-great) - Comprendre comment les entreprises passent de bonnes à exceptionnelles
 

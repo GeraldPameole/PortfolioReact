@@ -10,8 +10,8 @@ amazonLink: "https://www.amazon.fr/Eloquent-JavaScript-3rd-Introduction-Programm
 keywords: "JavaScript, programmation web, développement frontend, asynchrone, ES6, structures de données, DOM, Node.js, apprentissage, bonnes pratiques"
 note: 4.8
 relatedContent:
-  - title: "Frameworks JavaScript en 2024 : Analyse Comparative pour Bien Choisir"
-    url: "/blog/developpement-web/frameworks-javascript-comparaison-2024"
+  - title: "Frameworks JavaScript en 2026 : adopter ou attendre"
+    url: "/blog/developpement-web/frameworks-javascript-2026"
     type: "article"
   - title: "Progressive Web Apps en 2024 : L'Avenir du Web Mobile"
     url: "/blog/developpement-web/progressive-web-apps-2024"
@@ -37,7 +37,7 @@ La troisième édition mise à jour intègre les évolutions récentes du langag
 
 Si vous avez apprécié "Eloquent JavaScript", ces ressources pourraient vous intéresser :
 
-- [Frameworks JavaScript en 2024 : Analyse Comparative pour Bien Choisir](/blog/developpement-web/frameworks-javascript-comparaison-2024) - Pour appliquer vos connaissances JavaScript dans un framework moderne
+- [Frameworks JavaScript en 2026 : adopter ou attendre](/blog/developpement-web/frameworks-javascript-2026) - Pour appliquer vos connaissances JavaScript dans un framework moderne
 - [Progressive Web Apps en 2024 : L'Avenir du Web Mobile](/blog/developpement-web/progressive-web-apps-2024) - Pour créer des applications web avancées avec JavaScript
 - [Clean Code](/livres/clean-code) - Pour perfectionner vos compétences d'écriture de code de qualité
 
