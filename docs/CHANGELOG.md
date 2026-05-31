@@ -3,6 +3,43 @@
 > Historique des évolutions du site, dérivé du `git log`. Format inspiré de [Keep a Changelog](https://keepachangelog.com/).
 > Type des commits : `feat` (nouvelle fonctionnalité), `fix` (correctif), `perf` (performance), `a11y` (accessibilité), `refactor`, `chore` (outillage), `docs`, `style`.
 
+## 2026-06-01 — Sprint 2 : expertise terrain complète + 5 articles étoffés
+
+### Ajouté
+
+- **Sprint 2A — 7 retours d'expérience terrain injectés** dans les articles qui en manquaient. Couverture expertise : 90 % → **99 %** (91/92 articles). Le seul article résiduel sans expertise est `outils-techniques/pillcolor-guide.md`, légitimement (article méta sur le système de pill colors du site). Injections : `react-performance-2026` (ACTIV PARTNERS 8 sites WordPress + 40 % visibilité), `gestion-talents-zen` (KEOS 17 mainteneurs + astreintes), `formation-leadership` (SFR Superviseur 50 programmes), `management-diversite-inclusion` (KEOS multi-sites + plomberie inclusive), `marketing-content-strategies` (ACTIV PARTNERS mapping parcours acheteur), `gestion-stress-performance` (KEOS NOC/Terrain/Direction 98,7 %), `gestion-surcharge-informationnelle` (KEOS 15 KPIs hiérarchisés).
+- **Sprint 2B+2C — 5 articles courts étoffés** (611-679 → 1100-1333 mots) :
+  - `web-javascript-modern` : `||=`/`&&=`/`??=`, top-level await, `Object.hasOwn()`, array immuable (`toSorted`/`toReversed`/`with`), décorateurs TS 5.x, ES Modules patterns. Retour ACTIV PARTNERS : "30 % de lignes en moins, -40 % bugs undefined".
+  - `transformation-numerique-entreprise` : cartographier avant l'appel d'offres, méthode en 4 phases, KPIs transformation. Retour KEOS FTTB (15 KPIs, 17 mainteneurs, MTTR -25 %).
+  - `gestion-priorites-efficacite` : matrice Eisenhower détaillée (+ **nouveau SVG matrice remplie**), MoSCoW/ICE/RICE, règle des 3 priorités/jour, retour KEOS pilotage production.
+  - `strategies-reseaux-sociaux-entreprises` : grille par objectif, spécificités plateformes 2026 (LinkedIn algo, TikTok, Threads/Bluesky), retour ACTIV PARTNERS sur les 8 refontes.
+  - `gestion-qualite-certification` : 5 phases d'obtention ISO 9001 (état des lieux → audit AFNOR/Bureau Veritas/Apave/SGS/DEKRA), durée 9-12 mois, coût 8-25 k€, retour SFR qualité formateur (12 processus, +15 pts NPS), mention ISO 27001 et ISO 14001 + CSRD.
+
+### Métriques
+
+- **Corpus** : 92 articles (stable).
+- **Mots / article moyenne** : 942 → **1 013** (+8 %).
+- **Articles < 700 mots** : 8 → **2** (vs 8 le 31 mai matin).
+- **Couverture expertise** : 90 % → **99 %**.
+
+## 2026-05-31 (soir) — Sprint 1 + Sprint 3 : tags complets, PWA modernisé, anomalies résolues, service-client étoffé
+
+### Ajouté
+
+- **Sprint 1 — Tags complets** (47 articles taggés en 2 batches parallèles A+B). Couverture `tags:` 49 % → **100 %** (92/92). RSS sert désormais **364 `<category>`** sur 92 articles (~4 tags/article moyens) → Buffer aura ~4 hashtags suggérés par post LinkedIn auto-généré.
+- **Sprint 3B — PWA modernisé + renommé** : `progressive-web-apps-2024.md` → `progressive-web-apps-2026.md` (Option A retenue car article substantiel, 1500 mots, retour ACTIV PARTNERS, 2 SVG). Contenu actualisé (Workbox v7 stable, vite-plugin-pwa, iOS 16.4+ Web Push, Bubblewrap/TWA, taux conversion home-screen 2-5 %). **10ᵉ redirection 301** ajoutée à `vercel.json`. Liens internes mis à jour (`featured-articles.ts`, `eloquent-javascript.md`).
+- **Sprint 3C — service-client étoffé avec matériau Relation Client SFR 2005-2009** :
+  - `service-client-excellence.md` : ~700 → ~1180 mots, section "Ce que j'ai appris sur la fidélisation chez SFR" (churn -52 %, NPS +15, rétention 92 %), **nouveau SVG tunnel de rétention** (accent rose `#f472b6`).
+  - `service-client-performance.md` : ~575 → ~1190 mots, section "KPIs qui comptent vraiment" (ARPU +12 %/an, LTV 950 €, +25 % efficacité ciblée), **nouveau SVG KPIs vanity vs actionnables**.
+
+### Corrigé
+
+- **Sprint 3A — Anomalie filesystem `formation-equipes-commerciales-complete 2.md`** : fichier avec espace dans le nom (artefact macOS Finder). Investigation : les 2 articles concernés étaient **légitimement distincts** (un article terrain "ce qui marche" + un plan structuré 12 mois). Renommage propre `formation-equipes-commerciales-complete.md` (sans espace) plutôt que suppression.
+
+### Coordination
+
+- **5 agents parallèles** sans chevauchement de fichiers. 3 cas de coordination réussie : agent 1B a adapté son tagging au renommage simultané de PWA par 3B ; agent 3B a préservé les tags de PWA ajoutés par 1B avant de réécrire le frontmatter ; agent 3C a vérifié les tags existants sur service-client avant édition.
+
 ## 2026-05-31 — Métier Relation Client, automatisation LinkedIn, refonte du corpus mi-2026
 
 ### Ajouté

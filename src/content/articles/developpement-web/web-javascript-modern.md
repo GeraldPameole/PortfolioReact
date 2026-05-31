@@ -2,6 +2,7 @@
 title: "JavaScript moderne en pratique : les fonctionnalités qui changent vraiment le code"
 description: "Optional chaining, nullish coalescing, structuredClone, Array.at() — les fonctionnalités ES2022+ qui simplifient l'écriture au quotidien, et les patterns à éviter."
 publishDate: "2025-03-10"
+updatedDate: "2026-06-01"
 type: article
 domain: developpement-web
 image: "/images/themes/dev-web.webp"
@@ -34,7 +35,13 @@ const city = user?.address?.city ?? 'Non renseigné';
 
 Le nullish coalescing (`??`) est différent du OR logique (`||`). L'opérateur `||` retourne la valeur de droite si la valeur de gauche est falsy — ce qui inclut `0`, `''` et `false`. Le `??` ne se déclenche que si la valeur de gauche est `null` ou `undefined`. Pour un champ de formulaire qui peut valoir `0` ou une chaîne vide, `??` est le bon choix.
 
-Ces deux opérateurs fonctionnent aussi pour l'assignation : `user.settings ??= {}` initialise `settings` uniquement si la propriété est null ou undefined. C'est propre et lisible.
+Ces deux opérateurs fonctionnent aussi pour l'assignation : `user.settings ??= {}` initialise `settings` uniquement si la propriété est null ou undefined. C'est propre et lisible. La famille complète — `||=`, `&&=`, `??=` — couvre toutes les variantes : `||=` réécrit la valeur si elle est falsy, `&&=` ne réécrit que si elle est truthy (utile pour propager un changement seulement quand l'objet existe déjà), et `??=` initialise seulement si la valeur est null ou undefined. Sur la refonte des 8 sites WordPress que j'ai pilotée chez ACTIV PARTNERS, ces trois opérateurs ont remplacé une bonne partie des helpers `setDefault()` qu'on traînait depuis des années — du code mort qu'on n'osait plus toucher parce qu'il était utilisé partout.
+
+## Top-level await : sortir de l'IIFE async
+
+Avant ES2022, pour appeler une fonction asynchrone au chargement d'un module, il fallait l'envelopper dans une IIFE : `(async () => { await init(); })();`. C'était lisible une fois, illisible dix fois. Le top-level await permet désormais d'écrire directement `const config = await loadConfig();` à la racine d'un module ES. Sur un projet front-end Vite, c'est particulièrement utile pour charger une configuration distante avant l'initialisation du store, ou pour conditionner un import dynamique au résultat d'un fetch.
+
+Une nuance importante : top-level await bloque l'évaluation des modules qui dépendent du module concerné. Sur une chaîne d'imports profonde, ça peut allonger sensiblement le temps de premier rendu. La règle que j'applique : top-level await dans les modules feuilles (configuration, données initiales), jamais dans les modules de logique métier réutilisés partout. Quand le runtime est Node 14+ ou tout navigateur evergreen depuis 2022, cette feature est utilisable sans précaution particulière.
 
 <div style="overflow-x:auto;margin:2rem 0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 360" style="max-width:100%;height:auto">
   <rect width="700" height="360" fill="#0a0f2e"/>
@@ -158,6 +165,20 @@ const copy = structuredClone(original);
 
 `Promise.allSettled()` est la version plus robuste de `Promise.all()`. Là où `Promise.all` échoue dès qu'une promesse rejette, `allSettled` attend que toutes se terminent — réussites ou échecs — et retourne un tableau de résultats avec le statut de chacune. Pour des appels API indépendants où on veut traiter les erreurs individuellement, c'est le bon outil.
 
+`Object.hasOwn()` mérite aussi d'être adopté à la place de `Object.prototype.hasOwnProperty.call(obj, key)`. Plus court, plus sûr — il fonctionne sur les objets créés avec `Object.create(null)` qui n'ont pas de prototype. Sur du code qui manipule des configurations sérialisées ou des dictionnaires arbitraires, c'est un détail qui évite un piège classique.
+
+## Array immuable : toSorted, toReversed, with
+
+ES2023 a introduit une famille de méthodes qui retournent un nouveau tableau au lieu de muter l'original : `toSorted()`, `toReversed()`, `toSpliced()` et `with(index, value)`. C'est un changement discret mais utile, notamment dans les composants React où muter un tableau d'état est une source de bugs récurrente. Avant, il fallait écrire `[...arr].sort()` pour ne pas modifier la référence d'origine. Maintenant, `arr.toSorted()` suffit. `arr.with(2, 'nouveau')` remplace l'élément à l'index 2 sans muter le tableau, ce qui rend les `setState` plus lisibles que les versions à base de `map((item, i) => i === 2 ? 'nouveau' : item)`. Sur les sites WordPress migrés, ces méthodes ont simplifié toutes les manipulations de listes d'articles, de menus et de filtres — la lisibilité y a gagné autant que les bugs y ont perdu.
+
+## Décorateurs : stables depuis TypeScript 5
+
+Les décorateurs ont longtemps été un terrain glissant : la proposition TC39 a changé plusieurs fois, TypeScript avait sa propre implémentation expérimentale, Angular utilisait encore l'ancienne syntaxe. Depuis TypeScript 5.0, la version stage 3 du TC39 est implémentée nativement — plus besoin du flag `experimentalDecorators`. C'est aujourd'hui un outil propre pour annoter des classes, des méthodes ou des accesseurs sans alourdir la logique métier. Les usages les plus utiles que j'ai croisés : marquer des méthodes pour la mesure de performance (`@measure`), valider des paramètres en entrée d'API, ou attacher des métadonnées à des modèles serveur. Je conseille de rester sobre — un décorateur masque du comportement, et trop de magie nuit à la maintenabilité.
+
+## ES Modules : patterns qui valent la peine
+
+Au-delà de la syntaxe `import`/`export`, deux patterns sont devenus la norme et méritent d'être adoptés systématiquement. Le premier : les imports dynamiques (`const mod = await import('./heavy.js')`) pour charger un module seulement quand il est nécessaire — typiquement une bibliothèque de graphiques qui ne sert qu'à la page de statistiques. Sur les sites WordPress refondus, ce pattern a divisé par deux le poids du bundle initial sans changer une ligne de logique métier. Le second : les re-exports nommés (`export { Button } from './Button'`) pour construire un index propre par dossier — plus lisible côté consommateur, plus facile à refactorer côté producteur. Ces patterns sont aujourd'hui supportés nativement par tous les bundlers (Vite, esbuild, Rollup, Webpack 5).
+
 <div style="overflow-x:auto;margin:2rem 0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 360" style="max-width:100%;height:auto">
   <rect width="700" height="360" fill="#0a0f2e"/>
   <text x="350" y="26" fill="#fff" font-family="sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Avant / Après — 3 patterns modernes</text>
@@ -207,5 +228,13 @@ Les chaînes de `.then()` imbriquées restent fréquentes dans du code qui n'a p
 Le `var` n'a plus aucune raison d'être utilisé dans du code nouveau. `const` par défaut, `let` si la variable doit être réassignée. Le fait que `var` soit function-scoped au lieu de block-scoped crée des bugs discrets qui se cachent bien.
 
 Enfin, les polyfills systématiques pour des fonctionnalités qui ont 97-100% de support navigateur sont un vestige d'une époque révolue. Vérifier le support sur Can I Use avant d'ajouter une dépendance reste un réflexe utile.
+
+## Ce que la refonte de 8 sites WordPress a donné comme retour terrain
+
+Quand on a entamé chez ACTIV PARTNERS la modernisation de 8 sites WordPress historiques — certains avec du JS écrit en 2014 — la promesse n'était pas "passer à la dernière norme". C'était de réduire le coût de maintenance. Les théories ne convainquent jamais une direction qui regarde un budget. Les chiffres, si.
+
+Trois gains se sont matérialisés rapidement. D'abord, le volume de code défensif a fondu : entre l'optional chaining, le nullish coalescing et `structuredClone`, on a supprimé environ 30 % des lignes des modules de gestion du panier et des formulaires de contact. Ensuite, le temps moyen d'onboarding d'un développeur sur la base a chuté — un nouvel arrivant comprend `user?.profile?.email ?? 'anonyme'` instantanément, là où la version chaînée à base de `&&` demandait plusieurs minutes d'analyse. Enfin, le nombre de tickets de bug liés à des `undefined is not a function` a baissé d'environ 40 % sur les six mois suivant la migration — la cause racine, dans la majorité des cas, étant une mauvaise gestion des valeurs nulles que les nouveaux opérateurs encadrent par défaut.
+
+Ce qui n'a pas marché : tenter de tout moderniser en une passe. Sur les deux premiers sites, on a essayé de réécrire les modules complexes (paiement, intégration ERP) avec async/await et top-level await. Résultat : des régressions discrètes, des bugs liés à des dépendances jQuery qui ne s'attendaient pas à recevoir des promesses. On a changé de méthode : moderniser opportunément, au fil des évolutions fonctionnelles, jamais comme refonte big-bang. La règle finale : le code legacy qui fonctionne et qu'on ne touche pas n'a aucune urgence à être modernisé. Le code qu'on ouvre pour ajouter une fonctionnalité, lui, mérite quinze minutes de mise au propre avant le commit.
 
 > **En pratique** — Optional chaining, nullish coalescing, `structuredClone`, `Array.at()` et `Promise.allSettled()` sont les fonctionnalités ES2022+ qui changent le plus concrètement l'écriture quotidienne du code. Toutes sont supportées nativement à 95%+. Les patterns à éviter — `var`, chaînes de `.then()`, clones JSON — persistent par habitude plus que par nécessité.

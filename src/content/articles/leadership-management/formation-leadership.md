@@ -74,6 +74,8 @@ Après 15 ans dans des environnements commerciaux et télécom à piloter des é
 
 **La gestion des tensions interpersonnelles.** Pas les conflits ouverts — ceux-là, on les voit venir. Je parle des tensions latentes qui paralysent une équipe pendant des mois sans que personne ne les nomme. Les identifier, les mettre sur la table sans dramatiser, aider deux personnes à reconstruire une collaboration — c'est une compétence rare, et elle ne s'enseigne pas en salle.
 
+C'est exactement ce que j'ai vu quand je suis passé Superviseur Développement Commercial chez SFR à Massy, après plusieurs années à former des conseillers individuels. Animer 150+ sessions de formation pour des contributeurs avec 92 % de satisfaction, c'est une compétence. Concevoir et déployer 50 programmes de formation pour mes propres chefs d'équipe, qui devaient ensuite eux-mêmes coacher leurs commerciaux pour tenir +20 % de croissance CA, c'en est une autre. Le contenu se ressemble en surface, mais l'écart d'exécution est immense. Un manager qui sait n'est pas encore un manager qui fait — et il ne devient un manager qui fait qu'après avoir géré sa première vraie crise d'équipe, encaissé son premier refus en face à face, conduit son premier entretien de recadrage. C'est là qu'on comprend ce que la salle de formation ne peut pas transmettre, parce qu'elle peut difficilement reproduire l'enjeu réel.
+
 ## Comment on se forme vraiment
 
 Si je devais reconstruire mon parcours de développement, je m'organiserais autour de trois axes concrets.

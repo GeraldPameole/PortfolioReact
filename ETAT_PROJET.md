@@ -1,18 +1,22 @@
 # État du projet — Portfolio React + Blog
 
-> **Dernière mise à jour** : 31 mai 2026
-> **Branche** : `main` · **Dernier commit notable** : `9e8b8a2` (redirections 301)
+> **Dernière mise à jour** : 1ᵉʳ juin 2026 (post Sprint 1+3+2)
+> **Branche** : `main`
 > **Production** : <https://geraldpameole.vercel.app/>
 
 ## 📊 Snapshot en chiffres
 
 | Élément | Valeur |
 |---|---|
-| Articles publiés | **92** (corpus densifié — 7 doublons fusionnés en mai 2026) |
+| Articles publiés | **92** (corpus densifié — 7 doublons fusionnés mi-2026) |
+| **Mots / article — moyenne** | **1 013** (corpus total : ~ 93 200 mots) |
+| **Couverture `tags:` (RSS categories)** | **100 %** (92/92 articles) |
+| **Expertise terrain détectée** | **99 %** (91/92 — `pillcolor-guide` légitimement sans) |
 | Fiches métier | **6** (Relation client premium, Dev commercial, Formation, Qualité/Process, Dev web, Pilotage projet) |
 | Pages buildées | **262** |
 | Domaines blog | 15 |
 | Livres en bibliothèque | 4 (`clean-code`, `eloquent-javascript`, `lean-startup`, `zero-to-one`) |
+| Redirections 301 (`vercel.json`) | **10** |
 | Erreurs TS (`npm test`) | **0** |
 | Build (`npm run build`) | **OK** — ~33-48 s |
 | Stack | Astro 4 (static) + Tailwind + MDX + React + Three.js |
@@ -52,8 +56,10 @@
 ## 🔄 En cours / Prochaines étapes prévisibles
 
 - **Lancement publication LinkedIn** via Buffer (RSS → 2 posts/sem mardi+jeudi 9h Europe/Paris) — premier post planifié mardi 2 juin sur `strategies-reseaux-sociaux-b2b`. Workflow hybride : Buffer crée des drafts, validation manuelle, lien en premier commentaire. Backlog 92 articles → vidé en ~11 mois à 2/sem, ou ~22 mois à 1/sem.
-- **Article `progressive-web-apps-2024.md`** : encore en slug "-2024" (non traité dans les 7 chantiers du 31 mai car contenu jugé moins urgent). À renommer + actualiser quand cycle se présente.
-- **Articles potentiellement à fusionner** restant : 2 doublons IDA sur `formation-equipes-commerciales-complete 2.md` (avec espace dans le nom — anomalie historique).
+- **Vérifier `gestion-projet-agile.md` vs `gestion-projet-agile-meilleures-pratiques.md`** : possible doublon thématique à fusionner ou différencier explicitement.
+- **Étoffer `productivite-professionnelle.md`** (694 mots) — c'est l'article qui doit porter le ton "2026" du domaine productivité.
+- **Étoffer les domaines à 1 article** : `gestion-connaissances`, `reconversion-carriere` — matériau Gérald disponible.
+- **Étoffer `developpement-commercial`** (2 articles) : pont naturel avec le 5e métier Relation Client SFR — article potentiel "Développer un portefeuille premium : la méthode SFR appliquée aujourd'hui".
 - **Re-générer ETAT_PROJET.md à chaque session de travail majeure** (cf. ce fichier).
 
 ## 📚 Rapports liés

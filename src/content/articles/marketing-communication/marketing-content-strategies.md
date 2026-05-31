@@ -24,6 +24,8 @@ Dans mon travail avec des organisations en développement commercial, je vois le
 
 Le problème n'est pas le volume de contenu. C'est que personne n'a fait la cartographie entre ce qu'on publie et l'étape où se trouve l'acheteur.
 
+Chez ACTIV PARTNERS, où j'ai accompagné la refonte de 8 sites WordPress entre 2020 et 2021, le constat de départ était systématiquement le même : des blogs alimentés depuis trois ans, des dizaines d'articles publiés par site, et des analytics qui montraient du trafic correct mais quasiment zéro conversion vers les formulaires de contact. On a obtenu +40 % de visibilité organique moyenne en travaillant les Core Web Vitals, le balisage, Yoast/Rank Math — mais ce qui a réellement changé le taux de prise de contact, c'est qu'on a arrêté d'écrire pour "tenir une fréquence" et qu'on a réécrit chaque article en se posant une seule question : à quelle étape du parcours acheteur cet article répond-il, et à quelle action mène-t-il ? Sur certains sites, ça a voulu dire dépublier la moitié du catalogue existant. Faire du contenu et faire un contenu qui convertit ne demandent pas la même discipline.
+
 ## Pourquoi le contenu générique ne convertit pas
 
 Le contenu générique, c'est le contenu qui ne s'adresse à personne en particulier, à aucun moment précis du parcours d'achat. "Les tendances du secteur en 2026", "5 conseils pour améliorer votre productivité", "Comment choisir votre solution X" — sans angle précis, sans prise de position, sans adressage à un problème spécifique.

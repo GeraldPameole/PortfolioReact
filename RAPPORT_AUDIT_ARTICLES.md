@@ -96,11 +96,20 @@ intelligence-artificielle-transformation-marketing → ia-marketing-2026
 
 ## 5. Pistes d'amélioration identifiées
 
-1. **`progressive-web-apps-2024.md`** : seul article résiduel en slug "-2024". À actualiser + renommer dans un prochain cycle si le sujet PWA mérite encore un article dédié en 2026 (à arbitrer — la PWA a perdu en hype, à débattre).
-2. **Doublon historique** : `formation/formation-equipes-commerciales-complete 2.md` (avec espace dans le nom) — anomalie filesystem à investiguer ; probablement un doublon copié à un moment, à fusionner ou supprimer.
-3. **Domaines sous-représentés** (1-3 articles) : `gestion-connaissances`, `reconversion-carriere`, `developpement-commercial`, `service-client`. Soit étoffer, soit accepter qu'ils restent des "satellites" thématiques.
-4. **Articles sans `updatedDate`** : pour les articles dont le contenu reste sensiblement valide en 2026, ajouter `updatedDate` au fur et à mesure des relectures (déjà fait pour LinkedIn B2B et Accessibilité — pattern à généraliser).
-5. **`publishDate` futur** : beaucoup d'articles ont des `publishDate` 2026-06 → 2026-10 (échelonnement éditorial volontaire). Conséquence : ils n'apparaissent pas en home/RSS tant que la date n'est pas atteinte (à confirmer selon la logique de `rss.xml.ts` et `index.astro`).
+### ✅ Résolu au 1ᵉʳ juin 2026
+
+- **`progressive-web-apps-2024.md`** → modernisé et renommé `progressive-web-apps-2026.md` (Sprint 3 du 31 mai). 10ᵉ redirection 301 ajoutée à `vercel.json`.
+- **Doublon filesystem `formation-equipes-commerciales-complete 2.md`** → renommé sans l'espace (les 2 articles étaient légitimement distincts, simple artefact macOS Finder).
+- **9 articles sans expertise terrain** → 8 enrichis avec retours KEOS / SFR / ACTIV PARTNERS (Sprint 2A du 1ᵉʳ juin). Reste 1 article légitimement sans expertise : `outils-techniques/pillcolor-guide.md` (article méta sur le système de pill colors du site).
+- **8 articles courts (<700 mots)** → 6 étoffés à 1100-1300 mots (Sprints 3C + 2B + 2C). Reste 2 articles courts : `gestion-projet-agile.md` (689) et `productivite-professionnelle.md` (694).
+- **47 articles sans `tags:`** → 100 % de couverture désormais (Sprint 1 du 31 mai).
+
+### 📋 Restant à arbitrer
+
+1. **`gestion-projet-agile.md` vs `gestion-projet-agile-meilleures-pratiques.md`** : possible doublon thématique. À vérifier (fusion / différenciation explicite / acceptation format court).
+2. **Domaines sous-représentés** (1-3 articles) : `gestion-connaissances`, `reconversion-carriere`, `developpement-commercial`. Soit étoffer (matériau du 5e métier Relation Client SFR prêt à exploiter pour `developpement-commercial`), soit accepter qu'ils restent des "satellites" thématiques.
+3. **Articles sans `updatedDate`** : pour les articles dont le contenu reste sensiblement valide en 2026, ajouter `updatedDate` au fur et à mesure des relectures. Pattern actuellement appliqué : LinkedIn B2B, Accessibilité EAA, les 5 articles étoffés du Sprint 2BC, les 2 service-client.
+4. **`publishDate` futur** : beaucoup d'articles ont des `publishDate` 2026-06 → 2026-10 (échelonnement éditorial volontaire). Conséquence : ils n'apparaissent pas en home/RSS tant que la date n'est pas atteinte (à confirmer selon la logique de `rss.xml.ts` et `index.astro`).
 
 ## 6. Méthodologie de l'audit
 
