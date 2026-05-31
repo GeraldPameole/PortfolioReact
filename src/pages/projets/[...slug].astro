@@ -10,18 +10,34 @@ export async function getStaticPaths() {
 
 const { entry } = Astro.props;
 const { Content } = await entry.render();
-const { title, description, img, img_alt, company, period, location, technologies, tags, publishDate } = entry.data;
+const { title, description, img, img_alt, company, period, location, technologies, tags, publishDate, domain } = entry.data;
 
 const date = publishDate
   ? new Date(publishDate).toLocaleDateString('fr-FR', { year: 'numeric', month: 'long' })
   : null;
+
+// Accent couleur par métier (aligné sur projets.astro CAT_COLOR)
+const DOMAIN_ACCENT: Record<string, { color: string; rgb: string }> = {
+  'gestion-projet':           { color: '#60a5fa', rgb: '96,165,250'  }, // blue
+  'developpement-web':        { color: '#34d399', rgb: '52,211,153'  }, // emerald
+  'developpement-commercial': { color: '#fb923c', rgb: '251,146,60'  }, // orange
+  'relation-client':          { color: '#f472b6', rgb: '244,114,182' }, // rose
+  'qualite-process':          { color: '#a78bfa', rgb: '167,139,250' }, // violet
+  'formation':                { color: '#fbbf24', rgb: '251,191,36'  }, // amber
+};
+const accent = DOMAIN_ACCENT[domain ?? ''] ?? { color: '#915EFF', rgb: '145,94,255' };
+const accentStyle = `--accent:${accent.color};--accent-rgb:${accent.rgb}`;
 ---
 
 <BaseLayout title={title} description={description ?? title}>
 
+  <div class="project-scope" style={accentStyle}>
+
   <!-- Hero -->
   <div class="project-hero">
-    <div class="orb orb-violet" style="width:400px;height:400px;top:-100px;right:-80px;opacity:0.25;"></div>
+    <!-- Ambient orbs en couleur du métier -->
+    <div class="orb project-orb project-orb-tr" style="width:520px;height:520px;top:-180px;right:-120px"></div>
+    <div class="orb project-orb project-orb-bl" style="width:380px;height:380px;bottom:-140px;left:-100px"></div>
 
     {img && (
       <div class="hero-image-wrap">
@@ -52,6 +68,9 @@ const date = publishDate
 
   <!-- Content -->
   <div class="project-body">
+    <!-- Ambient orbs scrollés dans le corps pour prolonger l'accent -->
+    <div class="orb project-orb project-orb-body-1" style="width:420px;height:420px;top:8%;right:-160px"></div>
+    <div class="orb project-orb project-orb-body-2" style="width:360px;height:360px;bottom:6%;left:-140px"></div>
     <div class="container">
       <div class="project-layout">
 
@@ -100,19 +119,36 @@ const date = publishDate
     </div>
   </div>
 
+  </div><!-- /.project-scope -->
+
   <BackToTop />
 </BaseLayout>
 
 <style>
+/* Scope racine : porte l'accent couleur du métier (--accent / --accent-rgb) */
+.project-scope { position: relative; }
+
+/* Orbs colorées dans l'accent du métier (héro + corps) */
+.project-orb {
+  background: radial-gradient(circle, rgba(var(--accent-rgb), 0.42), transparent 70%);
+}
+.project-orb-tr      { opacity: 0.55; }
+.project-orb-bl      { opacity: 0.40; }
+.project-orb-body-1  { opacity: 0.30; }
+.project-orb-body-2  { opacity: 0.25; }
+
 /* Hero */
 .project-hero {
   position: relative;
   overflow: hidden;
-  min-height: 340px;
+  min-height: 380px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid rgba(var(--accent-rgb), 0.18);
+  background:
+    radial-gradient(ellipse 90% 60% at 50% 0%, rgba(var(--accent-rgb), 0.10), transparent 70%),
+    var(--bg-0);
 }
 .hero-image-wrap {
   position: absolute;
@@ -123,13 +159,16 @@ const date = publishDate
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.25;
-  filter: saturate(0.6);
+  opacity: 0.55;            /* +120% de présence (0.25 → 0.55) */
+  filter: saturate(1.05) contrast(1.05);
 }
 .hero-image-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, var(--bg-0) 30%, rgba(5,8,22,0.7) 100%);
+  /* Voile teinté dans l'accent + dégradé bas → haut pour la lisibilité du texte */
+  background:
+    linear-gradient(to top, var(--bg-0) 18%, rgba(5,8,22,0.55) 60%, transparent 100%),
+    radial-gradient(ellipse 70% 100% at 100% 0%, rgba(var(--accent-rgb), 0.18), transparent 60%);
 }
 .hero-content {
   position: relative;
@@ -150,7 +189,7 @@ const date = publishDate
 }
 .back-link:hover { color: var(--text-1); }
 .hero-meta { display: flex; align-items: center; gap: 1rem; margin-bottom: .75rem; flex-wrap: wrap; }
-.hero-company { font-family: var(--font-mono); font-size: .8rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--violet-light); }
+.hero-company { font-family: var(--font-mono); font-size: .8rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); text-shadow: 0 0 18px rgba(var(--accent-rgb), 0.35); }
 .hero-date    { font-family: var(--font-mono); font-size: .78rem; color: var(--text-3); }
 .hero-title   { font-size: clamp(1.8rem, 4vw, 3.2rem); color: var(--text-1); margin-bottom: 1rem; line-height: 1.15; }
 .hero-desc    { font-size: 1.05rem; color: var(--text-3); max-width: 640px; line-height: 1.8; margin-bottom: 1.5rem; }
@@ -161,15 +200,23 @@ const date = publishDate
   gap: .4rem;
   font-family: var(--font-mono);
   font-size: .78rem;
-  color: var(--text-3);
-  background: var(--glass);
-  border: 1px solid var(--border);
+  color: var(--text-2);
+  background: rgba(var(--accent-rgb), 0.10);
+  border: 1px solid rgba(var(--accent-rgb), 0.30);
   border-radius: var(--r-full);
   padding: .3rem .85rem;
 }
 
 /* Body layout */
-.project-body { padding: 3rem 0 6rem; }
+.project-body {
+  position: relative;
+  overflow: hidden;
+  padding: 3rem 0 6rem;
+  background:
+    radial-gradient(ellipse 80% 40% at 50% 0%, rgba(var(--accent-rgb), 0.06), transparent 60%),
+    var(--bg-0);
+}
+.project-body .container { position: relative; z-index: 1; }
 .project-layout {
   display: grid;
   grid-template-columns: 1fr 300px;
@@ -187,12 +234,21 @@ const date = publishDate
   color: var(--text-1);
   margin: 2.5rem 0 .75rem;
   padding-bottom: .5rem;
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid rgba(var(--accent-rgb), 0.25);
   font-family: var(--font-sans);
+  position: relative;
+}
+.project-article :global(h2)::before {
+  content: '';
+  position: absolute;
+  left: 0; bottom: -1px;
+  width: 56px; height: 2px;
+  background: var(--accent);
+  border-radius: 2px;
 }
 .project-article :global(h3) {
   font-size: 1.1rem;
-  color: var(--violet-light);
+  color: var(--accent);
   margin: 2rem 0 .6rem;
   font-family: var(--font-sans);
 }
@@ -202,14 +258,14 @@ const date = publishDate
 .project-article :global(ol) { color: var(--text-2); margin-bottom: 1.1rem; padding-left: 1.5rem; }
 .project-article :global(li) { margin-bottom: .5rem; line-height: 1.7; }
 .project-article :global(strong) { color: var(--text-1); font-weight: 600; }
-.project-article :global(em) { color: var(--violet-light); }
+.project-article :global(em) { color: var(--accent); font-style: normal; font-weight: 600; }
 .project-article :global(blockquote) {
-  border-left: 3px solid var(--violet);
+  border-left: 3px solid var(--accent);
   padding: .75rem 1.5rem;
   margin: 1.5rem 0;
-  background: rgba(145,94,255,0.06);
+  background: rgba(var(--accent-rgb), 0.08);
   border-radius: 0 var(--r-md) var(--r-md) 0;
-  color: var(--text-3);
+  color: var(--text-2);
 }
 .project-article :global(table) {
   width: 100%;
@@ -244,23 +300,40 @@ const date = publishDate
   display: inline-flex;
   align-items: center;
   gap: .35rem;
-  background: rgba(145,94,255,0.1);
-  border: 1px solid rgba(145,94,255,0.25);
+  background: rgba(var(--accent-rgb), 0.10);
+  border: 1px solid rgba(var(--accent-rgb), 0.30);
   border-radius: var(--r-full);
   padding: .25rem .85rem;
   font-family: var(--font-mono);
   font-size: .8rem;
-  color: var(--violet-light);
+  color: var(--accent);
   margin: .15rem;
+}
+
+/* Tableau Compétences — header dans l'accent */
+.project-article :global(th) {
+  background: rgba(var(--accent-rgb), 0.08) !important;
+  border-bottom-color: rgba(var(--accent-rgb), 0.30) !important;
 }
 
 /* Sidebar */
 .project-sidebar { position: sticky; top: 6rem; display: flex; flex-direction: column; gap: 1.5rem; }
 .sidebar-block {
-  background: var(--bg-card);
-  border: 1px solid var(--border);
+  background:
+    linear-gradient(135deg, rgba(var(--accent-rgb), 0.06), rgba(255,255,255,0.02)),
+    var(--bg-card);
+  border: 1px solid rgba(var(--accent-rgb), 0.20);
   border-radius: var(--r-lg);
   padding: 1.5rem;
+  position: relative;
+}
+.sidebar-block::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 1.25rem;
+  width: 36px; height: 2px;
+  background: var(--accent);
+  border-radius: 0 0 2px 2px;
 }
 .sidebar-title {
   font-family: var(--font-sans);
@@ -268,7 +341,7 @@ const date = publishDate
   font-weight: 700;
   letter-spacing: .08em;
   text-transform: uppercase;
-  color: var(--text-3);
+  color: var(--accent);
   margin-bottom: 1rem;
 }
 .tech-grid { display: flex; flex-wrap: wrap; gap: .4rem; }
@@ -276,21 +349,24 @@ const date = publishDate
   font-family: var(--font-mono);
   font-size: .75rem;
   padding: .3rem .75rem;
-  background: var(--glass);
-  border: 1px solid var(--border);
+  background: rgba(var(--accent-rgb), 0.08);
+  border: 1px solid rgba(var(--accent-rgb), 0.25);
   border-radius: var(--r-full);
-  color: var(--cyan-light);
+  color: var(--text-1);
   transition: all .2s;
 }
-.tech-pill:hover { border-color: var(--cyan); }
+.tech-pill:hover {
+  border-color: var(--accent);
+  background: rgba(var(--accent-rgb), 0.15);
+}
 .tags-list { display: flex; flex-wrap: wrap; gap: .4rem; }
 .tag-pill {
   font-size: .72rem;
   padding: .22rem .65rem;
-  background: rgba(145,94,255,0.08);
-  border: 1px solid rgba(145,94,255,0.2);
+  background: rgba(var(--accent-rgb), 0.10);
+  border: 1px solid rgba(var(--accent-rgb), 0.25);
   border-radius: var(--r-full);
-  color: var(--violet-light);
+  color: var(--accent);
   font-family: var(--font-sans);
   font-weight: 600;
 }
