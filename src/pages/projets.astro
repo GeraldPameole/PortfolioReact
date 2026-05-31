@@ -12,6 +12,7 @@ const CAT_COLOR: Record<string, { label: string; color: string; icon: string }> 
   management:              { label: 'Gestion de projet', color: '#60a5fa', icon: '🗂️' },
   'developpement-web':     { label: 'Développement Web', color: '#34d399', icon: '💻' },
   business:                { label: 'Développement commercial', color: '#fb923c', icon: '🤝' },
+  'relation-client':       { label: 'Relation client',   color: '#f472b6', icon: '💎' },
   'qualite-process':       { label: 'Qualité & Process', color: '#a78bfa', icon: '✅' },
   'developpement-personnel':{ label: 'Formation',        color: '#fbbf24', icon: '🎓' },
 };
@@ -21,6 +22,7 @@ const DOMAIN_TO_CAT: Record<string, string> = {
   'gestion-projet':           'management',
   'developpement-web':        'developpement-web',
   'developpement-commercial': 'business',
+  'relation-client':          'relation-client',
   'qualite-process':          'qualite-process',
   'formation':                'developpement-personnel',
 };
@@ -35,7 +37,8 @@ function getCategory(project: any) {
   const tags: string[] = (project.data.tags ?? []).map((t: string) => t.toLowerCase());
   const tagStr = tags.join(' ');
 
-  if (/(commercial|business|vente|sales|fidélis)/.test(tagStr)) return 'business';
+  if (/(relation client|premium|vip|churn|arpu|fidélis|crm)/.test(tagStr)) return 'relation-client';
+  if (/(commercial|business|vente|sales)/.test(tagStr)) return 'business';
   if (/(web|react|next|typescript|node|front|back|seo|rgpd)/.test(tagStr)) return 'developpement-web';
   if (/(qualit|process|lean|iso|méthodes)/.test(tagStr)) return 'qualite-process';
   if (/(form|coach|train|pédagog|offshore)/.test(tagStr)) return 'developpement-personnel';

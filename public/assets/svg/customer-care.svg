@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500" fill="none">
+  <defs>
+    <linearGradient id="cc-bg" x1="0" y1="0" x2="800" y2="500" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#050816"/>
+      <stop offset="100%" stop-color="#1a0814"/>
+    </linearGradient>
+    <linearGradient id="cc-accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#f472b6"/>
+      <stop offset="100%" stop-color="#ec4899"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="500" fill="url(#cc-bg)"/>
+
+  <!-- Grid -->
+  <g stroke="#ffffff06" stroke-width="1">
+    <line x1="0" y1="125" x2="800" y2="125"/>
+    <line x1="0" y1="250" x2="800" y2="250"/>
+    <line x1="0" y1="375" x2="800" y2="375"/>
+    <line x1="200" y1="0" x2="200" y2="500"/>
+    <line x1="400" y1="0" x2="400" y2="500"/>
+    <line x1="600" y1="0" x2="600" y2="500"/>
+  </g>
+
+  <!-- Header -->
+  <text x="60" y="62" font-family="monospace" font-size="11" fill="#94a3b8" letter-spacing="2">RELATION CLIENT PREMIUM — SFR · 2005-2009</text>
+  <text x="60" y="100" font-family="sans-serif" font-size="28" fill="#ffffff" font-weight="700">Chargé de Développement Commercial</text>
+  <line x1="60" y1="120" x2="220" y2="120" stroke="url(#cc-accent)" stroke-width="3"/>
+
+  <!-- 5 axes tiles -->
+  <!-- Axe 1: Croissance commerciale -->
+  <g transform="translate(60, 160)">
+    <rect width="220" height="100" rx="10" fill="#0d0f17" stroke="#f472b630" stroke-width="1"/>
+    <circle cx="22" cy="22" r="6" fill="#f472b6"/>
+    <text x="38" y="27" font-family="monospace" font-size="10" fill="#94a3b8" letter-spacing="1">01 · COMMERCIAL</text>
+    <text x="20" y="56" font-family="sans-serif" font-size="22" fill="#f472b6" font-weight="700">ARPU +12%/an</text>
+    <text x="20" y="78" font-family="sans-serif" font-size="11" fill="#94a3b8">Upsell 30% · +18€/client/mois</text>
+  </g>
+
+  <!-- Axe 2: Portefeuille -->
+  <g transform="translate(290, 160)">
+    <rect width="220" height="100" rx="10" fill="#0d0f17" stroke="#f472b630" stroke-width="1"/>
+    <circle cx="22" cy="22" r="6" fill="#f472b6"/>
+    <text x="38" y="27" font-family="monospace" font-size="10" fill="#94a3b8" letter-spacing="1">02 · PORTEFEUILLE VIP</text>
+    <text x="20" y="56" font-family="sans-serif" font-size="22" fill="#f472b6" font-weight="700">200 VIP suivis</text>
+    <text x="20" y="78" font-family="sans-serif" font-size="11" fill="#94a3b8">LTV 950€/an · +20%/an</text>
+  </g>
+
+  <!-- Axe 3: Fidélisation -->
+  <g transform="translate(520, 160)">
+    <rect width="220" height="100" rx="10" fill="#0d0f17" stroke="#f472b630" stroke-width="1"/>
+    <circle cx="22" cy="22" r="6" fill="#f472b6"/>
+    <text x="38" y="27" font-family="monospace" font-size="10" fill="#94a3b8" letter-spacing="1">03 · FIDÉLISATION</text>
+    <text x="20" y="56" font-family="sans-serif" font-size="22" fill="#f472b6" font-weight="700">Churn −52%</text>
+    <text x="20" y="78" font-family="sans-serif" font-size="11" fill="#94a3b8">NPS +15 pts · Rétention 92%</text>
+  </g>
+
+  <!-- Axe 4: Data CRM -->
+  <g transform="translate(60, 280)">
+    <rect width="340" height="100" rx="10" fill="#0d0f17" stroke="#f472b630" stroke-width="1"/>
+    <circle cx="22" cy="22" r="6" fill="#f472b6"/>
+    <text x="38" y="27" font-family="monospace" font-size="10" fill="#94a3b8" letter-spacing="1">04 · DATA &amp; INTELLIGENCE CRM</text>
+    <text x="20" y="56" font-family="sans-serif" font-size="22" fill="#f472b6" font-weight="700">Score churn &gt;60% · 5 personas</text>
+    <text x="20" y="78" font-family="sans-serif" font-size="11" fill="#94a3b8">Campagnes ciblées +25% vs génériques</text>
+  </g>
+
+  <!-- Axe 5: Veille -->
+  <g transform="translate(410, 280)">
+    <rect width="330" height="100" rx="10" fill="#0d0f17" stroke="#f472b630" stroke-width="1"/>
+    <circle cx="22" cy="22" r="6" fill="#f472b6"/>
+    <text x="38" y="27" font-family="monospace" font-size="10" fill="#94a3b8" letter-spacing="1">05 · VEILLE &amp; STRATÉGIE MARCHÉ</text>
+    <text x="20" y="56" font-family="sans-serif" font-size="22" fill="#f472b6" font-weight="700">65% succès contre-offres</text>
+    <text x="20" y="78" font-family="sans-serif" font-size="11" fill="#94a3b8">4 opérateurs · +3 sem. d'anticipation</text>
+  </g>
+
+  <!-- Footer signature -->
+  <line x1="60" y1="420" x2="740" y2="420" stroke="#ffffff10" stroke-width="1"/>
+  <text x="60" y="450" font-family="monospace" font-size="10" fill="#64748b" letter-spacing="1">5 AXES · 1 PORTEFEUILLE PREMIUM · UNE PROMESSE : VALEUR &amp; RÉTENTION</text>
+  <text x="740" y="450" font-family="monospace" font-size="10" fill="#f472b6" text-anchor="end" letter-spacing="1">gerald paméole</text>
+</svg>
