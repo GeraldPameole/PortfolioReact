@@ -21,22 +21,45 @@ export async function GET(context: APIContext) {
     description:
       'Management, transformation digitale, développement web et productivité — articles hebdomadaires.',
     site: context.site ?? 'https://geraldpameole.vercel.app',
-    items: sorted.map((article) => ({
-      title: article.data.title,
-      description: article.data.description,
-      pubDate: new Date(article.data.publishDate),
-      link: `/blog/${article.slug}`,
-      // Contenu HTML complet → permet d'envoyer l'article entier par email (RSS-to-email)
-      content: absolutize(
-        sanitizeHtml(parser.render(article.body), {
-          allowedTags: sanitizeHtml.defaults.allowedTags.concat(['img', 'h1', 'h2']),
-          allowedAttributes: {
-            ...sanitizeHtml.defaults.allowedAttributes,
-            img: ['src', 'alt', 'title', 'width', 'height'],
+    items: sorted.map((article) => {
+      // Image absolutisée pour LinkedIn / Buffer / autres consommateurs RSS
+      const rawImg = article.data.image;
+      const imgUrl = rawImg
+        ? (rawImg.startsWith('http') ? rawImg : `${site}${rawImg.startsWith('/') ? '' : '/'}${rawImg}`)
+        : undefined;
+      const imgType = imgUrl?.match(/\.webp$/i) ? 'image/webp'
+                    : imgUrl?.match(/\.png$/i)  ? 'image/png'
+                    : 'image/jpeg';
+
+      return {
+        title: article.data.title,
+        description: article.data.description,
+        pubDate: new Date(article.data.publishDate),
+        link: `/blog/${article.slug}`,
+        // Auteur (utilisé par Buffer/Hootsuite/etc. pour attribution)
+        author: `${article.data.author ?? 'Gérald Paméole'} (${site}/about)`,
+        // Tags → catégories RSS → Buffer peut les convertir en hashtags LinkedIn suggérés
+        categories: article.data.tags ?? [],
+        // Image principale → utilisée par Buffer/MRSS pour le visuel du post LinkedIn (engagement ×3)
+        ...(imgUrl && {
+          enclosure: {
+            url: imgUrl,
+            length: 0,           // taille inconnue à la génération, accepté par la plupart des lecteurs
+            type: imgType,
           },
-        })
-      ),
-    })),
+        }),
+        // Contenu HTML complet → RSS-to-email (Buttondown) ET fallback image (1er <img>) pour Buffer
+        content: absolutize(
+          sanitizeHtml(parser.render(article.body), {
+            allowedTags: sanitizeHtml.defaults.allowedTags.concat(['img', 'h1', 'h2']),
+            allowedAttributes: {
+              ...sanitizeHtml.defaults.allowedAttributes,
+              img: ['src', 'alt', 'title', 'width', 'height'],
+            },
+          })
+        ),
+      };
+    }),
     customData: `<language>fr-FR</language>`,
   });
 }
