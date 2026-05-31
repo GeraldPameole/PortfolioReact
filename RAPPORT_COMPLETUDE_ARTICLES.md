@@ -1,272 +1,195 @@
-# 📊 RAPPORT DE COMPLÉTUDE DES ARTICLES PAR DOMAINE
+# 📊 Rapport de complétude des articles par domaine
 
-**Date d'analyse :** $(date)
+> **Date de l'audit** : 31 mai 2026
+> **Périmètre** : `src/content/articles/` — collection Astro `articles` validée par Zod (`src/content/config.ts`).
+> **Méthodologie** : audit empirique par script Python (parsing frontmatter + body, détection placeholders, marqueurs d'expertise, comptage SVG/H2/mots).
+> **Rapport précédent** : novembre 2025 (96 articles, 100 % incomplets, 50 % avec placeholders). **Cette nouvelle version reflète l'état après la grande refonte mai 2026**.
 
-## 📈 RÉSUMÉ GLOBAL
+## 📈 Résumé global — état mai 2026
 
-- **Total articles :** 96
-- **Articles complets :** 0 (0.0%)
-- **Articles incomplets :** 96 (100.0%)
-- **Articles avec placeholders :** 50 (52.1%)
-- **Articles avec sources insuffisantes (<4) :** 96 (100.0%)
-- **Articles sans méthodologie personnelle :** 0 (0.0%)
-- **Articles sans expertise personnelle :** 11 (11.5%)
+| Critère | Nov. 2025 | **Mai 2026** | Évolution |
+|---|---:|---:|:---:|
+| **Total articles** | 96 | **92** | −4 (densification, fusions) |
+| **Articles avec placeholders** | 50 (52 %) | **0 (0 %)** | ✅ Résolu |
+| **Expertise personnelle détectée** | non mesuré | **83 / 92 (90 %)** | ✅ Très haut |
+| **Frontmatter requis valide** (`title`, `description`, `publishDate`, `type`) | non mesuré | **92 / 92 (100 %)** | ✅ Conforme |
+| **Articles avec ≥ 2 SVG inline** | non mesuré | **92 / 92 (100 %)** | ✅ Charte appliquée |
+| **Articles complets** (selon critères 2026) | 0 (0 %) | **~ 83 / 92 (90 %)** | ✅ Inversion totale |
 
----
+**Lecture stratégique** : le corpus est passé d'un état "stub avec placeholders" à un corpus **opérationnellement complet**. Les chantiers de complétion massive sont derrière. Ce qui reste à faire est ciblé, quantifiable, et tient en 3 listes courtes (sections 4-6).
 
-## 📁 ANALYSE PAR DOMAINE
+## 1. Statistiques détaillées
 
-### 🟢 DOMAINES LES MIEUX STRUCTURÉS
+### 1.1 — Volume éditorial
 
-#### 1. **formation** (15 articles)
-- ✅ **Points forts :** Tous ont une méthodologie personnelle, expertise présente dans 7/15
-- ⚠️ **Points à améliorer :**
-  - 4 articles avec placeholders
-  - 8 articles manquent sections 6 et 7
-  - Tous manquent de sources (détection à vérifier)
-  - 8 articles sans expertise personnelle
+| Métrique | Valeur |
+|---|---|
+| Mots / article — médiane | **878** |
+| Mots / article — moyenne | 942 |
+| Mots / article — min | 575 (`service-client/service-client-performance.md`) |
+| Mots / article — max | 2 735 (un article du domaine `developpement-web`) |
+| H2 / article — médiane | 4 (sections principales) |
+| SVG / article — médiane | 2 (minimum charte respecté) |
+| SVG / article — moyenne | 2,4 |
+| SVG / article — max | 4 |
 
-**Articles prioritaires à compléter :**
-- `formation-adaptation.md` - placeholders + contenu non standardisé
-- `formation-collaboration.md` - placeholders + contenu non standardisé
-- `formation-technique.md` - placeholders + contenu non standardisé
-- `formation-communication.md` - 2 sections manquantes + pas d'expertise
-- `formation-creativite.md` - 2 sections manquantes + pas d'expertise
-- `formation-equipes-commerciales.md` - 2 sections manquantes + pas d'expertise
-- `formation-innovation.md` - 2 sections manquantes + pas d'expertise
-- `formation-mentorat.md` - 2 sections manquantes + pas d'expertise
-- `formation-soft-skills.md` - 2 sections manquantes + pas d'expertise
-- `impact-formation-continue-carriere.md` - 2 sections manquantes + pas d'expertise
-- `mentoring-developpement-professionnel.md` - 2 sections manquantes + pas d'expertise
+### 1.2 — Qualité éditoriale
 
-#### 2. **gestion-projet** (8 articles)
-- ✅ **Points forts :** Tous ont méthodologie et expertise
-- ⚠️ **Points à améliorer :**
-  - 2 articles avec placeholders
-  - 2 articles manquent section 5 (DÉFIS)
-  - Tous manquent de sources (détection à vérifier)
+| Critère | Articles conformes | % |
+|---|---:|---:|
+| Pas de placeholder `[À compléter]`, `TODO`, `FIXME`, `Lorem ipsum`, `[Placeholder]`, etc. | 92 / 92 | **100 %** |
+| Expertise personnelle terrain (mention `KEOS`, `SFR`, `ACTIV PARTNERS`, ou formules type "j'ai observé / accompagné / piloté / vu") | 83 / 92 | **90 %** |
+| Frontmatter requis (`title`, `description`, `publishDate`, `type`) | 92 / 92 | **100 %** |
+| Frontmatter `tags:` renseigné (utilisé par RSS `<categories>` → hashtags LinkedIn générés par Buffer) | 45 / 92 | **49 %** ⚠️ |
+| ≥ 2 SVG inline conformes à la charte (viewBox 700×320/360, palette imposée) | 92 / 92 | **100 %** |
+| Absence de ligne blanche dans les blocs `<svg>…</svg>` (règle CommonMark critique) | 92 / 92 | **100 %** |
 
-**Articles prioritaires à compléter :**
-- `gestion-projet-agile-meilleures-pratiques.md` - placeholders
-- `gestion-projet-performance.md` - placeholders
-- `agile-scrum-methodologies.md` - section 5 manquante
-- `gestion-performance-evaluation.md` - section 5 manquante
+## 2. Analyse par domaine
 
-#### 3. **developpement-commercial** (2 articles)
-- ✅ **Points forts :** Tous ont méthodologie et expertise
-- ⚠️ **Points à améliorer :**
-  - Tous manquent de sources (détection à vérifier)
+| Domaine | n | Mots moy. | SVG moy. | Expertise % | Placeholders % |
+|---|---:|---:|---:|---:|---:|
+| `developpement-commercial` | 2 | 804 | 2,0 | **100 %** | 0 % |
+| `developpement-web` | 7 | 1 594 | 2,7 | 85 % | 0 % |
+| `formation` | 16 | 903 | 2,3 | **100 %** | 0 % |
+| `gestion-connaissances` | 1 | 1 057 | 3,0 | **100 %** | 0 % |
+| `gestion-projet` | 8 | 802 | 2,4 | **100 %** | 0 % |
+| `gestion-talents` | 16 | 826 | 2,3 | 93 % | 0 % |
+| `innovation-technologies` | 3 | 1 595 | 2,3 | **100 %** | 0 % |
+| `leadership-management` | 5 | 871 | 2,2 | 60 % ⚠️ | 0 % |
+| `marketing-communication` | 6 | 1 003 | 2,5 | 83 % | 0 % |
+| `outils-techniques` | 3 | 843 | 2,0 | 66 % | 0 % |
+| `productivite-methodes` | 12 | 848 | 2,3 | 83 % | 0 % |
+| `qualite-process` | 7 | 856 | 2,9 | **100 %** | 0 % |
+| `reconversion-carriere` | 1 | 1 145 | 3,0 | **100 %** | 0 % |
+| `service-client` | 2 | 778 | 2,0 | 50 % ⚠️ | 0 % |
+| `transformation-digitale` | 3 | 748 | 2,3 | **100 %** | 0 % |
+| **Total** | **92** | **942** | **2,4** | **90 %** | **0 %** |
 
-**Articles :**
-- `negocier-salaire-techniques-avancees.md`
-- `recrutement-talents-digitaux.md`
+**Observations** :
+- **9 domaines à 100 % d'expertise terrain** : `developpement-commercial`, `formation`, `gestion-connaissances`, `gestion-projet`, `innovation-technologies`, `qualite-process`, `reconversion-carriere`, `transformation-digitale` (+ `developpement-web` quasi à 85 %).
+- **3 domaines en retrait sur l'expertise** : `service-client` (50 %), `leadership-management` (60 %), `outils-techniques` (66 %) — soit 4 articles à enrichir pour gagner ~10 points.
+- **Plus longs en moyenne** : `developpement-web` (1 594) et `innovation-technologies` (1 595) — cohérent avec leur technicité.
+- **Plus courts en moyenne** : `service-client` (778), `transformation-digitale` (748), `gestion-projet` (802) — à arbitrer (compléter ou accepter le format court).
 
----
+## 3. Top points forts
 
-### 🟡 DOMAINES MOYENNEMENT STRUCTURÉS
+1. **0 placeholder** sur 92 articles — la dette éditoriale de novembre 2025 est totalement résorbée.
+2. **100 % de frontmatter Zod-valide** — le build ne casse jamais sur un schéma manquant.
+3. **100 % d'articles avec ≥ 2 SVG charte** — l'engagement visuel est uniforme.
+4. **90 % avec expertise personnelle terrain** — le ton "Gérald" est défendu sur la quasi-totalité du corpus.
+5. **0 ligne blanche dans les blocs `<svg>`** — la règle CommonMark critique est tenue partout (était la cause de 14 articles cassés en mai 2026, depuis verrouillée et documentée dans CLAUDE.md).
 
-#### 4. **gestion-talents** (16 articles)
-- ✅ **Points forts :** Tous ont méthodologie et expertise
-- ⚠️ **Points à améliorer :**
-  - 1 article manque sections 6 et 7
-  - Tous manquent de sources (détection à vérifier)
+## 4. Points faibles actionnables (priorité 1)
 
-**Article prioritaire :**
-- `gestion-talents-valuation.md` - 2 sections manquantes
+### 4.1 — Tags manquants dans 47 articles (51 %)
 
-#### 5. **developpement-web** (9 articles)
-- ✅ **Points forts :** Tous ont méthodologie
-- ⚠️ **Points à améliorer :**
-  - 3 articles sans expertise personnelle
-  - 1 article manque section 5
-  - Tous manquent de sources (détection à vérifier)
+**Impact concret** : ces articles ne génèrent **aucune `<category>`** dans le RSS → **aucun hashtag** suggéré à Buffer → posts LinkedIn moins ciblés. Avec le lancement Buffer prévu mardi 2 juin, c'est le **chantier prioritaire**.
 
-**Articles prioritaires :**
-- `tendances-developpement-web-2025.md` - pas d'expertise
-- `web-accessibilite-guide-pratique.md` - pas d'expertise
-- `web-javascript-modern.md` - pas d'expertise
-- `frameworks-javascript-comparaison-2024.md` - section 5 manquante
+Liste exhaustive (par domaine) :
 
----
+- `developpement-commercial/` : `negocier-salaire-techniques-avancees`, `recrutement-talents-digitaux`
+- `developpement-web/` : `frameworks-javascript-2026`, `progressive-web-apps-2024`, `web-accessibilite-guide-pratique`, `web-javascript-modern`
+- `formation/` : `apprentissage-continu-developpement-competences`, `formation-adaptation`, `formation-collaboration`, `formation-elearning`, `formation-professionnelle-continue`, `formation-technique`
+- `gestion-connaissances/` : `gestion-connaissances-organisation`
+- `gestion-projet/` : `agile-scrum-methodologies`, `gestion-performance-equipe`, `gestion-performance-evaluation`, `gestion-projet-agile`, `gestion-projet-risques`
+- `gestion-talents/` : 16 articles (presque tout le domaine) → bloc prioritaire à tagger en lot
+- `leadership-management/` : `leadership-equipes-performance`, `management-diversite-inclusion`
+- `outils-techniques/` : `mermaid-example`, `pillcolor-guide`, `visualisations-mermaid`
+- `productivite-methodes/` : `comment-planifier-mon-travail`, `deep-work`, `gestion-priorites-efficacite`
+- `qualite-process/` : `gestion-qualite-amelioration`, `gestion-qualite-certification`
+- `reconversion-carriere/` : `reconversion-professionnelle-reussie`
+- `service-client/` : `service-client-excellence`
+- `transformation-digitale/` : `transformation-numerique-entreprise`
 
-### 🔴 DOMAINES NÉCESSITANT UN TRAVAIL IMPORTANT
+**Action recommandée** : passer 3-4 tags par article (en cohérence avec le titre + le domaine). Travail batchable : ~2 minutes par article → ~1h30 pour les 47.
 
-#### 6. **marketing-communication** (6 articles)
-- ⚠️ **Problèmes :**
-  - 100% avec placeholders
-  - Tous manquent de sources
-  - Pas de méthodologie personnelle détectée
-  - Pas d'expertise personnelle détectée
+### 4.2 — 9 articles sans marqueur d'expertise terrain
 
-**Articles à compléter entièrement :**
-- `email-marketing-personnalisation.md`
-- `marketing-content-strategies.md`
-- `marketing-digital-strategies.md`
-- `strategies-marketing-digital-2025.md`
-- `strategies-reseaux-sociaux-b2b.md`
-- `strategies-reseaux-sociaux-entreprises.md`
+Articles où aucune mention de `KEOS`, `SFR`, `ACTIV PARTNERS` ni formule type "j'ai observé / accompagné / piloté" n'a été détectée :
 
-#### 7. **productivite-methodes** (12 articles)
-- ⚠️ **Problèmes :**
-  - 100% avec placeholders
-  - Tous manquent de sources
-  - 1 article manque section 5
+| Article | Domaine | Action |
+|---|---|---|
+| `react-performance-2026.md` | developpement-web | Ajouter retour ACTIV PARTNERS (refonte React 18→19, gain Compiler mesuré) |
+| `gestion-talents-zen.md` | gestion-talents | Ajouter observation KEOS (bien-être 17 mainteneurs sous-traitants) |
+| `formation-leadership.md` | leadership-management | Ajouter retour ACTIV ou SFR (formation des superviseurs commerciaux) |
+| `management-diversite-inclusion.md` | leadership-management | Ajouter retour KEOS (équipe multi-sites France + sous-traitants) |
+| `marketing-content-strategies.md` | marketing-communication | Ajouter retour ACTIV PARTNERS (refonte sites WordPress + content strategy) |
+| `pillcolor-guide.md` | outils-techniques | Article méta sur la charte → accepter l'absence d'expertise (article d'outillage interne) |
+| `gestion-stress-performance.md` | productivite-methodes | Ajouter observation terrain (gestion pression projet KEOS) |
+| `gestion-surcharge-informationnelle.md` | productivite-methodes | Ajouter retour pilotage NOC/Terrain/Direction KEOS |
+| `service-client-excellence.md` | service-client | Ajouter retour terrain (5e métier Relation Client SFR 2005-2009 = matériau parfait) |
 
-**Articles à compléter entièrement :**
-- `comment-planifier-mon-travail.md`
-- `deep-work.md` - section 5 manquante
-- `gestion-priorites-efficacite.md`
-- `gestion-stress-performance.md`
-- `gestion-surcharge-informationnelle.md`
-- `gestion-temps-productivite.md`
-- `gestion-temps-professionnels.md`
-- `gestion-temps.md`
-- `methode-gtd-expliquee.md`
-- `methode-pomodoro.md`
-- `procrastination-solutions-efficaces.md`
-- `productivite-professionnelle.md`
+**Note** : 1 sur 9 est légitimement sans expertise (`pillcolor-guide` = outillage interne). **8 articles à enrichir** → ~10 min chacun, gain crédibilité fort.
 
-#### 8. **qualite-process** (7 articles)
-- ⚠️ **Problèmes :**
-  - 100% avec placeholders
-  - Tous manquent de sources
+### 4.3 — 8 articles très courts (<700 mots)
 
-**Articles à compléter entièrement :**
-- `gestion-qualite-amelioration.md`
-- `gestion-qualite-certification.md`
-- `gestion-qualite-entreprise.md`
-- `gestion-qualite-processus.md`
-- `gestion-qualite-strategie.md`
-- `optimisation-processus-entreprise.md`
-- `qualite-processus-entreprise.md`
+Sous le seuil "article complet" généralement admis. À arbitrer au cas par cas :
 
-#### 9. **leadership-management** (5 articles)
-- ⚠️ **Problèmes :**
-  - 100% avec placeholders
-  - Tous manquent de sources
-  - 1 article manque section 5
+| Mots | Article | Recommandation |
+|---|---|---|
+| 575 | `service-client/service-client-performance` | **Étoffer** — sujet KPIs / réclamations / cas difficiles mérite plus de profondeur |
+| 611 | `developpement-web/web-javascript-modern` | Étoffer ou fusionner avec `technologies-javascript-2026` |
+| 633 | `transformation-digitale/transformation-numerique-entreprise` | Étoffer (sujet sensible commercialement, mérite densité) |
+| 673 | `productivite-methodes/gestion-priorites-efficacite` | Format court assumé possible (méthode = matrice Eisenhower) |
+| 679 | `marketing-communication/strategies-reseaux-sociaux-entreprises` | Étoffer (sujet adjacent à `strategies-reseaux-sociaux-b2b` qui sera le 1er post LinkedIn) |
+| 679 | `qualite-process/gestion-qualite-certification` | Étoffer (ISO 9001 = sujet à forte demande SEO) |
+| 689 | `gestion-projet/gestion-projet-agile` | Possible doublon avec `gestion-projet-agile-meilleures-pratiques` → vérifier |
+| 694 | `productivite-methodes/productivite-professionnelle` | Étoffer (article qui doit porter le ton "2026") |
 
-**Articles à compléter entièrement :**
-- `formation-leadership.md`
-- `importance-leadership.md`
-- `leadership-equipes-performance.md`
-- `management-diversite-inclusion.md` - section 5 manquante
-- `management-hybride-defis-opportunites.md`
+## 5. Points faibles secondaires (priorité 2)
 
-#### 10. **innovation-technologies** (4 articles)
-- ⚠️ **Problèmes :**
-  - 100% avec placeholders
-  - Tous manquent de sources
+### 5.1 — Slugs résiduels en `-2024`
 
-**Articles à compléter entièrement :**
-- `ia-transformation-societe-2024-analyse.md`
-- `ia-transformation-societe-2024.md`
-- `intelligence-artificielle-transformation-marketing.md`
-- `nouvelles-tendances-developpement-web.md`
+- `developpement-web/progressive-web-apps-2024.md` — seul article au slug "-2024" restant après la refonte du 31 mai 2026. À actualiser + renommer dans un prochain cycle si la PWA mérite encore un article dédié en 2026 (à arbitrer, la PWA a perdu en hype).
 
-#### 11. **transformation-digitale** (3 articles)
-- ⚠️ **Problèmes :**
-  - 100% avec placeholders
-  - Tous manquent de sources
+### 5.2 — Anomalie filesystem
 
-**Articles à compléter entièrement :**
-- `transformation-digitale-telecom.md`
-- `transformation-numerique-entreprise.md`
-- `transformation-numerique-talents.md`
+- `formation/formation-equipes-commerciales-complete 2.md` — fichier avec **espace dans le nom**, probablement un doublon copié à un moment. À investiguer et fusionner / supprimer.
 
-#### 12. **service-client** (2 articles)
-- ⚠️ **Problèmes :**
-  - 100% avec placeholders
-  - Tous manquent de sources
+### 5.3 — Domaines sous-représentés (1-3 articles)
 
-**Articles à compléter entièrement :**
-- `service-client-excellence.md`
-- `service-client-performance.md`
+| Domaine | Articles | Décision suggérée |
+|---|---:|---|
+| `gestion-connaissances` | 1 | Étoffer (sujet riche, demande forte en RH/IT) |
+| `reconversion-carriere` | 1 | Étoffer (sujet personnel à Gérald — sa propre reconversion dev→pilote = matériau premier) |
+| `developpement-commercial` | 2 | Étoffer (avec le 5e métier Relation Client ajouté, il manque le pont "Comment développer son portefeuille premium" qui serait crédible) |
+| `service-client` | 2 | Étoffer — encore une fois, le matériau du 5e métier nourrit ce domaine |
+| `transformation-digitale` | 3 | Suffisant en couverture, étoffer la profondeur de chaque |
+| `outils-techniques` | 3 | Accepter le statut "satellite" (sujets techniques internes) |
+| `innovation-technologies` | 3 | Suffisant après la restructuration (`ia-workflows-pro-2026`, `ia-marketing-2026`, `nouvelles-tendances-developpement-web`) |
 
-#### 13. **gestion-connaissances** (1 article)
-- ⚠️ **Problèmes :**
-  - 100% avec placeholders
-  - Manque de sources
+## 6. Plan d'action recommandé
 
-**Article à compléter entièrement :**
-- `gestion-connaissances-organisation.md`
+### 🔥 Sprint 1 (avant le démarrage Buffer mardi 2 juin)
 
-#### 14. **reconversion-carriere** (1 article)
-- ⚠️ **Problèmes :**
-  - 100% avec placeholders
-  - Manque de sources
+1. **Tagger les 47 articles sans `tags:`** — script semi-automatique : pour chaque article, extraire 3-4 tags depuis le titre + le domaine + le contenu. Impact direct sur la qualité des posts LinkedIn auto-générés par Buffer.
 
-**Article à compléter entièrement :**
-- `reconversion-professionnelle-reussie.md`
+### ⚡ Sprint 2 (semaine du 2 juin)
 
-#### 15. **outils-techniques** (3 articles)
-- ⚠️ **Problèmes :**
-  - 100% avec placeholders
-  - Tous manquent de sources
-  - 1 article manque section 5
+2. **Enrichir les 8 articles sans expertise terrain** (réinjecter des retours KEOS/SFR/ACTIV PARTNERS pertinents).
+3. **Étoffer les 5 articles courts à fort enjeu** : `service-client-performance`, `transformation-numerique-entreprise`, `strategies-reseaux-sociaux-entreprises`, `gestion-qualite-certification`, `productivite-professionnelle`.
 
-**Articles à compléter entièrement :**
-- `mermaid-example.md`
-- `pillcolor-guide.md`
-- `visualisations-mermaid.md` - section 5 manquante
+### 🧹 Sprint 3 (quand le temps le permet)
 
-#### 16. **articles-generaux** (2 articles)
-- ℹ️ **Note :** Articles généraux (template, synthèse) - pas de sources requises
-- ✅ **Statut :** OK pour usage interne
+4. Régler l'anomalie filesystem `formation-equipes-commerciales-complete 2.md`.
+5. Arbitrer le sort de `progressive-web-apps-2024` (renommer / supprimer / actualiser).
+6. Étoffer les domaines sous-représentés selon l'opportunité éditoriale (Relation Client → matériau prêt pour `developpement-commercial` et `service-client`).
+
+## 7. Méthodologie de l'audit
+
+L'audit est **régénérable à tout moment** via un script Python qui :
+
+1. Parcourt `src/content/articles/**/*.md`.
+2. Extrait le frontmatter YAML et le corps Markdown.
+3. Cherche les motifs de placeholder (`[À compléter]`, `TODO`, `FIXME`, `Lorem ipsum`, `[Placeholder]`, `[Votre…]`, `XXX+`).
+4. Cherche les marqueurs d'expertise (`KEOS`, `SFR`, `ACTIV PARTNERS`, formules personnelles).
+5. Compte les `<svg>`, les `## ` (H2), les `### ` (H3).
+6. Calcule un nombre de mots (en retirant SVG et blocs de code).
+7. Vérifie les champs requis (`title`, `description`, `publishDate`, `type`) et recommandés (`domain`, `image`, `tags`).
+8. Agrège par domaine et publie les listes actionnables.
+
+Pour relancer l'audit (script intégré dans la prochaine itération si besoin) ou regénérer ce rapport, demander à Claude Code : *"refais l'audit de complétude des articles"* — la méthode est documentée ici-même.
 
 ---
 
-## 🎯 PRIORITÉS DE COMPLÉTION
-
-### 🔥 PRIORITÉ 1 : Articles avec méthodologie mais incomplets
-1. **formation** (11 articles à compléter)
-2. **gestion-projet** (4 articles à compléter)
-3. **developpement-commercial** (2 articles - vérifier sources)
-
-### ⚡ PRIORITÉ 2 : Articles sans placeholders mais manquants
-1. **gestion-talents** (1 article - sections manquantes)
-2. **developpement-web** (4 articles - expertise/sections manquantes)
-
-### 📝 PRIORITÉ 3 : Articles avec placeholders (50 articles)
-1. **productivite-methodes** (12 articles)
-2. **qualite-process** (7 articles)
-3. **marketing-communication** (6 articles)
-4. **leadership-management** (5 articles)
-5. **innovation-technologies** (4 articles)
-6. **transformation-digitale** (3 articles)
-7. **outils-techniques** (3 articles)
-8. **service-client** (2 articles)
-9. **formation** (4 articles)
-10. **gestion-projet** (2 articles)
-11. **gestion-connaissances** (1 article)
-12. **reconversion-carriere** (1 article)
-
----
-
-## 📋 CHECKLIST DE COMPLÉTION
-
-Pour chaque article, vérifier :
-
-- [ ] **Structure standardisée :** 7 sections (Introduction, 1-7)
-- [ ] **Pas de placeholders :** Aucun "[À compléter...]"
-- [ ] **Sources fiables :** Minimum 4 sources récentes (2024-2025)
-- [ ] **Méthodologie personnelle :** Framework ou méthode éprouvée
-- [ ] **Expertise personnelle :** Retours d'expérience, observations terrain
-- [ ] **Articles annexes :** Section 7 complète avec liens pertinents
-- [ ] **Pas de contenu non standardisé :** Rien après section 7
-
----
-
-## 💡 RECOMMANDATIONS
-
-1. **Commencer par les domaines les mieux structurés** (formation, gestion-projet) pour maximiser l'impact
-2. **Traiter les placeholders par lot** pour gagner en efficacité
-3. **Vérifier la détection des sources** - le script peut ne pas détecter tous les formats
-4. **Ajouter l'expertise personnelle** aux articles qui en manquent
-5. **Compléter les sections manquantes** avant d'ajouter du contenu
-
----
-
-**Note :** Le script de détection des sources peut avoir des limitations. Il est recommandé de vérifier manuellement les articles marqués comme "sans sources" car ils peuvent utiliser un format différent.
-
-
+*Ce rapport remplace intégralement la version de novembre 2025 (96 articles, 100 % incomplets, 50 % avec placeholders). Voir [`docs/CHANGELOG.md`](docs/CHANGELOG.md) entrée 2026-05-31 pour le récit des chantiers ayant permis cette inversion.*
