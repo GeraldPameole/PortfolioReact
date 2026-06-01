@@ -1,8 +1,9 @@
 # État du projet — Portfolio React + Blog
 
-> **Dernière mise à jour** : 1ᵉʳ juin 2026 (post Sprint 1+3+2)
+> **Dernière mise à jour** : 1ᵉʳ juin 2026 (soirée — fix navigation + tracking docs)
 > **Branche** : `main`
 > **Production** : <https://geraldpameole.vercel.app/>
+> **Dernier commit notable** : `31cf724` (tracking 3 docs internes), précédé par `e784810` (fix ViewTransitions navigation).
 
 ## 📊 Snapshot en chiffres
 
@@ -55,11 +56,10 @@
 
 ## 🔄 En cours / Prochaines étapes prévisibles
 
-- **Lancement publication LinkedIn** via Buffer (RSS → 2 posts/sem mardi+jeudi 9h Europe/Paris) — premier post planifié mardi 2 juin sur `strategies-reseaux-sociaux-b2b`. Workflow hybride : Buffer crée des drafts, validation manuelle, lien en premier commentaire. Backlog 92 articles → vidé en ~11 mois à 2/sem, ou ~22 mois à 1/sem.
-- **Vérifier `gestion-projet-agile.md` vs `gestion-projet-agile-meilleures-pratiques.md`** : possible doublon thématique à fusionner ou différencier explicitement.
-- **Étoffer `productivite-professionnelle.md`** (694 mots) — c'est l'article qui doit porter le ton "2026" du domaine productivité.
-- **Étoffer les domaines à 1 article** : `gestion-connaissances`, `reconversion-carriere` — matériau Gérald disponible.
-- **Étoffer `developpement-commercial`** (2 articles) : pont naturel avec le 5e métier Relation Client SFR — article potentiel "Développer un portefeuille premium : la méthode SFR appliquée aujourd'hui".
+- **Lancement publication LinkedIn** via Buffer (RSS → 2 posts/sem mardi+jeudi 9h Europe/Paris) — premier post planifié mardi 2 juin sur `strategies-reseaux-sociaux-b2b`. Workflow hybride : Buffer crée des drafts, validation manuelle, lien en premier commentaire. Backlog 95 articles → vidé en ~11 mois à 2/sem, ou ~22 mois à 1/sem.
+- ✅ **Sprint 1+3+2+P1/P2/P3 finalisés** : tags 100 %, expertise 99 %, articles courts traités, 3 nouveaux articles créés (relation client premium, knowledge transfer, reconversion 4 pivots). Voir [docs/CHANGELOG.md](docs/CHANGELOG.md) entrées 2026-06-01.
+- ✅ **Fix navigation ViewTransitions** : bouton retour + back-to-top recâblés pour survivre aux transitions client-side Astro 4.
+- **Stabilité iCloud** à surveiller : repo synchronisé avec iCloud Drive → dégonflements/rehydratations périodiques qui polluent `git status`. Voir section dédiée dans [docs/CHANGELOG.md](docs/CHANGELOG.md). Solutions possibles : déplacer le repo hors d'iCloud (`~/code/PortfolioReact`) ou exclure le dossier de la synchro iCloud.
 - **Re-générer ETAT_PROJET.md à chaque session de travail majeure** (cf. ce fichier).
 
 ## 📚 Rapports liés

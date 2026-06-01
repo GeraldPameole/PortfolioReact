@@ -1,23 +1,26 @@
 # Rapport d'audit — Corpus articles
 
-> **Date** : 31 mai 2026
+> **Date** : 1ᵉʳ juin 2026 (soirée — post Sprints 1+3+2 + P1/P2/P3)
 > **Périmètre** : `src/content/articles/` (collection Astro `articles`, schéma Zod défini dans `src/content/config.ts`).
-> **Objectif** : carte d'identité du corpus après la refonte mi-2026 (7 chantiers du 31 mai).
+> **Objectif** : carte d'identité du corpus après les 4 vagues de chantiers du 31 mai → 1ᵉʳ juin 2026.
 
 ## 1. Vue d'ensemble
 
 | Métrique | Valeur |
 |---|---|
-| **Total articles** | **92** |
+| **Total articles** | **95** |
 | Avant refonte 31 mai | 95 |
-| Variation nette | −3 (densification par fusion de doublons) |
-| Domaines distincts | 15 |
-| Articles avec ≥ 2 SVG inline | 92 (100 %) — règle charte appliquée |
-| Articles avec `updatedDate` 2026-05-31 | 2 (LinkedIn B2B, Accessibilité EAA) |
-| Articles avec `publishDate` ≥ 2026-01-01 | ~ 40 |
-| Articles renommés `-2024`/`-2025` → `-2026` (cycle mai 2026) | 2 (`react-performance-*`, `technologies-javascript-*`) |
+| Évolution nette | 0 (densification −3 fusions + créations +3 P3a/b/c + renames neutres) |
+| **Mots totaux du corpus** | **98 703** |
+| **Mots / article — moyenne** | **1 038** |
+| Domaines distincts | 15 (tous à ≥ 2 articles désormais) |
+| Articles avec ≥ 2 SVG inline | 95 (100 %) — règle charte appliquée |
+| Articles avec `updatedDate` récent (mai-juin 2026) | 14+ (LinkedIn B2B, EAA, etc.) |
+| Articles avec `publishDate` ≥ 2026-01-01 | ~ 43 |
+| Articles renommés `-2024`/`-2025` → `-2026` (cycle mai-juin 2026) | 4 (`react-performance-*`, `technologies-javascript-*`, `progressive-web-apps-*`, `gestion-projet-agile` → `agile-infrastructure-telecom`) |
 | Articles fusionnés mai 2026 | 7 sources → 3 cibles (frameworks JS, tendances web, IA pro+marketing) |
-| Slugs résiduels en `-2024` | 1 (`progressive-web-apps-2024` — à traiter dans un prochain cycle) |
+| Slugs résiduels en `-2024`/`-2025` | **0** ✅ |
+| Redirections 301 (`vercel.json`) | 11 |
 
 ## 2. Répartition par domaine
 
@@ -104,12 +107,17 @@ intelligence-artificielle-transformation-marketing → ia-marketing-2026
 - **8 articles courts (<700 mots)** → 6 étoffés à 1100-1300 mots (Sprints 3C + 2B + 2C). Reste 2 articles courts : `gestion-projet-agile.md` (689) et `productivite-professionnelle.md` (694).
 - **47 articles sans `tags:`** → 100 % de couverture désormais (Sprint 1 du 31 mai).
 
-### 📋 Restant à arbitrer
+### ✅ Tous résolus au 1ᵉʳ juin (soirée)
 
-1. **`gestion-projet-agile.md` vs `gestion-projet-agile-meilleures-pratiques.md`** : possible doublon thématique. À vérifier (fusion / différenciation explicite / acceptation format court).
-2. **Domaines sous-représentés** (1-3 articles) : `gestion-connaissances`, `reconversion-carriere`, `developpement-commercial`. Soit étoffer (matériau du 5e métier Relation Client SFR prêt à exploiter pour `developpement-commercial`), soit accepter qu'ils restent des "satellites" thématiques.
-3. **Articles sans `updatedDate`** : pour les articles dont le contenu reste sensiblement valide en 2026, ajouter `updatedDate` au fur et à mesure des relectures. Pattern actuellement appliqué : LinkedIn B2B, Accessibilité EAA, les 5 articles étoffés du Sprint 2BC, les 2 service-client.
-4. **`publishDate` futur** : beaucoup d'articles ont des `publishDate` 2026-06 → 2026-10 (échelonnement éditorial volontaire). Conséquence : ils n'apparaissent pas en home/RSS tant que la date n'est pas atteinte (à confirmer selon la logique de `rss.xml.ts` et `index.astro`).
+- **Doublon agile** : résolu par renommage (`gestion-projet-agile.md` → `agile-infrastructure-telecom.md` — angle télécom KEOS, vs `gestion-projet-agile-meilleures-pratiques.md` — angle méthode généraliste). 11ᵉ redirection 301 ajoutée à `vercel.json`.
+- **Domaines sous-représentés** : tous étoffés via 3 nouveaux articles (P3a/b/c) → `gestion-connaissances` (1 → 2), `reconversion-carriere` (1 → 2), `developpement-commercial` (2 → 3). Plus aucun domaine à 1 article.
+- **`updatedDate` pattern** : étendu à tous les articles étoffés/modifiés depuis le 31 mai (14+ articles).
+
+### 📋 Restant à arbitrer (priorité basse)
+
+1. **`agile-infrastructure-telecom.md` à 689 mots** — seul article du corpus encore < 700 mots. Angle bien posé (terrain KEOS), enrichissement marginal possible si occasion.
+2. **`publishDate` futur** : beaucoup d'articles ont des `publishDate` 2026-06 → 2026-10 (échelonnement éditorial volontaire). Conséquence : ils n'apparaissent pas en home/RSS tant que la date n'est pas atteinte (à confirmer selon la logique de `rss.xml.ts` et `index.astro`).
+3. **Stabilité iCloud du repo** : envisager de sortir `~/Desktop/PortfolioReact` d'iCloud Drive vers un dossier non synchronisé. Voir [docs/CHANGELOG.md](docs/CHANGELOG.md) entrée 2026-06-01 (soirée) pour la cause racine documentée.
 
 ## 6. Méthodologie de l'audit
 

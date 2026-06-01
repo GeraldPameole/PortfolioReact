@@ -3,6 +3,28 @@
 > Historique des évolutions du site, dérivé du `git log`. Format inspiré de [Keep a Changelog](https://keepachangelog.com/).
 > Type des commits : `feat` (nouvelle fonctionnalité), `fix` (correctif), `perf` (performance), `a11y` (accessibilité), `refactor`, `chore` (outillage), `docs`, `style`.
 
+## 2026-06-01 (soirée) — Fix navigation ViewTransitions + tracking docs internes
+
+### Corrigé
+
+- **Bouton "Retour" cassé après navigation client-side** (`src/components/BackButton.astro`) : les ViewTransitions d'Astro 4 (`<ViewTransitions />` actif dans `BaseLayout.astro`) ne ré-exécutent pas les `<script is:inline>` ni les handlers `DOMContentLoaded` au-delà du 1er chargement de page. Résultat : le bouton fonctionnait au reload mais cassait dès la 2e navigation. Fix : init idempotente déclenchée sur `astro:page-load` (qui se tire au 1er load ET sur chaque transition) + fallback `DOMContentLoaded` si ViewTransitions désactivé. Garde-fou `dataset.bound` pour éviter le double listener. Fallback `window.location.href='/'` si pas d'historique (`window.history.length <= 1`).
+- **Bouton "Retour en haut" cassé après navigation client-side** (`src/components/BackToTop.astro`) : même cause, même remède. Init via `initBackToTop()` + appel immédiat de `onScroll()` pour que l'état initial soit correct si la page est rouverte déjà scrollée (commit `e784810`).
+
+### Ajouté
+
+- **Tracking git des 3 docs internes** : `docs/code-documentation.md` (337 lignes — doc technique, organisation, conventions), `docs/design-system.md` (229 lignes — palette, typographie, composants, responsivité), `docs/improvements-plan.md` (161 lignes — plan d'amélioration du portfolio). Ces fichiers existaient en untracked sur disque et fluctuaient sous iCloud — passés en tracking pour stabiliser (commit `31cf724`).
+
+### Incident & récupération
+
+- **Commit `b46ad90` rollback via reset + force-push** : un commit raté a embarqué 225 fichiers par mégarde (`git add` ciblé suivi de `git commit` qui prend l'index entier au lieu du scope `git commit FILE...`). Effets : 3 renommages inversés (`agile-infrastructure-telecom` → `gestion-projet-agile`, `progressive-web-apps-2026` → `-2024`, `formation-equipes-commerciales-complete` → `… 2.md` doublon macOS), ré-création d'anciens articles supprimés en doublons des nouveaux, -3 134 lignes nettes. Récupération via `git reset --hard 59e92bc` + ré-application ciblée des 2 fixes nav + `git push --force-with-lease`. État final propre, aucune perte de contenu.
+
+### Cause racine : dégonflement iCloud
+
+- Le repo (`~/Desktop/PortfolioReact`) est synchronisé avec iCloud Drive, ce qui provoque trois pathologies récurrentes :
+  - **Eviction/rehydratation** : iCloud "evicte" un fichier du disque local (le remplace par un stub `.icloud` caché) puis le retélécharge à la demande. Le rehydraté n'a pas le même inode/timestamp → git voit "fichier tracké disparu + fichier untracked apparu" pour le même chemin.
+  - **Doublons Finder** : copies macOS qui ajoutent ` 2.md` au nom (`formation-equipes-commerciales-complete 2.md`, `clean-code 2.md`).
+  - **Modifications "M" massives** sur des binaires (jpg/webp) sans intervention humaine, juste de la metadata iCloud qui change.
+
 ## 2026-06-01 — Sprint 2 : expertise terrain complète + 5 articles étoffés
 
 ### Ajouté

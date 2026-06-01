@@ -1,24 +1,25 @@
 # 📊 Rapport de complétude des articles par domaine
 
-> **Date de l'audit** : 1ᵉʳ juin 2026 (post Sprint 1+3+2)
+> **Date de l'audit** : 1ᵉʳ juin 2026 (soirée — post Sprints 1+3+2 + P1/P2/P3)
 > **Périmètre** : `src/content/articles/` — collection Astro `articles` validée par Zod (`src/content/config.ts`).
 > **Méthodologie** : audit empirique par script Python (parsing frontmatter + body, détection placeholders, marqueurs d'expertise, comptage SVG/H2/mots).
-> **Rapport précédent** : novembre 2025 (96 articles, 100 % incomplets, 50 % avec placeholders). Cette version reflète l'état après les **3 vagues de chantiers du 31 mai → 1ᵉʳ juin 2026** (refonte mi-2026, tags complets, expertise complète, étoffement des articles courts).
+> **Rapport précédent** : novembre 2025 (96 articles, 100 % incomplets, 50 % avec placeholders). Cette version reflète l'état après les **4 vagues de chantiers du 31 mai → 1ᵉʳ juin 2026** (refonte mi-2026, tags complets, expertise complète, étoffement des articles courts, ajout de 3 nouveaux articles dans les domaines sous-représentés).
 
-## 📈 Résumé global — état 1ᵉʳ juin 2026
+## 📈 Résumé global — état 1ᵉʳ juin 2026 (soirée)
 
-| Critère | Nov. 2025 | 31 mai (matin) | **1ᵉʳ juin** | Évolution totale |
-|---|---:|---:|---:|:---:|
-| **Total articles** | 96 | 92 | **92** | −4 (densification) |
-| **Articles avec placeholders** | 50 (52 %) | 0 (0 %) | **0 (0 %)** | ✅ Résolu |
-| **Articles avec `tags:`** | non mesuré | 45 / 92 (49 %) | **92 / 92 (100 %)** | ✅ Couverture complète |
-| **Expertise personnelle détectée** | non mesuré | 83 / 92 (90 %) | **91 / 92 (99 %)** | ✅ Quasi-total |
-| **Frontmatter requis valide** | non mesuré | 92 / 92 (100 %) | **92 / 92 (100 %)** | ✅ Conforme |
-| **Articles ≥ 2 SVG inline** | non mesuré | 92 / 92 (100 %) | **92 / 92 (100 %)** | ✅ Charte appliquée |
-| **Articles ≥ 1000 mots** | non mesuré | non mesuré | **~ 38 / 92 (41 %)** | en progression |
-| **Articles < 700 mots** | non mesuré | 8 (8,7 %) | **2 (2,2 %)** | ✅ Quasi-résorbé |
-| **Mots / article — moyenne** | non mesuré | 942 | **1 013** | +8 % |
-| **Articles complets** (critères 2026) | 0 (0 %) | ~ 83 / 92 (90 %) | **~ 89 / 92 (97 %)** | ✅ Quasi-total |
+| Critère | Nov. 2025 | 31 mai (matin) | 1ᵉʳ juin (sprint 2) | **1ᵉʳ juin (soirée)** | Évolution totale |
+|---|---:|---:|---:|---:|:---:|
+| **Total articles** | 96 | 92 | 92 | **95** | +3 nouveaux (P3a/b/c) |
+| **Articles avec placeholders** | 50 (52 %) | 0 (0 %) | 0 (0 %) | **0 (0 %)** | ✅ Résolu |
+| **Articles avec `tags:`** | non mesuré | 45 / 92 (49 %) | 92 / 92 (100 %) | **95 / 95 (100 %)** | ✅ Couverture complète |
+| **Expertise personnelle détectée** | non mesuré | 83 / 92 (90 %) | 91 / 92 (99 %) | **94 / 95 (99 %)** | ✅ Quasi-total |
+| **Frontmatter requis valide** | non mesuré | 92 / 92 (100 %) | 92 / 92 (100 %) | **95 / 95 (100 %)** | ✅ Conforme |
+| **Articles ≥ 2 SVG inline** | non mesuré | 92 / 92 (100 %) | 92 / 92 (100 %) | **95 / 95 (100 %)** | ✅ Charte appliquée |
+| **Articles < 700 mots** | non mesuré | 8 (8,7 %) | 2 (2,2 %) | **1 (1,1 %)** | ✅ Quasi-résorbé |
+| **Mots / article — moyenne** | non mesuré | 942 | 1 013 | **1 038** | +10 % vs initial |
+| **Mots totaux du corpus** | non mesuré | ~ 86 700 | ~ 93 200 | **98 703** | +14 % vs initial |
+| **Articles complets** (critères 2026) | 0 (0 %) | ~ 83 / 92 (90 %) | ~ 89 / 92 (97 %) | **~ 93 / 95 (98 %)** | ✅ Quasi-total |
+| **Domaines à ≥ 2 articles** | non mesuré | 13 / 15 | 13 / 15 | **15 / 15** | ✅ Plus de domaine orphelin |
 
 **Lecture stratégique** : le corpus est passé d'un état "stub avec placeholders" à un corpus **opérationnellement complet**. Les chantiers de complétion massive sont derrière. Ce qui reste à faire est ciblé, quantifiable, et tient en 3 listes courtes (sections 4-6).
 
@@ -140,15 +141,20 @@
 
 - **Sprint 1** (31 mai) : 47 articles taggés → 100 % de couverture `tags:`.
 - **Sprint 3** (31 mai) : anomalie filesystem résolue, `progressive-web-apps-2024` modernisé + renommé, 2 articles service-client étoffés.
-- **Sprint 2** (1ᵉʳ juin) : 7 retours d'expérience terrain injectés (1 article résiduel légitime), 5 articles courts étoffés à 1100-1300 mots.
+- **Sprint 2** (1ᵉʳ juin matin) : 7 retours d'expérience terrain injectés (1 article résiduel légitime), 5 articles courts étoffés à 1100-1300 mots.
+- **P1/P2/P3** (1ᵉʳ juin après-midi) : doublon agile résolu via différenciation par renommage (`agile-infrastructure-telecom`), `productivite-professionnelle` étoffé à 1861 mots, **3 nouveaux articles créés** :
+  - `gestion-connaissances/onboarding-knowledge-transfer.md` (~1100 mots) — méthode KEOS + SFR.
+  - `reconversion-carriere/reconvertir-sans-tout-recommencer.md` — narratif autobiographique des 5 pivots de carrière Gérald.
+  - `developpement-commercial/portefeuille-premium-methode-sfr.md` (~2100 mots) — méthode SFR 2005-2009 transposée au-delà du télécom.
+- **Incident & récupération** (1ᵉʳ juin soirée) : commit raté `b46ad90` qui annulait une partie des travaux récupéré via `git reset --hard 59e92bc` + force-push. Aucune perte de contenu. Voir CHANGELOG entrée dédiée.
+- **Fix navigation ViewTransitions** (1ᵉʳ juin soirée) : `BackButton` et `BackToTop` recâblés pour survivre aux transitions de vue Astro 4.
 
 ### 📋 Cycle suivant (optionnel — quand l'occasion se présente)
 
-1. **Vérifier `gestion-projet-agile.md` vs `gestion-projet-agile-meilleures-pratiques.md`** : potentiel doublon thématique à fusionner ou à différencier explicitement.
-2. **Étoffer `productivite-professionnelle.md`** (694 mots) — c'est l'article qui doit porter le ton "2026" du domaine productivité.
-3. **Étoffer les domaines à 1 article** : `gestion-connaissances` (sujet riche), `reconversion-carriere` (matériau Gérald premier).
-4. **Étoffer `developpement-commercial`** (2 articles seulement) : pont naturel avec le 5e métier Relation Client SFR — article potentiel "Développer un portefeuille premium : la méthode SFR appliquée aujourd'hui".
-5. **Routinizer** : à chaque relecture d'article, ajouter `updatedDate` au fur et à mesure.
+1. **Étoffer `agile-infrastructure-telecom.md`** (689 mots — seul article < 700 mots résiduel) — angle KEOS bien posé, juste à enrichir.
+2. **Stabilité iCloud** : envisager de sortir le repo de `~/Desktop/` (donc d'iCloud Drive) vers un dossier non synchronisé (ex: `~/code/PortfolioReact`). Évite les dégonflements périodiques qui polluent le `git status` et créent des doublons macOS Finder.
+3. **Routinizer** : à chaque relecture d'article, ajouter `updatedDate` au fur et à mesure.
+4. **Étoffer les domaines à 2 articles** si l'occasion se présente : `gestion-connaissances`, `reconversion-carriere`, `service-client` (matériau RC SFR déjà bien exploité).
 
 ## 7. Méthodologie de l'audit
 
