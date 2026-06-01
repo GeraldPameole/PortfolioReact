@@ -36,13 +36,22 @@
 </style>
 
 <script is:inline>
-(function() {
+// Init idempotente — survit aux ViewTransitions d'Astro 4 (qui ne ré-exécutent
+// pas les <script is:inline> après une navigation client-side).
+function initBackToTop() {
   const btn = document.getElementById('back-to-top');
-  if (!btn) return;
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 400) { btn.removeAttribute('hidden'); }
-    else { btn.setAttribute('hidden', ''); }
-  }, { passive: true });
+  if (!btn || btn.dataset.bound) return;
+  btn.dataset.bound = '1';
+  // Affiche/cache selon le scroll courant (idempotent : on (re)pose un seul listener)
+  const onScroll = () => {
+    if (window.scrollY > 400) btn.removeAttribute('hidden');
+    else btn.setAttribute('hidden', '');
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll(); // état initial correct si la page est rouverte déjà scrollée
   btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
-})();
+}
+document.addEventListener('astro:page-load', initBackToTop);
+if (document.readyState !== 'loading') initBackToTop();
+else document.addEventListener('DOMContentLoaded', initBackToTop);
 </script>

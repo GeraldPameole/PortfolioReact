@@ -15,21 +15,31 @@ const buttonId = `backButton-${position}`;
 </button>
 
 <script define:vars={{ position }}>
-  document.addEventListener('DOMContentLoaded', () => {
+  // Initialisation idempotente — recâble le bouton à chaque page-load Astro
+  // (1er chargement ET transitions de vue). Sans ça, les ViewTransitions
+  // d'Astro 4 cassent le bouton dès la 2e page navigée client-side.
+  function initBackButton() {
     const backButton = document.getElementById("backButton-" + (position || "top-left"));
     if (!backButton) return;
     if (window.location.pathname === '/' || window.location.pathname === '/index.html') {
       backButton.style.display = 'none';
       return;
     }
+    backButton.style.display = '';
+    if (backButton.dataset.bound) return; // évite double listener
+    backButton.dataset.bound = '1';
     backButton.addEventListener('click', () => {
-      window.history.back();
+      if (window.history.length > 1) window.history.back();
+      else window.location.href = '/';
     });
-    setTimeout(() => {
+    requestAnimationFrame(() => {
       backButton.classList.add('translate-x-0', 'opacity-100');
       backButton.classList.remove('opacity-0', '-translate-x-4');
-    }, 300);
-  });
+    });
+  }
+  document.addEventListener('astro:page-load', initBackButton);
+  if (document.readyState !== 'loading') initBackButton();
+  else document.addEventListener('DOMContentLoaded', initBackButton);
 </script>
 
 <style>
