@@ -50,6 +50,11 @@
       "source": "/blog/developpement-web/progressive-web-apps-2024",
       "destination": "/blog/developpement-web/progressive-web-apps-2026/",
       "permanent": true
+    },
+    {
+      "source": "/blog/gestion-projet/gestion-projet-agile",
+      "destination": "/blog/gestion-projet/agile-infrastructure-telecom/",
+      "permanent": true
     }
   ]
 }
