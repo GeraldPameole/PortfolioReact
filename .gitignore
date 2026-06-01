@@ -41,3 +41,16 @@ lighthouse-report.json
 
 # Skills Claude (perso, hors repo)
 skills/
+
+# Pollution macOS/iCloud (immunisation post-mv hors d'iCloud Drive)
+*.icloud
+.*.icloud
+* 2.md
+* 2.astro
+* 2.ts
+* 2.tsx
+* 2.js
+* 2.jpg
+* 2.webp
+* 2.png
+* 2.svg

@@ -6,7 +6,7 @@ Remplace le bloc tags entier par une liste de strings propres dérivées du doma
 """
 import os, re, glob
 
-BASE = "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles"
+BASE = "/Users/geraldpameole/code/PortfolioReact/src/content/articles"
 
 DOMAIN_TAGS = {
     "gestion-talents":         ["gestion-talents", "recrutement", "rh", "management"],

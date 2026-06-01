@@ -6,7 +6,7 @@ Champs requis par le schéma Astro : title, description, publishDate, type
 """
 import os, re, glob
 
-BASE = "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles"
+BASE = "/Users/geraldpameole/code/PortfolioReact/src/content/articles"
 
 # Derive a readable title from filename
 def slug_to_title(filename):

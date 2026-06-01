@@ -117,7 +117,7 @@ intelligence-artificielle-transformation-marketing → ia-marketing-2026
 
 1. **`agile-infrastructure-telecom.md` à 689 mots** — seul article du corpus encore < 700 mots. Angle bien posé (terrain KEOS), enrichissement marginal possible si occasion.
 2. **`publishDate` futur** : beaucoup d'articles ont des `publishDate` 2026-06 → 2026-10 (échelonnement éditorial volontaire). Conséquence : ils n'apparaissent pas en home/RSS tant que la date n'est pas atteinte (à confirmer selon la logique de `rss.xml.ts` et `index.astro`).
-3. **Stabilité iCloud du repo** : envisager de sortir `~/Desktop/PortfolioReact` d'iCloud Drive vers un dossier non synchronisé. Voir [docs/CHANGELOG.md](docs/CHANGELOG.md) entrée 2026-06-01 (soirée) pour la cause racine documentée.
+3. **Stabilité iCloud du repo** : ✅ **Résolu le 1ᵉʳ juin 2026 (soirée)** : repo déplacé de `~/Desktop/PortfolioReact` vers `~/code/PortfolioReact` (hors diCloud Drive). Patterns `*.icloud`, `* 2.md` etc. ajoutés au `.gitignore` pour immunisation. Voir [docs/CHANGELOG.md](docs/CHANGELOG.md) entrée 2026-06-01 (soirée) pour la cause racine documentée.
 
 ## 6. Méthodologie de l'audit
 

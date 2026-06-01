@@ -10,7 +10,7 @@ Nettoyage automatique des articles markdown :
 """
 import os, re, glob, difflib
 
-BASE = "/Users/geraldpameole/Desktop/PortfolioReact/src/content/articles"
+BASE = "/Users/geraldpameole/code/PortfolioReact/src/content/articles"
 
 GENERIC_PHRASES = [
     "Ce domaine évolue rapidement avec l'intégration de nouvelles technologies et méthodologies.",

@@ -20,7 +20,7 @@
 
 ### Cause racine : dégonflement iCloud
 
-- Le repo (`~/Desktop/PortfolioReact`) est synchronisé avec iCloud Drive, ce qui provoque trois pathologies récurrentes :
+- Le repo (`~/Desktop/PortfolioReact` (jusqu au 1ᵉʳ juin) puis `~/code/PortfolioReact` (depuis)) est synchronisé avec iCloud Drive, ce qui provoque trois pathologies récurrentes :
   - **Eviction/rehydratation** : iCloud "evicte" un fichier du disque local (le remplace par un stub `.icloud` caché) puis le retélécharge à la demande. Le rehydraté n'a pas le même inode/timestamp → git voit "fichier tracké disparu + fichier untracked apparu" pour le même chemin.
   - **Doublons Finder** : copies macOS qui ajoutent ` 2.md` au nom (`formation-equipes-commerciales-complete 2.md`, `clean-code 2.md`).
   - **Modifications "M" massives** sur des binaires (jpg/webp) sans intervention humaine, juste de la metadata iCloud qui change.
