@@ -1,12 +1,13 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 
+// Téléphone et adresse postale retirés du tracking public (cv.astro)
+// pour limiter l'exposition de données personnelles. Pour un CV
+// complet avec coordonnées, contacter via le formulaire /contact.
 const PROFIL = {
   nom: 'GERALD',
   prenom: 'PAMEOLE',
   titre: "CHEF DE PROJET PILOTAGE D'ACTIVITÉ & EXCELLENCE OPÉRATIONNELLE",
-  adresse: '9 Rue Martin Porc 33320 Eysines',
-  tel: '0661826317',
   mel: 'gerald.pameole@gmail.com',
   www: 'https://lescarnetsdup.vercel.app/',
 };
@@ -198,8 +199,6 @@ const COMPETENCES = [
           <p class="cv-role">{PROFIL.titre}</p>
         </div>
         <ul class="cv-contact">
-          <li><span class="cv-contact-label">adr :</span> {PROFIL.adresse}</li>
-          <li><span class="cv-contact-label">tél :</span> {PROFIL.tel}</li>
           <li><span class="cv-contact-label">mél :</span> <a href={`mailto:${PROFIL.mel}`}>{PROFIL.mel}</a></li>
           <li><span class="cv-contact-label">www :</span> <a href={PROFIL.www} target="_blank" rel="noopener noreferrer">{PROFIL.www}</a></li>
         </ul>
