@@ -23,7 +23,7 @@ tags:
 
 La transformation numérique crée un paradoxe que peu d'organisations anticipent. Pour la lancer, on recrute des experts tech, des profils data, des développeurs, des architectes cloud. On investit pour accélérer. Et puis, entre le sixième et le dix-huitième mois, une partie de ces profils clés démissionnent.
 
-Ce n'est pas une coïncidence. C'est la dynamique prévisible d'un projet de transformation mal géré sur le plan humain. J'ai observé ce phénomène chez KEOS TELECOM lors de projets de modernisation des systèmes d'information. La cause est toujours la même : on a planifié la technologie, pas les personnes.
+Ce n'est pas une coïncidence. C'est la dynamique prévisible d'un projet de transformation mal géré sur le plan humain. J'ai observé ce phénomène lors d'échanges avec des spécialistes de projets de modernisation des systèmes d'information. La cause est toujours la même : on a planifié la technologie, pas les personnes.
 
 Les experts tech partent parce qu'ils se retrouvent coincés dans des structures trop lentes pour eux, sans montée en compétences, sans reconnaissance, sans perspective claire. Les profils non-digitaux restent mais résistent passivement, faute d'accompagnement structuré. Et l'organisation se retrouve à mi-chemin, avec des outils modernes et des équipes déstabilisées.
 
