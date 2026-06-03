@@ -13,8 +13,8 @@ relatedContent:
   - title: "Frameworks JavaScript en 2026 : adopter ou attendre"
     url: "/blog/developpement-web/frameworks-javascript-2026"
     type: "article"
-  - title: "Stratégies Marketing Digital 2025"
-    url: "/blog/marketing-communication/strategies-marketing-digital-2025"
+  - title: "Stratégies Marketing Digital 2026"
+    url: "/blog/marketing-communication/strategies-marketing-digital-2026"
     type: "article"
   - title: "Good to Great"
     url: "/livres/good-to-great"
@@ -37,7 +37,7 @@ Cette approche permet aux entrepreneurs de construire des entreprises plus agile
 Si vous avez apprécié "The Lean Startup", ces ressources pourraient vous intéresser :
 
 - [Frameworks JavaScript en 2026 : adopter ou attendre](/blog/developpement-web/frameworks-javascript-2026) - Application des principes Lean au choix de technologies
-- [Stratégies Marketing Digital 2025](/blog/marketing-communication/strategies-marketing-digital-2025) - Approches agiles pour le marketing moderne
+- [Stratégies Marketing Digital 2026](/blog/marketing-communication/strategies-marketing-digital-2026) - Approches agiles pour le marketing moderne
 - [Good to Great](/livres/good-to-great) - Comprendre comment les entreprises passent de bonnes à exceptionnelles
 
 **Note des lecteurs : 4.7/5** - Un livre qui a transformé l'approche entrepreneuriale moderne

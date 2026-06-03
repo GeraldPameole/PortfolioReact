@@ -177,7 +177,7 @@ Pour les librairies lourdes (éditeur riche, génération PDF, moteur de charts)
 
 ## Server Components : déplacer le rendu côté serveur
 
-Les React Server Components, stables en production avec Next.js 14 (et largement matures depuis Next 15), permettent de rendre des composants côté serveur et de n'envoyer au client que le HTML résultant — pas le JavaScript du composant. C'est l'optimisation perf la plus puissante de la décennie, mais elle suppose une architecture pensée pour : pas de hooks d'état dans les Server Components, frontière client/serveur explicite via `"use client"`, sérialisation des props à la frontière.
+Les React Server Components, matures en production avec **Next.js 15** (stables depuis Next.js 14 fin 2023, puis consolidés avec Turbopack stable et Partial Prerendering en preview dans Next 15), permettent de rendre des composants côté serveur et de n'envoyer au client que le HTML résultant — pas le JavaScript du composant. C'est l'optimisation perf la plus puissante de la décennie, mais elle suppose une architecture pensée pour : pas de hooks d'état dans les Server Components, frontière client/serveur explicite via `"use client"`, sérialisation des props à la frontière.
 
 Sur un projet existant en SPA pure, ce n'est pas un toggle à activer — c'est une migration vers Next.js (ou Remix/React Router v7 en mode framework). Sur un projet neuf qui rend beaucoup de contenu statique ou semi-statique (catalogue produit, blog, dashboard avec peu d'interactions), c'est le défaut raisonnable en 2026.
 

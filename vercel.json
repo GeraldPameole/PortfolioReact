@@ -55,6 +55,11 @@
       "source": "/blog/gestion-projet/gestion-projet-agile",
       "destination": "/blog/gestion-projet/agile-infrastructure-telecom/",
       "permanent": true
+    },
+    {
+      "source": "/blog/marketing-communication/strategies-marketing-digital-2025",
+      "destination": "/blog/marketing-communication/strategies-marketing-digital-2026/",
+      "permanent": true
     }
   ]
 }
