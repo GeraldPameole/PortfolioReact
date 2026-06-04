@@ -457,12 +457,25 @@ document.addEventListener('astro:page-load', () => {
         form.style.display = 'none';
         if (success) success.hidden = false;
       } else {
-        alert('Une erreur s\'est produite. Veuillez réessayer ou m\'écrire directement à gerald.pameole@gmail.com');
+        // Log détaillé en console pour faciliter le diagnostic (HTTP code + body)
+        let errBody = '';
+        try { errBody = await res.text(); } catch { /* ignore */ }
+        console.error('[contact-form] Soumission échouée', {
+          action: form.action,
+          status: res.status,
+          statusText: res.statusText,
+          body: errBody,
+        });
+        alert(`Une erreur s'est produite (HTTP ${res.status}). Détails techniques en console (F12). Écrivez-moi directement à gerald.pameole@gmail.com`);
         btn.disabled = false;
         btn.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg> Envoyer ma demande';
       }
-    } catch {
-      alert('Erreur réseau. Écrivez-moi directement à gerald.pameole@gmail.com');
+    } catch (err) {
+      console.error('[contact-form] Erreur réseau / fetch impossible', {
+        action: form.action,
+        error: err instanceof Error ? { name: err.name, message: err.message, stack: err.stack } : err,
+      });
+      alert('Erreur réseau (probablement extension/adblock bloquant formspree.io, ou Wi-Fi coupé). Détails en console (F12). Écrivez-moi directement à gerald.pameole@gmail.com');
       btn.disabled = false;
     }
   });
