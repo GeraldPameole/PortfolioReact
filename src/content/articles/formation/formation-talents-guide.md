@@ -167,7 +167,7 @@ Le budget formation est souvent perçu comme un sujet RH. En réalité, c'est un
 
 Ce que j'ai appris à faire chez SFR : relier chaque demande de formation à un besoin opérationnel précis. Pas "je voudrais me former à la conduite de réunion" — mais "dans trois mois, je dois animer un comité de pilotage pour un déploiement critique, et je ne l'ai jamais fait seul. Voici la formation qui m'y prépare." Cette différence de formulation change complètement la probabilité d'approbation.
 
-Le ROI d'une formation n'est pas toujours chiffrable. Mais on peut toujours répondre à cette question simple : dans six mois, si cette formation a fonctionné, qu'est-ce que cette personne fait différemment ? Si on ne peut pas répondre à cette question, la formation est probablement mal ciblée.
+Le ROI (Return on Investment, retour sur investissement) d'une formation n'est pas toujours chiffrable. Mais on peut toujours répondre à cette question simple : dans six mois, si cette formation a fonctionné, qu'est-ce que cette personne fait différemment ? Si on ne peut pas répondre à cette question, la formation est probablement mal ciblée.
 
 ## Pourquoi le manager ne peut pas déléguer ça
 

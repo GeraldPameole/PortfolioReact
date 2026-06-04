@@ -30,7 +30,7 @@ keywords:
 
 Si j'avais publié cet article il y a deux ans, je vous aurais expliqué comment intégrer un peu d'IA dans votre stack marketing existante. En mai 2026, ce n'est plus la bonne question. Le sol s'est dérobé. Google AI Overviews a réduit le trafic organique informationnel de façon massive sur des verticales entières — certains éditeurs publient des pertes de 30 à 60% sur les requêtes "comment", "qu'est-ce que", "pourquoi". Perplexity et ChatGPT Search répondent directement, sans renvoyer de clic. Les UTM perdent leur lisibilité parce que les LLMs sont devenus une source de découverte que personne ne sait taguer.
 
-Je travaille des deux côtés du sujet : projets web pour ACTIV PARTNERS où on parle SEO, conversion, contenu ; et veille permanente sur l'écosystème IA depuis mon poste chez KEOS. Ce qui suit, c'est ce que je vois marcher et ce que je vois échouer en 2026. Sans sur-promesse, sans "remplacement", sans déni de la rupture.
+Je travaille des deux côtés du sujet : projets web pour ACTIV PARTNERS où on parle SEO (Search Engine Optimization, référencement naturel), conversion, contenu ; et veille permanente sur l'écosystème IA depuis mon poste chez KEOS. Ce qui suit, c'est ce que je vois marcher et ce que je vois échouer en 2026. Sans sur-promesse, sans "remplacement", sans déni de la rupture.
 
 <div style="overflow-x:auto;margin:2rem 0">
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 340" style="max-width:100%;height:auto">
@@ -68,7 +68,7 @@ Je travaille des deux côtés du sujet : projets web pour ACTIV PARTNERS où on 
 
 ## L'effondrement du trafic SEO informationnel
 
-Commençons par le constat froid. Quand un internaute tape "comment configurer un VPN d'entreprise" en 2026, il n'arrive plus sur votre article : il lit la réponse résumée par Google AI Overviews, par Perplexity ou par ChatGPT. Dans 60 à 70% des cas selon les verticales, il ne clique sur aucun lien source. Le trafic informationnel — celui qui faisait vivre les blogs B2B, les médias spé et une bonne partie du content marketing — a fondu.
+Commençons par le constat froid. Quand un internaute tape "comment configurer un VPN d'entreprise" en 2026, il n'arrive plus sur votre article : il lit la réponse résumée par Google AI Overviews, par Perplexity ou par ChatGPT. Dans 60 à 70% des cas selon les verticales, il ne clique sur aucun lien source. Le trafic informationnel — celui qui faisait vivre les blogs B2B (Business-to-Business), les médias spé et une bonne partie du content marketing — a fondu.
 
 Ce qui reste relativement épargné : les requêtes **transactionnelles** (acheter, comparer, prix), les requêtes **navigationnelles** (marque + service), et les contenus à très forte valeur ajoutée propriétaire (études chiffrées, benchmarks que personne d'autre n'a faits, retours d'expérience datés et signés). Tout le reste — la pédagogie générique, les "10 conseils pour", les définitions de termes métier — c'est terminé en termes de trafic organique. Continuer à investir massivement dessus, c'est financer la base de connaissances de Google et d'OpenAI sans contrepartie.
 
@@ -76,7 +76,7 @@ Ce qui change concrètement dans mes recommandations chez ACTIV PARTNERS : on ar
 
 ## AEO : écrire pour être cité par les moteurs de réponse
 
-L'Answer Engine Optimization (AEO) est le pendant 2025-2026 du SEO. L'objectif n'est plus de ranker premier sur Google, c'est d'**être cité comme source** quand un LLM répond à une question. Perplexity affiche ses sources avec des liens cliquables, ChatGPT Search aussi, et même Google AI Overviews mentionne des sources dans la grande majorité de ses réponses. Être cité = trafic qualifié + autorité de marque renforcée. Ne pas être cité = invisibilité.
+L'Answer Engine Optimization (AEO) est le pendant 2025-2026 du SEO. L'objectif n'est plus de ranker premier sur Google, c'est d'**être cité comme source** quand un LLM (Large Language Model) répond à une question. Perplexity affiche ses sources avec des liens cliquables, ChatGPT Search aussi, et même Google AI Overviews mentionne des sources dans la grande majorité de ses réponses. Être cité = trafic qualifié + autorité de marque renforcée. Ne pas être cité = invisibilité.
 
 Les pratiques qui fonctionnent en 2026, observées sur les sites que j'optimise et corroborées par ce que publient les équipes SEO sérieuses :
 
@@ -86,7 +86,7 @@ Les pratiques qui fonctionnent en 2026, observées sur les sites que j'optimise 
 
 **Schema.org rigoureux.** `Article`, `FAQPage`, `HowTo`, `Person` pour l'auteur — les LLMs s'appuient sur ces métadonnées pour identifier les sources fiables. C'est un investissement faible pour un effet mesurable.
 
-**Signature et autorité.** Les LLMs commencent à pondérer la crédibilité de l'auteur (E-E-A-T étendu). Un article signé par quelqu'un d'identifiable, avec un historique, avec une page auteur, est cité davantage qu'un texte anonyme. C'est exactement pour ça que j'ai construit un portfolio personnel signé — c'est aussi un actif AEO.
+**Signature et autorité.** Les LLMs commencent à pondérer la crédibilité de l'auteur (E-E-A-T étendu). Un article signé par quelqu'un d'identifiable, avec un historique, avec une page auteur, est cité davantage qu'un texte anonyme. C'est exactement pour ça que j'ai construit un portfolio personnel signé — c'est aussi un actif AEO (Answer Engine Optimization, optimisation pour les moteurs de réponse type Perplexity).
 
 **Maillage interne sémantique.** Les LLMs explorent les liens internes pour construire le contexte d'un sujet. Un site bien maillé sur une thématique précise apparaît comme expert sur cette thématique. Le maillage redevient un levier — pas pour le PageRank, pour la perception d'expertise par les crawlers IA.
 
@@ -164,9 +164,9 @@ Ce que j'utilise concrètement, sans complaisance commerciale :
 
 **Pour le copywriting** : Claude Sonnet 4.6 pour les premiers jets, la reformulation et l'adaptation de ton. Anthropic est mon défaut parce que la qualité d'écriture en français est la meilleure que j'aie testée, et que le modèle hallucine moins sur les chiffres. Opus 4.7 pour les sujets exigeants où la nuance compte.
 
-**Pour la veille** : un agent custom (Claude Agent SDK + MCP fetch) qui scanne mes sources marketing tech le matin et me livre une note sourcée. Coût mensuel : quelques euros.
+**Pour la veille** : un agent custom (Claude Agent SDK + MCP (Model Context Protocol, standard Anthropic 2024 pour connecter les LLM aux outils) fetch) qui scanne mes sources marketing tech le matin et me livre une note sourcée. Coût mensuel : quelques euros.
 
-**Pour le scoring lead et la qualification** : intégration LLM dans le CRM via API. Le modèle lit l'historique de contact d'un prospect et propose un score de maturité + une suggestion d'action. Validé manuellement, gain de temps de qualification de l'ordre de 60% sans dégradation du taux de conversion.
+**Pour le scoring lead et la qualification** : intégration LLM dans le CRM (Customer Relationship Management, gestion de la relation client) via API (Application Programming Interface). Le modèle lit l'historique de contact d'un prospect et propose un score de maturité + une suggestion d'action. Validé manuellement, gain de temps de qualification de l'ordre de 60% sans dégradation du taux de conversion.
 
 **Pour l'analyse de feedback client** : Sonnet 4.6 sur des batchs d'avis ou de réponses à enquêtes. Identifie les thèmes, signale les signaux faibles, propose des verbatims représentatifs. C'est devenu un usage évident qui ne se discute plus.
 
@@ -180,7 +180,7 @@ Les trois piliers qu'aucun LLM ne tiendra à votre place en 2026.
 
 **Le storytelling vrai**. Une histoire qui mobilise, c'est une histoire qui a été vécue, ou au minimum observée de près. Les anecdotes signées de vrais professionnels qui prennent le risque d'un point de vue ne se génèrent pas. C'est ce qui fait qu'un post LinkedIn signé d'un opérationnel surperforme systématiquement un post corporate "optimisé".
 
-**La relation**. Un commercial qui sent qu'un prospect hésite, un community manager qui désamorce un client mécontent, un dirigeant qui appelle un client clé pour expliquer un incident — ce sont des actes humains que personne n'a envie de recevoir d'un bot, même très bien calibré. La tentation d'automatiser ces points de contact pour gagner en coût est forte ; les boîtes qui l'ont fait perdent en confiance et en NPS de façon mesurable.
+**La relation**. Un commercial qui sent qu'un prospect hésite, un community manager qui désamorce un client mécontent, un dirigeant qui appelle un client clé pour expliquer un incident — ce sont des actes humains que personne n'a envie de recevoir d'un bot, même très bien calibré. La tentation d'automatiser ces points de contact pour gagner en coût est forte ; les boîtes qui l'ont fait perdent en confiance et en NPS (Net Promoter Score, score de propension à recommander) de façon mesurable.
 
 > **Ce que je retiens** — En 2026, le marketing digital ne peut plus ignorer la rupture. Le SEO informationnel est mort sur de vastes pans, l'AEO le remplace en partie, l'attribution classique est cassée, et le contenu IA non encadré pénalise plus qu'il n'aide. La bonne stratégie consiste à investir dans du contenu rare et signé, à structurer pour les moteurs de réponse, à mesurer ce qui compte vraiment (citations, mentions, notoriété), et à garder l'humain là où il fait toute la différence : positionnement, storytelling, relation. Les marques qui prennent ce virage maintenant prennent une avance que les retardataires paieront cher.
 </content>

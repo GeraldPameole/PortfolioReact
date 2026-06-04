@@ -172,7 +172,7 @@ Une palette d'interface bien construite n'a pas besoin de 20 couleurs. Elle a be
 
 ## Accessibilité : ce que WCAG impose réellement
 
-Le standard WCAG définit deux niveaux de contraste pour le texte sur fond coloré :
+Le standard WCAG (Web Content Accessibility Guidelines) définit deux niveaux de contraste pour le texte sur fond coloré :
 - **AA (4.5:1)** : minimum requis pour les textes courants
 - **AAA (7:1)** : optimal pour les interfaces à forte lisibilité (accessibilité étendue)
 

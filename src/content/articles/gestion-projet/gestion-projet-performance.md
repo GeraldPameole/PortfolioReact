@@ -146,7 +146,7 @@ Sur les projets télécoms que je pilote, j'ai instauré une règle simple : si 
 
 ## Éviter le piège des métriques de confort
 
-Les métriques de confort ont la vie dure parce qu'elles plaisent aux comités de pilotage. Elles donnent l'impression que tout est sous contrôle. Le nombre de réunions tenues, le pourcentage de tâches fermées, le NPS interne — ce sont des indicateurs lagging qui mesurent l'activité, pas le résultat.
+Les métriques de confort ont la vie dure parce qu'elles plaisent aux comités de pilotage. Elles donnent l'impression que tout est sous contrôle. Le nombre de réunions tenues, le pourcentage de tâches fermées, le NPS (Net Promoter Score, score de propension à recommander) interne — ce sont des indicateurs lagging qui mesurent l'activité, pas le résultat.
 
 Le problème avec les métriques de confort : elles peuvent être excellentes pendant que le projet coule. J'ai vu un projet afficher 100 % de réunions hebdomadaires tenues et 90 % de tâches fermées dans l'outil — et rater sa mise en production de trois mois parce que personne ne mesurait le lead time ni le taux de défauts.
 

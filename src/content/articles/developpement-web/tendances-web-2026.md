@@ -58,7 +58,7 @@ Ce qui suit, c'est une lecture honnête de ce qui s'est imposé en production, d
 
 Pendant deux ans, on a parlé des RSC comme d'un pari de Vercel. En 2026, ils tournent en production sur la majorité des projets Next.js neufs en App Router. La question n'est plus "faut-il y aller" mais "où placer la frontière `'use client'`". Et c'est tant mieux : l'argument central — réduire la charge JS envoyée au client en gardant le rendu côté serveur pour les composants non interactifs — s'est vérifié sur des projets réels. INP s'améliore mécaniquement parce qu'il y a moins de hydratation.
 
-Ce que j'observe en pratique : les équipes qui s'en sortent le mieux sont celles qui ont arrêté de tout vouloir convertir en RSC dès le départ. Le bon réflexe, c'est de partir d'un layout serveur et de basculer en client uniquement ce qui a besoin d'état ou de gestionnaires d'événements. Les erreurs récurrentes (data fetching dupliqué, props non sérialisables, boundaries client mal placées) sont devenues moins fréquentes parce que les outils (devtools, ESLint plugin) ont rattrapé le retard.
+Ce que j'observe en pratique : les équipes qui s'en sortent le mieux sont celles qui ont arrêté de tout vouloir convertir en RSC (React Server Components) dès le départ. Le bon réflexe, c'est de partir d'un layout serveur et de basculer en client uniquement ce qui a besoin d'état ou de gestionnaires d'événements. Les erreurs récurrentes (data fetching dupliqué, props non sérialisables, boundaries client mal placées) sont devenues moins fréquentes parce que les outils (devtools, ESLint plugin) ont rattrapé le retard.
 
 L'autre changement, plus silencieux : Remix s'est aligné dans la même direction depuis sa fusion avec React Router v7. Les patterns convergent. C'est sain pour l'écosystème.
 
@@ -74,7 +74,7 @@ La limite : il faut un codebase qui respecte les Rules of React. Si vous mutez d
 
 Vercel Edge Functions, Cloudflare Workers, Fastly Compute — ce qui était expérimental en 2023 est devenu un défaut raisonnable en 2026 pour tout middleware. Auth, redirections géographiques, A/B testing, personnalisation légère : c'est de l'edge par défaut, sans qu'on en parle.
 
-Le vrai changement de l'année, c'est que Cloudflare Workers ont stabilisé leur accès aux bases de données (D1, Hyperdrive pour Postgres). Le verrou historique de l'edge — "pas de TCP, pas de Postgres" — s'est largement levé. On peut faire tourner une API complète à la périphérie sans contorsions.
+Le vrai changement de l'année, c'est que Cloudflare Workers ont stabilisé leur accès aux bases de données (D1, Hyperdrive pour Postgres). Le verrou historique de l'edge — "pas de TCP, pas de Postgres" — s'est largement levé. On peut faire tourner une API (Application Programming Interface) complète à la périphérie sans contorsions.
 
 Cela dit, le bon sens reste le bon sens. Les workloads qui demandent de la mémoire, du long-running ou des connexions persistantes (WebSockets stateful, traitement batch) restent mieux servis par un serveur dédié ou du serverless classique. Choisir l'edge par défaut sans savoir pourquoi, c'est encore une erreur fréquente.
 
@@ -230,7 +230,7 @@ Ce n'est pas une victoire morale, c'est juste l'aboutissement d'une transition d
 
 ## AEO / SGE : le séisme silencieux du SEO
 
-C'est probablement le changement le moins discuté techniquement, et le plus structurant pour l'architecture des sites de contenu. Avec la généralisation des AI Overviews de Google (SGE), de Perplexity, de ChatGPT comme moteur de recherche par habitude, le trafic SEO informationnel s'est effondré. Les requêtes "comment faire X", "qu'est-ce que Y", "différence entre A et B" — l'utilisateur n'a plus besoin de cliquer. La réponse est dans la SERP.
+C'est probablement le changement le moins discuté techniquement, et le plus structurant pour l'architecture des sites de contenu. Avec la généralisation des AI Overviews de Google (SGE), de Perplexity, de ChatGPT comme moteur de recherche par habitude, le trafic SEO (Search Engine Optimization, référencement naturel) informationnel s'est effondré. Les requêtes "comment faire X", "qu'est-ce que Y", "différence entre A et B" — l'utilisateur n'a plus besoin de cliquer. La réponse est dans la SERP.
 
 Pour les sites de contenu, l'impact est brutal et mesurable. Beaucoup de blogs informationnels ont perdu 40 à 70 % de leur trafic organique en deux ans. Les sites qui résistent sont ceux qui apportent quelque chose qu'une IA ne peut pas synthétiser : opinion forte, retour d'expérience original, données primaires, identité éditoriale claire.
 

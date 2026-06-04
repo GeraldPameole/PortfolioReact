@@ -17,7 +17,7 @@ tags:
 
 ## Le problème avec les PWA : tout le monde en parle, peu savent choisir
 
-Chez ACTIV PARTNERS, j'ai eu plusieurs discussions avec des clients qui voulaient "une PWA" parce qu'ils avaient lu que c'était l'avenir. Sauf que quand on creuse, ce qu'ils voulaient vraiment c'était soit un site responsive bien fait, soit une vraie application native — et une PWA n'aurait pas résolu leur problème.
+Chez ACTIV PARTNERS, j'ai eu plusieurs discussions avec des clients qui voulaient "une PWA (Progressive Web App)" parce qu'ils avaient lu que c'était l'avenir. Sauf que quand on creuse, ce qu'ils voulaient vraiment c'était soit un site responsive bien fait, soit une vraie application native — et une PWA n'aurait pas résolu leur problème.
 
 Une Progressive Web App n'est pas une solution universelle. C'est une réponse à des contraintes spécifiques : pas de budget pour deux apps natives (iOS + Android), besoin d'un accès offline, volonté d'installation sans passer par les stores. Si ces contraintes ne sont pas présentes, les bénéfices sont limités par rapport à la complexité ajoutée.
 
@@ -148,6 +148,6 @@ Concrètement : si votre audience est majoritairement sur iOS et que votre appli
 
 Les cas réels où j'ai vu des PWA apporter de la valeur : une application de catalogue produit pour des commerciaux terrain sans connexion fiable (offline critique), un outil de pointage pour des équipes en déplacement (installation directe sans passer par un MDM), une application de commande en restauration rapide (rapidité d'accès, pas besoin d'accès hardware avancé).
 
-Ce qui ne nécessite pas de PWA : un blog, un site vitrine, un portfolio, une application SaaS avec des utilisateurs sur desktop. Dans ces cas, un site responsive bien optimisé fait le travail sans la complexité supplémentaire du Service Worker.
+Ce qui ne nécessite pas de PWA : un blog, un site vitrine, un portfolio, une application SaaS (Software as a Service) avec des utilisateurs sur desktop. Dans ces cas, un site responsive bien optimisé fait le travail sans la complexité supplémentaire du Service Worker.
 
 > **Ce que j'en retiens** — Une PWA est un bon choix quand l'offline est critique, quand on veut éviter les stores, et quand le budget ne permet pas deux apps natives. Ce n'est pas un substitut à une vraie app native si on a besoin d'un accès hardware complet ou de notifications push fiables sur iOS. Les trois composants — Service Worker, Manifest, HTTPS — sont tous obligatoires pour avoir une vraie PWA, pas juste un site avec du cache.

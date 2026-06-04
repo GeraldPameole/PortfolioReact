@@ -46,7 +46,7 @@ React Compiler est un compilateur Babel/SWC qui analyse vos composants et insèr
 - Le **code splitting** et le lazy loading des routes — il n'a rien à voir avec la taille du bundle.
 - L'**architecture des composants** : un mauvais découpage qui fait remonter tout le state au sommet de l'arbre reste un problème de conception, pas de mémoïsation.
 - Les **dépendances lourdes importées en entier** (moment.js, lodash global, librairies de charts complètes).
-- Les **requêtes réseau redondantes**, le caching côté données (TanStack Query, SWR, RSC).
+- Les **requêtes réseau redondantes**, le caching côté données (TanStack Query, SWR, RSC (React Server Components)).
 - Les **Web Vitals** (LCP, INP, CLS) qui dépendent du chargement, des images, des polices, du CSS critique.
 
 La bonne façon de poser le problème : le Compiler élimine une classe entière de bugs perf (re-renders en cascade non gérés) et libère du temps cerveau pour les problèmes que lui ne peut pas voir. Il ne dispense pas de comprendre comment React rend — il automatise une optim, pas la conception.
@@ -152,7 +152,7 @@ React 19 a apporté plusieurs hooks qui ne sont pas "des optimisations" au sens 
 
 Les **Actions** (formulaires qui acceptent `action={async fn}` nativement) suppriment une grosse part du code de gestion de submit. Et la **prise en charge native de `ref` en prop** rend `forwardRef` obsolète — moins de couches, moins d'indirection.
 
-Côté SEO et performance perçue : la prise en charge native des **balises `<title>` et `<meta>` dans n'importe quel composant** simplifie la gestion des métadonnées sans librairie tierce type `react-helmet`. Le rendu est hoisté automatiquement dans le `<head>`.
+Côté SEO (Search Engine Optimization, référencement naturel) et performance perçue : la prise en charge native des **balises `<title>` et `<meta>` dans n'importe quel composant** simplifie la gestion des métadonnées sans librairie tierce type `react-helmet`. Le rendu est hoisté automatiquement dans le `<head>`.
 
 ## Lazy loading et code splitting : l'impact le plus immédiat
 

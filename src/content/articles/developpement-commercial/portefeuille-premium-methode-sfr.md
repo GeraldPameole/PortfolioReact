@@ -17,11 +17,11 @@ tags:
 author: "Gérald Paméole"
 ---
 
-Un portefeuille premium B2C se développe selon une grammaire qui n'a rien à voir avec celle d'un portefeuille mass-market. La LTV est plus haute, le churn coûte deux à trois fois plus, l'attente de service est supérieure, et la moindre erreur de relation se paie en réputation autant qu'en revenu. Entre 2005 et 2009, chez SFR, j'ai piloté un portefeuille de 200 clients VIP en moyenne et fait progresser l'ARPU de 12 % par an pendant quatre années consécutives. Ce qui suit n'est pas une théorie commerciale — c'est ce qui a marché en exécution, et que je vois transposable aujourd'hui à la banque privée, la mutuelle premium, l'hôtellerie haut de gamme, l'automobile, et les abonnements digitaux qui ont basculé en modèle premium ces cinq dernières années.
+Un portefeuille premium B2C (Business-to-Consumer) se développe selon une grammaire qui n'a rien à voir avec celle d'un portefeuille mass-market. La LTV (Lifetime Value, valeur cumulée d'un client sur sa durée de vie) est plus haute, le churn coûte deux à trois fois plus, l'attente de service est supérieure, et la moindre erreur de relation se paie en réputation autant qu'en revenu. Entre 2005 et 2009, chez SFR, j'ai piloté un portefeuille de 200 clients VIP en moyenne et fait progresser l'ARPU de 12 % par an pendant quatre années consécutives. Ce qui suit n'est pas une théorie commerciale — c'est ce qui a marché en exécution, et que je vois transposable aujourd'hui à la banque privée, la mutuelle premium, l'hôtellerie haut de gamme, l'automobile, et les abonnements digitaux qui ont basculé en modèle premium ces cinq dernières années.
 
 ## 1. Pilotage ARPU : l'unité de compte du premium
 
-L'ARPU (Average Revenue Per User) est l'unité de compte du portefeuille premium. Pas le nombre de clients, pas le chiffre d'affaires brut — l'ARPU. Parce qu'en premium, on ne grandit pas en multipliant les comptes : on grandit en intensifiant la valeur par compte existant.
+L'ARPU (Average Revenue Per User) est l'unité de compte du portefeuille premium. Pas le nombre de clients, pas le chiffre d'affaires brut — l'ARPU (Average Revenue Per User, revenu moyen par utilisateur). Parce qu'en premium, on ne grandit pas en multipliant les comptes : on grandit en intensifiant la valeur par compte existant.
 
 Deux leviers font monter l'ARPU : l'**upsell** (faire monter en gamme un client existant) et le **cross-sell** (lui vendre une catégorie additionnelle). À SFR, ce qui a marché : passer un client de forfait standard à premium à l'occasion du renouvellement (offres bundle limitées dans le temps, options téléphone haut de gamme intégrées), ajouter la box internet à un client mobile (cross-sell typique télécom), proposer des options à forte marge (sécurité, multi-écrans, contenus premium) au bon moment.
 
@@ -45,17 +45,17 @@ La résiliation se prépare des semaines avant le coup de fil. Le client commenc
 
 Un programme de fidélisation structuré agit en amont de ce moment. Concrètement : (1) des **paliers d'avantage** automatiques liés à l'ancienneté (le client sait qu'à 24 mois il bénéficiera de telle remise, à 36 mois de telle option offerte) — ça transforme le temps qui passe en raison de rester ; (2) des **gestes commerciaux** déclenchés par l'usage (cadeau d'anniversaire de contrat, geste après un incident SAV) ; (3) une **gestion proactive des résiliations** qui s'active dès que le scoring CRM remonte un risque, pas quand le client appelle pour partir.
 
-Les chiffres SFR : **churn -52 %** vs la baseline d'entrée de poste, **NPS +15 points** sur le périmètre suivi, **rétention 92 %** sur l'année glissante. Le -52 % de churn ne vient pas d'une seule action — il vient de l'empilement de paliers + gestes + interception proactive, mesuré à chaque cohorte.
+Les chiffres SFR : **churn -52 %** vs la baseline d'entrée de poste, **NPS (Net Promoter Score, score de propension à recommander) +15 points** sur le périmètre suivi, **rétention 92 %** sur l'année glissante. Le -52 % de churn ne vient pas d'une seule action — il vient de l'empilement de paliers + gestes + interception proactive, mesuré à chaque cohorte.
 
 **Transposition** : tous les secteurs B2C premium peuvent appliquer cette mécanique. La banque privée le fait via les "Privileges Cards", la mutuelle via les bonus fidélité, l'hôtellerie via les programmes status (Marriott Bonvoy, Accor Limitless), Netflix et Spotify expérimentent depuis 2024 des paliers d'ancienneté qui n'existaient pas avant. La logique : transformer le temps qui passe en raison concrète de rester.
 
 ## 4. Data & scoring CRM : anticiper plutôt que réagir
 
-La donnée CRM en premium ne sert pas à faire des campagnes de masse — elle sert à scorer le risque individuel. Pour chaque compte VIP, un score de churn calculé à partir des comportements : fréquence d'usage, contacts SAV, demandes d'information, comparaisons concurrentielles déclarées. Ce score déclenche des actions : sous 30 %, monitoring passif ; 30-60 %, geste commercial ciblé ; au-delà de 60 %, appel direct du responsable de compte.
+La donnée CRM (Customer Relationship Management, gestion de la relation client) en premium ne sert pas à faire des campagnes de masse — elle sert à scorer le risque individuel. Pour chaque compte VIP, un score de churn calculé à partir des comportements : fréquence d'usage, contacts SAV, demandes d'information, comparaisons concurrentielles déclarées. Ce score déclenche des actions : sous 30 %, monitoring passif ; 30-60 %, geste commercial ciblé ; au-delà de 60 %, appel direct du responsable de compte.
 
 Les chiffres : **précision de scoring >60 %** sur les comptes à risque réel (test sur cohortes à 6 mois), **+25 % d'efficacité des campagnes ciblées vs envois génériques** (mesuré par taux de transformation), **5 personas comportementaux** construits et activés en campagne. Les 5 personas correspondent à des profils d'usage stables : le "premium connecté" (forte data, faible voix), le "premium famille" (multi-lignes, options sécurité), le "premium pro" (voix élevée, mobilité internationale), le "premium senior" (faible data, attente service), le "premium fidèle" (8+ ans, peu de réclamations). Les actions sont déclinées par persona.
 
-**Transposition** : le scoring de churn s'applique à tout business à abonnement (SaaS B2B, streaming, télécom, banque, mutuelle). Les outils ont changé (Salesforce, HubSpot, ou solutions custom Python/SQL aujourd'hui), la méthode est la même : score individuel + 3 paliers d'action + 5 personas comportementaux maximum.
+**Transposition** : le scoring de churn s'applique à tout business à abonnement (SaaS (Software as a Service) B2B (Business-to-Business), streaming, télécom, banque, mutuelle). Les outils ont changé (Salesforce, HubSpot, ou solutions custom Python/SQL aujourd'hui), la méthode est la même : score individuel + 3 paliers d'action + 5 personas comportementaux maximum.
 
 ## 5. Veille concurrentielle qui sert vraiment
 

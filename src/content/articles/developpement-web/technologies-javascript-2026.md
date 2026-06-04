@@ -30,7 +30,7 @@ Cette distinction est utile. Elle évite de passer du temps à apprendre des pat
 
 **Bun 1.x** stable est devenu un choix sérieux pour les nouveaux projets : runtime, bundler et test runner dans un seul binaire. Sur des petits projets ou des scripts, le gain de configuration et de vitesse est tangible. Sur des bases plus larges, l'écosystème Node reste plus mûr — toutes les librairies ne sont pas testées contre Bun, et certains comportements diffèrent encore subtilement.
 
-**Vite 6** (novembre 2024) a introduit l'Environment API : un modèle propre pour faire tourner le même code en SSR, edge ou client sans hacks. C'est la première fois qu'un bundler traite le rendu universel comme un concept de première classe plutôt qu'un patch.
+**Vite 6** (novembre 2024) a introduit l'Environment API (Application Programming Interface) : un modèle propre pour faire tourner le même code en SSR, edge ou client sans hacks. C'est la première fois qu'un bundler traite le rendu universel comme un concept de première classe plutôt qu'un patch.
 
 <div style="overflow-x:auto;margin:2rem 0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 360" style="max-width:100%;height:auto">
   <rect width="700" height="360" fill="#0a0f2e"/>

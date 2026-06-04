@@ -32,7 +32,7 @@ Le contenu générique, c'est le contenu qui ne s'adresse à personne en particu
 
 Ce contenu génère peut-être du trafic organique. Mais il ne crée pas de relation avec un acheteur potentiel, parce qu'il ne répond pas à la question qu'il se pose vraiment à ce moment précis.
 
-Un acheteur B2B passe par trois phases très différentes. Dans la première, il prend conscience d'un problème ou d'une opportunité — il cherche de la compréhension, pas des solutions. Dans la deuxième, il explore les options possibles — il compare des approches, pas encore des fournisseurs. Dans la troisième, il est prêt à décider — il cherche des preuves, des garanties, des repères concrets.
+Un acheteur B2B (Business-to-Business) passe par trois phases très différentes. Dans la première, il prend conscience d'un problème ou d'une opportunité — il cherche de la compréhension, pas des solutions. Dans la deuxième, il explore les options possibles — il compare des approches, pas encore des fournisseurs. Dans la troisième, il est prêt à décider — il cherche des preuves, des garanties, des repères concrets.
 
 Chaque phase appelle un contenu différent. Publier le même type d'article pour toutes les phases, c'est répondre aux mauvaises questions au mauvais moment.
 

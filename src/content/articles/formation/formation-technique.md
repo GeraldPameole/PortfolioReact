@@ -24,7 +24,7 @@ Il n'y a pas deux niveaux de compétence technique — le technique et le non-te
 
 À l'extrémité "utilisateur", on sait manipuler les outils sans comprendre ce qui se passe dessous. C'est suffisant pour produire avec ces outils. Mais pour piloter un projet qui implique ces outils, cela ne suffit pas — on ne peut pas évaluer les estimations de l'équipe ni comprendre pourquoi quelque chose prend deux semaines au lieu de deux jours.
 
-Au niveau suivant, le "coordinateur technique" comprend les grandes catégories de travail, les dépendances entre composants, les risques courants. Il n'écrit pas de code mais peut lire un schéma d'architecture, comprendre ce qu'est une API, distinguer un bug front-end d'un bug back-end. Ce niveau est atteignable par n'importe qui en quelques mois d'exposition active.
+Au niveau suivant, le "coordinateur technique" comprend les grandes catégories de travail, les dépendances entre composants, les risques courants. Il n'écrit pas de code mais peut lire un schéma d'architecture, comprendre ce qu'est une API (Application Programming Interface), distinguer un bug front-end d'un bug back-end. Ce niveau est atteignable par n'importe qui en quelques mois d'exposition active.
 
 <div style="overflow-x:auto;margin:2rem 0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 360" style="max-width:100%;height:auto">
   <rect width="700" height="360" fill="#0a0f2e"/>

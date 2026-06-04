@@ -97,6 +97,13 @@ Que retenir, par quoi commencer.
 - Listes parallèles (même structure grammaticale entre items).
 - Pas de listes imbriquées au-delà de 2 niveaux.
 
+### Sigles métier
+- À la **première occurrence d'un sigle dans un article**, développer entre parenthèses : `NPS (Net Promoter Score)`, `ARPU (Average Revenue Per User)`, `FTTB (Fiber to the Building)`. Mentions suivantes : sigle nu (le lecteur sait désormais).
+- **Pas dans les titres** (H1/H2/H3) — si le sigle apparaît dans un titre, le développer dans le paragraphe qui suit.
+- **Exclus volontairement du développement automatique** : `ISO` (toujours associé à un numéro de norme — `ISO 9001`, `ISO 27001` — qui le contextualise), sigles trop universels selon le sujet (`AI`/`IA`, `URL`).
+- Le glossaire central est `scripts/acronyms.json`. Pour patcher rétroactivement les articles existants : `python3 scripts/expand-acronyms.py [--dry-run]` (idempotent — détecte si la définition existe déjà à proximité ou dans un titre, et skippe).
+- Pour ajouter un sigle : l'ajouter au JSON, relancer le script.
+
 ### Code et commandes
 - En `inline` : `` `npm run dev` ``.
 - En bloc : triple backtick + langage.

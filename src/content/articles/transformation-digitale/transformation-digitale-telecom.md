@@ -63,7 +63,7 @@ La leçon que j'ai tirée de quatre ans sur ce terrain : la transformation digit
 
 ## Ce que j'ai mis en place concrètement
 
-Chez KEOS TELECOM, la supervision des réseaux DSL et FTTB est au cœur du métier. Les pannes coûtent cher — en temps de rétablissement, en pénalités SLA, en frustration client. Avant notre démarche de digitalisation, le suivi des incidents reposait sur des échanges informels et une traçabilité approximative.
+Chez KEOS TELECOM, la supervision des réseaux DSL et FTTB (Fiber to the Building, fibre optique jusqu'à l'immeuble) est au cœur du métier. Les pannes coûtent cher — en temps de rétablissement, en pénalités SLA, en frustration client. Avant notre démarche de digitalisation, le suivi des incidents reposait sur des échanges informels et une traçabilité approximative.
 
 J'ai commencé par cartographier les vrais points de friction : où se perdait l'information, où les techniciens perdaient du temps à chercher plutôt qu'à résoudre. La réponse était claire — le problème n'était pas l'absence d'outils, c'était leur empilement sans cohérence.
 

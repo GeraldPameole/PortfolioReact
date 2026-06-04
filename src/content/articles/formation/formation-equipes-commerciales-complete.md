@@ -91,7 +91,7 @@ Mon approche repose sur quatre trimestres avec des objectifs distincts.
 
 **Q1 — Fondations** : produits et techniques de vente de base. Pas de théorie pure — dès la semaine 3, le commercial fait un vrai appel avec retour structuré.
 
-**Q2 — Efficacité opérationnelle** : usage du CRM comme outil de pilotage (pas juste de saisie), et traitement des objections les plus fréquentes identifiées lors des appels réels.
+**Q2 — Efficacité opérationnelle** : usage du CRM (Customer Relationship Management, gestion de la relation client) comme outil de pilotage (pas juste de saisie), et traitement des objections les plus fréquentes identifiées lors des appels réels.
 
 **Q3 — Montée en gamme** : négociation et comptes stratégiques. C'est là qu'on sépare les profils capables de gérer du complexe.
 
