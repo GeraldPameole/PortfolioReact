@@ -21,7 +21,7 @@ Depuis l'entrée en application de l'European Accessibility Act le 28 juin 2025,
 
 ## Les niveaux WCAG sans le jargon
 
-Les WCAG (Web Content Accessibility Guidelines) définissent trois niveaux de conformité. Les comprendre simplement change la façon dont on aborde les décisions techniques. La version courante est **WCAG 2.2**, publiée en juin 2023 et devenue le standard de facto : neuf nouveaux critères se sont ajoutés à WCAG 2.1, principalement sur l'accessibilité tactile (cibles de 24×24 px minimum, alternatives au glissé) et cognitive (aide à l'authentification sans test mnésique). WCAG 3.0 est encore en draft et ne devrait pas remplacer la 2.2 avant plusieurs années — c'est bien sur la 2.2 qu'il faut s'aligner aujourd'hui.
+Les WCAG (Web Content Accessibility Guidelines) définissent trois niveaux de conformité. Les comprendre simplement change la façon dont on aborde les décisions techniques. La version courante est **WCAG (Web Content Accessibility Guidelines) 2.2**, publiée en juin 2023 et devenue le standard de facto : neuf nouveaux critères se sont ajoutés à WCAG 2.1, principalement sur l'accessibilité tactile (cibles de 24×24 px minimum, alternatives au glissé) et cognitive (aide à l'authentification sans test mnésique). WCAG 3.0 est encore en draft et ne devrait pas remplacer la 2.2 avant plusieurs années — c'est bien sur la 2.2 qu'il faut s'aligner aujourd'hui.
 
 **Niveau A** — le minimum absolu. Ce sont les critères dont l'absence rend le site inutilisable pour certains utilisateurs. Pas de texte alternatif sur les images porteuses de sens, pas de contrôle clavier sur les éléments interactifs, contenus vidéo sans alternative : c'est le niveau A qui n'est pas atteint.
 
@@ -63,9 +63,9 @@ Les WCAG (Web Content Accessibility Guidelines) définissent trois niveaux de co
 
 ## Ce que change l'EAA (depuis juin 2025)
 
-L'European Accessibility Act — directive UE 2019/882 transposée en France par l'ordonnance n° 2023-859 du 6 septembre 2023 — est **entré en application le 28 juin 2025**. Avant cette date, l'accessibilité numérique n'était une obligation réglementaire ferme que pour le secteur public et quelques grandes entreprises (loi de 2005, décret RGAA). Depuis, le périmètre s'est considérablement élargi côté privé.
+L'European Accessibility Act — directive UE 2019/882 transposée en France par l'ordonnance n° 2023-859 du 6 septembre 2023 — est **entré en application le 28 juin 2025**. Avant cette date, l'accessibilité numérique n'était une obligation réglementaire ferme que pour le secteur public et quelques grandes entreprises (loi de 2005, décret RGAA (Référentiel Général d'Amélioration de l'Accessibilité)). Depuis, le périmètre s'est considérablement élargi côté privé.
 
-**Qui est concerné.** L'EAA cible les services et produits proposés aux consommateurs : sites e-commerce B2C, services bancaires aux particuliers, billetterie et information voyageurs des transports, audiovisuel à la demande, livres numériques et liseuses, services de communication électronique. Si votre application sert des consommateurs finaux dans l'un de ces domaines, vous êtes en théorie dans le scope.
+**Qui est concerné.** L'EAA (European Accessibility Act) cible les services et produits proposés aux consommateurs : sites e-commerce B2C (Business-to-Consumer), services bancaires aux particuliers, billetterie et information voyageurs des transports, audiovisuel à la demande, livres numériques et liseuses, services de communication électronique. Si votre application sert des consommateurs finaux dans l'un de ces domaines, vous êtes en théorie dans le scope.
 
 **Le seuil microentreprise.** L'EAA prévoit une exemption pour les microentreprises : moins de **10 salariés** **ET** chiffre d'affaires annuel **inférieur à 2 M€**. Les deux conditions sont cumulatives — passer l'un des seuils suffit à entrer dans le périmètre. C'est une exemption réelle pour les TPE, mais qui se referme vite dès qu'une équipe grossit.
 

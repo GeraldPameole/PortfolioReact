@@ -26,7 +26,7 @@ Quand je suis passé de formateur chez SFR à manager commercial avec une équip
 
 Getting Things Done — la méthode développée par David Allen — n'est pas une technique de gestion du temps. C'est un système pour vider le cerveau de tout ce qu'il essaie de ne pas oublier, et mettre ces éléments dans un endroit fiable à l'extérieur de la tête. L'idée centrale : un cerveau qui ne gère plus l'inventaire peut se concentrer sur le travail réel.
 
-Ce qui distingue GTD des autres méthodes de productivité, c'est qu'il s'adapte naturellement à la réalité chaotique d'un chef de projet. Les to-do lists classiques supposent qu'on sait à l'avance quelles tâches on va faire et dans quel ordre. GTD part du principe inverse : les entrées arrivent de partout, à tout moment, et le système doit pouvoir les absorber sans friction.
+Ce qui distingue GTD des autres méthodes de productivité, c'est qu'il s'adapte naturellement à la réalité chaotique d'un chef de projet. Les to-do lists classiques supposent qu'on sait à l'avance quelles tâches on va faire et dans quel ordre. GTD (Getting Things Done, méthode de David Allen) part du principe inverse : les entrées arrivent de partout, à tout moment, et le système doit pouvoir les absorber sans friction.
 
 ## Les cinq étapes — et ce qui les rend difficiles en pratique
 

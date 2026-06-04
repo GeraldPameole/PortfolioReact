@@ -30,7 +30,7 @@ keywords:
 
 Quand j'ai écrit pour la première fois sur l'IA en entreprise début 2024, le sujet tenait en une phrase : "ChatGPT aide à rédiger, le reste est du marketing". En mai 2026, ça ne se résume plus du tout comme ça. Trois mouvements ont déplacé les lignes : la généralisation des agents autonomes, l'arrivée d'un protocole standard pour brancher les modèles aux outils (MCP), et la chute du prix de l'inférence — un ordre de grandeur en trois ans entre GPT-4 original et Claude Sonnet 4.6.
 
-Ça ne veut pas dire que les keynotes ont raison. Ça veut dire que la bonne question n'est plus "est-ce que je devrais essayer un LLM pour rédiger un mail", mais "comment je conçois un workflow où un agent fait dix appels d'outils sans que ça parte en sucette". J'écris cet article depuis le terrain : chef de projet maintenance réseaux chez KEOS, dev web indépendant pour ACTIV PARTNERS. Aucun des deux contextes ne tolère le bullshit.
+Ça ne veut pas dire que les keynotes ont raison. Ça veut dire que la bonne question n'est plus "est-ce que je devrais essayer un LLM (Large Language Model) pour rédiger un mail", mais "comment je conçois un workflow où un agent fait dix appels d'outils sans que ça parte en sucette". J'écris cet article depuis le terrain : chef de projet maintenance réseaux chez KEOS, dev web indépendant pour ACTIV PARTNERS. Aucun des deux contextes ne tolère le bullshit.
 
 <div style="overflow-x:auto;margin:2rem 0">
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 360" style="max-width:100%;height:auto">
@@ -88,7 +88,7 @@ Concrètement, sur mes projets, je n'ai jamais laissé un agent agir sans dry-ru
 
 Le Model Context Protocol annoncé par Anthropic en novembre 2024 ressemblait à un détail technique. Dix-huit mois plus tard, c'est devenu le standard de facto pour brancher un LLM à un outil externe. OpenAI l'a adopté, Cursor et Windsurf le supportent nativement, l'écosystème des serveurs MCP (filesystem, GitHub, Slack, Postgres, Linear, Notion…) explose.
 
-Ce que ça change concrètement : avant MCP, chaque intégration LLM × outil était un projet sur mesure. Vous vouliez que Claude lise votre Postgres et écrive dans votre Jira ? Il fallait coder un wrapper spécifique, gérer l'authentification, normaliser les réponses, et recommencer si vous changiez de modèle. Avec MCP, vous installez un serveur MCP par outil, et n'importe quel client compatible (Claude Desktop, Cursor, Claude Code, des intégrations OpenAI) y accède de la même façon. C'est l'équivalent côté agents de ce que LSP a été pour les éditeurs de code.
+Ce que ça change concrètement : avant MCP (Model Context Protocol, standard Anthropic 2024 pour connecter les LLM aux outils), chaque intégration LLM × outil était un projet sur mesure. Vous vouliez que Claude lise votre Postgres et écrive dans votre Jira ? Il fallait coder un wrapper spécifique, gérer l'authentification, normaliser les réponses, et recommencer si vous changiez de modèle. Avec MCP, vous installez un serveur MCP par outil, et n'importe quel client compatible (Claude Desktop, Cursor, Claude Code, des intégrations OpenAI) y accède de la même façon. C'est l'équivalent côté agents de ce que LSP a été pour les éditeurs de code.
 
 Mon usage concret : j'ai un serveur MCP filesystem pour bosser sur mes repos sans uploader des fichiers manuellement, un serveur MCP qui parle à mon Linear pour créer et mettre à jour des tickets depuis Claude, et un serveur custom écrit en une après-midi qui interroge l'outillage interne KEOS sur les statuts d'équipements réseau. Le custom était impensable il y a un an — c'est une centaine de lignes aujourd'hui.
 
@@ -138,7 +138,7 @@ Ce que j'utilise sur les sites ACTIV PARTNERS : Claude Code en CLI pour les refa
 
 **Là où ça gagne** : code de glue (transformations de données, scripts de migration, tests unitaires sur du code existant), upgrades de dépendances mécaniques, génération de boilerplate, exploration d'une codebase inconnue, débogage assisté quand on sait formuler les symptômes proprement.
 
-**Là où ça coince** : choix d'architecture, design d'API publique, optimisation de performance fine, code qui dépend de connaissances métier non documentées, et tout ce qui touche à la sécurité. Un coding agent vous écrira un système d'authentification qui ressemble à un système d'authentification — et qui est exploitable dans la troisième heure suivant le déploiement si vous ne relisez pas chaque ligne. Ce n'est pas une critique des outils ; c'est leur mode d'emploi.
+**Là où ça coince** : choix d'architecture, design d'API (Application Programming Interface) publique, optimisation de performance fine, code qui dépend de connaissances métier non documentées, et tout ce qui touche à la sécurité. Un coding agent vous écrira un système d'authentification qui ressemble à un système d'authentification — et qui est exploitable dans la troisième heure suivant le déploiement si vous ne relisez pas chaque ligne. Ce n'est pas une critique des outils ; c'est leur mode d'emploi.
 
 Le risque que je vois apparaître en 2026, c'est l'**atrophie des juniors**. Un développeur qui apprend en faisant générer son code par un agent sans le comprendre construit une dette cognitive qui se paiera. La compétence à muscler, c'est lire et critiquer du code rapidement — c'est elle qui détermine combien on peut accélérer sans casser des choses.
 

@@ -20,7 +20,7 @@ tags:
 
 ---
 
-L'email marketing est mort, paraît-il. Je l'entends depuis au moins dix ans. Et chaque année, les campagnes email continuent de générer des résultats que peu d'autres canaux peuvent égaler en B2B — à condition de ne pas faire ce que font encore la majorité des entreprises : envoyer le même message à tout le monde en espérant que ça passe.
+L'email marketing est mort, paraît-il. Je l'entends depuis au moins dix ans. Et chaque année, les campagnes email continuent de générer des résultats que peu d'autres canaux peuvent égaler en B2B (Business-to-Business) — à condition de ne pas faire ce que font encore la majorité des entreprises : envoyer le même message à tout le monde en espérant que ça passe.
 
 La vérité, c'est que l'email reste l'un des canaux les plus rentables du marketing digital. Mais son efficacité dépend presque entièrement de la pertinence de ce qu'on envoie. Et la pertinence, ça commence par la segmentation.
 
@@ -135,7 +135,7 @@ La fréquence est aussi un levier sous-estimé. En B2B, une cadence trop soutenu
 
 ## Les trois métriques qui comptent vraiment
 
-Je vois beaucoup d'équipes marketing se noyer dans les indicateurs. Taux d'ouverture, taux de clic, taux de conversion, taux de désabonnement, plaintes spam, taux de rebond, revenus par email, ROI par campagne... À un moment, on ne sait plus quoi optimiser.
+Je vois beaucoup d'équipes marketing se noyer dans les indicateurs. Taux d'ouverture, taux de clic, taux de conversion, taux de désabonnement, plaintes spam, taux de rebond, revenus par email, ROI (Return on Investment, retour sur investissement) par campagne... À un moment, on ne sait plus quoi optimiser.
 
 Voici ce sur quoi je me concentre en priorité, dans cet ordre.
 

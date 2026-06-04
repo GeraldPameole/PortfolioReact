@@ -66,7 +66,7 @@ La question revient dans toutes les réunions marketing : on met combien sur le 
 
 ## Organique vs payant : une fausse opposition
 
-On oppose souvent les deux comme si c'était un choix définitif. Ce n'est pas le cas. L'organique — SEO, contenu, social naturel — construit un actif durable. Le payant — liens sponsorisés, social ads — achète de la visibilité immédiate. Le problème, c'est que beaucoup de PME attendent des résultats SEO en trois semaines, ou s'épuisent en paid sans jamais construire de base organique.
+On oppose souvent les deux comme si c'était un choix définitif. Ce n'est pas le cas. L'organique — SEO, contenu, social naturel — construit un actif durable. Le payant — liens sponsorisés, social ads — achète de la visibilité immédiate. Le problème, c'est que beaucoup de PME attendent des résultats SEO (Search Engine Optimization, référencement naturel) en trois semaines, ou s'épuisent en paid sans jamais construire de base organique.
 
 Ma règle pratique : si vous avez besoin de résultats dans les 90 jours, le payant est incontournable. Si vous construisez sur 12 à 24 mois, l'organique vous coûtera moins cher à l'acquisition et fonctionnera sans que vous arrêtiez de payer. La réalité des secteurs concurrentiels, c'est que les deux doivent coexister.
 

@@ -100,7 +100,7 @@ Turbopack est stable pour le dev et arrive en build (toujours en preview pour le
 
 ### Astro 5
 
-C'est l'outil qui a le plus évolué. **Server Islands** permet de mélanger statique et dynamique sur la même page sans tout passer en SSR — exactement le cas d'usage qui manquait aux sites de contenu avec quelques zones personnalisées (panier, badge utilisateur, prix dynamiques). **Content Layer** rend la gestion de contenu typée et performante, même avec des sources externes (CMS headless, API). Astro 5 devient un vrai concurrent SSR pour les sites mixtes contenu + interactivité — pas pour une SaaS lourde, mais pour 70 % des sites d'entreprise, oui.
+C'est l'outil qui a le plus évolué. **Server Islands** permet de mélanger statique et dynamique sur la même page sans tout passer en SSR — exactement le cas d'usage qui manquait aux sites de contenu avec quelques zones personnalisées (panier, badge utilisateur, prix dynamiques). **Content Layer** rend la gestion de contenu typée et performante, même avec des sources externes (CMS headless, API (Application Programming Interface)). Astro 5 devient un vrai concurrent SSR pour les sites mixtes contenu + interactivité — pas pour une SaaS (Software as a Service) lourde, mais pour 70 % des sites d'entreprise, oui.
 
 ### Svelte 5 + SvelteKit
 

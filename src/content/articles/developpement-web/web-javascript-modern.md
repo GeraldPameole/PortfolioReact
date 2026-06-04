@@ -163,7 +163,7 @@ const copy = structuredClone(original);
 
 `Array.at()` résout un problème simple mais agaçant : accéder au dernier élément d'un tableau. Avant : `arr[arr.length - 1]`. Après : `arr.at(-1)`. Les indices négatifs fonctionnent comme en Python — `-1` est le dernier élément, `-2` l'avant-dernier. Le code est plus lisible, l'intention est claire.
 
-`Promise.allSettled()` est la version plus robuste de `Promise.all()`. Là où `Promise.all` échoue dès qu'une promesse rejette, `allSettled` attend que toutes se terminent — réussites ou échecs — et retourne un tableau de résultats avec le statut de chacune. Pour des appels API indépendants où on veut traiter les erreurs individuellement, c'est le bon outil.
+`Promise.allSettled()` est la version plus robuste de `Promise.all()`. Là où `Promise.all` échoue dès qu'une promesse rejette, `allSettled` attend que toutes se terminent — réussites ou échecs — et retourne un tableau de résultats avec le statut de chacune. Pour des appels API (Application Programming Interface) indépendants où on veut traiter les erreurs individuellement, c'est le bon outil.
 
 `Object.hasOwn()` mérite aussi d'être adopté à la place de `Object.prototype.hasOwnProperty.call(obj, key)`. Plus court, plus sûr — il fonctionne sur les objets créés avec `Object.create(null)` qui n'ont pas de prototype. Sur du code qui manipule des configurations sérialisées ou des dictionnaires arbitraires, c'est un détail qui évite un piège classique.
 

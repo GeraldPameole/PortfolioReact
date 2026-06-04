@@ -187,7 +187,7 @@ Le remplacement, c'est le **triage à trois niveaux** : urgent (à traiter dans 
 
 Depuis Cal Newport (*Deep Work*, *Slow Productivity*), une règle s'est imposée comme le meilleur retour sur investissement individuel : bloquer une ou deux sessions de 90 minutes par jour, dédiées à une tâche cognitive lourde, sans aucune interruption — pas de Slack, pas de mail, pas de téléphone à portée. La durée n'est pas magique : 90 minutes correspondent à un cycle ultradien d'attention soutenue, après lequel le cerveau a besoin d'une vraie pause.
 
-Sur le terrain — direction, NOC, projets sous-traités chez ACTIV PARTNERS — c'est la seule discipline qui ait survécu à un environnement saturé d'interruptions. Toutes les autres méthodes (Pomodoro, time-blocking détaillé, GTD pur) se sont effondrées dès que la première crise client est tombée. Le bloc de 90 minutes tient parce qu'il est court, identifiable et défendable : on peut dire « je suis dispo dans 1h30 » sans culpabilité, là où « je suis en deep work toute la matinée » devient politiquement intenable.
+Sur le terrain — direction, NOC (Network Operations Center, centre de pilotage réseau), projets sous-traités chez ACTIV PARTNERS — c'est la seule discipline qui ait survécu à un environnement saturé d'interruptions. Toutes les autres méthodes (Pomodoro, time-blocking détaillé, GTD pur) se sont effondrées dès que la première crise client est tombée. Le bloc de 90 minutes tient parce qu'il est court, identifiable et défendable : on peut dire « je suis dispo dans 1h30 » sans culpabilité, là où « je suis en deep work toute la matinée » devient politiquement intenable.
 
 ## L'AI-hygiene : savoir ce qu'on ne délègue pas
 

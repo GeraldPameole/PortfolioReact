@@ -23,6 +23,12 @@ Les schémas Zod sont dans `src/content/config.ts` — collections `articles` et
 - Tout article/livre **doit** respecter son schéma, dont le discriminant `type: "article"` ou `type: "book"`. Champs requis article : `title`, `description`, `type`, `publishDate` ; livre : `title`, `description`, `type`, `author`, `profession`.
 - Les articles sont rangés par domaine : `src/content/articles/<domaine>/<slug>.md` (ex. `developpement-web/`, `gestion-projet/`). Garde cette arborescence pour un nouvel article.
 
+### Convention éditoriale — sigles métier
+
+À chaque **première occurrence d'un sigle métier dans un article**, développe-le entre parenthèses : `NPS (Net Promoter Score)`, `ARPU (Average Revenue Per User)`, `FTTB (Fiber to the Building)`. Pas dans les titres H1/H2/H3 (préfère un paragraphe explicatif juste après) et pas si le sigle est défini quelques mots plus loin de toute façon.
+
+Glossaire central : `scripts/acronyms.json`. Pour patcher rétroactivement les articles existants : `python3 scripts/expand-acronyms.py [--dry-run]`. Pour ajouter un sigle, l'ajouter au JSON puis relancer le script.
+
 ## Style & design
 
 - Les **design tokens** (couleurs, polices) vivent dans `src/styles/global.css` sous forme de variables CSS : `--bg-*`, `--font-sans` (Space Grotesk), `--font-body` (Inter), `--font-mono` (JetBrains Mono). Utilise ces variables, ne code pas les couleurs/polices en dur.

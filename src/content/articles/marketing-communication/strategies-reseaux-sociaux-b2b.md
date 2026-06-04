@@ -21,7 +21,7 @@ tags:
 
 ---
 
-Je travaille avec des équipes commerciales et marketing depuis plus de dix ans. Et chaque fois que j'aborde la question des réseaux sociaux en contexte B2B, j'entends la même chose : "On est sur LinkedIn, mais ça ne donne rien." La vraie question, c'est rarement l'outil. C'est l'usage qu'on en fait.
+Je travaille avec des équipes commerciales et marketing depuis plus de dix ans. Et chaque fois que j'aborde la question des réseaux sociaux en contexte B2B (Business-to-Business), j'entends la même chose : "On est sur LinkedIn, mais ça ne donne rien." La vraie question, c'est rarement l'outil. C'est l'usage qu'on en fait.
 
 <div style="overflow-x:auto;margin:2rem 0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 220" style="max-width:100%;height:auto">
   <rect width="800" height="220" fill="#0a0f2e"/>
@@ -187,7 +187,7 @@ L'autre piège à éviter : automatiser les messages de connexion avec des texte
 
 ## Mesurer le ROI social en B2B sans se perdre dans les indicateurs
 
-Le ROI des réseaux sociaux B2B est rarement direct. Les cycles de vente sont longs. Un prospect qui lit vos posts depuis six mois vous contactera un jour sans que vous sachiez précisément pourquoi à ce moment-là. Ça ne veut pas dire qu'on ne peut pas mesurer.
+Le ROI (Return on Investment, retour sur investissement) des réseaux sociaux B2B est rarement direct. Les cycles de vente sont longs. Un prospect qui lit vos posts depuis six mois vous contactera un jour sans que vous sachiez précisément pourquoi à ce moment-là. Ça ne veut pas dire qu'on ne peut pas mesurer.
 
 Je distingue trois niveaux d'indicateurs. Le premier niveau : la portée et la visibilité — impressions, vues de profil, croissance du réseau. C'est le signal le plus faible, mais il donne une direction. Le deuxième niveau : l'engagement qualifié — commentaires pertinents, partages dans des cercles professionnels ciblés, demandes de connexion entrantes de profils idéaux. C'est là que l'intérêt devient réel. Le troisième niveau : la conversion — prises de contact entrantes, propositions demandées, contrats.
 

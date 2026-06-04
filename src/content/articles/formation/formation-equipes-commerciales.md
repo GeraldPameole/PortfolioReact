@@ -16,7 +16,7 @@ theme: formation
 
 La formation commerciale est l'un des secteurs où la distance entre ce qu'on enseigne et ce qu'on mesure est la plus grande. J'ai vu des équipes sortir de deux jours de formation enthousiastes et retomber dans leurs anciens réflexes au bout d'une semaine. Pas parce qu'elles étaient mauvaises. Parce que la formation ne ressemblait pas à la réalité du terrain.
 
-Chez SFR puis chez KEOS TELECOM, j'ai formé et accompagné des équipes commerciales dans des contextes très différents — vente en boutique, vente par téléphone, vente B2B. Ce qui fonctionne dans tous ces contextes, c'est la même chose : la pratique réelle, organisée et suivie d'un retour immédiat.
+Chez SFR puis chez KEOS TELECOM, j'ai formé et accompagné des équipes commerciales dans des contextes très différents — vente en boutique, vente par téléphone, vente B2B (Business-to-Business). Ce qui fonctionne dans tous ces contextes, c'est la même chose : la pratique réelle, organisée et suivie d'un retour immédiat.
 
 ## La théorie ne vend pas
 

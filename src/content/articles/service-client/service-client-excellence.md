@@ -1,6 +1,6 @@
 ---
 title: "Excellence du service client : de la satisfaction à la fidélité"
-description: "Satisfaire un client ne suffit pas à le fidéliser. Les moments de vérité, la gestion des réclamations comme levier de confiance, et comment utiliser NPS et CSAT intelligemment pour prendre de vraies décisions."
+description: "Satisfaire un client ne suffit pas à le fidéliser. Les moments de vérité, la gestion des réclamations comme levier de confiance, et comment utiliser le NPS (Net Promoter Score, recommandation) et le CSAT (Customer Satisfaction Score, satisfaction d'interaction) intelligemment pour prendre de vraies décisions."
 publishDate: "2026-09-28"
 updatedDate: "2026-05-31"
 type: article
@@ -111,7 +111,7 @@ Le NPS (Net Promoter Score) mesure la propension à recommander. Il capture quel
 
 Le CSAT (Customer Satisfaction Score) mesure la satisfaction d'une interaction précise. Il est contextualisé et actionnable à court terme. Son défaut : la satisfaction d'un contact particulier ne prédit pas la fidélité.
 
-Les deux métriques se complètent et racontent des histoires différentes. Un client avec un CSAT élevé et un NPS bas est satisfait de ses interactions mais ne vous recommanderait pas — il y a un problème de perception globale ou de valeur perçue. Un client avec un NPS élevé et un CSAT ponctuellement bas est globalement fidèle mais a eu un mauvais contact récent — c'est une alerte à traiter avant que la fidélité s'érode.
+Les deux métriques se complètent et racontent des histoires différentes. Un client avec un CSAT élevé et un NPS bas est satisfait de ses interactions mais ne vous recommanderait pas — il y a un problème de perception globale ou de valeur perçue. Un client avec un NPS élevé et un CSAT (Customer Satisfaction Score, score de satisfaction d'interaction) ponctuellement bas est globalement fidèle mais a eu un mauvais contact récent — c'est une alerte à traiter avant que la fidélité s'érode.
 
 <div style="overflow-x:auto;margin:2rem 0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 360" style="max-width:100%;height:auto">
   <rect width="700" height="360" fill="#0a0f2e" rx="12"/>
@@ -161,7 +161,7 @@ Les deux métriques se complètent et racontent des histoires différentes. Un c
 
 ## Ce que les mesures ne remplacent pas
 
-Les organisations qui pilotent uniquement par les scores finissent par optimiser les scores, pas l'expérience. Des enquêtes envoyées au mauvais moment, des formulations qui induisent des réponses positives, des équipes notées sur leur NPS qui apprennent à filtrer les retours négatifs — ces dérives sont courantes.
+Les organisations qui pilotent uniquement par les scores finissent par optimiser les scores, pas l'expérience. Des enquêtes envoyées au mauvais moment, des formulations qui induisent des réponses positives, des équipes notées sur leur NPS (Net Promoter Score, score de propension à recommander) qui apprennent à filtrer les retours négatifs — ces dérives sont courantes.
 
 La mesure est un outil de navigation, pas une fin en soi. Ce qui compte, c'est ce qu'on fait avec les résultats : les verbatims négatifs transformés en chantiers d'amélioration, les clients "à risque" contactés proactivement, les équipes informées des retours terrain pour ajuster leurs pratiques.
 

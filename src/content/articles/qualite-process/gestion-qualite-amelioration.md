@@ -70,7 +70,7 @@ Le cycle Kaizen tient en cinq étapes : identifier un problème précis, l'analy
 
 La plupart des démarches qualité échouent pour une raison simple : elles sont conçues sans les gens qui font le travail. On cartographie les processus en salle de réunion, on valide en comité de direction, et on déploie. Ensuite on s'étonne que ça ne prise pas.
 
-Chez KEOS TELECOM, quand on a voulu améliorer notre processus de suivi des déploiements FTTB, j'ai d'abord demandé aux techniciens ce qui les ralentissait réellement. Leurs réponses n'avaient rien à voir avec ce qu'on pensait être le problème. Le vrai frein, c'était un formulaire de validation intermédiaire que personne n'avait pensé à simplifier depuis des années.
+Chez KEOS TELECOM, quand on a voulu améliorer notre processus de suivi des déploiements FTTB (Fiber to the Building, fibre optique jusqu'à l'immeuble), j'ai d'abord demandé aux techniciens ce qui les ralentissait réellement. Leurs réponses n'avaient rien à voir avec ce qu'on pensait être le problème. Le vrai frein, c'était un formulaire de validation intermédiaire que personne n'avait pensé à simplifier depuis des années.
 
 La règle que j'applique : toute amélioration de processus doit être proposée ou co-construite par ceux qui exécutent le processus. Pas imposée. Pas "validée" après coup lors d'une réunion de présentation. Co-construite depuis le départ. Ça prend plus de temps en amont, mais c'est la seule façon d'avoir des équipes qui défendent le changement plutôt que de le subir.
 
