@@ -205,10 +205,16 @@ const isActive = (href: string) =>
   .mobile-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
   .mobile-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
 
-  /* Mobile menu */
+  /* Mobile menu (Agent 2 #5) */
   .mobile-menu {
     background: rgba(5,8,22,0.97);
-    backdrop-filter: blur(20px);
+    /* blur(20px) -> blur(10px) : 2x moins coûteux GPU à l'ouverture.
+       Le bg quasi-opaque (0.97) compense visuellement. */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    /* Promotion sur layer GPU dédiée (idem que header-inner) */
+    will-change: transform;
+    transform: translateZ(0);
     border-bottom: 1px solid var(--border);
     padding: 1.5rem;
   }
@@ -237,25 +243,50 @@ const isActive = (href: string) =>
 </style>
 
 <script is:inline>
-  // Scrolled state
-  const header = document.getElementById('site-header');
-  window.addEventListener('scroll', () => {
-    if (header) header.classList.toggle('scrolled', window.scrollY > 20);
-  }, { passive: true });
+  // Singleton (Agent 2 #6) : survit aux View Transitions, ré-acquiert les
+  // DOM nodes à chaque navigation client-side.
+  //
+  // Avant : `const header = document.getElementById(...)` capturait UNE
+  // référence figée. Comme `is:inline` n'est PAS ré-exécuté sur navigation
+  // client-side mais que <Header> est ré-injecté par ViewTransitions, la
+  // référence pointait sur un node orphelin DOM-détaché après la 1re nav.
+  // Résultat : la classe `scrolled` n'était plus appliquée correctement.
+  //
+  // Maintenant : 1 SEUL listener scroll global avec rAF throttle + re-
+  // querySelector du header à chaque frame (cache navigateur, coût nul).
+  (function () {
+    if (window.__headerBound) return;
+    window.__headerBound = true;
 
-  // Mobile menu
-  const toggle = document.getElementById('mobile-toggle');
-  const menu   = document.getElementById('mobile-menu');
-  if (toggle && menu) {
-    toggle.addEventListener('click', () => {
-      const open = toggle.getAttribute('aria-expanded') === 'true';
-      toggle.setAttribute('aria-expanded', open ? 'false' : 'true');
-      if (open) { menu.setAttribute('hidden', ''); } else { menu.removeAttribute('hidden'); }
-    });
-    // Close on link click
-    menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-      toggle.setAttribute('aria-expanded', 'false');
-      menu.setAttribute('hidden', '');
-    }));
-  }
+    let ticking = false;
+    window.addEventListener('scroll', () => {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(() => {
+        const h = document.getElementById('site-header');
+        if (h) h.classList.toggle('scrolled', window.scrollY > 20);
+        ticking = false;
+      });
+    }, { passive: true });
+
+    function bindMobileMenu() {
+      const toggle = document.getElementById('mobile-toggle');
+      const menu   = document.getElementById('mobile-menu');
+      if (!toggle || !menu || toggle.dataset.bound) return;
+      toggle.dataset.bound = '1';
+      toggle.addEventListener('click', () => {
+        const open = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', open ? 'false' : 'true');
+        if (open) menu.setAttribute('hidden', '');
+        else menu.removeAttribute('hidden');
+      });
+      menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+        toggle.setAttribute('aria-expanded', 'false');
+        menu.setAttribute('hidden', '');
+      }));
+    }
+    document.addEventListener('astro:page-load', bindMobileMenu);
+    if (document.readyState !== 'loading') bindMobileMenu();
+    else document.addEventListener('DOMContentLoaded', bindMobileMenu);
+  })();
 </script>
