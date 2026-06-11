@@ -1,5 +1,5 @@
 ---
-import { getCollection } from 'astro:content';
+import { getCollection , render } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import ArticleProgressBar from '../../components/ArticleProgressBar.astro';
 import BackToTop from '../../components/BackToTop.astro';
@@ -11,7 +11,7 @@ export async function getStaticPaths() {
     (a, b) => new Date(b.data.publishDate).getTime() - new Date(a.data.publishDate).getTime()
   );
   return sorted.map((article, idx) => ({
-    params: { slug: article.slug },
+    params: { slug: article.id.replace(/.md$/, '') },
     props: {
       article,
       prev: idx < sorted.length - 1 ? sorted[idx + 1] : null,
@@ -21,7 +21,7 @@ export async function getStaticPaths() {
 }
 
 const { article, prev, next } = Astro.props;
-const { Content } = await article.render();
+const { Content } = await render(article);
 
 const domain     = (article.data as any).domain ?? '';
 const tags       = article.data.tags ?? [];
@@ -36,7 +36,7 @@ const themeKey   = mapToStandardTheme(domain || tags[0]);
 // Related: same domain, exclude current, max 3
 const allArticles   = await getCollection('articles');
 const related = allArticles
-  .filter(a => a.slug !== article.slug && (a.data as any).domain === domain)
+  .filter(a => a.id !== article.id && (a.data as any).domain === domain)
   .sort((a, b) => new Date(b.data.publishDate).getTime() - new Date(a.data.publishDate).getTime())
   .slice(0, 3);
 
@@ -80,7 +80,7 @@ const ogImage = (article.data as any).image
   ?? '/assets/webp/profile.webp';
 
 // JSON-LD Article schema
-const canonicalUrl = `https://geraldpameole.vercel.app/blog/${article.slug}`;
+const canonicalUrl = `https://geraldpameole.vercel.app/blog/${article.id.replace(/.md$/, '')}`;
 const articleSchema = {
   "@context": "https://schema.org",
   "@type": "Article",
@@ -260,7 +260,7 @@ const shareEmail    = `mailto:?subject=${encodedTitle}&body=${encodedUrl}`;
             const rDate    = new Date(r.data.publishDate).toLocaleDateString('fr-FR', { month: 'short', year: 'numeric' });
             const rRead    = Math.max(1, Math.ceil((r.body ?? '').split(/\s+/).length / 200));
             return (
-              <a href={`/blog/${r.slug}`} class="related-card reveal">
+              <a href={`/blog/${r.id.replace(/.md$/, '')}`} class="related-card reveal">
                 <div class="rc-accent" style={`background:${rAccent}`}></div>
                 <div class="rc-body">
                   <div class="rc-meta">
@@ -285,7 +285,7 @@ const shareEmail    = `mailto:?subject=${encodedTitle}&body=${encodedUrl}`;
   <nav class="article-nav" aria-label="Navigation entre articles">
     <div class="container nav-inner">
       {prev ? (
-        <a href={`/blog/${prev.slug}`} class="nav-card nav-prev">
+        <a href={`/blog/${prev.id.replace(/.md$/, '')}`} class="nav-card nav-prev">
           <span class="nav-dir">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m15 18-6-6 6-6"/></svg>
             Article précédent
@@ -296,7 +296,7 @@ const shareEmail    = `mailto:?subject=${encodedTitle}&body=${encodedUrl}`;
       ) : <div/>}
 
       {next ? (
-        <a href={`/blog/${next.slug}`} class="nav-card nav-next">
+        <a href={`/blog/${next.id.replace(/.md$/, '')}`} class="nav-card nav-next">
           <span class="nav-dir">
             Article suivant
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m9 18 6-6-6-6"/></svg>

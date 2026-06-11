@@ -210,7 +210,7 @@ const pageDescription = "Explorez ma collection d'articles et ressources organis
 						
 						<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 							{articlesByTheme[theme.name as ThemeKey].map(article => (
-								<a href={`/blog/${article.slug}`} class="group">
+								<a href={`/blog/${article.id.replace(/.md$/, '')}`} class="group">
 									<article class="h-full bg-white dark:bg-gray-700 rounded-xl shadow-md overflow-hidden transform transition-all duration-300 group-hover:shadow-lg group-hover:-translate-y-1">
 										<div class="relative h-48 overflow-hidden">
 											{article.data.image ? (
@@ -278,7 +278,7 @@ const pageDescription = "Explorez ma collection d'articles et ressources organis
 						
 						<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
 							{booksByTheme[theme.name as ThemeKey].map(book => (
-								<a href={`/livres/${book.slug}`} class="group">
+								<a href={`/livres/${book.id.replace(/.md$/, '')}`} class="group">
 									<article class="h-full bg-white dark:bg-gray-700 rounded-xl shadow-md overflow-hidden transform transition-all duration-300 group-hover:shadow-lg group-hover:-translate-y-1">
 										<div class="relative h-64 overflow-hidden">
 											{book.data.coverImage ? (

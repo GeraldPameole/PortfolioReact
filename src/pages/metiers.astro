@@ -76,7 +76,7 @@ function getCategory(project: any) {
           const date  = new Date(project.data.publishDate).toLocaleDateString('fr-FR', { month: 'short', year: 'numeric' });
 
           return (
-            <a href={`/metiers/${project.slug}`} class="project-card reveal" style={`transition-delay:${Math.min(i,5)*0.09}s`}>
+            <a href={`/metiers/${project.id.replace(/.md$/, '')}`} class="project-card reveal" style={`transition-delay:${Math.min(i,5)*0.09}s`}>
               <!-- Top accent -->
               <div class="card-top" style={`background:linear-gradient(90deg,${meta.color}25,transparent)`}>
                 <div class="card-cat">

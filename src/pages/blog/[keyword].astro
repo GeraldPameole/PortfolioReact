@@ -70,7 +70,7 @@ const jsonLd = {
       "item": {
         "@type": "Article",
         "headline": article.data.title,
-        "url": `/articles/${article.slug}`,
+        "url": `/articles/${article.id.replace(/.md$/, '')}`,
         "datePublished": article.data.publishDate
       }
     }))
@@ -142,7 +142,7 @@ const jsonLd = {
               )}
               
               <h2 class="text-lg font-bold text-[#111827] dark:text-white mb-3 line-clamp-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
-                <a href={`/blog/${article.slug}`} class="hover:underline">
+                <a href={`/blog/${article.id.replace(/.md$/, '')}`} class="hover:underline">
                   {article.data.title}
                 </a>
               </h2>
@@ -156,7 +156,7 @@ const jsonLd = {
                   <i class="fas fa-calendar-alt mr-1"></i>
                   {formatDate(article.data.publishDate)}
                 </span>
-                <a href={`/blog/${article.slug}`} 
+                <a href={`/blog/${article.id.replace(/.md$/, '')}`} 
                    class="inline-flex items-center gap-1 text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 font-medium text-sm transition-all duration-300 hover:gap-2">
                   Lire l'article
                   <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>

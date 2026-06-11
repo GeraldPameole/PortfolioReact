@@ -165,7 +165,7 @@ const stats = [
             <BlogCard 
               title={article.data.title}
               description={article.data.description}
-              url={`/blog/${article.slug}`}
+              url={`/blog/${article.id.replace(/.md$/, '')}`}
               image={article.data.image || `/assets/themes/${standardThemes[currentTheme as ThemeKey]?.image || 'default.webp'}`}
               date={article.data.publishDate}
               readingTime={article.data.readingTime ? article.data.readingTime.toString() : "5 min"}

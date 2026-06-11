@@ -56,7 +56,7 @@ const recent = articles
             <ul class="recent-list">
               {recent.map(a => (
                 <li>
-                  <a href={`/blog/${a.slug}`} class="recent-link">
+                  <a href={`/blog/${a.id.replace(/.md$/, '')}`} class="recent-link">
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--violet-light)" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
                     {a.data.title}
                   </a>

@@ -47,6 +47,33 @@ const bookSchema = z.object({
     .optional(),
 });
 
+// Schéma pour les fiches métier (src/content/work/) — utilisé par /metiers/[slug]
+const workSchema = z.object({
+  title: z.string(),
+  description: z.string(),
+  publishDate: z.string(),
+  updatedDate: z.string().optional(),
+  author: z.string().optional(),
+  img: z.string().optional(),
+  img_alt: z.string().optional(),
+  company: z.string().optional(),
+  period: z.string().optional(),
+  location: z.string().optional(),
+  domain: z.string().optional(),
+  technologies: z.array(z.string()).optional().default([]),
+  projectType: z.string().optional(),
+  tags: z.array(z.string()).optional().default([]),
+});
+
+// Schéma pour les docs internes (src/content/docs/) — guides éditoriaux
+const docSchema = z.object({
+  title: z.string(),
+  description: z.string().optional(),
+  date: z.string().optional(),
+  author: z.string().optional(),
+  tags: z.array(z.string()).optional().default([]),
+});
+
 // Définition des collections
 export const collections = {
   articles: defineCollection({
@@ -57,7 +84,17 @@ export const collections = {
     type: "content",
     schema: bookSchema,
   }),
+  work: defineCollection({
+    type: "content",
+    schema: workSchema,
+  }),
+  docs: defineCollection({
+    type: "content",
+    schema: docSchema,
+  }),
 };
 
 export type ArticleSchema = z.infer<typeof articleSchema>;
 export type BookSchema = z.infer<typeof bookSchema>;
+export type WorkSchema = z.infer<typeof workSchema>;
+export type DocSchema = z.infer<typeof docSchema>;

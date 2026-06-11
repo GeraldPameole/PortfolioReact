@@ -35,7 +35,7 @@ export async function GET(context: APIContext) {
         title: article.data.title,
         description: article.data.description,
         pubDate: new Date(article.data.publishDate),
-        link: `/blog/${article.slug}`,
+        link: `/blog/${article.id.replace(/.md$/, '')}`,
         // Auteur (utilisé par Buffer/Hootsuite/etc. pour attribution)
         author: `${article.data.author ?? 'Gérald Paméole'} (${site}/about)`,
         // Tags → catégories RSS → Buffer peut les convertir en hashtags LinkedIn suggérés

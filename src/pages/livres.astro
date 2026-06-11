@@ -66,7 +66,7 @@ function stars(n: number) {
           const s     = stars(note);
 
           return (
-            <a href={`/livres/${book.slug}`} class="book-card reveal" style={`transition-delay:${Math.min(i,6)*0.07}s`} data-cat={cat}>
+            <a href={`/livres/${book.id.replace(/.md$/, '')}`} class="book-card reveal" style={`transition-delay:${Math.min(i,6)*0.07}s`} data-cat={cat}>
               <!-- Cover -->
               <div class="book-cover" style={`border-color:${color}30`}>
                 {book.data.coverImage ? (

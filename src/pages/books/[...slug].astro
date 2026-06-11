@@ -1,13 +1,13 @@
 ---
 import type { CollectionEntry } from 'astro:content';
-import { getCollection } from 'astro:content';
+import { getCollection , render } from 'astro:content';
 import BackButton from '../../components/BackButton.astro';
 import Layout from '../../layouts/BaseLayout.astro';
 
 export async function getStaticPaths() {
 	const books = await getCollection('books');
 	return books.map((book) => ({
-		params: { slug: book.slug },
+		params: { slug: book.id.replace(/.md$/, '') },
 		props: { book },
 	}));
 }
@@ -17,7 +17,7 @@ interface Props {
 }
 
 const { book } = Astro.props;
-const { Content } = await book.render();
+const { Content } = await render(book);
 
 // Mapping des professions pour l'affichage
 const professionLabels: Record<string, string> = {

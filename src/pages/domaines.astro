@@ -76,7 +76,7 @@ const ACCENT_COLORS: Record<string, string> = {
             {articles.length > 0 && (
               <div class="article-list">
                 {articles.map((a: any) => (
-                  <a href={`/blog/${a.slug}`} class="article-row">
+                  <a href={`/blog/${a.id.replace(/.md$/, '')}`} class="article-row">
                     <span class="article-dot" style={`background:${accent}`}></span>
                     <span class="article-title">{a.data.title}</span>
                     <span class="article-arrow" style={`color:${accent}`}>→</span>
