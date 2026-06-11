@@ -46,7 +46,7 @@ function getCategory(project: any) {
 }
 ---
 
-<BaseLayout title="Projets & Expériences" description="20 ans d'expérience en gestion de projet, développement web, management et formation.">
+<BaseLayout title="Métiers" description="Vingt ans, six métiers, quatre employeurs (SFR, ACTIV PARTNERS, KEOS TELECOM). Le détail des fonctions exercées et ce qu'elles ont en commun.">
 
   <!-- Hero -->
   <div class="page-hero">
@@ -54,12 +54,12 @@ function getCategory(project: any) {
     <div class="orb orb-cyan"   style="width:350px;height:350px;bottom:-80px;right:-80px;opacity:0.2;"></div>
     <div class="container">
       <div style="text-align:center;position:relative;z-index:1">
-        <span class="section-label reveal">Expériences</span>
+        <span class="section-label reveal">Vingt ans de terrain</span>
         <h1 class="reveal reveal-delay-1" style="margin-top:1rem">
-          Projets &amp; <span class="gradient-text">réalisations</span>
+          Six métiers, <span class="gradient-text">une signature</span>
         </h1>
-        <p class="reveal reveal-delay-2" style="color:var(--text-3);font-size:1.05rem;max-width:540px;margin:1.25rem auto 0;line-height:1.8">
-          20 ans de terrain — gestion de projet télécom, développement web, management d'équipes et formation professionnelle.
+        <p class="reveal reveal-delay-2" style="color:var(--text-3);font-size:1.05rem;max-width:560px;margin:1.25rem auto 0;line-height:1.8">
+          Du portefeuille premium SFR au pilotage de production KEOS, via la formation, la qualité-méthodes, le management commercial et le développement web. Six fonctions exercées qui ont toutes nourri la même obsession : faire dialoguer les mondes que tout sépare.
         </p>
       </div>
     </div>
@@ -76,7 +76,7 @@ function getCategory(project: any) {
           const date  = new Date(project.data.publishDate).toLocaleDateString('fr-FR', { month: 'short', year: 'numeric' });
 
           return (
-            <a href={`/projets/${project.slug}`} class="project-card reveal" style={`transition-delay:${Math.min(i,5)*0.09}s`}>
+            <a href={`/metiers/${project.slug}`} class="project-card reveal" style={`transition-delay:${Math.min(i,5)*0.09}s`}>
               <!-- Top accent -->
               <div class="card-top" style={`background:linear-gradient(90deg,${meta.color}25,transparent)`}>
                 <div class="card-cat">

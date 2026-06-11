@@ -60,6 +60,16 @@
       "source": "/blog/marketing-communication/strategies-marketing-digital-2025",
       "destination": "/blog/marketing-communication/strategies-marketing-digital-2026/",
       "permanent": true
+    },
+    {
+      "source": "/projets",
+      "destination": "/metiers/",
+      "permanent": true
+    },
+    {
+      "source": "/projets/:slug*",
+      "destination": "/metiers/:slug*",
+      "permanent": true
     }
   ]
 }
