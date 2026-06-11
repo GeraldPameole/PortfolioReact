@@ -101,16 +101,20 @@ const pageTitle = `${title} | Gérald Paméole`;
   <BackToTop />
   <Footer />
 
-  <!-- Scroll reveal observer -->
+  <!-- Scroll reveal observer (Agent 2 #10) -->
   <script is:inline>
     if (typeof IntersectionObserver !== 'undefined') {
       const observer = new IntersectionObserver(
         (entries) => entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } }),
         { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
       );
-      const observe = () => document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+      // :not(.visible) → skippe les éléments déjà révélés. Évite des appels
+      // observe() inutiles à chaque navigation client-side.
+      const observe = () => document.querySelectorAll('.reveal:not(.visible)').forEach(el => observer.observe(el));
       document.addEventListener('DOMContentLoaded', observe);
       document.addEventListener('astro:page-load', observe);
+      // Cleanup au teardown (pwa/back-forward cache, fermeture onglet)
+      window.addEventListener('pagehide', () => observer.disconnect());
     }
   </script>
 
