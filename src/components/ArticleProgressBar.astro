@@ -70,25 +70,55 @@
 </style>
 
 <script>
-function initProgress() {
-  const fill = document.getElementById('read-fill');
-  const pct  = document.getElementById('read-pct');
-  if (!fill || !pct) return;
+// Singleton stocké sur window pour survivre aux View Transitions tout en
+// restant idempotent (1 seul couple de listeners scroll/resize au total).
+// Avant : chaque astro:page-load attachait un NOUVEAU couple de listeners
+// scroll/resize, chacun lisant scrollHeight => reflow synchrone par event
+// multiplie par N navigations. Cause directe du scroll cadence/saccade.
+(function () {
+  if ((window as any).__readProgressBound) return;
+  (window as any).__readProgressBound = true;
 
-  function update() {
-    const scrolled = window.scrollY;
-    const total    = document.documentElement.scrollHeight - window.innerHeight;
-    const progress = total > 0 ? Math.round((scrolled / total) * 100) : 0;
-    fill.style.height = progress + '%';
-    pct.textContent   = progress + '%';
+  let fill: HTMLElement | null = null;
+  let pct: HTMLElement | null = null;
+  let ticking = false;
+  let cachedTotal = 0;
+
+  function refreshTotal() {
+    // Lit scrollHeight UNE seule fois (forced reflow). Re-mesure sur resize
+    // ou sur DOM update (cf. astro:page-load).
+    cachedTotal = document.documentElement.scrollHeight - window.innerHeight;
   }
 
-  window.addEventListener('scroll', update, { passive: true });
-  window.addEventListener('resize', update, { passive: true });
-  update();
-}
+  function update() {
+    if (!fill || !pct) return;
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(() => {
+      const progress = cachedTotal > 0
+        ? Math.round((window.scrollY / cachedTotal) * 100)
+        : 0;
+      fill!.style.height = progress + '%';
+      pct!.textContent   = progress + '%';
+      ticking = false;
+    });
+  }
 
-// Compatible avec Astro View Transitions
-document.addEventListener('astro:page-load', initProgress);
-document.addEventListener('DOMContentLoaded', initProgress);
+  function rebind() {
+    fill = document.getElementById('read-fill');
+    pct  = document.getElementById('read-pct');
+    if (!fill || !pct) return;
+    refreshTotal();
+    update();
+  }
+
+  // 1 SEUL listener scroll global, attache une fois pour toutes
+  window.addEventListener('scroll', update, { passive: true });
+  window.addEventListener('resize', () => { refreshTotal(); update(); }, { passive: true });
+
+  // Re-bind sur chaque navigation client-side (les DOM IDs changent)
+  document.addEventListener('astro:page-load', rebind);
+  if (document.readyState !== 'loading') rebind();
+  else document.addEventListener('DOMContentLoaded', rebind);
+})();
 </script>
