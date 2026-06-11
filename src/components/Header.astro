@@ -83,11 +83,19 @@ const isActive = (href: string) =>
     max-width: 1280px;
     margin: 0 auto;
     padding: 1rem 1.5rem;
-    background: rgba(5, 8, 22, 0.75);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+    background: rgba(5, 8, 22, 0.88);
+    /* backdrop-filter divisé par 2 + isolé sur sa propre layer GPU.
+       Avant : blur(20px) = recalcul GPU à chaque frame de scroll = saccades.
+       Maintenant : blur(10px) + transform/will-change → calcul 1 fois,
+       composé en GPU layer indépendante. */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     border-bottom: 1px solid rgba(255,255,255,0.06);
-    transition: all 0.3s ease;
+    /* Promotion sur layer GPU dédiée pour éviter le repaint scroll */
+    will-change: transform, backdrop-filter;
+    transform: translateZ(0);
+    /* Transition CSS limitée aux props qui changent vraiment au scroll */
+    transition: background-color 0.25s ease, box-shadow 0.25s ease;
   }
 
   #site-header.scrolled .header-inner {
