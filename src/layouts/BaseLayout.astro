@@ -1,5 +1,17 @@
 ---
-import { ViewTransitions } from 'astro:transitions';
+// <ViewTransitions /> RETIRÉ — la balise causait un bug de superposition
+// visible : pendant la transition entre 2 pages metier, le contenu de
+// la page-cible se rendait par-dessus la page-source SANS swap propre,
+// donnant un effet "mille-feuilles" illisible. Aussi cause des fuites
+// de listeners (les <script is:inline> n'etant pas re-executes a chaque
+// navigation client-side, certaines references DOM devenaient stale).
+//
+// Retour aux navigations classiques (full page load). Compromis :
+// petit flash blanc a chaque clic, mais zero bug d'affichage et zero leak.
+//
+// Si on veut reactiver les View Transitions plus tard, faire un chantier
+// dedie : auditer chaque <script is:inline> pour idempotence + tester
+// chaque page pour le rendu de transition.
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import BackToTop from '../components/BackToTop.astro';
@@ -91,7 +103,6 @@ const pageTitle = `${title} | Gérald Paméole`;
   <script type="application/ld+json" set:html={JSON.stringify(jsonLd ?? personSchema)} />
 
   <slot name="head" />
-  <ViewTransitions fallback="swap" />
 </head>
 <body>
   <Header />
