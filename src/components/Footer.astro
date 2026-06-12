@@ -129,7 +129,10 @@ const year = new Date().getFullYear();
 <script>
 document.addEventListener('astro:page-load', () => {
   const form = document.getElementById('footer-nl-form') as HTMLFormElement | null;
-  if (!form) return;
+  // Idempotence (Agent 2 #11) : evite d'attacher N handlers submit apres
+  // N navigations -> sinon 1 click = N inscriptions a la newsletter.
+  if (!form || form.dataset.bound) return;
+  form.dataset.bound = '1';
   const btn = form.querySelector('button[type="submit"]') as HTMLButtonElement;
   const input = form.querySelector('input[type="email"]') as HTMLInputElement;
   const success = form.querySelector('.fnl-success') as HTMLElement;

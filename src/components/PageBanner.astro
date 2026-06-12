@@ -37,7 +37,7 @@ const positionClasses = {
 const bannerId = `banner-${Math.random().toString(36).substring(2, 11)}`;
 ---
 
-<div class="relative overflow-hidden rounded-2xl mb-12 bg-gradient-to-r {backgroundGradient} h-64 md:h-80">
+<div class="page-banner relative overflow-hidden rounded-2xl mb-12 bg-gradient-to-r {backgroundGradient} h-64 md:h-80">
   <!-- Arrière-plan avec image si fournie -->
   {backgroundImage && (
     <div class="absolute inset-0 z-0">
@@ -109,26 +109,39 @@ const bannerId = `banner-${Math.random().toString(36).substring(2, 11)}`;
 </div>
 
 <style>
-  /* Animation des particules */
+  /* Animation des particules — pausée par défaut, activée uniquement si :
+     - le banner est dans le viewport (.banner-in-view)
+     - ET prefers-reduced-motion: no-preference
+     Le filtre SVG `goo` est extrêmement coûteux (feGaussianBlur full-screen
+     + feColorMatrix recalculés à chaque frame). Sans ce gate, c'était une
+     cause majeure de freeze sur /themes et /blog/themes. */
   .particle {
-    animation: float 8s infinite ease-in-out;
+    animation: none;
   }
-  .particle:nth-child(2) { animation-delay: 1s; }
-  .particle:nth-child(3) { animation-delay: 2s; }
-  .particle:nth-child(4) { animation-delay: 3s; }
-  .particle:nth-child(5) { animation-delay: 4s; }
-  
+  @media (prefers-reduced-motion: no-preference) {
+    .page-banner.banner-in-view .particle {
+      animation: float 8s infinite ease-in-out;
+    }
+    .page-banner.banner-in-view .particle:nth-child(2) { animation-delay: 1s; }
+    .page-banner.banner-in-view .particle:nth-child(3) { animation-delay: 2s; }
+    .page-banner.banner-in-view .particle:nth-child(4) { animation-delay: 3s; }
+    .page-banner.banner-in-view .particle:nth-child(5) { animation-delay: 4s; }
+  }
+
   @keyframes float {
     0%, 100% { transform: translateY(0) translateX(0); }
     25% { transform: translateY(-15px) translateX(15px); }
     50% { transform: translateY(0) translateX(0); }
     75% { transform: translateY(15px) translateX(-15px); }
   }
-  
-  /* Animation de l'ombre du texte */
+
+  /* Animation de l'ombre du texte — pausée hors-vue */
   .text-shadow-animate {
     animation: textShadowPulse 4s infinite;
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  }
+  .page-banner:not(.banner-in-view) .text-shadow-animate {
+    animation-play-state: paused;
   }
   
   @keyframes textShadowPulse {
@@ -145,4 +158,28 @@ const bannerId = `banner-${Math.random().toString(36).substring(2, 11)}`;
     0% { opacity: 0; transform: translateY(10px); }
     100% { opacity: 1; transform: translateY(0); }
   }
-</style> 
+</style>
+
+<script is:inline>
+  // IntersectionObserver pour bascule .banner-in-view : pause les animations
+  // particles+textShadowPulse quand le banner sort du viewport.
+  (function () {
+    const init = () => {
+      document.querySelectorAll('.page-banner').forEach((banner) => {
+        if (banner.dataset.viewBound) return;
+        banner.dataset.viewBound = '1';
+        if (!('IntersectionObserver' in window)) {
+          banner.classList.add('banner-in-view');
+          return;
+        }
+        const io = new IntersectionObserver(([entry]) => {
+          banner.classList.toggle('banner-in-view', entry.isIntersecting);
+        }, { threshold: 0 });
+        io.observe(banner);
+      });
+    };
+    document.addEventListener('astro:page-load', init);
+    if (document.readyState !== 'loading') init();
+    else document.addEventListener('DOMContentLoaded', init);
+  })();
+</script> 

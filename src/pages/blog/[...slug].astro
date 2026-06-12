@@ -776,6 +776,11 @@ details[open] .chevron { transform: rotate(180deg); }
   // Active highlight on scroll (desktop only)
   if (nav) {
     const links = Array.from(nav.querySelectorAll('.toc-link'));
+    // Disconnect le précédent observer si un TOC a été construit sur un
+    // article précédent (View Transitions ré-exécute ce script à chaque nav).
+    if ((window as any).__tocObserver) {
+      (window as any).__tocObserver.disconnect();
+    }
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -786,6 +791,12 @@ details[open] .chevron { transform: rotate(180deg); }
       });
     }, { rootMargin: '-20% 0px -70% 0px' });
     headings.forEach(h => observer.observe(h));
+    (window as any).__tocObserver = observer;
+    // Cleanup au prochain départ de page (View Transitions)
+    document.addEventListener('astro:before-preparation', () => {
+      observer.disconnect();
+      (window as any).__tocObserver = null;
+    }, { once: true });
   }
 })();
 </script>
