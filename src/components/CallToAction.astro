@@ -84,10 +84,16 @@ const selectedIcon = icons[icon as keyof typeof icons] || icons["arrow-right"];
 </div>
 
 <style>
+	/* Pause les 2 animations infinite quand le CTA sort du viewport.
+	   Sans ça, 2 layers GPU restaient animées en permanence meme hors-vue. */
 	.animate-pulse-slow {
 		animation: pulseSlow 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 	}
-	
+	.cta-container:not(.in-view).animate-pulse-slow,
+	.cta-container:not(.in-view) .background-animate {
+		animation-play-state: paused;
+	}
+
 	@keyframes pulseSlow {
 		0%, 100% {
 			opacity: 1;
@@ -96,11 +102,11 @@ const selectedIcon = icons[icon as keyof typeof icons] || icons["arrow-right"];
 			opacity: 0.9;
 		}
 	}
-	
+
 	.animate-text-gradient {
 		background-size: 200% 200%;
 	}
-	
+
 	.background-animate {
 		animation: gradient 8s ease infinite;
 	}
@@ -117,3 +123,25 @@ const selectedIcon = icons[icon as keyof typeof icons] || icons["arrow-right"];
 		}
 	}
 </style>
+
+<script is:inline>
+	(function () {
+		const init = () => {
+			document.querySelectorAll('.cta-container').forEach((cta) => {
+				if (cta.dataset.viewBound) return;
+				cta.dataset.viewBound = '1';
+				if (!('IntersectionObserver' in window)) {
+					cta.classList.add('in-view');
+					return;
+				}
+				const io = new IntersectionObserver(([entry]) => {
+					cta.classList.toggle('in-view', entry.isIntersecting);
+				}, { threshold: 0 });
+				io.observe(cta);
+			});
+		};
+		document.addEventListener('astro:page-load', init);
+		if (document.readyState !== 'loading') init();
+		else document.addEventListener('DOMContentLoaded', init);
+	})();
+</script>
