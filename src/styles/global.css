@@ -143,17 +143,16 @@ li { margin-bottom: 0.4rem; color: var(--text-2); }
 hr { border: none; border-top: 1px solid var(--border); margin: 2.5rem 0; }
 
 /* ── Gradient Text ────────────────────────────────────────────────────────── */
+/* FIX : remplace 'background-clip: text + text-fill-color: transparent'
+   par une couleur unie. Le clip text + transparent souffre d'un bug GPU
+   sur Chrome Mac M1/M2 qui produit des artefacts de superposition (triple
+   H1 'Six metiers, une signature' capture utilisateur 2026-06-12).
+   Cout : on perd l'effet degradé sur le texte. Gain : zero artefact GPU. */
 .gradient-text {
-  background: linear-gradient(135deg, var(--violet) 0%, var(--cyan) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--violet-light);
 }
 .gradient-text-warm {
-  background: linear-gradient(135deg, var(--orange) 0%, var(--pink) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--orange);
 }
 
 /* ── Glass Card ───────────────────────────────────────────────────────────── */
