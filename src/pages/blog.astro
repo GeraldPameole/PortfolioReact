@@ -74,6 +74,14 @@ const DOMAINS = [...new Set(articles.map((a: any) => a.data.domain).filter(Boole
 
     <!-- Pagination -->
     <nav id="pagination" class="pagination" aria-label="Pagination des articles"></nav>
+
+    <!-- Lien vers la vue chronologique -->
+    <div class="archives-cta reveal">
+      <a href="/archives" class="archives-link">
+        Voir tous les articles par année
+        <span aria-hidden="true">→</span>
+      </a>
+    </div>
   </div>
 
   <NewsletterBand />
@@ -192,6 +200,38 @@ const DOMAINS = [...new Set(articles.map((a: any) => a.data.domain).filter(Boole
   padding: .38rem .2rem;
   line-height: 1;
 }
+
+/* ── Archives CTA ── */
+.archives-cta {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
+}
+.archives-link {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  font-family: var(--font-sans);
+  font-size: .9rem;
+  font-weight: 600;
+  letter-spacing: .02em;
+  color: var(--text-3);
+  text-decoration: none;
+  padding: .55rem 1.2rem;
+  border-radius: var(--r-full);
+  border: 1px solid var(--border);
+  background: var(--glass);
+  transition: all .2s;
+}
+.archives-link:hover {
+  color: var(--violet-light);
+  border-color: rgba(145, 94, 255, .35);
+  background: rgba(145, 94, 255, .08);
+}
+.archives-link span { transition: transform .2s; }
+.archives-link:hover span { transform: translateX(3px); }
 
 @media(max-width:1024px) { .articles-grid { grid-template-columns: repeat(2, 1fr); } }
 @media(max-width:640px)  { .articles-grid { grid-template-columns: 1fr; } .search-input { max-width: 100%; } }
