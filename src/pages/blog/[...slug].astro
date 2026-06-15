@@ -3,7 +3,7 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import ArticleProgressBar from '../../components/ArticleProgressBar.astro';
 import BackToTop from '../../components/BackToTop.astro';
-import { calculateReadingTime, mapToStandardTheme } from '../../utils/themeUtils';
+import { calculateReadingTime } from '../../utils/themeUtils';
 
 export async function getStaticPaths() {
   const all = await getCollection('articles');
@@ -31,8 +31,6 @@ const date       = new Date(article.data.publishDate).toLocaleDateString('fr-FR'
 // @ts-ignore
   timeZone: 'Europe/Paris',
 });
-const themeKey   = mapToStandardTheme(domain || tags[0]);
-
 // Related: same domain, exclude current, max 3
 const allArticles   = await getCollection('articles');
 const related = allArticles
@@ -59,7 +57,7 @@ const DOMAIN_COLOR: Record<string, string> = {
   'reconversion-carriere':    '#fca5a5',
 };
 const accent   = DOMAIN_COLOR[domain] ?? 'var(--violet-light)';
-const domLabel = domain.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+const domLabel = domain.replace(/-/g, ' ').replace(/\b\w/g, (c: string) => c.toUpperCase());
 
 // Article image for og:image — fallback to domain theme image then profile
 const DOMAIN_OG: Record<string, string> = {

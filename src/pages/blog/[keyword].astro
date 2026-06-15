@@ -85,7 +85,7 @@ const jsonLd = {
   type="website"
 >
   <!-- Données structurées -->
-  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
   
   <main class="content-container-wide py-12">
     <!-- En-tête de la page de mot-clé -->
@@ -123,7 +123,7 @@ const jsonLd = {
               {(article.data as any).keywords && (article.data as any).keywords.length > 0 && (
                 <div class="mb-4">
                   <div class="flex flex-wrap gap-2">
-                    {(article.data as any).keywords.slice(0, 3).map((kw: string, idx: number) => (
+                    {(article.data as any).keywords.slice(0, 3).map((kw: string) => (
                       <span class={`px-2 py-1 text-xs font-medium rounded-full transition-all duration-300 ${
                         kw.replace('#', '').toLowerCase() === keyword 
                           ? 'bg-blue-600 text-white shadow-lg' 

@@ -181,7 +181,7 @@ const pageDescription = "Explorez ma collection d'articles et ressources organis
 				<div class={`relative overflow-hidden rounded-xl mb-8 bg-gradient-to-r ${theme.gradient} h-32`}>
 					<div class="absolute inset-0 z-0 opacity-20">
 						<div class="grid grid-cols-6 grid-rows-3 gap-1 h-full w-full">
-							{Array.from({ length: 6 * 3 }).map((_, i) => (
+							{Array.from({ length: 6 * 3 }).map(() => (
 								<div class="bg-white/5 rounded"></div>
 							))}
 						</div>

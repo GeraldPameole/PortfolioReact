@@ -6,7 +6,6 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
 import { standardThemes, type ThemeKey } from '../../../utils/themeUtils';
 import { groupByTheme } from '../../../utils/themeUtils';
 import ArticleCard from '../../../components/ArticleCard.astro';
-import type { CollectionEntry } from 'astro:content';
 
 export async function getStaticPaths() {
   const themes = Object.keys(standardThemes);
@@ -53,7 +52,10 @@ const pageDescription = `Découvrez tous nos articles sur ${themeConfig.label.to
 				<div class="flex items-center">
 					<i class={`${themeConfig.icon} text-2xl ${themeConfig.text} mr-3`}></i>
 					<div>
-						<h1 class="text-xl font-bold text-[#111827] dark:text-white">{themeArticles.length} articles</h1>
+						{/* H1 retiré : le PageBanner fournit déjà l'unique H1 de la page.
+						    Garder 2 H1 sur une page provoque un conflit sémantique et
+						    peut donner un effet de superposition de titres au layout. */}
+						<p class="text-xl font-bold text-[#111827] dark:text-white">{themeArticles.length} articles</p>
 						<p class="text-[#111827] dark:text-gray-300">dans la catégorie {themeConfig.label}</p>
 					</div>
 				</div>

@@ -20,7 +20,6 @@ const {
   title,
   description,
   backgroundImage,
-  backgroundGradient = "from-indigo-600 to-blue-700",
   icon,
   animate = true,
   contentPosition = 'center',
@@ -37,7 +36,7 @@ const positionClasses = {
 const bannerId = `banner-${Math.random().toString(36).substring(2, 11)}`;
 ---
 
-<div class="page-banner relative overflow-hidden rounded-2xl mb-12 bg-gradient-to-r {backgroundGradient} h-64 md:h-80">
+<div class="page-banner relative overflow-hidden rounded-2xl mb-12 bg-gradient-to-r from-indigo-600 to-blue-700 h-64 md:h-80">
   <!-- Arrière-plan avec image si fournie -->
   {backgroundImage && (
     <div class="absolute inset-0 z-0">
@@ -58,7 +57,7 @@ const bannerId = `banner-${Math.random().toString(36).substring(2, 11)}`;
     
     <!-- Grille décorative -->
     <div class="grid grid-cols-12 grid-rows-6 gap-1 h-full w-full">
-      {Array.from({ length: 12 * 6 }).map((_, i) => (
+      {Array.from({ length: 12 * 6 }).map(() => (
         <div class="bg-white/5 rounded"></div>
       ))}
     </div>

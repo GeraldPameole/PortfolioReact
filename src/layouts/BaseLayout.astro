@@ -90,7 +90,7 @@ const pageTitle = `${title} | Gérald Paméole`;
     rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap"
     media="print"
-    onload="this.media='all'"
+    onload="this.setAttribute('media','all')"
   />
   <noscript>
     <link
@@ -100,7 +100,7 @@ const pageTitle = `${title} | Gérald Paméole`;
   </noscript>
 
   <!-- JSON-LD structured data -->
-  <script type="application/ld+json" set:html={JSON.stringify(jsonLd ?? personSchema)} />
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(jsonLd ?? personSchema)} />
 
   <slot name="head" />
 </head>
@@ -129,7 +129,7 @@ const pageTitle = `${title} | Gérald Paméole`;
     }
   </script>
 
-  <script defer data-domain="geraldpameole.vercel.app" src="https://plausible.io/js/script.js"></script>
+  <script is:inline defer data-domain="geraldpameole.vercel.app" src="https://plausible.io/js/script.js"></script>
   <slot name="scripts" />
 </body>
 </html>
