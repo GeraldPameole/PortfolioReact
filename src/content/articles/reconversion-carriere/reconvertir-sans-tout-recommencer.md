@@ -1,11 +1,11 @@
 ---
 title: "Reconvertir 4 fois sans tout recommencer : 20 ans à transposer ses acquis"
 description: "Du commercial premium SFR au pilote de production KEOS via la formation et le développement web — la trajectoire d'une reconversion par transposition plutôt que par tabula rasa."
-publishDate: "2026-06-01"
+publishDate: "2026-04-01"
 updatedDate: "2026-06-01"
 type: article
 domain: reconversion-carriere
-image: "/images/themes/carriere.webp"
+image: "/images/themes/formation-carriere.webp"
 pillColor: violet
 theme: carriere
 tags:

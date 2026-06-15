@@ -1,11 +1,10 @@
 ---
 title: "Développer un portefeuille premium B2C : la méthode SFR appliquée au-delà du télécom"
 description: "ARPU +12 %/an, churn -52 %, rétention 92 % — 5 leviers de développement d'un portefeuille premium éprouvés à SFR entre 2005 et 2009, transposables aujourd'hui à tout secteur B2C haut de gamme."
-publishDate: "2026-06-01"
-updatedDate: "2026-06-01"
+publishDate: "2026-10-07"
 type: article
 domain: developpement-commercial
-image: "/images/themes/commercial.webp"
+image: "/images/themes/marketing.webp"
 pillColor: orange
 theme: commercial
 tags:
