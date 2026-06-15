@@ -1,7 +1,7 @@
 ---
 title: "Les soft skills qui font vraiment la différence — et comment les développer concrètement"
 description: "La communication, la gestion des conflits, l'adaptabilité ne sont pas des traits de caractère figés. Ce sont des compétences qui s'apprennent, à condition de savoir comment les travailler. Voici ce que j'ai observé sur le terrain et ce qui fonctionne vraiment."
-publishDate: "2025-06-09"
+publishDate: "2026-06-10"
 type: article
 domain: formation
 image: "/images/themes/formation-carriere.webp"

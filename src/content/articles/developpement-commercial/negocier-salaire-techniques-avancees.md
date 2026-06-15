@@ -1,7 +1,7 @@
 ---
 title: "Négocier son salaire : les techniques qui font vraiment la différence"
 description: "Benchmarks marché, timing optimal, ancrage et contre-proposition structurée — ce que j'ai appris à force de négocier côté vendeur chez SFR et côté candidat."
-publishDate: "2025-01-06"
+publishDate: "2025-06-04"
 type: article
 domain: developpement-commercial
 image: "/images/themes/management.webp"

@@ -1,7 +1,7 @@
 ---
 title: "Gestion des connaissances en organisation : sortir du piège de la thésaurisation"
 description: "Comment documenter sans bureaucratie, partager sans friction et protéger les compétences critiques avant qu'elles quittent l'entreprise avec leur détenteur."
-publishDate: "2025-07-14"
+publishDate: "2026-01-28"
 type: article
 domain: gestion-connaissances
 image: "/images/themes/management.webp"

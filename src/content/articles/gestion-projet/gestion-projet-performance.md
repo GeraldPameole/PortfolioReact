@@ -1,7 +1,7 @@
 ---
 title: "Performance projet : les indicateurs qui comptent vraiment"
 description: "Comment piloter un projet avec des KPIs utiles — lead time, taux de défauts, livraison dans les délais — sans se noyer dans les métriques inutiles."
-publishDate: "2025-08-25"
+publishDate: "2026-05-27"
 type: article
 domain: gestion-projet
 image: "/images/themes/management.webp"

@@ -1,7 +1,7 @@
 ---
 title: "Cartographier et développer les compétences : la skills matrix en pratique"
 description: "Comment identifier les compétences critiques concentrées sur une seule personne, construire une skills matrix utile et mettre en place des plans de succession avant qu'il soit trop tard."
-publishDate: "2025-09-15"
+publishDate: "2025-04-08"
 type: article
 domain: gestion-talents
 image: "/images/themes/management.webp"

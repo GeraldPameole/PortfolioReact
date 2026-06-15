@@ -1,7 +1,7 @@
 ---
 title: "Communication professionnelle : les 4 registres qui font la différence"
 description: "Assertif, passif, agressif ou manipulateur — comprendre ses propres registres de communication change la qualité des échanges professionnels. Avec les messages difficiles à délivrer en pratique."
-publishDate: "2025-04-14"
+publishDate: "2025-11-26"
 type: article
 domain: formation
 image: "/images/themes/formation-carriere.webp"

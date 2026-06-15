@@ -1,8 +1,7 @@
 ---
 title: "JavaScript moderne en pratique : les fonctionnalités qui changent vraiment le code"
 description: "Optional chaining, nullish coalescing, structuredClone, Array.at() — les fonctionnalités ES2022+ qui simplifient l'écriture au quotidien, et les patterns à éviter."
-publishDate: "2025-03-10"
-updatedDate: "2026-06-01"
+publishDate: "2026-07-20"
 type: article
 domain: developpement-web
 image: "/images/themes/dev-web.webp"

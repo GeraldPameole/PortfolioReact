@@ -1,7 +1,7 @@
 ---
 title: "React Performance en 2026 : ce que le Compiler change"
 description: "React 19 et le Compiler ont rendu la moitié des conseils perf des années 2022-2024 obsolètes. Voici ce qu'il faut vraiment optimiser, dans quel ordre, et ce qui n'a plus aucun sens d'écrire à la main."
-publishDate: "2026-05-31"
+publishDate: "2026-09-21"
 type: article
 domain: developpement-web
 image: "/images/themes/dev-web.webp"

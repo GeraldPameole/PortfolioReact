@@ -1,7 +1,7 @@
 ---
 title: "Systèmes de classification par couleur : sémantique, cohérence et accessibilité"
 description: "Comment construire une palette de couleurs professionnelle pour les interfaces, éviter les systèmes trop complexes, et respecter les critères WCAG sans sacrifier le design."
-publishDate: "2026-04-27"
+publishDate: "2026-06-24"
 type: article
 domain: outils-techniques
 image: "/images/themes/dev-web.webp"

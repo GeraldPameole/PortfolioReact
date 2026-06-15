@@ -1,7 +1,7 @@
 ---
 title: "JavaScript en 2026 : ce qui a vraiment percé et ce qu'on survend"
 description: "TypeScript 5.8, Node 22, Bun, Vite 6, React 19 + Compiler, Astro 5, Svelte 5 runes — bilan honnête des patterns qui ont changé le quotidien en 2026 et des tendances toujours sur-vendues."
-publishDate: "2025-02-17"
+publishDate: "2026-05-18"
 type: article
 domain: developpement-web
 image: "/images/themes/dev-web.webp"

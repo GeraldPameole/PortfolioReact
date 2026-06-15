@@ -1,7 +1,7 @@
 ---
 title: "Leadership et performance : les 5 leviers qui font vraiment la différence"
 description: "Retour d'expérience direct sur le management d'une équipe commerciale de 12 personnes chez SFR — ce qui fonctionne sur le terrain, loin des théories."
-publishDate: "2026-02-16"
+publishDate: "2025-12-31"
 type: article
 domain: leadership-management
 image: "/images/themes/management.webp"

@@ -22,7 +22,7 @@ keywords:
   - direction
   - moderne
   - "2025"
-publishDate: "2026-02-09"
+publishDate: "2025-08-06"
 lastUpdated: "2025-11-14"
 relatedArticles: []
 ---

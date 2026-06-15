@@ -1,7 +1,7 @@
 ---
 title: "Manager une équipe hybride : ce qui change vraiment"
 description: "Quand une partie de l'équipe est à distance, les signaux de management habituels disparaissent. Ce que j'ai appris sur la confiance, la communication asynchrone et la détection du désengagement à distance."
-publishDate: "2026-03-02"
+publishDate: "2026-11-11"
 type: article
 domain: leadership-management
 image: "/images/themes/management.webp"

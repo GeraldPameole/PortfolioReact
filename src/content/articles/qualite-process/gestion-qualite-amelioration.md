@@ -1,7 +1,7 @@
 ---
 title: "Amélioration continue : la méthode Kaizen en pratique"
 description: "Appliquer l'amélioration continue — la méthode Kaizen mise en pratique dans l'entreprise"
-publishDate: "2026-08-03"
+publishDate: "2025-04-30"
 type: article
 domain: qualite-process
 image: "/images/themes/management.webp"

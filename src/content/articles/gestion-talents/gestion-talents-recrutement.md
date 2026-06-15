@@ -1,7 +1,7 @@
 ---
 title: "Recruter les bons profils : éviter les pièges classiques du recrutement"
 description: "Les erreurs qui sabotent un recrutement — recruter trop vite, cloner ses équipes, céder aux biais — et comment structurer entretiens et onboarding pour recruter juste dès le premier coup."
-publishDate: "2025-11-03"
+publishDate: "2025-11-05"
 type: article
 domain: gestion-talents
 image: "/images/themes/management.webp"

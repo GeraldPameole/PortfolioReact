@@ -1,7 +1,7 @@
 ---
 title: "Gérer les Risques Projet Sans Bureaucratie : Ce qui Marche Vraiment"
 description: "Comment identifier les vrais risques projet, tenir un registre opérationnel, appliquer les 4 stratégies de réponse, et faire des revues mensuelles utiles — sans paperasse inutile."
-publishDate: "2025-09-08"
+publishDate: "2026-12-02"
 type: article
 domain: gestion-projet
 image: "/images/themes/management.webp"

@@ -1,7 +1,7 @@
 ---
 title: "Mentorat en entreprise : comment structurer un programme qui fonctionne vraiment"
 description: "Fréquence, format, durée des séances, erreurs classiques du mentor, mesure de l'impact — tout ce qu'il faut pour construire un programme de mentorat solide plutôt qu'une relation informelle qui s'étiole."
-publishDate: "2025-07-07"
+publishDate: "2025-12-03"
 type: article
 domain: formation
 image: "/images/themes/formation-carriere.webp"

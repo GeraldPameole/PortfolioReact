@@ -1,8 +1,7 @@
 ---
 title: "Réseaux sociaux pour les entreprises : choisir la bonne plateforme selon votre objectif"
 description: "LinkedIn, Instagram, TikTok, YouTube — quelle plateforme pour quel objectif et quel secteur, comment fonctionnent vraiment les algorithmes, et ce qui crée de l'engagement durable."
-publishDate: "2026-04-13"
-updatedDate: "2026-06-01"
+publishDate: "2026-11-18"
 type: article
 domain: marketing-communication
 image: "/images/themes/marketing.webp"

@@ -1,7 +1,7 @@
 ---
 title: "Stratégie de contenu B2B : pourquoi le contenu générique ne convertit pas"
 description: "En B2B, publier régulièrement ne suffit pas. Ce qui convertit, c'est le contenu aligné sur le moment où se trouve l'acheteur. Content mapping, formats par objectif, et les erreurs classiques qui expliquent pourquoi tant de blogs d'entreprises ne génèrent rien."
-publishDate: "2026-03-16"
+publishDate: "2025-07-30"
 type: article
 domain: marketing-communication
 image: "/images/themes/marketing.webp"

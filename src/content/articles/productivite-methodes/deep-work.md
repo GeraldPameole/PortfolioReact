@@ -1,7 +1,7 @@
 ---
 title: "Deep Work : retrouver la concentration profonde dans un monde fragmenté"
 description: "Comment appliquer concrètement les principes de Cal Newport en open space et dans une culture dominée par les réunions — ce qui fonctionne vraiment en contexte professionnel français."
-publishDate: "2026-05-18"
+publishDate: "2025-05-27"
 type: article
 domain: productivite-methodes
 image: "/images/themes/productivite.webp"

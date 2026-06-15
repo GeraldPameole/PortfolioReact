@@ -1,7 +1,7 @@
 ---
 title: "Planifier son travail : de la liste de tâches au plan d'action qui tient"
 description: "Comment passer d'une liste chaotique à un plan d'action hebdomadaire concret — weekly review en 20 minutes, synchronisation agenda/objectifs, gestion de l'imprévu."
-publishDate: "2026-05-11"
+publishDate: "2025-04-22"
 type: article
 domain: productivite-methodes
 image: "/images/themes/productivite.webp"

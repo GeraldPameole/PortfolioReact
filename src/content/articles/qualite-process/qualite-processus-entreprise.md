@@ -1,7 +1,7 @@
 ---
 title: "Qualité des processus sans bureaucratie : définir, mesurer, améliorer"
 description: "Comment piloter la qualité des processus avec des KPIs utiles (cycle time, taux d'erreur, CSAT) sans alourdir les équipes — méthode terrain issue de la gestion qualité chez SFR."
-publishDate: "2026-09-14"
+publishDate: "2026-11-25"
 type: article
 domain: qualite-process
 image: "/images/themes/management.webp"

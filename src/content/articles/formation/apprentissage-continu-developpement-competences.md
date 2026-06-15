@@ -1,7 +1,7 @@
 ---
 title: "Pourquoi la formation ponctuelle ne suffit plus — créer une culture apprenante"
 description: "L'apprentissage continu en entreprise ne se décrète pas par une journée de formation annuelle. Voici comment construire une culture qui apprend au quotidien, avec le modèle 70-20-10 revu par la pratique."
-publishDate: "2025-03-24"
+publishDate: "2025-04-02"
 type: article
 domain: formation
 image: "/images/themes/formation-carriere.webp"

@@ -1,7 +1,7 @@
 ---
 title: "Performance d'équipe : piloter sans micro-manager"
 description: "Comment diagnostiquer le niveau réel d'une équipe et adapter son style de management — sans surveillance excessive ni lâcher-prise irresponsable."
-publishDate: "2025-07-28"
+publishDate: "2025-07-02"
 type: article
 domain: gestion-projet
 image: "/images/themes/management.webp"

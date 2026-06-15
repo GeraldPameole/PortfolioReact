@@ -1,7 +1,7 @@
 ---
 title: "Évaluation de la performance : outils et postures pour un dialogue utile"
 description: "Comment mener des rétrospectives qui servent vraiment, conduire des entretiens individuels honnêtes, et utiliser les données sans déshumaniser l'équipe."
-publishDate: "2025-08-04"
+publishDate: "2025-09-24"
 type: article
 domain: gestion-projet
 image: "/images/themes/management.webp"

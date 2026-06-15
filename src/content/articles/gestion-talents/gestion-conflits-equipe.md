@@ -1,7 +1,7 @@
 ---
 title: "Gérer les conflits d'équipe : intervenir sans prendre parti"
 description: "Les 4 types de conflits d'équipe, le moment où il faut intervenir, comment pratiquer une médiation efficace sans perdre sa neutralité, et pourquoi la clarté des rôles prévient la majorité des tensions."
-publishDate: "2025-09-22"
+publishDate: "2025-05-06"
 type: article
 domain: gestion-talents
 image: "/images/themes/management.webp"

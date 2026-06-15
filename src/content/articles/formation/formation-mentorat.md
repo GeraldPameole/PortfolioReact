@@ -1,7 +1,7 @@
 ---
 title: "Mentorat en entreprise — structurer une relation qui produit des résultats"
 description: "Le mentorat n'est pas du coaching, et ce n'est pas du management. Comprendre ces distinctions, structurer la relation et éviter les pièges classiques fait toute la différence entre une relation qui transforme et une qui s'essouffle en trois mois."
-publishDate: "2025-05-26"
+publishDate: "2026-10-01"
 type: article
 domain: formation
 image: "/images/themes/formation-carriere.webp"

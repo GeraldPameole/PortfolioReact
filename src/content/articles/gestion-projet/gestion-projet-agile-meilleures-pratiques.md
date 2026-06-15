@@ -1,7 +1,7 @@
 ---
 title: "Agile en Pratique : Sprint Planning, Backlog et Rétrospectives qui Servent Vraiment"
 description: "Les meilleures pratiques Agile terrain — sprint planning efficace en 2h, backlog refinement utile, rétrospective en 45 min, et indicateurs qui disent quelque chose."
-publishDate: "2025-08-11"
+publishDate: "2025-12-17"
 type: article
 domain: gestion-projet
 image: "/images/themes/management.webp"

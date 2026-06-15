@@ -1,7 +1,7 @@
 ---
 title: "La loi de Parkinson et le timeboxing : reprendre le contrôle de son temps"
 description: "Comprendre la loi de Parkinson pour arrêter de dilater ses tâches, passer du to-do list infini au timeboxing efficace, et grouper ses activités pour gagner en profondeur."
-publishDate: "2026-06-15"
+publishDate: "2025-09-16"
 type: article
 domain: productivite-methodes
 image: "/images/themes/productivite.webp"

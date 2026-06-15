@@ -1,7 +1,7 @@
 ---
 title: "Former ses équipes commerciales — ce qui marche vraiment"
 description: "Jeux de rôles structurés, double appel, feedback immédiat après vente, remontée des objections terrain : ce que j'ai appris en formant des équipes commerciales en télécommunications."
-publishDate: "2025-05-12"
+publishDate: "2026-09-16"
 type: article
 domain: formation
 image: "/images/themes/formation-carriere.webp"

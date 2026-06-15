@@ -1,7 +1,7 @@
 ---
 title: "La méthode GTD expliquée : vider son esprit pour gagner en clarté"
 description: "GTD adapté aux managers et chefs de projet — les 5 étapes, pourquoi le système de confiance compte plus que la méthode, et les erreurs classiques à éviter."
-publishDate: "2026-07-06"
+publishDate: "2025-12-12"
 type: article
 domain: productivite-methodes
 image: "/images/themes/productivite.webp"

@@ -1,7 +1,7 @@
 ---
 title: "Développer sa créativité professionnelle — ce n'est pas un don"
 description: "La créativité en contexte professionnel n'est pas réservée aux artistes : techniques de génération d'idées, contraintes créatives, et environnements qui stimulent ou étouffent l'invention."
-publishDate: "2025-04-21"
+publishDate: "2026-02-04"
 type: article
 domain: formation
 image: "/images/themes/formation-carriere.webp"

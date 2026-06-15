@@ -1,7 +1,7 @@
 ---
 title: "Scrum, Kanban, SAFe : choisir la bonne méthode selon le contexte"
 description: "Comparaison pratique de Scrum, Kanban et SAFe — quand utiliser chacun, les hybrides qui fonctionnent, et les anti-patterns observés sur des projets télécom réels."
-publishDate: "2025-07-21"
+publishDate: "2025-04-16"
 type: article
 domain: gestion-projet
 image: "/images/themes/management.webp"

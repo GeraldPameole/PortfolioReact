@@ -1,7 +1,7 @@
 ---
 title: "Frameworks JavaScript en 2026 : adopter ou attendre"
 description: "React 19 + Compiler, Next.js 15, Astro 5, Svelte 5, SolidStart, TanStack Start, Nuxt 4, Qwik, Remix / React Router v7 — adoption réelle, méthode de choix objective et ce que vous pouvez ignorer."
-publishDate: "2025-01-27"
+publishDate: "2026-03-16"
 type: article
 domain: developpement-web
 image: "/images/themes/dev-web.webp"

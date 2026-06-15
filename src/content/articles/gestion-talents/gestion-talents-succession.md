@@ -1,7 +1,7 @@
 ---
 title: "Planification de la succession — préparer les postes critiques avant que la crise arrive"
 description: "Comment identifier les postes réellement critiques, évaluer les successeurs potentiels, et faire la différence entre succession d'urgence et succession planifiée."
-publishDate: "2025-11-24"
+publishDate: "2026-02-10"
 type: article
 domain: gestion-talents
 image: "/images/themes/management.webp"

@@ -1,7 +1,7 @@
 ---
 title: "Se former au leadership : pourquoi la salle de classe ne suffit pas"
 description: "Les formations théoriques en leadership n'ont qu'un impact limité. Ce qui forge vraiment un leader, c'est l'expérience terrain, les mentors et la confrontation aux situations difficiles — le modèle 70-20-10 expliqué et appliqué."
-publishDate: "2026-02-02"
+publishDate: "2025-05-21"
 type: article
 domain: leadership-management
 image: "/images/themes/management.webp"

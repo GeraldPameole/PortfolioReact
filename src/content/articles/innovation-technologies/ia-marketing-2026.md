@@ -1,7 +1,7 @@
 ---
 title: "IA et marketing en 2026 : AEO, contenu génératif et nouveaux KPIs"
 description: "Effondrement du SEO informationnel, Answer Engine Optimization, attribution cassée par les LLMs : ce qui marche, ce qui pénalise, et comment se positionner sur des projets marketing en 2026."
-publishDate: "2026-02-18"
+publishDate: "2026-06-03"
 type: article
 domain: innovation-technologies
 image: "/images/themes/ia.webp"

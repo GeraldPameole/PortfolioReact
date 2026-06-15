@@ -1,7 +1,7 @@
 ---
 title: "Acquisition organique ou payante : comment choisir et comment mesurer"
 description: "SEO, SEM, social, email, referral — quand investir dans chaque canal, comment attribuer vos conversions, et pourquoi le last-click vous ment depuis le début."
-publishDate: "2026-03-23"
+publishDate: "2025-10-22"
 type: article
 domain: marketing-communication
 image: "/images/themes/marketing.webp"

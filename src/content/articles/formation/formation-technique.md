@@ -1,7 +1,7 @@
 ---
 title: "Formation technique en entreprise — monter en compétences sans être développeur"
 description: "Comment comprendre ce que fait son équipe tech, quelles formations ont un vrai retour sur investissement, et comment ne pas rester bloqué par son propre niveau technique."
-publishDate: "2025-06-23"
+publishDate: "2026-03-11"
 type: article
 domain: formation
 image: "/images/themes/formation-carriere.webp"

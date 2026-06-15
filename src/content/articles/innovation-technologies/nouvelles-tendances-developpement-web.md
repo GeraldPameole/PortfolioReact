@@ -1,7 +1,7 @@
 ---
 title: "Tendances du développement web 2025-2026 : ce qui est adopté, ce qui est expérimental"
 description: "Edge computing, AI-assisted coding, Server Components — un regard honnête sur ce qui change vraiment les compétences des développeurs web en 2025-2026."
-publishDate: "2026-01-26"
+publishDate: "2025-08-20"
 type: article
 domain: innovation-technologies
 image: "/images/themes/ia.webp"

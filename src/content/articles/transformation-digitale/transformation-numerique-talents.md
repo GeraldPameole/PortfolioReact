@@ -1,7 +1,7 @@
 ---
 title: "Transformation numérique et talents : pourquoi les meilleurs partent — et comment les garder"
 description: "Comment les organisations en transformation digitale perdent leurs profils clés, fidéliser les experts tech, et faire évoluer les profils non-digitaux sans les laisser sur le bord de la route."
-publishDate: "2026-10-26"
+publishDate: "2026-10-28"
 type: article
 domain: transformation-digitale
 image: "/images/themes/ia.webp"

@@ -1,7 +1,7 @@
 ---
 title: "Productivité professionnelle en 2026 : ce qui a vraiment changé"
 description: "Ce que le travail hybride a changé dans les pratiques de productivité, comment construire un système de gestion de connaissances personnelles, et pourquoi les notifications sont le premier levier à désactiver."
-publishDate: "2026-07-27"
+publishDate: "2026-03-24"
 updatedDate: "2026-06-01"
 type: article
 domain: productivite-methodes

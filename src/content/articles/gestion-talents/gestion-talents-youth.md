@@ -1,7 +1,7 @@
 ---
 title: "Manager les Jeunes Générations : Ce qui Est Vrai, Ce qui Est un Mythe"
 description: "Comment adapter son management aux Gen Z et Millennials sans abdiquer les standards — feedback fréquent, sens, flexibilité, et séparation des faits des idées reçues."
-publishDate: "2025-12-22"
+publishDate: "2026-06-09"
 type: article
 domain: gestion-talents
 image: "/images/themes/management.webp"

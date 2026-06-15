@@ -1,7 +1,7 @@
 ---
 title: "Email marketing et personnalisation : ce qui change vraiment les résultats"
 description: "Segmentation comportementale, automation utile et les trois métriques qui comptent réellement pour évaluer une campagne email B2B ou B2C."
-publishDate: "2026-03-09"
+publishDate: "2025-05-14"
 type: article
 domain: marketing-communication
 image: "/images/themes/marketing.webp"

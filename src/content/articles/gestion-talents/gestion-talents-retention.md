@@ -1,7 +1,7 @@
 ---
 title: "Retenir les talents qui comptent — ce qui pousse vraiment à partir"
 description: "Les vraies raisons de départ ne sont pas salariales. Comment identifier les signaux d'alerte, mener des entretiens de maintien, et savoir quand une contre-offre ne sert à rien."
-publishDate: "2025-11-17"
+publishDate: "2026-01-05"
 type: article
 domain: gestion-talents
 image: "/images/themes/management.webp"

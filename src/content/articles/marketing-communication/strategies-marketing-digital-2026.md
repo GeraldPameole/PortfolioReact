@@ -1,7 +1,7 @@
 ---
 title: "Marketing digital en 2026 : AEO, agents IA, et ce qui résiste vraiment"
 description: "Answer Engine Optimization, agents IA dans les workflows marketing, effondrement du SEO informationnel sous Google AI Overviews — ce qui a structurellement changé en 2024-2026 et les fondamentaux qui tiennent encore."
-publishDate: "2026-03-30"
+publishDate: "2026-01-21"
 updatedDate: "2026-06-02"
 type: article
 domain: marketing-communication

@@ -1,7 +1,7 @@
 ---
 title: "Bien-être au Travail Sans Bullshit : Ce qui Compte Vraiment"
 description: "Bien-être structurel contre bien-être cosmétique, indicateurs réels à suivre, et rôle concret du manager direct — sans baby-foot ni programme de yoga obligatoire."
-publishDate: "2025-12-29"
+publishDate: "2026-07-07"
 type: article
 domain: gestion-talents
 image: "/images/themes/management.webp"

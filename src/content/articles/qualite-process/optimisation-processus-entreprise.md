@@ -1,7 +1,7 @@
 ---
 title: "Optimiser les processus d'entreprise : cartographier avant d'améliorer"
 description: "Comment optimiser les processus avec le Value Stream Mapping simplifié, identifier les gaspillages MUDA et impliquer les équipes terrain — sans jargon inutile."
-publishDate: "2026-09-07"
+publishDate: "2026-08-12"
 type: article
 domain: qualite-process
 image: "/images/themes/management.webp"
