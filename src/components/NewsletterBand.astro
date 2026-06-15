@@ -169,7 +169,9 @@ const FORM_ACTION = "https://buttondown.com/api/emails/embed-subscribe/Apex_971"
 document.addEventListener('astro:page-load', () => {
   const form = document.getElementById('nl-form') as HTMLFormElement | null;
   const success = document.getElementById('nl-success');
-  if (!form) return;
+  // Idempotence (Agent 2 #11) : evite N handlers cumules apres N navigations.
+  if (!form || form.dataset.bound) return;
+  form.dataset.bound = '1';
 
   form.addEventListener('submit', async (e) => {
     e.preventDefault();

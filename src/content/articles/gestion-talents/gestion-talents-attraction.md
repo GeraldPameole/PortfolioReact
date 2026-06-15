@@ -1,7 +1,7 @@
 ---
 title: "Attirer les bons profils — marque employeur authentique vs marketing RH creux"
 description: "Comment construire une marque employeur qui attire vraiment, choisir les bons canaux de sourcing en 2025, et comprendre ce que les candidats recherchent réellement."
-publishDate: "2025-09-29"
+publishDate: "2025-06-10"
 type: article
 domain: gestion-talents
 image: "/images/themes/management.webp"

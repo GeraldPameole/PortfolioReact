@@ -1,8 +1,7 @@
 ---
 title: "Transformation numérique : commencer par les processus, pas par les outils"
 description: "Comprendre les 5 niveaux de maturité digitale d'une organisation, pourquoi transformer les processus avant de choisir des outils, et comment conduire le changement sans perdre les équipes en chemin."
-publishDate: "2026-10-19"
-updatedDate: "2026-06-01"
+publishDate: "2026-07-01"
 type: article
 domain: transformation-digitale
 image: "/images/themes/ia.webp"

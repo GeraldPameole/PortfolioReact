@@ -1,7 +1,7 @@
 ---
 title: "E-learning : pourquoi la plupart des formations en ligne n'aboutissent pas"
 description: "Les MOOC affichent des taux d'abandon proches de 95%. Ce n'est pas une question de motivation — c'est une question de conception. Ce qui distingue une formation en ligne engageante, et comment le blended learning change la donne."
-publishDate: "2025-04-28"
+publishDate: "2026-05-06"
 type: article
 domain: formation
 image: "/images/themes/formation-carriere.webp"

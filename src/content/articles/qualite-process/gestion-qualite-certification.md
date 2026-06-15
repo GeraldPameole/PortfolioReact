@@ -1,7 +1,7 @@
 ---
 title: "ISO 9001 en pratique : obtenir et maintenir la certification sans s'y perdre"
 description: "Démystifier ISO 9001, préparer un audit de certification efficacement, et maintenir la démarche qualité sans bureaucratie excessive ni relâchement après obtention."
-publishDate: "2026-08-10"
+publishDate: "2025-07-16"
 updatedDate: "2026-06-01"
 type: article
 domain: qualite-process

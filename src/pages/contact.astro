@@ -439,7 +439,9 @@ a.info-val:hover { color: var(--violet-light); }
 document.addEventListener('astro:page-load', () => {
   const form    = document.getElementById('contact-form') as HTMLFormElement | null;
   const success = document.getElementById('form-success');
-  if (!form) return;
+  // Idempotence (Agent 2 #11) : evite N handlers cumules apres N navigations.
+  if (!form || form.dataset.bound) return;
+  form.dataset.bound = '1';
 
   form.addEventListener('submit', async (e) => {
     e.preventDefault();

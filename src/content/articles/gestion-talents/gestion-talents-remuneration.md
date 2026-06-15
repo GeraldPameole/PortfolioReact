@@ -1,7 +1,7 @@
 ---
 title: "Rémunération et motivation — pourquoi l'argent seul ne suffit pas au-delà d'un certain seuil"
 description: "Comprendre jusqu'où la rémunération motive vraiment, construire un package complet et attractif, structurer variable et equity de façon cohérente, et naviguer la transparence salariale."
-publishDate: "2025-11-10"
+publishDate: "2025-12-05"
 type: article
 domain: gestion-talents
 image: "/images/themes/management.webp"

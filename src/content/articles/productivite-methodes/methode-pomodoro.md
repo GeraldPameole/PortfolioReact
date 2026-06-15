@@ -1,7 +1,7 @@
 ---
 title: "La technique Pomodoro : un outil de concentration, pas une minuterie"
 description: "Comment utiliser le Pomodoro correctement en contexte professionnel, adapter les cycles selon le type de tâche, et le préserver quand les réunions envahissent l'agenda."
-publishDate: "2026-07-13"
+publishDate: "2026-01-12"
 type: article
 domain: productivite-methodes
 image: "/images/themes/productivite.webp"

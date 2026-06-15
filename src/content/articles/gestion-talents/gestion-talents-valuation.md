@@ -1,7 +1,7 @@
 ---
 title: "Valoriser ses collaborateurs : reconnaissance, progression et autonomie"
 description: "La reconnaissance non-monétaire qui retient vraiment les talents, la progression de carrière visible, et pourquoi l'autonomie est le levier de valorisation le plus sous-estimé."
-publishDate: "2025-12-01"
+publishDate: "2026-03-10"
 type: article
 domain: gestion-talents
 image: "/images/themes/management.webp"

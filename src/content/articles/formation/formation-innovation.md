@@ -1,7 +1,7 @@
 ---
 title: "Former à l'innovation en entreprise — sans les illusions"
 description: "Créativité et innovation ne sont pas la même chose. Ce que le design thinking fait vraiment en pratique, et comment l'intrapreneuriat peut fonctionner sans détruire ce qui marche."
-publishDate: "2025-05-19"
+publishDate: "2026-11-04"
 type: article
 domain: formation
 image: "/images/themes/formation-carriere.webp"

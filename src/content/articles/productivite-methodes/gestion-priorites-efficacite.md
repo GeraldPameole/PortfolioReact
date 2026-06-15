@@ -1,7 +1,7 @@
 ---
 title: "Prioriser efficacement : sortir du piège du tout-urgent"
 description: "Comprendre pourquoi tout-est-prioritaire est un poison pour la productivité, appliquer une méthode de priorisation au quotidien, et revoir ses priorités chaque semaine avec discipline."
-publishDate: "2026-05-25"
+publishDate: "2025-06-24"
 updatedDate: "2026-06-01"
 type: article
 domain: productivite-methodes

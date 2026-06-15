@@ -1,7 +1,7 @@
 ---
 title: "Gestion des risques projet : anticiper pour ne pas subir"
 description: "Comment construire une gestion des risques qui fonctionne sur le terrain — pas dans les slides de lancement — à partir de projets d'infrastructure réels."
-publishDate: "2025-09-01"
+publishDate: "2026-08-26"
 type: article
 domain: gestion-projet
 image: "/images/themes/management.webp"

@@ -5,7 +5,7 @@ import BlogCard from '../components/BlogCard.astro';
 import CallToAction from '../components/CallToAction.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import BackToTop from '../components/BackToTop.astro';
-import { mapToStandardTheme, standardThemes, type ThemeKey } from '../utils/themeUtils';
+import { standardThemes, type ThemeKey } from '../utils/themeUtils';
 
 // Récupération de tous les articles
 const articles = await getCollection('articles');
@@ -65,72 +65,6 @@ const pageTitle = currentTheme
 const pageDescription = currentTheme
   ? `Découvrez mes articles sur le thème ${standardThemes[currentTheme as ThemeKey]?.label || currentTheme} et approfondissez vos connaissances dans ce domaine.`
   : "Explorez mes articles classés par thèmes pour trouver facilement le contenu qui vous intéresse.";
-
-// Illustrations pour les thèmes - association de chaque thème à une icône
-const themeIcons: Record<string, string> = {
-  "developpement": "fas fa-code",
-  "technologie": "fas fa-microchip",
-  "carriere": "fas fa-briefcase",
-  "intelligence-artificielle": "fas fa-brain",
-  "architecture": "fas fa-sitemap",
-  "devops": "fas fa-server",
-  "frontend": "fas fa-laptop-code",
-  "backend": "fas fa-database",
-  "mobile": "fas fa-mobile-alt",
-  "design": "fas fa-palette",
-  "performance": "fas fa-tachometer-alt",
-  "securite": "fas fa-shield-alt",
-  "autre": "fas fa-question-circle"
-};
-
-// Définition des labels pour les thèmes
-const themeLabels: Record<string, string> = {
-  "developpement": "Développement",
-  "technologie": "Technologie",
-  "carriere": "Carrière & Formation",
-  "intelligence-artificielle": "Intelligence Artificielle",
-  "architecture": "Architecture Logicielle",
-  "devops": "DevOps & Cloud",
-  "frontend": "Frontend",
-  "backend": "Backend",
-  "mobile": "Mobile",
-  "design": "Design & UX",
-  "performance": "Performance", 
-  "securite": "Sécurité",
-  "autre": "Autre"
-};
-
-// Couleurs pour les thèmes
-const themeColors: Record<string, { gradient: string, text: string, bg: string }> = {
-  "developpement": { gradient: "from-blue-500 to-blue-700", text: "text-blue-600", bg: "bg-blue-100 dark:bg-blue-900/30" },
-  "technologie": { gradient: "from-indigo-500 to-indigo-700", text: "text-indigo-600", bg: "bg-indigo-100 dark:bg-indigo-900/30" },
-  "carriere": { gradient: "from-purple-500 to-purple-700", text: "text-purple-600", bg: "bg-purple-100 dark:bg-purple-900/30" },
-  "intelligence-artificielle": { gradient: "from-emerald-500 to-emerald-700", text: "text-emerald-600", bg: "bg-emerald-100 dark:bg-emerald-900/30" },
-  "architecture": { gradient: "from-amber-500 to-amber-700", text: "text-amber-600", bg: "bg-amber-100 dark:bg-amber-900/30" },
-  "devops": { gradient: "from-green-500 to-green-700", text: "text-green-600", bg: "bg-green-100 dark:bg-green-900/30" },
-  "frontend": { gradient: "from-pink-500 to-pink-700", text: "text-pink-600", bg: "bg-pink-100 dark:bg-pink-900/30" },
-  "backend": { gradient: "from-sky-500 to-sky-700", text: "text-sky-600", bg: "bg-sky-100 dark:bg-sky-900/30" },
-  "mobile": { gradient: "from-orange-500 to-orange-700", text: "text-orange-600", bg: "bg-orange-100 dark:bg-orange-900/30" },
-  "design": { gradient: "from-rose-500 to-rose-700", text: "text-rose-600", bg: "bg-rose-100 dark:bg-rose-900/30" },
-  "performance": { gradient: "from-cyan-500 to-cyan-700", text: "text-cyan-600", bg: "bg-cyan-100 dark:bg-cyan-900/30" },
-  "securite": { gradient: "from-red-500 to-red-700", text: "text-red-600", bg: "bg-red-100 dark:bg-red-900/30" },
-  "autre": { gradient: "from-gray-500 to-gray-700", text: "text-[#111827]", bg: "bg-gray-100 dark:bg-gray-900/30" }
-};
-
-// Statistiques
-const totalArticles = sortedArticles.length;
-const totalThemes = Object.keys(articlesByTheme).length;
-const mostPopularTheme = Object.entries(articlesByTheme)
-  .sort((a, b) => b[1].length - a[1].length)[0];
-
-const stats = [
-  { value: totalArticles, label: "Articles publiés", icon: "fas fa-newspaper" },
-  { value: totalThemes, label: "Thèmes différents", icon: "fas fa-tags" },
-  { value: mostPopularTheme ? mostPopularTheme[1].length : 0, 
-    label: mostPopularTheme ? `Articles sur ${themeLabels[mostPopularTheme[0]]}` : "Articles par thème", 
-    icon: "fas fa-star" },
-  { value: Math.round(totalArticles / totalThemes), label: "Moyenne par thème", icon: "fas fa-calculator" }
-];
 ---
 
 <BaseLayout 

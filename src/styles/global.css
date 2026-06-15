@@ -143,17 +143,16 @@ li { margin-bottom: 0.4rem; color: var(--text-2); }
 hr { border: none; border-top: 1px solid var(--border); margin: 2.5rem 0; }
 
 /* ── Gradient Text ────────────────────────────────────────────────────────── */
+/* FIX : remplace 'background-clip: text + text-fill-color: transparent'
+   par une couleur unie. Le clip text + transparent souffre d'un bug GPU
+   sur Chrome Mac M1/M2 qui produit des artefacts de superposition (triple
+   H1 'Six metiers, une signature' capture utilisateur 2026-06-12).
+   Cout : on perd l'effet degradé sur le texte. Gain : zero artefact GPU. */
 .gradient-text {
-  background: linear-gradient(135deg, var(--violet) 0%, var(--cyan) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--violet-light);
 }
 .gradient-text-warm {
-  background: linear-gradient(135deg, var(--orange) 0%, var(--pink) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--orange);
 }
 
 /* ── Glass Card ───────────────────────────────────────────────────────────── */
@@ -272,18 +271,28 @@ hr { border: none; border-top: 1px solid var(--border); margin: 2.5rem 0; }
 .grid-auto { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5rem; }
 
 /* ── Orbs ─────────────────────────────────────────────────────────────────── */
-.orb { position: absolute; border-radius: 50%; filter: blur(80px); pointer-events: none; z-index: 0; }
+/* (Agent 2 #7) blur(80px) -> blur(40px) : divise par 2 le buffer offscreen
+   à interpoler sur compositor. Quasi indistinguable visuellement.
+   + désactivation si prefers-reduced-motion OU petit écran. */
+.orb { position: absolute; border-radius: 50%; filter: blur(40px); pointer-events: none; z-index: 0; }
 .orb-violet { background: radial-gradient(circle, rgba(145,94,255,0.45), transparent 70%); }
 .orb-cyan   { background: radial-gradient(circle, rgba(0,207,253,0.3),  transparent 70%); }
 .orb-orange { background: radial-gradient(circle, rgba(255,123,84,0.25), transparent 70%); }
+@media (prefers-reduced-motion: reduce) { .orb { display: none; } }
+@media (max-width: 640px) { .orb { display: none; } }
 
 /* ── Scroll Reveal ────────────────────────────────────────────────────────── */
-.reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.65s var(--ease-out), transform 0.65s var(--ease-out); }
-.reveal.visible { opacity: 1; transform: translateY(0); }
-.reveal-delay-1 { transition-delay: 0.1s; }
-.reveal-delay-2 { transition-delay: 0.2s; }
-.reveal-delay-3 { transition-delay: 0.3s; }
-.reveal-delay-4 { transition-delay: 0.4s; }
+/* DESACTIVE : la transition opacity + transform translateY(28px) avec delays
+   cascades (0.1s, 0.2s, 0.3s, 0.4s) creait un effet de superposition visuel
+   sur certains rendus (artefacts GPU Mac Retina, triple H1 "Six metiers"
+   capture utilisateur 2026-06-12 09:33). Sans cette transition, les elements
+   sont immediatement visibles - meme rendu fonctionnel, zero risque visuel. */
+.reveal { opacity: 1; transform: none; }
+.reveal.visible { opacity: 1; transform: none; }
+.reveal-delay-1, .reveal-delay-2, .reveal-delay-3, .reveal-delay-4 { transition-delay: 0s; }
+
+/* Si on veut re-activer l'effet a l'avenir, le sortir d'un `@media (hover:hover)
+   and (prefers-reduced-motion: no-preference)` et tester sur Mac Retina d'abord. */
 
 /* ── Scrollbar ────────────────────────────────────────────────────────────── */
 ::-webkit-scrollbar { width: 5px; }

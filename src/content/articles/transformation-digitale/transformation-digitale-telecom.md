@@ -1,7 +1,7 @@
 ---
 title: "Transformation digitale dans les télécoms : enjeux et leviers concrets"
 description: "Comment j'ai piloté la digitalisation des processus et l'adoption des outils de supervision réseau chez KEOS TELECOM — retour d'expérience terrain sur ce qui fonctionne vraiment."
-publishDate: "2026-10-12"
+publishDate: "2025-11-19"
 type: article
 domain: transformation-digitale
 image: "/images/themes/ia.webp"

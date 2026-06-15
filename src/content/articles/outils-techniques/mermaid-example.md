@@ -1,7 +1,7 @@
 ---
 title: "Diagrammes Mermaid : comment documenter efficacement avec du texte"
 description: "Intégration dans GitHub, Notion et Confluence, types de diagrammes utiles en pratique, erreurs classiques et quand préférer Mermaid à Draw.io."
-publishDate: "2026-04-20"
+publishDate: "2025-10-29"
 type: article
 domain: outils-techniques
 image: "/images/themes/dev-web.webp"

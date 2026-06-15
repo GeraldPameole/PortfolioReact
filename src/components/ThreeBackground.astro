@@ -186,7 +186,9 @@ function blendedColor(i) {
 // Rendus en UN SEUL THREE.Points (au lieu de 90 meshes = 90 draw calls).
 // Chaque nœud reste un objet léger { position, ... } : les lignes de connexion
 // (buildLines) et le drift par frame lisent nodes[i].position.
-const NODE_COUNT = isMobile ? 55 : 90;
+// NODE_COUNT réduit (Agent 2 #8) : buildLines() est O(N²) — passer de 90 à 55
+// divise par ~2.7 le coût par appel (1485 paires vs 4005).
+const NODE_COUNT = isMobile ? 35 : 55;
 const SPREAD = 18;
 const nodes  = [];
 const nodePositions = new Float32Array(NODE_COUNT * 3);
@@ -280,7 +282,9 @@ await yieldToMain();
 // ── Fond étoilé profond (champ stellaire dense, multi-couleurs) ───────────────
 // 3000 étoiles distribuées sur une sphère, palette riche évoquant les vraies
 // teintes du ciel profond (blanc, bleu, jaune, orange, rougeâtre).
-const STARFIELD_COUNT  = isMobile ? 900 : 1800;
+// STARFIELD_COUNT réduit (Agent 2 #8) : 1800 → 900 (desktop), 900 → 500 (mobile).
+// 900 étoiles restent visuellement denses, sans saturer le GPU/compositor.
+const STARFIELD_COUNT  = isMobile ? 500 : 900;
 const STARFIELD_RADIUS = 90;
 const starPositions = new Float32Array(STARFIELD_COUNT * 3);
 const starColors    = new Float32Array(STARFIELD_COUNT * 3);
@@ -604,6 +608,16 @@ function onResize() {
   rebuildTimer = setTimeout(buildLines, 400);
 }
 window.addEventListener('resize', onResize, { passive: true });
+// ResizeObserver complémentaire (Agent 2 #9) : capte les changements de
+// taille du canvas causés par le layout (chargement d'images, polices,
+// View Transitions) — pas seulement le redimensionnement de la fenêtre.
+// Sans ça, canvasW/H devenaient obsolètes après le 1er paint et la
+// projection 3D des pills tombait sur de mauvaises coordonnées →
+// pills cosmiques visuellement superposées.
+if ('ResizeObserver' in window) {
+  const ro = new ResizeObserver(() => onResize());
+  ro.observe(canvas);
+}
 
 await yieldToMain();
 // ── Constellations en arrière-plan ────────────────────────────────────────────
@@ -1175,8 +1189,12 @@ function animate() {
   nodeGeo.attributes.position.needsUpdate = true;
   nodeGeo.attributes.color.needsUpdate = true;
 
-  // Rebuild lines périodiquement
-  if (frameCount % 6 === 0) buildLines();
+  // Rebuild lines périodiquement (Agent 2 #3) — fréquence divisée par 5 :
+  // avant : tous les 6 frames (= 5×/s à 30fps) = long-tasks rouges récurrents
+  //         dans DevTools Performance, GC pressure permanente.
+  // après : tous les 30 frames (= 1×/s) — divise par 5 le coût GC et
+  //         supprime les pics réguliers de long-tasks.
+  if (frameCount % 30 === 0) buildLines();
 
   // Constellations en arrière-plan : fade in → hold → fade out → switch
   // ZOOM INCLUSIF : à chaque switch, la constellation arrive du lointain

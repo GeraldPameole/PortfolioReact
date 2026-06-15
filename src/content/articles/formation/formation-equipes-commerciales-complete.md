@@ -1,7 +1,7 @@
 ---
 title: "Plan de Formation Commerciale sur 12 Mois : Structurer, Mesurer, Progresser"
 description: "Comment construire un plan de formation commerciale annuel efficace — alternance théorie et terrain, suivi des KPIs, et impact mesurable sur la performance des équipes."
-publishDate: "2025-05-05"
+publishDate: "2026-07-29"
 type: article
 domain: formation
 image: "/images/themes/formation-carriere.webp"

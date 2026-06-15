@@ -1,7 +1,7 @@
 ---
 title: "Développer les talents internes — pourquoi ça échoue si souvent et comment le faire vraiment"
 description: "Identifier les potentiels évolutifs, éviter le piège de la promotion réflexe, construire des plans de succession opérationnels qui tiennent dans la durée."
-publishDate: "2025-10-06"
+publishDate: "2025-07-08"
 type: article
 domain: gestion-talents
 image: "/images/themes/management.webp"

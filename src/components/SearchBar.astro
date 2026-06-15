@@ -39,7 +39,7 @@ const {
   <div class="flex flex-wrap gap-2 mt-2" id="activeFilters"></div>
 </div>
 
-<script define:vars={{ targetId }}>
+<script is:inline define:vars={{ targetId }}>
   document.addEventListener('DOMContentLoaded', () => {
     const searchInput = document.getElementById('searchInput');
     const clearButton = document.getElementById('clearSearch');

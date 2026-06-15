@@ -1,7 +1,7 @@
 ---
 title: "Visualiser processus et données avec Mermaid : cas concrets et bonnes pratiques"
 description: "Architecture système, parcours utilisateur, workflow d'approbation — comment utiliser Mermaid efficacement, les bonnes pratiques de lisibilité et quand choisir une alternative."
-publishDate: "2026-05-04"
+publishDate: "2026-10-21"
 type: article
 domain: outils-techniques
 image: "/images/themes/dev-web.webp"

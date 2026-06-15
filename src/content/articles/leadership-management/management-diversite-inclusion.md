@@ -1,7 +1,7 @@
 ---
 title: "Diversité et inclusion : ce qui marche vraiment vs les initiatives cosmétiques"
 description: "Entre quotas symboliques et vraie transformation, la différence tient à la compréhension des biais inconscients et à des pratiques managériales concrètes. Ce qu'un manager peut faire dès maintenant, sans attendre la politique RH."
-publishDate: "2026-02-23"
+publishDate: "2026-07-15"
 type: article
 domain: leadership-management
 image: "/images/themes/management.webp"

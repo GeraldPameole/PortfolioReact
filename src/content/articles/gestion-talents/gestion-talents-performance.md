@@ -1,7 +1,7 @@
 ---
 title: "Gérer la performance individuelle : passer du bilan annuel au dialogue continu"
 description: "La notation annuelle ne prédit pas la performance future. Comment instaurer un suivi continu, fixer des objectifs qui donnent du sens, et gérer sans tabou un collaborateur qui sous-performe."
-publishDate: "2025-10-27"
+publishDate: "2025-10-05"
 type: article
 domain: gestion-talents
 image: "/images/themes/management.webp"

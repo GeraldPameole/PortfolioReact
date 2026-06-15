@@ -14,7 +14,7 @@ const buttonId = `backButton-${position}`;
   <span class="text-sm font-medium">Retour</span>
 </button>
 
-<script define:vars={{ position }}>
+<script is:inline define:vars={{ position }}>
   // Initialisation idempotente — recâble le bouton à chaque page-load Astro
   // (1er chargement ET transitions de vue). Sans ça, les ViewTransitions
   // d'Astro 4 cassent le bouton dès la 2e page navigée client-side.

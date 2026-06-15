@@ -1,7 +1,7 @@
 ---
 title: "Former ses talents : plan de développement individuel et ROI réel"
 description: "Comment construire un plan de formation qui produit des résultats concrets — différence entre combler un écart et progresser, budget formation avec retour mesurable, pièges des catalogues."
-publishDate: "2025-10-20"
+publishDate: "2025-09-09"
 type: article
 domain: gestion-talents
 image: "/images/themes/management.webp"

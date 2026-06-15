@@ -1,7 +1,7 @@
 ---
 title: "Surcharge informationnelle : comment filtrer et reprendre le contrôle"
 description: "Maîtriser la surcharge informationnelle — méthodes de filtrage pour reprendre le contrôle"
-publishDate: "2026-06-08"
+publishDate: "2025-08-26"
 type: article
 domain: productivite-methodes
 image: "/images/themes/productivite.webp"

@@ -1,7 +1,7 @@
 ---
 title: "Agile en infrastructure télécom : ce qui fonctionne vraiment"
 description: "Retour d'expérience sur l'application des principes Agile à la gestion de projets réseau et maintenance télécom — sans le vernis théorique."
-publishDate: "2025-08-18"
+publishDate: "2026-02-18"
 type: article
 domain: gestion-projet
 image: "/images/themes/management.webp"

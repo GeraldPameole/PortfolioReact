@@ -1,7 +1,7 @@
 ---
 title: "PWA en 2026 : quand c'est pertinent, quand ce ne l'est pas"
 description: "Progressive Web Apps vs app native vs site responsive en 2026 — les 3 composants clés, les limites résiduelles sur iOS 18+, et les cas d'usage où ça a du sens."
-publishDate: "2025-02-03"
+publishDate: "2026-04-20"
 updatedDate: "2026-05-31"
 type: article
 domain: developpement-web

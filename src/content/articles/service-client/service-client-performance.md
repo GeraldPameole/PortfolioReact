@@ -1,8 +1,7 @@
 ---
 title: "Performance du service client : KPIs, réclamations et cas difficiles"
 description: "Les KPIs qui comptent vraiment (FCR, AHT, NPS, CSAT, taux d'abandon), comment exploiter les réclamations pour améliorer les processus, et former les équipes aux situations difficiles."
-publishDate: "2026-10-05"
-updatedDate: "2026-05-31"
+publishDate: "2026-09-30"
 type: article
 domain: service-client
 image: "/images/themes/management.webp"
@@ -10,9 +9,9 @@ pillColor: emerald
 relatedArticles:
   - domain: service-client
   - pillColor: emerald
-  - theme: carriere
+  - theme: commercial
   - keywords:
-theme: carriere
+theme: commercial
 tags:
   - service-client
   - relation-client

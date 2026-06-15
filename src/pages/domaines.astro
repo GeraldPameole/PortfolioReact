@@ -1,7 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { DOMAINS_CONFIG, getDomainConfig } from '../config/domains';
+import { DOMAINS_CONFIG } from '../config/domains';
 
 const allArticles = await getCollection('articles');
 
@@ -44,7 +44,7 @@ const ACCENT_COLORS: Record<string, string> = {
   <div class="section container">
     <!-- Domain cards -->
     <div class="domains-list">
-      {domainsData.map(({ key, cfg, articles, total }, i) => {
+      {domainsData.map(({ key: _key, cfg, articles, total }, i) => {
         const accent = ACCENT_COLORS[cfg.color] ?? 'var(--violet-light)';
         return (
           <div class="domain-block reveal" style={`transition-delay:${Math.min(i,5)*0.1}s`}>

@@ -1,7 +1,7 @@
 ---
 title: "Fidéliser les talents : ce qui fait vraiment rester les gens"
 description: "Les vraies raisons de départ ne sont pas toujours le salaire. Leviers non-monétaires, entretiens de maintien et rôle du manager direct pour construire une fidélisation qui dure."
-publishDate: "2025-10-13"
+publishDate: "2025-08-12"
 type: article
 domain: gestion-talents
 image: "/images/themes/management.webp"

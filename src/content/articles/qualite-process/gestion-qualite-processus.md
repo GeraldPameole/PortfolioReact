@@ -1,7 +1,7 @@
 ---
 title: "Gestion de la qualité des processus : cartographier avant d'améliorer"
 description: "Les cinq défaillances de processus les plus courantes dans les PME, comment cartographier un processus avant de le toucher, et sur quoi concentrer les premiers efforts."
-publishDate: "2026-08-24"
+publishDate: "2025-12-24"
 type: article
 domain: qualite-process
 image: "/images/themes/management.webp"

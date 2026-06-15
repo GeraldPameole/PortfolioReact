@@ -1,7 +1,7 @@
 ---
 title: "Formation continue et rétention des talents — ce que les managers peuvent vraiment faire"
 description: "La formation professionnelle continue n'est pas seulement une obligation légale ou un avantage RH. Bien utilisée, c'est l'un des leviers les plus concrets pour fidéliser les collaborateurs. Voici comment en faire un outil de management."
-publishDate: "2025-06-02"
+publishDate: "2026-08-19"
 type: article
 domain: formation
 image: "/images/themes/formation-carriere.webp"

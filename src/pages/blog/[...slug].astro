@@ -3,7 +3,7 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import ArticleProgressBar from '../../components/ArticleProgressBar.astro';
 import BackToTop from '../../components/BackToTop.astro';
-import { calculateReadingTime, mapToStandardTheme } from '../../utils/themeUtils';
+import { calculateReadingTime } from '../../utils/themeUtils';
 
 export async function getStaticPaths() {
   const all = await getCollection('articles');
@@ -31,8 +31,6 @@ const date       = new Date(article.data.publishDate).toLocaleDateString('fr-FR'
 // @ts-ignore
   timeZone: 'Europe/Paris',
 });
-const themeKey   = mapToStandardTheme(domain || tags[0]);
-
 // Related: same domain, exclude current, max 3
 const allArticles   = await getCollection('articles');
 const related = allArticles
@@ -59,7 +57,7 @@ const DOMAIN_COLOR: Record<string, string> = {
   'reconversion-carriere':    '#fca5a5',
 };
 const accent   = DOMAIN_COLOR[domain] ?? 'var(--violet-light)';
-const domLabel = domain.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+const domLabel = domain.replace(/-/g, ' ').replace(/\b\w/g, (c: string) => c.toUpperCase());
 
 // Article image for og:image — fallback to domain theme image then profile
 const DOMAIN_OG: Record<string, string> = {
@@ -776,6 +774,11 @@ details[open] .chevron { transform: rotate(180deg); }
   // Active highlight on scroll (desktop only)
   if (nav) {
     const links = Array.from(nav.querySelectorAll('.toc-link'));
+    // Disconnect le précédent observer si un TOC a été construit sur un
+    // article précédent (View Transitions ré-exécute ce script à chaque nav).
+    if ((window as any).__tocObserver) {
+      (window as any).__tocObserver.disconnect();
+    }
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -786,6 +789,12 @@ details[open] .chevron { transform: rotate(180deg); }
       });
     }, { rootMargin: '-20% 0px -70% 0px' });
     headings.forEach(h => observer.observe(h));
+    (window as any).__tocObserver = observer;
+    // Cleanup au prochain départ de page (View Transitions)
+    document.addEventListener('astro:before-preparation', () => {
+      observer.disconnect();
+      (window as any).__tocObserver = null;
+    }, { once: true });
   }
 })();
 </script>

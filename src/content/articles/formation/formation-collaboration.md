@@ -1,7 +1,7 @@
 ---
 title: "La collaboration en équipe ne s'improvise pas"
 description: "Coûts de coordination, free-riding, réunions efficaces et travail asynchrone : ce que j'ai appris en formant des équipes chez SFR et KEOS TELECOM."
-publishDate: "2025-04-07"
+publishDate: "2025-09-03"
 type: article
 domain: formation
 image: "/images/themes/formation-carriere.webp"

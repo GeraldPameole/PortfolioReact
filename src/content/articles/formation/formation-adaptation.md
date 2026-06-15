@@ -1,7 +1,7 @@
 ---
 title: "S'adapter au changement professionnel : ce qui se passe vraiment dans votre tête"
 description: "Résistance, doute, puis engagement : voici les étapes réelles de l'adaptation au changement professionnel, et comment les traverser plus vite — avec le rôle concret du manager."
-publishDate: "2025-03-31"
+publishDate: "2025-06-18"
 type: article
 domain: formation
 image: "/images/themes/formation-carriere.webp"

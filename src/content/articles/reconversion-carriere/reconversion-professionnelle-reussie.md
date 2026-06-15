@@ -1,7 +1,7 @@
 ---
 title: "Reconversion professionnelle réussie : les trois phases qui font la différence"
 description: "Ce qui sépare une reconversion réussie d'un échec coûteux : diagnostic honnête, exploration structurée, et transition progressive. Sans recettes miracles."
-publishDate: "2026-09-21"
+publishDate: "2026-09-09"
 type: article
 domain: reconversion-carriere
 image: "/images/themes/formation-carriere.webp"

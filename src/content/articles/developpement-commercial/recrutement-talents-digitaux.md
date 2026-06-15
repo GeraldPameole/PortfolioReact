@@ -1,7 +1,7 @@
 ---
 title: "Recruter des profils digitaux sans être expert technique"
 description: "Où trouver les bons développeurs, comment les évaluer sans lire leur code, et comment les intégrer pour qu'ils restent — retour d'expérience terrain."
-publishDate: "2025-01-13"
+publishDate: "2026-04-29"
 type: article
 domain: developpement-commercial
 image: "/images/themes/management.webp"

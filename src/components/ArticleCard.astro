@@ -1,15 +1,12 @@
 ---
 import type { CollectionEntry } from 'astro:content';
-import { mapToStandardTheme, standardThemes } from '../utils/themeUtils';
 
 interface Props {
   article: CollectionEntry<'articles'>;
 }
 const { article } = Astro.props;
-const { title, description, publishDate, tags, domain } = article.data as any;
+const { title, description, publishDate, domain } = article.data as any;
 
-const themeKey  = mapToStandardTheme(domain || tags?.[0]);
-const theme     = standardThemes[themeKey];
 const slug      = article.slug;
 const date      = new Date(publishDate).toLocaleDateString('fr-FR', { day:'numeric', month:'short', year:'numeric' });
 const wordCount = article.body?.split(/\s+/).length ?? 0;
@@ -41,7 +38,7 @@ const accent = DOMAIN_COLOR[domain] ?? 'var(--violet-light)';
   <div class="card-body">
     <div class="card-meta">
       <span class="card-domain" style={`color:${accent}`}>
-        {(domain ?? 'article').replace(/-/g,' ').replace(/\b\w/g,c=>c.toUpperCase())}
+        {(domain ?? 'article').replace(/-/g,' ').replace(/\b\w/g,(c: string)=>c.toUpperCase())}
       </span>
       <span class="card-sep">·</span>
       <span class="card-time">{readTime} min</span>

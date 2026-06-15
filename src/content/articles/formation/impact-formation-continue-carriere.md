@@ -1,7 +1,7 @@
 ---
 title: "Formation et trajectoire de carrière — comment choisir et construire son plan sur 3 ans"
 description: "Choisir une formation sans stratégie, c'est dépenser du temps et de l'argent pour se sentir actif. Voici comment évaluer l'impact réel d'une formation sur sa trajectoire, distinguer compétences techniques et comportementales, et construire un plan de développement individuel qui tient."
-publishDate: "2025-06-30"
+publishDate: "2026-01-07"
 type: article
 domain: formation
 image: "/images/themes/formation-carriere.webp"

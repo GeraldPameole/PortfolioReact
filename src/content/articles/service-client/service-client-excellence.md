@@ -1,13 +1,13 @@
 ---
 title: "Excellence du service client : de la satisfaction à la fidélité"
 description: "Satisfaire un client ne suffit pas à le fidéliser. Les moments de vérité, la gestion des réclamations comme levier de confiance, et comment utiliser le NPS (Net Promoter Score, recommandation) et le CSAT (Customer Satisfaction Score, satisfaction d'interaction) intelligemment pour prendre de vraies décisions."
-publishDate: "2026-09-28"
+publishDate: "2026-04-15"
 updatedDate: "2026-05-31"
 type: article
 domain: service-client
 image: "/images/themes/management.webp"
 pillColor: emerald
-theme: carriere
+theme: commercial
 tags:
   - service-client
   - fidelisation

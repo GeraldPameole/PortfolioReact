@@ -1,7 +1,7 @@
 ---
 title: "Stress et performance : maintenir l'efficacité sous pression"
 description: "Gérer stress et performance — techniques concrètes pour maintenir l'efficacité sous pression"
-publishDate: "2026-06-01"
+publishDate: "2025-07-22"
 type: article
 domain: productivite-methodes
 image: "/images/themes/productivite.webp"

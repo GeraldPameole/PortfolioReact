@@ -1,11 +1,10 @@
 ---
 title: "Onboarding et knowledge transfer : structurer la rétention de la mémoire d'équipe"
 description: "Pourquoi les équipes perdent 30 à 40 % de leur mémoire chaque année, ce qui distingue un wiki mort d'une documentation vivante, et la méthode en 4 temps pour transférer ce qui compte vraiment."
-publishDate: "2026-06-01"
-updatedDate: "2026-06-01"
+publishDate: "2026-09-02"
 type: article
 domain: gestion-connaissances
-image: "/images/themes/knowledge.webp"
+image: "/images/themes/management.webp"
 pillColor: cyan
 theme: organisation
 tags:

@@ -1,7 +1,7 @@
 ---
 title: "Qualité en entreprise : construire une culture d'amélioration continue"
 description: "Comment instaurer une vraie démarche qualité dans une organisation — retour d'expérience sur le terrain, de SFR à KEOS TELECOM, ce qui fonctionne au-delà des normes et des certifications."
-publishDate: "2026-08-17"
+publishDate: "2025-10-15"
 type: article
 domain: qualite-process
 image: "/images/themes/management.webp"

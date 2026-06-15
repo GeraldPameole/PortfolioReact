@@ -53,10 +53,10 @@ const { showCanvas = true } = Astro.props;
   </div>
 
   <div class="hero-badges" aria-hidden="true">
-    <div class="badge badge-1 animate-float">Agile / Scrum</div>
-    <div class="badge badge-2 animate-float" style="animation-delay:1.2s">PMP Certified</div>
-    <div class="badge badge-3 animate-float" style="animation-delay:0.6s">Full Stack Dev</div>
-    <div class="badge badge-4 animate-float" style="animation-delay:1.8s">Team Lead</div>
+    <div class="badge badge-1 hero-float">Agile / Scrum</div>
+    <div class="badge badge-2 hero-float" style="animation-delay:1.2s">PMP Certified</div>
+    <div class="badge badge-3 hero-float" style="animation-delay:0.6s">Full Stack Dev</div>
+    <div class="badge badge-4 hero-float" style="animation-delay:1.8s">Team Lead</div>
   </div>
 </section>
 
@@ -151,6 +151,11 @@ const { showCanvas = true } = Astro.props;
   animation: float 2s ease-in-out infinite;
 }
 .hero-badges { position: absolute; inset: 0; pointer-events: none; z-index: 1; }
+/* Animation float scopée Hero (Agent 2 #4) : pausée quand la section sort
+   du viewport — évite que 4 layers GPU animées tournent en permanence
+   alors que le hero n'est plus visible. */
+.hero-float { animation: float 6s ease-in-out infinite; }
+.hero:not(.in-view) .hero-float { animation-play-state: paused; }
 .badge {
   position: absolute;
   font-family: var(--font-mono);
@@ -173,3 +178,26 @@ const { showCanvas = true } = Astro.props;
   .hero-stats { gap: 1.5rem; }
 }
 </style>
+
+<script is:inline>
+  // Pause les animations CSS du Hero quand la section sort du viewport
+  // (Agent 2 #4) — économise compositor + 4 layers GPU permanentes.
+  (function () {
+    const init = () => {
+      const hero = document.querySelector('.hero');
+      if (!hero || hero.dataset.viewBound) return;
+      hero.dataset.viewBound = '1';
+      if (!('IntersectionObserver' in window)) {
+        hero.classList.add('in-view');
+        return;
+      }
+      const io = new IntersectionObserver(([entry]) => {
+        hero.classList.toggle('in-view', entry.isIntersecting);
+      }, { threshold: 0 });
+      io.observe(hero);
+    };
+    document.addEventListener('astro:page-load', init);
+    if (document.readyState !== 'loading') init();
+    else document.addEventListener('DOMContentLoaded', init);
+  })();
+</script>

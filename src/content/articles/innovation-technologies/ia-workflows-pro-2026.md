@@ -1,7 +1,7 @@
 ---
 title: "IA et workflows professionnels en 2026 : agents, MCP, et ce qui marche vraiment"
 description: "Agents autonomes, Model Context Protocol, coding agents : ce que j'utilise concrètement dans mes journées de chef de projet et de dev, et où ça coince encore en 2026."
-publishDate: "2026-04-22"
+publishDate: "2026-10-14"
 type: article
 domain: innovation-technologies
 image: "/images/themes/ia.webp"

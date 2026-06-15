@@ -1,7 +1,7 @@
 ---
 title: "Gérer son temps efficacement : méthodes éprouvées pour professionnels"
 description: "Gestion du temps qui fonctionne vraiment — time blocking, protéger le focus du matin, savoir refuser, et gérer l'énergie avant de gérer les heures."
-publishDate: "2026-06-29"
+publishDate: "2025-11-12"
 type: article
 domain: productivite-methodes
 image: "/images/themes/productivite.webp"

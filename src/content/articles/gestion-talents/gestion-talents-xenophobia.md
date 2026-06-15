@@ -1,7 +1,7 @@
 ---
 title: "Travailler dans un environnement multiculturel : obstacles réels et leviers concrets"
 description: "Les vrais obstacles à la collaboration interculturelle au-delà de la langue, les biais culturels dans le management, et les conditions sous lesquelles les équipes multiculturelles sont réellement plus performantes."
-publishDate: "2025-12-15"
+publishDate: "2026-05-12"
 type: article
 domain: gestion-talents
 image: "/images/themes/management.webp"

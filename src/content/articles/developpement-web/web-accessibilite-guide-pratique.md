@@ -1,8 +1,7 @@
 ---
 title: "Accessibilité web en pratique : les quatre corrections qui comptent vraiment"
 description: "Comprendre WCAG 2.2 et l'European Accessibility Act, identifier les quatre problèmes d'accessibilité les plus fréquents, et savoir tester sans outils spécialisés."
-publishDate: "2025-03-03"
-updatedDate: "2026-05-31"
+publishDate: "2026-06-15"
 type: article
 domain: developpement-web
 image: "/images/themes/dev-web.webp"

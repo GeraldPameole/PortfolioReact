@@ -1,7 +1,7 @@
 ---
 title: "Développement web en 2026 : ce qui s'est imposé, ce qui s'est essoufflé"
 description: "React Server Components, React Compiler, edge, Astro 5 Server Islands, View Transitions, Bun, AI-assisted dev, CSS moderne, fin de jQuery, impact AEO/SGE — l'état réel du web mi-2026."
-publishDate: "2025-03-17"
+publishDate: "2026-08-17"
 type: article
 domain: developpement-web
 image: "/images/themes/dev-web.webp"

@@ -1,8 +1,7 @@
 ---
 title: "LinkedIn et réseaux sociaux B2B : une stratégie qui génère de vrais leads (édition 2026)"
 description: "Comment bâtir une présence B2B efficace sur LinkedIn en 2026 — algorithme actuel, contenu d'expert, social selling sans spam, et mesure du ROI social réellement utile."
-publishDate: "2026-04-06"
-updatedDate: "2026-05-31"
+publishDate: "2026-08-05"
 type: article
 domain: marketing-communication
 image: "/images/themes/marketing.webp"

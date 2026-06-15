@@ -1,7 +1,7 @@
 ---
 title: "Signalement en entreprise : créer une culture où les problèmes remontent avant d'exploser"
 description: "Ce qu'est vraiment le whistleblowing au-delà de la conformité, comment construire un climat de confiance où les alertes circulent, et la différence entre canal formel et culture réelle du signalement."
-publishDate: "2025-12-08"
+publishDate: "2026-04-07"
 type: article
 domain: gestion-talents
 image: "/images/themes/management.webp"

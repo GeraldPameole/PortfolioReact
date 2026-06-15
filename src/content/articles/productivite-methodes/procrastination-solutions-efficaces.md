@@ -1,7 +1,7 @@
 ---
 title: "Procrastination au travail : comprendre le cycle et en sortir"
 description: "Pourquoi on reporte les tâches importantes et quatre techniques concrètes pour briser ce cycle — par un chef de projet qui a appris à les appliquer."
-publishDate: "2026-07-20"
+publishDate: "2026-02-25"
 type: article
 domain: productivite-methodes
 image: "/images/themes/productivite.webp"

@@ -1,7 +1,7 @@
 ---
 title: "Audit de temps : où va vraiment votre journée de travail"
 description: "Faire un audit honnête de son temps, identifier les trois voleurs invisibles de productivité, et construire des routines de fin de journée qui permettent de déconnecter vraiment."
-publishDate: "2026-06-22"
+publishDate: "2025-10-12"
 type: article
 domain: productivite-methodes
 image: "/images/themes/productivite.webp"

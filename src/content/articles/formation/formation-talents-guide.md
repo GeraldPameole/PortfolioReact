@@ -1,7 +1,7 @@
 ---
 title: "Former les talents de son équipe : le guide du manager qui prend ça au sérieux"
 description: "Identifier les potentiels, construire un plan de développement individuel concret, gérer son budget formation, et surtout ne pas déléguer ça aux seuls RH — le rôle du manager dans la formation de son équipe."
-publishDate: "2025-06-16"
+publishDate: "2026-04-08"
 type: article
 domain: formation
 image: "/images/themes/formation-carriere.webp"
